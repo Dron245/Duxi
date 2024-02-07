@@ -49,7 +49,7 @@
 //Burger Icon
 .icon-menu {
 	display: none;
-	@media (max-width: $mobile) {
+	@media (max-width: em(1001)) {
 		display: block;
 		position: relative;
 		width: toRem(30);

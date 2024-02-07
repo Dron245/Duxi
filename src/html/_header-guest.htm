@@ -1,16 +1,16 @@
 <header class="header guest">
 	<div class="header__container">
 		<div class="header__top top-header">
-			<div class="top-header__item">
-				<div class="top-header__city">
+			<div class="top-header__item top-header__item_city">
+				<button type="button" class="top-header__city">
 					<img src="@img/header/mesto.svg" alt="">
 					<span class="top-header__city-name">г. Москва</span>
-					<div class="top-header__city-choice city-choice">
-						<div class="city-choice__text">Ваш город - <span class="city-choice__name">г. Москва?</span></div>
-						<div class="city-choice__buttons">
-							<button type="button" class="city-choice__button">Да</button>
-							<button type="button" class="city-choice__button city-choice__button_none">Нет, изменить</button>
-						</div>
+				</button>
+				<div class="top-header__city-choice city-choice">
+					<div class="city-choice__text">Ваш город - <span class="city-choice__name">г. Москва?</span></div>
+					<div class="city-choice__buttons">
+						<button type="button" class="city-choice__button">да, все верно</button>
+						<button type="button" class="city-choice__button city-choice__button_none">Нет, изменить</button>
 					</div>
 				</div>
 			</div>
@@ -23,7 +23,7 @@
 					<li class="top-header__list-item"><a href="#" class="top-header__item-link">Подарки и бонусы</a></li>
 				</ul>
 			</div>
-			<div class="top-header__item">
+			<div class="top-header__item top-header__item_tel">
 				<div class="top-header__contacts contacts-top-header">
 					<a href="tel:+74951506463" class="contacts-top-header__link">+7 (495) 150-64-63</a>
 					<a href="tel:+78003336463" class="contacts-top-header__link">+7 (800) 333-64-63 (бесплатно)</a>
@@ -32,11 +32,12 @@
 			</div>
 		</div>
 		<div class="header__center header-center">
+			<button type="button" class="menu__icon icon-menu"><span></span></button>
 			<a href="#" class="header-center__logo"><img src="@img/header/logo.svg" alt="ДУХИ.РУ"></a>
 			<div class="header-center__form-wrapper">
 				<form action="#" method="get" class="header-center__form">
-					<input autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Поиск товара" class="header-center__input input">
 					<button class="header-center__button"><img src="@img/header/search.svg" alt="Поиск"></button>
+					<input autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Поиск товара" class="header-center__input input">
 				</form>
 				<a href="#" class="header-center__search-full">Расширенный поиск</a>
 			</div>

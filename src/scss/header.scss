@@ -1,15 +1,27 @@
 .header {
-
+	background: #fff5f6;
 	&__container {
 	}
 
 	&__top {
+		display: flex;
+		align-items: center;
+		@media (max-width:$mobile){
+			 display: none; 
+		}
 	}
 
 	&__center {
+		display: flex;
+		align-items: center;
+		@include adaptiveValue("padding-top", 29, 20,0,1920,1280);
+		@include adaptiveValue("padding-bottom", 28, 18,0,1920,1280);
+		@media (max-width: em(1001)){
+			 justify-content: space-between; 
+		}
 	}
 
-	&__menu {
+	&__menu {display: none;
 	}
 }
 .user {
@@ -17,52 +29,214 @@
 .top-header {
 
 	&__item {
+		position: relative;
+		
+		&_city {
+			@include adaptiveValue("margin-right", 46, 20,0,1920,1280);
+		}
+
+		&_tel {
+			margin-left: auto;
+		}
 	}
 
 	&__city {
+		display: flex;
+		align-items: center;
+		gap: toRem(4);
+	}
+
+	&__city-choice {
+		position: absolute;
+		top: 160%;
+		left: -50%;
+		border: 1px solid #f4e1e6;
+		box-shadow: 10px 10px 10px 0 rgba(187, 144, 144, 0.1), -10px -10px 10px 0 rgba(187, 144, 144, 0.1), -2px -2px 8px 0 rgba(187, 144, 144, 0.1), 2px 2px 8px 0 rgba(187, 144, 144, 0.1);
+		border-radius: 8px;
+		background-color: white;
+		padding: 10px toRem(22);
+		font-size: toRem(13);
+		line-height: 15px;
+		min-width: toRem(195);
+		z-index: 2;
+		@media (max-width: em(1630)){
+			left: -0%;
+		}
+		&::after{
+			content:'';
+			position: absolute;
+			display: inline-block;
+			border: 11.5px solid transparent;
+			border-bottom: 11.5px solid white;
+			top: -22px;
+			left: 50%;
+			transform: translateX(-50%);
+			@media (max-width: em(1630)){
+				left: 30%;
+			}
+		}
 	}
 
 	&__city-name {
+		font-family: var(--font-family);
+		font-size: toRem(13);
+		line-height: 15px;
+		text-decoration: underline;
+		color: $zagolovok;
 	}
 
 	&__list {
+		display: flex;
+		align-items: center;
+		// flex-wrap: wrap;
+		column-gap: toRem(20);
+		@media (max-width:em(1280)){
+			  display: none;
+		}
 	}
 
 	&__list-item {
+		flex: 1 0 auto;
+		font-size: toRem(13);
+		line-height: 15px;
+		color: $tekst-zagolovok-ne-aktivnyy;
 	}
 
 	&__item-link {
+		font-size: toRem(13);
+		font-weight: 400;
+		line-height: 1.5;
+		color: $tekst-zagolovok-ne-aktivnyy;
+		transition: color 0.3s;
+		&:hover{
+			color: $zagolovok;
+		}
 	}
 
 	&__contacts {
+		display: flex;
+		align-items: center;
+		font-size: toRem(13);
+		line-height: 1.5;
+		color: $zagolovok;
+		column-gap: toRem(15);
 	}
 }
+
+.top-header {
+
+	&__city-choice {
+	}
+}
+.city-choice {
+
+	&__text {
+		margin-bottom: 10px;
+	}
+
+	&__name {
+		text-decoration: underline;
+	}
+
+	&__buttons {
+	}
+
+	&__button {
+		padding: 7px toRem(23);
+		background: $zelenysh;
+		width: 100%;
+		&:not(:last-child) {margin-bottom: toRem(5);}
+		text-transform: uppercase;
+		font-size: 13px;
+		color: white;
+		min-width: 150px;
+		&_none {
+			border: 1px solid $knopka-bordovaya;
+			background: initial;
+			
+			
+			color: var(--knopka-bordovaya);
+		}
+	}
+}
+
+
 .contacts-top-header {
 
 	&__link {
+		margin-left: toRem(5);
+		&:last-child{
+			@media (max-width: em(1280)){
+				display: none;
+		 }
+		}
 	}
 }
 .header-center {
 
 	&__logo {
+		margin-right: 32px;
+		img {
+			width: 100%;
+		}
+		@media (max-width: em(1280)){
+			  margin-right: 20px;
+			  width: 250px;
+		}
 	}
 
 	&__form-wrapper {
+		@include adaptiveValue("width", 750, 520,0,1920,1280);
+		@media (max-width:$mobile){
+			@media (max-width: em(1001)){
+				width: 0;
+		 }
+		}
 	}
 
 	&__form {
+		position: relative;
 	}
 
 	&__input {
+		padding: 15px toRem(20);
+		border-radius: 16px;
+		font-style: italic;
+		color: $tekst-zagolovok-ne-aktivnyy;
+		&::placeholder {
+			color: $tekst-zagolovok-ne-aktivnyy;
+		}
+		@media (max-width: em(1001)){
+			  padding: 0;
+			  width: 0;
+		}
 	}
 
 	&__button {
+		position: absolute;
+		right: 3%;
+		top: 50%;
+		transform: translateY(-50%);
+		
 	}
 
 	&__search-full {
+		margin-top: toRem(5);
+		font-style: italic;
+		color: $tekst-zagolovok-ne-aktivnyy;
+		text-decoration: underline;
+		@media (max-width:em(1001)){
+			display: none; 
+	  }
 	}
 
 	&__actions {
+		margin-left: 40px;
+		display: flex;
+		column-gap: toRem(40);
+		@media (max-width:$mobile){
+			 display: none; 
+		}
 	}
 }
 .input {
@@ -70,7 +244,17 @@
 .actions-header {
 
 	&__item {
-
+		display: flex;
+		width: 40px;
+		flex-direction: column;
+		align-items: center;
+		column-gap: toRem(2);
+		span {
+			font-weight: 300;
+			font-size: toRem(13);
+			color: $tekst-zagolovok-ne-aktivnyy;
+			line-height: 15px;
+		}
 		&_cart {
 		}
 	}
