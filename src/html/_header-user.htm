@@ -1,17 +1,17 @@
-<header class="header guest">
+<header class="header user">
 	<div class="header__container">
 		<div class="header__top top-header">
 			<div class="top-header__item">
 				<div class="top-header__city">
 					<img src="@img/header/mesto.svg" alt="">
 					<span class="top-header__city-name">г. Москва</span>
-					<div class="top-header__city-choice city-choice">
+					<!-- <div class="top-header__city-choice city-choice">
 						<div class="city-choice__text">Ваш город - <span class="city-choice__name">г. Москва?</span></div>
 						<div class="city-choice__buttons">
 							<button type="button" class="city-choice__button">Да</button>
 							<button type="button" class="city-choice__button city-choice__button_none">Нет, изменить</button>
 						</div>
-					</div>
+					</div> -->
 				</div>
 			</div>
 			<div class="top-header__item">
@@ -41,11 +41,23 @@
 				<a href="#" class="header-center__search-full">Расширенный поиск</a>
 			</div>
 			<div class="header-center__actions actions-header">
-				<button class="actions-header__login">
-					<img src="@img/header/vhod.svg" alt="Войти">
-					<span>Войти</span>
-				</button>
-				<a href="#" class="actions-header__cart">
+				<a href="#" class="actions-header__item">
+					<img src="@img/header/user.svg" alt="Корзина">
+					<div class="actions-header__data-user">
+						<span id="name-user" class="actions-header__user">Фамилия Имя</span>
+						<span id="discount" class="actions-header__user">Скидка 5%</span>
+						<span id="bonuses" class="actions-header__user">Бонусов 105</span>
+					</div>
+				</a>
+				<a href="#" class="actions-header__item">
+					<img src="@img/header/history-zakaz.svg" alt="История">
+					<span>История заказов</span>
+				</a>
+				<a href="#" class="actions-header__item">
+					<img src="@img/header/izbrannoe.svg" alt="Избранное">
+					<span>Избранное</span>
+				</a>
+				<a href="#" class="actions-header__item actions-header__item_cart">
 					<img src="@img/header/cart.svg" alt="Корзина">
 					<span>Корзина</span>
 				</a>
