@@ -42,7 +42,10 @@
 				<a href="#" class="header-center__search-full">Расширенный поиск</a>
 			</div>
 			<div class="header-center__actions actions-header">
-				<button data-popup="#popup-vhod" class="actions-header__item">
+				<button class="actions-header__item actions-header__item_search">
+					<img src="@img/header/search-big.svg" alt="">
+				</button>
+				<button data-popup="#popup-vhod" class="actions-header__item actions-header__item_vhod">
 					<img src="@img/header/vhod.svg" alt="Войти">
 					<span>Войти</span>
 				</button>
@@ -59,7 +62,7 @@
 						<li class="menu__item menu__item_mobile menu__item_bold">
 							<a href="#" class="menu__link">
 								<form action="#" method="get" class="header-center__form">
-									<input autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Расширенный поиск" class="header-center__input input">
+									<input autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Расширенный поиск" class="header-center__input header-center__input_mobile input">
 									<button class="header-center__button"><img src="@img/header/Search_mobile.svg" alt="Поиск"></button>
 								</form>
 							</a>
