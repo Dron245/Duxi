@@ -16,12 +16,25 @@
 		align-items: center;
 		@include adaptiveValue("padding-top", 29, 20,0,1920,1280);
 		@include adaptiveValue("padding-bottom", 28, 18,0,1920,1280);
-		@media (max-width: em(1001)){
+		@media (max-width: $tablet){
 			 justify-content: space-between; 
 		}
 	}
 
-	&__menu {display: none;
+	&__menu {
+		// display: none;
+		position: relative;
+		z-index: 1;
+		&::after{
+			content:'';
+			position: absolute;
+			top: 0;
+			width: 1000vw;
+			height: 100%;
+			left: -100%;
+			background: $knopka-rozovaya;
+			z-index: -1;
+		}
 	}
 }
 .user {
@@ -90,7 +103,7 @@
 		align-items: center;
 		// flex-wrap: wrap;
 		column-gap: toRem(20);
-		@media (max-width:em(1280)){
+		@media (max-width:$pcSmall){
 			  display: none;
 		}
 	}
@@ -166,7 +179,7 @@
 	&__link {
 		margin-left: toRem(5);
 		&:last-child{
-			@media (max-width: em(1280)){
+			@media (max-width: $pcSmall){
 				display: none;
 		 }
 		}
@@ -179,7 +192,7 @@
 		img {
 			width: 100%;
 		}
-		@media (max-width: em(1280)){
+		@media (max-width: $pcSmall){
 			  margin-right: 20px;
 			  width: 250px;
 		}
@@ -188,7 +201,7 @@
 	&__form-wrapper {
 		@include adaptiveValue("width", 750, 520,0,1920,1280);
 		@media (max-width:$mobile){
-			@media (max-width: em(1001)){
+			@media (max-width: $tablet){
 				width: 0;
 		 }
 		}
@@ -206,7 +219,7 @@
 		&::placeholder {
 			color: $tekst-zagolovok-ne-aktivnyy;
 		}
-		@media (max-width: em(1001)){
+		@media (max-width: $tablet){
 			  padding: 0;
 			  width: 0;
 		}
@@ -225,7 +238,7 @@
 		font-style: italic;
 		color: $tekst-zagolovok-ne-aktivnyy;
 		text-decoration: underline;
-		@media (max-width:em(1001)){
+		@media (max-width:$tablet){
 			display: none; 
 	  }
 	}
@@ -279,6 +292,9 @@
 	&__item {
 
 		&_mobile {
+			@media (min-width:$mobile){
+				 display: none; 
+			}
 		}
 
 		&_bold {
@@ -286,21 +302,32 @@
 	}
 
 	&__link {
-	}
-
-	&__item-title {
-	}
-
-	&__item-arrow {
-	}
-
-	&__sublist {
-
-		&_grid {
+		font-size: 16px;
+		letter-spacing: 0.02em;
+		text-transform: uppercase;
+		color: #fff;
+		transition: color 0.3s;
+		@media (max-width: em(1280)){
+			font-size: toRem(14);
 		}
 	}
 
+	&__item-title {
+		
+	}
+
+	&__item-arrow {
+		@media (min-width:$mobile){
+			 display: none; 
+		}
+	}
+
+	
+
 	&__social {
+		@media (min-width:$mobile){
+			 display: none; 
+		}
 	}
 
 	&__social-item {
@@ -314,10 +341,22 @@
 .sublist-menu {
 
 	&__item {
+		// transition: color 0.3s;
+		&:hover{
+			.sublist-menu__link {
+				color: $zagolovok;
+				text-decoration: underline;
+			}
+		}
+		&:not(:last-child) {margin-bottom: toRem(25);}
 	}
 
 	&__link {
-
+		font-size: 16px;
+		letter-spacing: 0.02em;
+		text-transform: uppercase;
+		color: $knopka-rozovaya;
+		transition: color 0.3s;
 		&_bold {
 		}
 	}
