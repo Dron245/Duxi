@@ -46,11 +46,26 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		// padding: toRem(19) toRem(0);
 		@include adaptiveValue("column-gap", 55, 15,0,1920,1001);
-		@media (max-width: em(1001)) {
+		@media (max-width: $tablet) {
 			flex-direction: column;
 			align-items: flex-start;
+		}
+		.footer & {
+			align-items: flex-start;
+			@media (max-width: em(1150)){
+				display: grid;
+				grid-template-columns: repeat(4,1fr);
+				grid-template-rows: 1fr 1fr;
+				row-gap: 20px;
+			}
+			@media (max-width:$mobile){
+				 grid-template-columns: 1fr 1fr;
+				 grid-template-rows: auto;
+				 li {
+					align-self: center;
+				 }
+			}
 		}
 	}
 
@@ -63,7 +78,18 @@
 		left: 0;
 		opacity: 0;
 		visibility: hidden;
-		transition: top 0.3s;
+		transition: top 0.3s, height 0.5s;
+		.footer & {
+			position: relative;
+			top: 0;
+			opacity: 1;
+			visibility: visible;
+			padding: 0;
+			margin-top: toRem(25);
+			@media (max-width:em(1150)){
+				display: none;
+			}
+		}
 		& a {
 			white-space: nowrap;
 		}
@@ -82,22 +108,32 @@
 			}
 		}
 		&_grid {
-			
-			display: grid;
-			// grid-template-columns: repeat(4,1fr);
-			grid-template-rows: repeat(4,1fr);
-			grid-auto-flow: column;
-			column-gap: toRem(55);
-			row-gap: toRem(25);
-			
+			@media (min-width:$tablet){
+				display: grid;
+				// grid-template-columns: repeat(4,1fr);
+				grid-template-rows: repeat(4,1fr);
+				grid-auto-flow: column;
+				column-gap: toRem(55);
+				row-gap: toRem(25);
+				.footer & {
+					display: block;
+					@media (max-width: em(1150)){
+						display: none;
+					}
+				}
+			}
 		}
 		@media (max-width:$tablet){
 			padding-left: 20px;
 			padding-bottom: toRem(0);
-			._sub-menu-open ._open & {
+			// transform: scale(0);
+			height: 0;
+			&._sub-menu-open {
 				position: relative;
 				visibility: visible;
 				opacity: 1;
+				height: 100%;
+				// transform: scale(1);
 			}
 		}
 	}
@@ -112,7 +148,7 @@
 			// align-items: center;
 			width: 100%;
 		}
-		&:hover{
+		.header &:hover{
 			@media (min-width:$tablet){
 				background-color: white;
 				& .menu__link {

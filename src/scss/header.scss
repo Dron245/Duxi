@@ -20,7 +20,8 @@
 		display: flex;
 		align-items: center;
 		@include adaptiveValue("padding-top", 29, 20,0,1920,1280);
-		@include adaptiveValue("padding-bottom", 28, 18,0,1920,1280);
+		// @include adaptiveValue("padding-bottom", 28, 18,0,1920,1280);
+		padding-bottom: toRem(37);
 		@media (max-width: $tablet){
 			 justify-content: space-between; 
 		}
@@ -65,6 +66,9 @@
 	}
 
 	&__city-choice {
+		.user & {
+			display: none;
+		}
 		position: absolute;
 		top: 160%;
 		left: -50%;
@@ -193,7 +197,7 @@
 .header-center {
 
 	&__logo {
-		margin-right: 32px;
+		margin-right: 2rem;
 		img {
 			width: 100%;
 		}
@@ -201,8 +205,11 @@
 			margin-right: 0;
 		}
 		@media (max-width: $pcSmall){
-			  margin-right: 20px;
-			  width: 250px;
+			  margin-right: 1.25rem;
+			  width: 15.625rem;
+		}
+		@media (max-width:$mobileSmall){
+			 width: toRem(195); 
 		}
 	}
 
@@ -235,11 +242,13 @@
 		&_mobile {
 			background-color: transparent;
 			font-style: normal;
-			text-transform: uppercase;
+			
 			color: white;
+			// font-size: toRem(14);
 			border-radius: 0;
 			
 			&::placeholder {
+				text-transform: uppercase;
 				color: white;
 				font-weight: 700;
 			}
@@ -261,6 +270,8 @@
 		font-style: italic;
 		color: $tekst-zagolovok-ne-aktivnyy;
 		text-decoration: underline;
+		position: absolute;
+		left: 20px;
 		@media (max-width:$tablet){
 			display: none; 
 	  }
@@ -269,8 +280,9 @@
 	&__actions {
 		margin-left: 40px;
 		display: flex;
-		align-items: center;
+		align-items: flex-start;
 		column-gap: toRem(40);
+		@include adaptiveValue("column-gap", 40, 10,0,1920,1001);
 		@media (max-width:$tablet){
 			margin-left: 0;
 		}
@@ -282,18 +294,31 @@
 .input {
 }
 .actions-header {
-
+	.user & {
+		@media (min-width:$tablet){
+			transform: translateY(20px);
+		}
+		@media (max-width:$tablet){
+			 &> *:not(:first-child) {
+				display: none;
+			 } 
+		}
+	}
 	&__item {
 		display: flex;
-		width: 40px;
+		// width: 40px;
 		flex-direction: column;
 		align-items: center;
 		column-gap: toRem(2);
+		img {
+			aspect-ratio: 1 / 1;
+		}
 		span {
 			font-weight: 300;
 			font-size: toRem(13);
 			color: $tekst-zagolovok-ne-aktivnyy;
 			line-height: 15px;
+			text-align: center;
 			@media (max-width:$tablet){
 				display: none;
 			}
@@ -310,15 +335,22 @@
 		}
 		&_cart {
 			@media (max-width:$tablet){
-				display: none;
+				.guest & {
+					display: none;
+				}
+				// display: none;
 			}
 		}
 	}
 
 	&__data-user {
+		display: flex;
+		flex-direction: column;
+		// align-items: center;
 	}
 
 	&__user {
+		min-width: 88px;
 	}
 }
 .menu {
@@ -354,10 +386,29 @@
 		@media (max-width: em(1280)){
 			font-size: toRem(14);
 		}
+		@media (max-width: em(1150)){
+			.footer & {
+				font-weight: 300;
+				font-size: 13px;
+				line-height: 169%;
+				text-transform: uppercase;
+				color: #fff;
+				@media (max-width:$mobile){
+					font-weight: 400;
+					font-size: 28px;
+					letter-spacing: 0.02em;
+					text-transform: uppercase; 
+				}
+				@media (max-width:$mobileSmall){
+					font-size: 18px; 
+				}
+			}
+		}
 		@media (max-width:$tablet){
 			font-size: toRem(24);
 			@include adaptiveValue("font-size", 24, 16,0,1001.98,360);
 			line-height: 1.3;
+			
 		}
 	}
 
@@ -367,7 +418,7 @@
 
 	&__item-arrow {
 		transition: transform 0.3s;
-		._open & {
+		._open+& {
 			transform: rotate(90deg);
 		}
 		// transform: translateY(5px);
@@ -382,9 +433,35 @@
 		@media (min-width:$tablet){
 			 display: none; 
 		}
+		display: flex;
+		align-items: center;
+		@include adaptiveValue("column-gap", 40, 15,0,1001,360);
+		margin-top: toRem(20);
+		@media (max-width:$mobile){
+			 margin-top: toRem(10); 
+		}
 	}
 
 	&__social-item {
+		display: grid;
+		place-items: center;
+		@include adaptiveValue("width", 70, 40,0,1001,360);
+		@include adaptiveValue("height", 70, 40,0,1001,360);
+		&_green {
+			background-color: #25D366;
+		}
+		&_white {
+			background-color: #fff;
+		}
+		&_red {
+			background-color: #ff0000;
+		}
+		&_blue {
+			background-color: #0088CC;
+		}
+		@media (max-width: em(1280)){
+			  display: flex;
+		}
 	}
 
 	&__social-itemlink {
@@ -400,9 +477,15 @@
 			.sublist-menu__link {
 				color: $zagolovok;
 				text-decoration: underline;
+				.footer & {
+					color: #ffffffa8
+				}
 			}
 		}
 		&:not(:last-child) {margin-bottom: toRem(25);}
+		.footer & {
+			margin-bottom: toRem(15);
+		}
 	}
 
 	&__link {
@@ -411,6 +494,13 @@
 		text-transform: uppercase;
 		color: $knopka-rozovaya;
 		transition: color 0.3s;
+		.footer & {
+			color: white;
+			font-weight: 300;
+			font-size: 13px;
+			line-height: 130%;
+			text-transform: initial;
+		}
 		@media (max-width:$tablet){
 			color: white;
 		}

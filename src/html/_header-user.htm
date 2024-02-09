@@ -3,15 +3,17 @@
 		<div class="header__top top-header">
 			<div class="top-header__item">
 				<div class="top-header__city">
-					<img src="@img/header/mesto.svg" alt="">
-					<span class="top-header__city-name">г. Москва</span>
-					<!-- <div class="top-header__city-choice city-choice">
+					<button data-popup="#city" type="button" class="top-header__city">
+						<img src="@img/header/mesto.svg" alt="">
+						<span class="top-header__city-name">г. Москва</span>
+					</button>
+					<div class="top-header__city-choice city-choice">
 						<div class="city-choice__text">Ваш город - <span class="city-choice__name">г. Москва?</span></div>
 						<div class="city-choice__buttons">
 							<button type="button" class="city-choice__button">Да</button>
 							<button type="button" class="city-choice__button city-choice__button_none">Нет, изменить</button>
 						</div>
-					</div> -->
+					</div>
 				</div>
 			</div>
 			<div class="top-header__item">
@@ -23,7 +25,7 @@
 					<li class="top-header__list-item"><a href="#" class="top-header__item-link">Подарки и бонусы</a></li>
 				</ul>
 			</div>
-			<div class="top-header__item">
+			<div class="top-header__item top-header__item_tel">
 				<div class="top-header__contacts contacts-top-header">
 					<a href="tel:+74951506463" class="contacts-top-header__link">+7 (495) 150-64-63</a>
 					<a href="tel:+78003336463" class="contacts-top-header__link">+7 (800) 333-64-63 (бесплатно)</a>
@@ -32,17 +34,21 @@
 			</div>
 		</div>
 		<div class="header__center header-center">
+			<button type="button" class="menu__icon icon-menu"><span></span></button>
 			<a href="#" class="header-center__logo"><img src="@img/header/logo.svg" alt="ДУХИ.РУ"></a>
 			<div class="header-center__form-wrapper">
 				<form action="#" method="get" class="header-center__form">
-					<input autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Поиск товара" class="header-center__input input">
 					<button class="header-center__button"><img src="@img/header/search.svg" alt="Поиск"></button>
+					<input autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Поиск товара" class="header-center__input input">
+					<a href="#" class="header-center__search-full">Расширенный поиск</a>
 				</form>
-				<a href="#" class="header-center__search-full">Расширенный поиск</a>
 			</div>
 			<div class="header-center__actions actions-header">
+				<button class="actions-header__item actions-header__item_search">
+					<img  src="@img/header/search-big.svg" alt="">
+				</button>
 				<a href="#" class="actions-header__item">
-					<img src="@img/header/user.svg" alt="Корзина">
+					<img src="@img/header/user.svg" alt="пользователь">
 					<div class="actions-header__data-user">
 						<span id="name-user" class="actions-header__user">Фамилия Имя</span>
 						<span id="discount" class="actions-header__user">Скидка 5%</span>
@@ -65,22 +71,26 @@
 		</div>
 		<div class="header__menu">
 			<div class="header__menu menu">
-				<button type="button" class="menu__icon icon-menu"><span></span></button>
 				<nav class="menu__body">
 					<ul class="menu__list">
-						<li class="menu__item"><a href="#" class="menu__link menu__item_mobile menu__item_bold">
-							<form action="#" method="get" class="header-center__form">
-								<input autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Расширенный поиск" class="header-center__input input">
-								<button class="header-center__button"><img src="@img/header/Search_mobile.svg" alt="Поиск"></button>
-							</form>
-						</a></li>
-						<li class="menu__item"><a href="#" class="menu__link menu__item_mobile menu__item_bold">Войти</a></li>
-						<li class="menu__item"><a href="#" class="menu__link">
-							<span class="menu__item-title">каталог парфюмерии</span>
-							<svg class="menu__item-arrow" width="13" height="25" viewBox="0 0 13 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path fill-rule="evenodd" clip-rule="evenodd" d="M0.266979 24.7132C-0.0928716 24.3348 -0.0883836 23.726 0.277003 23.3534L10.7582 12.6645L0.267057 1.63632C-0.0928362 1.258 -0.0884159 0.649203 0.27693 0.276532C0.642276 -0.0961372 1.2302 -0.0915595 1.59009 0.286756L12.7329 12C12.9058 12.1817 13.0018 12.4271 13 12.6821C12.9981 12.9371 12.8985 13.181 12.723 13.3599L1.58014 24.7235C1.21475 25.0962 0.626831 25.0915 0.266979 24.7132Z" fill="white" />
-							</svg>
-						</a>
+						<li class="menu__item menu__item_mobile menu__item_bold">
+							<a href="#" class="menu__link">
+								<form action="#" method="get" class="header-center__form">
+									<input autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Расширенный поиск" class="header-center__input header-center__input_mobile input">
+									<button class="header-center__button"><img src="@img/header/Search_mobile.svg" alt="Поиск"></button>
+								</form>
+							</a>
+						</li>
+						<li class="menu__item menu__item_mobile menu__item_bold">
+							<a href="#" class="menu__link">Войти</a>
+						</li>
+						<li class="menu__item">
+							<a href="#" class="menu__link">
+								<span class="menu__item-title">каталог парфюмерии</span>
+								<svg class="menu__item-arrow" width="13" height="25" viewBox="0 0 13 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M0.266979 24.7132C-0.0928716 24.3348 -0.0883836 23.726 0.277003 23.3534L10.7582 12.6645L0.267057 1.63632C-0.0928362 1.258 -0.0884159 0.649203 0.27693 0.276532C0.642276 -0.0961372 1.2302 -0.0915595 1.59009 0.286756L12.7329 12C12.9058 12.1817 13.0018 12.4271 13 12.6821C12.9981 12.9371 12.8985 13.181 12.723 13.3599L1.58014 24.7235C1.21475 25.0962 0.626831 25.0915 0.266979 24.7132Z" fill="white" />
+								</svg>
+							</a>
 							<ul class="menu__sublist menu__sublist_grid sublist-menu ">
 								<li class="sublist-menu__item"><a href="#" class="sublist-menu__link">АРОМАТЫ ДЛЯ ЖЕНЩИН</a></li>
 								<li class="sublist-menu__item"><a href="#" class="sublist-menu__link">АРОМАТЫ ДЛЯ МУЖЧИН</a></li>
@@ -99,7 +109,13 @@
 							</ul>
 						</li>
 						<li class="menu__item"><a href="#" class="menu__link">бренды</a></li>
-						<li class="menu__item"><a href="#" class="menu__link">отливанты</a>
+						<li class="menu__item">
+							<a href="#" class="menu__link">
+								<span class="menu__item-title">отливанты</span>
+								<svg class="menu__item-arrow" width="13" height="25" viewBox="0 0 13 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M0.266979 24.7132C-0.0928716 24.3348 -0.0883836 23.726 0.277003 23.3534L10.7582 12.6645L0.267057 1.63632C-0.0928362 1.258 -0.0884159 0.649203 0.27693 0.276532C0.642276 -0.0961372 1.2302 -0.0915595 1.59009 0.286756L12.7329 12C12.9058 12.1817 13.0018 12.4271 13 12.6821C12.9981 12.9371 12.8985 13.181 12.723 13.3599L1.58014 24.7235C1.21475 25.0962 0.626831 25.0915 0.266979 24.7132Z" fill="white" />
+								</svg>
+							</a>
 							<ul class="menu__sublist sublist-menu">
 								<li class="sublist-menu__item"><a href="#" class="sublist-menu__link">АССОРТИМЕНТ</a></li>
 								<li class="sublist-menu__item"><a href="#" class="sublist-menu__link">КУПИТЬ АТОМАЙЗЕРЫ</a></li>
@@ -107,7 +123,13 @@
 								<li class="sublist-menu__item"><a href="#" class="sublist-menu__link">НАБОРЫ ОТЛИВАНТОВ</a></li>
 							</ul>
 						</li>
-						<li class="menu__item"><a href="#" class="menu__link">новинки</a>
+						<li class="menu__item">
+							<a href="#" class="menu__link">
+								<span class="menu__item-title">новинки</span>
+								<svg class="menu__item-arrow" width="13" height="25" viewBox="0 0 13 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M0.266979 24.7132C-0.0928716 24.3348 -0.0883836 23.726 0.277003 23.3534L10.7582 12.6645L0.267057 1.63632C-0.0928362 1.258 -0.0884159 0.649203 0.27693 0.276532C0.642276 -0.0961372 1.2302 -0.0915595 1.59009 0.286756L12.7329 12C12.9058 12.1817 13.0018 12.4271 13 12.6821C12.9981 12.9371 12.8985 13.181 12.723 13.3599L1.58014 24.7235C1.21475 25.0962 0.626831 25.0915 0.266979 24.7132Z" fill="white" />
+								</svg>
+							</a>
 							<ul class="menu__sublist sublist-menu">
 								<li class="sublist-menu__item"><a href="#" class="sublist-menu__link">АРОМАТЫ 2023 ГОДА</a></li>
 								<li class="sublist-menu__item"><a href="#" class="sublist-menu__link">АРОМАТЫ 2022 ГОДА</a></li>
@@ -117,7 +139,13 @@
 								<li class="sublist-menu__item"><a href="#" class="sublist-menu__link">НОВЫЕ ПОСТУПЛЕНИЯ</a></li>
 							</ul>
 						</li>
-						<li class="menu__item"><a href="#" class="menu__link">доставка и Оплата</a>
+						<li class="menu__item">
+							<a href="#" class="menu__link">
+								<span class="menu__item-title">доставка и оплата</span>
+								<svg class="menu__item-arrow" width="13" height="25" viewBox="0 0 13 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M0.266979 24.7132C-0.0928716 24.3348 -0.0883836 23.726 0.277003 23.3534L10.7582 12.6645L0.267057 1.63632C-0.0928362 1.258 -0.0884159 0.649203 0.27693 0.276532C0.642276 -0.0961372 1.2302 -0.0915595 1.59009 0.286756L12.7329 12C12.9058 12.1817 13.0018 12.4271 13 12.6821C12.9981 12.9371 12.8985 13.181 12.723 13.3599L1.58014 24.7235C1.21475 25.0962 0.626831 25.0915 0.266979 24.7132Z" fill="white" />
+								</svg>
+							</a>
 							<ul class="menu__sublist sublist-menu">
 								<li class="sublist-menu__item"><a href="#" class="sublist-menu__link">СПОСОБЫ ОПЛАТЫ</a></li>
 								<li class="sublist-menu__item"><a href="#" class="sublist-menu__link">УСЛОВИЯ ДОСТАВКИ</a></li>
@@ -125,7 +153,13 @@
 								<li class="sublist-menu__item"><a href="#" class="sublist-menu__link">ГДЕ МОЙ ЗАКАЗ?</a></li>
 							</ul>
 						</li>
-						<li class="menu__item"><a href="#" class="menu__link">Отзывы</a>
+						<li class="menu__item">
+							<a href="#" class="menu__link">
+								<span class="menu__item-title">Отзывы</span>
+								<svg class="menu__item-arrow" width="13" height="25" viewBox="0 0 13 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M0.266979 24.7132C-0.0928716 24.3348 -0.0883836 23.726 0.277003 23.3534L10.7582 12.6645L0.267057 1.63632C-0.0928362 1.258 -0.0884159 0.649203 0.27693 0.276532C0.642276 -0.0961372 1.2302 -0.0915595 1.59009 0.286756L12.7329 12C12.9058 12.1817 13.0018 12.4271 13 12.6821C12.9981 12.9371 12.8985 13.181 12.723 13.3599L1.58014 24.7235C1.21475 25.0962 0.626831 25.0915 0.266979 24.7132Z" fill="white" />
+								</svg>
+							</a>
 							<ul class="menu__sublist sublist-menu">
 								<li class="sublist-menu__item"><a href="#" class="sublist-menu__link sublist-menu__link_bold">НА САЙТЕ</a></li>
 								<li class="sublist-menu__item"><a href="#" class="sublist-menu__link">IRECOMMEND.RU</a></li>
@@ -138,7 +172,13 @@
 								<li class="sublist-menu__item"><a href="#" class="sublist-menu__link">НАШЕ МНЕНИЕ</a></li>
 							</ul>
 						</li>
-						<li class="menu__item"><a href="#" class="menu__link">Акции и бонусы</a>
+						<li class="menu__item">
+							<a href="#" class="menu__link">
+								<span class="menu__item-title">Акции и бонусы</span>
+								<svg class="menu__item-arrow" width="13" height="25" viewBox="0 0 13 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M0.266979 24.7132C-0.0928716 24.3348 -0.0883836 23.726 0.277003 23.3534L10.7582 12.6645L0.267057 1.63632C-0.0928362 1.258 -0.0884159 0.649203 0.27693 0.276532C0.642276 -0.0961372 1.2302 -0.0915595 1.59009 0.286756L12.7329 12C12.9058 12.1817 13.0018 12.4271 13 12.6821C12.9981 12.9371 12.8985 13.181 12.723 13.3599L1.58014 24.7235C1.21475 25.0962 0.626831 25.0915 0.266979 24.7132Z" fill="white" />
+								</svg>
+							</a>
 							<ul class="menu__sublist sublist-menu">
 								<li class="sublist-menu__item"><a href="#" class="sublist-menu__link">МОИ ПОДАРКИ</a></li>
 								<li class="sublist-menu__item"><a href="#" class="sublist-menu__link">СОЦИАЛЬНЫЕ СЕТИ</a></li>
@@ -147,7 +187,13 @@
 								<li class="sublist-menu__item"><a href="#" class="sublist-menu__link">БОНУСНАЯ ПРОГРАММА</a></li>
 							</ul>
 						</li>
-						<li class="menu__item"><a href="#" class="menu__link">О магазине</a>
+						<li class="menu__item">
+							<a href="#" class="menu__link">
+								<span class="menu__item-title">О магазине</span>
+								<svg class="menu__item-arrow" width="13" height="25" viewBox="0 0 13 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M0.266979 24.7132C-0.0928716 24.3348 -0.0883836 23.726 0.277003 23.3534L10.7582 12.6645L0.267057 1.63632C-0.0928362 1.258 -0.0884159 0.649203 0.27693 0.276532C0.642276 -0.0961372 1.2302 -0.0915595 1.59009 0.286756L12.7329 12C12.9058 12.1817 13.0018 12.4271 13 12.6821C12.9981 12.9371 12.8985 13.181 12.723 13.3599L1.58014 24.7235C1.21475 25.0962 0.626831 25.0915 0.266979 24.7132Z" fill="white" />
+								</svg>
+							</a>
 							<ul class="menu__sublist sublist-menu">
 								<li class="sublist-menu__item"><a href="#" class="sublist-menu__link">КАНАЛ НА YOUTUBE</a></li>
 								<li class="sublist-menu__item"><a href="#" class="sublist-menu__link">ГРУППА ВКОНТАКТЕ</a></li>
@@ -162,10 +208,10 @@
 						<li class="menu__item menu__item_mobile menu__item_bold"><a href="#" class="menu__link">Мобильное приложение</a>
 					</ul>
 					<ul class="menu__social">
-						<li class="menu__social-item"><a href="#" class="menu__social-itemlink"><img src="@img/header/whatsapp_big.svg" alt="whatsapp"></a></li>
-						<li class="menu__social-item"><a href="#" class="menu__social-itemlink"><img src="@img/header/vk.svg" alt="vk.com"></a></li>
-						<li class="menu__social-item"><a href="#" class="menu__social-itemlink"><img src="@img/header/youtube.svg" alt="youtybe.com"></a></li>
-						<li class="menu__social-item"><a href="#" class="menu__social-itemlink"><img src="@img/header/telegram.svg" alt="telegram"></a></li>
+						<li class="menu__social-item menu__social-item_green"><a href="#" class="menu__social-itemlink"><img src="@img/header/whatsapp_big.svg" alt="whatsapp"></a></li>
+						<li class="menu__social-item menu__social-item_white"><a href="#" class="menu__social-itemlink"><img src="@img/header/vk.svg" alt="vk.com"></a></li>
+						<li class="menu__social-item menu__social-item_red"><a href="#" class="menu__social-itemlink"><img src="@img/header/youtube.svg" alt="youtybe.com"></a></li>
+						<li class="menu__social-item menu__social-item_blue"><a href="#" class="menu__social-itemlink"><img src="@img/header/telegram.svg" alt="telegram"></a></li>
 					</ul>
 				</nav>
 			</div>
