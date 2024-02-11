@@ -1,1 +1,89 @@
 // Заголовки, общие БЄМ блоки и прочее...
+h3[class*="__title"] {
+	margin-bottom: 20px;
+	position: relative;
+	font-weight: 300;
+	@include adaptiveValue("font-size", 24, 18,0,1920,768);
+	line-height: 118%; /* 59/50 */
+	color: $tekst-zagolovok-ne-aktivnyy;
+	@media (max-width:$mobile){
+		@include adaptiveValue("font-size", 50, 22,0,768,440); 
+	}
+	&:not(:last-child) {
+		@include adaptiveValue("margin-right", 60, 15,0,1920,768);
+	}
+	@media (max-width:$mobileSmall){
+		margin-bottom: toRem(20); 
+	}
+}
+
+.center-button {
+	// margin-left: auto;
+		margin:auto;
+		margin-top: toRem(20);
+		display: table;
+		place-items: center;
+		color: white;
+		background-color: $knopka-rozovaya;
+		padding: toRem(10) toRem(69);
+		@media (max-width:$mobile){
+			 padding: toRem(10) toRem(55); 
+		}
+		@media (max-width:$mobileSmall){
+			 padding: toRem(10) toRem(45); 
+		}
+		transition: color 0.3s, background-color 0.3s;
+		&:hover{
+			background-color: white;
+			color: $knopka-rozovaya;
+		}
+}
+
+.swiper-prev {
+	display: none;
+	@media (min-width:$mobile){
+		display: inline-block;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-160%);
+		left: -1%; 
+	}
+}
+.swiper-next {
+	display: none;
+	@media (min-width:$mobile){
+		display: inline-block;
+		position: absolute;
+		right: -1%;
+		top: 50%;
+		transform: translateY(-160%);
+		img {
+			transform: rotate(180deg);
+		} 
+	}
+}
+
+.pagination {
+	display: none;
+	@media (max-width:$mobile){
+		// margin:auto;
+		margin-top: 20px;
+		display: flex;
+		justify-content: center;
+		gap: 20px;
+		& .swiper-pagination-bullet {
+		background-color: #ecb1c3;
+		width: 19px;
+		height: 19px;
+		border-radius: 100%;
+		transition: background-color 0.5s;
+		@media (max-width:$mobileSmall){
+			width: 13px;
+			height: 13px; 
+			}
+		}
+		& .swiper-pagination-bullet-active {
+			background-color: $knopka-rozovaya;
+		}
+	}
+}

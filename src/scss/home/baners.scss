@@ -1,0 +1,121 @@
+//=BANNERS===================================================================================================
+.page {
+
+	&__banners {
+		margin-top: toRem(40);
+	}
+}
+.banners {
+
+	&__container {
+	}
+
+	&__slider {
+		position: relative;
+		margin-left: -15px;
+		margin-right: -15px;
+	}
+
+	&__wrapper {
+	}
+
+	&__slide {
+		position: relative;
+		img {
+			border-radius: 1rem;
+			aspect-ratio: 1540 / 468;
+			@media (max-width:$tablet){
+				border-radius: 0;
+			}
+			@media (max-width:$mobile){
+				 aspect-ratio: 768 / 460; 
+			}
+		}
+	}
+
+	&__content {
+		position: absolute;
+		top: 28%;
+		left: 6%;
+		@media (max-width:$tablet){
+			top: 15%;
+		}
+	}
+
+	&__title {
+		font-weight: 300;
+		color: white;
+		@include adaptiveValue("font-size", 39, 22,0,1920,360);
+		span {
+			font-weight: 900;
+			line-height: 0.7;
+			@include adaptiveValue("font-size",96 , 50,0,1920,360);
+		}
+	}
+
+	&__link {
+		@include adaptiveValue("margin-top", 12, 4,0,1920,360);
+		color: #b40d21;
+		@include adaptiveValue("font-size", 16, 12,0,1920,360);
+		line-height: math.div(19 , 16);
+		border: 1px solid rgb(180, 13, 33);
+		background: rgb(255, 255, 255);
+		padding: toRem(10) toRem(30);
+		text-transform: uppercase;
+		transition: all 0.3s;
+		&:hover{
+			color: white;
+			background-color: #b40d21;
+		}
+		@media (max-width:$tablet){
+			// width: 85%;
+			text-align: center;
+		}
+	}
+}
+.swiper {
+}
+.swiper-wrapper {
+}
+.swiper-slide {
+}
+.swiper-pagination {
+	position: absolute;
+	display: flex;
+	column-gap: toRem(20);
+	align-items: center;
+	left: 50%;
+	bottom: 3%;
+	transform: translate(-50%);
+	@media (max-width:$mobile){
+		 column-gap: toRem(12); 
+	}
+	& .swiper-pagination-bullet {
+		border-radius: 100%;
+		width: 18px;
+		height: 18px;
+		background: #ffa7c1;
+		transition: all 0.5s;
+		@media (max-width:$mobileSmall){
+			 width: 13px;
+			 height: 13px; 
+		}
+	}
+	& .swiper-pagination-bullet-active {
+		border-radius: 100%;
+		
+		background: #fff;
+		@media (min-width:$mobileSmall){
+			width: 22px;
+			height: 22px;
+		}
+		&+.swiper-pagination-bullet {
+			@media (min-width:$mobileSmall){
+				width: 20px;
+				height: 20px;  
+			}
+		}
+	}
+}
+
+//====================================================================================================

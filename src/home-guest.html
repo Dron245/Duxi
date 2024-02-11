@@ -6,57 +6,58 @@
 	<body>
 		<div class="wrapper">
 			@@include('html/_header-guest.htm',{})
-			<main class="page">
+			<main class="page guest">
+				
 				<section class="page__banners banners">
 					<div class="banners__container">
 						<div class="banners__slider swiper">
 							<div class="banners__wrapper swiper-wrapper">
 								<div class="banners__slide swiper-slide">
 									<img class="ibg" src="@img/home/baner1.png" alt="">
-									<span class="banners__title">Большой заголовок опционально</span>
-									<a href="#" class="banners__link">ПЕРЕЙТИ В КАТЕГОРИЮ ИЛИ СТАТЬЮ</a>
+									<div class="banners__content">
+										<h2 class="banners__title">Баннеры на главной странице  <br><span>опционально</span></h2>
+										<a href="#" class="banners__link">ПЕРЕЙТИ В КАТЕГОРИЮ ИЛИ СТАТЬЮ</a>
+									</div>
 								</div>
 								<div class="banners__slide swiper-slide">
 									<img class="ibg" src="@img/home/baner2.png" alt="">
-									<span class="banners__title">Большой заголовок опционально</span>
-									<a href="#" class="banners__link">ПЕРЕЙТИ В КАТЕГОРИЮ ИЛИ СТАТЬЮ</a>
+									<div class="banners__content">
+										<h2 class="banners__title">Баннеры на главной странице  <br><span>опционально</span></h2>
+										<a href="#" class="banners__link">ПЕРЕЙТИ В КАТЕГОРИЮ ИЛИ СТАТЬЮ</a>
+									</div>
 								</div>
 								<div class="banners__slide swiper-slide">
 									<img class="ibg" src="@img/home/baner1.png" alt="">
-									<span class="banners__title">Большой заголовок опционально</span>
-									<a href="#" class="banners__link">ПЕРЕЙТИ В КАТЕГОРИЮ ИЛИ СТАТЬЮ</a>
+									<div class="banners__content">
+										<h2 class="banners__title">Баннеры на главной странице  <br><span>опционально</span></h2>
+										<a href="#" class="banners__link">ПЕРЕЙТИ В КАТЕГОРИЮ ИЛИ СТАТЬЮ</a>
+									</div>
 								</div>
 								<div class="banners__slide swiper-slide">
 									<img class="ibg" src="@img/home/baner2.png" alt="">
-									<span class="banners__title">Большой заголовок опционально</span>
-									<a href="#" class="banners__link">ПЕРЕЙТИ В КАТЕГОРИЮ ИЛИ СТАТЬЮ</a>
-								</div>
-								<div class="banners__slide swiper-slide">
-									<img class="ibg" src="@img/home/baner1.png" alt="">
-									<span class="banners__title">Большой заголовок опционально</span>
-									<a href="#" class="banners__link">ПЕРЕЙТИ В КАТЕГОРИЮ ИЛИ СТАТЬЮ</a>
-								</div>
-								<div class="banners__slide swiper-slide">
-									<img class="ibg" src="@img/home/baner2.png" alt="">
-									<span class="banners__title">Большой заголовок опционально</span>
-									<a href="#" class="banners__link">ПЕРЕЙТИ В КАТЕГОРИЮ ИЛИ СТАТЬЮ</a>
+									<div class="banners__content">
+										<h2 class="banners__title">Баннеры на главной странице  <br><span>опционально</span></h2>
+										<a href="#" class="banners__link">ПЕРЕЙТИ В КАТЕГОРИЮ ИЛИ СТАТЬЮ</a>
+									</div>
 								</div>
 							</div>
 							<div class="swiper-pagination"></div>
 						</div>
 					</div>
 				</section>
-				<section style="display: none;" class="page__products products">
+
+				<section class="page__products products">
 					<div class="products__container">
+						<div class="products__tab_da"></div>
 						<div data-tabs class="products_tabs tabs">
 							<nav data-tabs-titles class="tabs__navigation">
-								<button type="button" class="tabs__title _tab-active">НОВИНКИ</button>
-								<button type="button" class="tabs__title">РАСПРОДАЖА</button>
-								<button type="button" class="tabs__title">ТОП-ПРОДАЖ</button>
+								<button id="tabs01" data-da=".products__tab_da, 768.01" type="button" class="tabs__title _tab-active">НОВИНКИ</button>
+								<button id="tabs02" type="button" class="tabs__title">РАСПРОДАЖА</button>
+								<button id="tabs03" type="button" class="tabs__title">ТОП-ПРОДАЖ</button>
 							</nav>
 							<div data-tabs-body class="tabs__content">
-								<div class="tabs__body">
-									<div class="tabs__slider01 swiper">
+								<div data-da=".products__tab_da, 768" class="tabs__body">
+									<div class="tabs__slider swiper">
 										<div class="tabs__wrapper swiper-wrapper">
 											<div class="tabs__slide swiper-slide">
 												<article class="tabs__slide-product slide-product">
@@ -64,19 +65,21 @@
 														<img class ="ibg" src="@img/home/products/01.jpg" alt="">
 													</div>
 													<div class="slide-product__content">
-														<div class="slide-product__title">LACOSTE POUR ELLE</div>
+														<div class="slide-product__title"><span>LACOSTE</span> POUR ELLE</div>
 														<div class="slide-product__category">Мужская парфюмерия</div>
 														<div class="slide-product__cost">1000 - 30 000 руб.</div>
 													</div>
 													<div class="slide-product__labels labels-product">
-														<div class="labels-product_label labels-product__top">ТОП-ПРОДАЖ</div>
-														<div class="labels-product_label labels-product__now">НОВИНКИ</div>
-														<div class="labels-product_label labels-product__action">АКЦИЯ</div>
+														<span class="labels-product__label labels-product__label_sale">РАСПОДАЖА</span>
+														<span class="labels-product__label labels-product__label_discont">-20%</span>
+														<span class="labels-product__label labels-product__label_top">ТОП-ПРОДАЖ</span>
+														<span class="labels-product__label labels-product__label_now">НОВИНКИ</span>
+														<span class="labels-product__label labels-product__label_action">АКЦИЯ</span>
 													</div>
-													<!--<div class="slide-product__actions">
+													<div class="slide-product__actions">
 														<button class="slide-product__action"><img src="@img/home/add-spisok.svg" alt="Добавить в список сравнения"></button>
 														<button class="slide-product__action"><img src="@img/home/izbrannoe.svg" alt="Добавить в избранное"></button>
-													</div>-->
+													</div>
 													<div class="slide-product__view">
 														<a href="#" class="slide-product__view-link">БЫСТРЫЙ ПРОСМОТР</a>
 													</div>
@@ -88,19 +91,21 @@
 														<img class ="ibg" src="@img/home/products/02.jpg" alt="">
 													</div>
 													<div class="slide-product__content">
-														<div class="slide-product__title">LACOSTE POUR ELLE</div>
+														<div class="slide-product__title"><span>LACOSTE</span> POUR ELLE</div>
 														<div class="slide-product__category">Мужская парфюмерия</div>
 														<div class="slide-product__cost">1000 - 30 000 руб.</div>
 													</div>
 													<div class="slide-product__labels labels-product">
-														<div class="labels-product_label labels-product__top">ТОП-ПРОДАЖ</div>
-														<div class="labels-product_label labels-product__now">НОВИНКИ</div>
-														<div class="labels-product_label labels-product__action">АКЦИЯ</div>
+														<span class="labels-product__label labels-product__label_sale">РАСПОДАЖА</span>
+														<span class="labels-product__label labels-product__label_discont">-20%</span>
+														<span class="labels-product__label labels-product__label_top">ТОП-ПРОДАЖ</span>
+														<span class="labels-product__label labels-product__label_now">НОВИНКИ</span>
+														<span class="labels-product__label labels-product__label_action">АКЦИЯ</span>
 													</div>
-													<!--<div class="slide-product__actions">
+													<div class="slide-product__actions">
 														<button class="slide-product__action"><img src="@img/home/add-spisok.svg" alt="Добавить в список сравнения"></button>
 														<button class="slide-product__action"><img src="@img/home/izbrannoe.svg" alt="Добавить в избранное"></button>
-													</div>-->
+													</div>
 													<div class="slide-product__view">
 														<a href="#" class="slide-product__view-link">БЫСТРЫЙ ПРОСМОТР</a>
 													</div>
@@ -112,19 +117,21 @@
 														<img class ="ibg" src="@img/home/products/03.jpg" alt="">
 													</div>
 													<div class="slide-product__content">
-														<div class="slide-product__title">LACOSTE POUR ELLE</div>
+														<div class="slide-product__title"><span>LACOSTE</span> POUR ELLE</div>
 														<div class="slide-product__category">Мужская парфюмерия</div>
 														<div class="slide-product__cost">1000 - 30 000 руб.</div>
 													</div>
 													<div class="slide-product__labels labels-product">
-														<div class="labels-product_label labels-product__top">ТОП-ПРОДАЖ</div>
-														<div class="labels-product_label labels-product__now">НОВИНКИ</div>
-														<div class="labels-product_label labels-product__action">АКЦИЯ</div>
+														<span class="labels-product__label labels-product__label_sale">РАСПОДАЖА</span>
+														<span class="labels-product__label labels-product__label_discont">-20%</span>
+														<span class="labels-product__label labels-product__label_top">ТОП-ПРОДАЖ</span>
+														<span class="labels-product__label labels-product__label_now">НОВИНКИ</span>
+														<span class="labels-product__label labels-product__label_action">АКЦИЯ</span>
 													</div>
-													<!--<div class="slide-product__actions">
+													<div class="slide-product__actions">
 														<button class="slide-product__action"><img src="@img/home/add-spisok.svg" alt="Добавить в список сравнения"></button>
 														<button class="slide-product__action"><img src="@img/home/izbrannoe.svg" alt="Добавить в избранное"></button>
-													</div>-->
+													</div>
 													<div class="slide-product__view">
 														<a href="#" class="slide-product__view-link">БЫСТРЫЙ ПРОСМОТР</a>
 													</div>
@@ -136,19 +143,21 @@
 														<img class ="ibg" src="@img/home/products/04.jpg" alt="">
 													</div>
 													<div class="slide-product__content">
-														<div class="slide-product__title">LACOSTE POUR ELLE</div>
+														<div class="slide-product__title"><span>LACOSTE</span> POUR ELLE</div>
 														<div class="slide-product__category">Мужская парфюмерия</div>
 														<div class="slide-product__cost">1000 - 30 000 руб.</div>
 													</div>
 													<div class="slide-product__labels labels-product">
-														<div class="labels-product_label labels-product__top">ТОП-ПРОДАЖ</div>
-														<div class="labels-product_label labels-product__now">НОВИНКИ</div>
-														<div class="labels-product_label labels-product__action">АКЦИЯ</div>
+														<span class="labels-product__label labels-product__label_sale">РАСПОДАЖА</span>
+														<span class="labels-product__label labels-product__label_discont">-20%</span>
+														<span class="labels-product__label labels-product__label_top">ТОП-ПРОДАЖ</span>
+														<span class="labels-product__label labels-product__label_now">НОВИНКИ</span>
+														<span class="labels-product__label labels-product__label_action">АКЦИЯ</span>
 													</div>
-													<!--<div class="slide-product__actions">
+													<div class="slide-product__actions">
 														<button class="slide-product__action"><img src="@img/home/add-spisok.svg" alt="Добавить в список сравнения"></button>
 														<button class="slide-product__action"><img src="@img/home/izbrannoe.svg" alt="Добавить в избранное"></button>
-													</div>-->
+													</div>
 													<div class="slide-product__view">
 														<a href="#" class="slide-product__view-link">БЫСТРЫЙ ПРОСМОТР</a>
 													</div>
@@ -160,19 +169,21 @@
 														<img class ="ibg" src="@img/home/products/05.jpg" alt="">
 													</div>
 													<div class="slide-product__content">
-														<div class="slide-product__title">LACOSTE POUR ELLE</div>
+														<div class="slide-product__title"><span>LACOSTE</span> POUR ELLE</div>
 														<div class="slide-product__category">Мужская парфюмерия</div>
 														<div class="slide-product__cost">1000 - 30 000 руб.</div>
 													</div>
 													<div class="slide-product__labels labels-product">
-														<div class="labels-product_label labels-product__top">ТОП-ПРОДАЖ</div>
-														<div class="labels-product_label labels-product__now">НОВИНКИ</div>
-														<div class="labels-product_label labels-product__action">АКЦИЯ</div>
+														<span class="labels-product__label labels-product__label_sale">РАСПОДАЖА</span>
+														<span class="labels-product__label labels-product__label_discont">-20%</span>
+														<span class="labels-product__label labels-product__label_top">ТОП-ПРОДАЖ</span>
+														<span class="labels-product__label labels-product__label_now">НОВИНКИ</span>
+														<span class="labels-product__label labels-product__label_action">АКЦИЯ</span>
 													</div>
-													<!--<div class="slide-product__actions">
+													<div class="slide-product__actions">
 														<button class="slide-product__action"><img src="@img/home/add-spisok.svg" alt="Добавить в список сравнения"></button>
 														<button class="slide-product__action"><img src="@img/home/izbrannoe.svg" alt="Добавить в избранное"></button>
-													</div>-->
+													</div>
 													<div class="slide-product__view">
 														<a href="#" class="slide-product__view-link">БЫСТРЫЙ ПРОСМОТР</a>
 													</div>
@@ -184,19 +195,21 @@
 														<img class ="ibg" src="@img/home/products/06.jpg" alt="">
 													</div>
 													<div class="slide-product__content">
-														<div class="slide-product__title">LACOSTE POUR ELLE</div>
+														<div class="slide-product__title"><span>LACOSTE</span> POUR ELLE</div>
 														<div class="slide-product__category">Мужская парфюмерия</div>
 														<div class="slide-product__cost">1000 - 30 000 руб.</div>
 													</div>
 													<div class="slide-product__labels labels-product">
-														<div class="labels-product_label labels-product__top">ТОП-ПРОДАЖ</div>
-														<div class="labels-product_label labels-product__now">НОВИНКИ</div>
-														<div class="labels-product_label labels-product__action">АКЦИЯ</div>
+														<span class="labels-product__label labels-product__label_sale">РАСПОДАЖА</span>
+														<span class="labels-product__label labels-product__label_discont">-20%</span>
+														<span class="labels-product__label labels-product__label_top">ТОП-ПРОДАЖ</span>
+														<span class="labels-product__label labels-product__label_now">НОВИНКИ</span>
+														<span class="labels-product__label labels-product__label_action">АКЦИЯ</span>
 													</div>
-													<!--<div class="slide-product__actions">
+													<div class="slide-product__actions">
 														<button class="slide-product__action"><img src="@img/home/add-spisok.svg" alt="Добавить в список сравнения"></button>
 														<button class="slide-product__action"><img src="@img/home/izbrannoe.svg" alt="Добавить в избранное"></button>
-													</div>-->
+													</div>
 													<div class="slide-product__view">
 														<a href="#" class="slide-product__view-link">БЫСТРЫЙ ПРОСМОТР</a>
 													</div>
@@ -208,19 +221,21 @@
 														<img class ="ibg" src="@img/home/products/06.jpg" alt="">
 													</div>
 													<div class="slide-product__content">
-														<div class="slide-product__title">LACOSTE POUR ELLE</div>
+														<div class="slide-product__title"><span>LACOSTE</span> POUR ELLE</div>
 														<div class="slide-product__category">Мужская парфюмерия</div>
 														<div class="slide-product__cost">1000 - 30 000 руб.</div>
 													</div>
 													<div class="slide-product__labels labels-product">
-														<div class="labels-product_label labels-product__top">ТОП-ПРОДАЖ</div>
-														<div class="labels-product_label labels-product__now">НОВИНКИ</div>
-														<div class="labels-product_label labels-product__action">АКЦИЯ</div>
+														<span class="labels-product__label labels-product__label_sale">РАСПОДАЖА</span>
+														<span class="labels-product__label labels-product__label_discont">-20%</span>
+														<span class="labels-product__label labels-product__label_top">ТОП-ПРОДАЖ</span>
+														<span class="labels-product__label labels-product__label_now">НОВИНКИ</span>
+														<span class="labels-product__label labels-product__label_action">АКЦИЯ</span>
 													</div>
-													<!--<div class="slide-product__actions">
+													<div class="slide-product__actions">
 														<button class="slide-product__action"><img src="@img/home/add-spisok.svg" alt="Добавить в список сравнения"></button>
 														<button class="slide-product__action"><img src="@img/home/izbrannoe.svg" alt="Добавить в избранное"></button>
-													</div>-->
+													</div>
 													<div class="slide-product__view">
 														<a href="#" class="slide-product__view-link">БЫСТРЫЙ ПРОСМОТР</a>
 													</div>
@@ -232,33 +247,35 @@
 														<img class ="ibg" src="@img/home/products/02.jpg" alt="">
 													</div>
 													<div class="slide-product__content">
-														<div class="slide-product__title">LACOSTE POUR ELLE</div>
+														<div class="slide-product__title"><span>LACOSTE</span> POUR ELLE</div>
 														<div class="slide-product__category">Мужская парфюмерия</div>
 														<div class="slide-product__cost">1000 - 30 000 руб.</div>
 													</div>
 													<div class="slide-product__labels labels-product">
-														<div class="labels-product_label labels-product__top">ТОП-ПРОДАЖ</div>
-														<div class="labels-product_label labels-product__now">НОВИНКИ</div>
-														<div class="labels-product_label labels-product__action">АКЦИЯ</div>
+														<span class="labels-product__label labels-product__label_sale">РАСПОДАЖА</span>
+														<span class="labels-product__label labels-product__label_discont">-20%</span>
+														<span class="labels-product__label labels-product__label_top">ТОП-ПРОДАЖ</span>
+														<span class="labels-product__label labels-product__label_now">НОВИНКИ</span>
+														<span class="labels-product__label labels-product__label_action">АКЦИЯ</span>
 													</div>
-													<!--<div class="slide-product__actions">
+													<div class="slide-product__actions">
 														<button class="slide-product__action"><img src="@img/home/add-spisok.svg" alt="Добавить в список сравнения"></button>
 														<button class="slide-product__action"><img src="@img/home/izbrannoe.svg" alt="Добавить в избранное"></button>
-													</div>-->
+													</div>
 													<div class="slide-product__view">
 														<a href="#" class="slide-product__view-link">БЫСТРЫЙ ПРОСМОТР</a>
 													</div>
 												</article>
 											</div>
 										</div>
-										<div class="swiper-pagination"></div>
-										<button type="button" class="swiper-button-prev"><img src="@img/home/arrow-l-slider.svg" alt="Назад"></button>
-										<button type="button" class="swiper-button-next"><img src="@img/home/arrow-l-slider.svg" alt="Вперёд"></button>
+										<div class="swiper-products-pagination pagination"></div>
+										<button type="button" class="swiper-product-prev"><img src="@img/home/arrow-l-slider.svg" alt="Назад"></button>
+										<button type="button" class="swiper-product-next"><img src="@img/home/arrow-l-slider.svg" alt="Вперёд"></button>
 									</div>
-									<a class="tabs__show-all" href="#">ПОКАЗАТЬ ВСЕ</a>
+									<a class="tabs__show-all center-button" href="#">ПОКАЗАТЬ ВСЕ</a>
 								</div>
 								<div class="tabs__body">
-									<div class="tabs__slider02 swiper">
+									<div class="tabs__slider swiper">
 										<div class="tabs__wrapper swiper-wrapper">
 											<div class="tabs__slide swiper-slide">
 												<article class="tabs__slide-product slide-product">
@@ -266,21 +283,24 @@
 														<img class ="ibg" src="@img/home/products/01.jpg" alt="">
 													</div>
 													<div class="slide-product__content">
-														<div class="slide-product__title">LACOSTE POUR ELLE</div>
+														<div class="slide-product__title"><span>LACOSTE</span> POUR ELLE</div>
 														<div class="slide-product__category">Мужская парфюмерия</div>
 														<span class="slide-product__subtext">набор</span>
 														<p class="slide-product__text">парфюмированная вода (edt) + лосьон для тела + гель для душа 50+10+100 мл</p>
 														<div class="slide-product__cost"><span>30 000</span> руб.</div>
+														<button type="submit" class="slide-product__seil">Купить</button>
 													</div>
 													<div class="slide-product__labels labels-product">
-														<div class="labels-product_label labels-product__top">ТОП-ПРОДАЖ</div>
-														<div class="labels-product_label labels-product__now">НОВИНКИ</div>
-														<div class="labels-product_label labels-product__action">АКЦИЯ</div>
+														<span class="labels-product__label labels-product__label_sale">РАСПОДАЖА</span>
+														<span class="labels-product__label labels-product__label_discont">-20%</span>
+														<span class="labels-product__label labels-product__label_top">ТОП-ПРОДАЖ</span>
+														<span class="labels-product__label labels-product__label_now">НОВИНКИ</span>
+														<span class="labels-product__label labels-product__label_action">АКЦИЯ</span>
 													</div>
-													<!--<div class="slide-product__actions">
+													<div class="slide-product__actions">
 														<button class="slide-product__action"><img src="@img/home/add-spisok.svg" alt="Добавить в список сравнения"></button>
 														<button class="slide-product__action"><img src="@img/home/izbrannoe.svg" alt="Добавить в избранное"></button>
-													</div>-->
+													</div>
 													<div class="slide-product__view">
 														<a href="#" class="slide-product__view-link">БЫСТРЫЙ ПРОСМОТР</a>
 													</div>
@@ -292,21 +312,24 @@
 														<img class ="ibg" src="@img/home/products/02.jpg" alt="">
 													</div>
 													<div class="slide-product__content">
-														<div class="slide-product__title">LACOSTE POUR ELLE</div>
+														<div class="slide-product__title"><span>LACOSTE</span> POUR ELLE</div>
 														<div class="slide-product__category">Мужская парфюмерия</div>
 														<span class="slide-product__subtext">набор</span>
 														<p class="slide-product__text">парфюмированная вода (edt) + лосьон для тела + гель для душа 50+10+100 мл</p>
 														<div class="slide-product__cost"><span>30 000</span> руб.</div>
+														<button type="submit" class="slide-product__seil">Купить</button>
 													</div>
 													<div class="slide-product__labels labels-product">
-														<div class="labels-product_label labels-product__top">ТОП-ПРОДАЖ</div>
-														<div class="labels-product_label labels-product__now">НОВИНКИ</div>
-														<div class="labels-product_label labels-product__action">АКЦИЯ</div>
+														<span class="labels-product__label labels-product__label_sale">РАСПОДАЖА</span>
+														<span class="labels-product__label labels-product__label_discont">-20%</span>
+														<span class="labels-product__label labels-product__label_top">ТОП-ПРОДАЖ</span>
+														<span class="labels-product__label labels-product__label_now">НОВИНКИ</span>
+														<span class="labels-product__label labels-product__label_action">АКЦИЯ</span>
 													</div>
-													<!--<div class="slide-product__actions">
+													<div class="slide-product__actions">
 														<button class="slide-product__action"><img src="@img/home/add-spisok.svg" alt="Добавить в список сравнения"></button>
 														<button class="slide-product__action"><img src="@img/home/izbrannoe.svg" alt="Добавить в избранное"></button>
-													</div>-->
+													</div>
 													<div class="slide-product__view">
 														<a href="#" class="slide-product__view-link">БЫСТРЫЙ ПРОСМОТР</a>
 													</div>
@@ -318,21 +341,24 @@
 														<img class ="ibg" src="@img/home/products/03.jpg" alt="">
 													</div>
 													<div class="slide-product__content">
-														<div class="slide-product__title">LACOSTE POUR ELLE</div>
+														<div class="slide-product__title"><span>LACOSTE</span> POUR ELLE</div>
 														<div class="slide-product__category">Мужская парфюмерия</div>
 														<span class="slide-product__subtext">набор</span>
 														<p class="slide-product__text">парфюмированная вода (edt) + лосьон для тела + гель для душа 50+10+100 мл</p>
 														<div class="slide-product__cost"><span>30 000</span> руб.</div>
+														<button type="submit" class="slide-product__seil">Купить</button>
 													</div>
 													<div class="slide-product__labels labels-product">
-														<div class="labels-product_label labels-product__top">ТОП-ПРОДАЖ</div>
-														<div class="labels-product_label labels-product__now">НОВИНКИ</div>
-														<div class="labels-product_label labels-product__action">АКЦИЯ</div>
+														<span class="labels-product__label labels-product__label_sale">РАСПОДАЖА</span>
+														<span class="labels-product__label labels-product__label_discont">-20%</span>
+														<span class="labels-product__label labels-product__label_top">ТОП-ПРОДАЖ</span>
+														<span class="labels-product__label labels-product__label_now">НОВИНКИ</span>
+														<span class="labels-product__label labels-product__label_action">АКЦИЯ</span>
 													</div>
-													<!--<div class="slide-product__actions">
+													<div class="slide-product__actions">
 														<button class="slide-product__action"><img src="@img/home/add-spisok.svg" alt="Добавить в список сравнения"></button>
 														<button class="slide-product__action"><img src="@img/home/izbrannoe.svg" alt="Добавить в избранное"></button>
-													</div>-->
+													</div>
 													<div class="slide-product__view">
 														<a href="#" class="slide-product__view-link">БЫСТРЫЙ ПРОСМОТР</a>
 													</div>
@@ -344,21 +370,24 @@
 														<img class ="ibg" src="@img/home/products/04.jpg" alt="">
 													</div>
 													<div class="slide-product__content">
-														<div class="slide-product__title">LACOSTE POUR ELLE</div>
+														<div class="slide-product__title"><span>LACOSTE</span> POUR ELLE</div>
 														<div class="slide-product__category">Мужская парфюмерия</div>
 														<span class="slide-product__subtext">набор</span>
 														<p class="slide-product__text">парфюмированная вода (edt) + лосьон для тела + гель для душа 50+10+100 мл</p>
 														<div class="slide-product__cost"><span>30 000</span> руб.</div>
+														<button type="submit" class="slide-product__seil">Купить</button>
 													</div>
 													<div class="slide-product__labels labels-product">
-														<div class="labels-product_label labels-product__top">ТОП-ПРОДАЖ</div>
-														<div class="labels-product_label labels-product__now">НОВИНКИ</div>
-														<div class="labels-product_label labels-product__action">АКЦИЯ</div>
+														<span class="labels-product__label labels-product__label_sale">РАСПОДАЖА</span>
+														<span class="labels-product__label labels-product__label_discont">-20%</span>
+														<span class="labels-product__label labels-product__label_top">ТОП-ПРОДАЖ</span>
+														<span class="labels-product__label labels-product__label_now">НОВИНКИ</span>
+														<span class="labels-product__label labels-product__label_action">АКЦИЯ</span>
 													</div>
-													<!--<div class="slide-product__actions">
+													<div class="slide-product__actions">
 														<button class="slide-product__action"><img src="@img/home/add-spisok.svg" alt="Добавить в список сравнения"></button>
 														<button class="slide-product__action"><img src="@img/home/izbrannoe.svg" alt="Добавить в избранное"></button>
-													</div>-->
+													</div>
 													<div class="slide-product__view">
 														<a href="#" class="slide-product__view-link">БЫСТРЫЙ ПРОСМОТР</a>
 													</div>
@@ -370,21 +399,24 @@
 														<img class ="ibg" src="@img/home/products/05.jpg" alt="">
 													</div>
 													<div class="slide-product__content">
-														<div class="slide-product__title">LACOSTE POUR ELLE</div>
+														<div class="slide-product__title"><span>LACOSTE</span> POUR ELLE</div>
 														<div class="slide-product__category">Мужская парфюмерия</div>
 														<span class="slide-product__subtext">набор</span>
 														<p class="slide-product__text">парфюмированная вода (edt) + лосьон для тела + гель для душа 50+10+100 мл</p>
 														<div class="slide-product__cost"><span>30 000</span> руб.</div>
+														<button type="submit" class="slide-product__seil">Купить</button>
 													</div>
 													<div class="slide-product__labels labels-product">
-														<div class="labels-product_label labels-product__top">ТОП-ПРОДАЖ</div>
-														<div class="labels-product_label labels-product__now">НОВИНКИ</div>
-														<div class="labels-product_label labels-product__action">АКЦИЯ</div>
+														<span class="labels-product__label labels-product__label_sale">РАСПОДАЖА</span>
+														<span class="labels-product__label labels-product__label_discont">-20%</span>
+														<span class="labels-product__label labels-product__label_top">ТОП-ПРОДАЖ</span>
+														<span class="labels-product__label labels-product__label_now">НОВИНКИ</span>
+														<span class="labels-product__label labels-product__label_action">АКЦИЯ</span>
 													</div>
-													<!--<div class="slide-product__actions">
+													<div class="slide-product__actions">
 														<button class="slide-product__action"><img src="@img/home/add-spisok.svg" alt="Добавить в список сравнения"></button>
 														<button class="slide-product__action"><img src="@img/home/izbrannoe.svg" alt="Добавить в избранное"></button>
-													</div>-->
+													</div>
 													<div class="slide-product__view">
 														<a href="#" class="slide-product__view-link">БЫСТРЫЙ ПРОСМОТР</a>
 													</div>
@@ -396,21 +428,24 @@
 														<img class ="ibg" src="@img/home/products/06.jpg" alt="">
 													</div>
 													<div class="slide-product__content">
-														<div class="slide-product__title">LACOSTE POUR ELLE</div>
+														<div class="slide-product__title"><span>LACOSTE</span> POUR ELLE</div>
 														<div class="slide-product__category">Мужская парфюмерия</div>
 														<span class="slide-product__subtext">набор</span>
 														<p class="slide-product__text">парфюмированная вода (edt) + лосьон для тела + гель для душа 50+10+100 мл</p>
 														<div class="slide-product__cost"><span>30 000</span> руб.</div>
+														<button type="submit" class="slide-product__seil">Купить</button>
 													</div>
 													<div class="slide-product__labels labels-product">
-														<div class="labels-product_label labels-product__top">ТОП-ПРОДАЖ</div>
-														<div class="labels-product_label labels-product__now">НОВИНКИ</div>
-														<div class="labels-product_label labels-product__action">АКЦИЯ</div>
+														<span class="labels-product__label labels-product__label_sale">РАСПОДАЖА</span>
+														<span class="labels-product__label labels-product__label_discont">-20%</span>
+														<span class="labels-product__label labels-product__label_top">ТОП-ПРОДАЖ</span>
+														<span class="labels-product__label labels-product__label_now">НОВИНКИ</span>
+														<span class="labels-product__label labels-product__label_action">АКЦИЯ</span>
 													</div>
-													<!--<div class="slide-product__actions">
+													<div class="slide-product__actions">
 														<button class="slide-product__action"><img src="@img/home/add-spisok.svg" alt="Добавить в список сравнения"></button>
 														<button class="slide-product__action"><img src="@img/home/izbrannoe.svg" alt="Добавить в избранное"></button>
-													</div>-->
+													</div>
 													<div class="slide-product__view">
 														<a href="#" class="slide-product__view-link">БЫСТРЫЙ ПРОСМОТР</a>
 													</div>
@@ -422,21 +457,24 @@
 														<img class ="ibg" src="@img/home/products/06.jpg" alt="">
 													</div>
 													<div class="slide-product__content">
-														<div class="slide-product__title">LACOSTE POUR ELLE</div>
+														<div class="slide-product__title"><span>LACOSTE</span> POUR ELLE</div>
 														<div class="slide-product__category">Мужская парфюмерия</div>
 														<span class="slide-product__subtext">набор</span>
 														<p class="slide-product__text">парфюмированная вода (edt) + лосьон для тела + гель для душа 50+10+100 мл</p>
 														<div class="slide-product__cost"><span>30 000</span> руб.</div>
+														<button type="submit" class="slide-product__seil">Купить</button>
 													</div>
 													<div class="slide-product__labels labels-product">
-														<div class="labels-product_label labels-product__top">ТОП-ПРОДАЖ</div>
-														<div class="labels-product_label labels-product__now">НОВИНКИ</div>
-														<div class="labels-product_label labels-product__action">АКЦИЯ</div>
+														<span class="labels-product__label labels-product__label_sale">РАСПОДАЖА</span>
+														<span class="labels-product__label labels-product__label_discont">-20%</span>
+														<span class="labels-product__label labels-product__label_top">ТОП-ПРОДАЖ</span>
+														<span class="labels-product__label labels-product__label_now">НОВИНКИ</span>
+														<span class="labels-product__label labels-product__label_action">АКЦИЯ</span>
 													</div>
-													<!--<div class="slide-product__actions">
+													<div class="slide-product__actions">
 														<button class="slide-product__action"><img src="@img/home/add-spisok.svg" alt="Добавить в список сравнения"></button>
 														<button class="slide-product__action"><img src="@img/home/izbrannoe.svg" alt="Добавить в избранное"></button>
-													</div>-->
+													</div>
 													<div class="slide-product__view">
 														<a href="#" class="slide-product__view-link">БЫСТРЫЙ ПРОСМОТР</a>
 													</div>
@@ -448,35 +486,38 @@
 														<img class ="ibg" src="@img/home/products/02.jpg" alt="">
 													</div>
 													<div class="slide-product__content">
-														<div class="slide-product__title">LACOSTE POUR ELLE</div>
+														<div class="slide-product__title"><span>LACOSTE</span> POUR ELLE</div>
 														<div class="slide-product__category">Мужская парфюмерия</div>
 														<span class="slide-product__subtext">набор</span>
 														<p class="slide-product__text">парфюмированная вода (edt) + лосьон для тела + гель для душа 50+10+100 мл</p>
 														<div class="slide-product__cost"><span>30 000</span> руб.</div>
+														<button type="submit" class="slide-product__seil">Купить</button>
 													</div>
 													<div class="slide-product__labels labels-product">
-														<div class="labels-product_label labels-product__top">ТОП-ПРОДАЖ</div>
-														<div class="labels-product_label labels-product__now">НОВИНКИ</div>
-														<div class="labels-product_label labels-product__action">АКЦИЯ</div>
+														<span class="labels-product__label labels-product__label_sale">РАСПОДАЖА</span>
+														<span class="labels-product__label labels-product__label_discont">-20%</span>
+														<span class="labels-product__label labels-product__label_top">ТОП-ПРОДАЖ</span>
+														<span class="labels-product__label labels-product__label_now">НОВИНКИ</span>
+														<span class="labels-product__label labels-product__label_action">АКЦИЯ</span>
 													</div>
-													<!--<div class="slide-product__actions">
+													<div class="slide-product__actions">
 														<button class="slide-product__action"><img src="@img/home/add-spisok.svg" alt="Добавить в список сравнения"></button>
 														<button class="slide-product__action"><img src="@img/home/izbrannoe.svg" alt="Добавить в избранное"></button>
-													</div>-->
+													</div>
 													<div class="slide-product__view">
 														<a href="#" class="slide-product__view-link">БЫСТРЫЙ ПРОСМОТР</a>
 													</div>
 												</article>
 											</div>
 										</div>
-										<div class="swiper-pagination"></div>
-										<button type="button" class="swiper-button-prev"><img src="@img/home/arrow-l-slider.svg" alt="Назад"></button>
-										<button type="button" class="swiper-button-next"><img src="@img/home/arrow-l-slider.svg" alt="Вперёд"></button>
+										<div class="swiper-products-pagination pagination"></div>
+										<button type="button" class="swiper-product-prev"><img src="@img/home/arrow-l-slider.svg" alt="Назад"></button>
+										<button type="button" class="swiper-product-next"><img src="@img/home/arrow-l-slider.svg" alt="Вперёд"></button>
 									</div>
-									<a class="tabs__show-all" href="#">ПОКАЗАТЬ ВСЕ</a>
+									<a class="tabs__show-all center-button" href="#">ПОКАЗАТЬ ВСЕ</a>
 								</div>
 								<div class="tabs__body">
-									<div class="tabs__slider03 swiper">
+									<div class="tabs__slider swiper">
 										<div class="tabs__wrapper swiper-wrapper">
 											<div class="tabs__slide swiper-slide">
 												<article class="tabs__slide-product slide-product">
@@ -484,19 +525,47 @@
 														<img class ="ibg" src="@img/home/products/01.jpg" alt="">
 													</div>
 													<div class="slide-product__content">
-														<div class="slide-product__title">LACOSTE POUR ELLE</div>
+														<div class="slide-product__title"><span>LACOSTE</span> POUR ELLE</div>
 														<div class="slide-product__category">Мужская парфюмерия</div>
 														<div class="slide-product__cost">1000 - 30 000 руб.</div>
 													</div>
 													<div class="slide-product__labels labels-product">
-														<div class="labels-product_label labels-product__top">ТОП-ПРОДАЖ</div>
-														<div class="labels-product_label labels-product__now">НОВИНКИ</div>
-														<div class="labels-product_label labels-product__action">АКЦИЯ</div>
+														<span class="labels-product__label labels-product__label_sale">РАСПОДАЖА</span>
+														<span class="labels-product__label labels-product__label_discont">-20%</span>
+														<span class="labels-product__label labels-product__label_top">ТОП-ПРОДАЖ</span>
+														<span class="labels-product__label labels-product__label_now">НОВИНКИ</span>
+														<span class="labels-product__label labels-product__label_action">АКЦИЯ</span>
 													</div>
-													<!--<div class="slide-product__actions">
+													<div class="slide-product__actions">
 														<button class="slide-product__action"><img src="@img/home/add-spisok.svg" alt="Добавить в список сравнения"></button>
 														<button class="slide-product__action"><img src="@img/home/izbrannoe.svg" alt="Добавить в избранное"></button>
-													</div>-->
+													</div>
+													<div class="slide-product__view">
+														<a href="#" class="slide-product__view-link">БЫСТРЫЙ ПРОСМОТР</a>
+													</div>
+												</article>
+											</div>
+											<div class="tabs__slide swiper-slide">
+												<article class="tabs__slide-product slide-product">
+													<div class="slide-product__img ">
+														<img class ="ibg" src="@img/home/products/01.jpg" alt="">
+													</div>
+													<div class="slide-product__content">
+														<div class="slide-product__title"><span>LACOSTE</span> POUR ELLE</div>
+														<div class="slide-product__category">Мужская парфюмерия</div>
+														<div class="slide-product__cost">1000 - 30 000 руб.</div>
+													</div>
+													<div class="slide-product__labels labels-product">
+														<span class="labels-product__label labels-product__label_sale">РАСПОДАЖА</span>
+														<span class="labels-product__label labels-product__label_discont">-20%</span>
+														<span class="labels-product__label labels-product__label_top">ТОП-ПРОДАЖ</span>
+														<span class="labels-product__label labels-product__label_now">НОВИНКИ</span>
+														<span class="labels-product__label labels-product__label_action">АКЦИЯ</span>
+													</div>
+													<div class="slide-product__actions">
+														<button class="slide-product__action"><img src="@img/home/add-spisok.svg" alt="Добавить в список сравнения"></button>
+														<button class="slide-product__action"><img src="@img/home/izbrannoe.svg" alt="Добавить в избранное"></button>
+													</div>
 													<div class="slide-product__view">
 														<a href="#" class="slide-product__view-link">БЫСТРЫЙ ПРОСМОТР</a>
 													</div>
@@ -508,19 +577,21 @@
 														<img class ="ibg" src="@img/home/products/02.jpg" alt="">
 													</div>
 													<div class="slide-product__content">
-														<div class="slide-product__title">LACOSTE POUR ELLE</div>
+														<div class="slide-product__title"><span>LACOSTE</span> POUR ELLE</div>
 														<div class="slide-product__category">Мужская парфюмерия</div>
 														<div class="slide-product__cost">1000 - 30 000 руб.</div>
 													</div>
 													<div class="slide-product__labels labels-product">
-														<div class="labels-product_label labels-product__top">ТОП-ПРОДАЖ</div>
-														<div class="labels-product_label labels-product__now">НОВИНКИ</div>
-														<div class="labels-product_label labels-product__action">АКЦИЯ</div>
+														<span class="labels-product__label labels-product__label_sale">РАСПОДАЖА</span>
+														<span class="labels-product__label labels-product__label_discont">-20%</span>
+														<span class="labels-product__label labels-product__label_top">ТОП-ПРОДАЖ</span>
+														<span class="labels-product__label labels-product__label_now">НОВИНКИ</span>
+														<span class="labels-product__label labels-product__label_action">АКЦИЯ</span>
 													</div>
-													<!--<div class="slide-product__actions">
+													<div class="slide-product__actions">
 														<button class="slide-product__action"><img src="@img/home/add-spisok.svg" alt="Добавить в список сравнения"></button>
 														<button class="slide-product__action"><img src="@img/home/izbrannoe.svg" alt="Добавить в избранное"></button>
-													</div>-->
+													</div>
 													<div class="slide-product__view">
 														<a href="#" class="slide-product__view-link">БЫСТРЫЙ ПРОСМОТР</a>
 													</div>
@@ -532,19 +603,21 @@
 														<img class ="ibg" src="@img/home/products/03.jpg" alt="">
 													</div>
 													<div class="slide-product__content">
-														<div class="slide-product__title">LACOSTE POUR ELLE</div>
+														<div class="slide-product__title"><span>LACOSTE</span> POUR ELLE</div>
 														<div class="slide-product__category">Мужская парфюмерия</div>
 														<div class="slide-product__cost">1000 - 30 000 руб.</div>
 													</div>
 													<div class="slide-product__labels labels-product">
-														<div class="labels-product_label labels-product__top">ТОП-ПРОДАЖ</div>
-														<div class="labels-product_label labels-product__now">НОВИНКИ</div>
-														<div class="labels-product_label labels-product__action">АКЦИЯ</div>
+														<span class="labels-product__label labels-product__label_sale">РАСПОДАЖА</span>
+														<span class="labels-product__label labels-product__label_discont">-20%</span>
+														<span class="labels-product__label labels-product__label_top">ТОП-ПРОДАЖ</span>
+														<span class="labels-product__label labels-product__label_now">НОВИНКИ</span>
+														<span class="labels-product__label labels-product__label_action">АКЦИЯ</span>
 													</div>
-													<!--<div class="slide-product__actions">
+													<div class="slide-product__actions">
 														<button class="slide-product__action"><img src="@img/home/add-spisok.svg" alt="Добавить в список сравнения"></button>
 														<button class="slide-product__action"><img src="@img/home/izbrannoe.svg" alt="Добавить в избранное"></button>
-													</div>-->
+													</div>
 													<div class="slide-product__view">
 														<a href="#" class="slide-product__view-link">БЫСТРЫЙ ПРОСМОТР</a>
 													</div>
@@ -556,19 +629,21 @@
 														<img class ="ibg" src="@img/home/products/04.jpg" alt="">
 													</div>
 													<div class="slide-product__content">
-														<div class="slide-product__title">LACOSTE POUR ELLE</div>
+														<div class="slide-product__title"><span>LACOSTE</span> POUR ELLE</div>
 														<div class="slide-product__category">Мужская парфюмерия</div>
 														<div class="slide-product__cost">1000 - 30 000 руб.</div>
 													</div>
 													<div class="slide-product__labels labels-product">
-														<div class="labels-product_label labels-product__top">ТОП-ПРОДАЖ</div>
-														<div class="labels-product_label labels-product__now">НОВИНКИ</div>
-														<div class="labels-product_label labels-product__action">АКЦИЯ</div>
+														<span class="labels-product__label labels-product__label_sale">РАСПОДАЖА</span>
+														<span class="labels-product__label labels-product__label_discont">-20%</span>
+														<span class="labels-product__label labels-product__label_top">ТОП-ПРОДАЖ</span>
+														<span class="labels-product__label labels-product__label_now">НОВИНКИ</span>
+														<span class="labels-product__label labels-product__label_action">АКЦИЯ</span>
 													</div>
-													<!--<div class="slide-product__actions">
+													<div class="slide-product__actions">
 														<button class="slide-product__action"><img src="@img/home/add-spisok.svg" alt="Добавить в список сравнения"></button>
 														<button class="slide-product__action"><img src="@img/home/izbrannoe.svg" alt="Добавить в избранное"></button>
-													</div>-->
+													</div>
 													<div class="slide-product__view">
 														<a href="#" class="slide-product__view-link">БЫСТРЫЙ ПРОСМОТР</a>
 													</div>
@@ -580,19 +655,21 @@
 														<img class ="ibg" src="@img/home/products/05.jpg" alt="">
 													</div>
 													<div class="slide-product__content">
-														<div class="slide-product__title">LACOSTE POUR ELLE</div>
+														<div class="slide-product__title"><span>LACOSTE</span> POUR ELLE</div>
 														<div class="slide-product__category">Мужская парфюмерия</div>
 														<div class="slide-product__cost">1000 - 30 000 руб.</div>
 													</div>
 													<div class="slide-product__labels labels-product">
-														<div class="labels-product_label labels-product__top">ТОП-ПРОДАЖ</div>
-														<div class="labels-product_label labels-product__now">НОВИНКИ</div>
-														<div class="labels-product_label labels-product__action">АКЦИЯ</div>
+														<span class="labels-product__label labels-product__label_sale">РАСПОДАЖА</span>
+														<span class="labels-product__label labels-product__label_discont">-20%</span>
+														<span class="labels-product__label labels-product__label_top">ТОП-ПРОДАЖ</span>
+														<span class="labels-product__label labels-product__label_now">НОВИНКИ</span>
+														<span class="labels-product__label labels-product__label_action">АКЦИЯ</span>
 													</div>
-													<!--<div class="slide-product__actions">
+													<div class="slide-product__actions">
 														<button class="slide-product__action"><img src="@img/home/add-spisok.svg" alt="Добавить в список сравнения"></button>
 														<button class="slide-product__action"><img src="@img/home/izbrannoe.svg" alt="Добавить в избранное"></button>
-													</div>-->
+													</div>
 													<div class="slide-product__view">
 														<a href="#" class="slide-product__view-link">БЫСТРЫЙ ПРОСМОТР</a>
 													</div>
@@ -604,19 +681,21 @@
 														<img class ="ibg" src="@img/home/products/06.jpg" alt="">
 													</div>
 													<div class="slide-product__content">
-														<div class="slide-product__title">LACOSTE POUR ELLE</div>
+														<div class="slide-product__title"><span>LACOSTE</span> POUR ELLE</div>
 														<div class="slide-product__category">Мужская парфюмерия</div>
 														<div class="slide-product__cost">1000 - 30 000 руб.</div>
 													</div>
 													<div class="slide-product__labels labels-product">
-														<div class="labels-product_label labels-product__top">ТОП-ПРОДАЖ</div>
-														<div class="labels-product_label labels-product__now">НОВИНКИ</div>
-														<div class="labels-product_label labels-product__action">АКЦИЯ</div>
+														<span class="labels-product__label labels-product__label_sale">РАСПОДАЖА</span>
+														<span class="labels-product__label labels-product__label_discont">-20%</span>
+														<span class="labels-product__label labels-product__label_top">ТОП-ПРОДАЖ</span>
+														<span class="labels-product__label labels-product__label_now">НОВИНКИ</span>
+														<span class="labels-product__label labels-product__label_action">АКЦИЯ</span>
 													</div>
-													<!--<div class="slide-product__actions">
+													<div class="slide-product__actions">
 														<button class="slide-product__action"><img src="@img/home/add-spisok.svg" alt="Добавить в список сравнения"></button>
 														<button class="slide-product__action"><img src="@img/home/izbrannoe.svg" alt="Добавить в избранное"></button>
-													</div>-->
+													</div>
 													<div class="slide-product__view">
 														<a href="#" class="slide-product__view-link">БЫСТРЫЙ ПРОСМОТР</a>
 													</div>
@@ -628,19 +707,21 @@
 														<img class ="ibg" src="@img/home/products/06.jpg" alt="">
 													</div>
 													<div class="slide-product__content">
-														<div class="slide-product__title">LACOSTE POUR ELLE</div>
+														<div class="slide-product__title"><span>LACOSTE</span> POUR ELLE</div>
 														<div class="slide-product__category">Мужская парфюмерия</div>
 														<div class="slide-product__cost">1000 - 30 000 руб.</div>
 													</div>
 													<div class="slide-product__labels labels-product">
-														<div class="labels-product_label labels-product__top">ТОП-ПРОДАЖ</div>
-														<div class="labels-product_label labels-product__now">НОВИНКИ</div>
-														<div class="labels-product_label labels-product__action">АКЦИЯ</div>
+														<span class="labels-product__label labels-product__label_sale">РАСПОДАЖА</span>
+														<span class="labels-product__label labels-product__label_discont">-20%</span>
+														<span class="labels-product__label labels-product__label_top">ТОП-ПРОДАЖ</span>
+														<span class="labels-product__label labels-product__label_now">НОВИНКИ</span>
+														<span class="labels-product__label labels-product__label_action">АКЦИЯ</span>
 													</div>
-													<!--<div class="slide-product__actions">
+													<div class="slide-product__actions">
 														<button class="slide-product__action"><img src="@img/home/add-spisok.svg" alt="Добавить в список сравнения"></button>
 														<button class="slide-product__action"><img src="@img/home/izbrannoe.svg" alt="Добавить в избранное"></button>
-													</div>-->
+													</div>
 													<div class="slide-product__view">
 														<a href="#" class="slide-product__view-link">БЫСТРЫЙ ПРОСМОТР</a>
 													</div>
@@ -652,36 +733,39 @@
 														<img class ="ibg" src="@img/home/products/02.jpg" alt="">
 													</div>
 													<div class="slide-product__content">
-														<div class="slide-product__title">LACOSTE POUR ELLE</div>
+														<div class="slide-product__title"><span>LACOSTE</span> POUR ELLE</div>
 														<div class="slide-product__category">Мужская парфюмерия</div>
 														<div class="slide-product__cost">1000 - 30 000 руб.</div>
 													</div>
 													<div class="slide-product__labels labels-product">
-														<div class="labels-product_label labels-product__top">ТОП-ПРОДАЖ</div>
-														<div class="labels-product_label labels-product__now">НОВИНКИ</div>
-														<div class="labels-product_label labels-product__action">АКЦИЯ</div>
+														<span class="labels-product__label labels-product__label_sale">РАСПОДАЖА</span>
+														<span class="labels-product__label labels-product__label_discont">-20%</span>
+														<span class="labels-product__label labels-product__label_top">ТОП-ПРОДАЖ</span>
+														<span class="labels-product__label labels-product__label_now">НОВИНКИ</span>
+														<span class="labels-product__label labels-product__label_action">АКЦИЯ</span>
 													</div>
-													<!--<div class="slide-product__actions">
+													<div class="slide-product__actions">
 														<button class="slide-product__action"><img src="@img/home/add-spisok.svg" alt="Добавить в список сравнения"></button>
 														<button class="slide-product__action"><img src="@img/home/izbrannoe.svg" alt="Добавить в избранное"></button>
-													</div>-->
+													</div>
 													<div class="slide-product__view">
 														<a href="#" class="slide-product__view-link">БЫСТРЫЙ ПРОСМОТР</a>
 													</div>
 												</article>
 											</div>
 										</div>
-										<div class="swiper-pagination"></div>
-										<button type="button" class="swiper-button-prev"><img src="@img/home/arrow-l-slider.svg" alt="Назад"></button>
-										<button type="button" class="swiper-button-next"><img src="@img/home/arrow-l-slider.svg" alt="Вперёд"></button>
+										<div class="swiper-products-pagination pagination"></div>
+										<button type="button" class="swiper-product-prev"><img src="@img/home/arrow-l-slider.svg" alt="Назад"></button>
+										<button type="button" class="swiper-product-next"><img src="@img/home/arrow-l-slider.svg" alt="Вперёд"></button>
 									</div>
-									<a class="tabs__show-all" href="#">ПОКАЗАТЬ ВСЕ</a>
+									<a class="tabs__show-all center-button" href="#">ПОКАЗАТЬ ВСЕ</a>
 								</div>
 							</div>
 						</div>
 					</div>
 				</section>
-				<section style="display: none;" class="page__parfum parfum">
+
+				<section class="page__parfum parfum">
 					<div class="parfum__container">
 						<h3 class="parfum__title">ПАРФЮМЕРИЯ</h3>
 						<div class="parfum__wrapper">
@@ -709,7 +793,7 @@
 								<img class="ibg" src="@img/home/parfum/06.jpg" alt="">
 								<span class="parfum__title">пробники</span>
 							</a>
-							<a href="#" class="parfum__item">
+							<a href="#" class="parfum__item parfum__item_big">
 								<img class="ibg" src="@img/home/parfum/07.jpg" alt="">
 								<span class="parfum__title">остатки во флаконах</span>
 							</a>
@@ -717,7 +801,7 @@
 								<img class="ibg" src="@img/home/parfum/08.jpg" alt="">
 								<span class="parfum__title">миниатюры</span>
 							</a>
-							<a href="#" class="parfum__item">
+							<a href="#" class="parfum__item parfum__item_big">
 								<img class="ibg" src="@img/home/parfum/09.jpg" alt="">
 								<span class="parfum__title">арабская парфюмерия</span>
 							</a>
@@ -725,13 +809,18 @@
 								<img class="ibg" src="@img/home/parfum/10.jpg" alt="">
 								<span class="parfum__title">наборы</span>
 							</a>
+							<!-- <a href="#" class="parfum__item">
+								<img class="ibg" src="@img/home/parfum/10.jpg" alt="">
+								<span class="parfum__title">наборы11</span>
+							</a> -->
 						</div>
 					</div>
 				</section>
-				<section style="display: none;" class="page__discounts discounts">
+
+				<section class="page__discounts discounts">
 					<div class="discounts__container">
 						<h3 class="discounts__title">СКИДКИ И АКЦИИ</h3>
-						<div class="discounts__swiper">
+						<div class="discounts__slider swiper">
 							<div class="discounts__wrapper swiper-wrapper">
 								<div class="discounts__slide swiper-slide">
 									<a href="#" class="discounts__item">
@@ -777,107 +866,20 @@
 										</div>
 									</a>
 								</div>
-								<div class="discounts__slide swiper-slide">
-									<a href="#" class="discounts__item">
-										<div class="discounts__img">
-											<img src="@img/home/discounts/01.png" alt="">
-										</div>
-										<div class="discounts__content">
-											<h5 class="discounts__title">Пробники в подарок</h5>
-											<p class="discounts__text">Любой покупатель, сделавший заказ на сумму от 3 000 руб. получает пробник аромата в подарок. получает пробник аромата в подарок.</p>
-										</div>
-									</a>
-								</div>
-								<div class="discounts__slide swiper-slide">
-										<a href="#" class="discounts__item">
-											<div class="discounts__img">
-												<img src="@img/home/discounts/02.png" alt="">
-											</div>
-											<div class="discounts__content">
-												<h5 class="discounts__title">День рождения</h5>
-												<p class="discounts__text">В этот день сбываются самые заветные желания. Мы приготовили приятный сюрприз для всех будущих именинников.</p>
-											</div>
-										</a>
-								</div>
-								<div class="discounts__slide swiper-slide">
-										<a href="#" class="discounts__item">
-											<div class="discounts__img">
-												<img src="@img/home/discounts/03.png" alt="">
-											</div>
-											<div class="discounts__content">
-												<h5 class="discounts__title">Социальные сети</h5>
-												<p class="discounts__text">Вы с легкостью можете получить постоянную скидку 3% на все товары магазина, и Вам даже не потребуется совершать какие-либо покупки!</p>
-											</div>
-										</a>
-								</div>
-								<div class="discounts__slide swiper-slide">
-									<a href="#" class="discounts__item">
-										<div class="discounts__img">
-											<img src="@img/home/discounts/04.png" alt="">
-										</div>
-										<div class="discounts__content">
-											<h5 class="discounts__title">Бонусная программа</h5>
-											<p class="discounts__text">При совершении заказа в нашем интернет-магазине Вы получаете баллы за каждую единицу товара. </p>
-										</div>
-									</a>
-								</div>
-								<div class="discounts__slide swiper-slide">
-									<a href="#" class="discounts__item">
-										<div class="discounts__img">
-											<img src="@img/home/discounts/01.png" alt="">
-										</div>
-										<div class="discounts__content">
-											<h5 class="discounts__title">Пробники в подарок</h5>
-											<p class="discounts__text">Любой покупатель, сделавший заказ на сумму от 3 000 руб. получает пробник аромата в подарок. получает пробник аромата в подарок.</p>
-										</div>
-									</a>
-								</div>
-								<div class="discounts__slide swiper-slide">
-										<a href="#" class="discounts__item">
-											<div class="discounts__img">
-												<img src="@img/home/discounts/02.png" alt="">
-											</div>
-											<div class="discounts__content">
-												<h5 class="discounts__title">День рождения</h5>
-												<p class="discounts__text">В этот день сбываются самые заветные желания. Мы приготовили приятный сюрприз для всех будущих именинников.</p>
-											</div>
-										</a>
-								</div>
-								<div class="discounts__slide swiper-slide">
-										<a href="#" class="discounts__item">
-											<div class="discounts__img">
-												<img src="@img/home/discounts/03.png" alt="">
-											</div>
-											<div class="discounts__content">
-												<h5 class="discounts__title">Социальные сети</h5>
-												<p class="discounts__text">Вы с легкостью можете получить постоянную скидку 3% на все товары магазина, и Вам даже не потребуется совершать какие-либо покупки!</p>
-											</div>
-										</a>
-								</div>
-								<div class="discounts__slide swiper-slide">
-									<a href="#" class="discounts__item">
-										<div class="discounts__img">
-											<img src="@img/home/discounts/04.png" alt="">
-										</div>
-										<div class="discounts__content">
-											<h5 class="discounts__title">Бонусная программа</h5>
-											<p class="discounts__text">При совершении заказа в нашем интернет-магазине Вы получаете баллы за каждую единицу товара. </p>
-										</div>
-									</a>
-								</div>
 							</div>
 						</div>
-						<div class="swiper-pagination"></div>
+						<div class="swiper-discount-pagination pagination"></div>
 					</div>
 				</section>
-				<section style="display: none;" class="page__video video">
+
+				<section class="page__video video">
 					<div class="video__container">
 						<h3 class="video__title">ВИДЕОБЗОРЫ</h3>
 						<div class="video__slider swiper">
 							<div class="video__wrapper swiper-wrapper">
 								<div class="video__slide swiper-slide">
 									<a href="https://www.youtube.com/embed/QxQsnlW3Igk?autoplay=1&start=216" class="video__link">
-										<img src="@img/home/video/01.png" alt="">
+										<img class="ibg" src="@img/home/video/01.png" alt="">
 									</a>
 									<div class="video__content">
 										<p class="video__text">
@@ -888,7 +890,7 @@
 								</div>
 								<div class="video__slide swiper-slide">
 									<a href="https://www.youtube.com/embed/wAqrZxFV1Hs?autoplay=1&start=1245" class="video__link">
-										<img src="@img/home/video/02.png" alt="">
+										<img class="ibg" src="@img/home/video/02.png" alt="">
 									</a>
 										<div class="video__content">
 										<p class="video__text">
@@ -899,7 +901,7 @@
 								</div>
 								<div class="video__slide swiper-slide">
 									<a href="https://www.youtube.com/embed/nUYyvHzWzjY?autoplay=1&start=618" class="video__link">
-										<img src="@img/home/video/03.png" alt="">
+										<img class="ibg" src="@img/home/video/03.png" alt="">
 									</a>
 										<div class="video__content">
 										<p class="video__text">
@@ -910,7 +912,7 @@
 								</div>
 								<div class="video__slide swiper-slide">
 									<a href="https://www.youtube.com/embed/QxQsnlW3Igk?autoplay=1&start=216" class="video__link">
-										<img src="@img/home/video/01.png" alt="">
+										<img class="ibg" src="@img/home/video/01.png" alt="">
 									</a>
 									<div class="video__content">
 										<p class="video__text">
@@ -921,7 +923,7 @@
 								</div>
 								<div class="video__slide swiper-slide">
 									<a href="https://www.youtube.com/embed/wAqrZxFV1Hs?autoplay=1&start=1245" class="video__link">
-										<img src="@img/home/video/02.png" alt="">
+										<img class="ibg" src="@img/home/video/02.png" alt="">
 									</a>
 										<div class="video__content">
 										<p class="video__text">
@@ -932,7 +934,7 @@
 								</div>
 								<div class="video__slide swiper-slide">
 									<a href="https://www.youtube.com/embed/nUYyvHzWzjY?autoplay=1&start=618" class="video__link">
-										<img src="@img/home/video/03.png" alt="">
+										<img class="ibg" src="@img/home/video/03.png" alt="">
 									</a>
 										<div class="video__content">
 										<p class="video__text">
@@ -942,14 +944,15 @@
 									</div>
 								</div>
 							</div>
-							<div class="swiper-pagination"></div>
-							<button type="button" class="swiper-button-prev"><img src="@img/home/arrow-l-slider.svg" alt=""></button>
-							<button type="button" class="swiper-button-next"><img src="@img/home/arrow-l-slider.svg" alt=""></button>
+							<div class="swiper-video-pagination pagination"></div>
+							<button type="button" class="swiper-prev swiper-video-prev"><img src="@img/home/arrow-l-slider.svg" alt=""></button>
+							<button type="button" class="swiper-next swiper-video-next"><img src="@img/home/arrow-l-slider.svg" alt=""></button>
 						</div>
-						<a href="https://www.youtube.com/@duhi_rf" class="video__exit-youtube">YOUTUBE КАНАЛ</a>
+						<a href="https://www.youtube.com/@duhi_rf" class="video__exit-youtube center-button">YOUTUBE КАНАЛ</a>
 					</div>
 				</section>
-				<section style="display: none;" class="page__otzv otzv">
+
+				<section class="page__otzv otzv">
 					<div class="otzv__container">
 						<h3 class="otzv__title">ОТЗЫВЫ О МАГАЗИНЕ</h3>
 						<div class="otzv__content">
@@ -998,94 +1001,149 @@
 						</div>
 					</div>
 				</section>
-				<section style="display: none;" class="page__about-store about-store">
+
+				<section  class="page__about-store about-store">
 				<div class="about-store__container">
 					<div class="about-store__top"><img src="@img/home/about-store/arrow-top.svg" alt=""></div>
 					<h3 class="about-store__title">О МАГАЗИНЕ</h3>
 					<div class="about-store__wrapper">
-						<div class="about-store__col">
+						<div class="about-store__zxc">
+							<div data-da=".spollers__title_01, 1001.01" class="about-store__qwe">
+								<div class="about-store__img"><img src="@img/home/about-store/01.svg" alt=""></div>
+								<h5 class="about-store__subtitle">Несколько слов о магазине</h5>
+								<div class="about-store__arrow-spoiler"><img src="@img/home/about-store/arrow-spoiler.svg" alt=""></div>
+							</div>
+							<div data-da=".spollers__body_01, 1001.02" class="about-store__asd">
+								<p class="about-store__text">Интернет-магазин парфюмерии Духи.рф был основан в 2008 году. За время развития проекта многое было сделано, а еще больше нам предстоит реализовать, но что бы мы ни делали, нашей основной задачей была, есть и будет качественная работа с клиентами с одной 
+									единственной целью, чтобы как можно большее количество наших покупателей стали нашими постоянными клиентами 
+									и рекомендовали нас своим близким,  друзьям и знакомым.
+								</p>
+							</div>
+						</div>
+						<div class="about-store__zxc">
+							<div data-da=".spollers__title_04, 1001.07" class="about-store__qwe">
+								<div class="about-store__img"><img src="@img/home/about-store/04.svg" alt=""></div>
+								<h5 class="about-store__subtitle">Качество реализуемых товаров</h5>
+								<div class="about-store__arrow-spoiler"><img src="@img/home/about-store/arrow-spoiler.svg" alt=""></div>
+							</div>
+							<div data-da=".spollers__body_04, 1001.08" class="about-store__asd">
+								<p class="about-store__text">
+									опрос качества в такой товарной группе, как парфюмерия, занимает первое место в сомнениях посетителей любого сайта интернет-магазина духов. Многие покупатели признаются в своих отзывах в том, что немного боялись перед тем, как совершить покупку в интернет-магазине. Мы вас прекрасно понимаем и разделяем ваши переживания.  Дело в том, что интернет зачастую воспринимается не как альтернативная торговая площадка розничному магазину, а как хорошая возможность для продавца реализовывать товары ненадлежащего качества. 
+								</p>
+							</div>
+						</div>
+						<div class="about-store__zxc">
+							<div data-da=".spollers__title_02, 1001.03" class="about-store__qwe">
+								<div class="about-store__img"><img src="@img/home/about-store/02.svg" alt=""></div>
+								<h5 class="about-store__subtitle">Ценовая политика магазина</h5>
+								<div class="about-store__arrow-spoiler"><img src="@img/home/about-store/arrow-spoiler.svg" alt=""></div>
+							</div>
+							<div data-da=".spollers__body_02, 1001.04" class="about-store__asd">
+								<p class="about-store__text">
+									Ценообразование – сложный процесс, требующий учета большого количества факторов, особенно в такой сфере как продажа  парфюмерно-косметических товаров через интернет. Кто-то ищет самую низкую цену, а кого-то из покупателей, напротив, отпугивает невысокая  цена товаров, наводя на мысли о подделке. В нашей работе мы делаем ставку на увеличение количества реализуемых товаров,  а не на максимизацию прибыли с каждого отдельно взятого заказа. 
+								</p>
+							</div>
+							
+						</div>
+						<div class="about-store__zxc">
+							<div data-da=".spollers__title_05, 1001.09" class="about-store__qwe">
+								<div class="about-store__img"><img src="@img/home/about-store/05.svg" alt=""></div>
+								<h5 class="about-store__subtitle">Доставка товаров</h5>
+								<div class="about-store__arrow-spoiler"><img src="@img/home/about-store/arrow-spoiler.svg" alt=""></div>
+							</div>
+							<div data-da=".spollers__body_05, 1001.10" class="about-store__asd">
+								<p class="about-store__text">
+									Бытует мнение, что уровень магазина отражает такой показатель, как наличие собственных курьеров, причем, их отсутствие зачастую воспринимается как фактор, характеризующий магазин не с лучшей стороны. Спешим опровергнуть данное утверждение, потому как все первоклассные интернет-магазины пользуются услугами профессиональных курьерских служб, а небольшие магазины, которые открылись недавно, развозят заказы своими силами. Этому есть довольно простое объяснение. 
+								</p>
+							</div>
+						</div>
+						<div class="about-store__zxc">
+							<div data-da=".spollers__title_03, 1001.05" class="about-store__qwe">
+								<div class="about-store__img"><img src="@img/home/about-store/03.svg" alt=""></div>
+								<h5 class="about-store__subtitle">Гарантия качества</h5>
+								<div class="about-store__arrow-spoiler"><img src="@img/home/about-store/arrow-spoiler.svg" alt=""></div>
+							</div>
+							<div data-da=".spollers__body_03, 1001.06" class="about-store__asd">
+								<p class="about-store__text">
+									Вы можете ознакомиться с сертификатами соответствия и декларациями о соответствии на реализуемые товары
+								</p>
+							</div>
+							
+						</div>
+						<div class="about-store__zxc">
+							<div data-da=".spollers__title_06, 1001.11" class="about-store__qwe">
+								<div class="about-store__img"><img src="@img/home/about-store/06.svg" alt=""></div>
+								<h5 class="about-store__subtitle">Финансовые гарантии</h5>
+								<div class="about-store__arrow-spoiler"><img src="@img/home/about-store/arrow-spoiler.svg" alt=""></div>
+							</div>
+							<div data-da=".spollers__body_06, 1001.12" class="about-store__asd">
+								<p class="about-store__text">
+									Мы настолько уверены в качестве реализуемых товаров, что всегда готовы вернуть деньги по Вашему первому требованию.
+								</p>
+							</div>
+						</div>
+
+						
+						<!-- <div class="about-store__col"> -->
 							<div  data-spollers="1001.98" class="about-store__spollers spollers">
 								<details class="spollers__item">
-									<summary class="spollers__title">
-										<div class="about-store__img"><img src="@img/home/about-store/01.svg" alt=""></div>
-										<h5 class="about-store__subtitle">Несколько слов о магазине</h5>
-										<div class="about-store__arrow-spoiler"><img src="@img/home/about-store/arrow-spoiler.svg" alt=""></div>
+									<summary class="spollers__title spollers__title_01">
+										
 									</summary>
-									<div class="spollers__body">
-										<p class="about-store__text">Интернет-магазин парфюмерии Духи.рф был основан в 2008 году. За время развития проекта многое было сделано, а еще больше нам предстоит реализовать, но что бы мы ни делали, нашей основной задачей была, есть и будет качественная работа с клиентами с одной 
-											единственной целью, чтобы как можно большее количество наших покупателей стали нашими постоянными клиентами 
-											и рекомендовали нас своим близким,  друзьям и знакомым.
-										</p>
+									<div class="spollers__body spollers__body_01">
+										
 									</div>
 								</details>
 								<details class="spollers__item">
-									<summary class="spollers__title">
-										<div class="about-store__img"><img src="@img/home/about-store/02.svg" alt=""></div>
-										<h5 class="about-store__subtitle">Ценовая политика магазина</h5>
-										<div class="about-store__arrow-spoiler"><img src="@img/home/about-store/arrow-spoiler.svg" alt=""></div>
+									<summary class="spollers__title spollers__title_02">
+										
 									</summary>
-									<div class="spollers__body">
-										<p class="about-store__text">
-											Ценообразование – сложный процесс, требующий учета большого количества факторов, особенно в такой сфере как продажа  парфюмерно-косметических товаров через интернет. Кто-то ищет самую низкую цену, а кого-то из покупателей, напротив, отпугивает невысокая  цена товаров, наводя на мысли о подделке. В нашей работе мы делаем ставку на увеличение количества реализуемых товаров,  а не на максимизацию прибыли с каждого отдельно взятого заказа. 
-										</p>
+									<div class="spollers__body spollers__body_02">
+										
 									</div>
 								</details>
 								<details class="spollers__item">
-									<summary class="spollers__title">
-										<div class="about-store__img"><img src="@img/home/about-store/03.svg" alt=""></div>
-										<h5 class="about-store__subtitle">Гарантия качества</h5>
-										<div class="about-store__arrow-spoiler"><img src="@img/home/about-store/arrow-spoiler.svg" alt=""></div>
+									<summary class="spollers__title spollers__title_03">
+										
 									</summary>
-									<div class="spollers__body">
-										<p class="about-store__text">
-											Вы можете ознакомиться с сертификатами соответствия и декларациями о соответствии на реализуемые товары
-										</p>
+									<div class="spollers__body spollers__body_03">
+										
 									</div>
 								</details>
 							</div>
-						</div>
-						<div class="about-store__col">
+						<!-- </div> -->
+						<!-- <div class="about-store__col"> -->
 							<div  data-spollers="1001.97" class="about-store__spollers spollers">
 								<details class="spollers__item">
-									<summary class="spollers__title">
-										<div class="about-store__img"><img src="@img/home/about-store/04.svg" alt=""></div>
-										<h5 class="about-store__subtitle">Качество реализуемых товаров</h5>
-										<div class="about-store__arrow-spoiler"><img src="@img/home/about-store/arrow-spoiler.svg" alt=""></div>
+									<summary class="spollers__title spollers__title_04">
+									
 									</summary>
-									<div class="spollers__body">
-										<p class="about-store__text">Вопрос качества в такой товарной группе, как парфюмерия, занимает первое место в сомнениях посетителей любого сайта интернет-магазина духов. Многие покупатели признаются в своих отзывах в том, что немного боялись перед тем, как совершить покупку в интернет-магазине. Мы вас прекрасно понимаем и разделяем ваши переживания.  Дело в том, что интернет зачастую воспринимается не как альтернативная торговая площадка розничному магазину, а как хорошая возможность для продавца реализовывать товары ненадлежащего качества. 
-										</p>
+									<div class="spollers__body spollers__body_04">
+										
 									</div>
 								</details>
 								<details class="spollers__item">
-									<summary class="spollers__title">
-										<div class="about-store__img"><img src="@img/home/about-store/05.svg" alt=""></div>
-										<h5 class="about-store__subtitle">Доставка товаров</h5>
-										<div class="about-store__arrow-spoiler"><img src="@img/home/about-store/arrow-spoiler.svg" alt=""></div>
+									<summary class="spollers__title spollers__title_05">
+										
 									</summary>
-									<div class="spollers__body">
-										<p class="about-store__text">
-											Бытует мнение, что уровень магазина отражает такой показатель, как наличие собственных курьеров, причем, их отсутствие зачастую воспринимается как фактор, характеризующий магазин не с лучшей стороны. Спешим опровергнуть данное утверждение, потому как все первоклассные интернет-магазины пользуются услугами профессиональных курьерских служб, а небольшие магазины, которые открылись недавно, развозят заказы своими силами. Этому есть довольно простое объяснение. 
-										</p>
+									<div class="spollers__body spollers__body_05">
+										
 									</div>
 								</details>
 								<details class="spollers__item">
-									<summary class="spollers__title">
-										<div class="about-store__img"><img src="@img/home/about-store/06.svg" alt=""></div>
-										<h5 class="about-store__subtitle">Финансовые гарантии</h5>
-										<div class="about-store__arrow-spoiler"><img src="@img/home/about-store/arrow-spoiler.svg" alt=""></div>
+									<summary class="spollers__title spollers__title_06">
+										
 									</summary>
-									<div class="spollers__body">
-										<p class="about-store__text">
-											Мы настолько уверены в качестве реализуемых товаров, что всегда готовы вернуть деньги по Вашему первому требованию.
-										</p>
+									<div class="spollers__body spollers__body_06">
+										
 									</div>
 								</details>
 							</div>
-						</div>
+						<!-- </div> -->
 					</div>
 				</div>
 				</section>
+
 			</main>
 			@@include('html/_footer.htm',{})
 		</div>

@@ -7,15 +7,11 @@ document.addEventListener("click", documentActions);
 
 function documentActions(e) {
 	const targetElement = e.target;
-	console.log(targetElement);
-	const menuList =document.querySelector('.menu__list')
+	// console.log(targetElement);
 	if(targetElement.closest('.menu__link')){
-		let menuItem = targetElement.closest('.menu__item')
 		targetElement.classList.toggle('_open')
 		targetElement.closest('.menu__item').querySelector('.menu__sublist') ? 
 		targetElement.closest('.menu__item').querySelector('.menu__sublist').classList.toggle('_sub-menu-open') : null
-		// menuItem.classList.add('_open')
-		// menuList.classList.toggle('_sub-menu-open')
 	}
 
 	if(!targetElement.closest('.menu__body' )){
@@ -24,4 +20,10 @@ function documentActions(e) {
 			document.documentElement.classList.remove('lock')
 		}
 	}
+}
+
+if (window.innerWidth <= 768 ) {
+	tabs01.classList.remove('_tab-active')
+	tabs02.classList.add('_tab-active')
+
 }

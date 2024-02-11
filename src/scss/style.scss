@@ -52,7 +52,7 @@ $pc: em($containerWidth); // ПК, ноутбуки, некоторые план
 $pcSmall: em(1280.98); // Планшеты, некоторые телефоны в горизонтальном положении
 $tablet: em(1001.98); // Планшеты, некоторые телефоны в горизонтальном положении
 $mobile: em(767.98); // Телефоны L
-$mobileSmall: em(479.98); // Телефоны S
+$mobileSmall: em(480.98); // Телефоны S
 
 // Тип адаптива:
 // 1 = отзывчивость (у контейнера нет брейкпоинтов),
@@ -100,6 +100,8 @@ body {
 
 main {
 	transition: background-color 0.3s, opacity 0.3s;
+	// background: rgb(229, 229, 229);
+	background: rgb(255, 245, 246);
 	// .menu-open & {
 	// 	background-color: #020001;
 	// 	opacity: 0.58;
@@ -166,4 +168,10 @@ main {
 @import "footer";
 
 // Подключение стилей отдельных страниц
-@import "home";
+@import "home/baners";
+@import "home/products";
+@import "home/discounts";
+@import "home/parfum";
+@import "home/video";
+@import "home/otzv";
+@import "home/about-store";

@@ -1,0 +1,116 @@
+.page {
+
+	&__discounts {
+		margin-top: toRem(40);
+		@media (min-width:$mobileSmall) and (max-width:$pcSmall) {
+			margin-top: toRem(60);
+	 	}
+	}
+}
+.discounts {
+
+	&__container {
+	}
+
+	&__title {
+		font-size: 16px;
+		text-transform: uppercase;
+		margin-bottom: 16px;
+		@media (max-width:$pcSmall){
+			font-size: toRem(14);
+		}
+		@media (max-width:$tablet){
+			font-size: toRem(22);
+		}
+		@media (max-width:$mobile){
+			 font-size: toRem(35); 
+		}
+		@media (max-width:$mobileSmall){
+			 font-size: toRem(18); 
+		}
+	}
+
+	&__slider {
+		@media (max-width:$mobile){
+			 margin-left: -15px;
+			 margin-right: -15px; 
+		}
+	}
+
+	&__wrapper {
+		@media (min-width:$mobile){
+			//  display: grid;
+			//  grid-template-columns: repeat(4, 1fr);
+			 gap: toRem(20);
+			// flex-grow: 0;
+			 justify-content: center;
+		}
+		@media (max-width:$tablet){
+			flex-wrap: wrap;
+		}
+		@media (max-width:$mobile){
+			 flex-wrap: nowrap; 
+		}
+	}
+
+	&__slide {
+		border-radius: 12px;
+		background-color: white;
+		padding: toRem(20) toRem(20) toRem(35) toRem(20);
+		@media (min-width:$tablet){
+			 flex-basis: 24.025974%; /* 370/1540 */
+		}
+		@media (min-width:$mobile) and (max-width:$tablet) {
+			 flex-basis: 46.78%; /* 433/886 */
+		}
+		@media (max-width:$mobile){
+			 flex-basis: initial;
+			 padding: toRem(10);
+		}
+	}
+
+	&__item {
+		display: flex;
+		flex-direction: column;
+		row-gap: 16px;
+		@media (max-width:$tablet){
+			flex-direction: row;
+			column-gap: toRem(20);
+		}
+	}
+
+	&__img {
+		img {
+			width: 100%;
+		}
+		align-self: center;
+		@media (max-width:$tablet){
+			flex: 0 0 21.627907%; /* 93/430 */
+			flex: 0 0 25.3125%; /* 81/320 */
+		}
+	}
+
+	&__content {
+	}
+
+	&__text {
+		@media (max-width:$pcSmall){
+			font-size: toRem(12);
+		}
+		@media (max-width:$tablet){
+			font-size: toRem(20);
+		}
+		@media (max-width:$mobile){
+			 @include adaptiveValue("font-size", 28, 14,1,767.98,360);
+		}
+		line-height: 114.285714%; /* 16/14 */
+	}
+}
+.swiper {
+}
+.swiper-wrapper {
+}
+.swiper-slide {
+}
+.swiper-discount-pagination {
+}
