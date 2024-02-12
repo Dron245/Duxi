@@ -16,10 +16,16 @@ window.addEventListener('DOMContentLoaded', () => {
 		}
 
 		if(!targetElement.closest('.menu__icon') && !targetElement.closest('.menu__body' )){
-			if(document.documentElement.classList.contains('menu-open' && document.documentElement.classList.contains('lock'))){
+			console.log(targetElement);
+			// if(document.documentElement.classList.contains('menu-open' && document.documentElement.classList.contains('lock'))){
 				document.documentElement.classList.remove('menu-open')
 				document.documentElement.classList.remove('lock')
-			}
+			// }
+		}
+
+		//переключаю значок пароля с видеть на не видеть
+		if(targetElement.closest('.popup__img-pasword')){
+			targetElement.closest('.popup__img-pasword').classList.toggle('_pass-view')
 		}
 	}
 
@@ -29,6 +35,4 @@ window.addEventListener('DOMContentLoaded', () => {
 	}
 });
 
-// import { Fancybox } from "@fancyapps/ui";
-// import "@fancyapps/ui/dist/fancybox/fancybox.css";
 

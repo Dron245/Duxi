@@ -42,20 +42,6 @@ function initSliders() {
 			//autoHeight: true,
 			speed: 800,
 			loop:true,
-			//touchRatio: 0,
-			//simulateTouch: false,
-			//loop: true,
-			//preloadImages: false,
-			//lazy: true,
-
-			
-			// Эффекты
-			// effect: 'fade',
-			// autoplay: {
-			// 	delay: 4000,
-			// 	disableOnInteraction: false,
-			// },
-			
 
 			// Пагинация
 			
@@ -63,43 +49,7 @@ function initSliders() {
 				el: '.swiper-pagination',
 				clickable: true,
 			},
-			
 
-			// Скроллбар
-			/*
-			scrollbar: {
-				el: '.swiper-scrollbar',
-				draggable: true,
-			},
-			*/
-
-			// Кнопки "влево/вправо"
-			// navigation: {
-			// 	prevEl: '.swiper-button-prev',
-			// 	nextEl: '.swiper-button-next',
-			// },
-			/*
-			// Брейкпоинты
-			breakpoints: {
-				640: {
-					slidesPerView: 1,
-					spaceBetween: 0,
-					autoHeight: true,
-				},
-				768: {
-					slidesPerView: 2,
-					spaceBetween: 20,
-				},
-				992: {
-					slidesPerView: 3,
-					spaceBetween: 20,
-				},
-				1268: {
-					slidesPerView: 4,
-					spaceBetween: 30,
-				},
-			},
-			*/
 			// События
 			on: {
 
@@ -185,44 +135,6 @@ function initSliders() {
 				});
 	}
 
-	
-	// if (document.querySelector('.discounts__slider')) { //Указываем класс нужного слайдера
-	// 	//Создаем слайдер
-	// 	new Swiper('.discounts__slider', { //Указываем класс нужного слайдера
-	// 			//Подключаем модули слайдера
-	// 			//для конкретного случая
-	// 		modules: [Pagination, Autoplay],
-	// 		observer: true,
-	// 		observeParents: true,
-	// 		// slidesPerView: 1.7,
-	// 		spaceBetween: 20,
-	// 		// autoHeight: true,
-	// 		speed: 800,
-			
-	// 		// Пагинация
-			
-	// 		pagination: {
-	// 			el: '.swiper-discount-pagination',
-	// 			clickable: true,
-	// 		},
-			
-	// 		// Брейкпоинты
-	// 		breakpoints: {
-	// 			360: {
-	// 				slidesPerView: 1.05,
-	// 				spaceBetween: 20,
-	// 				// autoHeight: true,
-	// 			},
-				
-	// 		},
-			
-	// 		// События
-	// 		on: {
-
-	// 		}
-	// 	});
-	// }
-
 	if (document.querySelector('.video__slider')) { //Указываем класс нужного слайдера
 		//Создаем слайдер
 				new Swiper('.video__slider', { //Указываем класс нужного слайдера
@@ -236,19 +148,7 @@ function initSliders() {
 					// autoHeight: true,
 					speed: 800,
 					loop:true,
-					//touchRatio: 0,
-					//simulateTouch: false,
-					//loop: true,
-					//preloadImages: false,
-					//lazy: true,
-		
-					
-					// Эффекты
-					// effect: 'fade',
-					// autoplay: {
-					// 	delay: 4000,
-					// 	disableOnInteraction: false,
-					// },
+				
 					
 		
 					// Пагинация
@@ -259,13 +159,7 @@ function initSliders() {
 					},
 					
 		
-					// Скроллбар
-					/*
-					scrollbar: {
-						el: '.swiper-scrollbar',
-						draggable: true,
-					},
-					*/
+				
 		
 					// Кнопки "влево/вправо"
 					navigation: {
@@ -290,11 +184,7 @@ function initSliders() {
 						},
 						
 					},
-					
-					// События
-					on: {
-		
-					}
+				
 				});
 	}
 }

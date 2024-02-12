@@ -6,11 +6,17 @@
 				<h4 class="popup__title">вход</h4>
 				<form method="post" action="#" class="popup__form">
 					<div class="popup__form-item">
-						<input autocomplete="off" type="email" name="form[]" data-error="Ошибка" placeholder="E-MAIL" class="popup__input">
+						<input required autocomplete="off" type="email" name="form[]" data-error="Ошибка" placeholder="E-MAIL" class="popup__input">
 						<button data-popup="#vhod-tel" type="button" class="popup__mini-button">Войти по номеру телефона</button>
 					</div>
 					<div class="popup__form-item">
-						<input autocomplete="off" type="password" name="form[]" data-error="Ошибка" placeholder="ПАРОЛЬ" class="popup__input">
+						<div class="popup__input-wrapper">
+							<input required autocomplete="off" type="password" name="form[]" data-error="Ошибка" placeholder="ПАРОЛЬ" class="popup__input">
+							<button type="button" class="popup__img-pasword">
+								<img class="popup__img-v" src="@img/popup/pasword-v.svg" alt="">
+								<img class="popup__img-nv" src="@img/popup/pasword-nv.svg" alt="">
+							</button>
+						</div>
 						<button data-popup="#sbros-pasword" type="button" class="popup__mini-button">Забыли пароль?</button>
 					</div>
 					<div class="popup__form-item">
@@ -23,6 +29,8 @@
 	</div>
 </div>
 
+<!-- При правильном запоолнении всех полей нужно добавить класс done к div id="#vhod-tel". Нужно, что бы кнопка "зарегестрироваться" приняла чёткий малиновый цвет-->
+
 <div id="vhod-tel" aria-hidden="true" class="popup">
 	<div class="popup__wrapper">
 		<div class="popup__content">
@@ -33,24 +41,29 @@
 					<div class="popup__form-item">
 						<input autocomplete="off" type="tel" name="form[]" data-error="Ошибка" placeholder="ВВЕДИТЕ НОМЕР ТЕЛЕФОНА" class="popup__input">
 					</div>
-					<div class="popup__form-item">
-						<p class="popup__text">Push-уведомление сформировано и будет доставлено в течение 1мин.
-							Если сообщение не придет, посмотрите раздел уведомления в приложении.
-						</p>
-						<form method="post" action="#" class="popup__entry">
+				</form>
+				<div class="popup__form-item">
+					<p class="popup__text">Push-уведомление сформировано и будет доставлено в течение 1мин.
+						Если сообщение не придет, посмотрите раздел уведомления в приложении.
+					</p>
+					<form method="post" action="#" class="popup__entry">
+						<label for="" class="popup__title-entry-tel">введите код из push-уведомления</label>
+						<div class="popup__input-wrapper-tel">
 							<input maxlength="1" inputmode="numeric" required id="pincode1" autocomplete="off" type="text" class="popup__entry-vhod">
 							<input maxlength="1" inputmode="numeric" required id="pincode2" autocomplete="off" type="text" class="popup__entry-vhod">
 							<input maxlength="1" inputmode="numeric" required id="pincode3" autocomplete="off" type="text" class="popup__entry-vhod">
 							<input maxlength="1" inputmode="numeric" required id="pincode4" autocomplete="off" type="text" class="popup__entry-vhod">
 							<input maxlength="1" inputmode="numeric" required id="pincode5" autocomplete="off" type="text" class="popup__entry-vhod">
 							<input maxlength="1" inputmode="numeric" required id="pincode6" autocomplete="off" type="text" class="popup__entry-vhod">
-						</form>
+							<input maxlength="1" inputmode="numeric" required id="pincode6" autocomplete="off" type="text" class="popup__entry-vhod">
+							<input maxlength="1" inputmode="numeric" required id="pincode6" autocomplete="off" type="text" class="popup__entry-vhod">
 					</div>
-					<div class="popup__form-item">
-						<button id="btn-code" type="submit" class="popup__button">отправить код</button>
-						<button id="btn-vhod" type="submit" class="popup__button">войти</button>
-					</div>
-				</form>
+					</form>
+				</div>
+				<div class="popup__form-item">
+					<button id="btn-code" type="submit" class="popup__button">отправить код</button>
+					<button id="btn-vhod" type="submit" class="popup__button">войти</button>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -77,33 +90,50 @@
 	</div>
 </div>
 
-
+<!-- При правильном запоолнении всех полей нужно добавить класс done к div id="reg". Нужно, что бы кнопка "зарегестрироваться" приняла чёткий малиновый цвет-->
 <div id="reg" aria-hidden="true" class="popup">
 	<div class="popup__wrapper">
 		<div class="popup__content">
 			<button data-close type="button" class="popup__close"><img src="@img/popup/close.svg" alt=""></button>
 			<div class="popup__body">
-				<h4 class="popup__title">Регистрация</h4>
-				<div class="popup_actions">
-					<img src="@img/popup/Star.svg" alt="">
-					<span>Получи скидку 1% сразу!</span>
-				</div>
+				<h4 class="popup__title">
+					<span>Регистрация</span>
+					<div class="popup__actions">
+						<img src="@img/popup/Star.svg" alt="">
+						<span>Получи скидку 1% сразу!</span>
+					</div>
+				</h4>
 				<form method="post" action="#" class="popup__form">
 					<div class="popup__form-item">
-						<span class="popup_reg-error">уже зарегистрирован</span>
+						<!-- <span class="popup_reg-error">уже зарегистрирован</span> -->
 						<label for="01" class="popup__label">E-mail</label>
-						<input id="01" autocomplete="off" type="email" name="form[]" data-error="Ошибка" placeholder="E-MAIL" class="popup__input">
+						<input required id="01" autocomplete="off" type="email" name="form[]" data-error="Ошибка" placeholder="E-MAIL" class="popup__input">
 					</div>
 					<div class="popup__form-item">
-						<label for="02" class="popup__label">пароль</label>
-						<input id="02" autocomplete="off" type="password" name="form[]" data-error="Ошибка" placeholder="ПАРОЛЬ" class="popup__input">
+						<div class="popup__input-wrapper">
+							<label for="02" class="popup__label">пароль</label>
+							<input required id="02" autocomplete="off" type="password" name="form[]" data-error="Ошибка" placeholder="ПАРОЛЬ" class="popup__input">
+							<button type="button" class="popup__img-pasword">
+								<img class="popup__img-v" src="@img/popup/pasword-v.svg" alt="">
+								<img class="popup__img-nv" src="@img/popup/pasword-nv.svg" alt="">
+							</button>
+						</div>
 					</div>
 					<div class="popup__form-item">
-						<input id="03" autocomplete="off" type="password" name="form[]" data-error="Ошибка" placeholder="ПОВТОРИТЕ ПАРОЛЬ" class="popup__input">
+						<div class="popup__input-wrapper">
+							<input required id="03" autocomplete="off" type="password" name="form[]" data-error="Ошибка" placeholder="ПОВТОРИТЕ ПАРОЛЬ" class="popup__input">
+							<button type="button" class="popup__img-pasword">
+								<img class="popup__img-v" src="@img/popup/pasword-v.svg" alt="">
+								<img class="popup__img-nv" src="@img/popup/pasword-nv.svg" alt="">
+							</button>
+						</div>
 					</div>
 					<div class="popup__checkbox checkbox">
 						<input id="c_1" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
-						<label for="c_1" class="checkbox__label"><span class="checkbox__text">Даю согласие на <a href="#">обработку персональных данных</a></span></label>
+						<label for="c_1" class="checkbox__label">
+							<div class="checkbox__body"></div>
+							<span class="checkbox__text">Даю согласие на <a href="#">обработку персональных данных</a></span>
+						</label>
 					</div>
 					<div class="popup__form-item">
 						<button id="btn-reg" type="submit" class="popup__button popup__button_reg">зарегистрироваться</button>
