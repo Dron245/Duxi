@@ -871,14 +871,14 @@
 						<div class="swiper-discount-pagination pagination"></div>
 					</div>
 				</section>
-
+				
 				<section class="page__video video">
 					<div class="video__container">
 						<h3 class="video__title">ВИДЕОБЗОРЫ</h3>
 						<div class="video__slider swiper">
 							<div class="video__wrapper swiper-wrapper">
 								<div class="video__slide swiper-slide">
-									<a href="https://www.youtube.com/embed/QxQsnlW3Igk?autoplay=1&start=216" class="video__link">
+									<a data-fancybox href="https://www.youtube.com/embed/QxQsnlW3Igk?autoplay=1&start=216" class="video__link">
 										<img class="ibg" src="@img/home/video/01.png" alt="">
 									</a>
 									<div class="video__content">
@@ -889,7 +889,7 @@
 									</div>
 								</div>
 								<div class="video__slide swiper-slide">
-									<a href="https://www.youtube.com/embed/wAqrZxFV1Hs?autoplay=1&start=1245" class="video__link">
+									<a data-fancybox href="https://www.youtube.com/embed/wAqrZxFV1Hs?autoplay=1&start=1245" class="video__link">
 										<img class="ibg" src="@img/home/video/02.png" alt="">
 									</a>
 										<div class="video__content">
@@ -900,7 +900,7 @@
 									</div>
 								</div>
 								<div class="video__slide swiper-slide">
-									<a href="https://www.youtube.com/embed/nUYyvHzWzjY?autoplay=1&start=618" class="video__link">
+									<a data-fancybox href="https://www.youtube.com/embed/nUYyvHzWzjY?autoplay=1&start=618" class="video__link">
 										<img class="ibg" src="@img/home/video/03.png" alt="">
 									</a>
 										<div class="video__content">
@@ -911,7 +911,7 @@
 									</div>
 								</div>
 								<div class="video__slide swiper-slide">
-									<a href="https://www.youtube.com/embed/QxQsnlW3Igk?autoplay=1&start=216" class="video__link">
+									<a data-fancybox href="https://www.youtube.com/embed/QxQsnlW3Igk?autoplay=1&start=216" class="video__link">
 										<img class="ibg" src="@img/home/video/01.png" alt="">
 									</a>
 									<div class="video__content">
@@ -922,7 +922,7 @@
 									</div>
 								</div>
 								<div class="video__slide swiper-slide">
-									<a href="https://www.youtube.com/embed/wAqrZxFV1Hs?autoplay=1&start=1245" class="video__link">
+									<a data-fancybox href="https://www.youtube.com/embed/wAqrZxFV1Hs?autoplay=1&start=1245" class="video__link">
 										<img class="ibg" src="@img/home/video/02.png" alt="">
 									</a>
 										<div class="video__content">
@@ -933,7 +933,7 @@
 									</div>
 								</div>
 								<div class="video__slide swiper-slide">
-									<a href="https://www.youtube.com/embed/nUYyvHzWzjY?autoplay=1&start=618" class="video__link">
+									<a data-fancybox href="https://www.youtube.com/embed/nUYyvHzWzjY?autoplay=1&start=618" class="video__link">
 										<img class="ibg" src="@img/home/video/03.png" alt="">
 									</a>
 										<div class="video__content">
@@ -1004,142 +1004,90 @@
 
 				<section  class="page__about-store about-store">
 				<div class="about-store__container">
-					<div class="about-store__top"><img src="@img/home/about-store/arrow-top.svg" alt=""></div>
+					<button data-goto=".header" class="about-store__top"><img src="@img/home/about-store/arrow-top.svg" alt=""></button>
 					<h3 class="about-store__title">О МАГАЗИНЕ</h3>
 					<div class="about-store__wrapper">
-						<div class="about-store__zxc">
-							<div data-da=".spollers__title_01, 1001.01" class="about-store__qwe">
-								<div class="about-store__img"><img src="@img/home/about-store/01.svg" alt=""></div>
-								<h5 class="about-store__subtitle">Несколько слов о магазине</h5>
-								<div class="about-store__arrow-spoiler"><img src="@img/home/about-store/arrow-spoiler.svg" alt=""></div>
-							</div>
-							<div data-da=".spollers__body_01, 1001.02" class="about-store__asd">
-								<p class="about-store__text">Интернет-магазин парфюмерии Духи.рф был основан в 2008 году. За время развития проекта многое было сделано, а еще больше нам предстоит реализовать, но что бы мы ни делали, нашей основной задачей была, есть и будет качественная работа с клиентами с одной 
-									единственной целью, чтобы как можно большее количество наших покупателей стали нашими постоянными клиентами 
-									и рекомендовали нас своим близким,  друзьям и знакомым.
-								</p>
-							</div>
+						<div data-spollers="1001.98" class="about-store__main spollers">
+							<details class=" spollers__item">
+								<summary class="about-store__content spollers__title">
+									<div class="about-store__img"><img src="@img/home/about-store/01.svg" alt=""></div>
+									<h5 class="about-store__subtitle">Несколько слов о магазине</h5>
+									<div class="about-store__arrow-spoiler"><img src="@img/home/about-store/arrow-spoiler.svg" alt=""></div>
+								</summary>
+								<div class="about-store__body spollers__body">
+									<p class="about-store__text">Интернет-магазин парфюмерии Духи.рф был основан в 2008 году. За время развития проекта многое было сделано, а еще больше нам предстоит реализовать, но что бы мы ни делали, нашей основной задачей была, есть и будет качественная работа с клиентами с одной 
+										единственной целью, чтобы как можно большее количество наших покупателей стали нашими постоянными клиентами 
+										и рекомендовали нас своим близким,  друзьям и знакомым.
+									</p>
+								</div>
+							</details>
 						</div>
-						<div class="about-store__zxc">
-							<div data-da=".spollers__title_04, 1001.07" class="about-store__qwe">
-								<div class="about-store__img"><img src="@img/home/about-store/04.svg" alt=""></div>
-								<h5 class="about-store__subtitle">Качество реализуемых товаров</h5>
-								<div class="about-store__arrow-spoiler"><img src="@img/home/about-store/arrow-spoiler.svg" alt=""></div>
-							</div>
-							<div data-da=".spollers__body_04, 1001.08" class="about-store__asd">
-								<p class="about-store__text">
-									опрос качества в такой товарной группе, как парфюмерия, занимает первое место в сомнениях посетителей любого сайта интернет-магазина духов. Многие покупатели признаются в своих отзывах в том, что немного боялись перед тем, как совершить покупку в интернет-магазине. Мы вас прекрасно понимаем и разделяем ваши переживания.  Дело в том, что интернет зачастую воспринимается не как альтернативная торговая площадка розничному магазину, а как хорошая возможность для продавца реализовывать товары ненадлежащего качества. 
-								</p>
-							</div>
+						<div data-spollers="1001.98" class="about-store__main spollers">
+							<details class=" spollers__item">
+								<summary class="about-store__content spollers__title">
+									<div class="about-store__img"><img src="@img/home/about-store/04.svg" alt=""></div>
+									<h5 class="about-store__subtitle">Качество реализуемых товаров</h5>
+									<div class="about-store__arrow-spoiler"><img src="@img/home/about-store/arrow-spoiler.svg" alt=""></div>
+								</summary>
+								<div class="about-store__body spollers__body">
+									<p class="about-store__text">Вопрос качества в такой товарной группе, как парфюмерия, занимает первое место в сомнениях посетителей любого сайта интернет-магазина духов. Многие покупатели признаются в своих отзывах в том, что немного боялись перед тем, как совершить покупку в интернет-магазине. Мы вас прекрасно понимаем и разделяем ваши переживания.  Дело в том, что интернет зачастую воспринимается не как альтернативная торговая площадка розничному магазину, а как хорошая возможность для продавца реализовывать товары ненадлежащего качества. 
+									</p>
+								</div>
+							</details>
 						</div>
-						<div class="about-store__zxc">
-							<div data-da=".spollers__title_02, 1001.03" class="about-store__qwe">
-								<div class="about-store__img"><img src="@img/home/about-store/02.svg" alt=""></div>
-								<h5 class="about-store__subtitle">Ценовая политика магазина</h5>
-								<div class="about-store__arrow-spoiler"><img src="@img/home/about-store/arrow-spoiler.svg" alt=""></div>
-							</div>
-							<div data-da=".spollers__body_02, 1001.04" class="about-store__asd">
-								<p class="about-store__text">
-									Ценообразование – сложный процесс, требующий учета большого количества факторов, особенно в такой сфере как продажа  парфюмерно-косметических товаров через интернет. Кто-то ищет самую низкую цену, а кого-то из покупателей, напротив, отпугивает невысокая  цена товаров, наводя на мысли о подделке. В нашей работе мы делаем ставку на увеличение количества реализуемых товаров,  а не на максимизацию прибыли с каждого отдельно взятого заказа. 
-								</p>
-							</div>
-							
+						<div data-spollers="1001.98" class="about-store__main spollers">
+							<details class=" spollers__item">
+								<summary class="about-store__content spollers__title">
+									<div class="about-store__img"><img src="@img/home/about-store/02.svg" alt=""></div>
+									<h5 class="about-store__subtitle">Ценовая политика магазина</h5>
+									<div class="about-store__arrow-spoiler"><img src="@img/home/about-store/arrow-spoiler.svg" alt=""></div>
+								</summary>
+								<div class="about-store__body spollers__body">
+									<p class="about-store__text">Ценообразование – сложный процесс, требующий учета большого количества факторов, особенно в такой сфере как продажа  парфюмерно-косметических товаров через интернет. Кто-то ищет самую низкую цену, а кого-то из покупателей, напротив, отпугивает невысокая  цена товаров, наводя на мысли о подделке. В нашей работе мы делаем ставку на увеличение количества реализуемых товаров,  а не на максимизацию прибыли с каждого отдельно взятого заказа. 
+									</p>
+								</div>
+							</details>
 						</div>
-						<div class="about-store__zxc">
-							<div data-da=".spollers__title_05, 1001.09" class="about-store__qwe">
-								<div class="about-store__img"><img src="@img/home/about-store/05.svg" alt=""></div>
-								<h5 class="about-store__subtitle">Доставка товаров</h5>
-								<div class="about-store__arrow-spoiler"><img src="@img/home/about-store/arrow-spoiler.svg" alt=""></div>
-							</div>
-							<div data-da=".spollers__body_05, 1001.10" class="about-store__asd">
-								<p class="about-store__text">
-									Бытует мнение, что уровень магазина отражает такой показатель, как наличие собственных курьеров, причем, их отсутствие зачастую воспринимается как фактор, характеризующий магазин не с лучшей стороны. Спешим опровергнуть данное утверждение, потому как все первоклассные интернет-магазины пользуются услугами профессиональных курьерских служб, а небольшие магазины, которые открылись недавно, развозят заказы своими силами. Этому есть довольно простое объяснение. 
-								</p>
-							</div>
+						<div data-spollers="1001.98" class="about-store__main spollers">
+							<details class=" spollers__item">
+								<summary class="about-store__content spollers__title">
+									<div class="about-store__img"><img src="@img/home/about-store/05.svg" alt=""></div>
+									<h5 class="about-store__subtitle">Доставка товаров</h5>
+									<div class="about-store__arrow-spoiler"><img src="@img/home/about-store/arrow-spoiler.svg" alt=""></div>
+								</summary>
+								<div class="about-store__body spollers__body">
+									<p class="about-store__text">Бытует мнение, что уровень магазина отражает такой показатель, как наличие собственных курьеров, причем, их отсутствие зачастую воспринимается как фактор, характеризующий магазин не с лучшей стороны. Спешим опровергнуть данное утверждение, потому как все первоклассные интернет-магазины пользуются услугами профессиональных курьерских служб, а небольшие магазины, которые открылись 
+										недавно, развозят заказы своими силами. Этому есть довольно простое объяснение. 
+									</p>
+								</div>
+							</details>
 						</div>
-						<div class="about-store__zxc">
-							<div data-da=".spollers__title_03, 1001.05" class="about-store__qwe">
-								<div class="about-store__img"><img src="@img/home/about-store/03.svg" alt=""></div>
-								<h5 class="about-store__subtitle">Гарантия качества</h5>
-								<div class="about-store__arrow-spoiler"><img src="@img/home/about-store/arrow-spoiler.svg" alt=""></div>
-							</div>
-							<div data-da=".spollers__body_03, 1001.06" class="about-store__asd">
-								<p class="about-store__text">
-									Вы можете ознакомиться с сертификатами соответствия и декларациями о соответствии на реализуемые товары
-								</p>
-							</div>
-							
+						<div data-spollers="1001.98" class="about-store__main spollers">
+							<details class=" spollers__item">
+								<summary class="about-store__content spollers__title">
+									<div class="about-store__img"><img src="@img/home/about-store/03.svg" alt=""></div>
+									<h5 class="about-store__subtitle">Гарантия качества</h5>
+									<div class="about-store__arrow-spoiler"><img src="@img/home/about-store/arrow-spoiler.svg" alt=""></div>
+								</summary>
+								<div class="about-store__body spollers__body">
+									<p class="about-store__text">Вы можете ознакомиться с сертификатами соответствия и декларациями о соответствии на реализуемые товары
+									</p>
+								</div>
+							</details>
 						</div>
-						<div class="about-store__zxc">
-							<div data-da=".spollers__title_06, 1001.11" class="about-store__qwe">
-								<div class="about-store__img"><img src="@img/home/about-store/06.svg" alt=""></div>
-								<h5 class="about-store__subtitle">Финансовые гарантии</h5>
-								<div class="about-store__arrow-spoiler"><img src="@img/home/about-store/arrow-spoiler.svg" alt=""></div>
-							</div>
-							<div data-da=".spollers__body_06, 1001.12" class="about-store__asd">
-								<p class="about-store__text">
-									Мы настолько уверены в качестве реализуемых товаров, что всегда готовы вернуть деньги по Вашему первому требованию.
-								</p>
-							</div>
+						<div data-spollers="1001.98" class="about-store__main spollers">
+							<details class=" spollers__item">
+								<summary class="about-store__content spollers__title">
+									<div class="about-store__img"><img src="@img/home/about-store/06.svg" alt=""></div>
+									<h5 class="about-store__subtitle">Финансовые гарантии</h5>
+									<div class="about-store__arrow-spoiler"><img src="@img/home/about-store/arrow-spoiler.svg" alt=""></div>
+								</summary>
+								<div class="about-store__body spollers__body">
+									<p class="about-store__text">Мы настолько уверены в качестве реализуемых товаров, что всегда готовы вернуть деньги по Вашему первому требованию.
+									</p>
+								</div>
+							</details>
 						</div>
-
-						
-						<!-- <div class="about-store__col"> -->
-							<div  data-spollers="1001.98" class="about-store__spollers spollers">
-								<details class="spollers__item">
-									<summary class="spollers__title spollers__title_01">
-										
-									</summary>
-									<div class="spollers__body spollers__body_01">
-										
-									</div>
-								</details>
-								<details class="spollers__item">
-									<summary class="spollers__title spollers__title_02">
-										
-									</summary>
-									<div class="spollers__body spollers__body_02">
-										
-									</div>
-								</details>
-								<details class="spollers__item">
-									<summary class="spollers__title spollers__title_03">
-										
-									</summary>
-									<div class="spollers__body spollers__body_03">
-										
-									</div>
-								</details>
-							</div>
-						<!-- </div> -->
-						<!-- <div class="about-store__col"> -->
-							<div  data-spollers="1001.97" class="about-store__spollers spollers">
-								<details class="spollers__item">
-									<summary class="spollers__title spollers__title_04">
-									
-									</summary>
-									<div class="spollers__body spollers__body_04">
-										
-									</div>
-								</details>
-								<details class="spollers__item">
-									<summary class="spollers__title spollers__title_05">
-										
-									</summary>
-									<div class="spollers__body spollers__body_05">
-										
-									</div>
-								</details>
-								<details class="spollers__item">
-									<summary class="spollers__title spollers__title_06">
-										
-									</summary>
-									<div class="spollers__body spollers__body_06">
-										
-									</div>
-								</details>
-							</div>
-						<!-- </div> -->
 					</div>
 				</div>
 				</section>

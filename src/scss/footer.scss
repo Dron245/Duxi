@@ -150,6 +150,7 @@
 .menu-footer {
 
 	&__list {
+		
 	}
 
 	&__col {
@@ -188,6 +189,59 @@
 
 	&__social {
 		flex-basis: 50%;
+	}
+}
+
+.footer {
+
+	&__navbar {
+		@media (min-width:$mobile){
+			 display: none; 
+		}
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 10px;
+		background-color: white;
+		position: relative;
+	}
+}
+.navbar-footer {
+
+	&__item {
+		// outline: 1px solid red;
+		position: relative;
+		@include adaptiveValue("width", 70, 35,0,768,360);
+		@include adaptiveValue("height", 70, 35,0,768,360);
+		img {
+			width: 100%;
+			@media (max-width: em(600)){
+				//   transform: scale(0.8);
+			}
+			@media (max-width:$mobileSmall){
+				//  transform: scale(0.6); 
+			}
+		}
+		&_quantity {
+			
+		}
+	}
+
+	&__quantity {
+		position: absolute;
+		z-index: 2;
+		@include adaptiveValue("width", 38, 20,0,768,360);
+		@include adaptiveValue("height", 38, 20,0,768,360);
+		border-radius: 100%;
+		display: grid;
+		place-items: center;
+		@include adaptiveValue("font-size", 24, 17,0,768,360);
+		font-weight: 700;
+		background-color: white;
+		right: 0;
+		bottom: 0;
+		color: $knopka-bordovaya;
+		
 	}
 }
 

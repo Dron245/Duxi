@@ -229,7 +229,7 @@
 
 	&__actions {
 		.guest & {
-			// display: none;
+			display: none;
 		}
 		display: flex;
 		gap: toRem(5);

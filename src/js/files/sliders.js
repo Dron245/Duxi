@@ -26,8 +26,7 @@ import "../../scss/base/swiper.scss";
 
 //Инициализация слайдеров
 function initSliders() {
-	var init = false;
-	var discounts__slider;
+	
 //Список слайдеров
 //Проверяем, есть ли слайдер на странице
 	if (document.querySelector('.banners__slider')) { //Указываем класс нужного слайдера
@@ -186,84 +185,43 @@ function initSliders() {
 				});
 	}
 
-	//Слайдер "скидки и акции на главной"
-	function swiperCard() {
-		let mobile = window.matchMedia("(min-width: 0px) and (max-width: 768.97px)");
-		if ( mobile.matches /*window.innerWidth <= 768*/ /* && document.querySelector('.discounts__slider')*/) { //Указываем класс нужного слайдера
-			//Создаем слайдер
-			if (!init) {
-				init =true;
-				discounts__slider = new Swiper('.discounts__slider', { //Указываем класс нужного слайдера
-						//Подключаем модули слайдера
-						//для конкретного случая
-					modules: [Pagination, Autoplay],
-					observer: true,
-					observeParents: true,
-					// slidesPerView: 1.7,
-					spaceBetween: 20,
-					// autoHeight: true,
-					speed: 800,
-					// loop:true,
-					// touchRatio: 0,
-					//simulateTouch: false,
-					// loop: true,
-					//preloadImages: false,
-					//lazy: true,
-		
-					
-					// Эффекты
-					// effect: 'fade',
-					// autoplay: {
-					// 	delay: 4000,
-					// 	disableOnInteraction: false,
-					// },
-					
-		
-					// Пагинация
-					
-					pagination: {
-						el: '.swiper-discount-pagination',
-						clickable: true,
-					},
-					
-		
-					// Скроллбар
-					/*
-					scrollbar: {
-						el: '.swiper-scrollbar',
-						draggable: true,
-					},
-					*/
-		
-					// Кнопки "влево/вправо"
-					// navigation: {
-					// 	prevEl: '.swiper-product-prev',
-					// 	nextEl: '.swiper-product-next',
-					// },
-					
-					// Брейкпоинты
-					breakpoints: {
-						360: {
-							slidesPerView: 1.05,
-							spaceBetween: 20,
-							// autoHeight: true,
-						},
-						
-					},
-					
-					// События
-					on: {
-		
-					}
-				});
-			} else if (init){
-				discounts__slider.destroy();
-				init = false;
-			}
-		}
-	}
-	swiperCard();
-	window.addEventListener("resize", swiperCard);
+	
+	// if (document.querySelector('.discounts__slider')) { //Указываем класс нужного слайдера
+	// 	//Создаем слайдер
+	// 	new Swiper('.discounts__slider', { //Указываем класс нужного слайдера
+	// 			//Подключаем модули слайдера
+	// 			//для конкретного случая
+	// 		modules: [Pagination, Autoplay],
+	// 		observer: true,
+	// 		observeParents: true,
+	// 		// slidesPerView: 1.7,
+	// 		spaceBetween: 20,
+	// 		// autoHeight: true,
+	// 		speed: 800,
+			
+	// 		// Пагинация
+			
+	// 		pagination: {
+	// 			el: '.swiper-discount-pagination',
+	// 			clickable: true,
+	// 		},
+			
+	// 		// Брейкпоинты
+	// 		breakpoints: {
+	// 			360: {
+	// 				slidesPerView: 1.05,
+	// 				spaceBetween: 20,
+	// 				// autoHeight: true,
+	// 			},
+				
+	// 		},
+			
+	// 		// События
+	// 		on: {
+
+	// 		}
+	// 	});
+	// }
 
 	if (document.querySelector('.video__slider')) { //Указываем класс нужного слайдера
 		//Создаем слайдер
@@ -374,6 +332,67 @@ function initSlidersScroll() {
 window.addEventListener("load", function (e) {
 	// Запуск инициализации слайдеров
 	initSliders();
+
+	//Слайдер "скидки и акции на главной"
+
+	const resizableSwiper = (breakpoint, swiperClass, swiperSettings, callback) => {
+		let swiper;
+	
+		breakpoint = window.matchMedia(breakpoint);
+	
+		const enableSwiper = function(className, settings) {
+		  swiper = new Swiper(className, settings);
+	
+		  if (callback) {
+			 callback(swiper);
+		  }
+		}
+	
+		const checker = function() {
+		  if (breakpoint.matches) {
+			 return enableSwiper(swiperClass, swiperSettings);
+		  } else {
+			 if (swiper !== undefined) swiper.destroy(true, true);
+			 return;
+		  }
+		};
+	
+		breakpoint.addEventListener('change', checker);
+		checker();
+	 }
+	
+	 resizableSwiper(
+		'(max-width: 767.98px)',
+		'.discounts__slider',
+		{
+			modules: [Pagination, Autoplay],
+			observer: true,
+			observeParents: true,
+			// slidesPerView: 1.7,
+			spaceBetween: 20,
+			// autoHeight: true,
+			speed: 800,
+			
+			// Пагинация
+			
+			pagination: {
+				el: '.swiper-discount-pagination',
+				clickable: true,
+			},
+			
+			// Брейкпоинты
+			breakpoints: {
+				360: {
+					slidesPerView: 1.15,
+					spaceBetween: 20,
+					// autoHeight: true,
+				},
+				
+			},
+		},
+		// someFunc
+	 );
 	//Запуск инициализации скролла на базе слайдера (по классу swiper_scroll)
 	//initSlidersScroll();
 });
+
