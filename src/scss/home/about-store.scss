@@ -24,7 +24,7 @@
 		display: grid;
 		place-items: center;
 		border-radius: 100%;
-		background-color: rgba(191, 92, 122, 0.8);;
+		background-color: rgba(191, 92, 122, 0.8);
 		@media (max-width:$pcSmall){
 			display: none;
 		}
@@ -35,10 +35,15 @@
 	}
 
 	&__wrapper {
+		row-gap: 30px;
+		@media (max-width:$pcSmall){
+			row-gap: 20px;
+		}
 		@media (min-width:$tablet){
 			 display: flex;
 			 justify-content: space-between;
 			 flex-wrap: wrap;
+			//  row-gap: 20px;
 		}
 	}
 

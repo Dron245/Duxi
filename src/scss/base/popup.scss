@@ -10,6 +10,9 @@ body::after {
 	transition: opacity 0.8s ease 0s;
 	pointer-events: none;
 	z-index: 149;
+	@media (max-width:$mobile){
+		 background-color: #59494c;; 
+	}
 }
 .popup-show body::after {
 	opacity: 1;
@@ -24,6 +27,12 @@ body::after {
 	transition: visibility 0.8s ease 0s;
 	visibility: hidden;
 	pointer-events: none;
+	@media (max-width:$mobile){
+		 padding: 30px; 
+	}
+	@media (max-width:$mobileSmall){
+		 padding: 20px; 
+	}
 }
 .popup_show {
 	z-index: 150;
@@ -54,8 +63,24 @@ body::after {
 	border: 1px solid $tekst-zagolovok-ne-aktivnyy;
 	padding: 20px;
 	width: 100%;
+	@media (max-width:$mobile){
+		max-width: initial;
+		height: 100dvh;
+		#city & {
+			height: auto;
+		}
+	}
 	#vhod-tel & {
 		max-width: 353px;
+	}
+	#thanks & {
+		max-width: 630px;
+	}
+	#popup-feedback & {
+		max-width: 740px;
+	}
+	#city & {
+		max-width: 840px;
 	}
 	max-width: 340px;
 	border-radius: 10px;
@@ -91,11 +116,17 @@ body::after {
 		text-transform: uppercase;
 		color: $zagolovok;
 		margin-bottom: 40px;
+		#popup-feedback & {
+			margin-bottom: 25px;
+		}
 	}
 
 	&__form {
 	}
 
+	&__text-feedback {
+		margin-bottom: toRem(40);
+	}
 	&__form-item {
 		position: relative;
 		display: flex;
@@ -186,8 +217,18 @@ body::after {
 
 	&__text {
 		line-height: 114.285714%; /* 16/14 */
+		span {
+			font-weight: 500;
+		}
+		a {
+			font-weight: 500;
+			text-decoration: underline;
+		}
 		#vhod-tel & {
 			margin-top: 10px;
+		}
+		#add-tel & {
+			margin-bottom: 40px;
 		}
 	}
 
@@ -252,5 +293,138 @@ body::after {
 		text-transform: uppercase;
 		color: $zagolovok;
 	}
+
+	&__item-group {
+		margin-bottom: toRem(60);
+	}
+
+	&__length {
+		font-style: italic;
+	}
+
+	&__star {
+		color: $knopka-bordovaya;
+	}
+
+	&__correction {
+		color: #494949;
+	}
+
+	&__location {
+		margin-top: 20px;
+		margin-bottom: 20px;
+		a {
+			text-decoration: underline;
+			text-decoration-skip-ink: none;
+			color: #7f213c;
+		}
+	}
 }
 
+
+//Табы: выбор города
+
+.popup {
+
+	&__tabs {
+	}
+}
+.popup-tabs {
+
+	&__navigation {
+		margin-bottom: 20px;
+		display: flex;
+		flex-wrap: wrap;
+		row-gap: 10px;
+	}
+
+	&__title {
+		position: relative;
+		text-transform: uppercase;
+		font-weight: 300;
+		@include adaptiveValue("font-size", 24, 18,0,1920,768);
+		line-height: 118%; /* 59/50 */
+		color: $tekst-zagolovok-ne-aktivnyy;
+		&._tab-active {
+			color: #7f203b;
+			&::after{
+				content:'';
+				background-color: $zagolovok;
+				position: absolute;
+				width: 100%;
+				height: 1px;
+				top: 105%;
+				left: 0;
+				z-index: 0;
+			}
+		}
+		@media (max-width:$mobile){
+			@include adaptiveValue("font-size", 50, 22,0,768,440); 
+	 	}
+		&:not(:last-child) {
+			@include adaptiveValue("margin-right", 60, 15,0,1920,768);
+		}
+	}
+
+	.first_level_region_item {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.popup-tabs__iteration_break {
+		flex: 0 0 25%;
+		// outline: 1px solid red;
+		@media (max-width:$mobile){
+			 flex: 0 0 50%;
+			 &:not(:last-child) {margin-bottom: toRem(10);}
+		}
+		@media (max-width:$mobileSmall){
+			 flex: 0 0 100%; 
+		}
+	}
+
+	.list_region_body {
+		display: block;
+		cursor: pointer;
+		text-transform: lowercase;
+		&:not(:last-child) {margin-bottom: toRem(10);}
+	}
+	&__content {
+	}
+
+	&__body {
+	}
+
+	&__regions {
+	}
+
+	&__iteration {
+
+		&_break {
+		}
+	}
+}
+
+.list-group {
+}
+
+.first {
+
+	&_level {
+	}
+}
+.list {
+
+	&_region {
+	}
+}
+.bt {
+
+	&_region {
+	}
+}
+.big {
+
+	&_length {
+	}
+}

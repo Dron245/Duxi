@@ -36,6 +36,13 @@
 	}
 
 	&__slide {
+		@media (any-hover: hover){
+			&:hover{
+				& .video__text {
+					color: $knopka-rozovaya;
+				}
+			}
+		}
 		// outline: 1px solid red;
 	}
 
@@ -52,6 +59,7 @@
 	}
 
 	&__text {
+		transition: color 0.3s;
 		line-height: 123.076923%; /* 16/13 */
 	}
 

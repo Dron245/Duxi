@@ -43,6 +43,9 @@
 	}
 	// .menu__list
 	&__list {
+		@media (min-width:$tablet){
+			 flex-wrap: wrap; 
+		}
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -143,7 +146,10 @@
 			height: 100%;
 			left: -10000%;
 			background: white;
-			z-index: -1;
+			z-index: 0;
+			.footer & {
+				z-index: -1;
+			}
 			@media (max-width:$tablet){
 				display: none;
 			}
@@ -163,6 +169,14 @@
 		.header &:hover{
 			@media (min-width:$tablet){
 				background-color: white;
+				// @media (min-width:$tablet){
+					& .sublist-menu__item {
+					  // @media (min-width:$tablet){
+						  position: relative;
+						  z-index: 2; 
+				  //   }
+					// } 
+			  }
 				& .menu__link {
 					color: $zagolovok;
 				}

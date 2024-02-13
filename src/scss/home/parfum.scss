@@ -24,6 +24,7 @@
 		text-transform: uppercase;
 		text-align: center;
 		line-height: 115%; /* 23/20 */
+		transition: color 0.3s, transform 0.3s;
 	}
 
 	&__wrapper {
@@ -50,6 +51,15 @@
 		border-radius: 20px;
 		overflow: hidden;
 		opacity: 0.8;
+		@media (any-hover: hover){
+			&:hover{
+				& .parfum__title {
+					font-weight: 900;
+					color: $knopka-rozovaya;
+					// transform: scale(1.1);
+				}
+			}
+		}
 		&_big {
 			grid-column: span 2;
 			// position: relative;

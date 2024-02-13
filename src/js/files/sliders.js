@@ -42,7 +42,9 @@ function initSliders() {
 			//autoHeight: true,
 			speed: 800,
 			loop:true,
-
+			autoplay: {
+				delay: 5000,
+			 },
 			// Пагинация
 			
 			pagination: {
@@ -70,21 +72,7 @@ function initSliders() {
 					//autoHeight: true,
 					speed: 800,
 					loop:true,
-					//touchRatio: 0,
-					//simulateTouch: false,
-					//loop: true,
-					//preloadImages: false,
-					//lazy: true,
-		
-					
-					// Эффекты
-					// effect: 'fade',
-					// autoplay: {
-					// 	delay: 4000,
-					// 	disableOnInteraction: false,
-					// },
-					
-		
+				
 					// Пагинация
 					
 					pagination: {

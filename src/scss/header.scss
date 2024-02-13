@@ -82,6 +82,18 @@
 		display: flex;
 		align-items: center;
 		gap: toRem(4);
+		position: relative;
+		cursor: pointer;
+		&:hover{
+			// & .top-header__city-choice {
+			// 	opacity: 1;
+			// 	visibility: visible;
+			// 	top:150%;
+			// }
+			& .top-header__city-name {
+				color: black;
+			}
+		}
 	}
 
 	&__city-choice {
@@ -90,6 +102,9 @@
 		}
 		position: absolute;
 		top: 160%;
+		// top: 200%;
+		// opacity: 0;
+		// visibility: hidden;
 		left: -50%;
 		border: 1px solid #f4e1e6;
 		box-shadow: 10px 10px 10px 0 rgba(187, 144, 144, 0.1), -10px -10px 10px 0 rgba(187, 144, 144, 0.1), -2px -2px 8px 0 rgba(187, 144, 144, 0.1), 2px 2px 8px 0 rgba(187, 144, 144, 0.1);
@@ -100,6 +115,7 @@
 		line-height: 15px;
 		min-width: toRem(195);
 		z-index: 2;
+		transition: all 0.3s;
 		@media (max-width: em(1630)){
 			left: -0%;
 		}
@@ -124,6 +140,7 @@
 		line-height: 15px;
 		text-decoration: underline;
 		color: $zagolovok;
+		transition: color 0.3s;
 	}
 
 	&__list {
@@ -151,6 +168,7 @@
 		transition: color 0.3s;
 		&:hover{
 			color: $zagolovok;
+			
 		}
 	}
 
@@ -241,6 +259,9 @@
 
 	&__form {
 		position: relative;
+		#city & {
+			width: 100%;
+		}
 		&:hover{
 			& .header-center__input {
 				border-radius: 16px 16px 0 0;
@@ -262,6 +283,10 @@
 		color: $tekst-zagolovok-ne-aktivnyy;
 		&::placeholder {
 			color: $tekst-zagolovok-ne-aktivnyy;
+		}
+		#city & {
+			text-transform: uppercase;
+			font-style: initial;
 		}
 		@media (max-width: $tablet){
 			  padding: 0;
@@ -288,6 +313,9 @@
 		right: 3%;
 		top: 50%;
 		transform: translateY(-50%);
+		#city & {
+			right: 0;
+		}
 		@media (max-width:$mobile){
 			left: 80%;
 		}
@@ -539,6 +567,20 @@
 
 /*Меню поиска */
 
+.dropmenu__wrapper::-webkit-scrollbar {
+	width: 5px; /* Ширина всего элемента навигации */
+ }
+ 
+ .dropmenu__wrapper::-webkit-scrollbar-track {
+	background: #fff; /* Цвет дорожки */
+ }
+ 
+ .dropmenu__wrapper::-webkit-scrollbar-thumb {
+	background-color: $knopka-rozovaya; /* Цвет бегунка */
+	border-radius: 20px; /* Округление бегунка */
+	border: 3px solid $knopka-rozovaya; /* Оформление границ бегунка */
+ }
+
 .header-center {
 
 	&__dropmenu {
@@ -555,10 +597,11 @@
 .dropmenu {
 	opacity: 0;
 	visibility: hidden;
-	transition: all 0.3s;
-	max-height: 500px;
-	overflow-y: auto;
+	transition: opacity 0.3s, visibility 0.3s;
+	
 	&__wrapper {
+		max-height: 250px;
+		overflow-y: auto;
 	}
 
 	&__list {
