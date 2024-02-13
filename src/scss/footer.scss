@@ -199,11 +199,14 @@
 			 display: none; 
 		}
 		display: flex;
+		position: fixed;
+		bottom: 0;
 		align-items: center;
 		justify-content: space-between;
 		padding: 10px;
 		background-color: white;
-		position: relative;
+		// position: relative;
+		width: 100%;
 	}
 }
 .navbar-footer {

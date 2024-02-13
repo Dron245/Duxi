@@ -82,9 +82,11 @@
 .swiper-pagination {
 }
 .swiper-video-prev {
-	left: 0%;
+	// left: 0%;
+	transform: translateY(-160%);
 }
 
 .swiper-video-next {
-	right: 0%;
+	// right: 0%;
+	transform: translateY(-160%);
 }

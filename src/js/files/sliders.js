@@ -91,8 +91,8 @@ function initSliders() {
 		
 					// Кнопки "влево/вправо"
 					navigation: {
-						prevEl: '.swiper-product-prev',
-						nextEl: '.swiper-product-next',
+						prevEl: '.swiper-prev',
+						nextEl: '.swiper-next',
 					},
 					
 					// Брейкпоинты
@@ -151,8 +151,8 @@ function initSliders() {
 		
 					// Кнопки "влево/вправо"
 					navigation: {
-						prevEl: '.swiper-video-prev',
-						nextEl: '.swiper-video-next',
+						prevEl: '.swiper-prev',
+						nextEl: '.swiper-next',
 					},
 					
 					// Брейкпоинты

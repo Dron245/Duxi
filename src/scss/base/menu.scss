@@ -209,13 +209,17 @@
 		width: toRem(70);
 		height: toRem(45);
 		z-index: 5;
+		@media (max-width:$tablet){
+			width: toRem(50);
+			height: toRem(27);
+		}
 		@media (max-width:$mobile){
-			 width: toRem(40);
-			 height: toRem(27); 
+			 width: toRem(70);
+			 height: toRem(45); 
 		}
 		@media (max-width:$mobileSmall){
-			 width: toRem(30);
-			 height: toRem(20); 
+			 width: toRem(40);
+			 height: toRem(30); 
 		}
 		.menu-open & {
 			position: absolute;

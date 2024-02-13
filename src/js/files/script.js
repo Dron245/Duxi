@@ -38,12 +38,12 @@ window.addEventListener('DOMContentLoaded', () => {
 			targetElement.closest('.popup__img-pasword').classList.toggle('_pass-view')
 		}
 	}
-
-	//Работа с табами на главной странице под банером
-	if (window.innerWidth <= 768 ) {
-		tabs01.classList.remove('_tab-active')
-		tabs02.classList.add('_tab-active')
-	}
 });
 
+//Работа с табами на главной странице под банером
+if (window.innerWidth < 768 ) {
+	tabs01.classList.remove('_tab-active')
+	tabs02.classList.add('_tab-active')
+	
+}
 

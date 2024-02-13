@@ -262,13 +262,18 @@
 		#city & {
 			width: 100%;
 		}
-		&:hover{
-			& .header-center__input {
-				border-radius: 16px 16px 0 0;
-			}
-			& .dropmenu {
-				opacity: 1;
-				visibility: visible;
+		.menu-open & {
+			border-radius: 16px;
+		}
+		@media (any-hover: hover){
+			&:hover{
+				& .header-center__input {
+					border-radius: 16px 16px 0 0;
+				}
+				& .dropmenu {
+					opacity: 1;
+					visibility: visible;
+				}
 			}
 		}
 		@media (max-width:$tablet){
@@ -317,7 +322,13 @@
 			right: 0;
 		}
 		@media (max-width:$mobile){
-			left: 80%;
+			// left: 80%;
+		}
+		.menu-open & {
+			position: relative;
+			top: 0;
+			right: 0;
+			transform: translate(0);
 		}
 	}
 

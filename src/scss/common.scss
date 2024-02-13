@@ -45,7 +45,7 @@ h3[class*="__title"] {
 		display: inline-block;
 		position: absolute;
 		top: 50%;
-		transform: translateY(-160%);
+		transform: translateY(-50%);
 		left: -1%; 
 	}
 }
@@ -56,7 +56,7 @@ h3[class*="__title"] {
 		position: absolute;
 		right: -1%;
 		top: 50%;
-		transform: translateY(-160%);
+		transform: translateY(-50%);
 		img {
 			transform: rotate(180deg);
 		} 

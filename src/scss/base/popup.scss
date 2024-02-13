@@ -386,7 +386,7 @@ body::after {
 	.list_region_body {
 		display: block;
 		cursor: pointer;
-		text-transform: lowercase;
+		// text-transform: lowercase;
 		&:not(:last-child) {margin-bottom: toRem(10);}
 	}
 	&__content {
