@@ -10,8 +10,8 @@ body::after {
 	transition: opacity 0.8s ease 0s;
 	pointer-events: none;
 	z-index: 149;
-	@media (max-width:$mobile){
-		 background-color: #59494c;; 
+	@media (max-width: $mobile) {
+		background-color: #59494c;
 	}
 }
 .popup-show body::after {
@@ -27,11 +27,11 @@ body::after {
 	transition: visibility 0.8s ease 0s;
 	visibility: hidden;
 	pointer-events: none;
-	@media (max-width:$mobile){
-		 padding: 30px; 
+	@media (max-width: $mobile) {
+		padding: 30px;
 	}
-	@media (max-width:$mobileSmall){
-		 padding: 20px; 
+	@media (max-width: $mobileSmall) {
+		padding: 20px;
 	}
 }
 .popup_show {
@@ -54,8 +54,8 @@ body::after {
 	display: flex;
 	justify-content: flex-start;
 	// align-items: center;
-	@media (min-width:$mobile){
-		 margin-top: toRem(100); 
+	@media (min-width: $mobile) {
+		margin-top: toRem(100);
 	}
 }
 .popup__content {
@@ -66,7 +66,7 @@ body::after {
 	border: 1px solid $tekst-zagolovok-ne-aktivnyy;
 	padding: 20px;
 	width: 100%;
-	@media (max-width:$mobile){
+	@media (max-width: $mobile) {
 		max-width: initial;
 		// height: 100dvh;
 		#city & {
@@ -96,12 +96,10 @@ body::after {
 /*регистрация */
 
 .popup {
-
 	&__wrapper {
 	}
 
 	&__content {
-		
 	}
 
 	&__close {
@@ -135,9 +133,13 @@ body::after {
 		display: flex;
 		flex-direction: column;
 		row-gap: toRem(4);
-		&:not(:last-child) {margin-bottom: toRem(30);}
+		&:not(:last-child) {
+			margin-bottom: toRem(30);
+		}
 		#reg & {
-			&:not(:last-child) {margin-bottom: toRem(40);}
+			&:not(:last-child) {
+				margin-bottom: toRem(40);
+			}
 		}
 	}
 
@@ -171,7 +173,7 @@ body::after {
 
 	&__img-nv {
 		display: none;
-		._pass-view &{
+		._pass-view & {
 			display: block;
 		}
 	}
@@ -194,7 +196,7 @@ body::after {
 		color: $tekst-zagolovok-ne-aktivnyy;
 		transition: color 0.3s;
 		align-self: flex-end;
-		&:hover{
+		&:hover {
 			color: $knopka-bordovaya;
 		}
 	}
@@ -237,12 +239,15 @@ body::after {
 
 	&__button {
 		display: grid;
-		place-items: center;
+		align-items: center;
+		justify-content: center;
 		background-color: $knopka-rozovaya;
-		#reg &, #vhod-tel & {
+		#reg &,
+		#vhod-tel & {
 			opacity: 0.7;
 		}
-		#reg.done &, #vhod-tel.done &{
+		#reg.done &,
+		#vhod-tel.done & {
 			opacity: 1;
 		}
 		font-size: 24px;
@@ -251,9 +256,13 @@ body::after {
 		padding-bottom: 12.5px;
 		text-transform: uppercase;
 		color: #fff;
-		&:not(:last-child) {margin-bottom: toRem(20);}
-		transition: color 0.3s, background-color 0.3s;
-		&:hover{
+		&:not(:last-child) {
+			margin-bottom: toRem(20);
+		}
+		transition:
+			color 0.3s,
+			background-color 0.3s;
+		&:hover {
 			color: #fafafa;
 			background-color: $knopka-bordovaya;
 		}
@@ -261,7 +270,7 @@ body::after {
 			background-color: rgb(255, 255, 255);
 			color: $knopka-rozovaya;
 			border: 1px solid $knopka-rozovaya;
-			&:hover{
+			&:hover {
 				background-color: $knopka-bordovaya;
 				color: white;
 			}
@@ -280,7 +289,6 @@ body::after {
 	}
 
 	&__form-item {
-		
 	}
 
 	&__input-wrapper-tel {
@@ -324,16 +332,13 @@ body::after {
 	}
 }
 
-
 //Табы: выбор города
 
 .popup {
-
 	&__tabs {
 	}
 }
 .popup-tabs {
-
 	&__navigation {
 		margin-bottom: 20px;
 		display: flex;
@@ -345,13 +350,13 @@ body::after {
 		position: relative;
 		text-transform: uppercase;
 		font-weight: 300;
-		@include adaptiveValue("font-size", 24, 18,0,1920,768);
+		@include adaptiveValue("font-size", 24, 18, 0, 1920, 768);
 		line-height: 118%; /* 59/50 */
 		color: $tekst-zagolovok-ne-aktivnyy;
 		&._tab-active {
 			color: #7f203b;
-			&::after{
-				content:'';
+			&::after {
+				content: "";
 				background-color: $zagolovok;
 				position: absolute;
 				width: 100%;
@@ -361,11 +366,11 @@ body::after {
 				z-index: 0;
 			}
 		}
-		@media (max-width:$mobile){
-			@include adaptiveValue("font-size", 35, 22,0,768,440); 
-	 	}
+		@media (max-width: $mobile) {
+			@include adaptiveValue("font-size", 35, 22, 0, 768, 440);
+		}
 		&:not(:last-child) {
-			@include adaptiveValue("margin-right", 60, 25,0,1920,768);
+			@include adaptiveValue("margin-right", 60, 25, 0, 1920, 768);
 		}
 	}
 
@@ -377,12 +382,14 @@ body::after {
 	.popup-tabs__iteration_break {
 		flex: 0 0 25%;
 		// outline: 1px solid red;
-		@media (max-width:$mobile){
-			 flex: 0 0 50%;
-			 &:not(:last-child) {margin-bottom: toRem(10);}
+		@media (max-width: $mobile) {
+			flex: 0 0 50%;
+			&:not(:last-child) {
+				margin-bottom: toRem(10);
+			}
 		}
-		@media (max-width:$mobileSmall){
-			 flex: 0 0 100%; 
+		@media (max-width: $mobileSmall) {
+			flex: 0 0 100%;
 		}
 	}
 
@@ -390,7 +397,9 @@ body::after {
 		display: block;
 		cursor: pointer;
 		// text-transform: lowercase;
-		&:not(:last-child) {margin-bottom: toRem(10);}
+		&:not(:last-child) {
+			margin-bottom: toRem(10);
+		}
 	}
 	&__content {
 	}
@@ -402,7 +411,6 @@ body::after {
 	}
 
 	&__iteration {
-
 		&_break {
 		}
 	}
@@ -412,22 +420,18 @@ body::after {
 }
 
 .first {
-
 	&_level {
 	}
 }
 .list {
-
 	&_region {
 	}
 }
 .bt {
-
 	&_region {
 	}
 }
 .big {
-
 	&_length {
 	}
 }

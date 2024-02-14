@@ -1,7 +1,9 @@
 .header {
 	position: relative;
 	background: #fff5f6;
-	transition: background-color 0.3s, opacity 0.3s;
+	transition:
+		background-color 0.3s,
+		opacity 0.3s;
 	// .menu-open & {
 	// 	background-color: #020001;
 	// 	opacity: 0.58;
@@ -30,19 +32,19 @@
 	&__top {
 		display: flex;
 		align-items: center;
-		@media (max-width:$tablet){
-			 display: none; 
+		@media (max-width: $tablet) {
+			display: none;
 		}
 	}
 
 	&__center {
 		display: flex;
 		align-items: center;
-		@include adaptiveValue("padding-top", 29, 20,0,1920,1280);
+		@include adaptiveValue("padding-top", 29, 20, 0, 1920, 1280);
 		// @include adaptiveValue("padding-bottom", 28, 18,0,1920,1280);
 		padding-bottom: toRem(37);
-		@media (max-width: $tablet){
-			 justify-content: space-between; 
+		@media (max-width: $tablet) {
+			justify-content: space-between;
 		}
 	}
 
@@ -50,8 +52,8 @@
 		// display: none;
 		position: relative;
 		z-index: 1;
-		&::after{
-			content:'';
+		&::after {
+			content: "";
 			position: absolute;
 			top: 0;
 			width: 10000vw;
@@ -65,12 +67,11 @@
 .user {
 }
 .top-header {
-
 	&__item {
 		position: relative;
-		
+
 		&_city {
-			@include adaptiveValue("margin-right", 46, 20,0,1920,1280);
+			@include adaptiveValue("margin-right", 46, 20, 0, 1920, 1280);
 		}
 
 		&_tel {
@@ -84,7 +85,7 @@
 		gap: toRem(4);
 		position: relative;
 		cursor: pointer;
-		&:hover{
+		&:hover {
 			// & .top-header__city-choice {
 			// 	opacity: 1;
 			// 	visibility: visible;
@@ -107,7 +108,11 @@
 		// visibility: hidden;
 		left: -50%;
 		border: 1px solid #f4e1e6;
-		box-shadow: 10px 10px 10px 0 rgba(187, 144, 144, 0.1), -10px -10px 10px 0 rgba(187, 144, 144, 0.1), -2px -2px 8px 0 rgba(187, 144, 144, 0.1), 2px 2px 8px 0 rgba(187, 144, 144, 0.1);
+		box-shadow:
+			10px 10px 10px 0 rgba(187, 144, 144, 0.1),
+			-10px -10px 10px 0 rgba(187, 144, 144, 0.1),
+			-2px -2px 8px 0 rgba(187, 144, 144, 0.1),
+			2px 2px 8px 0 rgba(187, 144, 144, 0.1);
 		border-radius: 8px;
 		background-color: white;
 		padding: 10px toRem(22);
@@ -116,11 +121,11 @@
 		min-width: toRem(195);
 		z-index: 2;
 		transition: all 0.3s;
-		@media (max-width: em(1630)){
+		@media (max-width: em(1630)) {
 			left: -0%;
 		}
-		&::after{
-			content:'';
+		&::after {
+			content: "";
 			position: absolute;
 			display: inline-block;
 			border: 11.5px solid transparent;
@@ -128,7 +133,7 @@
 			top: -22px;
 			left: 50%;
 			transform: translateX(-50%);
-			@media (max-width: em(1630)){
+			@media (max-width: em(1630)) {
 				left: 30%;
 			}
 		}
@@ -147,8 +152,8 @@
 		align-items: center;
 		// flex-wrap: wrap;
 		column-gap: toRem(20);
-		@media (max-width:$pcSmall){
-			  display: none;
+		@media (max-width: $pcSmall) {
+			display: none;
 		}
 	}
 
@@ -165,9 +170,8 @@
 		line-height: 1.5;
 		color: $tekst-zagolovok-ne-aktivnyy;
 		transition: color 0.3s;
-		&:hover{
+		&:hover {
 			color: $zagolovok;
-			
 		}
 	}
 
@@ -182,12 +186,10 @@
 }
 
 .top-header {
-
 	&__city-choice {
 	}
 }
 .city-choice {
-
 	&__text {
 		margin-bottom: 10px;
 	}
@@ -203,7 +205,9 @@
 		padding: 7px toRem(23);
 		background: $zelenysh;
 		width: 100%;
-		&:not(:last-child) {margin-bottom: toRem(5);}
+		&:not(:last-child) {
+			margin-bottom: toRem(5);
+		}
 		text-transform: uppercase;
 		font-size: 13px;
 		color: white;
@@ -211,55 +215,51 @@
 		&_none {
 			border: 1px solid $knopka-bordovaya;
 			background: initial;
-			
-			
+
 			color: var(--knopka-bordovaya);
 		}
 	}
 }
 
-
 .contacts-top-header {
-
 	&__link {
 		margin-left: toRem(5);
 		transition: color 0.3s;
-		@media (any-hover: hover){
-			&:hover{
-				color:$knopka-rozovaya;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $knopka-rozovaya;
 			}
 		}
-		&:last-child{
-			@media (max-width: $pcSmall){
+		&:last-child {
+			@media (max-width: $pcSmall) {
 				display: none;
-		 }
+			}
 		}
 	}
 }
 .header-center {
-
 	&__logo {
 		margin-right: 2rem;
 		img {
 			width: 100%;
 		}
-		@media (max-width:$tablet){
+		@media (max-width: $tablet) {
 			margin-right: 0;
 		}
-		@media (max-width: $pcSmall){
-			  margin-right: 1.25rem;
-			  width: 15.625rem;
+		@media (max-width: $pcSmall) {
+			margin-right: 1.25rem;
+			width: 15.625rem;
 		}
-		@media (max-width:$mobileSmall){
-			 width: toRem(195); 
+		@media (max-width: $mobileSmall) {
+			width: toRem(195);
 		}
 	}
 
 	&__form-wrapper {
-		@include adaptiveValue("width", 750, 520,0,1920,1280);
-		@media (max-width: $tablet){
-				display: none;
-		 }
+		@include adaptiveValue("width", 750, 520, 0, 1920, 1280);
+		@media (max-width: $tablet) {
+			display: none;
+		}
 	}
 
 	&__form {
@@ -270,8 +270,8 @@
 		.menu-open & {
 			border-radius: 16px;
 		}
-		@media (any-hover: hover){
-			&:hover{
+		@media (any-hover: hover) {
+			&:hover {
 				& .header-center__input {
 					border-radius: 16px 16px 0 0;
 				}
@@ -281,7 +281,7 @@
 				}
 			}
 		}
-		@media (max-width:$tablet){
+		@media (max-width: $tablet) {
 			width: 78.125%; /* 600/768 */
 		}
 	}
@@ -299,15 +299,15 @@
 			font-style: initial;
 			border-radius: 0;
 			width: 100%;
-			&:hover{
+			&:hover {
 				border-radius: initial;
 			}
-			&:focus-visible{
+			&:focus-visible {
 				outline: none;
 			}
 		}
-		@media (max-width: $tablet){
-			  padding: 0;
+		@media (max-width: $tablet) {
+			padding: 0;
 			#city & {
 				width: 100%;
 				padding-top: 0.625rem;
@@ -318,11 +318,11 @@
 		&_mobile {
 			background-color: transparent;
 			font-style: normal;
-			
+
 			color: white;
 			// font-size: toRem(14);
 			border-radius: 0;
-			
+
 			&::placeholder {
 				text-transform: uppercase;
 				color: white;
@@ -339,7 +339,7 @@
 		#city & {
 			right: 0;
 		}
-		@media (max-width:$mobile){
+		@media (max-width: $mobile) {
 			// left: 80%;
 		}
 		.menu-open & {
@@ -357,9 +357,9 @@
 		text-decoration: underline;
 		position: absolute;
 		left: 20px;
-		@media (max-width:$tablet){
-			display: none; 
-	  }
+		@media (max-width: $tablet) {
+			display: none;
+		}
 	}
 
 	&__actions {
@@ -367,12 +367,12 @@
 		display: flex;
 		align-items: flex-start;
 		column-gap: toRem(40);
-		@include adaptiveValue("column-gap", 40, 10,0,1920,1001);
-		@media (max-width:$tablet){
+		@include adaptiveValue("column-gap", 40, 10, 0, 1920, 1001);
+		@media (max-width: $tablet) {
 			margin-left: 0;
 		}
-		@media (max-width:$mobile){
-			//  display: none; 
+		@media (max-width: $mobile) {
+			//  display: none;
 		}
 	}
 }
@@ -380,13 +380,13 @@
 }
 .actions-header {
 	.user & {
-		@media (min-width:$tablet){
+		@media (min-width: $tablet) {
 			transform: translateY(20px);
 		}
-		@media (max-width:$tablet){
-			 &> *:not(:first-child) {
+		@media (max-width: $tablet) {
+			& > *:not(:first-child) {
 				display: none;
-			 } 
+			}
 		}
 	}
 	&__item {
@@ -404,22 +404,22 @@
 			color: $tekst-zagolovok-ne-aktivnyy;
 			line-height: 0.9375rem;
 			text-align: center;
-			@media (max-width:$tablet){
+			@media (max-width: $tablet) {
 				display: none;
 			}
 		}
 		&_search {
-			@media (min-width:$tablet){
-				 display: none; 
+			@media (min-width: $tablet) {
+				display: none;
 			}
 		}
 		&_vhod {
-			@media (max-width:$tablet){
+			@media (max-width: $tablet) {
 				display: none;
 			}
 		}
 		&_cart {
-			@media (max-width:$tablet){
+			@media (max-width: $tablet) {
 				.guest & {
 					display: none;
 				}
@@ -439,7 +439,6 @@
 	}
 }
 .menu {
-
 	&__icon {
 	}
 
@@ -450,13 +449,12 @@
 	}
 
 	&__item {
-
 		&_mobile {
-			@media (min-width:$tablet){
-				 display: none; 
+			@media (min-width: $tablet) {
+				display: none;
 			}
-			@media (max-width:$tablet){
-				&:first-child{
+			@media (max-width: $tablet) {
+				&:first-child {
 					padding-bottom: 0;
 				}
 			}
@@ -473,72 +471,69 @@
 		text-transform: uppercase;
 		color: #fff;
 		transition: color 0.3s;
-		@media (max-width: em(1280)){
+		@media (max-width: em(1280)) {
 			font-size: toRem(14);
 		}
-		@media (max-width: em(1150)){
+		@media (max-width: em(1150)) {
 			.footer & {
 				font-weight: 300;
 				font-size: 13px;
 				line-height: 169%;
 				text-transform: uppercase;
 				color: #fff;
-				@media (max-width:$mobile){
+				@media (max-width: $mobile) {
 					font-weight: 400;
 					font-size: 28px;
 					letter-spacing: 0.02em;
-					text-transform: uppercase; 
+					text-transform: uppercase;
 				}
-				@media (max-width:$mobileSmall){
-					font-size: 18px; 
+				@media (max-width: $mobileSmall) {
+					font-size: 18px;
 				}
 			}
 		}
-		@media (max-width:$tablet){
+		@media (max-width: $tablet) {
 			font-size: toRem(24);
-			@include adaptiveValue("font-size", 24, 16,0,1001.98,360);
+			@include adaptiveValue("font-size", 24, 16, 0, 1001.98, 360);
 			line-height: 1.3;
-			
 		}
 	}
 
 	&__item-title {
-		
 	}
 
 	&__item-arrow {
 		transition: transform 0.3s;
-		._open+& {
+		._open + & {
 			transform: rotate(90deg);
 		}
 		// transform: translateY(5px);
-		@media (min-width:$tablet){
-			 display: none; 
+		@media (min-width: $tablet) {
+			display: none;
 		}
 	}
 
-	
-
 	&__social {
-		@media (min-width:$tablet){
-			 display: none; 
+		@media (min-width: $tablet) {
+			display: none;
 		}
 		display: flex;
 		align-items: center;
-		@include adaptiveValue("column-gap", 40, 15,0,1001,360);
+		@include adaptiveValue("column-gap", 40, 15, 0, 1001, 360);
 		margin-top: toRem(20);
-		@media (max-width:$mobile){
-			 margin-top: toRem(10); 
+		@media (max-width: $mobile) {
+			margin-top: toRem(10);
 		}
 	}
 
 	&__social-item {
 		display: grid;
-		place-items: center;
-		@include adaptiveValue("width", 70, 40,0,1001,360);
-		@include adaptiveValue("height", 70, 40,0,1001,360);
+		align-items: center;
+		justify-content: center;
+		@include adaptiveValue("width", 70, 40, 0, 1001, 360);
+		@include adaptiveValue("height", 70, 40, 0, 1001, 360);
 		&_green {
-			background-color: #25D366;
+			background-color: #25d366;
 		}
 		&_white {
 			background-color: #fff;
@@ -547,10 +542,10 @@
 			background-color: #ff0000;
 		}
 		&_blue {
-			background-color: #0088CC;
+			background-color: #0088cc;
 		}
-		@media (max-width: em(1280)){
-			  display: flex;
+		@media (max-width: em(1280)) {
+			display: flex;
 		}
 	}
 
@@ -560,19 +555,20 @@
 .icon-menu {
 }
 .sublist-menu {
-
 	&__item {
 		// transition: color 0.3s;
-		&:hover{
+		&:hover {
 			.sublist-menu__link {
 				color: $zagolovok;
 				text-decoration: underline;
 				.footer & {
-					color: #ffffffa8
+					color: #ffffffa8;
 				}
 			}
 		}
-		&:not(:last-child) {margin-bottom: toRem(25);}
+		&:not(:last-child) {
+			margin-bottom: toRem(25);
+		}
 		.footer & {
 			margin-bottom: toRem(15);
 		}
@@ -591,7 +587,7 @@
 			line-height: 130%;
 			text-transform: initial;
 		}
-		@media (max-width:$tablet){
+		@media (max-width: $tablet) {
 			color: white;
 		}
 		&_bold {
@@ -603,20 +599,19 @@
 
 .dropmenu__wrapper::-webkit-scrollbar {
 	width: 5px; /* Ширина всего элемента навигации */
- }
- 
- .dropmenu__wrapper::-webkit-scrollbar-track {
+}
+
+.dropmenu__wrapper::-webkit-scrollbar-track {
 	background: #fff; /* Цвет дорожки */
- }
- 
- .dropmenu__wrapper::-webkit-scrollbar-thumb {
+}
+
+.dropmenu__wrapper::-webkit-scrollbar-thumb {
 	background-color: $knopka-rozovaya; /* Цвет бегунка */
 	border-radius: 20px; /* Округление бегунка */
 	border: 3px solid $knopka-rozovaya; /* Оформление границ бегунка */
- }
+}
 
 .header-center {
-
 	&__dropmenu {
 		position: absolute;
 		top: 100%;
@@ -625,14 +620,15 @@
 		z-index: 2;
 		padding: 20px 20px 20px 20px;
 		border-radius: 0 0 16px 16px;
-
 	}
 }
 .dropmenu {
 	opacity: 0;
 	visibility: hidden;
-	transition: opacity 0.3s, visibility 0.3s;
-	
+	transition:
+		opacity 0.3s,
+		visibility 0.3s;
+
 	&__wrapper {
 		max-height: 250px;
 		overflow-y: auto;
@@ -642,7 +638,9 @@
 	}
 
 	&__item {
-		&:not(:last-child) {margin-bottom: toRem(10);}
+		&:not(:last-child) {
+			margin-bottom: toRem(10);
+		}
 		// display: flex;
 		&_big {
 		}
@@ -664,14 +662,16 @@
 	}
 
 	&__text {
-		&:not(:last-child) {margin-bottom: toRem(5);}
+		&:not(:last-child) {
+			margin-bottom: toRem(5);
+		}
 	}
 
 	&__sex {
 		font-family: var(--font-family);
 		font-weight: 300;
 		font-size: 12px;
-		
+
 		&_w {
 			color: #9e0030;
 		}
