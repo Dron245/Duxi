@@ -44,6 +44,40 @@ window.addEventListener('DOMContentLoaded', () => {
 if (window.innerWidth < 768 ) {
 	tabs01.classList.remove('_tab-active')
 	tabs02.classList.add('_tab-active')
-	
 }
+
+// const mobileWidthMediaQuery = window.matchMedia('(max-width: 767.98px)')
+
+// function qwe () {
+// 	if (mobileWidthMediaQuery.matches) {
+// 		// btabs01.classList.remove('_tab-active')
+// 		btabs03.classList.remove('_tab-active')
+// 		btabs02.classList.add('_tab-active')
+// 		document.querySelector('.tabs02').hidden = false
+// 		document.querySelector('.tabs03').hidden = true
+// 	 } else {
+// 		// btabs01.classList.add('_tab-active')
+// 		// btabs02.classList.remove('_tab-active')
+// 		// btabs03.classList.remove('_tab-active')
+// 		// document.querySelector('.tabs02').hidden = true
+// 		// document.querySelector('.tabs03').hidden = true
+// 		// document.querySelector('.tabs01').hidden = false
+// 	 }
+// }
+
+//  mobileWidthMediaQuery.addEventListener('change', qwe)
+
+//  const mobileWidthMediaQuery = window.matchMedia('(max-width: 420px)')
+
+// function printLog(isMobileSize) {
+//   const size = isMobileSize ? 'уже или равен' : 'шире'
+
+//   console.log(`Размер экрана ${size} 420px`)
+// }
+
+// printLog(mobileWidthMediaQuery.matches)
+
+// mobileWidthMediaQuery.addEventListener('change', function (event) {
+//   printLog(event.matches)
+// })
 

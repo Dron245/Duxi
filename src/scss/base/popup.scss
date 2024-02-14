@@ -52,8 +52,11 @@ body::after {
 	flex: 1 1 auto;
 	width: 100%;
 	display: flex;
-	justify-content: center;
-	align-items: center;
+	justify-content: flex-start;
+	// align-items: center;
+	@media (min-width:$mobile){
+		 margin-top: toRem(100); 
+	}
 }
 .popup__content {
 	visibility: hidden;
@@ -65,7 +68,7 @@ body::after {
 	width: 100%;
 	@media (max-width:$mobile){
 		max-width: initial;
-		height: 100dvh;
+		// height: 100dvh;
 		#city & {
 			height: auto;
 		}
@@ -359,10 +362,10 @@ body::after {
 			}
 		}
 		@media (max-width:$mobile){
-			@include adaptiveValue("font-size", 50, 22,0,768,440); 
+			@include adaptiveValue("font-size", 35, 22,0,768,440); 
 	 	}
 		&:not(:last-child) {
-			@include adaptiveValue("margin-right", 60, 15,0,1920,768);
+			@include adaptiveValue("margin-right", 60, 25,0,1920,768);
 		}
 	}
 

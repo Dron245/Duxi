@@ -81,12 +81,12 @@
 }
 .swiper-pagination {
 }
-.swiper-video-prev {
+.swiper-video-prev.swiper-prev {
 	// left: 0%;
 	transform: translateY(-160%);
 }
 
-.swiper-video-next {
+.swiper-video-next.swiper-next {
 	// right: 0%;
 	transform: translateY(-160%);
 }

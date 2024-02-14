@@ -71,7 +71,7 @@ function initSliders() {
 					spaceBetween: 20,
 					//autoHeight: true,
 					speed: 800,
-					loop:true,
+					// loop:true,
 				
 					// Пагинация
 					
@@ -79,20 +79,11 @@ function initSliders() {
 						el: '.swiper-products-pagination',
 						clickable: true,
 					},
-					
-		
-					// Скроллбар
-					/*
-					scrollbar: {
-						el: '.swiper-scrollbar',
-						draggable: true,
-					},
-					*/
 		
 					// Кнопки "влево/вправо"
 					navigation: {
-						prevEl: '.swiper-prev',
-						nextEl: '.swiper-next',
+						prevEl: '.swiper-tabs-prev',
+						nextEl: '.swiper-tabs-next',
 					},
 					
 					// Брейкпоинты
@@ -136,23 +127,18 @@ function initSliders() {
 					// autoHeight: true,
 					speed: 800,
 					loop:true,
-				
-					
-		
+
 					// Пагинация
 					
 					pagination: {
 						el: '.swiper-video-pagination',
 						clickable: true,
 					},
-					
-		
-				
 		
 					// Кнопки "влево/вправо"
 					navigation: {
-						prevEl: '.swiper-prev',
-						nextEl: '.swiper-next',
+						prevEl: '.swiper-video-prev',
+						nextEl: '.swiper-video-next',
 					},
 					
 					// Брейкпоинты
