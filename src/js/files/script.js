@@ -37,6 +37,14 @@ window.addEventListener('DOMContentLoaded', () => {
 		if(targetElement.closest('.popup__img-pasword')){
 			targetElement.closest('.popup__img-pasword').classList.toggle('_pass-view')
 		}
+
+		//Открытие/скрытие строки поиска
+		if(targetElement.closest('.search-button')){
+			document.documentElement.classList.toggle('_show')
+		}
+		if(!targetElement.closest('.header-center__form')){
+			document.documentElement.classList.remove('_show')
+		}
 	}
 });
 

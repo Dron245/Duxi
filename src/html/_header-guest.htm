@@ -36,9 +36,12 @@
 			<button type="button" class="menu__icon icon-menu"><span></span></button>
 			<a href="#" class="header-center__logo"><img src="@img/header/logo.svg" alt="ДУХИ.РУ"></a>
 			<div class="header-center__form-wrapper">
-				<form action="#" method="get" class="header-center__form">
-					<button class="header-center__button"><img src="@img/header/search30x30.svg" alt="Поиск"></button>
-					<input autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Поиск товара" class="header-center__input input">
+				<form data-da=".actions-header__item_search-da, 1001.98" action="#" method="get" class="header-center__form">
+					<input id="search" autocomplete="off" type="search" name="form[]" data-error="Ошибка" placeholder="Поиск товара" class="header-center__input input">
+					<label for="search" class="header-center__button search-button">
+						<img class="img-search-small" src="@img/header/search30x30.svg" alt="Поиск">
+						<img class="img-search-big" src="@img/header/search-big.svg" alt="Поиск">
+					</label>
 					<a href="#" class="header-center__search-full">Расширенный поиск</a>
 					<div class="header-center__dropmenu dropmenu">
 						<div class="dropmenu__wrapper">
@@ -89,13 +92,27 @@
 				</form>
 			</div>
 			<div class="header-center__actions actions-header">
-				<button class="actions-header__item actions-header__item_search">
-					<img  src="@img/header/search-big.svg" alt="">
-				</button>
+				<div class="actions-header__item actions-header__item_search-da"></div>
 				<button data-popup="#popup-vhod" class="actions-header__item actions-header__item_vhod">
 					<img  src="@img/header/vhod.svg" alt="Войти">
 					<span>Войти</span>
 				</button>
+				<a href="#" class="actions-header__item user-header">
+					<img src="@img/header/user.svg" alt="пользователь">
+					<div class="actions-header__data-user">
+						<span id="name-user" class="actions-header__user">Фамилия Имя</span>
+						<span id="discount" class="actions-header__user">Скидка 5%</span>
+						<span id="bonuses" class="actions-header__user">Бонусов 105</span>
+					</div>
+				</a>
+				<a href="#" class="actions-header__item user-header">
+					<img src="@img/header/history-zakaz.svg" alt="История">
+					<span>История заказов</span>
+				</a>
+				<a href="#" class="actions-header__item user-header">
+					<img src="@img/header/izbrannoe.svg" alt="Избранное">
+					<span>Избранное</span>
+				</a>
 				<a href="#" class="actions-header__item actions-header__item_cart">
 					<img src="@img/header/cart.svg" alt="Корзина">
 					<span>Корзина</span>
