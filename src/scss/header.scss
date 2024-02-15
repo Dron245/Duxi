@@ -60,6 +60,7 @@
 						@include adaptiveValue("margin-right", 95, 15,0,479.98,320);
 					}
 				}
+				.menu-open & {margin-right: 0;}
 			}
 		}
 	}
@@ -308,6 +309,9 @@
 			width: 320px;
 			overflow: hidden;
 			z-index: 5;
+			.menu-open & {
+				z-index: 1;
+			}
 			// transition: width 0.3s;
 			// padding-right: 45px;
 			position: absolute;
