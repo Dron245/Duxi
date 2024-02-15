@@ -306,6 +306,7 @@
 		@media (max-width: $tablet) {
 			// width: 78.125%; /* 600/768 */
 			width: 320px;
+			overflow: hidden;
 			z-index: 5;
 			// transition: width 0.3s;
 			// padding-right: 45px;
