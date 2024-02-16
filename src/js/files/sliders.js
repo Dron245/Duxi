@@ -208,14 +208,14 @@ window.addEventListener("load", function (e) {
 	initSliders();
 
 	//Слайдер "скидки и акции на главной"
-
-	const resizableSwiper = (breakpoint, swiperClass, swiperSettings, callback) => {
+	if(document.querySelector('.page__products')){
+		const resizableSwiper = (breakpoint, swiperClass, swiperSettings, callback) => {
 		let swiper;
 	
 		breakpoint = window.matchMedia(breakpoint);
 	
 		const enableSwiper = function(className, settings) {
-		  swiper = new Swiper(className, settings);
+		swiper = new Swiper(className, settings);
 	
 		  if (callback) {
 			 callback(swiper);
@@ -265,7 +265,9 @@ window.addEventListener("load", function (e) {
 			},
 		},
 		// someFunc
-	 );
+	  );
+	}
+	
 	//Запуск инициализации скролла на базе слайдера (по классу swiper_scroll)
 	//initSlidersScroll();
 });

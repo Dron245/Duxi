@@ -50,8 +50,10 @@ window.addEventListener('DOMContentLoaded', () => {
 
 //Работа с табами на главной странице под банером
 if (window.innerWidth < 768 ) {
-	tabs01.classList.remove('_tab-active')
-	tabs02.classList.add('_tab-active')
+	const tabs01 = document.querySelector('#tabs01');
+	const tabs02 = document.querySelector('#tabs02');
+	tabs01 ? tabs01.classList.remove('_tab-active') : null;
+	tabs02 ? tabs02.classList.add('_tab-active') : null;
 }
 
 // const mobileWidthMediaQuery = window.matchMedia('(max-width: 767.98px)')

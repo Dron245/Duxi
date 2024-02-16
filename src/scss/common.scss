@@ -1,11 +1,13 @@
 // Заголовки, общие БЄМ блоки и прочее...
+//Заголовки в блоках
 h3[class*="__title"] {
 	margin-bottom: 20px;
 	position: relative;
 	font-weight: 300;
+	text-transform: uppercase;
 	@include adaptiveValue("font-size", 24, 18, 0, 1920, 768);
 	line-height: 118%; /* 59/50 */
-	color: $tekst-zagolovok-ne-aktivnyy;
+	color: $zagolovok;
 	@media (max-width: $mobile) {
 		@include adaptiveValue("font-size", 50, 22, 0, 768, 440);
 	}
@@ -16,7 +18,7 @@ h3[class*="__title"] {
 		margin-bottom: toRem(20);
 	}
 }
-
+//кнопка "показать всё"
 .center-button {
 	// margin-left: auto;
 	margin: auto;

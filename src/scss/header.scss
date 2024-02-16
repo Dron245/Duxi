@@ -762,3 +762,19 @@
 }
 
 .guest .user-header {display: none;}
+.qwe {
+	@media (min-width:$mobile){
+		//  display: none; 
+	}
+}
+.brands-tabs__navigation {
+	@media (max-width:$mobile){
+		//  display: none; 
+	}
+}
+
+.asd {
+	@media (max-width:$mobile){
+		//  display: none; 
+	}
+}
