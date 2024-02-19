@@ -69,6 +69,15 @@
 			 flex-basis: initial;
 			 padding: toRem(10);
 		}
+		@media (any-hover: hover){
+			&:hover{
+				transition: transform 0.3s;
+				transform: translateY(-10px);
+				& .discounts__title {
+					color: $knopka-rozovaya;
+				}
+			}
+		}
 	}
 
 	&__item {
@@ -79,14 +88,6 @@
 		@media (max-width:$tablet){
 			flex-direction: row;
 			column-gap: toRem(20);
-		}
-		@media (any-hover: hover){
-			&:hover{
-				transform: translateY(-10px);
-				& .discounts__title {
-					color: $knopka-rozovaya;
-				}
-			}
 		}
 	}
 

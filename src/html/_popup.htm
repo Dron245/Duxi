@@ -47,7 +47,7 @@
 						Если сообщение не придет, посмотрите раздел уведомления в приложении.
 					</p>
 					<form method="post" action="#" class="popup__entry">
-						<label for="" class="popup__title-entry-tel">введите код из push-уведомления</label>
+						<p class="popup__title-entry-tel">введите код из push-уведомления</p>
 						<div class="popup__input-wrapper-tel">
 							<input maxlength="1" inputmode="numeric" required id="pincode1" autocomplete="off" type="text" class="popup__entry-vhod">
 							<input maxlength="1" inputmode="numeric" required id="pincode2" autocomplete="off" type="text" class="popup__entry-vhod">
@@ -96,13 +96,13 @@
 		<div class="popup__content">
 			<button data-close type="button" class="popup__close"><img src="@img/popup/close.svg" alt=""></button>
 			<div class="popup__body">
-				<h4 class="popup__title">
-					<span>Регистрация</span>
+				<div class="popup__reg-top">
+					<h4 class="popup__title">Регистрация</h4>
 					<div class="popup__actions">
 						<img src="@img/popup/Star.svg" alt="">
 						<span>Получи скидку 1% сразу!</span>
 					</div>
-				</h4>
+				</div>
 				<form method="post" action="#" class="popup__form">
 					<div class="popup__form-item">
 						<!-- <span class="popup_reg-error">уже зарегистрирован</span> -->
@@ -204,7 +204,7 @@
 						</div>
 					</div>
 					<div class="popup__form-item">
-						<label class="popup__label">текст обращения</label>
+						<span class="popup__label">текст обращения</span>
 						<textarea class="input" maxlength="1200" name="" rows="4" id="comment"></textarea>
 						<p class="popup__length">
 							<span class="popup__star">*</span> Отзыв содержит: <span id="quantity" class="popup__quantity">9</span> символов <span class="popup__correction">(максимальное количество 1200 символов)</span>

@@ -1,13 +1,12 @@
 .header {
 	position: relative;
 	background: #fff5f6;
-	transition:
+	.menu-open & {
+		transition:
 		background-color 0.3s,
 		opacity 0.3s;
-	// .menu-open & {
-	// 	background-color: #020001;
-	// 	opacity: 0.58;
-	// }
+	}
+	
 
 	&__drop {
 		background: #020001;
@@ -47,20 +46,22 @@
 		@media (max-width: $tablet) {
 			justify-content: space-between;
 			& .menu__icon {
-				@include adaptiveValue("margin-right", 250, 50,0,1001,480);
-				@media (max-width:$mobileSmall){
-					@include adaptiveValue("margin-right", 95, 15,0,479.98,320);
+				@include adaptiveValue("margin-right", 250, 50, 0, 1001, 480);
+				@media (max-width: $mobileSmall) {
+					@include adaptiveValue("margin-right", 95, 15, 0, 479.98, 320);
 				}
 				.user & {
-					@include adaptiveValue("margin-right", 150, 50,0,1001,768);
-					@media (max-width:$mobile){
-						 @include adaptiveValue("margin-right", 170, 20,0,767.99,480); 
+					@include adaptiveValue("margin-right", 150, 50, 0, 1001, 768);
+					@media (max-width: $mobile) {
+						@include adaptiveValue("margin-right", 170, 20, 0, 767.99, 480);
 					}
-					@media (max-width:$mobileSmall){
-						@include adaptiveValue("margin-right", 95, 15,0,479.98,320);
+					@media (max-width: $mobileSmall) {
+						@include adaptiveValue("margin-right", 95, 15, 0, 479.98, 320);
 					}
 				}
-				.menu-open & {margin-right: 0;}
+				.menu-open & {
+					margin-right: 0;
+				}
 			}
 		}
 	}
@@ -103,11 +104,7 @@
 		position: relative;
 		cursor: pointer;
 		&:hover {
-			// & .top-header__city-choice {
-			// 	opacity: 1;
-			// 	visibility: visible;
-			// 	top:150%;
-			// }
+		
 			& .top-header__city-name {
 				color: $knopka-rozovaya;
 			}
@@ -120,9 +117,7 @@
 		}
 		position: absolute;
 		top: 160%;
-		// top: 200%;
-		// opacity: 0;
-		// visibility: hidden;
+		
 		left: -50%;
 		border: 1px solid #f4e1e6;
 		box-shadow:
@@ -137,7 +132,7 @@
 		line-height: 15px;
 		min-width: toRem(195);
 		z-index: 2;
-		transition: all 0.3s;
+		// transition: all 0.3s;
 		@media (max-width: em(1630)) {
 			left: -0%;
 		}
@@ -186,8 +181,8 @@
 		font-weight: 400;
 		line-height: 1.5;
 		color: $tekst-zagolovok-ne-aktivnyy;
-		transition: color 0.3s;
 		&:hover {
+			transition: color 0.3s;
 			color: $zagolovok;
 		}
 	}
@@ -233,7 +228,7 @@
 			border: 1px solid $knopka-bordovaya;
 			background: initial;
 
-			color: var(--knopka-bordovaya);
+			color: $knopka-bordovaya;
 		}
 	}
 }
@@ -241,9 +236,9 @@
 .contacts-top-header {
 	&__link {
 		margin-left: toRem(5);
-		transition: color 0.3s;
 		@media (any-hover: hover) {
 			&:hover {
+				transition: color 0.3s;
 				color: $knopka-rozovaya;
 			}
 		}
@@ -260,7 +255,7 @@
 		img {
 			width: 100%;
 		}
-		
+
 		@media (max-width: $pcSmall) {
 			margin-right: 1.25rem;
 			width: 15.625rem;
@@ -277,7 +272,9 @@
 	}
 
 	&__form-wrapper {
+		position: relative;
 		@include adaptiveValue("width", 750, 520, 0, 1920, 1280);
+		
 		@media (max-width: $tablet) {
 			display: none;
 		}
@@ -286,7 +283,7 @@
 	&__form {
 		// outline: 1px solid red;
 		position: relative;
-		overflow: hidden;
+		// overflow: hidden;
 		#city & {
 			width: 100%;
 		}
@@ -299,33 +296,28 @@
 					border-radius: 16px 16px 0 0;
 				}
 				& .dropmenu {
+					transition: opacity 0.3s;
 					opacity: 1;
 					visibility: visible;
 				}
 			}
 		}
 		@media (max-width: $tablet) {
-			// width: 78.125%; /* 600/768 */
 			width: 320px;
 			overflow: hidden;
 			z-index: 5;
 			.menu-open & {
 				z-index: 1;
 			}
-			// transition: width 0.3s;
-			// padding-right: 45px;
+		
 			position: absolute;
 			right: 0;
 			._show & {
-				// width: 300px;
-				// position: absolute;
-				// left: 0;
+				
 				right: 0;
-				// float: right;
-				// padding-right: 0;
+				
 			}
 		}
-
 	}
 
 	&__input {
@@ -333,14 +325,19 @@
 		border-radius: 1rem;
 		font-style: italic;
 		color: $tekst-zagolovok-ne-aktivnyy;
+		background-color: #fffdfe;
+		.brands & {
+			background: #fef3f6;
+		}
 		&::placeholder {
 			color: $tekst-zagolovok-ne-aktivnyy;
 		}
 		#city & {
 			text-transform: uppercase;
 			font-style: initial;
-			border-radius: 0;
+			border-radius: 16px;
 			width: 100%;
+			background-color: #fef3f6;
 			&:hover {
 				border-radius: initial;
 			}
@@ -358,8 +355,8 @@
 				float: right;
 				padding-right: 45px;
 				// height: 30px;
- 				transition: all .3s ease-in-out;
-				._show &{
+				transition: all 0.3s ease-in-out;
+				._show & {
 					width: 100%;
 					opacity: 1;
 				}
@@ -393,7 +390,7 @@
 		top: 50%;
 		transform: translateY(-50%);
 		#city & {
-			right: 0;
+			right: 2%;
 		}
 		@media (max-width: $tablet) {
 			right: 0;
@@ -404,12 +401,12 @@
 			right: 0;
 			transform: translate(0);
 		}
-		@media (min-width:$tablet){
-			 & .img-search-big {
+		@media (min-width: $tablet) {
+			& .img-search45x45 {
 				display: none;
-			 } 
+			}
 		}
-		@media (max-width:$tablet){
+		@media (max-width: $tablet) {
 			& .img-search-small {
 				display: none;
 			}
@@ -494,7 +491,7 @@
 		}
 		&_search-da {
 			position: relative;
-			@media (max-width:$tablet){
+			@media (max-width: $tablet) {
 				width: 45px;
 				height: 40px;
 			}
@@ -512,15 +509,7 @@
 	}
 }
 .menu {
-	&__icon {
-	}
-
-	&__body {
-	}
-
-	&__list {
-	}
-
+	
 	&__item {
 		&_mobile {
 			@media (min-width: $tablet) {
@@ -543,8 +532,7 @@
 		letter-spacing: 0.02em;
 		text-transform: uppercase;
 		color: #fff;
-		transition: color 0.3s;
-		@media (max-width: em(1280)) {
+		@media (max-width: em(1300)) {
 			font-size: toRem(14);
 		}
 		@media (max-width: em(1150)) {
@@ -561,7 +549,7 @@
 					text-transform: uppercase;
 				}
 				@media (max-width: $mobileSmall) {
-					font-size: 18px;
+					font-size: 14px;
 				}
 			}
 		}
@@ -586,42 +574,6 @@
 		}
 	}
 
-	&__social {
-		@media (min-width: $tablet) {
-			display: none;
-		}
-		display: flex;
-		align-items: center;
-		@include adaptiveValue("column-gap", 40, 15, 0, 1001, 360);
-		margin-top: toRem(20);
-		@media (max-width: $mobile) {
-			margin-top: toRem(10);
-		}
-	}
-
-	&__social-item {
-		display: grid;
-		align-items: center;
-		justify-content: center;
-		@include adaptiveValue("width", 70, 40, 0, 1001, 360);
-		@include adaptiveValue("height", 70, 40, 0, 1001, 360);
-		&_green {
-			background-color: #25d366;
-		}
-		&_white {
-			background-color: #fff;
-		}
-		&_red {
-			background-color: #ff0000;
-		}
-		&_blue {
-			background-color: #0088cc;
-		}
-		@media (max-width: em(1280)) {
-			display: flex;
-		}
-	}
-
 	&__social-itemlink {
 	}
 }
@@ -640,7 +592,10 @@
 			}
 		}
 		&:not(:last-child) {
-			margin-bottom: toRem(25);
+			margin-bottom: toRem(20);
+			.menu-open & {
+				margin-bottom: toRem(30);
+			}
 		}
 		.footer & {
 			margin-bottom: toRem(15);
@@ -668,7 +623,7 @@
 	}
 }
 
-/*Меню поиска */
+/*Меню поиска  скролл*/
 
 .dropmenu__wrapper::-webkit-scrollbar {
 	width: 5px; /* Ширина всего элемента навигации */
@@ -698,9 +653,9 @@
 .dropmenu {
 	opacity: 0;
 	visibility: hidden;
-	transition:
-		opacity 0.3s,
-		visibility 0.3s;
+	// transition:
+	// 	opacity 3.3s,
+	// 	visibility 3.3s;
 
 	&__wrapper {
 		max-height: 250px;
@@ -756,25 +711,11 @@
 			color: #474747;
 		}
 	}
-	@media (max-width:$tablet){
+	@media (max-width: $tablet) {
 		display: none;
 	}
 }
 
-.guest .user-header {display: none;}
-.qwe {
-	@media (min-width:$mobile){
-		//  display: none; 
-	}
-}
-.brands-tabs__navigation {
-	@media (max-width:$mobile){
-		//  display: none; 
-	}
-}
-
-.asd {
-	@media (max-width:$mobile){
-		//  display: none; 
-	}
+.guest .user-header {
+	display: none;
 }

@@ -24,7 +24,10 @@
 		justify-content: center;
 		border-radius: 100%;
 		background-color: rgba(191, 92, 122, 0.8);
-		@media (max-width: $pcSmall) {
+		@media (max-width: em(1820)) {
+			left: -4%;
+		}
+		@media (max-width: em(1720)){
 			display: none;
 		}
 	}

@@ -22,11 +22,11 @@
 	&__slide {
 		position: relative;
 		img {
-			border-radius: 1rem;
+			// border-radius: 1rem;
 			aspect-ratio: 1540 / 468;
-			@media (max-width:$tablet){
-				border-radius: 0;
-			}
+			// @media (max-width:$tablet){
+			// 	border-radius: 0;
+			// }
 			@media (max-width:$mobile){
 				 aspect-ratio: 768 / 460; 
 			}
@@ -62,10 +62,10 @@
 		background: rgb(255, 255, 255);
 		padding: toRem(10) toRem(30);
 		text-transform: uppercase;
-		transition: all 0.3s;
 		&:hover{
+			transition: all 0.3s;
 			color: white;
-			background-color: #b40d21;
+			background-color: $knopka-rozovaya;
 		}
 		@media (max-width:$tablet){
 			// width: 85%;

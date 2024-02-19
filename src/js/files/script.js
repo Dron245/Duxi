@@ -17,10 +17,10 @@ window.addEventListener('DOMContentLoaded', () => {
 		}
 		// закрытие меню бургер вне клика по меню
 		if(!targetElement.closest('.menu__icon') && !targetElement.closest('.menu__body' )){
-			// if(document.documentElement.classList.contains('menu-open' && document.documentElement.classList.contains('lock'))){
-			document.documentElement.classList.remove('menu-open')
-			document.documentElement.classList.remove('lock')
-			// }
+			document.querySelector('.menu-open') ? document.documentElement.classList.remove('lock') : null
+			document.querySelector('.menu-open') ? document.documentElement.classList.remove('menu-open') : null
+			// console.log(123);
+			// document.documentElement.classList.remove('lock')
 		}
 		
 		// Закрытие/открытие окна "выбор города" при клике на кнопку "Да, всё верно"

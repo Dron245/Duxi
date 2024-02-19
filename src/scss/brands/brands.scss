@@ -1,6 +1,7 @@
 .page {
 
 	&__brands {
+		background-color: $fon;
 	}
 }
 .brands {
@@ -24,66 +25,41 @@
 	}
 
 	&__content {
-	}
-}
-.breadcrumbs {
-	margin-top:10px;
-	margin-bottom:20px;
-
-	&__list {
-		display: flex;
-		flex-wrap: nowrap;
-	}
-
-	&__item {
-		
-	}
-
-	&__link {
-		font-style: italic;
-		font-weight: 300;
-		font-size: 12px;
-		color: $zagolovok;
-		
-		&:not(:last-child) {
-			&::after{
-				content:'/';
-				padding-left: 3px;
-				padding-right: 3px;
-			}
-		}
-		&:first-child{
-			&::after{
-				content:'/';
-				padding-left: 3px;
-				padding-right: 3px;
-			}
+		input {
+			border-radius: 12px;
 		}
 	}
-
-	&__current {
-		font-style: italic;
-		font-weight: 500;
-		font-size: 12px;
-		color: $zagolovok;
-	}
 }
+
 .brands-tabs {
-		display: flex;
-		align-items: center;
-		column-gap: toRem(20);
-		flex-wrap: wrap;
-		form {
-			width: 758px;
-			@media (max-width:$mobile){
-				 width: 100%; 
+	display: flex;
+	align-items: center;
+	column-gap: toRem(20);
+	flex-wrap: wrap;
+	// background: rgb(253, 250, 251);
+	form {
+		width: 758px;
+		@media (max-width:$tablet){
+			width: 70%; 
+			position: relative;
+			& .header-center__button {
+				right: 3%;
+				& img {
+					display: initial;
+				}
 			}
 		}
+		@media (max-width:$mobile){
+			 width: 100%; 
+		}
+	}
 	&__navigation {
-		
+		@media (max-width:$mobile){
+			 display: none; 
+		}
 	}
 
-	&__title {
+	&__button {
 		&._tab-active svg {
 			fill: $knopka-bordovaya;
 		}
@@ -91,23 +67,82 @@
 			margin-right: 10px;
 		}
 	}
+	&__title {
+		.brands & {
+			font-size: toRem(36);
+			@media (max-width:$mobile){
+			@include adaptiveValue("font-size", 50, 22,0,768,320);
+		}
+		}
+	}
 
 	&__content {
 		flex: 1 0 100%;
+		margin-top: toRem(20);
 	}
 
 	&__body {
 		margin-top: toRem(20);
+		margin-bottom: toRem(40);
 	}
 
 	&__cols-wrapper {
+		// outline: 1px solid blue;
 		display:flex;
+		justify-content: flex-start;
+		// justify-content: space-between;
+		align-items: flex-start;
+		column-gap: 30px;
+		flex-wrap: wrap;
+		@media (max-width:$pcSmall){
+			column-gap: 20px;
+		}
+		@media (max-width:$tablet){
+			column-gap: 30px;
+			justify-content: space-around;
+		}
+		&_tile {
+			display: block;
+			&:not(:first-child) {
+				margin-top: 40px;
+			}
+		}
 	}
 
 	&__col {
-		flex: 0 0 12.5%;
+		// outline: 5px solid red;
+		flex: 0 0 10.79%; /* 160/1490 */
+		margin-bottom: toRem(40);
+		@media (max-width:$pcSmall){
+			flex: 0 0 15.33%; /* 160/1060 */
+		}
+		@media (max-width:$tablet){
+			 flex: 0 0 31.073446%; /* 275/885 */
+		}
+		@media (max-width:$mobile){
+			 flex: 0 0 100%;
+			 margin-bottom: toRem(100);
+			 &:has(:not(.brands-tabs__title)) {
+				margin-bottom: 0;
+				& .brands-tabs__item:last-child {
+					margin-bottom: toRem(20);
+				}
+			 }
+			 &:not(:first-child) {
+				&:has(.brands-tabs__title) {
+					margin-top: toRem(100);
+					@media (max-width:$mobileSmall){
+						 margin-top: toRem(40); 
+					}
+				 }
+			 }
+		}
+		@media (max-width:$mobile){
+			
+	  }
 		&_tile {
-			flex: 0 0 16.667%;
+			width: 100%;
+			margin-bottom: 0;
 		}
 	}
 	&__wrapper-img {
@@ -116,20 +151,70 @@
 				display: none;
 			} 
 	  }
+	  @media (max-width:$mobile){
+		width: 16.5%;
+	  }
+	  img {
+			width: 100%;
+		}
 	}
 
 	&__list {
+		
 		&_tile {
+			// outline: 1px solid blue;
 			display: flex;
+			flex-wrap: wrap;
+			gap: toRem(20);
 		}
 	}
 
 	&__item {
+		@media (min-width:$mobile){
+			  
+		}
+		&:not(:last-child) {
+			margin-bottom: toRem(12);
+		}
+		&_tile:not(:last-child) {
+			margin-bottom: toRem(0);
+			
+		}
+		@media (max-width:$mobile){
+			&:not(:last-child) {
+				margin-bottom: toRem(20);
+			}
+			 display: flex;
+			 align-items: center; 
+			 @include adaptiveValue("column-gap", 34, 25,0,768,320);
+		}
 
+		&_tile {
+			flex: 0 0 240px;
+			&:last-child{
+				margin-bottom: toRem(40);
+			}
+			@media (max-width:$pcSmall){
+				// flex: 0 0 297px;
+				flex: 0 0 250px;
+				// outline: 1px solid red;
+			}
+			@media (max-width:$tablet){
+				flex: 0 0 207px;
+			}
+		}
 	}
 
 	&__link {
-
+		width: 100%;
+		
+		line-height: 114.285714%; /* 16/14 */
+		@media (max-width:$tablet){
+			font-size: toRem(20);
+		}
+		@media (max-width:$mobile){
+			 @include adaptiveValue("font-size", 28, 14,0,768,320); 
+		}
 	}
 }
 .tile-brands {
