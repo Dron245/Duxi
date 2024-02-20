@@ -32,10 +32,10 @@ h3[class*="__title"] {
 	background: #ffffff;
 	padding: toRem(28) toRem(20) toRem(20) toRem(20);
 	@media (max-width: $tablet) {
-		padding: toRem(20) toRem(15) toRem(20) toRem(15);
+		padding: toRem(30) toRem(15) toRem(20) toRem(15);
 	}
 	@media (max-width: $mobile) {
-		padding: toRem(15) toRem(10) toRem(20) toRem(10);
+		padding: toRem(45) toRem(10) toRem(20) toRem(10);
 	}
 	transition: box-shadow 0.3s;
 	overflow: hidden;
@@ -143,6 +143,18 @@ h3[class*="__title"] {
 	}
 
 	&__action {
+		@include adaptiveValue("width", 30, 22,0,1920,1001);
+		@include adaptiveValue("height", 30, 22,0,1920,1001);
+		@media (max-width:$tablet){
+			width: 40px;
+			height: 40px;
+		}
+		@media (max-width:$mobile){
+			 @include adaptiveValue("width", 50, 18,0,768,320); 
+		}
+		img {
+			width: 100%;
+		}
 	}
 
 	&__view {
@@ -268,6 +280,7 @@ h3[class*="__title"] {
 		transition:color 0.3s, background-color 0.3s;
 		background-color: white;
 		color: $knopka-rozovaya;
+		outline:1px solid $knopka-rozovaya;
 	}
 }
 

@@ -88,7 +88,7 @@
 			align-items: center;
 			flex-wrap: wrap;
 			@include adaptiveValue("gap", 40, 15, 0, 1920, 1280);
-			@media (max-width: $mobile) {
+			@media (max-width: em(865)) {
 				margin: 0;
 				display: inline-grid;
 				grid-template-columns: 1fr 1fr;

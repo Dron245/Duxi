@@ -309,13 +309,10 @@
 			.menu-open & {
 				z-index: 1;
 			}
-		
 			position: absolute;
 			right: 0;
 			._show & {
-				
 				right: 0;
-				
 			}
 		}
 	}
@@ -352,6 +349,7 @@
 			.header-center__actions & {
 				width: 0px;
 				opacity: 0;
+				border:1px solid $knopka-rozovaya;
 				float: right;
 				padding-right: 45px;
 				// height: 30px;
@@ -366,6 +364,14 @@
 				padding-top: 0.625rem;
 				padding-bottom: 0.625rem;
 				padding-left: 0.625rem;
+			}
+		}
+		@media (max-width:$tablet){
+			._show &+.header-center__button .img-search45x45 {
+				display: none;
+			}
+			._show &+.header-center__button .img-search-small {
+				display: block;
 			}
 		}
 		&_mobile {
@@ -394,6 +400,9 @@
 		}
 		@media (max-width: $tablet) {
 			right: 0;
+			._show & {
+				right: 3%;
+			}
 		}
 		.menu-open & {
 			position: relative;
@@ -584,6 +593,7 @@
 		// transition: color 0.3s;
 		&:hover {
 			.sublist-menu__link {
+				transition: color 0.3s;
 				color: $zagolovok;
 				text-decoration: underline;
 				.footer & {
@@ -607,7 +617,6 @@
 		letter-spacing: 0.02em;
 		text-transform: uppercase;
 		color: $knopka-rozovaya;
-		transition: color 0.3s;
 		.footer & {
 			color: white;
 			font-weight: 300;

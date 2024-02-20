@@ -34,23 +34,23 @@
 		&:before {
 			content: "";
 			align-self: flex-start;
-			width: 20px;
-			height: 20px;
-			flex: 0 0 20px;
+			width: 12px;
+			height: 12px;
+			flex: 0 0 12px;
 			border-radius: 50%;
-			border: 1px solid #a7a9ac;
+			border: 1px solid $knopka-rozovaya;
 		}
 		&:after {
 			content: "";
 			transition: all 0.3s ease 0s;
 			transform: scale(0);
-			width: 10px;
-			height: 10px;
+			width: 6px;
+			height: 6px;
 			border-radius: 50%;
-			background-color: #77243a;
+			background-color: $knopka-rozovaya;
 			position: absolute;
-			left: 5px;
-			top: 5px;
+			left: 3.2px;
+			top: 3px;
 		}
 	}
 	// .options__text

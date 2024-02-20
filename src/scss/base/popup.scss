@@ -106,6 +106,14 @@ body::after {
 		position: absolute;
 		right: 10px;
 		top: 10px;
+		width: 20px;
+		height: 20px;
+		@media (max-width:$mobile){
+			 @include adaptiveValue("width", 50, 18,0,768,320); 
+		}
+		img {
+			width: 100%;
+		}
 	}
 
 	&__body {
