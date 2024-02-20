@@ -90,4 +90,3 @@ if (window.innerWidth < 768 ) {
 // mobileWidthMediaQuery.addEventListener('change', function (event) {
 //   printLog(event.matches)
 // })
-

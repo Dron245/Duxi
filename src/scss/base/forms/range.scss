@@ -24,6 +24,8 @@
 	height: 100%;
 	position: relative;
 	z-index: 1;
+	height: 3px;
+	// border-radius: 16px;
 }
 /* Wrapper for all connect elements.
  */
@@ -83,10 +85,12 @@
 	height: 18px;
 }
 .noUi-horizontal .noUi-handle {
-	width: 34px;
-	height: 28px;
+	width: 18px;
+	height: 18px;
+	border-radius: 50%;
+	background-color: $knopka-rozovaya;
 	right: -17px;
-	top: -6px;
+	top: -7px;
 }
 .noUi-vertical {
 	width: 18px;
@@ -107,14 +111,16 @@
 .noUi-target {
 	background: #fafafa;
 	border-radius: 4px;
-	border: 1px solid #d3d3d3;
-	box-shadow: inset 0 1px 1px #f0f0f0, 0 3px 6px -5px #bbb;
+	// border: 1px solid #d3d3d3;
+	// box-shadow: inset 0 1px 1px #f0f0f0, 0 3px 6px -5px #bbb;
 }
 .noUi-connects {
-	border-radius: 3px;
+	border-radius: 8px;
+	background-color: #FFEDF0;
+	// background-color: #211ec0;
 }
 .noUi-connect {
-	background: #3fb8af;
+	background: $knopka-rozovaya;
 }
 /* Handles and cursors;
  */
@@ -125,31 +131,31 @@
 	cursor: ns-resize;
 }
 .noUi-handle {
-	border: 1px solid #d9d9d9;
-	border-radius: 3px;
-	background: #fff;
+	// border: 1px solid #d9d9d9;
+	// border-radius: 3px;
+	// background: #fff;
 	cursor: default;
-	box-shadow: inset 0 0 1px #fff, inset 0 1px 7px #ebebeb, 0 3px 6px -3px #bbb;
+	// box-shadow: inset 0 0 1px #fff, inset 0 1px 7px #ebebeb, 0 3px 6px -3px #bbb;
 }
 .noUi-active {
-	box-shadow: inset 0 0 1px #fff, inset 0 1px 7px #ddd, 0 3px 6px -3px #bbb;
+	// box-shadow: inset 0 0 1px #fff, inset 0 1px 7px #ddd, 0 3px 6px -3px #bbb;
 }
 /* Handle stripes;
  */
-.noUi-handle:before,
-.noUi-handle:after {
-	content: "";
-	display: block;
-	position: absolute;
-	height: 14px;
-	width: 1px;
-	background: #e8e7e6;
-	left: 14px;
-	top: 6px;
-}
-.noUi-handle:after {
-	left: 17px;
-}
+// .noUi-handle:before,
+// .noUi-handle:after {
+// 	content: "";
+// 	display: block;
+// 	position: absolute;
+// 	height: 14px;
+// 	width: 1px;
+// 	background: #e8e7e6;
+// 	left: 14px;
+// 	top: 6px;
+// }
+// .noUi-handle:after {
+// 	left: 17px;
+// }
 .noUi-vertical .noUi-handle:before,
 .noUi-vertical .noUi-handle:after {
 	width: 14px;

@@ -429,6 +429,7 @@
 		text-decoration: underline;
 		position: absolute;
 		left: 20px;
+		font-weight: 300;
 		@media (max-width: $tablet) {
 			display: none;
 		}
