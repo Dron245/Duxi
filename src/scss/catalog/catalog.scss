@@ -44,6 +44,14 @@
 	}
 
 	&__item {
+		border-top: 1px solid #EEDCE1;
+		border-bottom: 1px solid #EEDCE1;
+		&:first-child{
+			border-top: none;
+		}
+		&:last-child{
+			border-bottom: none;
+		}
 	}
 }
 .filter {
@@ -55,14 +63,7 @@
 		column-gap: toRem(15);
 		margin-bottom: 10px;
 		cursor: pointer;
-		border-top: 1px solid #EEDCE1;
-		border-bottom: 1px solid #EEDCE1;
-		&:first-child{
-			border-top: none;
-		}
-		&:last-child{
-			border-bottom: none;
-		}
+		
 	}
 
 	&__arrow {
@@ -90,26 +91,46 @@
 	&__body {
 		padding-top: 10px;
 		padding-bottom: 10px;
-
+		&.range {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			flex-wrap: wrap;
+		}
 	}
 
 	&__reset {
 		margin-left: auto;
+		color: $zagolovok;
+		font-size: toRem(12);
+		margin-right: 40;
 	}
 
 	&__list {
 	}
 
 	&__list-item {
+		&:not(:last-child) {margin-bottom: toRem(14);}
 	}
 
 	&__more {
+		margin-top: 14px;
+		color: $zagolovok;
 	}
 
 	&__help {
 	}
 
 	&__search-all {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-transform: uppercase;
+		color: #FFF;
+		background-color: $knopka-rozovaya;
+		padding-top: 14px;
+		padding-bottom: 14px;
 	}
 }
 
@@ -133,9 +154,15 @@
 .range {
 
 		&__slider {
+			flex: 1 0 100%;
+			padding-top: 20px;
+			padding-bottom: 20px;
 		}
 
 		&__value {
+			display: flex;
+			align-items: center;
+			column-gap: toRem(9);
 		}
 
 		&__text {

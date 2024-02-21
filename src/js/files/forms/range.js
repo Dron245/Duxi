@@ -12,7 +12,7 @@ export function rangeInit() {
 	const priceSlider02 = document.querySelector('#range02');
 	if (priceSlider01) {
 		noUiSlider.create(priceSlider01, {
-			start:  [100,15000],
+			start:  [30000,130000],
 			connect: [false, true, false],
 			range: {
 				'min': [0],
@@ -36,7 +36,7 @@ export function rangeInit() {
 	}
 	if (priceSlider02) {
 		noUiSlider.create(priceSlider02, {
-			start:  [20,100],
+			start:  [60,150],
 			connect: [false, true, false],
 			range: {
 				'min': [10],
