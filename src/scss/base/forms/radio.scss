@@ -38,11 +38,11 @@
 			height: 12px;
 			flex: 0 0 12px;
 			border-radius: 50%;
-			border: 1px solid $knopka-rozovaya;
+			outline: 1px solid $knopka-rozovaya;
 		}
 		&:after {
 			content: "";
-			transition: all 0.3s ease 0s;
+			transition: transform 0.1s ease 0s;
 			transform: scale(0);
 			width: 6px;
 			height: 6px;

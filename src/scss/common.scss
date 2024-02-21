@@ -28,7 +28,7 @@ h3[class*="__title"] {
 	justify-content: space-between;
 	position: relative;
 	border-radius: 16px;
-	border: 1px solid #f4e1e6;
+	// border: 1px solid #f4e1e6;
 	background: #ffffff;
 	padding: toRem(28) toRem(20) toRem(20) toRem(20);
 	@media (max-width: $tablet) {
@@ -210,10 +210,23 @@ h3[class*="__title"] {
 		padding-top: 10px;
 		padding-bottom: 10px;
 		width: 100%;
-		// cursor: pointer;
 		position: relative;
 		z-index: 4;
 		text-transform: uppercase;
+		&_seil {
+
+		}
+
+		&_make {
+			border: 1px solid $zagolovok;
+			background-color: white;
+			color: $knopka-bordovaya;
+		}
+
+		&_wait {
+			background-color: #939393;
+			color: white;
+		}
 	}
 }
 

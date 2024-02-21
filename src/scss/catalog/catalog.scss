@@ -1,17 +1,197 @@
-.tyu {
-	width: 200px;
+.page {
+
+	&__catalog {
+	}
+
+	&__recently {
+	}
+}
+.position {
 }
 
-.qwe {
-	margin-top: 100px;
-	// width: 200px;
+.catalog {
+
+	&__container {
+	}
+
+	&__wrapper {
+		@media (min-width:$tablet){
+			display: flex;
+			column-gap: toRem(20);
+		}
+	}
+
+	&__filters {
+		outline: 1px solid red;
+		@media (min-width:$tablet){
+			flex: 0 0 24.025974%; /* 370/1540 */
+		}
+	}
+
+	&__main {
+		outline: 1px solid blue;
+	}
 }
-.dfg {
-	display: flex;
-	justify-content: space-between;
-	
+
+.filters {
+
+	&__form {
+	}
+
+	&__spollers {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+
+	&__item {
+	}
 }
-.asd {
+.filter {
+
+	&__title-wrapper {
+		LIST-STYLE: NONE;
+		padding: 15px 0 13px 0px;
+		display: flex;
+		column-gap: toRem(15);
+		margin-bottom: 10px;
+		cursor: pointer;
+		border-top: 1px solid #EEDCE1;
+		border-bottom: 1px solid #EEDCE1;
+		&:first-child{
+			border-top: none;
+		}
+		&:last-child{
+			border-bottom: none;
+		}
+	}
+
+	&__arrow {
+		img {
+			transition: transform 0.3s;
+		}
+		& img {
+			._spoller-active & {
+				
+				transform: rotate(90deg);
+			}
+		}
+		@media (max-width:$tablet){
+			display: none;
+		}
+	}
+
+	&__title {
+		text-transform: uppercase;
+		@media (max-width:$tablet){
+			font-size: toRem(12);
+		}
+	}
+
+	&__body {
+		padding-top: 10px;
+		padding-bottom: 10px;
+
+	}
+
+	&__reset {
+		margin-left: auto;
+	}
+
+	&__list {
+	}
+
+	&__list-item {
+	}
+
+	&__more {
+	}
+
+	&__help {
+	}
+
+	&__search-all {
+	}
+}
+
+.options {
+
+	&__item {
+		&:not(:last-child) {margin-bottom: toRem(14);}
+	}
+
+	&__input {
+	}
+
+	&__label {
+	}
+
+	&__text {
+	}
+}
+
+
+.range {
+
+		&__slider {
+		}
+
+		&__value {
+		}
+
+		&__text {
+		}
+
+		&__field-val {
+		}
+}
+
+.showmore {
+}
+
+.search-button {
+}
+.img-search-small {
+}
+
+.main-catalog {
+
+	&__title {
+	}
+
+	&__text {
+	}
+
+	&__products {
+	}
+
+	&__mobile-filters-open {
+	}
+}
+
+.tile-brands {
+}
+.list-brands {
+}
+.tile {
+}
+
+.list {
+}
+
+.recently {
+
+	&__container {
+	}
+
+	&__title {
+	}
+}
+
+
+
+
+
+.range__field-val {
 	// border: 2px solid red;
 	width: 60px;
 	height: 40px;

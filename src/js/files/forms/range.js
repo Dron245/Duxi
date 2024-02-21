@@ -8,11 +8,10 @@ import * as noUiSlider from 'nouislider';
 //import 'nouislider/dist/nouislider.css';
 
 export function rangeInit() {
-	const priceSlider = document.querySelector('#range');
-	if (priceSlider) {
-		let textFrom = priceSlider.getAttribute('data-from');
-		let textTo = priceSlider.getAttribute('data-to');
-		noUiSlider.create(priceSlider, {
+	const priceSlider01 = document.querySelector('#range01');
+	const priceSlider02 = document.querySelector('#range02');
+	if (priceSlider01) {
+		noUiSlider.create(priceSlider01, {
 			start:  [100,15000],
 			connect: [false, true, false],
 			range: {
@@ -28,30 +27,36 @@ export function rangeInit() {
 		});
 		
 		var snapValues = [
-			document.getElementById('lower'),
-			document.getElementById('upper')
-	  ];
-	  
-	  priceSlider.noUiSlider.on('update', function (values, handle) {
+			document.getElementById('lower01'),
+			document.getElementById('upper01')
+		];
+		priceSlider01.noUiSlider.on('update', function (values, handle) {
 			snapValues[handle].innerHTML = values[handle];
-	  });
-
-		const priceStart = document.getElementById('price-start');
-		const priceEnd = document.getElementById('price-end');
-		// priceStart.addEventListener('change', setPriceValues);
-		// priceEnd.addEventListener('change', setPriceValues);
+		});
+	}
+	if (priceSlider02) {
+		noUiSlider.create(priceSlider02, {
+			start:  [20,100],
+			connect: [false, true, false],
+			range: {
+				'min': [10],
+				'max': [200]
+			},
+			
+			format: wNumb({
+				decimals: 0,
+				thousand: ' '
+			})
+			
+		});
 		
-		function setPriceValues() {
-			let priceStartValue;
-			let priceEndValue;
-			if (priceStart.value != '') {
-				priceStartValue = priceStart.value;
-			}
-			if (priceEnd.value != '') {
-				priceEndValue = priceEnd.value;
-			}
-			priceSlider.noUiSlider.set([priceStartValue, priceEndValue]);
-		}
+		var snapValues = [
+			document.getElementById('lower02'),
+			document.getElementById('upper02')
+	  ];
+	  priceSlider02.noUiSlider.on('update', function (values, handle) {
+		snapValues[handle].innerHTML = values[handle];
+	});
 	}
 }
 rangeInit();

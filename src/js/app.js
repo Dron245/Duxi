@@ -61,7 +61,7 @@ flsFunctions.tabs();
 Документация: https://start-template.ru/modul-pokazat-eshhe-chertogi-frilansera-v3-0-0/
 Сниппет (HTML): showmore
 */
-// flsFunctions.showMore();
+ flsFunctions.showMore();
 
 /*
 Модуль "До/После"
