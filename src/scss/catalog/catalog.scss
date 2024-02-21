@@ -1,6 +1,14 @@
 .page {
 
 	&__catalog {
+		.brands-tabs__body {
+			// display: flex;
+			// flex-wrap: wrap;
+			
+			.product {
+				flex: 0 0 23.1112%;
+			}
+		}
 	}
 
 	&__recently {
@@ -15,6 +23,7 @@
 	}
 
 	&__wrapper {
+		background-color: $fon;
 		@media (min-width:$tablet){
 			display: flex;
 			column-gap: toRem(20);
@@ -24,7 +33,7 @@
 	&__filters {
 		outline: 1px solid red;
 		@media (min-width:$tablet){
-			flex: 0 0 24.025974%; /* 370/1540 */
+			flex: 0 0 21.089631%; /* 240/1138 */
 		}
 	}
 
@@ -44,6 +53,11 @@
 	}
 
 	&__item {
+		position: relative;
+		margin-left: -10px;
+		margin-right: -10px;
+		padding-left: 10px;
+		padding-right: 10px;
 		border-top: 1px solid #EEDCE1;
 		border-bottom: 1px solid #EEDCE1;
 		&:first-child{
@@ -57,16 +71,20 @@
 .filter {
 
 	&__title-wrapper {
-		LIST-STYLE: NONE;
+		list-style: none;
 		padding: 15px 0 13px 0px;
 		display: flex;
+		align-items: center;
 		column-gap: toRem(15);
 		margin-bottom: 10px;
 		cursor: pointer;
-		
+		.filters__item_manufacturer & {
+			margin-bottom: 0;
+		}
 	}
 
 	&__arrow {
+		// transform: translateY(-2px);
 		img {
 			transition: transform 0.3s;
 		}
@@ -82,6 +100,9 @@
 	}
 
 	&__title {
+		display: flex;
+		align-items: center;
+		column-gap: toRem(15);
 		text-transform: uppercase;
 		@media (max-width:$tablet){
 			font-size: toRem(12);
@@ -97,13 +118,47 @@
 			justify-content: space-between;
 			flex-wrap: wrap;
 		}
+		& .header-center__form {
+			margin-bottom: 20px;
+			input {
+				&:hover{
+					border-radius: 16px;
+				}
+				background-color: #fef3f6;
+			}
+		}
+	}
+
+	
+
+	&__showmore {
+		max-height: 258px;
+		
+		&._showmore-active {
+			overflow-y: auto;
+		}
+		&::-webkit-scrollbar {
+			width: 5px; /* Ширина всего элемента навигации */
+		}
+		
+		&::-webkit-scrollbar-track {
+			background: #ffedf0; /* Цвет дорожки */
+		}
+		
+		&::-webkit-scrollbar-thumb {
+			background-color: $knopka-rozovaya; /* Цвет бегунка */
+			border-radius: 20px; /* Округление бегунка */
+			border: 3px solid $knopka-rozovaya; /* Оформление границ бегунка */
+		}
 	}
 
 	&__reset {
-		margin-left: auto;
+		position: absolute;
+		top: 15px;
+		right: 10px;
+		// margin-left: auto;
 		color: $zagolovok;
 		font-size: toRem(12);
-		margin-right: 40;
 	}
 
 	&__list {
@@ -119,6 +174,7 @@
 	}
 
 	&__help {
+		transform: translateY(-2px);
 	}
 
 	&__search-all {
@@ -137,7 +193,9 @@
 .options {
 
 	&__item {
-		&:not(:last-child) {margin-bottom: toRem(14);}
+		.catalog & {
+		margin-bottom: 14px;
+		}
 	}
 
 	&__input {
@@ -186,12 +244,23 @@
 	}
 
 	&__text {
+		margin-bottom: toRem(40);
 	}
 
+	&__wrapper {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+		// flex-wrap: wrap;
+		gap: 30px 20px;
+	}
 	&__products {
 	}
 
 	&__mobile-filters-open {
+		display: none;
+		@media (max-width:$mobile){
+			display: block;
+		}
 	}
 }
 
