@@ -31,6 +31,13 @@ h3[class*="__title"] {
 	// border: 1px solid #f4e1e6;
 	background: #ffffff;
 	padding: toRem(28) toRem(20) toRem(20) toRem(20);
+	.list & {
+		display: grid;
+		grid-template-columns: auto 1fr;
+		grid-template-rows: auto auto;
+		gap: 10px 25px;
+		padding: 28px 9px 14px 9px;
+	}
 	@media (max-width: $tablet) {
 		padding: toRem(30) toRem(15) toRem(20) toRem(15);
 	}
@@ -53,8 +60,13 @@ h3[class*="__title"] {
 		}
 	}
 	&__img {
+		// outline:1px solid;
 		.product-wait & {
 			opacity: 0.65;
+		}
+		.list & {
+			width: 94px;
+			// transform: scale(0.8);
 		}
 		img {
 			aspect-ratio: 1 /1;
@@ -229,6 +241,16 @@ h3[class*="__title"] {
 		position: relative;
 		z-index: 4;
 		text-transform: uppercase;
+		.list & {
+			grid-row: 2 / 3;
+			grid-column: 1 / 3;
+		}
+		@media (any-hover: hover){
+			&:hover{
+				transition: color 0.3s;
+				// color: #000;
+			}
+		}
 		&_seil {
 
 		}

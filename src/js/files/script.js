@@ -19,8 +19,6 @@ window.addEventListener('DOMContentLoaded', () => {
 		if(!targetElement.closest('.menu__icon') && !targetElement.closest('.menu__body' )){
 			document.querySelector('.menu-open') ? document.documentElement.classList.remove('lock') : null
 			document.querySelector('.menu-open') ? document.documentElement.classList.remove('menu-open') : null
-			// console.log(123);
-			// document.documentElement.classList.remove('lock')
 		}
 		
 		// Закрытие/открытие окна "выбор города" при клике на кнопку "Да, всё верно"
@@ -45,6 +43,16 @@ window.addEventListener('DOMContentLoaded', () => {
 		if(!targetElement.closest('.header-center__form')){
 			document.documentElement.classList.remove('_show')
 		}
+
+		//Присваивание текста выбранного варианта в спец окно в каталоге в таблетном разрешении
+		if(window.innerWidth < 1001 && targetElement.closest('.options__input')) {
+			console.log(targetElement);
+			let inp = targetElement.value;
+			let val = targetElement.closest('.filters__item').querySelector('.filter__val')
+			console.log(val.innerHTML);
+			console.log(inp);
+			val.innerHTML = inp;
+		}
 	}
 });
 
@@ -55,6 +63,29 @@ if (window.innerWidth < 768 ) {
 	tabs01 ? tabs01.classList.remove('_tab-active') : null;
 	tabs02 ? tabs02.classList.add('_tab-active') : null;
 }
+
+//Преобразование фильтров-спойлеров в каталоге в таблетном разрешении
+const catalog = document.querySelector('.catalog');
+if(catalog) {
+	const details = catalog.querySelectorAll('details');
+	const reset = catalog.querySelectorAll('.filter__reset')
+	const spollersWrapper = catalog.querySelector('[data-spollers]')
+	const summury = catalog.querySelectorAll('.filter__title-wrapper')
+	if (window.innerWidth < 1001) {
+		details.forEach(element => {
+			element.removeAttribute('data-open');
+		});
+		reset.forEach(element => {
+			element.remove()
+		});
+		spollersWrapper.setAttribute('data-one-spoller','')
+		summury.forEach(element => {
+			element.setAttribute('data-spoller-close','')
+		});
+	}
+}
+
+
 
 // const mobileWidthMediaQuery = window.matchMedia('(max-width: 767.98px)')
 

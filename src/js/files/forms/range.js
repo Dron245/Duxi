@@ -50,12 +50,12 @@ export function rangeInit() {
 			
 		});
 		
-		var snapValues = [
+		var snapValues02 = [
 			document.getElementById('lower02'),
 			document.getElementById('upper02')
 	  ];
 	  priceSlider02.noUiSlider.on('update', function (values, handle) {
-		snapValues[handle].innerHTML = values[handle];
+		snapValues02[handle].innerHTML = values[handle];
 	});
 	}
 }
