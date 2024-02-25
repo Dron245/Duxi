@@ -87,7 +87,7 @@
 		visibility: hidden;
 		// transition: top 0.3s, height 0.5s, transform 0.3s;
 		// transition: all 0.2s;
-		transition: top 0.3s;
+		transition: top 0.3s, transform 0.3s;
 		@media (max-width:$tablet){
 			  
 		}
@@ -221,7 +221,7 @@
 		position: relative;
 		width: toRem(70);
 		height: toRem(45);
-		z-index: 5;
+		z-index: 6;
 		@media (max-width:$tablet){
 			width: toRem(50);
 			height: toRem(27);

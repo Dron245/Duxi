@@ -23,7 +23,7 @@ body::after {
 	left: 0;
 	bottom: 0;
 	right: 0;
-	padding: 30px 10px;
+	padding: 30px;
 	transition: visibility 0.8s ease 0s;
 	visibility: hidden;
 	pointer-events: none;
@@ -97,9 +97,28 @@ body::after {
 
 .popup {
 	&__wrapper {
+		#filters-main & {
+			height: 100%;
+		}
 	}
 
 	&__content {
+		#filters-main & {
+			// min-height: 1340px;
+			box-shadow: 4px 4px 30px 0px rgba(0, 0, 0, 0.25);
+			background-color: #fff;
+			border-radius: 20px;
+			border: 1px solid rgba(214, 187, 195, 0.50);
+			position: relative;
+			overflow-x: hidden;
+			overflow-y: hidden;
+			height: 100%;
+			// height: 100%;
+			&._overflow-y {
+				// overflow: initial;
+				overflow-y: auto;
+			}
+		}
 	}
 
 	&__close {
@@ -108,6 +127,7 @@ body::after {
 		top: 10px;
 		width: 20px;
 		height: 20px;
+		z-index: 101;
 		@media (max-width:$mobile){
 			 @include adaptiveValue("width", 50, 18,0,768,320); 
 		}
@@ -117,6 +137,8 @@ body::after {
 	}
 
 	&__body {
+		// position: relative;
+		// overflow: hidden;
 	}
 
 	&__title {

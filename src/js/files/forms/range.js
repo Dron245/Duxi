@@ -10,6 +10,10 @@ import * as noUiSlider from 'nouislider';
 export function rangeInit() {
 	const priceSlider01 = document.querySelector('#range01');
 	const priceSlider02 = document.querySelector('#range02');
+	const priceSlider01m = document.querySelector('#range01m');
+	const priceSlider02m = document.querySelector('#range02m');
+
+
 	if (priceSlider01) {
 		noUiSlider.create(priceSlider01, {
 			start:  [30000,130000],
@@ -34,6 +38,7 @@ export function rangeInit() {
 			snapValues[handle].innerHTML = values[handle];
 		});
 	}
+
 	if (priceSlider02) {
 		noUiSlider.create(priceSlider02, {
 			start:  [60,150],
@@ -56,6 +61,56 @@ export function rangeInit() {
 	  ];
 	  priceSlider02.noUiSlider.on('update', function (values, handle) {
 		snapValues02[handle].innerHTML = values[handle];
+	});
+	}
+
+	if (priceSlider01m) {
+		noUiSlider.create(priceSlider01m, {
+			start:  [30000,130000],
+			connect: [false, true, false],
+			range: {
+				'min': [0],
+				'max': [200000]
+			},
+			
+			format: wNumb({
+				decimals: 0,
+				thousand: ' '
+			})
+			
+		});
+		
+		var snapValues01m = [
+			document.getElementById('lower01m'),
+			document.getElementById('upper01m')
+		];
+		priceSlider01m.noUiSlider.on('update', function (values, handle) {
+			snapValues01m[handle].innerHTML = values[handle];
+		});
+	}
+	
+	if (priceSlider02m) {
+		noUiSlider.create(priceSlider02m, {
+			start:  [60,150],
+			connect: [false, true, false],
+			range: {
+				'min': [10],
+				'max': [200]
+			},
+			
+			format: wNumb({
+				decimals: 0,
+				thousand: ' '
+			})
+			
+		});
+		
+		var snapValues02m = [
+			document.getElementById('lower02m'),
+			document.getElementById('upper02m')
+	  ];
+	  priceSlider02m.noUiSlider.on('update', function (values, handle) {
+		snapValues02m[handle].innerHTML = values[handle];
 	});
 	}
 }
