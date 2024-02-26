@@ -180,6 +180,7 @@
 	&__body {
 		padding-top: 10px;
 		padding-bottom: 10px;
+		
 		&.range {
 			display: flex;
 			align-items: center;
@@ -207,12 +208,12 @@
 			z-index: 5;
 			background-color: $fon;
 			padding: 10px toRem(10);
-			outline: 1px solid $zagolovok;
+			outline: 1px solid $knopka-rozovaya;
 			border-radius: 16px;
 		}
 	}
 
-	&__reset {
+	&__reset, &__reset-check {
 		@media (min-width:$tablet){
 			top: 13px;
 			bottom: initial;
@@ -228,6 +229,7 @@
 		z-index: 2;
 		// }
 	}
+
 
 	&__showmore {
 		@media (min-width:$tablet){
@@ -254,18 +256,6 @@
 			border: 3px solid $knopka-rozovaya; /* Оформление границ бегунка */
 		}
 	}
-
-	// &__reset {
-	// 	position: absolute;
-	// 	top: 15px;
-	// 	right: 10px;
-	// 	// margin-left: auto;
-	// 	color: $zagolovok;
-	// 	font-size: toRem(12);
-	// 	@media (max-width:$tablet){
-	// 		display: none;
-	// 	}
-	// }
 
 	&__list[data-showmore-content]{
 		@media (max-width:$tablet){

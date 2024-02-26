@@ -13,6 +13,7 @@ export function rangeInit() {
 	const priceSlider01m = document.querySelector('#range01m');
 	const priceSlider02m = document.querySelector('#range02m');
 
+	//планшет цена каталог
 	if (priceSlider01) {
 		noUiSlider.create(priceSlider01, {
 			start: [30000, 130000],
@@ -30,16 +31,21 @@ export function rangeInit() {
 		});
 
 		var snapValues = [
-			document.getElementById('lower01'),
-			document.getElementById('upper01')
+			priceSlider01.closest('.range').querySelector('#lower'),
+			priceSlider01.closest('.range').querySelector('#upper')
+			// document.getElementById('lower01'),
+			// document.getElementById('upper01')
 		];
 		priceSlider01.noUiSlider.on('update', function (values, handle) {
 			snapValues[handle].innerHTML = values[handle];
-			document.querySelector('.filter__val-low1').innerHTML = document.getElementById('lower01').innerHTML
-			document.querySelector('.filter__val-max1').innerHTML = document.getElementById('upper01').innerHTML
+			priceSlider01.closest('.filter').querySelector('.filter__val-low').innerHTML = priceSlider01.closest('.filter__body').querySelector('#lower').innerHTML
+			priceSlider01.closest('.filter').querySelector('.filter__val-max').innerHTML = priceSlider01.closest('.filter__body').querySelector('#upper').innerHTML
+			// document.querySelector('.filter__val-low1').innerHTML = document.getElementById('lower01').innerHTML
+			// document.querySelector('.filter__val-max1').innerHTML = document.getElementById('upper01').innerHTML
 		});
 	}
 
+	//планшет объём каталог
 	if (priceSlider02) {
 		noUiSlider.create(priceSlider02, {
 			start: [60, 150],
@@ -57,16 +63,21 @@ export function rangeInit() {
 		});
 
 		var snapValues02 = [
-			document.getElementById('lower02'),
-			document.getElementById('upper02')
+			priceSlider02.closest('.range').querySelector('#lower'),
+			priceSlider02.closest('.range').querySelector('#upper')
+			// document.getElementById('lower02'),
+			// document.getElementById('upper02')
 		];
 		priceSlider02.noUiSlider.on('update', function (values, handle) {
 			snapValues02[handle].innerHTML = values[handle];
-			document.querySelector('.filter__val-low2').innerHTML = document.getElementById('lower02').innerHTML
-			document.querySelector('.filter__val-max2').innerHTML = document.getElementById('upper02').innerHTML
+			priceSlider02.closest('.filter').querySelector('.filter__val-low').innerHTML = priceSlider02.closest('.filter__body').querySelector('#lower').innerHTML
+			priceSlider02.closest('.filter').querySelector('.filter__val-max').innerHTML = priceSlider02.closest('.filter__body').querySelector('#upper').innerHTML
+			// document.querySelector('.filter__val-low2').innerHTML = document.getElementById('lower02').innerHTML
+			// document.querySelector('.filter__val-max2').innerHTML = document.getElementById('upper02').innerHTML
 		});
 	}
 
+	//мобилка попап цена каталог
 	if (priceSlider01m) {
 		noUiSlider.create(priceSlider01m, {
 			start: [30000, 130000],
@@ -85,18 +96,21 @@ export function rangeInit() {
 
 		// console.log(priceSlider01m.closest('.range').querySelector('#upper01m'));
 		var snapValues01m = [
-			document.getElementById('lower01m'),
-			document.getElementById('upper01m'),
+			priceSlider01m.closest('.submenu-filter__list').querySelector('#lower'),
+			priceSlider01m.closest('.submenu-filter__list').querySelector('#upper')
+			// document.getElementById('lower01m'),
+			// document.getElementById('upper01m'),
 			// document.querySelector('.filtmodal__checked-min-01m'),
 			// document.querySelector('.filtmodal__checked-max-01m'),
 		];
 		priceSlider01m.noUiSlider.on('update', function (values, handle) {
 			snapValues01m[handle].innerHTML = values[handle];
-			document.querySelector('.filtmodal__checked-min-01m').innerHTML = document.getElementById('lower01m').innerHTML
-			document.querySelector('.filtmodal__checked-max-01m').innerHTML = document.getElementById('upper01m').innerHTML
+			priceSlider01m.closest('.popup__content').querySelector('.filtmodal-min').innerHTML = priceSlider01m.closest('.range').querySelector('#lower').innerHTML
+			priceSlider01m.closest('.popup__content').querySelector('.filtmodal-max').innerHTML = priceSlider01m.closest('.range').querySelector('#upper').innerHTML
+			// document.querySelector('.filtmodal__checked-max-01m').innerHTML = document.getElementById('upper').innerHTML
 		});
 	}
-
+	//мобилка попап объём каталог
 	if (priceSlider02m) {
 		noUiSlider.create(priceSlider02m, {
 			start: [60, 150],
@@ -113,19 +127,23 @@ export function rangeInit() {
 
 		});
 
+		
 		var snapValues02m = [
-			document.getElementById('lower02m'),
-			document.getElementById('upper02m'),
+			priceSlider02m.closest('.submenu-filter__list').querySelector('#lower'),
+			priceSlider02m.closest('.submenu-filter__list').querySelector('#upper')
+			// document.getElementById('lower02m'),
+			// document.getElementById('upper02m'),
 
 		];
 		priceSlider02m.noUiSlider.on('update', function (values, handle) {
 			snapValues02m[handle].innerHTML = values[handle];
-			document.querySelector('.filtmodal__checked-min-02m').innerHTML = document.getElementById('lower02m').innerHTML
-			document.querySelector('.filtmodal__checked-max-02m').innerHTML = document.getElementById('upper02m').innerHTML
+			priceSlider02m.closest('.popup__content').querySelector('.volume .filtmodal-min').innerHTML = priceSlider02m.closest('.range').querySelector('#lower').innerHTML
+			priceSlider02m.closest('.popup__content').querySelector('.volume .filtmodal-max').innerHTML = priceSlider02m.closest('.range').querySelector('#upper').innerHTML
 		});
 	}
 	document.addEventListener("click", documentActionsRange);
 
+	//сброс к дефолту
 	function documentActionsRange(e) {
 		const targetEl = e.target
 		if (targetEl.closest('.filter__reset') && targetEl.closest('.filters__filter').querySelector('.range__slider')) {
@@ -133,7 +151,6 @@ export function rangeInit() {
 		}
 
 		if (targetEl.closest('#reset-filternoUi')) {
-			// console.log(123);
 			targetEl.closest('.filtmodal__submenu').querySelector('.range__slider').noUiSlider.reset();
 		}
 	}

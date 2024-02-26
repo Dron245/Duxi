@@ -225,16 +225,18 @@
 	}
 
 	&__list {
+
 		@media (max-width:$mobile){
 			
 			&_check {
-				height: 55%;
+				height: 65%;
 				overflow-x: hidden;
 				overflow-y: auto;
 				margin-left: -20px;
 				margin-right: -20px;
 				&::-webkit-scrollbar {
 					width: 5px; /* Ширина всего элемента навигации */
+					// display: none;
 				}
 				
 				&::-webkit-scrollbar-track {
@@ -379,7 +381,9 @@
 			height: 70px;
 			align-items: center;
 			@media (max-width:$mobileSmall){
-				 font-size: toRem(14); 
+				 font-size: toRem(14);
+				 width: 120px;
+				 height: 50px;
 			}
 		}
 		.range__text{

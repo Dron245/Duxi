@@ -111,13 +111,17 @@ window.addEventListener('DOMContentLoaded', () => {
 		}
 
 		//сбрасываю чекбоксы по нажатию кнопки "сбросить" и очищаю поле выбранного фильтра
-		if (targetElement.closest('.filter__reset')) {
+		if (targetElement.closest('.filter__reset-check')) {
+			let valCheck = targetElement.closest('.filters__filter').querySelector('.filter__val')
+			console.log(valCheck);
 			const checkboxCheck = targetElement.closest('.filters__filter').querySelectorAll('.checkbox__input')
 			checkboxCheck.forEach(element => {
 				element.checked = false
 			});
-			let valCheck = targetElement.closest('.filters__filter').querySelector('.filter__val')
-			valCheck.innerHTML = ' '
+			// if (valCheck.innerHTML == null) {
+				valCheck.innerHTML = ' '
+			// }
+			
 			console.log(valCheck);
 		}
 
