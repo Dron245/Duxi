@@ -73,6 +73,7 @@
 
 	&__checked {
 		display: block;
+		min-height: 14px;
 		margin-top: 5px;
 		font-weight: 300;
 		@include adaptiveValue("font-size", 25, 14,0,768,320);
@@ -373,10 +374,13 @@
 			}
 		}
 		.range__field-val {
-			@include adaptiveValue("font-size", 40, 20,0,768,320);
+			@include adaptiveValue("font-size", 40, 20,0,768,480);
 			width: 175px;
 			height: 70px;
-			align-items: center
+			align-items: center;
+			@media (max-width:$mobileSmall){
+				 font-size: toRem(14); 
+			}
 		}
 		.range__text{
 			@include adaptiveValue("font-size", 30, 15,0,768,320);

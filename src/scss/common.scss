@@ -438,6 +438,9 @@ h3[class*="__title"] {
 	}
 }
 
+.swiper-button-disabled {
+	display: none;
+}
 //Свайпер пагинация
 .pagination {
 	display: none;

@@ -64,7 +64,7 @@
 
 	&__form {
 	}
-	&__filer {
+	&__filter {
 		position: relative;
 	}
 
@@ -166,6 +166,7 @@
 
 	&__val {
 		// outline: 1px solid blue;
+		min-height:12px;
 		font-size: toRem(12);
 		// text-wrap: nowrap;
 		padding-right: 10px;
@@ -184,6 +185,10 @@
 			align-items: center;
 			justify-content: space-between;
 			flex-wrap: wrap;
+			row-gap: 10px;
+			@media (max-width:$tablet) and (min-width:$mobile){
+				width: 120%;
+			}
 		}
 		& .header-center__form {
 			margin-bottom: 20px;

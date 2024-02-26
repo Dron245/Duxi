@@ -5,91 +5,145 @@ import { flsModules } from "./modules.js";
 
 window.addEventListener('DOMContentLoaded', () => {
 	document.addEventListener("click", documentActions);
-
+	let flag = true;
 	function documentActions(e) {
 		const targetElement = e.target;
+
 		console.log(targetElement);
 		// Открытие сабменю в мобильной версии
-		if(targetElement.closest('.menu__link')){
+		if (targetElement.closest('.menu__link')) {
 			targetElement.classList.toggle('_open')
-			targetElement.closest('.menu__item').querySelector('.menu__sublist') ? 
-			targetElement.closest('.menu__item').querySelector('.menu__sublist').classList.toggle('_sub-menu-open') : null
+			targetElement.closest('.menu__item').querySelector('.menu__sublist') ?
+				targetElement.closest('.menu__item').querySelector('.menu__sublist').classList.toggle('_sub-menu-open') : null
 		}
 		// закрытие меню бургер вне клика по меню
-		if(!targetElement.closest('.menu__icon') && !targetElement.closest('.menu__body' )){
+		if (!targetElement.closest('.menu__icon') && !targetElement.closest('.menu__body')) {
 			document.querySelector('.menu-open') ? document.documentElement.classList.remove('lock') : null
 			document.querySelector('.menu-open') ? document.documentElement.classList.remove('menu-open') : null
 		}
-		
+
 		// Закрытие/открытие окна "выбор города" при клике на кнопку "Да, всё верно"
-		if(targetElement.closest('.city-choice__button')) {
+		if (targetElement.closest('.city-choice__button')) {
 			const city = targetElement.closest('.top-header__city').querySelector('.city-choice')
 			city.hidden = true; return;
 		}
 
-		if( targetElement.closest('.top-header__city') && document.querySelector('.guest') && document.querySelector('.city-choice').hidden) {
+		if (targetElement.closest('.top-header__city') && document.querySelector('.guest') && document.querySelector('.city-choice').hidden) {
 			const city = targetElement.closest('.top-header__city').querySelector('.city-choice')
 			city.hidden = false; return;
 		}
 		//переключаю значок пароля с видеть на не видеть
-		if(targetElement.closest('.popup__img-pasword')){
+		if (targetElement.closest('.popup__img-pasword')) {
 			targetElement.closest('.popup__img-pasword').classList.toggle('_pass-view')
 		}
 
 		//Открытие/скрытие строки поиска
-		if(targetElement.closest('.search-button')){
+		if (targetElement.closest('.search-button')) {
 			document.documentElement.classList.toggle('_show')
 		}
-		if(!targetElement.closest('.header-center__form')){
+		if (!targetElement.closest('.header-center__form')) {
 			document.documentElement.classList.remove('_show')
 		}
 
-		//Присваивание текста выбранного варианта в спец окно в каталоге в таблетном разрешении
-		if(window.innerWidth < 1001 && (targetElement.closest('.options__input') || targetElement.closest('.checkbox__input')) && targetElement.closest('.catalog')) {
-			let inp = targetElement.value;
-			let val = targetElement.closest('.filters__item').querySelector('.filter__val')
-			val.innerHTML = inp;
+		//Присваивание текста выбранного варианта в спец окно в каталоге в таблетном разрешении у радиокнопок
+		if (window.innerWidth < 1001 && (targetElement.closest('.options__input')) && targetElement.closest('.catalog')) {
+			let inpOpt = targetElement.value;
+			let valOpt = targetElement.closest('.filters__item').querySelector('.filter__val')
+			valOpt.innerHTML = inpOpt;
 		}
-		
+
+		//Присваивание текста выбранного варианта в спец окно в каталоге в таблетном разрешении у чекбоксов
+		if (window.innerWidth < 1001 && targetElement.closest('.checkbox__input') && targetElement.closest('.catalog')) {
+			// let inpCheck = targetElement.value;
+			let valCheck = targetElement.closest('.filters__item').querySelector('.filter__val')
+			// valCheck.innerHTML = inpCheck;
+			if (flag) {
+				flag = false;
+				valCheck.innerHTML = " "
+			}
+			valCheck.innerHTML += targetElement.value + ", ";
+		}
+
+
 		// Устанавливаю нормальную высоту окна с чекбоксами в каталоге в таблетном разрешении.
-		if(targetElement.closest('.filter__title') && targetElement.closest('.filters__item').querySelector('.checkbox')) {
+		if (targetElement.closest('.filter__title') && targetElement.closest('.filters__item').querySelector('.checkbox')) {
 			let list = targetElement.closest('.filters__item').querySelector('.filter__list')
-			if(!list.closest('.filter__showmore').classList.contains('_showmore-active')) {
+			if (!list.closest('.filter__showmore').classList.contains('_showmore-active')) {
 				list.style.height = '80px'
 			}
 		}
-		
+
 		// Связывание пунктов меню и саб-меню в фильрах в каталоге в мобильной версии
 		if (targetElement.closest('[data-parent]')) {
-			const subMenuId = targetElement.dataset.parent ? targetElement.dataset.parent : null;		
+			const subMenuId = targetElement.dataset.parent ? targetElement.dataset.parent : null;
 			const subMenu = document.querySelector(`[data-submenu="${subMenuId}"]`);
 			if (subMenu) {
 				document.documentElement.classList.add('sub-menu-open');
 				subMenu.classList.add('_sub-menu-open');
-				// targetElement.closest('.popup__content').classList.add('_overflow-x')
 			}
 		}
-		if(targetElement.closest('.submenu-filter__top')){
+		if (targetElement.closest('.submenu-filter__top') || targetElement.closest('#submit-filter')) {
 			document.documentElement.classList.remove('sub-menu-open');
 			targetElement.closest('[data-submenu]').classList.remove('_sub-menu-open');
-			// targetElement.closest('.popup__content').classList.remove('_overflow-x')
 		}
 
-		//раскрашиваю кнопку выбора категории фильтра при выбранном варианте в сабменю в моб версии
-		if(window.innerWidth < 768 && (targetElement.closest('.options__input') || targetElement.closest('.checkbox__input'))) {
+		//раскрашиваю кнопку выбора категории фильтра при выбранном варианте у радио кнопок в сабменю в моб версии
+		if (window.innerWidth < 768 && targetElement.closest('.options__input')) {
 			let numberSubmenu = targetElement.closest('.filtmodal__submenu').dataset.submenu;
-			// console.log(numberSubmenu);
 			const buttonEl = targetElement.closest('.filtmodal').querySelector(`[data-parent="${numberSubmenu}"]`).closest('.filtmodal__item')
 			const checked = targetElement.closest('.filtmodal').querySelector(`[data-parent="${numberSubmenu}"]`).closest('.filtmodal__item').querySelector('.filtmodal__checked')
-			// console.log(buttonEl);
-			buttonEl.classList.toggle('_backcolor');
+			buttonEl.classList.add('_backcolor');
 			checked.innerHTML = targetElement.value;
+		}
+
+		//раскрашиваю кнопку выбора категории фильтра при выбранном варианте у чекбоксов в сабменю в моб версии
+		if (window.innerWidth < 768 && targetElement.closest('.checkbox__input')) {
+			let numberSubmenu = targetElement.closest('.filtmodal__submenu').dataset.submenu;
+			const buttonEl = targetElement.closest('.filtmodal').querySelector(`[data-parent="${numberSubmenu}"]`).closest('.filtmodal__item')
+			const checked = targetElement.closest('.filtmodal').querySelector(`[data-parent="${numberSubmenu}"]`).closest('.filtmodal__item').querySelector('.filtmodal__checked')
+			buttonEl.classList.add('_backcolor');
+			//Пытаюсь вбить выбранные варианты чекбоксов в подзаголовок коренного мобильного меню фильтров
+			if (flag) {
+				flag = false;
+				checked.innerHTML = " "
+			}
+			checked.innerHTML += targetElement.value + ", ";
+		}
+
+		//сбрасываю чекбоксы по нажатию кнопки "сбросить" и очищаю поле выбранного фильтра
+		if (targetElement.closest('.filter__reset')) {
+			const checkboxCheck = targetElement.closest('.filters__filter').querySelectorAll('.checkbox__input')
+			checkboxCheck.forEach(element => {
+				element.checked = false
+			});
+			let valCheck = targetElement.closest('.filters__filter').querySelector('.filter__val')
+			valCheck.innerHTML = ' '
+			console.log(valCheck);
+		}
+
+		//сбрасываю чекбоксы по нажатию кнопки "сбросить" в саб меню мобилки и очищаю пдсказку в основном меню фильтров в мобилке
+		if (targetElement.closest('#reset-filter')) {
+			const checkboxCheckMobile = targetElement.closest('.filtmodal__submenu').querySelectorAll('.checkbox__input')
+			checkboxCheckMobile.forEach(element => {
+				element.checked = false;
+			});
+			let numberSubmenu = targetElement.closest('.filtmodal__submenu').dataset.submenu;
+			// const buttonEl = targetElement.closest('.filtmodal').querySelector(`[data-parent="${numberSubmenu}"]`).closest('.filtmodal__item')
+			const checked = targetElement.closest('.filtmodal').querySelector(`[data-parent="${numberSubmenu}"]`).closest('.filtmodal__item').querySelector('.filtmodal__checked')
+			checked.innerHTML = targetElement.value;
+		}
+
+		if (targetElement.closest('#reset-filterall')) {
+			const checkeds = targetElement.closest('.filtmodal__wrapper ').querySelectorAll('.filtmodal__checked');
+			checkeds.forEach(element => {
+				element.innerHTML = ' ';
+			});
 		}
 	}
 });
 
 //Работа с табами на главной странице под банером
-if (window.innerWidth < 768 ) {
+if (window.innerWidth < 768) {
 	const tabs01 = document.querySelector('#tabs01');
 	const tabs02 = document.querySelector('#tabs02');
 	tabs01 ? tabs01.classList.remove('_tab-active') : null;
@@ -98,37 +152,32 @@ if (window.innerWidth < 768 ) {
 
 //Преобразование фильтров-спойлеров в каталоге в таблетном разрешении
 const catalog = document.querySelector('.catalog');
-if(catalog) {
+if (catalog) {
 	const details = catalog.querySelectorAll('details');
-	// const reset = catalog.querySelectorAll('.filter__reset')
 	const spollersWrapper = catalog.querySelector('[data-spollers]')
 	const summury = catalog.querySelectorAll('.filter__title-wrapper')
-	let filterList = catalog.querySelectorAll('.filter__list')
-	// reset.forEach(element => {
-	// 		element.remove()
-	// 	});
+	// let filterList = catalog.querySelectorAll('.filter__list')
 	if (window.innerWidth < 1001) {
 		details.forEach(element => {
 			element.removeAttribute('data-open');
 		});
-		
-		spollersWrapper.setAttribute('data-one-spoller','')
+		spollersWrapper.setAttribute('data-one-spoller', '')
 		summury.forEach(element => {
-			element.setAttribute('data-spoller-close','')
+			element.setAttribute('data-spoller-close', '')
 		});
 	}
 }
 
 //позиционирование хлебных крошек при уменьшении экрана
 const breadcrumbs = document.querySelector('.breadcrumbs__list')
-	if(breadcrumbs) {
-		if (breadcrumbs.offsetLeft + breadcrumbs.clientWidth > window.innerWidth) {
-			console.log(breadcrumbs.offsetLeft + breadcrumbs.clientWidth);
-			breadcrumbs.classList.add('_align-right')
-		} else {
-			breadcrumbs.classList.remove('_align-right')
-		}
+if (breadcrumbs) {
+	if (breadcrumbs.offsetLeft + breadcrumbs.clientWidth > window.innerWidth) {
+		// console.log(breadcrumbs.offsetLeft + breadcrumbs.clientWidth);
+		breadcrumbs.classList.add('_align-right')
+	} else {
+		breadcrumbs.classList.remove('_align-right')
 	}
+}
 
 // делаю доступной прокрутку, если высота окна меньше высоты попапа в меню фильтов в моб. версии
 const popupFiltmodal = document.querySelector('.popup__body.filtmodal');
@@ -136,6 +185,6 @@ const popupContent = popupFiltmodal ? popupFiltmodal.closest('.popup__content') 
 // console.log(popupFiltmodal);
 // console.log(popupFiltmodal.clientHeight);
 // console.log(window.innerHeight);
-if(popupFiltmodal && (popupFiltmodal.clientHeight > window.innerHeight)) {
+if (popupFiltmodal && (popupFiltmodal.clientHeight > window.innerHeight)) {
 	popupContent.classList.add('_overflow-y')
 }

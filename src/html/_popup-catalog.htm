@@ -17,7 +17,10 @@
 					</div>
 					<div class="filtmodal__item">
 						<button data-parent="3" class="filtmodal__element">цена</button>
-						<span class="filtmodal__checked">любая</span>
+						<div class="filtmodal__checked filtmodal__checked_interval">
+							<span class="filtmodal__checked-min-01m"></span> -
+							<span class="filtmodal__checked-max-01m"></span>
+						</div>
 						<div class="filtmodal__reset"><img src="@img/catalog/reset-filtr.svg" alt="сбросить выбранное"></div>
 					</div>
 					<div class="filtmodal__item">
@@ -32,7 +35,10 @@
 					</div>
 					<div class="filtmodal__item">
 						<button data-parent="6" class="filtmodal__element">объем</button>
-						<span class="filtmodal__checked">любой</span>
+						<div class="filtmodal__checked filtmodal__checked_interval">
+							<span class="filtmodal__checked-min-02m"></span> -
+							<span class="filtmodal__checked-max-02m"></span>
+						</div>
 						<div class="filtmodal__reset"><img src="@img/catalog/reset-filtr.svg" alt="сбросить выбранное"></div>
 					</div>
 					<div class="filtmodal__item">
@@ -47,7 +53,7 @@
 					</div>
 					<div class="filtmodal__actions">
 						<button id="submit-filter" type="button" class="popup__button filtmodal__button-filter">сохранить</button>
-						<button id="reset-filter" class="popup__button filtmodal__button-filter filtmodal__button-filter_white">сбросить</button>
+						<button id="reset-filterall" class="popup__button filtmodal__button-filter filtmodal__button-filter_white">сбросить</button>
 					</div>
 				</div>
 
@@ -146,7 +152,7 @@
 					</div>
 					<div class="filtmodal__actions">
 					<button id="submit-filter" type="button" class="popup__button filtmodal__button-filter">применить</button>
-					<button id="reset-filter" type="button" class="popup__button filtmodal__button-filter_white filtmodal__button-filter">сбросить</button>
+					<button id="reset-filternoUi" type="button" class="popup__button filtmodal__button-filter_white filtmodal__button-filter">сбросить</button>
 					</div>
 				</div>
 
@@ -390,7 +396,7 @@
 					</div>
 					<div class="filtmodal__actions">
 					<button id="submit-filter" type="button" class="popup__button filtmodal__button-filter">применить</button>
-					<button id="reset-filter" type="button" class="popup__button filtmodal__button-filter_white filtmodal__button-filter">сбросить</button>
+					<button id="reset-filternoUi" type="button" class="popup__button filtmodal__button-filter_white filtmodal__button-filter">сбросить</button>
 					</div>
 				</div>
 
@@ -423,7 +429,7 @@
 				<div data-submenu="8" class="filtmodal__submenu submenu-filter">
 					<div class="submenu-filter__top">
 						<button type="button" class="submenu-filter__back"><img src="@img/catalog/back-arrow.svg" alt="назад"></button>
-						<h4 class="filtmodal__title">олтиванты</h4>
+						<h4 class="filtmodal__title">отливанты</h4>
 					</div>
 					<div class="submenu-filter__list">
 						<div class="submenu-filter__body options">
