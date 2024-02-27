@@ -103,11 +103,16 @@ export function rangeInit() {
 			// document.querySelector('.filtmodal__checked-min-01m'),
 			// document.querySelector('.filtmodal__checked-max-01m'),
 		];
+
 		priceSlider01m.noUiSlider.on('update', function (values, handle) {
 			snapValues01m[handle].innerHTML = values[handle];
 			priceSlider01m.closest('.popup__content').querySelector('.filtmodal-min').innerHTML = priceSlider01m.closest('.range').querySelector('#lower').innerHTML
 			priceSlider01m.closest('.popup__content').querySelector('.filtmodal-max').innerHTML = priceSlider01m.closest('.range').querySelector('#upper').innerHTML
-			// document.querySelector('.filtmodal__checked-max-01m').innerHTML = document.getElementById('upper').innerHTML
+		});
+
+		priceSlider01m.noUiSlider.on('change', function (values, handle) {
+			snapValues01m[handle].innerHTML = values[handle];
+			priceSlider01m.closest('.popup__content').querySelector('.filtmodal__item_cost').classList.add('_backcolor');
 		});
 	}
 	//мобилка попап объём каталог
@@ -133,12 +138,18 @@ export function rangeInit() {
 			priceSlider02m.closest('.submenu-filter__list').querySelector('#upper')
 			// document.getElementById('lower02m'),
 			// document.getElementById('upper02m'),
-
 		];
+
 		priceSlider02m.noUiSlider.on('update', function (values, handle) {
 			snapValues02m[handle].innerHTML = values[handle];
-			priceSlider02m.closest('.popup__content').querySelector('.volume .filtmodal-min').innerHTML = priceSlider02m.closest('.range').querySelector('#lower').innerHTML
-			priceSlider02m.closest('.popup__content').querySelector('.volume .filtmodal-max').innerHTML = priceSlider02m.closest('.range').querySelector('#upper').innerHTML
+			priceSlider02m.closest('.popup__content').querySelector('.filtmodal__item_volume .filtmodal-min').innerHTML = priceSlider02m.closest('.range').querySelector('#lower').innerHTML
+			priceSlider02m.closest('.popup__content').querySelector('.filtmodal__item_volume .filtmodal-max').innerHTML = priceSlider02m.closest('.range').querySelector('#upper').innerHTML
+			// priceSlider02m.closest('.popup__content').querySelector('.filtmodal__item.filtmodal__item_volume').classList.add('_backcolor')
+		});
+
+		priceSlider02m.noUiSlider.on('change', function (values, handle) {
+			snapValues02m[handle].innerHTML = values[handle];
+			priceSlider02m.closest('.popup__content').querySelector('.filtmodal__item.filtmodal__item_volume').classList.add('_backcolor')
 		});
 	}
 	document.addEventListener("click", documentActionsRange);

@@ -114,6 +114,7 @@
 		display: flex;
 		align-items: center;
 		column-gap: toRem(15);
+		@include adaptiveValue("column-gap", 15, 5,0,1920,1001);
 		margin-bottom: 10px;
 		cursor: pointer;
 		.filters__item_manufacturer & {
@@ -187,6 +188,10 @@
 			justify-content: space-between;
 			flex-wrap: wrap;
 			row-gap: 10px;
+			@media (max-width:$mobile){
+				 padding-left: 20px;
+				 padding-right: 20px; 
+			}
 			@media (max-width:$tablet) and (min-width:$mobile){
 				width: 120%;
 			}
@@ -211,12 +216,20 @@
 			outline: 1px solid $knopka-rozovaya;
 			border-radius: 16px;
 		}
+		@media (max-width:$mobile){
+			 padding-left: 0;
+			 padding-right: 0; 
+		}
 	}
 
 	&__reset, &__reset-check {
 		@media (min-width:$tablet){
 			top: 13px;
 			bottom: initial;
+			&:hover{
+				transition: color 0.3s;
+				color: $knopka-rozovaya;
+			}
 		}
 		// display: none;
 		// @media (max-width:$tablet){
@@ -258,8 +271,8 @@
 	}
 
 	&__list[data-showmore-content]{
-		@media (max-width:$tablet){
-			padding: 0 toRem(10);
+		@media (max-width:$tablet) and (min-width:$mobile){
+			padding: 0 toRem(0);
 			position: relative;
 			z-index: 5;
 		}
@@ -272,6 +285,10 @@
 	&__more {
 		margin-top: 14px;
 		color: $zagolovok;
+		&:hover{
+			transition: color 0.3s;
+			color: $knopka-rozovaya;
+		} 
 	}
 
 	&__help {

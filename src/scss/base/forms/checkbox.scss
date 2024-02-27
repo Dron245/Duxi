@@ -65,13 +65,15 @@
 		}
 
 		&_mini {
-			flex: 0 0 12px;
-			width: 12px;
-			height: 12px;
-			border-radius: 4px;
-			&::after{
-				width: 7px;
-				height: 7px;
+			@media (max-width:$mobile){
+				flex: 0 0 12px;
+				width: 12px;
+				height: 12px;
+				border-radius: 4px;
+				&::after{
+					width: 7px;
+					height: 7px;
+				} 
 			}
 		}
 		@media (max-width:$mobile){

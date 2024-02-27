@@ -64,7 +64,7 @@ body::after {
 	transition: transform 0.3s ease 0s;
 	background-color: white;
 	border: 1px solid $tekst-zagolovok-ne-aktivnyy;
-	padding: 20px;
+	// padding: 20px;
 	width: 100%;
 	@media (max-width: $mobile) {
 		max-width: initial;
@@ -117,9 +117,10 @@ body::after {
 			&._overflow-y {
 				// overflow: initial;
 				overflow-y: auto;
-				border-radius: 20px 0 0 20px;
+				// border-radius: 20px 0 0 20px;
 				&::-webkit-scrollbar {
 					width: 5px; /* Ширина всего элемента навигации */
+					display: none;
 				}
 				
 				&::-webkit-scrollbar-track {

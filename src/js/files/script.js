@@ -69,7 +69,7 @@ window.addEventListener('DOMContentLoaded', () => {
 		if (targetElement.closest('.filter__title') && targetElement.closest('.filters__item').querySelector('.checkbox')) {
 			let list = targetElement.closest('.filters__item').querySelector('.filter__list')
 			if (!list.closest('.filter__showmore').classList.contains('_showmore-active')) {
-				list.style.height = '80px'
+				list.style.height = '180px'
 			}
 		}
 
@@ -110,6 +110,15 @@ window.addEventListener('DOMContentLoaded', () => {
 			checked.innerHTML += targetElement.value + ", ";
 		}
 
+		//сбрасываю noUislider в фильтрах выбора каталога в моб версии в
+		// части удаления цвета бэкграунда у соответствующего пункта меню в корневом меню
+
+		if (targetElement.closest('#reset-filternoUi')) {
+			let numberSubmenu = targetElement.closest('.filtmodal__submenu').dataset.submenu;
+			const buttonEl = targetElement.closest('.filtmodal').querySelector(`[data-parent="${numberSubmenu}"]`).closest('.filtmodal__item')
+			buttonEl.classList.remove('_backcolor');
+		}
+
 		//сбрасываю чекбоксы по нажатию кнопки "сбросить" и очищаю поле выбранного фильтра
 		if (targetElement.closest('.filter__reset-check')) {
 			let valCheck = targetElement.closest('.filters__filter').querySelector('.filter__val')
@@ -122,7 +131,7 @@ window.addEventListener('DOMContentLoaded', () => {
 				valCheck.innerHTML = ' '
 			// }
 			
-			console.log(valCheck);
+			// console.log(valCheck);
 		}
 
 		//сбрасываю чекбоксы по нажатию кнопки "сбросить" в саб меню мобилки и очищаю пдсказку в основном меню фильтров в мобилке
@@ -137,10 +146,15 @@ window.addEventListener('DOMContentLoaded', () => {
 			checked.innerHTML = targetElement.value;
 		}
 
+		// очистка выбранных опций и снятие фона в основном меню фильтров в мобилке
 		if (targetElement.closest('#reset-filterall')) {
 			const checkeds = targetElement.closest('.filtmodal__wrapper ').querySelectorAll('.filtmodal__checked');
+			const filtmodalItem = targetElement.closest('.filtmodal__wrapper').querySelectorAll('.filtmodal__item');
 			checkeds.forEach(element => {
 				element.innerHTML = ' ';
+			});
+			filtmodalItem.forEach(element => {
+				element.classList.remove('_backcolor')
 			});
 		}
 	}
@@ -168,6 +182,7 @@ if (catalog) {
 		spollersWrapper.setAttribute('data-one-spoller', '')
 		summury.forEach(element => {
 			element.setAttribute('data-spoller-close', '')
+			element.classList.remove('_spoller-active')
 		});
 	}
 }
@@ -189,6 +204,6 @@ const popupContent = popupFiltmodal ? popupFiltmodal.closest('.popup__content') 
 // console.log(popupFiltmodal);
 // console.log(popupFiltmodal.clientHeight);
 // console.log(window.innerHeight);
-if (popupFiltmodal && (popupFiltmodal.clientHeight > window.innerHeight)) {
+if (popupFiltmodal && (popupFiltmodal.clientHeight > window.innerHeight - 60)) {
 	popupContent.classList.add('_overflow-y')
 }
