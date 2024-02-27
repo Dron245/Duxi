@@ -66,6 +66,17 @@
 	}
 	&__filter {
 		position: relative;
+		border-top: 1px solid #EEDCE1;
+		border-bottom: 1px solid #EEDCE1;
+		&:first-child{
+			border-top: none;
+		}
+		&:last-child{
+			border-bottom: none;
+		}
+		@media (max-width:$tablet){
+			border: none;
+		}
 	}
 
 	&__spollers {
@@ -92,14 +103,7 @@
 		margin-right: -10px;
 		padding-left: 10px;
 		padding-right: 10px;
-		border-top: 1px solid #EEDCE1;
-		border-bottom: 1px solid #EEDCE1;
-		&:first-child{
-			border-top: none;
-		}
-		&:last-child{
-			border-bottom: none;
-		}
+		
 		@media (max-width:$tablet){
 			border: none;
 			// outline: 1px solid;
@@ -118,7 +122,7 @@
 		margin-bottom: 10px;
 		cursor: pointer;
 		.filters__item_manufacturer & {
-			margin-bottom: 0;
+			// margin-bottom: 0;
 		}
 		@media (max-width:$tablet){
 			display: flex;
