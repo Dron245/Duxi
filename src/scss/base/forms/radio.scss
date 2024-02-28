@@ -39,11 +39,11 @@
 			flex: 0 0 12px;
 			border-radius: 50%;
 			outline: 1px solid $knopka-rozovaya;
-			@media (min-width:$mobile) and (max-width: $tablet){
-				width: 20px;
-				height: 20px;
-				flex: 0 0 20px;
-			}
+			// @media (min-width:$mobile) and (max-width: $tablet){
+			// 	width: 20px;
+			// 	height: 20px;
+			// 	flex: 0 0 20px;
+			// }
 		}
 		&:after {
 			content: "";
@@ -56,12 +56,12 @@
 			position: absolute;
 			left: 3.2px;
 			top: 3px;
-			@media (min-width:$mobile) and (max-width: $tablet){
-				width: 10px;
-				height: 10px;
-				left: 5px;
-				top: 5px;
-			}
+			// @media (min-width:$mobile) and (max-width: $tablet){
+			// 	width: 10px;
+			// 	height: 10px;
+			// 	left: 5px;
+			// 	top: 5px;
+			// }
 		}
 	}
 	// .options__text

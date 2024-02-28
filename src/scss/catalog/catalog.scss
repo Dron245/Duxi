@@ -103,7 +103,9 @@
 		margin-right: -10px;
 		padding-left: 10px;
 		padding-right: 10px;
-		
+		@media (min-width:$tablet){
+			 overflow: hidden; 
+		}
 		@media (max-width:$tablet){
 			border: none;
 			// outline: 1px solid;
@@ -216,9 +218,9 @@
 			position: absolute;
 			z-index: 5;
 			background-color: $fon;
-			padding: 10px toRem(10);
-			outline: 1px solid $knopka-rozovaya;
-			border-radius: 16px;
+			padding: 10px toRem(5);
+			// outline: 1px solid $knopka-rozovaya;
+			border-radius: 12px;
 		}
 		@media (max-width:$mobile){
 			 padding-left: 0;

@@ -164,6 +164,14 @@ export function rangeInit() {
 		if (targetEl.closest('#reset-filternoUi')) {
 			targetEl.closest('.filtmodal__submenu').querySelector('.range__slider').noUiSlider.reset();
 		}
+
+		//сбрасываю noUi ползунки при нажатии на общую кнопку "сбросить всё" в мобилке в фильтрах каталога
+		if (targetEl.closest('#reset-filterall')) {
+			const noUirange = document.querySelectorAll('.range__slider')
+			noUirange.forEach(element => {
+				element.noUiSlider.reset()
+			});
+		}
 	}
 }
 rangeInit();

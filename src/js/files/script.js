@@ -150,15 +150,46 @@ window.addEventListener('DOMContentLoaded', () => {
 		if (targetElement.closest('#reset-filterall')) {
 			const checkeds = targetElement.closest('.filtmodal__wrapper ').querySelectorAll('.filtmodal__checked');
 			const filtmodalItem = targetElement.closest('.filtmodal__wrapper').querySelectorAll('.filtmodal__item');
+			
+			//убираю подсказки в корневом меню модалка фильтры каталог
 			checkeds.forEach(element => {
 				element.innerHTML = ' ';
 			});
+
+			//убираю фог
 			filtmodalItem.forEach(element => {
 				element.classList.remove('_backcolor')
 			});
+
+			//сбрасываю чекбоксы во всех саб меню фильтрах
+			const subCheks = targetElement.closest('.filtmodal').querySelectorAll('.checkbox__input')
+			subCheks.forEach(element => {
+				element.checked = false;
+			});
+
+			// //сбрасываю noUi ползунки
+			// const noUirange = document.querySelectorAll('.range__slider')
+			// noUirange.forEach(element => {
+			// 	element.noUiSlider.reset()
+			// });
 		}
 	}
 });
+
+// let mediaQuery = window.matchMedia('(max-width: 768px)');
+	// mediaQuery.addListener(qwe);
+// function qwe () {
+	// const tabs01 = document.querySelector('#tabs01');
+	// 	const tabs02 = document.querySelector('#tabs02');
+	// if(mediaQuery.matches) {
+		// tabs01 ? tabs01.classList.remove('_tab-active') : null;
+		// tabs02 ? tabs02.classList.add('_tab-active') : null;
+	//   } else {
+		// tabs01 ? tabs01.classList.add('_tab-active') : null;
+		// tabs02 ? tabs02.classList.remove('_tab-active') : null;
+	//   }
+// }
+// qwe(mediaQuery);
 
 //Работа с табами на главной странице под банером
 if (window.innerWidth < 768) {
@@ -175,6 +206,30 @@ if (catalog) {
 	const spollersWrapper = catalog.querySelector('[data-spollers]')
 	const summury = catalog.querySelectorAll('.filter__title-wrapper')
 	// let filterList = catalog.querySelectorAll('.filter__list')
+
+	// let mediaQuerys = window.matchMedia('(max-width: 1001px)');
+	// mediaQuerys.addListener(qwe);
+// function qwe () {
+	// const tabs01 = document.querySelector('#tabs01');
+	// 	const tabs02 = document.querySelector('#tabs02');
+// 	if(mediaQuerys.matches) {
+// 		details.forEach(element => {
+// 			element.removeAttribute('data-open');
+// 		});
+// 		spollersWrapper.setAttribute('data-one-spoller', '')
+// 		summury.forEach(element => {
+// 			element.setAttribute('data-spoller-close', '')
+// 			element.classList.remove('_spoller-active')
+// 		});
+// 		// tabs01 ? tabs01.classList.remove('_tab-active') : null;
+// 		// tabs02 ? tabs02.classList.add('_tab-active') : null;
+// 	  } else {
+		
+// 		// tabs01 ? tabs01.classList.add('_tab-active') : null;
+// 		// tabs02 ? tabs02.classList.remove('_tab-active') : null;
+// 	  }
+// }
+// qwe(mediaQuerys);
 	if (window.innerWidth < 1001) {
 		details.forEach(element => {
 			element.removeAttribute('data-open');
