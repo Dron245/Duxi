@@ -159,6 +159,10 @@
 		}
 	}
 
+	&__title-help {
+
+	}
+
 	&__actions {
 		@media (min-width:$tablet){
 			 display: none; 
@@ -298,7 +302,21 @@
 	}
 
 	&__help {
-		transform: translateY(-2px);
+		// transform: translateY(-2px);
+		position: absolute;
+		z-index: 2;
+		@media (min-width:$tablet){
+			left: 86px;
+			top: 13px; 
+		}
+		@media (max-width:$tablet){
+			left: 93px;
+			top: 16px;
+		}
+
+		&_testers {
+			margin-left: 5px;
+		}
 	}
 
 	&__search-all {

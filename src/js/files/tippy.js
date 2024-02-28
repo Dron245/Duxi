@@ -13,5 +13,13 @@ import "../../scss/libs/tippy.scss";
 
 // Запускаем и добавляем в объект модулей
 flsModules.tippy = tippy('[data-tippy-content]', {
-
+	arrow: true,
+	placement: 'right',
+	content: '<div class="wrapper"><div class="top"><div class="title">title</div><div class="close">X</div><div class="content">fgdfgd</div></div></div>'
+});
+flsModules.tippy = tippy('[data-tippy-content-mob]', {
+	arrow: true,
+	placement: 'right',
+	allowHTML: true,
+	content: '<div class="wrapper"><div class="top"><div class="title">title</div><div class="close">X</div><div class="content">fgdfgd</div></div></div>'
 });

@@ -1,15 +1,35 @@
 .tippy-box[data-animation="fade"][data-state="hidden"] {
 	opacity: 0;
 }
+[data-tippy-content-mob] {
+	@media (min-width:1001.98){
+		 display: none; 
+	}
+}
+[data-tippy-content] {
+	@media (max-width: em(1001.98)){
+		  display: none;
+	}
+}
 [data-tippy-root] {
-	max-width: calc(100vw - 10px);
+	// max-width: calc(100vw - 10px);
+	max-width: 180px;
+	@media (max-width:1001.98px){
+		// width: 96%; /* 960/1000 */
+		// position: fixed !important;
+		// inset: 20px 20px !important;
+		// transform: none !important;
+		// max-width: 100% !important;
+	}
 }
 .tippy-box {
+	max-width: inherit !important;
 	position: relative;
-	background-color: #333;
-	color: #fff;
-	border-radius: 4px;
-	font-size: 14px;
+	background-color: #639c9e;
+	// background-color: #130808;
+	// color: #fff;
+	border-radius: 12px;
+	font-size: 12px;
 	line-height: 1.4;
 	outline: 0;
 	transition-property: transform, visibility, opacity;
@@ -58,7 +78,11 @@
 .tippy-arrow {
 	width: 16px;
 	height: 16px;
-	color: #333;
+	color: #fff;
+	@media (max-width:1001.98px){
+		// display: none;
+	}
+	// color: #240c0c;
 }
 .tippy-arrow:before {
 	content: "";
