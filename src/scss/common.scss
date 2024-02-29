@@ -11,9 +11,6 @@ h3[class*="__title"] {
 	@media (max-width: $mobile) {
 		@include adaptiveValue("font-size", 50, 22, 0, 768, 440);
 	}
-	// &:not(:last-child) {
-	// 	@include adaptiveValue("margin-right", 60, 15, 0, 1920, 768);
-	// }
 	@media (max-width: $mobileSmall) {
 		margin-bottom: toRem(20);
 	}

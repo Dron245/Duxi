@@ -64,7 +64,7 @@ body::after {
 	transition: transform 0.3s ease 0s;
 	background-color: white;
 	border: 1px solid $tekst-zagolovok-ne-aktivnyy;
-	// padding: 20px;
+	padding: 20px;
 	width: 100%;
 	@media (max-width: $mobile) {
 		max-width: initial;
@@ -104,6 +104,7 @@ body::after {
 
 	&__content {
 		#filters-main & {
+			padding: 0;
 			// min-height: 1340px;
 			box-shadow: 4px 4px 30px 0px rgba(0, 0, 0, 0.25);
 			background-color: #fff;

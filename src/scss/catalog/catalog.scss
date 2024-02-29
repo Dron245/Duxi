@@ -57,6 +57,7 @@
 
 	&__main {
 		// outline: 1px solid blue;
+		flex: 1 0;
 	}
 }
 
@@ -382,6 +383,14 @@
 		}
 
 		&__field-val {
+			width: 60px;
+			height: 40px;
+			padding: 12px 0;
+			font-size: 13px;
+			display: flex;
+			justify-content: center;
+			border: 1px solid #B9B9B9;
+			background: #FFF;
 		}
 }
 
@@ -473,13 +482,6 @@
 
 
 .range__field-val {
-	// border: 2px solid red;
-	width: 60px;
-	height: 40px;
-	padding: 12px 0;
-	font-size: 13px;
-	display: flex;
-	justify-content: center;
-	border: 1px solid #B9B9B9;
-	background: #FFF;
+
 }
+

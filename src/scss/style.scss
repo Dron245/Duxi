@@ -164,6 +164,7 @@ main {
 @import "footer";
 
 // Подключение стилей отдельных страниц
+@import "../scss/base/loader.scss";
 @import "home/baners";
 @import "home/products";
 @import "home/discounts";
@@ -174,4 +175,4 @@ main {
 @import "brands/brands.scss";
 @import "catalog/catalog.scss";
 @import "catalog/popup-catalog.scss";
-@import "../scss/base/loader.scss";
+@import "search/search.scss";

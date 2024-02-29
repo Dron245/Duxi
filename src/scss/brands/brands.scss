@@ -153,6 +153,9 @@
 	  }
 	  @media (max-width:$mobile){
 		width: 16.5%;
+		.main-search & {
+			width: initial;
+		}
 	  }
 	  img {
 			width: 100%;
@@ -163,9 +166,19 @@
 		
 		&_tile {
 			// outline: 1px solid blue;
-			display: flex;
-			flex-wrap: wrap;
-			gap: toRem(20);
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+			// flex-wrap: wrap;
+			gap: 30px 20px;
+			@media (max-width:em(530)){
+				grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+			}
+			.list & {
+				grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
+				@media (max-width:$mobileSmall){
+					grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+				}
+			}
 		}
 	}
 

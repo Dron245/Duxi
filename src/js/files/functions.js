@@ -233,7 +233,7 @@ export function spollers() {
 						spollerTitle.setAttribute('tabindex', '-1');
 						spollerTitle.classList.remove('_spoller-active');
 						spollerItem.open = true;
-						spollerTitle.nextElementSibling.hidden = false;
+						spollerTitle.nextElementSibling ? spollerTitle.nextElementSibling.hidden = false : null;
 					}
 				});
 			}

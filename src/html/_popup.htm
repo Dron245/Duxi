@@ -675,3 +675,34 @@
 </div>
 
 
+<div id="advanced-search" aria-hidden="true" class="popup">
+	<div class="popup__wrapper">
+		<div class="popup__content">
+			<button data-close type="button" class="popup__close"><img src="@img/popup/close.svg" alt=""></button>
+			<div class="popup__body">
+				<h4 class="popup__title">вход</h4>
+				<form method="post" action="#" class="popup__form">
+					<div class="popup__form-item">
+						<input required autocomplete="off" type="email" name="form[]" data-error="Ошибка" placeholder="E-MAIL" class="popup__input">
+						<button data-popup="#vhod-tel" type="button" class="popup__mini-button">Войти по номеру телефона</button>
+					</div>
+					<div class="popup__form-item">
+						<div class="popup__input-wrapper">
+							<input required autocomplete="off" type="password" name="form[]" data-error="Ошибка" placeholder="ПАРОЛЬ" class="popup__input">
+							<button type="button" class="popup__img-pasword">
+								<img class="popup__img-v" src="@img/popup/pasword-v.svg" alt="">
+								<img class="popup__img-nv" src="@img/popup/pasword-nv.svg" alt="">
+							</button>
+						</div>
+						<button data-popup="#sbros-pasword" type="button" class="popup__mini-button">Забыли пароль?</button>
+					</div>
+					<div class="popup__form-item">
+						<button id="btn-search" type="submit" class="popup__button">войти</button>
+						<a data-popup="#reg" href="#" class="popup__button popup__button_white">регистрация</a>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+

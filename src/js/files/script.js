@@ -87,6 +87,26 @@ window.addEventListener('DOMContentLoaded', () => {
 			targetElement.closest('[data-submenu]').classList.remove('_sub-menu-open');
 		}
 
+		//страница "Поиск". Открытие результатов поиска по нажатию заголовка соответствующей рубрики.
+		if (targetElement.closest('[data-but]')) {
+			const buttonTilteSearch = document.querySelectorAll('.main-search__title');
+			buttonTilteSearch.forEach(element => {
+				element.classList.remove('_active-search-title')
+			});
+			targetElement.classList.add('_active-search-title')
+			const parId = targetElement.dataset.but ? targetElement.dataset.but : null;
+			const par = document.querySelector(`[data-par="${parId}"]`);
+			// console.log(parId);
+			// console.log(par);
+			if (par) {
+				const spo = document.querySelectorAll('.main-search__body')
+				spo.forEach(element => {
+					element.classList.remove('_open-result-search')
+				});
+				par.classList.add('_open-result-search')
+			}
+		}
+
 		//раскрашиваю кнопку выбора категории фильтра при выбранном варианте у радио кнопок в сабменю в моб версии
 		if (window.innerWidth < 768 && targetElement.closest('.options__input')) {
 			let numberSubmenu = targetElement.closest('.filtmodal__submenu').dataset.submenu;
