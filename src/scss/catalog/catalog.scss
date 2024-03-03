@@ -1,5 +1,4 @@
 .page {
-
 	&__catalog {
 		.brands-tabs {
 			position: relative;
@@ -12,15 +11,15 @@
 				flex: 0 0 23.1112%;
 			}
 		}
-		@media (max-width:$mobile){
+		@media (max-width: $mobile) {
 			.brands-tabs__navigation {
 				display: flex;
 				width: 100%;
 			}
 			.brands-tabs__button {
 				svg {
-					@include adaptiveValue("width", 50, 20,0,768,320);
-					@include adaptiveValue("height", 50, 20,0,768,320);
+					@include adaptiveValue("width", 50, 20, 0, 768, 320);
+					@include adaptiveValue("height", 50, 20, 0, 768, 320);
 				}
 			}
 		}
@@ -33,13 +32,12 @@
 }
 
 .catalog {
-
 	&__container {
 	}
 
 	&__wrapper {
 		background-color: $fon;
-		@media (min-width:$tablet){
+		@media (min-width: $tablet) {
 			display: flex;
 			column-gap: toRem(20);
 		}
@@ -47,35 +45,36 @@
 
 	&__filters {
 		// outline: 1px solid red;
-		@media (min-width:$tablet){
+		@media (min-width: $tablet) {
 			flex: 0 0 21.089631%; /* 240/1138 */
 		}
-		@media (max-width:$mobile){
-			 display: none; 
+		@media (max-width: $mobile) {
+			display: none;
 		}
 	}
 
 	&__main {
 		// outline: 1px solid blue;
-		flex: 1 0;
+		@media (min-width:$tablet){
+			flex: 0 0 75%; 
+		}
 	}
 }
 
 .filters {
-
 	&__form {
 	}
 	&__filter {
 		position: relative;
-		border-top: 1px solid #EEDCE1;
-		border-bottom: 1px solid #EEDCE1;
-		&:first-child{
+		border-top: 1px solid #eedce1;
+		border-bottom: 1px solid #eedce1;
+		&:first-child {
 			border-top: none;
 		}
-		&:last-child{
+		&:last-child {
 			border-bottom: none;
 		}
-		@media (max-width:$tablet){
+		@media (max-width: $tablet) {
 			border: none;
 		}
 	}
@@ -83,17 +82,17 @@
 	&__spollers {
 		padding-left: 10px;
 		padding-right: 10px;
-		@media (max-width:$tablet){
+		@media (max-width: $tablet) {
 			margin-bottom: 20px;
 			display: grid;
 			// flex-wrap: wrap;
 			gap: 20px;
-			grid-template-columns: repeat(auto-fit, minmax(calc(25% - 20px) , 1fr));
+			grid-template-columns: repeat(auto-fit, minmax(calc(25% - 20px), 1fr));
 		}
 	}
 
 	&__title {
-		@media (max-width:$tablet){
+		@media (max-width: $tablet) {
 			display: none;
 		}
 	}
@@ -104,30 +103,29 @@
 		margin-right: -10px;
 		padding-left: 10px;
 		padding-right: 10px;
-		@media (min-width:$tablet){
-			 overflow: hidden; 
+		@media (min-width: $tablet) {
+			overflow: hidden;
 		}
-		@media (max-width:$tablet){
+		@media (max-width: $tablet) {
 			border: none;
 			// outline: 1px solid;
 		}
 	}
 }
 .filter {
-
 	&__title-wrapper {
 		list-style: none;
 		padding: 15px 0 13px 0px;
 		display: flex;
 		align-items: center;
 		column-gap: toRem(15);
-		@include adaptiveValue("column-gap", 15, 5,0,1920,1001);
+		@include adaptiveValue("column-gap", 15, 5, 0, 1920, 1001);
 		margin-bottom: 10px;
 		cursor: pointer;
 		.filters__item_manufacturer & {
 			// margin-bottom: 0;
 		}
-		@media (max-width:$tablet){
+		@media (max-width: $tablet) {
 			display: flex;
 			flex-wrap: wrap;
 			margin-bottom: 0;
@@ -141,11 +139,10 @@
 		}
 		& img {
 			._spoller-active & {
-				
 				transform: rotate(90deg);
 			}
 		}
-		@media (max-width:$tablet){
+		@media (max-width: $tablet) {
 			display: none;
 		}
 	}
@@ -155,18 +152,17 @@
 		align-items: center;
 		column-gap: toRem(15);
 		text-transform: uppercase;
-		@media (max-width:$tablet){
+		@media (max-width: $tablet) {
 			font-size: toRem(19);
 		}
 	}
 
 	&__title-help {
-
 	}
 
 	&__actions {
-		@media (min-width:$tablet){
-			 display: none; 
+		@media (min-width: $tablet) {
+			display: none;
 		}
 		// outline: 1px solid red;
 		display: flex;
@@ -178,7 +174,7 @@
 
 	&__val {
 		// outline: 1px solid blue;
-		min-height:12px;
+		min-height: 12px;
 		font-size: toRem(12);
 		// text-wrap: nowrap;
 		padding-right: 10px;
@@ -186,40 +182,40 @@
 		white-space: nowrap;
 		overflow: hidden;
 		max-width: 110px;
-		@include adaptiveValue("max-width",160 ,110,0,1001,768 );
+		@include adaptiveValue("max-width", 160, 110, 0, 1001, 768);
 	}
 
 	&__body {
 		padding-top: 10px;
 		padding-bottom: 10px;
-		
+
 		&.range {
 			display: flex;
 			align-items: center;
 			justify-content: space-between;
 			flex-wrap: wrap;
 			row-gap: 10px;
-			@media (max-width:$mobile){
-				 padding-left: 20px;
-				 padding-right: 20px; 
+			@media (max-width: $mobile) {
+				padding-left: 20px;
+				padding-right: 20px;
 			}
-			@media (max-width:$tablet) and (min-width:$mobile){
+			@media (max-width: $tablet) and (min-width: $mobile) {
 				width: 120%;
 			}
 		}
 		& .header-center__form {
 			margin-bottom: 20px;
 			input {
-				&:hover{
+				&:hover {
 					border-radius: 16px;
 				}
 				background-color: #fef3f6;
 			}
-			@media (max-width:$tablet){
+			@media (max-width: $tablet) {
 				display: none;
 			}
 		}
-		@media (max-width:$tablet){
+		@media (max-width: $tablet) {
 			position: absolute;
 			z-index: 5;
 			background-color: $fon;
@@ -227,17 +223,18 @@
 			// outline: 1px solid $knopka-rozovaya;
 			border-radius: 12px;
 		}
-		@media (max-width:$mobile){
-			 padding-left: 0;
-			 padding-right: 0; 
+		@media (max-width: $mobile) {
+			padding-left: 0;
+			padding-right: 0;
 		}
 	}
 
-	&__reset, &__reset-check {
-		@media (min-width:$tablet){
+	&__reset,
+	&__reset-check {
+		@media (min-width: $tablet) {
 			top: 13px;
 			bottom: initial;
-			&:hover{
+			&:hover {
 				transition: color 0.3s;
 				color: $knopka-rozovaya;
 			}
@@ -254,63 +251,58 @@
 		// }
 	}
 
-
 	&__showmore {
-		@media (min-width:$tablet){
-			 max-height: 258px;
+		@media (min-width: $tablet) {
+			max-height: 258px;
 		}
 		// height: 600px;
 		&._showmore-active {
 			overflow-y: auto;
+			@media (max-width:$tablet){
+				overflow-y: initial;
+			}
 		}
-		@media (max-width:$tablet){
-			
+		@media (max-width: $tablet) {
 		}
-		&::-webkit-scrollbar {
-			width: 5px; /* Ширина всего элемента навигации */
-		}
-		
-		&::-webkit-scrollbar-track {
-			background: #ffedf0; /* Цвет дорожки */
-		}
-		
-		&::-webkit-scrollbar-thumb {
-			background-color: $knopka-rozovaya; /* Цвет бегунка */
-			border-radius: 20px; /* Округление бегунка */
-			border: 3px solid $knopka-rozovaya; /* Оформление границ бегунка */
-		}
+		@include scroll-view;
 	}
 
-	&__list[data-showmore-content]{
-		@media (max-width:$tablet) and (min-width:$mobile){
+	&__list[data-showmore-content] {
+		@media (max-width: $tablet) and (min-width: $mobile) {
 			padding: 0 toRem(0);
 			position: relative;
 			z-index: 5;
+			padding-right: 8px;
+			max-height: 258px;
+			overflow-y: auto;
+			@include scroll-view;
 		}
 	}
 
 	&__list-item {
-		&:not(:last-child) {margin-bottom: toRem(14);}
+		&:not(:last-child) {
+			margin-bottom: toRem(14);
+		}
 	}
 
 	&__more {
 		margin-top: 14px;
 		color: $zagolovok;
-		&:hover{
+		&:hover {
 			transition: color 0.3s;
 			color: $knopka-rozovaya;
-		} 
+		}
 	}
 
 	&__help {
 		// transform: translateY(-2px);
 		position: absolute;
 		z-index: 2;
-		@media (min-width:$tablet){
+		@media (min-width: $tablet) {
 			left: 86px;
-			top: 13px; 
+			top: 13px;
 		}
-		@media (max-width:$tablet){
+		@media (max-width: $tablet) {
 			left: 93px;
 			top: 16px;
 		}
@@ -326,26 +318,26 @@
 		justify-content: center;
 		align-items: center;
 		text-transform: uppercase;
-		color: #FFF;
+		color: #fff;
 		background-color: $knopka-rozovaya;
 		padding-top: 14px;
 		padding-bottom: 14px;
-		@media (max-width:$tablet){
+		@media (max-width: $tablet) {
 			display: none;
 		}
 	}
 }
 
 .options {
-
 	&__item {
-		.catalog & {
-		margin-bottom: 14px;
-		@media (max-width:$tablet){
-			&:last-child{
-				margin-bottom: 0;
+		.catalog &,
+		#advanced-search & {
+			margin-bottom: 14px;
+			@media (max-width: $tablet) {
+				&:last-child {
+					margin-bottom: 0;
+				}
 			}
-		}
 		}
 	}
 
@@ -359,39 +351,37 @@
 	}
 }
 
-
 .range {
+	&__slider {
+		flex: 1 0 100%;
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
 
-		&__slider {
-			flex: 1 0 100%;
-			padding-top: 20px;
-			padding-bottom: 20px;
+	&__value {
+		display: flex;
+		align-items: center;
+		column-gap: toRem(9);
+		@media (max-width: $tablet) {
+			flex: 0 0 50%;
+			width: 50%;
+			column-gap: toRem(5);
 		}
+	}
 
-		&__value {
-			display: flex;
-			align-items: center;
-			column-gap: toRem(9);
-			@media (max-width:$tablet){
-				flex: 0 0 50%;
-				width: 50%;
-				column-gap: toRem(5);
-			}
-		}
+	&__text {
+	}
 
-		&__text {
-		}
-
-		&__field-val {
-			width: 60px;
-			height: 40px;
-			padding: 12px 0;
-			font-size: 13px;
-			display: flex;
-			justify-content: center;
-			border: 1px solid #B9B9B9;
-			background: #FFF;
-		}
+	&__field-val {
+		width: 60px;
+		height: 40px;
+		padding: 12px 0;
+		font-size: 13px;
+		display: flex;
+		justify-content: center;
+		border: 1px solid #b9b9b9;
+		background: #fff;
+	}
 }
 
 .showmore {
@@ -403,18 +393,17 @@
 }
 
 .main-catalog {
-
 	&__title {
 	}
 
 	&__text {
 		margin-bottom: toRem(40);
 		line-height: normal;
-		@media (max-width:$tablet){
+		@media (max-width: $tablet) {
 			font-size: toRem(20);
 		}
-		@media (max-width:$mobile){
-			 @include adaptiveValue("font-size", 28, 14,0,768,320); 
+		@media (max-width: $mobile) {
+			@include adaptiveValue("font-size", 28, 14, 0, 768, 320);
 		}
 	}
 
@@ -423,22 +412,23 @@
 		grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
 		// flex-wrap: wrap;
 		gap: 30px 20px;
-		@media (max-width:em(530)){
+		@media (max-width: em(530)) {
 			grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
 		}
 		.list & {
 			grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
-			@media (max-width:$mobileSmall){
+			@media (max-width: $mobileSmall) {
 				grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 			}
 		}
 	}
+
 	&__products {
 	}
 
 	&__mobile-filters-open {
 		display: none;
-		@media (max-width:$mobile){
+		@media (max-width: $mobile) {
 			// display: block;
 			margin-left: 10px;
 			display: flex;
@@ -447,11 +437,11 @@
 			color: $zagolovok;
 			padding: 20px;
 			text-transform: uppercase;
-			border: 1px solid #931E3F;
+			border: 1px solid #931e3f;
 			width: 100%;
-			@include adaptiveValue("font-size", 30, 15,0,768,320);
-			@media (max-width:$mobileSmall){
-				 padding: 12px; 
+			@include adaptiveValue("font-size", 30, 15, 0, 768, 320);
+			@media (max-width: $mobileSmall) {
+				padding: 12px;
 			}
 		}
 	}
@@ -477,11 +467,5 @@
 	}
 }
 
-
-
-
-
 .range__field-val {
-
 }
-

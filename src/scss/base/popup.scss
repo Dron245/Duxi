@@ -27,6 +27,12 @@ body::after {
 	transition: visibility 0.8s ease 0s;
 	visibility: hidden;
 	pointer-events: none;
+	// &#advanced-search {
+	// 	z-index: 150;
+	// 	visibility: visible;
+	// 	overflow: auto;
+	// 	pointer-events: auto;
+	// }
 	@media (max-width: $mobile) {
 		padding: 30px;
 	}
@@ -39,6 +45,7 @@ body::after {
 	visibility: visible;
 	overflow: auto;
 	pointer-events: auto;
+	
 }
 .popup_show .popup__content {
 	visibility: visible;
@@ -84,6 +91,9 @@ body::after {
 	}
 	#city & {
 		max-width: 840px;
+	}
+	#advanced-search & {
+		max-width: 1230px;
 	}
 	max-width: 340px;
 	border-radius: 10px;

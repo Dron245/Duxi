@@ -675,34 +675,469 @@
 </div>
 
 
-<div id="advanced-search" aria-hidden="true" class="popup">
+<div id="search-qr" aria-hidden="true" class="popup">
 	<div class="popup__wrapper">
 		<div class="popup__content">
 			<button data-close type="button" class="popup__close"><img src="@img/popup/close.svg" alt=""></button>
 			<div class="popup__body">
-				<h4 class="popup__title">вход</h4>
-				<form method="post" action="#" class="popup__form">
-					<div class="popup__form-item">
-						<input required autocomplete="off" type="email" name="form[]" data-error="Ошибка" placeholder="E-MAIL" class="popup__input">
-						<button data-popup="#vhod-tel" type="button" class="popup__mini-button">Войти по номеру телефона</button>
+				<h4 class="popup__title">Поиск товара по штрих-коду</h4>
+				<div class="popup__qr-content qr-content">
+					<div class="qr-content__img">
+						<img src="@img/search/qr-search-women.png" alt="">
 					</div>
-					<div class="popup__form-item">
-						<div class="popup__input-wrapper">
-							<input required autocomplete="off" type="password" name="form[]" data-error="Ошибка" placeholder="ПАРОЛЬ" class="popup__input">
-							<button type="button" class="popup__img-pasword">
-								<img class="popup__img-v" src="@img/popup/pasword-v.svg" alt="">
-								<img class="popup__img-nv" src="@img/popup/pasword-nv.svg" alt="">
-							</button>
-						</div>
-						<button data-popup="#sbros-pasword" type="button" class="popup__mini-button">Забыли пароль?</button>
-					</div>
-					<div class="popup__form-item">
-						<button id="btn-search" type="submit" class="popup__button">войти</button>
-						<a data-popup="#reg" href="#" class="popup__button popup__button_white">регистрация</a>
-					</div>
-				</form>
+					<p class="qr-content__text">Для сканирования штрихкода товара разрешите сайту Духи.ру использовать камеру устройства</p>
+				</div>
+				<button data-popup="#qr-scan" id="qr-search" type="submit" class="popup__button popup__button_qr">разрешить</button>
 			</div>
 		</div>
 	</div>
 </div>
 
+<div id="qr-scan" aria-hidden="true" class="popup">
+	<div class="popup__wrapper">
+		<div class="popup__content">
+			<button data-close type="button" class="popup__close"><img src="@img/popup/close.svg" alt=""></button>
+			<div class="popup__body">
+				<h4 class="popup__title">Поиск товара по штрих-коду</h4>
+				<div class="popup__qr-content qr-content">
+					<div class="qr-content__img">
+						<img src="@img/search/qr-camera.jpg" alt="">
+					</div>
+					<p class="qr-content__text">Сфокусируйте камеру на штрих-коде</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Расширенный поиск -->
+<div id="advanced-search" aria-hidden="true" class="popup">
+	<div class="popup__wrapper">
+		<div class="popup__content">
+			<button data-close type="button" class="popup__close"><img src="@img/popup/close.svg" alt=""></button>
+			<div class="popup__body">
+				<h4 class="popup__title">выбор города</h4>
+				<form action="#" method="get" class="header-center__form advanced-search">
+					<div class="advanced-search__stroke-input">
+						<button class="header-center__button"><img src="@img/header/search30x30.svg" alt="Поиск"></button>
+						<input autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Поиск товара" class="header-center__input">
+					</div>
+					<div class="advanced-search__wrapper">
+						<div class="advanced-search__column">
+							<div class="filters__filter">
+							<div  class="filters__item filter ">
+								<div class="filter__title-wrapper">
+									
+									<span class="filter__title">категория</span>
+									<div class="filter__actions">
+										<div class="filter__val">только товары в наличии</div>
+									</div>
+								</div>
+								<div class="filter__body options">
+									<div class="options__item">
+										<input id="o_adv-s-6" class="options__input" checked type="radio" value="только товары в наличии" name="option2">
+										<label for="o_adv-s-6" class="options__label"><span class="options__text">только товары в наличии</span></label>
+									</div>
+									<div class="options__item">
+										<input id="o_adv-s-7" class="options__input" type="radio" value="только отсутствующие товары" name="option2">
+										<label for="o_adv-s-7" class="options__label"><span class="options__text">только отсутствующие товары</span></label>
+									</div>
+									<div class="options__item">
+										<input id="o_adv-s-8" class="options__input" type="radio" value="любые товары" name="option2">
+										<label for="o_adv-s-8" class="options__label"><span class="options__text">любые товары</span></label>
+									</div>
+									<div class="options__item">
+										<input id="o_adv-s-9" class="options__input" type="radio" value="вначале дороже" name="option2">
+										<label for="o_adv-s-9" class="options__label"><span class="options__text">вначале дороже</span></label>
+									</div>
+									<div class="options__item">
+										<input id="o_adv-s-10" class="options__input" type="radio" value="по популярности" name="option2">
+										<label for="o_adv-s-10" class="options__label"><span class="options__text">по популярности</span></label>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<div class="filters__filter">
+							<button type="button" class="filter__reset">сбросить</button>
+							<div  class="filters__item filter ">
+								<div class="filter__title-wrapper">
+									
+									<span class="filter__title">цена</span>
+									<div class="filter__actions">
+										<div class="filter__val">от <span class="filter__val-low">30000</span> до <span class="filter__val-max">15000</span> руб.</div>
+									</div>
+								</div>
+								
+								<div class="filter__body range">
+									<div class="range__value">
+										<span class="range__text">от</span>
+										<div class="range__field-val " id="lower-cost"></div>
+										<span class="range__text">руб.</span>
+									</div>
+									<div class="range__value">
+										<span class="range__text">до</span>
+										<div class="range__field-val " id="upper-cost"></div>
+										<span class="range__text">руб.</span>
+									</div>
+									<div class="range__slider" id="range01-adv"></div>
+								</div>
+							</div>
+						</div>
+
+						<div class="filters__filter">
+							<button type="button" class="filter__reset">сбросить</button>
+							<div  class="filters__item  filter">
+								<div class="filter__title-wrapper">
+									
+									<span class="filter__title">объём</span>
+									<div class="filter__actions">
+										<div class="filter__val">от <span class="filter__val-low">20</span> до <span class="filter__val-max">60</span> руб.</div>
+									</div>
+								</div>
+									
+								<div class="filter__body range">
+									<div class="range__value">
+										<span class="range__text">от</span>
+										<div class="range__field-val " id="lower-volume"></div>
+										<span class="range__text">мл.</span>
+									</div>
+									<div class="range__value">
+										<span class="range__text">до</span>
+										<div class="range__field-val " id="upper-volume"></div>
+										<span class="range__text">мл.</span>
+									</div>
+									<div class="range__slider" id="range02-adv"></div>
+								</div>
+							</div>
+						</div>
+						</div>
+						<div class="advanced-search__column">
+
+							<div class="filters__filter">
+								<button type="button" class="filter__reset-check">сбросить</button>
+								<div  class="filters__item  filter">
+									<div class="filter__title-wrapper _spoller-active">
+										
+										<span class="filter__title">парфюмерия</span>
+										<div class="filter__actions">
+										<div class="filter__val">туалетная вода (edt)</div>
+									</div>
+									</div>
+									
+									<div class="filter__body showmore">
+										<div class="filter__showmore">
+											<ul class="filter__list">
+												<li class="filter__list-item">
+													<div class="checkbox">
+														<input id="c-adv_11" data-error="Ошибка" class="checkbox__input" type="checkbox" value="туалетная вода (edt)" name="form[]">
+														<label for="c-adv_11" class="checkbox__label">
+															<span class="checkbox__body "></span>
+															<span class="checkbox__text">туалетная вода (edt)</span></label>
+													</div>
+												</li>
+												<li class="filter__list-item">
+													<div class="checkbox">
+														<input id="c-adv_12" data-error="Ошибка" class="checkbox__input" type="checkbox" value="парфюмерная вода (edp)" name="form[]">
+														<label for="c-adv_12" class="checkbox__label">
+															<span class="checkbox__body "></span>
+															<span class="checkbox__text">парфюмерная вода (edp)</span></label>
+													</div>
+												</li>
+												<li class="filter__list-item">
+													<div class="checkbox">
+														<input id="c-adv_13" data-error="Ошибка" class="checkbox__input" type="checkbox" value="духи (parfum)" name="form[]">
+														<label for="c-adv_13" class="checkbox__label">
+															<span class="checkbox__body "></span>
+															<span class="checkbox__text">духи (parfum)</span></label>
+													</div>
+												</li>
+												<li class="filter__list-item">
+													<div class="checkbox">
+														<input id="c-adv_14" data-error="Ошибка" class="checkbox__input" type="checkbox" value="одеколон (colonge)" name="form[]">
+														<label for="c-adv_14" class="checkbox__label">
+															<span class="checkbox__body "></span>
+															<span class="checkbox__text">одеколон (colonge)</span></label>
+													</div>
+												</li>
+												<li class="filter__list-item">
+													<div class="checkbox">
+														<input id="c-adv_15" data-error="Ошибка" class="checkbox__input" type="checkbox" value="одеколон (colonge)" name="form[]">
+														<label for="c-adv_15" class="checkbox__label">
+															<span class="checkbox__body "></span>
+															<span class="checkbox__text">одеколон (colonge)</span></label>
+													</div>
+												</li>
+												<li class="filter__list-item">
+													<div class="checkbox">
+														<input id="c-adv_16" data-error="Ошибка" class="checkbox__input" type="checkbox" value="одеколон (colonge)" name="form[]">
+														<label for="c-adv_16" class="checkbox__label">
+															<span class="checkbox__body "></span>
+															<span class="checkbox__text">одеколон (colonge)</span></label>
+													</div>
+												</li>
+												<li class="filter__list-item">
+													<div class="checkbox">
+														<input id="c-adv_17" data-error="Ошибка" class="checkbox__input" type="checkbox" value="одеколон (colonge)" name="form[]">
+														<label for="c-adv_17" class="checkbox__label">
+															<span class="checkbox__body "></span>
+															<span class="checkbox__text">одеколон (colonge)</span></label>
+													</div>
+												</li>
+												<li class="filter__list-item">
+													<div class="checkbox">
+														<input id="c-adv_18" data-error="Ошибка" class="checkbox__input" type="checkbox" value="одеколон (colonge)" name="form[]">
+														<label for="c-adv_18" class="checkbox__label">
+															<span class="checkbox__body "></span>
+															<span class="checkbox__text">одеколон (colonge)</span></label>
+													</div>
+												</li>
+												<li class="filter__list-item">
+													<div class="checkbox">
+														<input id="c-adv_19" data-error="Ошибка" class="checkbox__input" type="checkbox" value="одеколон (colonge)" name="form[]">
+														<label for="c-adv_19" class="checkbox__label">
+															<span class="checkbox__body "></span>
+															<span class="checkbox__text">одеколон (colonge)</span></label>
+													</div>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="filters__filter">
+							<button type="button" class="filter__reset-check">сбросить</button>
+							<div  class="filters__item  filters__item_manufacturer filter">
+								<div class="filter__title-wrapper _spoller-active">
+									
+									<span class="filter__title">производители</span>
+									<div class="filter__actions">
+										<div class="filter__val">Chanel</div>
+									</div>
+								</div>
+								
+								<div class="filter__body showmore">
+									<div class="header-center__form">
+										<input id="search-brnds-adv" autocomplete="off" type="search" name="form[]" data-error="Ошибка" placeholder="Поиск товара" class="header-center__input input">
+										<label for="search-brnds-adv" class="header-center__button search-button">
+											<img class="img-search-small" src="@img/header/search30x30.svg" alt="Поиск">
+										</label>
+									</div>
+									<div class="filter__showmore ">
+										<ul class="filter__list">
+											<li class="filter__list-item">
+												<div class="checkbox">
+													<input id="c_21" data-error="Ошибка" class="checkbox__input" type="checkbox" value="Chanel" name="form[]">
+													<label for="c_21" class="checkbox__label">
+														<span class="checkbox__body "></span>
+														<span class="checkbox__text">Chanel</span></label>
+												</div>
+											</li>
+											<li class="filter__list-item">
+												<div class="checkbox">
+													<input id="c_22" data-error="Ошибка" class="checkbox__input" type="checkbox" value="Versage" name="form[]">
+													<label for="c_22" class="checkbox__label">
+														<span class="checkbox__body "></span>
+														<span class="checkbox__text">Versage</span></label>
+												</div>
+											</li>
+											<li class="filter__list-item">
+												<div class="checkbox">
+													<input id="c_23" data-error="Ошибка" class="checkbox__input" type="checkbox" value="Calvin Klein" name="form[]">
+													<label for="c_23" class="checkbox__label">
+														<span class="checkbox__body "></span>
+														<span class="checkbox__text">Calvin Klein</span></label>
+												</div>
+											</li>
+											<li class="filter__list-item">
+												<div class="checkbox">
+													<input id="c_24" data-error="Ошибка" class="checkbox__input" type="checkbox" value="Lacoste Pour Elle" name="form[]">
+													<label for="c_24" class="checkbox__label">
+														<span class="checkbox__body "></span>
+														<span class="checkbox__text">Lacoste Pour Elle</span></label>
+												</div>
+											</li>
+											<li class="filter__list-item">
+												<div class="checkbox">
+													<input id="c_25" data-error="Ошибка" class="checkbox__input" type="checkbox" value="Escentric Molecules" name="form[]">
+													<label for="c_25" class="checkbox__label">
+														<span class="checkbox__body "></span>
+														<span class="checkbox__text">Escentric Molecules</span></label>
+												</div>
+											</li>
+											<li class="filter__list-item">
+												<div class="checkbox">
+													<input id="c_26" data-error="Ошибка" class="checkbox__input" type="checkbox" value="Christian Dior Sauvage" name="form[]">
+													<label for="c_26" class="checkbox__label">
+														<span class="checkbox__body "></span>
+														<span class="checkbox__text">Christian Dior Sauvage</span></label>
+												</div>
+											</li>
+											<li class="filter__list-item">
+												<div class="checkbox">
+													<input id="c_27" data-error="Ошибка" class="checkbox__input" type="checkbox" value="Chanel" name="form[]">
+													<label for="c_27" class="checkbox__label">
+														<span class="checkbox__body "></span>
+														<span class="checkbox__text">Chanel</span></label>
+												</div>
+											</li>
+											<li class="filter__list-item">
+												<div class="checkbox">
+													<input id="c_28" data-error="Ошибка" class="checkbox__input" type="checkbox" value="Versage" name="form[]">
+													<label for="c_28" class="checkbox__label">
+														<span class="checkbox__body "></span>
+														<span class="checkbox__text">Versage</span></label>
+												</div>
+											</li>
+											<li class="filter__list-item">
+												<div class="checkbox">
+													<input id="c_29" data-error="Ошибка" class="checkbox__input" type="checkbox" value="Calvin Klein" name="form[]">
+													<label for="c_29" class="checkbox__label">
+														<span class="checkbox__body "></span>
+														<span class="checkbox__text">Calvin Klein</span></label>
+												</div>
+											</li>
+											<li class="filter__list-item">
+												<div class="checkbox">
+													<input id="c_210" data-error="Ошибка" class="checkbox__input" type="checkbox" value="Lacoste Pour Elle" name="form[]">
+													<label for="c_210" class="checkbox__label">
+														<span class="checkbox__body "></span>
+														<span class="checkbox__text">Lacoste Pour Elle</span></label>
+												</div>
+											</li>
+											<li class="filter__list-item">
+												<div class="checkbox">
+													<input id="c_211" data-error="Ошибка" class="checkbox__input" type="checkbox" value="Escentric Molecules" name="form[]">
+													<label for="c_211" class="checkbox__label">
+														<span class="checkbox__body "></span>
+														<span class="checkbox__text">Escentric Molecules</span></label>
+												</div>
+											</li>
+											<li class="filter__list-item">
+												<div class="checkbox">
+													<input id="c_212" data-error="Ошибка" class="checkbox__input" type="checkbox" value="Christian Dior Sauvage" name="form[]">
+													<label for="c_212" class="checkbox__label">
+														<span class="checkbox__body "></span>
+														<span class="checkbox__text">Christian Dior Sauvage</span></label>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							</div>
+							
+						</div>
+						<div class="advanced-search__column">
+							<div class="filters__filter">
+								<div  class="filters__item  filter">
+									<div class="filter__title-wrapper">
+										<span  class="filter__title filter__title-help">тестеры</span>
+										<img data-tippy-content-testers class="filter__help" src="@img/catalog/vopros.svg" alt="подсказка">
+										<div class="filter__actions">
+										<div class="filter__val">в том числе тестеры</div>
+									</div>
+								</div>
+								<div class="filter__body options">
+									<div class="options__item">
+										<input id="o_testers1-adv" class="options__input" type="radio" value="только тестеры" name="option4">
+										<label for="o_testers1-adv" class="options__label"><span class="options__text">только тестеры</span></label>
+									</div>
+									<div class="options__item">
+										<input id="o_testers2-adv" class="options__input" checked type="radio" value="в том числе тестеры" name="option4">
+										<label for="o_testers2-adv" class="options__label"><span class="options__text">в том числе тестеры</span></label>
+									</div>
+									<div class="options__item">
+										<input id="o_testers3-adv" class="options__input" type="radio" value="исключить тестеры" name="option4">
+										<label for="o_testers3-adv" class="options__label"><span class="options__text">исключить тестеры</span></label>
+									</div>
+								</div>
+							</div>
+							</div>
+							
+							<div class="filters__filter">
+								<div  class="filters__item  filter">
+									<div class="filter__title-wrapper">
+										<span class="filter__title filter__title-help">наборы</span>
+										<img data-tippy-content-nab class="filter__help" src="@img/catalog/vopros.svg" alt="подсказка">
+										<div class="filter__actions">
+											<div class="filter__val">в том числе наборы</div>
+										</div>
+									</div>
+									<div class="filter__body options">
+										<div class="options__item">
+											<input id="o_nab1-adv" class="options__input" type="radio" value="только наборы" name="option3">
+											<label for="o_nab1-adv" class="options__label"><span class="options__text">только наборы</span></label>
+										</div>
+										<div class="options__item">
+											<input id="o_nab2-adv" class="options__input" checked type="radio" value="в том числе наборы" name="option3">
+											<label for="o_nab2-adv" class="options__label"><span class="options__text">в том числе наборы</span></label>
+										</div>
+										<div class="options__item">
+											<input id="o_nab3-adv" class="options__input" type="radio" value="исключить наборы" name="option3">
+											<label for="o_nab3-adv" class="options__label"><span class="options__text">исключить наборы</span></label>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="filters__filter">
+								<div  class="filters__item  filter">
+									<div class="filter__title-wrapper">
+										<span class="filter__title filter__title-help">миниатюры и пробники</span>
+										<img data-tippy-content-miniature class="filter__help" src="@img/catalog/vopros.svg" alt="подсказка">
+										<div class="filter__actions">
+											<div class="filter__val">в том числе миниатюры</div>
+										</div>
+									</div>
+									<div class="filter__body options">
+										<div class="options__item">
+											<input id="o_min1-adv" class="options__input" type="radio" value="только миниатюры" name="option2">
+											<label for="o_min1-adv" class="options__label"><span class="options__text">только миниатюры</span></label>
+										</div>
+										<div class="options__item">
+											<input id="o_min2-adv" class="options__input" checked type="radio" value="в том числе миниатюры" name="option2">
+											<label for="o_min2-adv" class="options__label"><span class="options__text">в том числе миниатюры</span></label>
+										</div>
+										<div class="options__item">
+											<input id="o_min3-adv" class="options__input" type="radio" value="исключить миниатюры" name="option2">
+											<label for="o_min3-adv" class="options__label"><span class="options__text">исключить миниатюры</span></label>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="filters__filter">
+								<div  class="filters__item  filter">
+									<div class="filter__title-wrapper">
+										<span class="filter__title filter__title-help">отливанты</span>
+										<img data-tippy-content-otliv class="filter__help" src="@img/catalog/vopros.svg" alt="подсказка">
+										<div class="filter__actions">
+											<div class="filter__val">в том числе отливанты</div>
+										</div>
+									</div>
+									<div class="filter__body options">
+										<div class="options__item">
+											<input id="o_otliv1-adv" class="options__input" type="radio" value="только отливанты" name="option1">
+											<label for="o_otliv1-adv" class="options__label"><span class="options__text">только отливанты</span></label>
+										</div>
+										<div class="options__item">
+											<input id="o_otliv2-adv" class="options__input" checked type="radio" value="в том числе отливанты" name="option1">
+											<label for="o_otliv2-adv" class="options__label"><span class="options__text">в том числе отливанты</span></label>
+										</div>
+										<div class="options__item">
+											<input id="o_otliv3-adv" class="options__input" type="radio" value="исключить отливанты" name="option1">
+											<label for="o_otliv3-adv" class="options__label"><span class="options__text">исключить отливанты</span></label>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<a class="tabs__show-all center-button" href="#">ПОКАЗАТЬ</a>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>

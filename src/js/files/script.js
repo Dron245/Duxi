@@ -12,9 +12,9 @@ window.addEventListener('DOMContentLoaded', () => {
 		console.log(targetElement);
 		// Открытие сабменю в мобильной версии
 		if (targetElement.closest('.menu__link')) {
-			targetElement.classList.toggle('_open')
-			targetElement.closest('.menu__item').querySelector('.menu__sublist') ?
-				targetElement.closest('.menu__item').querySelector('.menu__sublist').classList.toggle('_sub-menu-open') : null
+			targetElement.classList.toggle('_open');
+			targetElement.closest('.menu__item') ? targetElement.closest('.menu__item').classList.toggle('_menu__item-active') : null;
+			targetElement.closest('.menu__item') ? targetElement.closest('.menu__item').querySelector('.menu__sublist').classList.toggle('_sub-menu-open') : null
 		}
 		// закрытие меню бургер вне клика по меню
 		if (!targetElement.closest('.menu__icon') && !targetElement.closest('.menu__body')) {
@@ -27,7 +27,7 @@ window.addEventListener('DOMContentLoaded', () => {
 			const city = targetElement.closest('.top-header__city').querySelector('.city-choice')
 			city.hidden = true; return;
 		}
-
+		// выбор списка с городами
 		if (targetElement.closest('.top-header__city') && document.querySelector('.guest') && document.querySelector('.city-choice').hidden) {
 			const city = targetElement.closest('.top-header__city').querySelector('.city-choice')
 			city.hidden = false; return;
@@ -64,7 +64,6 @@ window.addEventListener('DOMContentLoaded', () => {
 			valCheck.innerHTML += targetElement.value + ", ";
 		}
 
-
 		// Устанавливаю нормальную высоту окна с чекбоксами в каталоге в таблетном разрешении.
 		if (targetElement.closest('.filter__title') && targetElement.closest('.filters__item').querySelector('.checkbox')) {
 			let list = targetElement.closest('.filters__item').querySelector('.filter__list')
@@ -94,10 +93,10 @@ window.addEventListener('DOMContentLoaded', () => {
 				element.classList.remove('_active-search-title')
 			});
 			targetElement.classList.add('_active-search-title')
-			const parId = targetElement.dataset.but ? targetElement.dataset.but : null;
+			const parId = targetElement.closest('summary').dataset.but ? targetElement.closest('summary').dataset.but : null;
 			const par = document.querySelector(`[data-par="${parId}"]`);
-			// console.log(parId);
-			// console.log(par);
+			console.log(parId);
+			console.log(par);
 			if (par) {
 				const spo = document.querySelectorAll('.main-search__body')
 				spo.forEach(element => {
@@ -188,14 +187,25 @@ window.addEventListener('DOMContentLoaded', () => {
 			});
 		}
 
+		//работа с подсказками
 		if(window.innerWidth < 1001.98 && targetElement.closest('.filter__help')) {
 			document.documentElement.classList.add('_tippy-open')
 		}
 		if(window.innerWidth < 1001.98 && !targetElement.closest('.filter__help')) {
 			document.documentElement.classList.remove('_tippy-open')
 		}
+		
+		//Открытие / закрытие поиска в мобильной версии в шапке
+		if(window.innerWidth < 1001.98 && targetElement.closest('.header-center__input')) {
+			document.querySelector('.header').classList.add('_mobile-searh-top-open')
+		}
+		if(window.innerWidth < 1001.98 && targetElement.closest('.search-mob__img-close')) {
+			document.querySelector('.header').classList.remove('_mobile-searh-top-open')
+		}
 	}
 });
+
+
 
 
 
@@ -246,5 +256,12 @@ const popupContent = popupFiltmodal ? popupFiltmodal.closest('.popup__content') 
 if (popupFiltmodal && (popupFiltmodal.clientHeight > window.innerHeight - 60)) {
 	popupContent.classList.add('_overflow-y')
 }
+
+const searchMob = document.querySelector('.search-mob')
+const headerDropMobile = searchMob.querySelector('.dropmenu')
+headerDropMobile.style.top = `${searchMob.clientHeight}`+ 'px';
+console.log(searchMob.clientHeight);
+console.log(headerDropMobile);
+
 
 

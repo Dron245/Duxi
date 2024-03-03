@@ -82,3 +82,10 @@
 	font-weight: 100;
 	font-style: italic;
 }
+@font-face {
+	font-family: Montserrat;
+	font-display: swap;
+	src: url("../fonts/Montserrat-Italic.woff2") format("woff2"), url("../fonts/Montserrat-Italic.woff") format("woff");
+	font-weight: 400;
+	font-style: italic;
+}

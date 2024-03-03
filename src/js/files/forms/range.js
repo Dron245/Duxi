@@ -10,6 +10,8 @@ import * as noUiSlider from 'nouislider';
 export function rangeInit() {
 	const priceSlider01 = document.querySelector('#range01');
 	const priceSlider02 = document.querySelector('#range02');
+	const priceSlider01Adv = document.querySelector('#range01-adv');
+	const priceSlider02Adv = document.querySelector('#range02-adv');
 	const priceSlider01m = document.querySelector('#range01m');
 	const priceSlider02m = document.querySelector('#range02m');
 
@@ -31,17 +33,13 @@ export function rangeInit() {
 		});
 
 		var snapValues = [
-			priceSlider01.closest('.range').querySelector('#lower'),
-			priceSlider01.closest('.range').querySelector('#upper')
-			// document.getElementById('lower01'),
-			// document.getElementById('upper01')
+			priceSlider01.closest('.range').querySelector('#lower-cost'),
+			priceSlider01.closest('.range').querySelector('#upper-cost')
 		];
 		priceSlider01.noUiSlider.on('update', function (values, handle) {
 			snapValues[handle].innerHTML = values[handle];
-			priceSlider01.closest('.filter').querySelector('.filter__val-low').innerHTML = priceSlider01.closest('.filter__body').querySelector('#lower').innerHTML
-			priceSlider01.closest('.filter').querySelector('.filter__val-max').innerHTML = priceSlider01.closest('.filter__body').querySelector('#upper').innerHTML
-			// document.querySelector('.filter__val-low1').innerHTML = document.getElementById('lower01').innerHTML
-			// document.querySelector('.filter__val-max1').innerHTML = document.getElementById('upper01').innerHTML
+			priceSlider01.closest('.filter').querySelector('.filter__val-low').innerHTML = priceSlider01.closest('.filter__body').querySelector('#lower-cost').innerHTML
+			priceSlider01.closest('.filter').querySelector('.filter__val-max').innerHTML = priceSlider01.closest('.filter__body').querySelector('#upper-cost').innerHTML
 		});
 	}
 
@@ -63,17 +61,69 @@ export function rangeInit() {
 		});
 
 		var snapValues02 = [
-			priceSlider02.closest('.range').querySelector('#lower'),
-			priceSlider02.closest('.range').querySelector('#upper')
-			// document.getElementById('lower02'),
-			// document.getElementById('upper02')
+			priceSlider02.closest('.range').querySelector('#lower-volume'),
+			priceSlider02.closest('.range').querySelector('#upper-volume')
 		];
 		priceSlider02.noUiSlider.on('update', function (values, handle) {
 			snapValues02[handle].innerHTML = values[handle];
-			priceSlider02.closest('.filter').querySelector('.filter__val-low').innerHTML = priceSlider02.closest('.filter__body').querySelector('#lower').innerHTML
-			priceSlider02.closest('.filter').querySelector('.filter__val-max').innerHTML = priceSlider02.closest('.filter__body').querySelector('#upper').innerHTML
-			// document.querySelector('.filter__val-low2').innerHTML = document.getElementById('lower02').innerHTML
-			// document.querySelector('.filter__val-max2').innerHTML = document.getElementById('upper02').innerHTML
+			priceSlider02.closest('.filter').querySelector('.filter__val-low').innerHTML = priceSlider02.closest('.filter__body').querySelector('#lower-volume').innerHTML
+			priceSlider02.closest('.filter').querySelector('.filter__val-max').innerHTML = priceSlider02.closest('.filter__body').querySelector('#upper-volume').innerHTML
+		});
+	}
+
+	//Поиск полная версия цена
+	if (priceSlider01Adv) {
+		noUiSlider.create(priceSlider01Adv, {
+			start: [30000, 160000],
+			connect: [false, true, false],
+			range: {
+				'min': [0],
+				'max': [200000]
+			},
+
+			format: wNumb({
+				decimals: 0,
+				thousand: ' '
+			})
+
+		});
+
+		var snapValues01Adv = [
+			priceSlider01Adv.closest('.range').querySelector('#lower-cost'),
+			priceSlider01Adv.closest('.range').querySelector('#upper-cost')
+		];
+		priceSlider01Adv.noUiSlider.on('update', function (values, handle) {
+			snapValues01Adv[handle].innerHTML = values[handle];
+			priceSlider01Adv.closest('.filter').querySelector('.filter__val-low').innerHTML = priceSlider01Adv.closest('.filter__body').querySelector('#lower-cost').innerHTML
+			priceSlider01Adv.closest('.filter').querySelector('.filter__val-max').innerHTML = priceSlider01Adv.closest('.filter__body').querySelector('#upper-cost').innerHTML
+		});
+	}
+
+	//Поиск полная версия объём
+	if (priceSlider02Adv) {
+		noUiSlider.create(priceSlider02Adv, {
+			start: [40, 160],
+			connect: [false, true, false],
+			range: {
+				'min': [10],
+				'max': [200]
+			},
+
+			format: wNumb({
+				decimals: 0,
+				thousand: ' '
+			})
+
+		});
+
+		var snapValues02Adv = [
+			priceSlider02Adv.closest('.range').querySelector('#lower-volume'),
+			priceSlider02Adv.closest('.range').querySelector('#upper-volume')
+		];
+		priceSlider02Adv.noUiSlider.on('update', function (values, handle) {
+			snapValues02Adv[handle].innerHTML = values[handle];
+			priceSlider02Adv.closest('.filter').querySelector('.filter__val-low').innerHTML = priceSlider02Adv.closest('.filter__body').querySelector('#lower-volume').innerHTML
+			priceSlider02Adv.closest('.filter').querySelector('.filter__val-max').innerHTML = priceSlider02Adv.closest('.filter__body').querySelector('#upper-volume').innerHTML
 		});
 	}
 
@@ -94,20 +144,15 @@ export function rangeInit() {
 
 		});
 
-		// console.log(priceSlider01m.closest('.range').querySelector('#upper01m'));
 		var snapValues01m = [
-			priceSlider01m.closest('.submenu-filter__list').querySelector('#lower'),
-			priceSlider01m.closest('.submenu-filter__list').querySelector('#upper')
-			// document.getElementById('lower01m'),
-			// document.getElementById('upper01m'),
-			// document.querySelector('.filtmodal__checked-min-01m'),
-			// document.querySelector('.filtmodal__checked-max-01m'),
+			priceSlider01m.closest('.submenu-filter__list').querySelector('#lower-cost'),
+			priceSlider01m.closest('.submenu-filter__list').querySelector('#upper-cost')
 		];
 
 		priceSlider01m.noUiSlider.on('update', function (values, handle) {
 			snapValues01m[handle].innerHTML = values[handle];
-			priceSlider01m.closest('.popup__content').querySelector('.filtmodal-min').innerHTML = priceSlider01m.closest('.range').querySelector('#lower').innerHTML
-			priceSlider01m.closest('.popup__content').querySelector('.filtmodal-max').innerHTML = priceSlider01m.closest('.range').querySelector('#upper').innerHTML
+			priceSlider01m.closest('.popup__content').querySelector('.filtmodal-min').innerHTML = priceSlider01m.closest('.range').querySelector('#lower-cost').innerHTML
+			priceSlider01m.closest('.popup__content').querySelector('.filtmodal-max').innerHTML = priceSlider01m.closest('.range').querySelector('#upper-cost').innerHTML
 		});
 
 		priceSlider01m.noUiSlider.on('change', function (values, handle) {
@@ -134,17 +179,14 @@ export function rangeInit() {
 
 		
 		var snapValues02m = [
-			priceSlider02m.closest('.submenu-filter__list').querySelector('#lower'),
-			priceSlider02m.closest('.submenu-filter__list').querySelector('#upper')
-			// document.getElementById('lower02m'),
-			// document.getElementById('upper02m'),
+			priceSlider02m.closest('.submenu-filter__list').querySelector('#lower-volume'),
+			priceSlider02m.closest('.submenu-filter__list').querySelector('#upper-volume')
 		];
 
 		priceSlider02m.noUiSlider.on('update', function (values, handle) {
 			snapValues02m[handle].innerHTML = values[handle];
-			priceSlider02m.closest('.popup__content').querySelector('.filtmodal__item_volume .filtmodal-min').innerHTML = priceSlider02m.closest('.range').querySelector('#lower').innerHTML
-			priceSlider02m.closest('.popup__content').querySelector('.filtmodal__item_volume .filtmodal-max').innerHTML = priceSlider02m.closest('.range').querySelector('#upper').innerHTML
-			// priceSlider02m.closest('.popup__content').querySelector('.filtmodal__item.filtmodal__item_volume').classList.add('_backcolor')
+			priceSlider02m.closest('.popup__content').querySelector('.filtmodal__item_volume .filtmodal-min').innerHTML = priceSlider02m.closest('.range').querySelector('#lower-volume').innerHTML
+			priceSlider02m.closest('.popup__content').querySelector('.filtmodal__item_volume .filtmodal-max').innerHTML = priceSlider02m.closest('.range').querySelector('#upper-volume').innerHTML
 		});
 
 		priceSlider02m.noUiSlider.on('change', function (values, handle) {
