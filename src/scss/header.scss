@@ -3,10 +3,13 @@
 	background: #fff5f6;
 	.menu-open & {
 		transition:
-		background-color 0.3s,
-		opacity 0.3s;
+			background-color 0.3s,
+			opacity 0.3s;
 	}
 	
+	
+
+
 
 	&__drop {
 		background: #020001;
@@ -25,7 +28,7 @@
 			pointer-events: all;
 		}
 	}
-	
+
 	&__top {
 		display: flex;
 		align-items: center;
@@ -101,7 +104,6 @@
 		position: relative;
 		cursor: pointer;
 		&:hover {
-		
 			& .top-header__city-name {
 				color: $knopka-rozovaya;
 			}
@@ -114,7 +116,7 @@
 		}
 		position: absolute;
 		top: 160%;
-		
+
 		left: -50%;
 		border: 1px solid #f4e1e6;
 		box-shadow:
@@ -195,7 +197,6 @@
 }
 
 .city-choice {
-
 	&__text {
 		margin-bottom: 10px;
 	}
@@ -261,7 +262,7 @@
 	&__form-wrapper {
 		position: relative;
 		@include adaptiveValue("width", 750, 520, 0, 1920, 1280);
-		
+
 		@media (max-width: $tablet) {
 			display: none;
 		}
@@ -284,6 +285,7 @@
 					transition: opacity 0.3s;
 					opacity: 1;
 					visibility: visible;
+					z-index: 4;
 				}
 			}
 		}
@@ -314,13 +316,14 @@
 		&::placeholder {
 			color: $tekst-zagolovok-ne-aktivnyy;
 		}
-		#city &, #advanced-search & {
+		#city &,
+		#advanced-search & {
 			text-transform: uppercase;
 			font-style: initial;
 			border-radius: 16px;
 			width: 100%;
 			background-color: #fef3f6;
-			
+
 			&:focus-visible {
 				outline: none;
 			}
@@ -339,11 +342,11 @@
 				padding-left: 0.625rem;
 			}
 		}
-		@media (max-width:$tablet){
-			._show &+.header-center__button .img-search45x45 {
+		@media (max-width: $tablet) {
+			._show & + .header-center__button .img-search45x45 {
 				display: none;
 			}
-			._show &+.header-center__button .img-search-small {
+			._show & + .header-center__button .img-search-small {
 				display: block;
 			}
 		}
@@ -367,7 +370,8 @@
 		right: 3%;
 		top: 50%;
 		transform: translateY(-50%);
-		#city &, #advanced-search & {
+		#city &,
+		#advanced-search & {
 			right: 2%;
 		}
 		@media (max-width: $tablet) {
@@ -491,7 +495,6 @@
 	}
 }
 .menu {
-	
 	&__item {
 		&_mobile {
 			@media (min-width: $tablet) {
@@ -535,7 +538,7 @@
 				}
 			}
 		}
-		@media (max-width:$tablet){
+		@media (max-width: $tablet) {
 			._menu__item-active & {
 				background-color: white;
 				color: $zagolovok;
@@ -545,11 +548,9 @@
 				padding-right: 15px;
 				// padding-top: 20px;
 				// padding-bottom: 20px;
-				.menu__item-arrow path{
+				.menu__item-arrow path {
 					fill: $zagolovok;
 				}
-					
-				
 			}
 		}
 		@media (max-width: $tablet) {
@@ -557,8 +558,8 @@
 			// @include adaptiveValue("font-size", 24, 16, 0, 1001.98, 360);
 			line-height: 1.3;
 		}
-		@media (max-width:$mobile){
-			 @include adaptiveValue("font-size", 35, 16,0,768,320 ); 
+		@media (max-width: $mobile) {
+			@include adaptiveValue("font-size", 35, 16, 0, 768, 320);
 		}
 	}
 
@@ -584,14 +585,14 @@
 .sublist-menu {
 	&__item {
 		// transition: color 0.3s;
-		
-		@media  (any-hover: hover){
-			&:hover{
+
+		@media (any-hover: hover) {
+			&:hover {
 				.sublist-menu__link {
 					transition: color 0.3s;
 					color: $zagolovok;
 					text-decoration: underline;
-					@media (max-width:$tablet){
+					@media (max-width: $tablet) {
 						color: #fff;
 						text-decoration: none;
 						font-weight: 500;
@@ -603,8 +604,7 @@
 						// font-weight: 500;
 					}
 					.header & {
-						@media (max-width:$tablet){
-							
+						@media (max-width: $tablet) {
 						}
 					}
 				}
@@ -618,7 +618,6 @@
 		}
 		.footer & {
 			margin-bottom: toRem(15);
-			
 		}
 	}
 
@@ -628,7 +627,7 @@
 		text-transform: uppercase;
 		color: $knopka-rozovaya;
 		.header & {
-			@media (max-width:$tablet){
+			@media (max-width: $tablet) {
 				font-weight: 300;
 			}
 		}
@@ -642,13 +641,13 @@
 		@media (max-width: $tablet) {
 			color: white;
 		}
-		@media (max-width:$mobile){
-			@include adaptiveValue("font-size", 35, 16,0,768,320 );
+		@media (max-width: $mobile) {
+			@include adaptiveValue("font-size", 35, 16, 0, 768, 320);
 			font-weight: 300;
 			&:active {
 				font-weight: 500;
 			}
-	  }
+		}
 
 		&_bold {
 		}
@@ -656,8 +655,6 @@
 }
 
 /*Меню поиска  скролл*/
-
-
 
 .header-center {
 	&__dropmenu {
@@ -673,6 +670,7 @@
 .dropmenu {
 	opacity: 0;
 	visibility: hidden;
+	// background-color: transparent;
 	// transition:
 	// 	opacity 3.3s,
 	// 	visibility 3.3s;

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ru">
+	@@include('html/_head.htm',{
+	"title":"Где мой заказ? "
+	})
+	<body>
+		<div class="wrapper">
+			@@include('html/_header-user.htm',{})
+			<main class="page where">
+				<div class="where__container">
+					<nav class="where__breadcrumbs breadcrumbs">
+						<ul class="breadcrumbs__list">
+							<li class="breadcrumbs__item">
+								<a href="home-user.html" class="breadcrumbs__link">Интернет магазин парфюмерии</a>
+							</li>
+							<li class="breadcrumbs__item">
+								<span class="breadcrumbs__current">Отслеживание заказов</span>
+							</li>
+						</ul>
+					</nav>
+					<div class="where__wrapper">
+						<h3 class="where__title">где мой заказ?</h3>
+						<section class="where__input input-where">
+							<div class="input-where__content">
+								<div class="input-where__body">
+									<p class="input-where__text">С помощью сервиса «Где мой заказ?» без труда можно отслеживать местонахождение заказа, который был отправлен на указанный Вами адрес.</p>
+									<p class="input-where__text">Для этого достаточно знать <span>номер заказа</span> или любой номер идентификатора (почтовый идентификатор, номер отправления).</p>
+									<form action="#" method="get" class="calculation__form form-calc">
+										<div class="form-calc__wrapper">
+											<div class="form-calc__item">
+												<label for="number-order" class="form-calc__label">Введите идентификатор или номер заказа</label>
+												<input id="number-order" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="номер заказа" class="form-calc__input input">
+											</div>
+										</div>
+									</form>
+								</div>
+								<a href="home-user.html" class="form-calc__link button-actions">найти</a>
+							</div>
+							<div class="input-where__img">
+								<img src="@img/delivery/order.png" alt="">
+							</div>
+						</section>
+						<section class="where__info info-where">
+							<h3 class="info-where__title">информация по заказу № <span class="info-where__number-order">123456789</span></h3>
+							<div class="info-where__details">
+								<div class="info-where__item">
+									<span class="info-where__sub-title">номер заказа</span>
+									<span class="info-where__number">123456789</span>
+								</div>
+								<div class="info-where__item">
+									<span class="info-where__sub-title">дата заказа</span>
+									<span class="info-where__number">12.06.2022</span>
+								</div>
+								<div class="info-where__item">
+									<span class="info-where__sub-title">Идентификатор</span>
+									<span class="info-where__number">12547517830386</span>
+								</div>
+								<div class="info-where__item">
+									<span class="info-where__sub-title">статус заказа</span>
+									<span class="info-where__number">Доставка</span>
+								</div>
+							</div>
+							<div class="where__progress">
+								<div class="where__progress-container progress">
+									<div class="progress__circle">
+										<span class="progress__description progress__description_bottom">Заказ оформлен</span>
+									</div>
+									<div class="progress__line" id="progress"></div>
+									<div class="progress__circle">
+										<span class="progress__description progress__description_top">Заказ оплачен</span>
+									</div>
+									<div class="progress__circle">
+										<span class="progress__description progress__description_bottom">Заказ собран</span>
+									</div>
+									<div class="progress__circle">
+										<span class="progress__description progress__description_current progress__description_top">Заказ отгружен</span>
+									</div>
+									<div class="progress__circle progress__circle_disabled">
+										<span class="progress__description progress__description_bottom">Доставлен в ПВЗ</span>
+									</div>
+									<div class="progress__circle progress__circle_disabled">
+										<span class="progress__description progress__description_top">Заказ получен</span>
+									</div>
+								</div>
+								<button type="button" class="where__not">отменить заказ</button>
+							</div>
+						</section>
+						<section class="where__data data-where">
+							<h3 class="data-where__title">Данные от службы доставки</h3>
+							<div class="data-where__content">
+								<h4 class="data-where__sub-title">текущее состояние заказа № 123456789</h4>
+								<div class="data-where__table">
+									<div class="data-where__item">
+										<span class="data-where__text">Создан [Москва]</span>
+										<span class="data-where__time">2019-04-15 21:04:52</span>
+									</div>
+									<div class="data-where__item">
+										<span class="data-where__text">Принят на склад отправителя [Москва]</span>
+										<span class="data-where__time">2019-04-15 21:04:52</span>
+									</div>
+									<div class="data-where__item">
+										<span class="data-where__text">Выдан на отправку в г.-отправителе [Москва]</span>
+										<span class="data-where__time">2019-04-15 21:04:52</span>
+									</div>
+									<div class="data-where__item">
+										<span class="data-where__text">Сдан перевозчику в г.-отправителе [Москва]</span>
+										<span class="data-where__time">2019-04-15 21:04:52</span>
+									</div>
+									<div class="data-where__item">
+										<span class="data-where__text">Отправлен в г.-транзит [Москва]</span>
+										<span class="data-where__time">2019-04-15 21:04:52</span>
+									</div>
+									<div class="data-where__item">
+										<span class="data-where__text">Принят на склад транзита [Владивосток]</span>
+										<span class="data-where__time">2019-04-15 21:04:52</span>
+									</div>
+									<div class="data-where__item">
+										<span class="data-where__text">Выдан на отправку в г.-транзите [Владивосток]</span>
+										<span class="data-where__time">2019-05-07 11:30:26</span>
+									</div>
+									<div class="data-where__item">
+										<span class="data-where__text">Сдан перевозчику в г.-транзите [Владивосток]</span>
+										<span class="data-where__time">2019-05-08 10:46:25</span>
+									</div>
+									<div class="data-where__item">
+										<span class="data-where__text">Отправлен в г.-получатель [Владивосток]</span>
+										<span class="data-where__time">2019-05-08 10:48:22</span>
+									</div>
+									<div class="data-where__item">
+										<span class="data-where__text">Встречен в г.-получателе [Артем]</span>
+										<span class="data-where__time">2019-05-08 11:48:35</span>
+									</div>
+									<div class="data-where__item">
+										<span class="data-where__text">Принят на склад доставки [Артем]</span>
+										<span class="data-where__time">2019-05-11 02:41:56</span>
+									</div>
+									<div class="data-where__item">
+										<span class="data-where__text">Вручен [Артем]</span>
+										<span class="data-where__time">2019-05-14 13:58:09</span>
+									</div>
+								</div>
+							</div>
+						</section>
+					</div>
+				</div>
+			</main>
+			@@include('html/_footer.htm',{})
+		</div>
+		@@include('html/_popup.htm',{})
+		@@include('html/_js.htm',{})
+	</body>
+</html>

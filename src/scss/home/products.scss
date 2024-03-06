@@ -35,6 +35,7 @@
 
 	&__title {
 		position: relative;
+		text-transform: uppercase;
 		font-weight: 300;
 		@include adaptiveValue("font-size", 24, 18, 0, 1920, 768);
 		line-height: 118%; /* 59/50 */

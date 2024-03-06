@@ -16,9 +16,25 @@
 				<li><a target="_blank" href="home-guest.html">Главная-гость</a></li>
 				<li><a target="_blank" href="home-user.html">Главная-пользователь</a></li>
 				<li><a target="_blank" href="brands.html">Бренды</a></li>
-				<li><a target="_blank" href="catalog-poz.html">Каталог позиций</a></li>
-				<li><a target="_blank" href="catalog-tov.html">Каталог товаров</a></li>
+				<li>
+					<span>Каталог</span>
+					<ol class="rootpage__list rootpage__list_sublist">
+						<li><a target="_blank" href="catalog-poz.html">Каталог позиций</a></li>
+						<li><a target="_blank" href="catalog-tov.html">Каталог товаров</a></li>
+					</ol>
+				</li>
 				<li><a target="_blank" href="search.html">Поиск товаров</a></li>
+				<li>
+					<span>Доставка</span>
+					<ol class="rootpage__list rootpage__list_sublist">
+						<li><a target="_blank" href="conditions.html">Условия доставки</a></li>
+						<li><a target="_blank" href="target-dates.html">Контрольные сроки</a></li>
+						<li><a target="_blank" href="calculator.html">Калькулятор доставки</a></li>
+						<li><a target="_blank" href="payment.html">Оплата</a></li>
+						<li><a target="_blank" href="where.html">Где моя посылка</a></li>
+					</ol>
+				</li>
+				<li><a target="_blank" href="404.html">404</a></li>
 			</ol>
 			
 			<div class="rootpage__tnx">
@@ -58,6 +74,15 @@
 			line-height: 1;
 			font-size: 1rem;
 		}
+
+		ol {
+			list-style: none;
+			counter-reset: li;
+		}
+		li:before {
+			counter-increment: li;
+			content: counters(li, ".") ". ";
+		}
 		a {
 			text-decoration: underline;
 			color: #000000;
@@ -73,6 +98,11 @@
 		}
 		ul li {
 			list-style: none;
+		}
+
+		li span {
+			color: #000000;
+			font-size: 20px;
 		}
 		img {
 			vertical-align: top;
@@ -122,6 +152,10 @@
 
 		.rootpage__list{
 			margin: 0px 0px 2.25rem 1.25rem;
+		}
+		.rootpage__list_sublist {
+			margin-top: 15px;
+			margin-bottom: 25px;
 		}
 		.rootpage__list li:not(:last-child){
 			margin: 0px 0px 15px 0px;

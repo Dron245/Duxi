@@ -42,11 +42,7 @@
 
 	& .filter__title-wrapper {
 		@media (max-width: $tablet) {
-			border-radius: 12px;
-			background: #fff5f6;
-			padding-left: 5px;
-			padding-right: 5px;
-			padding-bottom: 5px;
+			
 		}
 	}
 
@@ -57,10 +53,11 @@
 		}
 	}
 
-	& .filter__reset-check, & .filter__reset {
-		@media (max-width:$tablet){
+	& .filter__reset-check,
+	& .filter__reset {
+		@media (max-width: $tablet) {
 			right: 6px;
-			bottom: 5px; 
+			bottom: 5px;
 		}
 	}
 }
@@ -105,7 +102,7 @@
 		text-transform: uppercase;
 		// @include adaptiveValue("font-size", 24, 18, 0, 1920, 768);
 		font-size: 18px;
-		@media (max-width:$tablet){
+		@media (max-width: $tablet) {
 			font-size: 20px;
 		}
 		line-height: 118%; /* 59/50 */
@@ -125,8 +122,8 @@
 		}
 		&._active-search-title {
 			color: $zagolovok;
-			@media (min-width:$tablet){
-				 transform: scale(1.07);
+			@media (min-width: $tablet) {
+				transform: scale(1.07);
 			}
 			&::after {
 				content: "";
@@ -152,7 +149,7 @@
 			display: none;
 			//  }
 			&._open-result-search {
-				display: block;
+				display: flex;
 			}
 		}
 	}
@@ -285,19 +282,7 @@
 				visibility: visible;
 			}
 
-			&::-webkit-scrollbar {
-				width: 5px; /* Ширина всего элемента навигации */
-			}
-
-			&::-webkit-scrollbar-track {
-				background: #ffedf0; /* Цвет дорожки */
-			}
-
-			&::-webkit-scrollbar-thumb {
-				background-color: $knopka-rozovaya; /* Цвет бегунка */
-				border-radius: 20px; /* Округление бегунка */
-				border: 3px solid $knopka-rozovaya; /* Оформление границ бегунка */
-			}
+			@include scroll-view;
 		}
 	}
 }

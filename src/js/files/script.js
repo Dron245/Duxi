@@ -221,9 +221,10 @@ if (window.innerWidth < 768) {
 const catalog = document.querySelector('.catalog');
 if (catalog) {
 	const details = catalog.querySelectorAll('details');
-	const spollersWrapper = catalog.querySelector('[data-spollers]')
+	const spollersWrapper = catalog.querySelector('aside [data-spollers]')
 	const summury = catalog.querySelectorAll('.filter__title-wrapper')
-
+	
+	// console.log(spollersWrapper);
 	if (window.innerWidth < 1001) {
 		details.forEach(element => {
 			element.removeAttribute('data-open');
@@ -236,10 +237,23 @@ if (catalog) {
 	}
 }
 
+//Преобразование фильтров-спойлеров в способах оплаты в мобильном разрешении
+const payment = document.querySelector('.payment');
+if(payment) {
+	const details = payment.querySelectorAll('details');
+	if (window.innerWidth < 768.02) {
+		details.forEach(element => {
+			element.removeAttribute('data-open');
+		});
+	}
+}
 //позиционирование хлебных крошек при уменьшении экрана
 const breadcrumbs = document.querySelector('.breadcrumbs__list')
 if (breadcrumbs) {
-	if (breadcrumbs.offsetLeft + breadcrumbs.clientWidth > window.innerWidth) {
+	// console.log(window.innerWidth);
+	// console.log(breadcrumbs.getBoundingClientRect());
+	// console.log(breadcrumbs.offsetWidth);
+	if (30 + breadcrumbs.clientWidth > window.innerWidth) {
 		// console.log(breadcrumbs.offsetLeft + breadcrumbs.clientWidth);
 		breadcrumbs.classList.add('_align-right')
 	} else {
@@ -260,8 +274,8 @@ if (popupFiltmodal && (popupFiltmodal.clientHeight > window.innerHeight - 60)) {
 const searchMob = document.querySelector('.search-mob')
 const headerDropMobile = searchMob.querySelector('.dropmenu')
 headerDropMobile.style.top = `${searchMob.clientHeight}`+ 'px';
-console.log(searchMob.clientHeight);
-console.log(headerDropMobile);
+// console.log(searchMob.clientHeight);
+// console.log(headerDropMobile);
 
 
 

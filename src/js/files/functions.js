@@ -215,11 +215,11 @@ export function spollers() {
 		}
 		// Работа с контентом
 		function initSpollerBody(spollersBlock, hideSpollerBody = true) {
-			let spollerItems = spollersBlock.querySelectorAll('div');
+			let spollerItems = spollersBlock.querySelectorAll('details');
 			if (spollerItems.length) {
 				//spollerItems = Array.from(spollerItems).filter(item => item.closest('[data-spollers]') === spollersBlock);
 				spollerItems.forEach(spollerItem => {
-					let spollerTitle = spollerItem.querySelector('div');
+					let spollerTitle = spollerItem.querySelector('summary');
 					if (hideSpollerBody) {
 						spollerTitle.removeAttribute('tabindex');
 						if (!spollerItem.hasAttribute('data-open')) {

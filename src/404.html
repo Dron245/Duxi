@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+	@@include('html/_head.htm',{
+	"title":"404"
+	})
+	<body>
+		<div class="wrapper">
+			@@include('html/_header-user.htm',{})
+			<main class="page notfound">
+				<div class="notfound__container">
+					<div class="notfound__content">
+						<h3 class="notfound__title">страница не найдена</h3>
+						<p class="notfound__text">Упс, кажется что-то пошло не так! Запрашиваемая страница не существует. Возможно, она устарела или была удалена.</p>
+						<p class="notfound__text">Мы уже исправляем ситуацию!</p>
+						<a href="home-user.html" class="notfound__link button-actions">ВЕРНУТЬСЯ НА ГЛАВНУЮ</a>
+					</div>
+					<div data-da=".notfound__content, 768.02,1" class="notfound__img">
+						<img src="@img/404/404.png" alt="Нет такой страницы">
+					</div>
+				</div>
+			</main>
+			@@include('html/_footer.htm',{})
+		</div>
+		@@include('html/_popup.htm',{})
+		@@include('html/_js.htm',{})
+	</body>
+</html>

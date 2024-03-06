@@ -55,8 +55,8 @@
 
 	&__main {
 		// outline: 1px solid blue;
-		@media (min-width:$tablet){
-			flex: 0 0 75%; 
+		@media (min-width: $tablet) {
+			flex: 0 0 75%;
 		}
 	}
 }
@@ -129,6 +129,11 @@
 			display: flex;
 			flex-wrap: wrap;
 			margin-bottom: 0;
+			border-radius: 12px;
+			background: #fff5f6;
+			padding-left: 5px;
+			padding-right: 5px;
+			padding-bottom: 5px;
 		}
 	}
 
@@ -245,8 +250,8 @@
 		color: $zagolovok;
 		font-size: toRem(12);
 		position: absolute;
-		right: 0;
-		bottom: 13px;
+		right: 6px;
+		bottom: 5px;
 		z-index: 2;
 		// }
 	}
@@ -258,7 +263,7 @@
 		// height: 600px;
 		&._showmore-active {
 			overflow-y: auto;
-			@media (max-width:$tablet){
+			@media (max-width: $tablet) {
 				overflow-y: initial;
 			}
 		}
@@ -313,15 +318,7 @@
 	}
 
 	&__search-all {
-		width: 100%;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		text-transform: uppercase;
-		color: #fff;
-		background-color: $knopka-rozovaya;
-		padding-top: 14px;
-		padding-bottom: 14px;
+		font-size: 14px;
 		@media (max-width: $tablet) {
 			display: none;
 		}

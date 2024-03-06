@@ -99,3 +99,18 @@
 		}
 	}
 }
+@mixin scroll-view {
+	&::-webkit-scrollbar {
+		width: 5px; /* Ширина всего элемента навигации */
+	}
+	
+	&::-webkit-scrollbar-track {
+		background: #ffedf0; /* Цвет дорожки */
+	}
+	
+	&::-webkit-scrollbar-thumb {
+		background-color: $knopka-rozovaya; /* Цвет бегунка */
+		border-radius: 20px; /* Округление бегунка */
+		border: 3px solid $knopka-rozovaya; /* Оформление границ бегунка */
+	}
+}

@@ -268,20 +268,7 @@
 				overflow-y: auto;
 				// margin-left: -20px;
 				// margin-right: -20px;
-				&::-webkit-scrollbar {
-					width: 5px; /* Ширина всего элемента навигации */
-					// display: none;
-				}
-				
-				&::-webkit-scrollbar-track {
-					background: #ffedf0; /* Цвет дорожки */
-				}
-				
-				&::-webkit-scrollbar-thumb {
-					background-color: $knopka-rozovaya; /* Цвет бегунка */
-					border-radius: 20px; /* Округление бегунка */
-					border: 3px solid $knopka-rozovaya; /* Оформление границ бегунка */
-				}
+				@include scroll-view;
 			}
 		}
 		.options__item {
