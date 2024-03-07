@@ -271,6 +271,67 @@ window.addEventListener("load", function (e) {
 		// someFunc
 	  );
 	}
+
+	//Статья. Полезные статьи
+	if(document.querySelector('.points')){
+		const resizableSwiper = (breakpoint, swiperClass, swiperSettings, callback) => {
+		let swiper;
+	
+		breakpoint = window.matchMedia(breakpoint);
+	
+		const enableSwiper = function(className, settings) {
+		swiper = new Swiper(className, settings);
+	
+		  if (callback) {
+			 callback(swiper);
+		  }
+		}
+	
+		const checker = function() {
+		  if (breakpoint.matches) {
+			 return enableSwiper(swiperClass, swiperSettings);
+		  } else {
+			 if (swiper !== undefined) swiper.destroy(true, true);
+			 return;
+		  }
+		};
+	
+		breakpoint.addEventListener('change', checker);
+		checker();
+	 }
+	
+	 resizableSwiper(
+		'(max-width: 767.98px)',
+		'.aside-point__content',
+		{
+			modules: [Pagination, Autoplay],
+			observer: true,
+			observeParents: true,
+			// slidesPerView: 1.7,
+			spaceBetween: 20,
+			// autoHeight: true,
+			speed: 800,
+			
+			// Пагинация
+			
+			pagination: {
+				el: '.aside-point__pagination',
+				clickable: true,
+			},
+			
+			// Брейкпоинты
+			breakpoints: {
+				360: {
+					slidesPerView: 1.15,
+					spaceBetween: 20,
+					// autoHeight: true,
+				},
+				
+			},
+		},
+		// someFunc
+	  );
+	}
 	
 	//Запуск инициализации скролла на базе слайдера (по классу swiper_scroll)
 	//initSlidersScroll();

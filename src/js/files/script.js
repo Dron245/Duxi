@@ -95,8 +95,8 @@ window.addEventListener('DOMContentLoaded', () => {
 			targetElement.classList.add('_active-search-title')
 			const parId = targetElement.closest('summary').dataset.but ? targetElement.closest('summary').dataset.but : null;
 			const par = document.querySelector(`[data-par="${parId}"]`);
-			console.log(parId);
-			console.log(par);
+			// console.log(parId);
+			// console.log(par);
 			if (par) {
 				const spo = document.querySelectorAll('.main-search__body')
 				spo.forEach(element => {
@@ -175,7 +175,7 @@ window.addEventListener('DOMContentLoaded', () => {
 				element.innerHTML = ' ';
 			});
 
-			//убираю фог
+			//убираю фон
 			filtmodalItem.forEach(element => {
 				element.classList.remove('_backcolor')
 			});
@@ -201,6 +201,14 @@ window.addEventListener('DOMContentLoaded', () => {
 		}
 		if(window.innerWidth < 1001.98 && targetElement.closest('.search-mob__img-close')) {
 			document.querySelector('.header').classList.remove('_mobile-searh-top-open')
+		}
+
+		//Открытие состояние заказа на странице "Отслеживание заказов"
+		if(document.querySelector('.where') && targetElement.closest('.search-order')) {
+			if(targetElement.closest('.calculation__form').querySelector('input').value.length != 0) {
+				console.log(targetElement.closest('.calculation__form').querySelector('input').value.length);
+				document.documentElement.classList.add('_show-order')
+			}
 		}
 	}
 });

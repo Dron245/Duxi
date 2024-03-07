@@ -3,6 +3,7 @@
 .where {
 
 	&__container {
+		margin-bottom: 80px;
 	}
 
 	&__breadcrumbs {
@@ -23,6 +24,10 @@
 	}
 
 	&__info {
+		display: none;
+		._show-order & {
+			display: block;
+		}
 	}
 
 	&__progress {
@@ -59,7 +64,10 @@
 	}
 
 	&__data {
-		margin-bottom: 80px;
+		display: none;
+		._show-order & {
+			display: block;
+		}
 	}
 }
 
@@ -142,10 +150,14 @@
 			}
 			input {
 				width: 100%;
-				@include adaptiveValue("font-size", 28, 14,0,768,320);
 				@media (max-width:$mobile){
-					 padding-top: 20px;
-					 padding-bottom: 20px; 
+					@include adaptiveValue("font-size", 28, 14,0,768,320);
+					padding-top: 20px;
+					padding-bottom: 20px; 
+				}
+				@media (max-width:$mobileSmall){
+					 padding-top: 12px;
+					 padding-bottom: 12px; 
 				}
 			}
 		}
