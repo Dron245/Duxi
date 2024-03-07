@@ -273,7 +273,7 @@ window.addEventListener("load", function (e) {
 	}
 
 	//Статья. Полезные статьи
-	if(document.querySelector('.points')){
+	if(document.querySelector('.point')){
 		const resizableSwiper = (breakpoint, swiperClass, swiperSettings, callback) => {
 		let swiper;
 	
@@ -301,10 +301,10 @@ window.addEventListener("load", function (e) {
 	 }
 	
 	 resizableSwiper(
-		'(max-width: 767.98px)',
+		'(max-width: 1001.98px)',
 		'.aside-point__content',
 		{
-			modules: [Pagination, Autoplay],
+			modules: [Pagination, Autoplay, Navigation],
 			observer: true,
 			observeParents: true,
 			// slidesPerView: 1.7,
@@ -318,11 +318,19 @@ window.addEventListener("load", function (e) {
 				el: '.aside-point__pagination',
 				clickable: true,
 			},
-			
+			navigation: {
+				prevEl: '.swiper-point-prev',
+				nextEl: '.swiper-point-next',
+			},
 			// Брейкпоинты
 			breakpoints: {
 				360: {
 					slidesPerView: 1.15,
+					spaceBetween: 20,
+					// autoHeight: true,
+				},
+				768: {
+					slidesPerView: 2,
 					spaceBetween: 20,
 					// autoHeight: true,
 				},

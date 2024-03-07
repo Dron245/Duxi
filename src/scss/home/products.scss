@@ -83,6 +83,9 @@
 
 	&__slider {
 		padding: 16px;
+		@media (max-width:$mobile){
+			 padding: 0; 
+		}
 	}
 
 	&__shell {

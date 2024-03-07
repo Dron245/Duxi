@@ -434,14 +434,27 @@ h3[class*="__title"] {
 		top: 50%;
 		transform: translateY(-50%);
 		img {
-			transform: rotate(180deg);
+			// transform: rotate(180deg);
 		}
 	}
 }
 
-.swiper-button-disabled {
-	display: none;
+//Раскращивание стрелки свайпера, если долистал до последнего слайда
+.tabs__shell {
+	& button svg path {
+		fill: $zagolovok;
+	}
+	& .swiper-next {
+		svg {
+			transform: rotate(180deg);
+		}
+	}
+
+	& .swiper-button-disabled svg path {
+		fill: #6e6e6e;
+	}
 }
+
 //Свайпер пагинация
 .pagination {
 	display: none;
