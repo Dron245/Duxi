@@ -12,7 +12,7 @@ h3[class*="__title"] {
 		font-size: 35px;
 	}
 	@media (max-width:$mobile){
-		 @include adaptiveValue("font-size", 50, 22,0,768,320); 
+		 @include adaptiveValue("font-size", 50, 19,0,768,320); 
 	}
 	@media (max-width: $mobileSmall) {
 		margin-bottom: toRem(20);
@@ -555,4 +555,27 @@ h3[class*="__title"] {
 	@media (max-width:$mobile){
 		@include adaptiveValue("font-size", 35, 16,0,768,320); 
 	}
+}
+
+.button-light {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: $knopka-rozovaya;
+	text-transform: uppercase;
+	font-size: 24px;
+	border: 1px solid $knopka-rozovaya;
+	padding: 12.5px 0px;
+}
+
+summary::-webkit-details-marker {
+	display: none;
+}
+summary {
+	list-style: none;
+}
+
+details > summary::marker {
+	display: none;
+	content: ''; /* Прощай, стрелочка, теперь ты здесь не нужна! */
 }

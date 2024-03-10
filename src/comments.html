@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ru">
+	@@include('html/_head.htm',{
+	"title":"Отзывы на сайте"
+	})
+	<body>
+		<div class="wrapper">
+			@@include('html/_header-user.htm',{})
+			<main class="page reviews">
+				<div class="reviews__container">
+					<nav class="reviews__breadcrumbs breadcrumbs">
+						<ul class="breadcrumbs__list">
+							<li class="breadcrumbs__item">
+								<a href="home-user.html" class="breadcrumbs__link">Интернет магазин парфюмерии</a>
+							</li>
+							<li class="breadcrumbs__item">
+								<span class="breadcrumbs__current">Отзывы о магазине Духи.рф</span>
+							</li>
+						</ul>
+					</nav>
+					<section class="reviews__wrapper">
+						<h3 class="reviews__title">Отзывы о магазине Духи.рф</h3>
+						<div class="reviews__actions actions-review">
+							<button data-popup="#store-review" class="actions-review__button button-light" type="button">написать отзыв</button>
+							<button data-popup="#review-filters" class="actions-review__button actions-review__button_dark button-light" type="button">фильтры</button>
+						</div>
+						<div class="reviews__body">
+							<button data-popup="#store-review" class="reviews__button button-light">Написать отзыв</button>
+							<div class="reviews__panel panel-comment">
+								<button type="button" class="panel-comment__item">
+									<span class="panel-comment__text">сначала новые</span>
+									<span class="panel-comment_arrow"><img src="@img/review/arrow-review-sort.svg" alt=""></span>
+								</button>
+								<button type="button" class="panel-comment__item">
+									<span class="panel-comment__text">по популярности</span>
+									<span class="panel-comment_arrow"><img src="@img/review/arrow-review-sort.svg" alt=""></span>
+								</button>
+								<button type="button" class="panel-comment__item">
+									<span class="panel-comment__text">вначале хорошие</span>
+									<span class="panel-comment_arrow"><img src="@img/review/arrow-review-sort.svg" alt=""></span>
+								</button>
+								<button type="button" class="panel-comment__button button-actions">применить фильтры</button>
+							</div>
+							<div class="reviews__feedbacks feedback">
+								<div class="feedback__body">
+									<div class="feedback__logo feedback__logo_blue">дк</div>
+									<div class="feedback__content">
+										<div class="feedback__top">
+											<p class="feedback__name">Драганчук Светлана</p>
+											<time datetime="2022-12-07T14h:21m" class="feedback__date">07.12.2022 14:21</time>
+										</div>
+										<div class="feedback__star">
+											<span class="feedback__star-item"><img src="@img/review/star-active.svg" alt="звезда"></span>
+											<span class="feedback__star-item"><img src="@img/review/star-active.svg" alt="звезда"></span>
+											<span class="feedback__star-item"><img src="@img/review/star-active.svg" alt="звезда"></span>
+											<span class="feedback__star-item"><img src="@img/review/star-active.svg" alt="звезда"></span>
+											<span class="feedback__star-item"><img src="@img/review/star-active.svg" alt="звезда"></span>
+										</div>
+										<div class="feedback__text-wrapper">
+											<p class="feedback__text">Здравствуйте! Хотела поделиться приятной для себя неожиданностью!) Не так давно сделала впервые заказ духов в Имагазине Духи.рф.Заказала я Hugo Boss the scent,но видимо по своей невнимательности,не дочитала название до конца,в итоге пришли Hugo Boss the scent private accord,заказывала тестер.Как выяснилось,это новинка 2018 года,запах обалденный,а сравнив цены в том же Летуаль и Рив Гош,убедилась что и цена тоже обалденная!</p>
+										</div>
+										<a href="#" class="feedback__write">Читать полностью</a>
+										<div class="feedback__question-block question-block">
+											<span class="question-block__text">Был ли этот отзыв полезен?</span>
+											<span class="question-block__text-light">Этот отзыв как полезный отметили: 
+												<span class="question-block__quantity">14</span> раз</span>
+											<div class="question-block__answers">
+												<button type="button" class="question-block__button question-block__button_yes">ДА (<span class="questiion-block__yes-quantity">14</span>)</button>
+												<button type="button" class="question-block__button question-block__button_no">НЕТ (<span class="questiion-block__yes-quantity">6</span>)</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="feedback__bottom">
+									<div  data-spollers class="feedback__spollers">
+										<details class="spollers__item">
+											<summary class="spollers__title">
+												<span class="feedback__spoller-title">ответить</span>
+												<span class="feedback__spoller-arrow"><img src="@img/review/arrow-spoller.svg" alt=""></span>
+											</summary>
+											<div class="feedback__spoller-body answer">
+												<div class="answer__content">
+													<div class="answer__logo feedback__logo feedback__logo_pink">СЛ</div>
+													<div class="answer__body">
+														<p class="feedback__name">Сливкова Светлана</p>
+														<form action="#" method="get" class="answer__form">
+															<textarea class="answer__textarea" name="comment"  placeholder="Оставить коментарий"></textarea>
+															<div class="answer__form-item">
+																<button type="button" class="answer__button button-actions">ОТПРАВИТЬ</button>
+																<button type="button" class="answer__button button-light">ОТМЕНА</button>
+															</div>
+														</form>
+													</div>
+												</div>
+											</div>
+										</details>
+									</div>
+									<div class="feedback__story-answer story-answer">
+										<div class="story-answer__logo"><img src="@img/review/story-logo.svg" alt="лого"></div>
+										<div class="story-answer__body">
+											<p class="feedback__name">Ответ магазина</p>
+											<p class="feedback__text">Здравствуйте! Спасибо за ваш отзыв, ждем вас с новыми покупками в интернет-магазине Духи.рф!</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="reviews__feedbacks feedback">
+								<div class="feedback__body">
+									<div class="feedback__logo feedback__logo_violet">дк</div>
+									<div class="feedback__content">
+										<div class="feedback__top">
+											<p class="feedback__name">Драганчук Светлана</p>
+											<time datetime="2022-12-07T14h:21m" class="feedback__date">07.12.2022 14:21</time>
+										</div>
+										<div class="feedback__star">
+											<span class="feedback__star-item"><img src="@img/review/star-active.svg" alt="звезда"></span>
+											<span class="feedback__star-item"><img src="@img/review/star-active.svg" alt="звезда"></span>
+											<span class="feedback__star-item"><img src="@img/review/star-active.svg" alt="звезда"></span>
+											<span class="feedback__star-item"><img src="@img/review/star-active.svg" alt="звезда"></span>
+											<span class="feedback__star-item"><img src="@img/review/star.svg" alt="звезда"></span>
+										</div>
+										<div class="feedback__text-wrapper">
+											<p class="feedback__text">Здравствуйте! Хотела поделиться приятной для себя неожиданностью!) Не так давно сделала впервые заказ духов в Имагазине Духи.рф.Заказала я Hugo Boss the scent,но видимо по своей невнимательности,не дочитала название до конца,в итоге пришли Hugo Boss the scent private accord,заказывала тестер.Как выяснилось,это новинка 2018 года,запах обалденный,а сравнив цены в том же Летуаль и Рив Гош,убедилась что и цена тоже обалденная!</p>
+										</div>
+										<a href="#" class="feedback__write">Читать полностью</a>
+										<div class="feedback__question-block question-block">
+											<span class="question-block__text">Был ли этот отзыв полезен?</span>
+											<span class="question-block__text-light">Этот отзыв как полезный отметили: 
+												<span class="question-block__quantity">14</span> раз</span>
+											<div class="question-block__answers">
+												<button type="button" class="question-block__button question-block__button_yes">ДА (<span class="questiion-block__yes-quantity">14</span>)</button>
+												<button type="button" class="question-block__button question-block__button_no">НЕТ (<span class="questiion-block__yes-quantity">6</span>)</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="feedback__bottom">
+									<div  data-spollers class="feedback__spollers">
+										<details class="spollers__item">
+											<summary class="spollers__title">
+												<span class="feedback__spoller-title">ответить</span>
+												<span class="feedback__spoller-arrow"><img src="@img/review/arrow-spoller.svg" alt=""></span>
+											</summary>
+											<div class="feedback__spoller-body answer">
+												<div class="answer__content">
+													<div class="answer__logo feedback__logo feedback__logo_pink">СЛ</div>
+													<div class="answer__body">
+														<p class="feedback__name">Сливкова Светлана</p>
+														<form action="#" method="get" class="answer__form">
+															<textarea class="answer__textarea" name="comment" placeholder="Оставить коментарий"></textarea>
+															<div class="answer__form-item">
+																<button type="button" class="answer__button button-actions">ОТПРАВИТЬ</button>
+																<button type="button" class="answer__button button-light">ОТМЕНА</button>
+															</div>
+														</form>
+													</div>
+												</div>
+											</div>
+										</details>
+									</div>
+									<div class="feedback__story-answer story-answer">
+										<div class="story-answer__logo"><img src="@img/review/story-logo.svg" alt="лого"></div>
+										<div class="story-answer__body">
+											<p class="feedback__name">Ответ магазина</p>
+											<p class="feedback__text">Здравствуйте! Спасибо за ваш отзыв, ждем вас с новыми покупками в интернет-магазине Духи.рф!</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="reviews__feedbacks feedback">
+								<div class="feedback__body">
+									<div class="feedback__logo feedback__logo_pink">дк</div>
+									<div class="feedback__content">
+										<div class="feedback__top">
+											<p class="feedback__name">Драганчук Светлана</p>
+											<time datetime="2022-12-07T14h:21m" class="feedback__date">07.12.2022 14:21</time>
+										</div>
+										<div class="feedback__star">
+											<span class="feedback__star-item"><img src="@img/review/star-active.svg" alt="звезда"></span>
+											<span class="feedback__star-item"><img src="@img/review/star-active.svg" alt="звезда"></span>
+											<span class="feedback__star-item"><img src="@img/review/star-active.svg" alt="звезда"></span>
+											<span class="feedback__star-item"><img src="@img/review/star-active.svg" alt="звезда"></span>
+											<span class="feedback__star-item"><img src="@img/review/star.svg" alt="звезда"></span>
+										</div>
+										<div class="feedback__text-wrapper">
+											<p class="feedback__text">Здравствуйте! Хотела поделиться приятной для себя неожиданностью!) Не так давно сделала впервые заказ духов в Имагазине Духи.рф.Заказала я Hugo Boss the scent,но видимо по своей невнимательности,не дочитала название до конца,в итоге пришли Hugo Boss the scent private accord,заказывала тестер.Как выяснилось,это новинка 2018 года,запах обалденный,а сравнив цены в том же Летуаль и Рив Гош,убедилась что и цена тоже обалденная!</p>
+										</div>
+										<a href="#" class="feedback__write">Читать полностью</a>
+										<div class="feedback__question-block question-block">
+											<span class="question-block__text">Был ли этот отзыв полезен?</span>
+											<span class="question-block__text-light">Этот отзыв как полезный отметили: 
+												<span class="question-block__quantity">14</span> раз</span>
+											<div class="question-block__answers">
+												<button type="button" class="question-block__button question-block__button_yes">ДА (<span class="questiion-block__yes-quantity">14</span>)</button>
+												<button type="button" class="question-block__button question-block__button_no">НЕТ (<span class="questiion-block__yes-quantity">6</span>)</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="feedback__bottom">
+									<div  data-spollers class="feedback__spollers">
+										<details class="spollers__item">
+											<summary class="spollers__title">
+												<span class="feedback__spoller-title">ответить</span>
+												<span class="feedback__spoller-arrow"><img src="@img/review/arrow-spoller.svg" alt=""></span>
+											</summary>
+											<div class="feedback__spoller-body answer">
+												<div class="answer__content">
+													<div class="answer__logo feedback__logo feedback__logo_pink">СЛ</div>
+													<div class="answer__body">
+														<p class="feedback__name">Сливкова Светлана</p>
+														<form action="#" method="get" class="answer__form">
+															<textarea class="answer__textarea" name="comment" placeholder="Оставить коментарий"></textarea>
+															<div class="answer__form-item">
+																<button type="button" class="answer__button button-actions">ОТПРАВИТЬ</button>
+																<button type="button" class="answer__button button-light">ОТМЕНА</button>
+															</div>
+														</form>
+													</div>
+												</div>
+											</div>
+										</details>
+									</div>
+								</div>
+							</div>
+							<div class="reviews__feedbacks feedback">
+								<div class="feedback__body">
+									<div class="feedback__logo feedback__logo_darkviolet">дк</div>
+									<div class="feedback__content">
+										<div class="feedback__top">
+											<p class="feedback__name">Драганчук Светлана</p>
+											<time datetime="2022-12-07T14h:21m" class="feedback__date">07.12.2022 14:21</time>
+										</div>
+										<div class="feedback__star">
+											<span class="feedback__star-item"><img src="@img/review/star-active.svg" alt="звезда"></span>
+											<span class="feedback__star-item"><img src="@img/review/star-active.svg" alt="звезда"></span>
+											<span class="feedback__star-item"><img src="@img/review/star-active.svg" alt="звезда"></span>
+											<span class="feedback__star-item"><img src="@img/review/star-active.svg" alt="звезда"></span>
+											<span class="feedback__star-item"><img src="@img/review/star.svg" alt="звезда"></span>
+										</div>
+										<div class="feedback__text-wrapper">
+											<p class="feedback__text">Гош,убедилась что и цена тоже обалденная!</p>
+										</div>
+										<a href="#" class="feedback__write">Читать полностью</a>
+										<div class="feedback__question-block question-block">
+											<span class="question-block__text">Был ли этот отзыв полезен?</span>
+											<span class="question-block__text-light">Этот отзыв как полезный отметили: 
+												<span class="question-block__quantity">14</span> раз</span>
+											<div class="question-block__answers">
+												<button type="button" class="question-block__button question-block__button_yes">ДА (<span class="questiion-block__yes-quantity">14</span>)</button>
+												<button type="button" class="question-block__button question-block__button_no">НЕТ (<span class="questiion-block__yes-quantity">6</span>)</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="feedback__bottom">
+									<div  data-spollers class="feedback__spollers">
+										<details class="spollers__item">
+											<summary class="spollers__title">
+												<span class="feedback__spoller-title">ответить</span>
+												<span class="feedback__spoller-arrow"><img src="@img/review/arrow-spoller.svg" alt=""></span>
+											</summary>
+											<div class="feedback__spoller-body answer">
+												<div class="answer__content">
+													<div class="answer__logo feedback__logo feedback__logo_pink">СЛ</div>
+													<div class="answer__body">
+														<p class="feedback__name">Сливкова Светлана</p>
+														<form action="#" method="get" class="answer__form">
+															<textarea class="answer__textarea" name="comment" placeholder="Оставить коментарий"></textarea>
+															<div class="answer__form-item">
+																<button type="button" class="answer__button button-actions">ОТПРАВИТЬ</button>
+																<button type="button" class="answer__button button-light">ОТМЕНА</button>
+															</div>
+														</form>
+													</div>
+												</div>
+											</div>
+										</details>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+					<div class="loader"></div>
+				</div>
+			</main>
+			@@include('html/_footer.htm',{})
+		</div>
+		@@include('html/_popup.htm',{})
+		@@include('html/_popup_review.htm',{})
+		@@include('html/_js.htm',{})
+	</body>
+</html>

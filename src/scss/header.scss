@@ -41,23 +41,12 @@
 		display: flex;
 		align-items: center;
 		@include adaptiveValue("padding-top", 29, 20, 0, 1920, 1280);
-		// @include adaptiveValue("padding-bottom", 28, 18,0,1920,1280);
 		padding-bottom: toRem(37);
 		@media (max-width: $tablet) {
 			justify-content: space-between;
 			& .menu__icon {
-				@include adaptiveValue("margin-right", 250, 50, 0, 1001, 480);
-				@media (max-width: $mobileSmall) {
-					@include adaptiveValue("margin-right", 95, 15, 0, 479.98, 320);
-				}
-				.user & {
-					@include adaptiveValue("margin-right", 150, 50, 0, 1001, 768);
-					@media (max-width: $mobile) {
-						@include adaptiveValue("margin-right", 170, 20, 0, 767.99, 480);
-					}
-					@media (max-width: $mobileSmall) {
-						@include adaptiveValue("margin-right", 95, 15, 0, 479.98, 320);
-					}
+				@media (max-width:$tablet){
+					// margin-right: 75px;
 				}
 				.menu-open & {
 					margin-right: 0;
@@ -257,6 +246,9 @@
 		@media (max-width: $mobileSmall) {
 			width: toRem(195);
 		}
+		@media (max-width: em(360)){
+			 width: 160px; 
+		}
 	}
 
 	&__form-wrapper {
@@ -396,6 +388,11 @@
 				display: none;
 			}
 		}
+		@media (max-width:$mobileSmall){
+			 .header & img {
+				transform: scale(0.85);
+			 } 
+		}
 	}
 
 	&__search-full {
@@ -419,6 +416,11 @@
 		@include adaptiveValue("column-gap", 40, 30, 0, 1920, 1001);
 		@media (max-width: $tablet) {
 			margin-left: auto;
+			// column-gap: toRem(0);
+			margin-left: 0;
+		}
+		@media (max-width: em(360)){
+			  margin-left: initial;
 		}
 		@media (max-width: $mobile) {
 			//  display: none;

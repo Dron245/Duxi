@@ -237,6 +237,10 @@
 			 width: toRem(40);
 			 height: toRem(30); 
 		}
+		@media (max-width: em(360)){
+			  width: 30px;
+			  height: 20px;
+		}
 		.menu-open & {
 			position: absolute;
 			right: 43%;
@@ -255,12 +259,15 @@
 			right: 0;
 			position: absolute;
 			width: 100%;
-			height: toRem(4);
-			@media (max-width:$mobile){
+			height: 4px;
+			@media (max-width:$tablet){
 				 height: toRem(3); 
 			}
+			@media (max-width:$mobileSmall){
+				 height: toRem(2); 
+			}
 			background-color: rgb(127, 32, 59);
-			border-radius: 25%;
+			border-radius: 2px / 2px;
 			.menu-open & {
 				background-color: rgb(255, 255, 255);
 			}

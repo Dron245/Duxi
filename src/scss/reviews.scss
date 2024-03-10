@@ -1,0 +1,36 @@
+.page {
+
+	&__recently {
+		.reviews & {
+			margin-top: 40px;
+			@media (min-width:$mobileSmall) and (max-width:$tablet){
+				margin-top: 60px;
+			}
+		} 
+	}
+}
+.reviews {
+
+	&__text {
+		padding: 20px;
+		border-radius: 16px;
+		background-color: #fff;
+		line-height: normal;
+		@media (max-width:$tablet){
+			font-size: 20px;
+		}
+		@media (max-width:$mobile){
+			 @include adaptiveValue("font-size", 28, 14,0,768,320); 
+		}
+		&:not(:last-child) {margin-bottom: toRem(40);}
+		@media (max-width: em(360)){
+			padding: 10px;
+		}
+		@media (min-width:$mobileSmall) and (max-width:$tablet){
+			&:not(:last-child) {margin-bottom: toRem(60);}
+		}
+	}
+}
+
+
+

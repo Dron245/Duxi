@@ -49,14 +49,7 @@
 	}
 
 	&__not {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		color: $knopka-rozovaya;
-		text-transform: uppercase;
-		font-size: 24px;
-		border: 1px solid $knopka-rozovaya;
-		padding: 12.5px 0px;
+		
 		width: 100%;
 		@media (max-width:$mobile){
 			 margin-top: 20px; 

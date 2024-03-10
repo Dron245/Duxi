@@ -64,7 +64,7 @@ function initSliders() {
 				new Swiper('.tabs__slider', { //Указываем класс нужного слайдера
 						//Подключаем модули слайдера
 						//для конкретного случая
-					modules: [Navigation,Pagination, Autoplay],
+					modules: [Navigation,Pagination],
 					observer: true,
 					observeParents: true,
 					slidesPerView: 6,
@@ -135,7 +135,7 @@ function initSliders() {
 					spaceBetween: 20,
 					// autoHeight: true,
 					speed: 800,
-					loop:true,
+					loop:false,
 
 					// Пагинация
 					

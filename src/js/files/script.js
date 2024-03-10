@@ -14,7 +14,7 @@ window.addEventListener('DOMContentLoaded', () => {
 		if (targetElement.closest('.menu__link')) {
 			targetElement.classList.toggle('_open');
 			targetElement.closest('.menu__item') ? targetElement.closest('.menu__item').classList.toggle('_menu__item-active') : null;
-			targetElement.closest('.menu__item') ? targetElement.closest('.menu__item').querySelector('.menu__sublist').classList.toggle('_sub-menu-open') : null
+			targetElement.closest('.menu__item').querySelector('.menu__sublist') ? targetElement.closest('.menu__item').querySelector('.menu__sublist').classList.toggle('_sub-menu-open') : null
 		}
 		// закрытие меню бургер вне клика по меню
 		if (!targetElement.closest('.menu__icon') && !targetElement.closest('.menu__body')) {
@@ -210,6 +210,28 @@ window.addEventListener('DOMContentLoaded', () => {
 				document.documentElement.classList.add('_show-order')
 			}
 		}
+
+		//Изменение цвета заголовка в панели отзывов на странице "отзывы о магазине"
+		if(targetElement.closest('.panel-comment__text')){
+			const panelCommentTitles= targetElement.closest('.reviews__panel').querySelectorAll('.panel-comment__text');
+			// console.log(questionAnswers);
+			panelCommentTitles.forEach(element => {
+				element.classList.remove('_selected-sort-review')
+			});
+			// targetElement.closest('.reviews__panel').classList.add('_question-active');
+			targetElement.classList.add('_selected-sort-review');
+		}
+
+		//Раскрашивание кнопок в зелёный или красный цвет при нажатии на ответ да или нет на странице "отзывы о магазине"
+		if(targetElement.closest('.question-block__button')) {
+			const questionAnswers= targetElement.closest('.question-block__answers').querySelectorAll('.question-block__button');
+			// console.log(questionAnswers);
+			questionAnswers.forEach(element => {
+				element.classList.remove('_question-answer')
+			});
+			targetElement.closest('.question-block__answers').classList.add('_question-active');
+			targetElement.classList.add('_question-answer');
+		}
 	}
 });
 
@@ -255,12 +277,23 @@ if(payment) {
 		});
 	}
 }
+
+//Преобразование спойлеров на странице "О магазине" в таблетном разрешении
+
+const store = document.querySelector('.store')
+if(store) {
+	const details = store.querySelectorAll('details');
+	if (window.innerWidth < 768.02) {
+		details.forEach(element => {
+			element.removeAttribute('data-open');
+		});
+		store.querySelector('.store-not-open').setAttribute('data-open', '')
+	}
+}
+
 //позиционирование хлебных крошек при уменьшении экрана
 const breadcrumbs = document.querySelector('.breadcrumbs__list')
 if (breadcrumbs) {
-	// console.log(window.innerWidth);
-	// console.log(breadcrumbs.getBoundingClientRect());
-	// console.log(breadcrumbs.offsetWidth);
 	if (30 + breadcrumbs.clientWidth > window.innerWidth) {
 		// console.log(breadcrumbs.offsetLeft + breadcrumbs.clientWidth);
 		breadcrumbs.classList.add('_align-right')
@@ -272,9 +305,6 @@ if (breadcrumbs) {
 // делаю доступной прокрутку, если высота окна меньше высоты попапа в меню фильтов в моб. версии
 const popupFiltmodal = document.querySelector('.popup__body.filtmodal');
 const popupContent = popupFiltmodal ? popupFiltmodal.closest('.popup__content') : null;
-// console.log(popupFiltmodal);
-// console.log(popupFiltmodal.clientHeight);
-// console.log(window.innerHeight);
 if (popupFiltmodal && (popupFiltmodal.clientHeight > window.innerHeight - 60)) {
 	popupContent.classList.add('_overflow-y')
 }
@@ -285,5 +315,15 @@ headerDropMobile.style.top = `${searchMob.clientHeight}`+ 'px';
 // console.log(searchMob.clientHeight);
 // console.log(headerDropMobile);
 
-
+// Появление ссылки "Читать полностью" в мобильной версии на странице "Отзывы о магазине"
+const feedBackWrapper = document.querySelectorAll('.feedback__text-wrapper');
+// const feedBackText = document.querySelectorAll('.feedback__text');
+feedBackWrapper.forEach(element => {
+	// console.log(element.clientHeight);
+	const feedBackText = element.querySelector('.feedback__text')
+	// console.log(feedBackText.clientHeight);
+	if(element.clientHeight < feedBackText.clientHeight) {
+		element.closest('.feedback__content').querySelector('.feedback__write').classList.add('_open-write')
+	}
+});
 

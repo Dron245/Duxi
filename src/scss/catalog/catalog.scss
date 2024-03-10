@@ -457,6 +457,9 @@
 .recently {
 	margin-top: toRem(100);
 	margin-bottom: toRem(90);
+	.point & {
+		margin-top: 20px;
+	}
 	&__container {
 	}
 
