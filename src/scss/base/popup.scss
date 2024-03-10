@@ -95,6 +95,9 @@ body::after {
 	#advanced-search & {
 		max-width: 1230px;
 	}
+	#store-review & {
+		max-width: 680px;
+	}
 	max-width: 340px;
 	border-radius: 10px;
 	position: relative;
@@ -148,11 +151,6 @@ body::after {
 		img {
 			width: 100%;
 		}
-	}
-
-	&__body {
-		// position: relative;
-		// overflow: hidden;
 	}
 
 	&__title {
@@ -493,3 +491,53 @@ body::after {
 	&_length {
 	}
 }
+
+
+//Отзыв о магазине
+#store-review {
+	.popup__form-item:has(.popup__button){
+		display: block;
+	}
+	.popup__button {
+		width: 60%;
+		margin:auto;
+	}
+}
+
+.comment {
+	.popup__label {
+		position: relative;
+		// margin-top: 10px;
+		display: block;
+		bottom: initial;
+	}
+	
+	&__textarea {
+		padding: 10px;
+		line-height: normal;
+		resize: none;
+		width: 100%;
+		border-radius: 3px;
+		border: 1px solid #C7C7C7;
+		background: #FAFAFA;
+		height: 110px;
+		&:not(:last-child) {margin-bottom: toRem(5);}
+	}
+
+	&__text {
+		font-style: italic;
+		line-height: normal;
+	}
+
+	&__star {
+		color: $zagolovok;
+	}
+
+	&__number-symbols {
+	}
+
+	&__light-text {
+		color: #494949;
+	}
+}
+

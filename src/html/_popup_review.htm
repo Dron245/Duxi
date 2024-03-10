@@ -121,46 +121,29 @@
 			<button data-close type="button" class="popup__close"><img src="@img/popup/close.svg" alt=""></button>
 			<div class="popup__body">
 				<div class="popup__reg-top">
-					<h4 class="popup__title">Регистрация</h4>
-					<div class="popup__actions">
-						<img src="@img/popup/Star.svg" alt="">
-						<span>Получи скидку 1% сразу!</span>
-					</div>
+					<h4 class="popup__title">Написать отзыв о магазине</h4>
 				</div>
 				<form method="post" action="#" class="popup__form">
 					<div class="popup__form-item">
-						<!-- <span class="popup_reg-error">уже зарегистрирован</span> -->
-						<label for="01" class="popup__label">E-mail</label>
-						<input required id="01" autocomplete="off" type="email" name="form[]" data-error="Ошибка" placeholder="E-MAIL" class="popup__input">
-					</div>
-					<div class="popup__form-item">
 						<div class="popup__input-wrapper">
-							<label for="02" class="popup__label">пароль</label>
-							<input required id="02" autocomplete="off" type="password" name="form[]" data-error="Ошибка" placeholder="ПАРОЛЬ" class="popup__input">
-							<button type="button" class="popup__img-pasword">
-								<img class="popup__img-v" src="@img/popup/pasword-v.svg" alt="">
-								<img class="popup__img-nv" src="@img/popup/pasword-nv.svg" alt="">
-							</button>
+							<input required id="fio" autocomplete="off" type="password" name="form[]" data-error="Ошибка" placeholder="ФИО" class="popup__input">
 						</div>
 					</div>
 					<div class="popup__form-item">
-						<div class="popup__input-wrapper">
-							<input required id="03" autocomplete="off" type="password" name="form[]" data-error="Ошибка" placeholder="ПОВТОРИТЕ ПАРОЛЬ" class="popup__input">
-							<button type="button" class="popup__img-pasword">
-								<img class="popup__img-v" src="@img/popup/pasword-v.svg" alt="">
-								<img class="popup__img-nv" src="@img/popup/pasword-nv.svg" alt="">
-							</button>
+						<div class="popup__input-wrapper comment">
+							<span class="popup__label">напишите ваш отзыв*</span>
+							<textarea class="comment__textarea" name="comment" maxlength="1200"></textarea>
+							<p class="comment__text">
+								<span class="comment__star">*</span>
+								Отзыв содержит: 
+								<span class="comment__number-symbols"></span>
+								символов 
+								<span class="comment__light-text">(максимальное количество 1200 символов)</span>
+							</p>
 						</div>
 					</div>
-					<div class="popup__checkbox checkbox">
-						<input required id="c_1" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
-						<label for="c_1" class="checkbox__label">
-							<div class="checkbox__body"></div>
-							<span class="checkbox__text">Даю согласие на <a href="#">обработку персональных данных</a></span>
-						</label>
-					</div>
 					<div class="popup__form-item">
-						<button data-popup="#thanks" id="btn-reg" type="submit" class="popup__button popup__button_reg">зарегистрироваться</button>
+						<button id="btn-comment" type="submit" class="popup__button">отправить отзыв</button>
 					</div>
 				</form>
 			</div>
