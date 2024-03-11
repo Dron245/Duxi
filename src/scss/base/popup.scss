@@ -501,6 +501,12 @@ body::after {
 	.popup__button {
 		width: 60%;
 		margin:auto;
+		@media (max-width:$tablet){
+			font-size: 22px;
+		}
+		@media (max-width:$mobile){
+			 @include adaptiveValue("font-size", 20,14, 0,768,320); 
+		}
 	}
 }
 

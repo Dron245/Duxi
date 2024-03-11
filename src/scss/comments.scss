@@ -5,6 +5,9 @@
 	&__container {
 		margin-bottom: 150px;
 		position: relative;
+		@media (max-width:$mobile){
+			 margin-bottom: 80px; 
+		}
 	}
 
 	&__wrapper {

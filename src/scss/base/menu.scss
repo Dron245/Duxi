@@ -69,6 +69,7 @@
 			@media (max-width:$mobile){
 				 grid-template-columns: 1fr 1fr;
 				 grid-template-rows: auto;
+				 row-gap: 0;
 				 li {
 					align-self: center;
 				 }
@@ -206,6 +207,11 @@
 			align-items: center;
 			column-gap: toRem(40);
 			padding: toRem(20) toRem(0);
+		}
+		.footer & {
+			@media (max-width:$mobile){
+				 padding: 15px toRem(0); 
+			}
 		}
 		@media (max-width:$mobile){
 			padding: toRem(25) toRem(0);
