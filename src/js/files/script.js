@@ -239,13 +239,20 @@ window.addEventListener('DOMContentLoaded', () => {
 		//Открытие фильтров на странице "отзывы о магазине"
 		//Изменение цвета заголовка в панели отзывов на странице "отзывы о магазине"
 
-		if(targetElement.closest('.panel-comment__item')){
-			// flag = false;
+		if(targetElement.closest('.panel-comment__item') && !targetElement.closest('.panel-comment__item').classList.contains('_filter-item-open')){
 			const panelCommentItems = document.querySelectorAll('.panel-comment__item')
 			panelCommentItems.forEach(element => {
-				element.classList.remove('_filter-item-open')
-			});
-			targetElement.closest('.panel-comment__item').classList.toggle('_filter-item-open');
+				if (element.classList.contains('_filter-item-open')) {
+					element.classList.remove('_filter-item-open');
+				}
+			}); 
+			targetElement.closest('.panel-comment__item').classList.add('_filter-item-open');
+		} else if(targetElement.closest('.panel-comment__item') && targetElement.closest('.panel-comment__item').classList.contains('_filter-item-open')) {
+			targetElement.closest('.panel-comment__item').classList.remove('_filter-item-open');
+		}
+
+		if(targetElement.closest('.panel-comment__item') && targetElement.closest('.panel-comment__item').classList.contains('_filter-item-open')){
+			
 		}
 
 		if(!targetElement.closest('.panel-comment__item') && !targetElement.closest('.panel-comment__list')){
