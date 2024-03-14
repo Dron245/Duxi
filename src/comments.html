@@ -27,18 +27,78 @@
 						<div class="reviews__body">
 							<button data-popup="#store-review" class="reviews__button button-light">Написать отзыв</button>
 							<div class="reviews__panel panel-comment">
-								<button type="button" class="panel-comment__item">
+								<div class="panel-comment__item">
 									<span class="panel-comment__text">сначала новые</span>
 									<span class="panel-comment_arrow"><img src="@img/review/arrow-review-sort.svg" alt=""></span>
-								</button>
-								<button type="button" class="panel-comment__item">
+									<ul class="panel-comment__list">
+										<li class="panel-comment__item-list">
+											<div class="options__item">
+												<input id="o_1-comments1" class="options__input" type="radio" value="по умолчанию" name="option1-review-desktop1">
+												<label for="o_1-comments1" class="options__label"><span class="options__text">по умолчанию</span></label>
+											</div>
+										</li>
+										<li class="panel-comment__item-list">
+											<div class="options__item">
+												<input checked id="o_2-comments1" class="options__input" type="radio" value="сначала новые" name="option1-review-desktop1">
+												<label for="o_2-comments1" class="options__label"><span class="options__text">сначала новые</span></label>
+											</div>
+										</li>
+										<li class="panel-comment__item-list">
+											<div class="options__item">
+												<input id="o_3-comments1" class="options__input" type="radio" value="сначала старые" name="option1-review-desktop1">
+												<label for="o_3-comments1" class="options__label"><span class="options__text">сначала старые</span></label>
+											</div>
+										</li>
+									</ul>
+								</div>
+								<div class="panel-comment__item">
 									<span class="panel-comment__text">по популярности</span>
 									<span class="panel-comment_arrow"><img src="@img/review/arrow-review-sort.svg" alt=""></span>
-								</button>
-								<button type="button" class="panel-comment__item">
+									<ul class="panel-comment__list">
+										<li class="panel-comment__item-list">
+											<div class="options__item">
+												<input id="o_1-comments2" class="options__input" type="radio" value="по умолчанию" name="option1-review-desktop2">
+												<label for="o_1-comments2" class="options__label"><span class="options__text">по умолчанию</span></label>
+											</div>
+										</li>
+										<li class="panel-comment__item-list">
+											<div class="options__item">
+												<input checked id="o_2-comments2" class="options__input" type="radio" value="сначала популярные" name="option1-review-desktop2">
+												<label for="o_2-comments2" class="options__label"><span class="options__text">сначала популярные</span></label>
+											</div>
+										</li>
+										<li class="panel-comment__item-list">
+											<div class="options__item">
+												<input id="o_3-comments2" class="options__input" type="radio" value="сначала непопулярные" name="option1-review-desktop2">
+												<label for="o_3-comments2" class="options__label"><span class="options__text">сначала непопулярные</span></label>
+											</div>
+										</li>
+									</ul>
+								</div>
+								<div class="panel-comment__item">
 									<span class="panel-comment__text">вначале хорошие</span>
 									<span class="panel-comment_arrow"><img src="@img/review/arrow-review-sort.svg" alt=""></span>
-								</button>
+									<ul class="panel-comment__list">
+										<li class="panel-comment__item-list">
+											<div class="options__item">
+												<input id="o_1-comments3" class="options__input" type="radio" value="по умолчанию" name="option1-review-desktop3">
+												<label for="o_1-comments3" class="options__label"><span class="options__text">по умолчанию</span></label>
+											</div>
+										</li>
+										<li class="panel-comment__item-list">
+											<div class="options__item">
+												<input checked id="o_2-comments3" class="options__input" type="radio" value="сначала хорошие" name="option1-review-desktop3">
+												<label for="o_2-comments3" class="options__label"><span class="options__text">сначала хорошие</span></label>
+											</div>
+										</li>
+										<li class="panel-comment__item-list">
+											<div class="options__item">
+												<input id="o_3-comments3" class="options__input" type="radio" value="сначала плохие" name="option1-review-desktop3">
+												<label for="o_3-comments3" class="options__label"><span class="options__text">сначала плохие</span></label>
+											</div>
+										</li>
+									</ul>
+								</div>
 								<button type="button" class="panel-comment__button button-actions">применить фильтры</button>
 							</div>
 							<div class="reviews__feedbacks feedback">

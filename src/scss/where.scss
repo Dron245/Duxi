@@ -277,7 +277,7 @@
 		border-radius: 16px;
 		background-color: #FFF;
 		max-width: 100%;
-		border: 1px solid rgba(214, 187, 195, 0.50);
+		// border: 1px solid rgba(214, 187, 195, 0.50);
 	}
 
 	&__sub-title {
@@ -377,7 +377,7 @@
 		}
 	}
 	&__line {
-		background-color: $zagolovok;
+		background-color: #BF5C7A;
 		height: 6px;
 		left: 1%;
 		position: absolute;
@@ -395,7 +395,7 @@
 	}
 
 	&__circle {
-		background-color: $zagolovok;
+		background-color: #BF5C7A;
 		border-radius: 50%;
 		width: 23px;
 		height: 23px;
@@ -490,9 +490,9 @@
 			}
 		}
 		&_current {
-			@media (max-width:$tablet){
+			// @media (max-width:$tablet){
 				font-weight: 700;
-			}
+			// }
 		}
 	}
 }

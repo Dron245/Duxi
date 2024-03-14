@@ -206,20 +206,15 @@ window.addEventListener('DOMContentLoaded', () => {
 		//Открытие состояние заказа на странице "Отслеживание заказов"
 		if(document.querySelector('.where') && targetElement.closest('.search-order')) {
 			if(targetElement.closest('.calculation__form').querySelector('input').value.length != 0) {
-				console.log(targetElement.closest('.calculation__form').querySelector('input').value.length);
 				document.documentElement.classList.add('_show-order')
 			}
 		}
 
-		//Изменение цвета заголовка в панели отзывов на странице "отзывы о магазине"
-		if(targetElement.closest('.panel-comment__text')){
-			const panelCommentTitles= targetElement.closest('.reviews__panel').querySelectorAll('.panel-comment__text');
-			// console.log(questionAnswers);
-			panelCommentTitles.forEach(element => {
-				element.classList.remove('_selected-sort-review')
-			});
-			// targetElement.closest('.reviews__panel').classList.add('_question-active');
-			targetElement.classList.add('_selected-sort-review');
+		//Открываю все данные по на странице "калькулятор" по нажатию кнопки "расчитать"
+		if(document.querySelector('.calculator') && targetElement.closest('.form-calc__link')) {
+			if(targetElement.closest('.calculation__form').querySelector('.form-calc__input_city').value.length != 0 && targetElement.closest('.calculation__form').querySelector('.form-calc__input_cost').value.length != 0) {
+				document.documentElement.classList.add('_show-order')
+			}
 		}
 
 		//Раскрашивание кнопок в зелёный или красный цвет при нажатии на ответ да или нет на странице "отзывы о магазине"
@@ -232,10 +227,37 @@ window.addEventListener('DOMContentLoaded', () => {
 			targetElement.closest('.question-block__answers').classList.add('_question-active');
 			targetElement.classList.add('_question-answer');
 		}
+
+		//Уход заголовка при наведении на поле "Написать отзыв"
+		if(targetElement.closest('.comment__textarea')) {
+			targetElement.closest('#store-review').querySelector('.popup__reg-top').classList.add('_to-top')
+		}
+		if(targetElement.closest('.comment__textarea') && !targetElement.closest('.comment__textarea')) {
+			targetElement.closest('#store-review').querySelector('.popup__reg-top').classList.remove('_to-top')
+		}
+
+		//Открытие фильтров на странице "отзывы о магазине"
+		//Изменение цвета заголовка в панели отзывов на странице "отзывы о магазине"
+
+		if(targetElement.closest('.panel-comment__item')){
+			// flag = false;
+			const panelCommentItems = document.querySelectorAll('.panel-comment__item')
+			panelCommentItems.forEach(element => {
+				element.classList.remove('_filter-item-open')
+			});
+			targetElement.closest('.panel-comment__item').classList.toggle('_filter-item-open');
+		}
+
+		if(!targetElement.closest('.panel-comment__item') && !targetElement.closest('.panel-comment__list')){
+			const panelCommentItems = document.querySelectorAll('.panel-comment__item')
+			panelCommentItems.forEach(element => {
+				element.classList.remove('_filter-item-open')
+			}); 
+		}
 	}
 });
 
-
+/*===========================================================*/
 
 
 
@@ -312,42 +334,50 @@ if (popupFiltmodal && (popupFiltmodal.clientHeight > window.innerHeight - 60)) {
 const searchMob = document.querySelector('.search-mob')
 const headerDropMobile = searchMob.querySelector('.dropmenu')
 headerDropMobile.style.top = `${searchMob.clientHeight}`+ 'px';
-// console.log(searchMob.clientHeight);
-// console.log(headerDropMobile);
 
 // Появление ссылки "Читать полностью" в мобильной версии на странице "Отзывы о магазине"
 const feedBackWrapper = document.querySelectorAll('.feedback__text-wrapper');
-// const feedBackText = document.querySelectorAll('.feedback__text');
 feedBackWrapper.forEach(element => {
-	// console.log(element.clientHeight);
 	const feedBackText = element.querySelector('.feedback__text')
-	// console.log(feedBackText.clientHeight);
 	if(element.clientHeight < feedBackText.clientHeight) {
 		element.closest('.feedback__content').querySelector('.feedback__write').classList.add('_open-write')
 	}
 });
-import CanvasJS from '@canvasjs/charts';
-window.onload = function () {
-	if(document.querySelector('#chartContainer')){
-		var chart = new CanvasJS.Chart("chartContainer", {
-			title:{
-				text: "My First Chart in CanvasJS"              
-			},
-			data: [              
-			{
-				// Change type to "doughnut", "line", "splineArea", etc.
-				type: "spline",
-				dataPoints: [
-					{ label: "apple",  y: 10  },
-					{ label: "orange", y: 15  },
-					{ label: "banana", y: 25  },
-					{ label: "mango",  y: 30  },
-					{ label: "grape",  y: 28  }
-				]
-			}
-			]
-		});
-		chart.render();
-	}
+
+
+// Счётчик символов в textarea на странице "отзыв о магазине"
+const taComments = document.querySelector('.comment__textarea') // textarea
+const counter = document.querySelector('.comment__number-symbols') // счётчик
+
+taComments ? taComments.addEventListener('input', onInput) : null
+
+function onInput(evt) {
+const length = evt.target.value.length
+counter.textContent = length
 }
+
+// import CanvasJS from '@canvasjs/charts';
+// window.onload = function () {
+// 	if(document.querySelector('#chartContainer')){
+// 		var chart = new CanvasJS.Chart("chartContainer", {
+// 			title:{
+// 				text: "My First Chart in CanvasJS"              
+// 			},
+// 			data: [              
+// 			{
+// 				// Change type to "doughnut", "line", "splineArea", etc.
+// 				type: "spline",
+// 				dataPoints: [
+// 					{ label: "apple",  y: 10  },
+// 					{ label: "orange", y: 15  },
+// 					{ label: "banana", y: 25  },
+// 					{ label: "mango",  y: 30  },
+// 					{ label: "grape",  y: 28  }
+// 				]
+// 			}
+// 			]
+// 		});
+// 		chart.render();
+// 	}
+// }
 

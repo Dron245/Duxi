@@ -204,6 +204,10 @@
 }
 .access-calc {
 	margin-top: 40px;
+	display: none;
+	._show-order & {
+		display: block;
+	}
 	&__title {
 	}
 
@@ -248,10 +252,14 @@
 	width: 74.352332%; /* 1148/1544 */
 	margin-top: 54px;
 	margin-bottom: 80px;
-	display: flex;
+	// display: flex;
+	display: none;
 	align-items: flex-start;
 	column-gap: toRem(40);
 	// justify-content: space-between;
+	._show-order & {
+		display: flex;
+	}
 	@media (max-width: em(1200)){
 		width: 100%;
 	}

@@ -97,6 +97,7 @@ body::after {
 	}
 	#store-review & {
 		max-width: 680px;
+		overflow: hidden;
 	}
 	max-width: 340px;
 	border-radius: 10px;
@@ -246,8 +247,14 @@ body::after {
 	&__reg-top {
 		position: relative;
 		margin-bottom: toRem(60);
+		transition: transform 0.3s;
 		& h4 {
 			margin-bottom: 0;
+		}
+		#store-review & {
+			&._to-top {
+				transform: translateY(-50px);
+			}
 		}
 	}
 

@@ -50,8 +50,19 @@
 	}
 
 	&__link {
-		color: $zagolovok;
+		color: $knopka-bordovaya;
 		text-decoration: underline;
+		transition: color .3s;
+		@media (any-hover: hover){
+			&:hover{
+				color: $knopka-rozovaya;
+			}
+		}
+		@media (hover: none){
+			&:active{
+				color: $knopka-rozovaya;
+			}
+		}
 	}
 }
 
