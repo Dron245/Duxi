@@ -1,0 +1,37 @@
+.catalog-otlivants {
+
+	&__list {
+		padding: 10px;
+		border: 1px solid rgba(214, 187, 195, 0.50);
+		background: #FFF;
+		width: 100%;
+		@media (max-width:$tablet){
+			border: none;
+			padding: initial;
+		}
+	}
+
+	& .filter__body {
+		@media (min-width:$tablet){
+			 padding-bottom: 22px; 
+		}
+	}
+
+	& .product img {
+		object-fit: contain;
+	}
+}
+
+
+
+
+// .catalog-otlivants {
+// 	& .filters__spollers {
+// 		@media (max-width:$tablet){
+// 			// grid-template-columns: repeat(3, auto);
+// 			.options__label::after {
+// 				left: 3px;
+// 			}
+// 		}
+// 	}
+// }

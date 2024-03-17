@@ -61,120 +61,213 @@ function initSliders() {
 
 	if (document.querySelector('.tabs__slider')) { //Указываем класс нужного слайдера
 		//Создаем слайдер
-				new Swiper('.tabs__slider', { //Указываем класс нужного слайдера
-						//Подключаем модули слайдера
-						//для конкретного случая
-					modules: [Navigation,Pagination],
-					observer: true,
-					observeParents: true,
-					slidesPerView: 6,
-					spaceBetween: 20,
-					//autoHeight: true,
-					speed: 800,
-					// loop:true,
-				
-					// Пагинация
-					
-					pagination: {
-						el: '.swiper-products-pagination',
-						clickable: true,
-					},
+		new Swiper('.tabs__slider', { //Указываем класс нужного слайдера
+				//Подключаем модули слайдера
+				//для конкретного случая
+			modules: [Navigation,Pagination],
+			observer: true,
+			observeParents: true,
+			slidesPerView: 6,
+			spaceBetween: 20,
+			//autoHeight: true,
+			speed: 800,
+			// loop:true,
 		
-					// Кнопки "влево/вправо"
-					navigation: {
-						prevEl: '.swiper-tabs-prev',
-						nextEl: '.swiper-tabs-next',
-					},
-					
-					// Брейкпоинты
-					breakpoints: {
-						300: {
-							slidesPerView: 1,
-							spaceBetween: 20,
-							// autoHeight: true,
-						},
-						360: {
-							slidesPerView: 2,
-							spaceBetween: 20,
-							// autoHeight: true,
-						},
-						768: {
-							slidesPerView: 3,
-							spaceBetween: 26,
-						},
-						1001: {
-							slidesPerView: 5,
-							spaceBetween: 26,
-						},
-						// 1280: {
-						// 	slidesPerView: 6,
-						// 	spaceBetween: 20,
-						// },
-						1680: {
-							slidesPerView: 6,
-							spaceBetween: 20,
-						},
-					},
-					
-					// События
-					on: {
-		
-					}
-				});
-	}
+			// Пагинация
+			
+			pagination: {
+				el: '.swiper-products-pagination',
+				clickable: true,
+			},
 
-	if (document.querySelector('.video__slider')) { //Указываем класс нужного слайдера
-		//Создаем слайдер
-				new Swiper('.video__slider', { //Указываем класс нужного слайдера
-						//Подключаем модули слайдера
-						//для конкретного случая
-					modules: [Navigation,Pagination],
-					observer: true,
-					observeParents: true,
-					slidesPerView: 3,
+			// Кнопки "влево/вправо"
+			navigation: {
+				prevEl: '.swiper-tabs-prev',
+				nextEl: '.swiper-tabs-next',
+			},
+			
+			// Брейкпоинты
+			breakpoints: {
+				300: {
+					slidesPerView: 1,
 					spaceBetween: 20,
 					// autoHeight: true,
-					speed: 800,
-					loop:false,
-
-					// Пагинация
-					
-					pagination: {
-						el: '.swiper-video-pagination',
-						clickable: true,
-					},
-		
-					// Кнопки "влево/вправо"
-					navigation: {
-						prevEl: '.swiper-video-prev',
-						nextEl: '.swiper-video-next',
-					},
-					
-					// Брейкпоинты
-					breakpoints: {
-						300: {
-							slidesPerView: 1,
-							spaceBetween: 20,
-							// autoHeight: true,
-						},
-						360: {
-							slidesPerView: 1.3,
-							spaceBetween: 17,
-							// autoHeight: true,
-						},
-						480: {
-							slidesPerView: 2,
-							spaceBetween: 20,
-						},
-						1001: {
-							slidesPerView: 3,
-							spaceBetween: 20,
-						},
-						
-					},
+				},
+				360: {
+					slidesPerView: 2,
+					spaceBetween: 20,
+					// autoHeight: true,
+				},
+				768: {
+					slidesPerView: 3,
+					spaceBetween: 26,
+				},
+				1001: {
+					slidesPerView: 5,
+					spaceBetween: 26,
+				},
 				
-				});
+				1680: {
+					slidesPerView: 6,
+					spaceBetween: 20,
+				},
+			},
+			
+			// События
+			on: {
+
+			}
+		});
 	}
+	//Главная видео слайдер
+	if (document.querySelector('.video__slider')) { //Указываем класс нужного слайдера
+		//Создаем слайдер
+		new Swiper('.video__slider', { //Указываем класс нужного слайдера
+				//Подключаем модули слайдера
+				//для конкретного случая
+			modules: [Navigation,Pagination],
+			observer: true,
+			observeParents: true,
+			slidesPerView: 3,
+			spaceBetween: 20,
+			// autoHeight: true,
+			speed: 800,
+			loop:false,
+
+			// Пагинация
+			
+			pagination: {
+				el: '.swiper-video-pagination',
+				clickable: true,
+			},
+
+			// Кнопки "влево/вправо"
+			navigation: {
+				prevEl: '.swiper-video-prev',
+				nextEl: '.swiper-video-next',
+			},
+			
+			// Брейкпоинты
+			breakpoints: {
+				300: {
+					slidesPerView: 1,
+					spaceBetween: 20,
+					// autoHeight: true,
+				},
+				360: {
+					slidesPerView: 1.3,
+					spaceBetween: 17,
+					// autoHeight: true,
+				},
+				1001: {
+					slidesPerView: 3,
+					spaceBetween: 20,
+				},
+				
+			},
+		
+		});
+	}
+
+	//Отливант полезные статьи
+	if (document.querySelector('.otlivant-article__slider')) { //Указываем класс нужного слайдера
+		//Создаем слайдер
+		new Swiper('.otlivant-article__slider', { //Указываем класс нужного слайдера
+				//Подключаем модули слайдера
+				//для конкретного случая
+			modules: [Navigation,Pagination],
+			observer: true,
+			observeParents: true,
+			// slidesPerView: 4,
+			spaceBetween: 20,
+			// autoHeight: true,
+			speed: 800,
+			loop:false,
+
+			// Пагинация
+			
+			pagination: {
+				el: '.swiper-otlivant-pagination',
+				clickable: true,
+			},
+
+			// Кнопки "влево/вправо"
+			navigation: {
+				prevEl: '.swiper-article-prev',
+				nextEl: '.swiper-article-next',
+			},
+			
+			// Брейкпоинты
+			breakpoints: {
+				300: {
+					slidesPerView: 1.17,
+					spaceBetween: 20,
+					// autoHeight: true,
+				},
+				768: {
+					slidesPerView: 2,
+					spaceBetween: 20,
+					// autoHeight: true,
+				},
+				1001: {
+					slidesPerView: 4,
+					spaceBetween: 20,
+				},
+				
+			},
+		
+		});
+	}
+
+	// отзывы на странице отливанТ
+	// if (document.querySelector('.ootlvant-review__slider')) { //Указываем класс нужного слайдера
+	// 	//Создаем слайдер
+	// 	new Swiper('.otlvant-review__slider', { //Указываем класс нужного слайдера
+	// 			//Подключаем модули слайдера
+	// 			//для конкретного случая
+	// 		modules: [Navigation,Pagination],
+	// 		observer: true,
+	// 		observeParents: true,
+	// 		// slidesPerView: 4,
+	// 		spaceBetween: 20,
+	// 		// autoHeight: true,
+	// 		speed: 800,
+	// 		loop:false,
+
+	// 		// Пагинация
+			
+	// 		pagination: {
+	// 			el: '.review-otlivant-pagination',
+	// 			clickable: true,
+	// 		},
+
+	// 		// Кнопки "влево/вправо"
+	// 		navigation: {
+	// 			prevEl: '.otlivant-review--prev',
+	// 			nextEl: '.otlivant-review--next',
+	// 		},
+			
+	// 		// Брейкпоинты
+	// 		breakpoints: {
+	// 			300: {
+	// 				slidesPerView: 1.17,
+	// 				spaceBetween: 20,
+	// 				// autoHeight: true,
+	// 			},
+	// 			768: {
+	// 				slidesPerView: 2,
+	// 				spaceBetween: 20,
+	// 				// autoHeight: true,
+	// 			},
+	// 			1001: {
+	// 				slidesPerView: 3,
+	// 				spaceBetween: 20,
+	// 			},
+				
+	// 		},
+		
+	// 	});
+	// }
 }
 
 
@@ -341,6 +434,147 @@ window.addEventListener("load", function (e) {
 	  );
 	}
 	
+	// Отзывы на странице отливанТ
+	if(document.querySelector('.otlvant-review')){
+		const resizableSwiper = (breakpoint, swiperClass, swiperSettings, callback) => {
+		let swiper;
+	
+		breakpoint = window.matchMedia(breakpoint);
+	
+		const enableSwiper = function(className, settings) {
+		swiper = new Swiper(className, settings);
+	
+		  if (callback) {
+			 callback(swiper);
+		  }
+		}
+	
+		const checker = function() {
+		  if (breakpoint.matches) {
+			 return enableSwiper(swiperClass, swiperSettings);
+		  } else {
+			 if (swiper !== undefined) swiper.destroy(true, true);
+			 return;
+		  }
+		};
+	
+		breakpoint.addEventListener('change', checker);
+		checker();
+	 }
+	
+	 resizableSwiper(
+		'(min-width: 767.98px)',
+		'.otlvant-review__slider',
+		{
+			modules: [Pagination, Navigation],
+			observer: true,
+			observeParents: true,
+			// slidesPerView: 1.7,
+			spaceBetween: 20,
+			// autoHeight: true,
+			speed: 800,
+			
+			// Пагинация
+			
+			pagination: {
+				el: '.review-otlivant-pagination',
+				clickable: true,
+			},
+			navigation: {
+				prevEl: '.otlivant-review-prev',
+				nextEl: '.otlivant-review-next',
+			},
+			// Брейкпоинты
+			breakpoints: {
+				768: {
+					slidesPerView: 2,
+					spaceBetween: 20,
+					// autoHeight: true,
+				},
+				1001: {
+					slidesPerView: 3,
+					spaceBetween: 20,
+				},
+
+			},
+		},
+		// someFunc
+	  );
+	}
+	//Слайдер "статьи на странице отливант"
+	// if(document.querySelector('.otlivant')){
+	// 	const resizableSwiper = (breakpoint, swiperClass, swiperSettings, callback) => {
+	// 	let swiper;
+	
+	// 	breakpoint = window.matchMedia(breakpoint);
+	
+	// 	const enableSwiper = function(className, settings) {
+	// 	swiper = new Swiper(className, settings);
+	
+	// 	  if (callback) {
+	// 		 callback(swiper);
+	// 	  }
+	// 	}
+	
+	// 	const checker = function() {
+	// 	  if (breakpoint.matches) {
+	// 		 return enableSwiper(swiperClass, swiperSettings);
+	// 	  } else {
+	// 		 if (swiper !== undefined) swiper.destroy(true, true);
+	// 		 return;
+	// 	  }
+	// 	};
+	
+	// 	breakpoint.addEventListener('change', checker);
+	// 	checker();
+	//  }
+	
+	//  resizableSwiper(
+	// 	'(max-width: 1001.98px)',
+	// 	'.otlivants__slider',
+	// 	{
+	// 		modules: [Pagination, Autoplay, Navigation],
+	// 		observer: true,
+	// 		observeParents: true,
+	// 		// slidesPerView: 1.7,
+	// 		spaceBetween: 20,
+	// 		// autoHeight: true,
+	// 		speed: 800,
+			
+	// 		// Пагинация
+			
+	// 		pagination: {
+	// 			el: '.swiper-otlivant-pagination',
+	// 			clickable: true,
+	// 		},
+			
+	// 		navigation: {
+	// 			prevEl: '.swiper-article-prev',
+	// 			nextEl: '.swiper-article-next',
+	// 		},
+	// 		// Брейкпоинты
+	// 		breakpoints: {
+	// 			320: {
+	// 				slidesPerView: 1.16,
+	// 				spaceBetween: 20,
+	// 				// autoHeight: true,
+	// 			},
+	// 			768: {
+	// 				slidesPerView: 2,
+	// 				spaceBetween: 20,
+	// 				// autoHeight: true,
+	// 			},
+	// 			768: {
+	// 				slidesPerView: 2,
+	// 				spaceBetween: 20,
+	// 				// autoHeight: true,
+	// 			},
+	// 		},
+	// 	},
+	// 	// someFunc
+	//   );
+	// }
+
 	//Запуск инициализации скролла на базе слайдера (по классу swiper_scroll)
 	//initSlidersScroll();
 });

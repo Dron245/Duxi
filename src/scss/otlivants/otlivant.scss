@@ -1,0 +1,234 @@
+.guest.otlivant .question-block {
+	display: none;
+}
+
+.otlivant {
+	& .recently {
+		margin-top: 40px;
+	}
+	.spollers__title {
+		align-items: center;
+	}
+
+	.tabs__show-all {
+		@media (max-width:$mobile){
+			 display: none; 
+		}
+	}
+	.tabs__shell {
+		@media (max-width:$mobile){
+			 display: contents; 
+		}
+	}
+	.feedback__write {
+		display: block;
+	}
+	//отзыв. переношу мобильные стили отзыва в пк стили 
+	//карточки отливанта
+
+	.feedback__content {
+		height: 100%;
+		@media (min-width:$mobileSmall){
+			row-gap: 10px; 
+			// display: block;
+		}
+	}
+
+	.feedback__top {
+		@media (min-width:$mobile){
+			flex-direction: row;
+			justify-content: space-between; 
+		}
+	}
+
+	.feedback__name {
+		@media (min-width:$tablet){
+			 font-size: 14px; 
+		}
+
+	}
+	.feedback__date {
+
+	}
+
+	.feedback__star-item {
+		@media (min-width:$tablet){
+			//  width: 20px; 
+		}
+	}
+
+	.feedback__text-wrapper {
+		@media (min-width:$tablet){
+			height: 84px;
+			overflow-y: hidden;
+		}
+		@media (max-width:$tablet){
+			 height: 167px;
+			 overflow: hidden;
+		}
+	}
+
+	.feedback__text {
+		line-height: normal;
+		// display:none;
+		@media (min-width:$mobile){
+			// min-height: 83px;
+		}
+	}
+
+	.feedback__write {
+		@media (min-width:$mobile){
+			 font-size: 14px; 
+		}
+	}
+	.question-block {
+		margin-top: auto;
+		@media (min-width:$mobile){
+			display: flex;
+			flex-direction: column; 
+			row-gap: 5px;
+		}
+		&__text {
+			
+		}
+		&__text-light {
+			@media (min-width:$mobile){
+				 order: 1;
+				 display: block;; 
+			}
+		}
+
+		&__answers {
+			margin-top: 0;
+		}
+
+		&__button {
+			font-size: 12px;
+			@media (max-width:$tablet){
+				font-size: 20px;
+			}
+			@media (max-width:$mobile){
+				@include adaptiveValue("font-size", 28, 14,0,768,320); 
+			}
+		}
+	}
+}
+
+.otlvant-review {
+	margin-bottom: 40px;
+
+	&__top {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 20px;
+		& .button-light {
+			.guest.otlivant & {
+				// display: none;
+			}
+			display: inline-block;
+			margin: 0;
+			width: 30%;
+			@media (max-width:$mobile){
+				 display: none; 
+			}
+		}
+	}
+
+	&__title {
+		@media (max-width:$mobile){
+			 display: none; 
+		}
+	}
+
+	&__spollers {
+		@media (min-width:$mobile){
+			 display: none; 
+		}
+	}
+
+	&__slide {
+		border-radius: 16px;
+		padding: 10px;
+		background: #FFF;
+	}
+
+	.swiper-slide {
+		// border: 2px solid red;
+	}
+
+	&__slider {
+		@media (max-width:$mobile){
+			display: contents; 
+	  }
+	}
+	&__wrapper.mobile-min {
+		// display: block;
+		position: static;
+		@media (max-width:$mobile){
+			display: contents; 
+	  }
+	}
+
+	&__spollers {
+		summary {
+			@media (min-width:$mobile){
+				 display: none; 
+			}
+		}
+	}
+
+	&__spoller-title {
+		@include adaptiveValue("font-size", 30, 21,0,768,320);
+		color: $zagolovok;
+		line-height: normal;
+		font-weight: 300;
+	}
+
+	&__spoller-body {
+		@media (max-width:$mobile){
+			 margin-top: 20px; 
+		}
+	}
+
+	&__button {
+		width: 71.818182%; /* 316/440 */
+		margin:auto;
+		margin-bottom: 20px;
+		@media (min-width:$mobile){
+			 display: none; 
+		}
+	}
+}
+
+.otlivant-review-show {
+
+	&__content {
+		 @media (max-width:$mobile){
+			  display: flex;
+		 flex-direction: column;
+		 row-gap: 20px;  
+		 }
+	}
+}
+
+.otlivant-article {
+
+	&__container {
+		// padding-left: 0;
+		// padding-right: 0;
+	}
+}
+
+.review-otlivant-pagination {
+	@media (max-width:$mobile){
+		 display: none; 
+	}
+}
+
+.zxc {
+	@media (max-width:$mobile){
+		padding-top: 20px;
+		background-color: rgb(255, 255, 255); 
+	}
+}

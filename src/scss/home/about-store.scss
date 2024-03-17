@@ -55,11 +55,17 @@
 			min-height: 110px;
 		}
 		@media (max-width: $tablet) {
-			border-radius: 12px;
+			border-radius: 16px;
 			padding: 10px 20px;
-			// background-color: yellow;
+			background-color: rgb(255, 255, 255);
+			@media (max-width:$mobileSmall){
+				 padding: 5px; 
+			}
 			&:not(:last-child) {
 				margin-bottom: toRem(20);
+				@media (max-width:$mobile){
+					 margin-bottom: 10px; 
+				}
 			}
 		}
 	}
@@ -99,6 +105,9 @@
 			top: 0;
 			left: 0;
 		}
+		@media (max-width:$tablet){
+			background-color: transparent;
+		}
 		img {
 			// width: 100%;
 		}
@@ -106,14 +115,14 @@
 			width: 70px;
 			height: 70px;
 			img {
-				transform: scale(0.7);
+				// transform: scale(0.7);
 			}
 		}
 		@media (max-width: $tablet) {
 			width: 100px;
 			height: 100px;
 			img {
-				transform: scale(0.9);
+				// transform: scale(0.9);
 			}
 		}
 		@media (max-width: $mobileSmall) {
@@ -136,15 +145,20 @@
 		}
 		@media (max-width: $tablet) {
 			font-size: toRem(22);
+			
 		}
 		@media (max-width: $mobile) {
+			flex: 1;
 			@include adaptiveValue("font-size", 35, 16, 0, 768, 360);
 		}
 	}
 
 	&__arrow-spoiler {
 		transition: transform 0.5s;
-
+		img {
+			width: 100%;
+			height: auto;
+		}
 		@media (min-width: $tablet) {
 			display: none;
 		}
@@ -156,7 +170,9 @@
 		}
 		@media (max-width: $mobile) {
 			margin-left: auto;
-			transform: scale(0.7);
+			@include adaptiveValue("width", 23, 10,0,768,320);
+			// flex: 0 0 23px;
+			// transform: scale(0.7);
 			._spoller-active & {
 				transform: rotate(90deg) scale(0.7);
 			}

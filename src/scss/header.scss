@@ -380,7 +380,9 @@
 		}
 		@media (min-width: $tablet) {
 			& .img-search45x45 {
-				display: none;
+				// display: none;
+				scale: 0.7;
+				translate: 10px;
 			}
 		}
 		@media (max-width: $tablet) {

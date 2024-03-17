@@ -14,6 +14,10 @@ export function rangeInit() {
 	const priceSlider02Adv = document.querySelector('#range02-adv');
 	const priceSlider01m = document.querySelector('#range01m');
 	const priceSlider02m = document.querySelector('#range02m');
+	const priceSliderOtliv = document.querySelector('#range-otliv-filter');
+	const priceSliderOtlivMobile = document.querySelector('#range-otliv-filter-mobile');
+
+	
 
 	//планшет цена каталог
 	if (priceSlider01) {
@@ -71,7 +75,7 @@ export function rangeInit() {
 		});
 	}
 
-	//Поиск полная версия цена
+	//Поиск-расширенный полная версия цена
 	if (priceSlider01Adv) {
 		noUiSlider.create(priceSlider01Adv, {
 			start: [30000, 160000],
@@ -99,7 +103,7 @@ export function rangeInit() {
 		});
 	}
 
-	//Поиск полная версия объём
+	//Поиск-расширенный полная версия объём
 	if (priceSlider02Adv) {
 		noUiSlider.create(priceSlider02Adv, {
 			start: [40, 160],
@@ -194,6 +198,69 @@ export function rangeInit() {
 			priceSlider02m.closest('.popup__content').querySelector('.filtmodal__item.filtmodal__item_volume').classList.add('_backcolor')
 		});
 	}
+
+	// Цена в отливантах
+	if (priceSliderOtliv) {
+		noUiSlider.create(priceSliderOtliv, {
+			start: [5000, 15000],
+			connect: [false, true, false],
+			range: {
+				'min': [0],
+				'max': [20000]
+			},
+
+			format: wNumb({
+				decimals: 0,
+				thousand: ' '
+			})
+
+		});
+
+		var snapValues = [
+			priceSliderOtliv.closest('.range').querySelector('#lower-cost'),
+			priceSliderOtliv.closest('.range').querySelector('#upper-cost')
+		];
+		priceSliderOtliv.noUiSlider.on('update', function (values, handle) {
+			snapValues[handle].innerHTML = values[handle];
+			priceSliderOtliv.closest('.filter').querySelector('.filter__val-low').innerHTML = priceSliderOtliv.closest('.filter__body').querySelector('#lower-cost').innerHTML
+			priceSliderOtliv.closest('.filter').querySelector('.filter__val-max').innerHTML = priceSliderOtliv.closest('.filter__body').querySelector('#upper-cost').innerHTML
+		});
+	}
+
+	// Цена в отливантах мобилка
+	if (priceSliderOtlivMobile) {
+		noUiSlider.create(priceSliderOtlivMobile, {
+			start: [5000, 15000],
+			connect: [false, true, false],
+			range: {
+				'min': [0],
+				'max': [20000]
+			},
+
+			format: wNumb({
+				decimals: 0,
+				thousand: ' '
+			})
+
+		});
+
+		var snapValuesotliv = [
+			priceSliderOtlivMobile.closest('.range').querySelector('#lower-cost'),
+			priceSliderOtlivMobile.closest('.range').querySelector('#upper-cost')
+		];
+
+		priceSliderOtlivMobile.noUiSlider.on('update', function (values, handle) {
+			snapValuesotliv[handle].innerHTML = values[handle];
+			priceSliderOtlivMobile.closest('.popup__content').querySelector('.filtmodal__item_cost .filtmodal-min').innerHTML = priceSliderOtlivMobile.closest('.range').querySelector('#lower-cost').innerHTML
+			priceSliderOtlivMobile.closest('.popup__content').querySelector('.filtmodal__item_cost .filtmodal-max').innerHTML = priceSliderOtlivMobile.closest('.range').querySelector('#upper-cost').innerHTML
+		});
+
+		priceSliderOtlivMobile.noUiSlider.on('change', function (values, handle) {
+			snapValuesotliv[handle].innerHTML = values[handle];
+			priceSliderOtlivMobile.closest('.popup__content').querySelector('.filtmodal__item.filtmodal__item_cost').classList.add('_backcolor')
+		});
+	}
+
 	document.addEventListener("click", documentActionsRange);
 
 	//сброс к дефолту

@@ -224,7 +224,8 @@
 			position: absolute;
 			z-index: 5;
 			background-color: $fon;
-			padding: 10px toRem(5);
+			// background-color: #b9b9b9;
+			padding: 10px toRem(10);
 			outline: 1px solid #FFF5F6;
 			border-radius: 12px;
 		}
@@ -334,6 +335,11 @@
 				&:last-child {
 					margin-bottom: 0;
 				}
+			}
+		}
+		.catalog-otlivants & {
+			&:last-child{
+				margin-bottom: 0;
 			}
 		}
 	}

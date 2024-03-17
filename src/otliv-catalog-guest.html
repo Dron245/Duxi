@@ -1,32 +1,30 @@
 <!DOCTYPE html>
 <html lang="ru">
 	@@include('html/_head.htm',{
-	"title":"Каталог позиций"
+	"title":"Каталог отливантов"
 	})
 	<body>
 		<div class="wrapper">
-			@@include('html/_header-user.htm',{})
-			<main class="page position">
-				<section class="page__catalog catalog">
+			@@include('html/_header-guest.htm',{})
+			<main class="page position guest">
+				<section class="page__catalog catalog catalog-otlivants">
 					<div class="catalog__container">
 						<nav class="catalog__breadcrumbs breadcrumbs">
 							<ul class="breadcrumbs__list">
 								<li class="breadcrumbs__item">
-									<a href="home-user.html" class="breadcrumbs__link">Интернет магазин парфюмерии</a>
+									<a href="home-guest.html" class="breadcrumbs__link">Интернет магазин парфюмерии</a>
 								</li>
 								<li class="breadcrumbs__item">
-									<a href="home-user.html" class="breadcrumbs__link">Женская парфюмерия</a>
+									<a href="home-guest.html" class="breadcrumbs__link">Отливанты</a>
 								</li>
+								
 								<li class="breadcrumbs__item">
-									<a href="home-user.html" class="breadcrumbs__link">Chanel</a>
-								</li>
-								<li class="breadcrumbs__item">
-									<span class="breadcrumbs__current">Бренды</span>
+									<span class="breadcrumbs__current">Наборы отливантов</span>
 								</li>
 							</ul>
 						</nav>
 						<div class="catalog__wrapper">
-							<aside data-da=".catalog__main, 1001,2" class="catalog__filters filters">
+							<aside data-da=".catalog__main, 1001,1" class="catalog__filters filters">
 								<h3 class="filters__title">фильтры</h3>
 								<form action="#" class="filters__form" method="get">
 									<div data-spollers class="filters__spollers">
@@ -42,61 +40,25 @@
 													</div>
 												</summary>
 												<div class="filter__body options">
-														<div class="options__item">
-															<input id="o_1" class="options__input" type="radio" value="по умолчанию" name="option1">
-															<label for="o_1" class="options__label"><span class="options__text">по умолчанию</span></label>
-														</div>
-														<div class="options__item">
-															<input id="o_2" class="options__input" checked type="radio" value="вначале новинки" name="option1">
-															<label for="o_2" class="options__label"><span class="options__text">вначале новинки</span></label>
-														</div>
-														<div class="options__item">
-															<input id="o_3" class="options__input" type="radio" value="вначале дешевле" name="option1">
-															<label for="o_3" class="options__label"><span class="options__text">вначале дешевле</span></label>
-														</div>
-														<div class="options__item">
-															<input id="o_4" class="options__input" type="radio" value="вначале дороже" name="option1">
-															<label for="o_4" class="options__label"><span class="options__text">вначале дороже</span></label>
-														</div>
-														<div class="options__item">
-															<input id="o_5" class="options__input" type="radio" value="по популярности" name="option1">
-															<label for="o_5" class="options__label"><span class="options__text">по популярности</span></label>
-														</div>
-													</div>
-											</details>
-										</div>
-
-										<div class="filters__filter">
-											<details data-open class="filters__item filter ">
-												<summary class="filter__title-wrapper">
-													<span class="filter__arrow">
-														<img src="@img/catalog/arrow-catalog.svg" alt="">
-													</span>
-													<span class="filter__title">категория</span>
-													<div class="filter__actions">
-														<div class="filter__val">только товары в наличии</div>
-													</div>
-												</summary>
-												<div class="filter__body options">
 													<div class="options__item">
-														<input id="o_6" class="options__input" checked type="radio" value="только товары в наличии" name="option2">
-														<label for="o_6" class="options__label"><span class="options__text">только товары в наличии</span></label>
+														<input id="o_1" class="options__input" type="radio" value="по умолчанию" name="option1">
+														<label for="o_1" class="options__label"><span class="options__text">по умолчанию</span></label>
 													</div>
 													<div class="options__item">
-														<input id="o_7" class="options__input" type="radio" value="только отсутствующие товары" name="option2">
-														<label for="o_7" class="options__label"><span class="options__text">только отсутствующие товары</span></label>
+														<input id="o_2" class="options__input" checked type="radio" value="вначале новинки" name="option1">
+														<label for="o_2" class="options__label"><span class="options__text">вначале новинки</span></label>
 													</div>
 													<div class="options__item">
-														<input id="o_8" class="options__input" type="radio" value="любые товары" name="option2">
-														<label for="o_8" class="options__label"><span class="options__text">любые товары</span></label>
+														<input id="o_3" class="options__input" type="radio" value="вначале дешевле" name="option1">
+														<label for="o_3" class="options__label"><span class="options__text">вначале дешевле</span></label>
 													</div>
 													<div class="options__item">
-														<input id="o_9" class="options__input" type="radio" value="вначале дороже" name="option2">
-														<label for="o_9" class="options__label"><span class="options__text">вначале дороже</span></label>
+														<input id="o_4" class="options__input" type="radio" value="вначале дороже" name="option1">
+														<label for="o_4" class="options__label"><span class="options__text">вначале дороже</span></label>
 													</div>
 													<div class="options__item">
-														<input id="o_10" class="options__input" type="radio" value="по популярности" name="option2">
-														<label for="o_10" class="options__label"><span class="options__text">по популярности</span></label>
+														<input id="o_5" class="options__input" type="radio" value="по популярности" name="option1">
+														<label for="o_5" class="options__label"><span class="options__text">по популярности</span></label>
 													</div>
 												</div>
 											</details>
@@ -111,7 +73,7 @@
 													</span>
 													<span class="filter__title">цена</span>
 													<div class="filter__actions">
-														<div class="filter__val">от <span class="filter__val-low">30000</span> до <span class="filter__val-max">15000</span> руб.</div>
+														<div class="filter__val">от <span class="filter__val-low">30000</span> до <span class="filter__val-max">150000</span> руб.</div>
 													</div>
 												</summary>
 												
@@ -126,326 +88,50 @@
 														<div class="range__field-val " id="upper-cost"></div>
 														<span class="range__text">руб.</span>
 													</div>
-													<div class="range__slider" id="range01"></div>
+													<div class="range__slider" id="range-otliv-filter"></div>
 												</div>
 											</details>
 										</div>
 
 										<div class="filters__filter">
-											<button type="button" class="filter__reset-check">сбросить</button>
-											<details data-open class="filters__item  filters__item_manufacturer filter">
-												<summary class="filter__title-wrapper _spoller-active">
-													<span class="filter__arrow">
-														<img src="@img/catalog/arrow-catalog.svg" alt="">
-													</span>
-													<span class="filter__title">производители</span>
-													<div class="filter__actions">
-														<div class="filter__val">Chanel</div>
-													</div>
-												</summary>
-												
-												<div class="filter__body showmore">
-													<div class="header-center__form">
-														<input id="search-brnds" autocomplete="off" type="search" name="form[]" data-error="Ошибка" placeholder="Поиск товара" class="header-center__input input">
-														<label for="search-brnds" class="header-center__button search-button">
-															<img class="img-search-small" src="@img/header/search30x30.svg" alt="Поиск">
-														</label>
-													</div>
-													<div data-showmore="items" class="filter__showmore ">
-														<ul data-showmore-content="6" class="filter__list">
-															<li class="filter__list-item">
-																<div class="checkbox">
-																	<input id="f_1" data-error="Ошибка" class="checkbox__input" type="checkbox" value="Chanel" name="form[]">
-																	<label for="f_1" class="checkbox__label">
-																		<span class="checkbox__body "></span>
-																		<span class="checkbox__text">Chanel</span></label>
-																</div>
-															</li>
-															<li class="filter__list-item">
-																<div class="checkbox">
-																	<input id="f_2" data-error="Ошибка" class="checkbox__input" type="checkbox" value="Versage" name="form[]">
-																	<label for="f_2" class="checkbox__label">
-																		<span class="checkbox__body "></span>
-																		<span class="checkbox__text">Versage</span></label>
-																</div>
-															</li>
-															<li class="filter__list-item">
-																<div class="checkbox">
-																	<input id="f_3" data-error="Ошибка" class="checkbox__input" type="checkbox" value="Calvin Klein" name="form[]">
-																	<label for="f_3" class="checkbox__label">
-																		<span class="checkbox__body "></span>
-																		<span class="checkbox__text">Calvin Klein</span></label>
-																</div>
-															</li>
-															<li class="filter__list-item">
-																<div class="checkbox">
-																	<input id="f_4" data-error="Ошибка" class="checkbox__input" type="checkbox" value="Lacoste Pour Elle" name="form[]">
-																	<label for="f_4" class="checkbox__label">
-																		<span class="checkbox__body "></span>
-																		<span class="checkbox__text">Lacoste Pour Elle</span></label>
-																</div>
-															</li>
-															<li class="filter__list-item">
-																<div class="checkbox">
-																	<input id="f_5" data-error="Ошибка" class="checkbox__input" type="checkbox" value="Escentric Molecules" name="form[]">
-																	<label for="f_5" class="checkbox__label">
-																		<span class="checkbox__body "></span>
-																		<span class="checkbox__text">Escentric Molecules</span></label>
-																</div>
-															</li>
-															<li class="filter__list-item">
-																<div class="checkbox">
-																	<input id="f_6" data-error="Ошибка" class="checkbox__input" type="checkbox" value="Christian Dior Sauvage" name="form[]">
-																	<label for="f_6" class="checkbox__label">
-																		<span class="checkbox__body "></span>
-																		<span class="checkbox__text">Christian Dior Sauvage</span></label>
-																</div>
-															</li>
-															<li class="filter__list-item">
-																<div class="checkbox">
-																	<input id="f_7" data-error="Ошибка" class="checkbox__input" type="checkbox" value="Chanel" name="form[]">
-																	<label for="f_7" class="checkbox__label">
-																		<span class="checkbox__body "></span>
-																		<span class="checkbox__text">Chanel</span></label>
-																</div>
-															</li>
-															<li class="filter__list-item">
-																<div class="checkbox">
-																	<input id="f_8" data-error="Ошибка" class="checkbox__input" type="checkbox" value="Versage" name="form[]">
-																	<label for="f_8" class="checkbox__label">
-																		<span class="checkbox__body "></span>
-																		<span class="checkbox__text">Versage</span></label>
-																</div>
-															</li>
-															<li class="filter__list-item">
-																<div class="checkbox">
-																	<input id="f_9" data-error="Ошибка" class="checkbox__input" type="checkbox" value="Calvin Klein" name="form[]">
-																	<label for="f_9" class="checkbox__label">
-																		<span class="checkbox__body "></span>
-																		<span class="checkbox__text">Calvin Klein</span></label>
-																</div>
-															</li>
-															<li class="filter__list-item">
-																<div class="checkbox">
-																	<input id="f_10" data-error="Ошибка" class="checkbox__input" type="checkbox" value="Lacoste Pour Elle" name="form[]">
-																	<label for="f_10" class="checkbox__label">
-																		<span class="checkbox__body "></span>
-																		<span class="checkbox__text">Lacoste Pour Elle</span></label>
-																</div>
-															</li>
-															<li class="filter__list-item">
-																<div class="checkbox">
-																	<input id="f_11" data-error="Ошибка" class="checkbox__input" type="checkbox" value="Escentric Molecules" name="form[]">
-																	<label for="f_11" class="checkbox__label">
-																		<span class="checkbox__body "></span>
-																		<span class="checkbox__text">Escentric Molecules</span></label>
-																</div>
-															</li>
-															<li class="filter__list-item">
-																<div class="checkbox">
-																	<input id="f_12" data-error="Ошибка" class="checkbox__input" type="checkbox" value="Christian Dior Sauvage" name="form[]">
-																	<label for="f_12" class="checkbox__label">
-																		<span class="checkbox__body "></span>
-																		<span class="checkbox__text">Christian Dior Sauvage</span></label>
-																</div>
-															</li>
-														</ul>
-														<button hidden data-showmore-button type="button" class="filter__more"><span>отобразить всё</span><span>Спрятать</span></button>
-													</div>
-												</div>
-											</details>
-										</div>
-
-										<div class="filters__filter">
-											<button type="button" class="filter__reset-check">сбросить</button>
 											<details data-open class="filters__item  filter">
 												<summary class="filter__title-wrapper _spoller-active">
 													<span class="filter__arrow">
 														<img src="@img/catalog/arrow-catalog.svg" alt="">
 													</span>
-													<span class="filter__title">парфюмерия</span>
+													<span class="filter__title">наличие товара</span>
 													<div class="filter__actions">
-													<div class="filter__val">туалетная вода (edt)</div>
+													<div class="filter__val">любые товары</div>
 												</div>
 												</summary>
 												
-												<div class="filter__body showmore">
-													<div data-showmore="items" class="filter__showmore">
-														<ul data-showmore-content="3" class="filter__list">
-															<li class="filter__list-item">
-																<div class="checkbox">
-																	<input id="f_21" data-error="Ошибка" class="checkbox__input" type="checkbox" value="туалетная вода (edt)" name="form[]">
-																	<label for="f_21" class="checkbox__label">
-																		<span class="checkbox__body "></span>
-																		<span class="checkbox__text">туалетная вода (edt)</span></label>
-																</div>
-															</li>
-															<li class="filter__list-item">
-																<div class="checkbox">
-																	<input id="f_22" data-error="Ошибка" class="checkbox__input" type="checkbox" value="парфюмерная вода (edp)" name="form[]">
-																	<label for="f_22" class="checkbox__label">
-																		<span class="checkbox__body "></span>
-																		<span class="checkbox__text">парфюмерная вода (edp)</span></label>
-																</div>
-															</li>
-															<li class="filter__list-item">
-																<div class="checkbox">
-																	<input id="f_23" data-error="Ошибка" class="checkbox__input" type="checkbox" value="духи (parfum)" name="form[]">
-																	<label for="f_23" class="checkbox__label">
-																		<span class="checkbox__body "></span>
-																		<span class="checkbox__text">духи (parfum)</span></label>
-																</div>
-															</li>
-															<li class="filter__list-item">
-																<div class="checkbox">
-																	<input id="f_24" data-error="Ошибка" class="checkbox__input" type="checkbox" value="одеколон (colonge)" name="form[]">
-																	<label for="f_24" class="checkbox__label">
-																		<span class="checkbox__body "></span>
-																		<span class="checkbox__text">одеколон (colonge)</span></label>
-																</div>
-															</li>
-															<li class="filter__list-item">
-																<div class="checkbox">
-																	<input id="f_25" data-error="Ошибка" class="checkbox__input" type="checkbox" value="одеколон (colonge)" name="form[]">
-																	<label for="f_25" class="checkbox__label">
-																		<span class="checkbox__body "></span>
-																		<span class="checkbox__text">одеколон (colonge)</span></label>
-																</div>
-															</li>
-															<li class="filter__list-item">
-																<div class="checkbox">
-																	<input id="f_26" data-error="Ошибка" class="checkbox__input" type="checkbox" value="одеколон (colonge)" name="form[]">
-																	<label for="f_26" class="checkbox__label">
-																		<span class="checkbox__body "></span>
-																		<span class="checkbox__text">одеколон (colonge)</span></label>
-																</div>
-															</li>
-															<li class="filter__list-item">
-																<div class="checkbox">
-																	<input id="f_27" data-error="Ошибка" class="checkbox__input" type="checkbox" value="одеколон (colonge)" name="form[]">
-																	<label for="f_27" class="checkbox__label">
-																		<span class="checkbox__body "></span>
-																		<span class="checkbox__text">одеколон (colonge)</span></label>
-																</div>
-															</li>
-															<li class="filter__list-item">
-																<div class="checkbox">
-																	<input id="f_28" data-error="Ошибка" class="checkbox__input" type="checkbox" value="одеколон (colonge)" name="form[]">
-																	<label for="f_28" class="checkbox__label">
-																		<span class="checkbox__body "></span>
-																		<span class="checkbox__text">одеколон (colonge)</span></label>
-																</div>
-															</li>
-															<li class="filter__list-item">
-																<div class="checkbox">
-																	<input id="f_29" data-error="Ошибка" class="checkbox__input" type="checkbox" value="одеколон (colonge)" name="form[]">
-																	<label for="f_29" class="checkbox__label">
-																		<span class="checkbox__body "></span>
-																		<span class="checkbox__text">одеколон (colonge)</span></label>
-																</div>
-															</li>
-														</ul>
-														<button hidden data-showmore-button type="button" class="filter__more"><span>отобразить всё</span><span>Спрятать</span></button>
-													</div>
-												</div>
-											</details>
-										</div>
-
-										<div class="filters__filter">
-											<button type="button" class="filter__reset">сбросить</button>
-											<details data-open class="filters__item  filter">
-												<summary class="filter__title-wrapper">
-													<span class="filter__arrow">
-														<img src="@img/catalog/arrow-catalog.svg" alt="">
-													</span>
-													<span class="filter__title">объём</span>
-													<div class="filter__actions">
-														<div class="filter__val">от <span class="filter__val-low">20</span> до <span class="filter__val-max">60</span> руб.</div>
-													</div>
-												</summary>
-													
-												<div class="filter__body range">
-													<div class="range__value">
-														<span class="range__text">от</span>
-														<div class="range__field-val " id="lower-volume"></div>
-														<span class="range__text">мл.</span>
-													</div>
-													<div class="range__value">
-														<span class="range__text">до</span>
-														<div class="range__field-val " id="upper-volume"></div>
-														<span class="range__text">мл.</span>
-													</div>
-													<div class="range__slider" id="range02"></div>
-												</div>
-											</details>
-										</div>
-
-										<div class="filters__filter">
-											<img data-tippy-content-nab class="filter__help" src="@img/catalog/vopros.svg" alt="подсказка">
-											<details data-open class="filters__item  filter">
-												<summary class="filter__title-wrapper">
-													<span class="filter__arrow">
-														<img src="@img/catalog/arrow-catalog.svg" alt="">
-													</span>
-													<span class="filter__title filter__title-help">наборы</span>
-													<div class="filter__actions">
-														<div class="filter__val">в том числе наборы</div>
-													</div>
-												</summary>
 												<div class="filter__body options">
-													<div class="options__item">
-														<input id="o_nab1" class="options__input" type="radio" value="только наборы" name="option3">
-														<label for="o_nab1" class="options__label"><span class="options__text">только наборы</span></label>
-													</div>
-													<div class="options__item">
-														<input id="o_nab2" class="options__input" checked type="radio" value="в том числе наборы" name="option3">
-														<label for="o_nab2" class="options__label"><span class="options__text">в том числе наборы</span></label>
-													</div>
-													<div class="options__item">
-														<input id="o_nab3" class="options__input" type="radio" value="исключить наборы" name="option3">
-														<label for="o_nab3" class="options__label"><span class="options__text">исключить наборы</span></label>
-													</div>
-												</div>
-											</details>
-										</div>
-										<div class="filters__filter">
-											<img data-tippy-content-testers class="filter__help filter__help_testers" src="@img/catalog/vopros.svg" alt="подсказка">
-											<details data-open class="filters__item  filter">
-												<summary class="filter__title-wrapper">
-													<span class="filter__arrow">
-														<img src="@img/catalog/arrow-catalog.svg" alt="">
-													</span>
-													<span  class="filter__title filter__title-help">тестеры</span>
-													<div class="filter__actions">
-													<div class="filter__val">в том числе тестеры</div>
-												</div>
-												</summary>
-												<div class="filter__body options">
-													<div class="options__item">
-														<input id="o_testers1" class="options__input" type="radio" value="только тестеры" name="option4">
-														<label for="o_testers1" class="options__label"><span class="options__text">только тестеры</span></label>
-													</div>
-													<div class="options__item">
-														<input id="o_testers2" class="options__input" checked type="radio" value="в том числе тестеры" name="option4">
-														<label for="o_testers2" class="options__label"><span class="options__text">в том числе тестеры</span></label>
-													</div>
-													<div class="options__item">
-														<input id="o_testers3" class="options__input" type="radio" value="исключить тестеры" name="option4">
-														<label for="o_testers3" class="options__label"><span class="options__text">исключить тестеры</span></label>
+													<div class="catalog-otlivants__list">
+														<!-- <div class="filter__body options"> -->
+															<div class="options__item">
+																<input id="otliv_1" class="options__input" type="radio" value="только товары в наличии" name="option-otliv">
+																<label for="otliv_1" class="options__label"><span class="options__text">только товары в наличии</span></label>
+															</div>
+															<div class="options__item">
+																<input id="otliv_2" class="options__input" type="radio" value="только отсутствующие товары" name="option-otliv">
+																<label for="otliv_2" class="options__label"><span class="options__text">только отсутствующие товары</span></label>
+															</div>
+															<div class="options__item">
+																<input id="otliv_3" class="options__input" checked type="radio" value="любые товары" name="option-otliv">
+																<label for="otliv_3" class="options__label"><span class="options__text">любые товары</span></label>
+															</div>
+														<!-- </div> -->
 													</div>
 												</div>
 											</details>
 										</div>
+										
 									</div>
-									<button class="filter__search-all button-actions">показать всё</button>
+									<button class="filter__search-all button-actions">показать результаты</button>
 								</form>
 							</aside>
 							<div class="catalog__main main-catalog">
-								<h3 class="main-catalog__title">каталог с выводом позиций</h3>
-								<p class="main-catalog__text">
-									На данной странице мы собрали для Вас ТОП-продаж нашего интернет-магазина. По сути, это самые популярные ароматы для женщин и мужчин, которые чаще других выбирают наши клиенты. Эта подборка может быть весьма полезной, если Вы, скажем, хотите сделать подарок и при этом точно не ошибиться с выбором аромата. Чаще всего, популярные духи - это отличное соотношение цены и качества, которое подходит большинству покупателей. Кроме того, популярный парфюм всегда собирает комплименты, потому как изначально нравится очень многим. И, конечно же, самые популярные духи по умолчанию просто не могут быть плохими или неудачными. Обычно, их отличает хорошо собранная парфюмерная композиция, отсутствие кричащих и спорных нот.
-									<br><br>Мы рекомендуем Вам данную подборку популярных ароматов в качестве ориентира, но всегда помните, что стоит выбирать тот парфюм, который нравится именно Вам!
-								</p>
+								<h3 class="main-catalog__title">наборы отливантов</h3>
 								<div class="main-catalog__products">
 									<div data-tabs class="brands-tabs">
 										<nav data-tabs-titles class="brands-tabs__navigation">
@@ -463,14 +149,14 @@
 													<rect x="0.666992" y="12.333" width="18.6667" height="7" rx="1" stroke="#931E3F" stroke-linejoin="round" />
 												</svg>
 											</button>
-											<button data-popup="#filters-main" type="button" class="main-catalog__mobile-filters-open">фильтры</button>
+											<button data-popup="#filters-otlivant" type="button" class="main-catalog__mobile-filters-open">фильтры</button>
 										</nav>
 										<div data-tabs-body class="brands-tabs__content">
 											<div class="brands-tabs__body tile">
 												<div class="main-catalog__wrapper">
 													<article class="tabs__product product">
 														<div class="product__img ">
-															<img class ="ibg" src="@img/home/products/01.jpg" alt="">
+															<img class ="ibg" src="@img/otlivants/catalog/otlivant.jpg" alt="">
 														</div>
 														<div class="product__content">
 															<span class="product__subtext">код товара: 123456</span>
@@ -496,7 +182,7 @@
 													</article>
 													<article class="tabs__product product">
 														<div class="product__img ">
-															<img class ="ibg" src="@img/home/products/01.jpg" alt="">
+															<img class ="ibg" src="@img/otlivants/catalog/otlivant.jpg" alt="">
 														</div>
 														<div class="product__content">
 															<span class="product__subtext">код товара: 123456</span>
@@ -522,7 +208,7 @@
 													</article>
 													<article class="tabs__product product">
 														<div class="product__img ">
-															<img class ="ibg" src="@img/home/products/01.jpg" alt="">
+															<img class ="ibg" src="@img/otlivants/catalog/otlivant.jpg" alt="">
 														</div>
 														<div class="product__content">
 															<span class="product__subtext">код товара: 123456</span>
@@ -548,7 +234,7 @@
 													</article>
 													<article class="tabs__product product">
 														<div class="product__img ">
-															<img class ="ibg" src="@img/home/products/01.jpg" alt="">
+															<img class ="ibg" src="@img/otlivants/catalog/otlivant.jpg" alt="">
 														</div>
 														<div class="product__content">
 															<span class="product__subtext">код товара: 123456</span>
@@ -574,7 +260,7 @@
 													</article>
 													<article class="tabs__product product">
 														<div class="product__img ">
-															<img class ="ibg" src="@img/home/products/01.jpg" alt="">
+															<img class ="ibg" src="@img/otlivants/catalog/otlivant.jpg" alt="">
 														</div>
 														<div class="product__content">
 															<span class="product__subtext">код товара: 123456</span>
@@ -600,7 +286,7 @@
 													</article>
 													<article class="tabs__product product">
 														<div class="product__img ">
-															<img class ="ibg" src="@img/home/products/01.jpg" alt="">
+															<img class ="ibg" src="@img/otlivants/catalog/otlivant.jpg" alt="">
 														</div>
 														<div class="product__content">
 															<span class="product__subtext">код товара: 123456</span>
@@ -626,7 +312,7 @@
 													</article>
 													<article class="tabs__product product">
 														<div class="product__img ">
-															<img class ="ibg" src="@img/home/products/01.jpg" alt="">
+															<img class ="ibg" src="@img/otlivants/catalog/otlivant.jpg" alt="">
 														</div>
 														<div class="product__content">
 															<span class="product__subtext">код товара: 123456</span>
@@ -652,7 +338,7 @@
 													</article>
 													<article class="tabs__product product">
 														<div class="product__img ">
-															<img class ="ibg" src="@img/home/products/01.jpg" alt="">
+															<img class ="ibg" src="@img/otlivants/catalog/otlivant.jpg" alt="">
 														</div>
 														<div class="product__content">
 															<span class="product__subtext">код товара: 123456</span>
@@ -678,7 +364,7 @@
 													</article>
 													<article class="tabs__product product">
 														<div class="product__img ">
-															<img class ="ibg" src="@img/home/products/01.jpg" alt="">
+															<img class ="ibg" src="@img/otlivants/catalog/otlivant.jpg" alt="">
 														</div>
 														<div class="product__content">
 															<span class="product__subtext">код товара: 123456</span>
@@ -704,7 +390,7 @@
 													</article>
 													<article class="tabs__product product">
 														<div class="product__img ">
-															<img class ="ibg" src="@img/home/products/01.jpg" alt="">
+															<img class ="ibg" src="@img/otlivants/catalog/otlivant.jpg" alt="">
 														</div>
 														<div class="product__content">
 															<span class="product__subtext">код товара: 123456</span>
@@ -730,7 +416,7 @@
 													</article>
 													<article class="tabs__product product product-wait">
 														<div class="product__img ">
-															<img class ="ibg" src="@img/home/products/01.jpg" alt="">
+															<img class ="ibg" src="@img/otlivants/catalog/otlivant.jpg" alt="">
 														</div>
 														<div class="product__content">
 															<span class="product__subtext">код товара: 123456</span>
@@ -758,7 +444,7 @@
 													</article>
 													<article class="tabs__product product product-wait">
 														<div class="product__img ">
-															<img class ="ibg" src="@img/home/products/01.jpg" alt="">
+															<img class ="ibg" src="@img/otlivants/catalog/otlivant.jpg" alt="">
 														</div>
 														<div class="product__content">
 															<span class="product__subtext">код товара: 123456</span>
@@ -790,7 +476,7 @@
 												<div class="main-catalog__wrapper">
 													<article class="tabs__product product">
 														<div class="product__img ">
-															<img class ="ibg" src="@img/home/products/01.jpg" alt="">
+															<img class ="ibg" src="@img/otlivants/catalog/otlivant.jpg" alt="">
 														</div>
 														<div class="product__content">
 															<span class="product__subtext">код товара: 123456</span>
@@ -816,7 +502,7 @@
 													</article>
 													<article class="tabs__product product">
 														<div class="product__img ">
-															<img class ="ibg" src="@img/home/products/01.jpg" alt="">
+															<img class ="ibg" src="@img/otlivants/catalog/otlivant.jpg" alt="">
 														</div>
 														<div class="product__content">
 															<span class="product__subtext">код товара: 123456</span>
@@ -842,7 +528,7 @@
 													</article>
 													<article class="tabs__product product">
 														<div class="product__img ">
-															<img class ="ibg" src="@img/home/products/01.jpg" alt="">
+															<img class ="ibg" src="@img/otlivants/catalog/otlivant.jpg" alt="">
 														</div>
 														<div class="product__content">
 															<span class="product__subtext">код товара: 123456</span>
@@ -868,7 +554,7 @@
 													</article>
 													<article class="tabs__product product">
 														<div class="product__img ">
-															<img class ="ibg" src="@img/home/products/01.jpg" alt="">
+															<img class ="ibg" src="@img/otlivants/catalog/otlivant.jpg" alt="">
 														</div>
 														<div class="product__content">
 															<span class="product__subtext">код товара: 123456</span>
@@ -894,7 +580,7 @@
 													</article>
 													<article class="tabs__product product">
 														<div class="product__img ">
-															<img class ="ibg" src="@img/home/products/01.jpg" alt="">
+															<img class ="ibg" src="@img/otlivants/catalog/otlivant.jpg" alt="">
 														</div>
 														<div class="product__content">
 															<span class="product__subtext">код товара: 123456</span>
@@ -920,7 +606,7 @@
 													</article>
 													<article class="tabs__product product">
 														<div class="product__img ">
-															<img class ="ibg" src="@img/home/products/01.jpg" alt="">
+															<img class ="ibg" src="@img/otlivants/catalog/otlivant.jpg" alt="">
 														</div>
 														<div class="product__content">
 															<span class="product__subtext">код товара: 123456</span>
@@ -946,7 +632,7 @@
 													</article>
 													<article class="tabs__product product">
 														<div class="product__img ">
-															<img class ="ibg" src="@img/home/products/01.jpg" alt="">
+															<img class ="ibg" src="@img/otlivants/catalog/otlivant.jpg" alt="">
 														</div>
 														<div class="product__content">
 															<span class="product__subtext">код товара: 123456</span>
@@ -972,7 +658,7 @@
 													</article>
 													<article class="tabs__product product">
 														<div class="product__img ">
-															<img class ="ibg" src="@img/home/products/01.jpg" alt="">
+															<img class ="ibg" src="@img/otlivants/catalog/otlivant.jpg" alt="">
 														</div>
 														<div class="product__content">
 															<span class="product__subtext">код товара: 123456</span>
@@ -998,7 +684,7 @@
 													</article>
 													<article class="tabs__product product">
 														<div class="product__img ">
-															<img class ="ibg" src="@img/home/products/01.jpg" alt="">
+															<img class ="ibg" src="@img/otlivants/catalog/otlivant.jpg" alt="">
 														</div>
 														<div class="product__content">
 															<span class="product__subtext">код товара: 123456</span>
@@ -1024,7 +710,7 @@
 													</article>
 													<article class="tabs__product product">
 														<div class="product__img ">
-															<img class ="ibg" src="@img/home/products/01.jpg" alt="">
+															<img class ="ibg" src="@img/otlivants/catalog/otlivant.jpg" alt="">
 														</div>
 														<div class="product__content">
 															<span class="product__subtext">код товара: 123456</span>
@@ -1050,7 +736,7 @@
 													</article>
 													<article class="tabs__product product">
 														<div class="product__img ">
-															<img class ="ibg" src="@img/home/products/01.jpg" alt="">
+															<img class ="ibg" src="@img/otlivants/catalog/otlivant.jpg" alt="">
 														</div>
 														<div class="product__content">
 															<span class="product__subtext">код товара: 123456</span>
@@ -1076,7 +762,7 @@
 													</article>
 													<article class="tabs__product product">
 														<div class="product__img ">
-															<img class ="ibg" src="@img/home/products/01.jpg" alt="">
+															<img class ="ibg" src="@img/otlivants/catalog/otlivant.jpg" alt="">
 														</div>
 														<div class="product__content">
 															<span class="product__subtext">код товара: 123456</span>
@@ -1102,7 +788,7 @@
 													</article>
 													<article class="tabs__product product">
 														<div class="product__img ">
-															<img class ="ibg" src="@img/home/products/01.jpg" alt="">
+															<img class ="ibg" src="@img/otlivants/catalog/otlivant.jpg" alt="">
 														</div>
 														<div class="product__content">
 															<span class="product__subtext">код товара: 123456</span>
@@ -1128,7 +814,7 @@
 													</article>
 													<article class="tabs__product product">
 														<div class="product__img ">
-															<img class ="ibg" src="@img/home/products/01.jpg" alt="">
+															<img class ="ibg" src="@img/otlivants/catalog/otlivant.jpg" alt="">
 														</div>
 														<div class="product__content">
 															<span class="product__subtext">код товара: 123456</span>
@@ -1154,7 +840,7 @@
 													</article>
 													<article class="tabs__product product">
 														<div class="product__img ">
-															<img class ="ibg" src="@img/home/products/01.jpg" alt="">
+															<img class ="ibg" src="@img/otlivants/catalog/otlivant.jpg" alt="">
 														</div>
 														<div class="product__content">
 															<span class="product__subtext">код товара: 123456</span>
@@ -1197,7 +883,7 @@
 									<div class="tabs__slide swiper-slide">
 										<article class="tabs__product product">
 											<div class="product__img ">
-												<img class ="ibg" src="@img/home/products/01.jpg" alt="">
+												<img class ="ibg" src="@img/otlivants/catalog/otlivant.jpg" alt="">
 											</div>
 											<div class="product__content">
 												<h4 class="product__title"><span>LACOSTE</span> POUR ELLE</h4>
@@ -1403,7 +1089,7 @@
 			@@include('html/_footer.htm',{})
 		</div>
 		@@include('html/_popup.htm',{})
-		@@include('html/_popup-catalog.htm',{})
+		@@include('html/_popup-otlivant.htm',{})
 		@@include('html/_js.htm',{})
 	</body>
 </html>

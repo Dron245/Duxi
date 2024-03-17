@@ -111,13 +111,13 @@ body::after {
 
 .popup {
 	&__wrapper {
-		#filters-main &, #review-filters & {
+		#filters-main &, #review-filters &, #filters-otlivant & {
 			height: 100%;
 		}
 	}
 
 	&__content {
-		#filters-main &, #review-filters & {
+		#filters-main &, #review-filters &, #filters-otlivant & {
 			padding: 0;
 			// min-height: 1340px;
 			box-shadow: 4px 4px 30px 0px rgba(0, 0, 0, 0.25);

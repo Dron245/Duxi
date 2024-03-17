@@ -115,6 +115,11 @@ window.addEventListener('DOMContentLoaded', () => {
 			checked.innerHTML = targetElement.value;
 		}
 
+		//закрашивание звёздочки в избранном
+		if(targetElement.closest('.product__favorite')) {
+			targetElement.closest('.product__favorite').classList.toggle('_active-favorite')
+		}
+
 		//раскрашиваю кнопку выбора категории фильтра при выбранном варианте у чекбоксов в сабменю в моб версии
 		if (window.innerWidth < 768 && targetElement.closest('.checkbox__input')) {
 			let numberSubmenu = targetElement.closest('.filtmodal__submenu').dataset.submenu;
@@ -262,11 +267,24 @@ window.addEventListener('DOMContentLoaded', () => {
 			}); 
 		}
 	}
+
 });
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
 /*===========================================================*/
-
-
 
 //Работа с табами на главной странице под банером
 if (window.innerWidth < 768) {
@@ -344,12 +362,23 @@ headerDropMobile.style.top = `${searchMob.clientHeight}`+ 'px';
 
 // Появление ссылки "Читать полностью" в мобильной версии на странице "Отзывы о магазине"
 const feedBackWrapper = document.querySelectorAll('.feedback__text-wrapper');
+
 feedBackWrapper.forEach(element => {
+	console.log(element.clientHeight);
 	const feedBackText = element.querySelector('.feedback__text')
-	if(element.clientHeight < feedBackText.clientHeight) {
+	console.log(feedBackText.clientTop);
+	console.log(feedBackText.getBoundingClientRect());
+	console.log(feedBackText.clientHeight);
+	if(document.querySelector('.reviews') && element.clientHeight < feedBackText.clientHeight) {
 		element.closest('.feedback__content').querySelector('.feedback__write').classList.add('_open-write')
 	}
+	// if(document.querySelector('.otlivant') && element.clientHeight <= feedBackText.clientHeight * 3) {
+	// 	element.closest('.feedback__content').querySelector('.feedback__write').classList.add('_open-write')
+	// }
+	
 });
+
+
 
 
 // Счётчик символов в textarea на странице "отзыв о магазине"
@@ -387,4 +416,17 @@ counter.textContent = length
 // 		chart.render();
 // 	}
 // }
+ });
+
+
+
+
+
+
+
+
+
+
+
+
 

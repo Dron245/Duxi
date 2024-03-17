@@ -191,6 +191,19 @@ h3[class*="__title"] {
 		img {
 			width: 100%;
 		}
+		& svg {
+			width: 100%;
+			height: auto;
+			path {
+				transition: all 0.2s
+			};
+		}
+		& svg.product__favorite path{
+			fill: white;
+		}
+		& svg._active-favorite.product__favorite path {
+			fill: $zagolovok;
+		}
 	}
 
 	&__view {
@@ -422,7 +435,7 @@ h3[class*="__title"] {
 		position: absolute;
 		top: 50%;
 		transform: translateY(-50%);
-		left: -1%;
+		left: -2%;
 	}
 }
 .swiper-next {
@@ -430,7 +443,7 @@ h3[class*="__title"] {
 	@media (min-width: $mobile) {
 		display: inline-block;
 		position: absolute;
-		right: -1%;
+		right: -2%;
 		top: 50%;
 		transform: translateY(-50%);
 		img {
@@ -568,6 +581,311 @@ h3[class*="__title"] {
 	padding: 12.5px 0px;
 }
 
+// ОТЗЫВ
+
+.feedback {
+
+	&__logo {
+		flex: 0 0 40px;
+		display: grid;
+		place-items: center;
+		width: 40px;
+		height: 40px;
+		border-radius: 100%;
+		color: #fff;
+		font-family: Pt_Sans;
+		font-weight: 700;
+		line-height: normal;
+		font-size: 17px;
+		text-transform: uppercase;
+		@media (max-width:$mobile){
+			display: none; 
+		}
+		&_blue {
+			background-color: #5EC5DC;
+		}
+
+		&_violet {
+			background-color: #BB5EDC;
+		}
+
+		&_yellow {
+			background-color: #F0B864;
+		}
+		&_pink {
+			background-color: #DC5EC0;
+		}
+		&_darkviolet {
+			background-color: #623FC6;
+		}
+	}
+
+	&__body {
+		display: flex;
+		gap: 10px;
+		align-items: flex-start;
+		padding: 10px;
+		border-radius: 16px 16px 0 0;
+		background: #ffffff;
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		row-gap: 15px;
+		@media (max-width:$mobileSmall){
+			row-gap: 10px; 
+		}
+	}
+
+	&__top {
+		display: flex;
+		flex-direction: column;
+		row-gap: 15px;
+		@media (max-width:$mobile){
+			flex-direction: row;
+			justify-content: space-between; 
+		}
+	}
+
+	&__bottom {
+		border-radius: 0 0 16px 16px;
+	}
+
+	&__name {
+		font-weight: 500;
+		line-height: normal;
+		@media (max-width:$tablet){
+			font-size: 20px;
+		}
+		@media (max-width:$mobile){
+			@include adaptiveValue("font-size", 28, 14,0,768,320); 
+		}
+	}
+
+	&__date {
+		line-height: normal;
+		@media (max-width:$tablet){
+			font-size: 20px;
+		}
+		@media (max-width:$mobile){
+			@include adaptiveValue("font-size", 28, 14,0,768,320); 
+		}
+	}
+
+	&__star {
+	}
+
+	&__star-item {
+		display: inline-block;
+		width: 22px;
+		@media (max-width:$tablet){
+			width: 41px;
+		}
+		@media (max-width:$mobile){
+			width: 26px; 
+		}
+		@media (max-width:$mobileSmall){
+			//  width: 21px; 
+		}
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+
+	&__text-wrapper {
+		@media (max-width:$mobile){
+			max-height: 226px;
+			overflow-y: hidden;
+		}
+	}
+
+	&__text {
+		// line-height: normal;
+		@media (max-width:$tablet){
+			font-size: 20px;
+		}
+		@media (max-width:$mobile){
+			
+			@include adaptiveValue("font-size", 28, 14,0,768,320); 
+		}
+	}
+
+	&__write {
+		@media (min-width:$mobile){
+			display: none; 
+		}
+		color: $zagolovok;
+		font-weight: 500;
+		line-height: normal;
+		text-decoration-line: underline;
+		@include adaptiveValue("font-size", 28, 16,0,768,320);
+		display: none;
+		&._open-write {
+			display: block;
+		}
+	}
+
+	&__photo {
+		.reviews & {
+			display: none;
+		}
+		display: flex;
+		flex-wrap: wrap;
+		gap: 7px;
+		align-items: center;
+	}
+
+	&__photo-img {
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+
+	&__question-block {
+	}
+
+	&__spollers {
+	}
+
+	&__spoller-title {
+		color: $zagolovok;
+		line-height: normal;
+		text-transform: uppercase;
+		.feedback__bottom & {
+			align-items: center;
+			gap: 10px;
+			@media (max-width:$tablet){
+				font-size: 22px;
+			}
+			@media (max-width:$mobile){
+				 @include adaptiveValue("font-size", 30, 16,0,768,320); 
+			}
+		}
+	}
+
+	&__spoller-arrow {
+		._spoller-active & img {
+			transform: rotate(90deg);
+		}
+		display: flex;
+		align-items: center;
+		@media (max-width:$mobile){
+			 width: 15px; 
+		}
+		@media (max-width:$mobileSmall){
+			 width: 10px; 
+		}
+		img {
+			width: 100%;
+			height: auto;
+			transition: transform .5s;
+			
+		}
+	}
+
+	&__spoller-body {
+		margin-top: 10px;
+		margin-left: 60px;
+		padding: 20px 10px ;
+		background-color: white;
+		border-radius: 16px;
+		@media (max-width:$mobile){
+			margin-left: 0;
+			border: 1px solid rgba(214, 187, 195, 0.50);
+			border-radius: 0;
+		}
+	}
+
+	&__story-answer {
+	}
+}
+.question-block {
+	@media (max-width:$mobile){
+		 display: flex;
+		 flex-direction: column; 
+		 row-gap: 20px;
+	}
+	@media (max-width:$mobileSmall){
+		row-gap: 10px; 
+  }
+	&__text {
+		font-size: 15px;
+		font-style: italic;
+		font-weight: 500;
+		line-height: normal;
+		@media (max-width:$tablet){
+			font-size: 20px;
+		}
+		@media (max-width:$mobile){
+			@include adaptiveValue("font-size", 28, 14,0,768,320); 
+		}
+		
+	}
+
+	
+	&__text-light {
+		color: rgba(0, 0, 0, 0.65);
+		font-size: 14px;
+		font-style: italic;
+		font-weight: 500;
+		line-height: 25px;
+		@media (max-width:$tablet){
+			font-size: 19px;
+		}
+		@media (max-width:$mobile){
+			display: block;
+			order: 1;
+			 @include adaptiveValue("font-size", 27, 13,0,768,320); 
+		}
+	}
+
+	&__quantity {
+	}
+
+	&__answers {
+		margin-top: 10px;
+		display: flex;
+		gap: 20px;
+		align-items: center;
+	}
+
+	&__button {
+		padding: 12px toRem(23);
+		border-radius: 40px;
+		background: #C2C2C2;
+		line-height: normal;
+		color: white;
+		transition: background-color 0.3s;
+		@media (any-hover: hover){
+			&:hover{
+				background: rgba(194, 194, 194, 0.733);
+			}
+		}
+		@media (max-width:$tablet){
+			font-size: 30px;
+		}
+		@media (max-width:$mobile){
+			@include adaptiveValue("font-size", 28, 14,0,768,320); 
+		}
+		&_yes {
+			._question-active &._question-answer {
+				background-color: #0E9F51;
+			}
+		}
+
+		&_no {
+			._question-active &._question-answer {
+				background-color: #DD101C;
+			}
+		}
+	}
+}
+
+
+//Убираю треугольник на IOS
 summary::-webkit-details-marker {
 	display: none;
 }
