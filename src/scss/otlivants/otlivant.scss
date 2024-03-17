@@ -117,6 +117,12 @@
 .otlvant-review {
 	margin-bottom: 40px;
 
+	&__container {
+		@media (max-width:$mobile){
+			 padding-left: 0;
+			 padding-right: 0; 
+		}
+	}
 	&__top {
 		display: flex;
 		align-items: center;
@@ -128,7 +134,8 @@
 			}
 			display: inline-block;
 			margin: 0;
-			width: 30%;
+			width: 22%;
+			font-size: 14px;
 			@media (max-width:$mobile){
 				 display: none; 
 			}
@@ -136,6 +143,9 @@
 	}
 
 	&__title {
+		&[class] {
+			margin-bottom: 0;
+		}
 		@media (max-width:$mobile){
 			 display: none; 
 		}
@@ -197,6 +207,9 @@
 		margin-bottom: 20px;
 		@media (min-width:$mobile){
 			 display: none; 
+		}
+		@media (max-width:$mobile){
+			 @include adaptiveValue("font-size", 28, 14,0,768,320); 
 		}
 	}
 }
