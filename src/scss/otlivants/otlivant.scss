@@ -2,6 +2,7 @@
 	display: none;
 }
 
+// изменение стилей из других страниц на этой странице
 .otlivant {
 	& .recently {
 		margin-top: 40px;
@@ -114,6 +115,377 @@
 	}
 }
 
+//основная секция
+.otlivant {
+
+	&__product {
+	}
+}
+.otliv {
+
+	&__top {
+		margin-bottom: 20px;
+		.product__subtext {
+			font-size: 16px;
+			font-weight: 300;
+			line-height: normal;
+		}
+	}
+
+	&__title {
+		font-size: 30px;
+		font-weight: 300;
+		line-height: normal;
+		&:not(:last-child) {margin-bottom: toRem(10);}
+		span {
+			font-weight: 400;
+		}
+	}
+
+	&__number {
+	}
+
+	&__wrapper {
+		// display: flex;
+		display: grid;
+		gap: 20px;
+		grid-template-columns: 40.909091% 1fr;
+		@media (max-width:$mobile){
+			 grid-template-columns: 1fr; 
+		}
+	}
+
+	&__da {
+		grid-column:1 / 3;
+		@media (min-width:$tablet){
+			 display: none; 
+		}
+	}
+	&__left {
+		// flex: 0 0 50%;
+		display: flex;
+		outline: 1px solid ;
+		// display: grid;
+		// visibility: hidden;
+		// display: none;
+	}
+
+	&__wrap {
+		width: 100%;
+		width: 75%;
+		&_thumb {
+			// flex: 0 0 25%;
+			width: 25%;
+			@media (max-width:$mobile){
+				 display: none; 
+			}
+		}
+	}
+
+	&__slider-main {
+	}
+
+	&__wrapper-main {
+	}
+
+	&__slide-main {
+	}
+
+	&__slider-thumbs-wrap {
+		display: flex;
+		row-gap: 20px;
+		flex-direction: column;
+		& button {
+			// position: relative;
+			// top: 0;
+			// left: 0;
+		}
+	}
+
+	&__slider-thumbs {
+		height: 600px;
+	}
+
+	&__wrapper-thumbs {
+		// display: flex;
+		// display: grid;
+		// flex-direction: column;
+	}
+
+	&__slide-thumbs {
+	}
+
+	&__content {
+	}
+
+	&__actions {
+	}
+
+	&__pos {
+	}
+}
+// .product {
+
+// 	&__subtext {
+// 	}
+// }
+// .swiper {
+// }
+// .swiper-wrapper {
+// }
+// .swiper-slide {
+// }
+// .otlivant-photo-pagination {
+// }
+// .pagination {
+// }
+// .swiper-prev {
+// }
+// .otlivant-thumbs-prev {
+// }
+// .swiper-next {
+// }
+// .otlivant-thumbs-next {
+// }
+.actions-otliv {
+	display: inline-flex;
+	align-items: flex-start;
+	gap: 25px;
+	&:not(:last-child) {margin-bottom: toRem(40);}
+	@media (max-width:$mobile){
+		 display: flex;
+		 flex-direction: column; 
+	}
+	&__info {
+		display: flex;
+		flex-direction: column;
+ 		@media (max-width:$mobile){
+			 width: 100%;
+			 flex: 0 0 100%; 
+		}
+	}
+
+	&__title {
+		margin-bottom: 15px;
+	}
+
+	&__cost {
+		position: relative;
+		width: max-content;
+		&:not(:last-child) {margin-bottom: toRem(37);}
+	}
+
+	&__available {
+		display: inline-flex;
+		align-items: center;
+		column-gap: toRem(10);
+	}
+
+	&__buttons {
+		button {
+			&:not(:last-child) {margin-bottom: toRem(10);}
+			@media (max-width:$mobile){
+				 width: 100%; 
+			}
+		}
+		@media (max-width:$mobile){
+			 flex: 0 0 100%;
+			 width: 100%; 
+		}
+	}
+	&__button {
+		width: 240px;
+		display: grid;
+		place-items: center;
+		text-transform: uppercase;
+		padding-top: 12px;
+		padding-bottom: 12px;
+		line-height: normal;
+		transition: background-color 0.3s, color 0.3s;
+		&_cart {
+			color: white;
+			background-color: $knopka-bordovaya;
+			@media (any-hover: hover){
+				&:hover{
+					// color: $knopka-bordovaya;
+					// background-color: #fff;
+				}
+			}
+		}
+
+		&_cost {
+			border:1px solid $knopka-bordovaya;
+			color:$knopka-bordovaya;
+			@media (any-hover: hover){
+				&:hover{
+					// color: white;
+					// background-color: $knopka-bordovaya;
+				}
+			}
+		}
+	}
+}
+
+.cost-otliv {
+	display: inline-block;
+	&__grand {
+		font-size: 33px;
+		font-weight: 500;
+		line-height: normal;
+	}
+
+	&__number {
+		
+	}
+
+	&__legend {
+		@media (min-width:$mobile){
+			 display: none; 
+		}
+	}
+	&__none {
+		position: absolute;
+		right: 0;
+		top: -40%;
+		text-decoration-line: line-through;
+		@media (max-width:$mobile){
+			 position: relative;
+			 right: initial;
+			 left: 0; 
+		}
+	}
+
+	&__discount {
+		@media (min-width:$mobile){
+			 display: none; 
+		}
+	}
+
+	&__discount-number {
+		
+	}
+
+	&__none-number {
+		font-size: 16px;
+		font-weight: 300;
+		line-height: normal;
+		
+	}
+
+	&__bonus {
+		position: absolute;
+		left: 0;
+		top: 100%;
+		color: #207F24;
+		font-family: Roboto;
+		font-weight: 500;
+		line-height: normal;
+		@media (max-width:$mobile){
+			 position: relative;
+			 top: 0;
+			 left: 0; 
+		}
+	}
+
+	&__bonus-number {
+		
+	}
+}
+.available-block {
+
+	&__text {
+		font-size: 16px;
+		font-weight: 300;
+		// line-height: normal;
+	}
+
+	&__circle {
+	}
+}
+.circle-available {
+
+	&__punkt {
+		display: inline-block;
+		width: 16px;
+		height: 16px;
+		border-radius: 100%;
+		&:not(:last-child) {
+			margin-right: 7px;
+		}
+		&_full {
+			background-color: #DB888D;
+		}
+
+		&_empty {
+			background-color: #F5DCDD;
+		}
+	}
+}
+
+.pos-otliv {
+
+	&__title {
+	}
+
+	&__content {
+		padding: 20px;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		column-gap: 30px;
+		row-gap: 20px;
+		@media (max-width:$mobile){
+			 grid-template-columns: 1fr; 
+		}
+	}
+
+	&__spollers {
+		.feedback__spoller-arrow {
+			@media (min-width:$mobile){
+				 display: none; 
+			}
+		}
+	}
+
+	&__item {
+		
+	}
+
+	&__link {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		@media (max-width:$mobile){
+			 align-items: flex-start; 
+		}
+	}
+
+	&__img {
+		width: 80px;
+		@media (max-width:$mobile){
+			 @include adaptiveValue("width", 70, 45,0,768,320); 
+		}
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+
+	&__info {
+	}
+
+	&__text {
+		font-style: italic;
+		line-height: normal;
+		text-decoration-line: underline;
+	}
+
+	&__brand {
+		font-weight: 500;
+	}
+}
+
+
+//ОТзывы
 .otlvant-review {
 	margin-bottom: 40px;
 
@@ -180,6 +552,13 @@
 	  }
 	}
 
+	&__button-wrap {
+		@media (max-width:$mobile){
+			padding-top: 20px;
+			background-color: rgb(255, 255, 255); 
+		}
+	}
+
 	&__spollers {
 		summary {
 			@media (min-width:$mobile){
@@ -239,9 +618,3 @@
 	}
 }
 
-.zxc {
-	@media (max-width:$mobile){
-		padding-top: 20px;
-		background-color: rgb(255, 255, 255); 
-	}
-}
