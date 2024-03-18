@@ -22,8 +22,9 @@
 		}
 	}
 	.feedback__write {
-		display: block;
+		// display: block;
 	}
+
 	//отзыв. переношу мобильные стили отзыва в пк стили 
 	//карточки отливанта
 
@@ -65,7 +66,7 @@
 		}
 		@media (max-width:$tablet){
 			 height: 167px;
-			 overflow: hidden;
+			 overflow-y: hidden;
 		}
 	}
 
@@ -119,6 +120,7 @@
 .otlivant {
 
 	&__product {
+		margin-bottom: 40px;
 	}
 }
 .otliv {
@@ -129,6 +131,12 @@
 			font-size: 16px;
 			font-weight: 300;
 			line-height: normal;
+			@media (max-width:$tablet){
+				font-size: 18px;
+			}
+			@media (max-width:$mobile){
+				 @include adaptiveValue("font-size", 22, 13,0,768,320); 
+			}
 		}
 	}
 
@@ -140,6 +148,12 @@
 		span {
 			font-weight: 400;
 		}
+		@media (max-width:$mobileSmall){
+			 font-size: toRem(28); 
+		}
+		@media (max-width: em(360)){
+			font-size: 22px;
+		}
 	}
 
 	&__number {
@@ -150,6 +164,9 @@
 		display: grid;
 		gap: 20px;
 		grid-template-columns: 40.909091% 1fr;
+		@media (max-width:$tablet){
+			grid-template-columns: 48.871332% 1fr;
+		}
 		@media (max-width:$mobile){
 			 grid-template-columns: 1fr; 
 		}
@@ -157,6 +174,9 @@
 
 	&__da {
 		grid-column:1 / 3;
+		@media (max-width:$mobile){
+			 grid-column: 1 / 2; 
+		}
 		@media (min-width:$tablet){
 			 display: none; 
 		}
@@ -164,7 +184,7 @@
 	&__left {
 		// flex: 0 0 50%;
 		display: flex;
-		outline: 1px solid ;
+		outline: 1px solid  rgb(89, 0, 255);
 		// display: grid;
 		// visibility: hidden;
 		// display: none;
@@ -192,13 +212,26 @@
 	}
 
 	&__slider-thumbs-wrap {
+		position: relative;
 		display: flex;
 		row-gap: 20px;
 		flex-direction: column;
 		& button {
+			z-index: 20;
+			left: 50%;
+			transform: translateX(-50%);
 			// position: relative;
 			// top: 0;
 			// left: 0;
+			// display: none;
+		}
+		.swiper-next {
+			bottom: -20px;
+			right: 0;
+			top: initial;
+		}
+		.swiper-prev {
+			top: -20px;
 		}
 	}
 
@@ -216,6 +249,9 @@
 	}
 
 	&__content {
+		@media (max-width:$mobile){
+			 display: none; 
+		}
 	}
 
 	&__actions {
@@ -268,7 +304,7 @@
 	&__title {
 		margin-bottom: 15px;
 	}
-
+	
 	&__cost {
 		position: relative;
 		width: max-content;
@@ -283,9 +319,12 @@
 
 	&__buttons {
 		button {
-			&:not(:last-child) {margin-bottom: toRem(10);}
+			&:not(:last-child) {margin-bottom: toRem(20);}
 			@media (max-width:$mobile){
 				 width: 100%; 
+			}
+			@media (max-width: em(360)){
+				&:not(:last-child) {margin-bottom: toRem(10);}
 			}
 		}
 		@media (max-width:$mobile){
@@ -294,7 +333,13 @@
 		}
 	}
 	&__button {
-		width: 240px;
+		@include adaptiveValue("width", 240, 160,0,1920,768);
+		@media (max-width:$tablet){
+			@include adaptiveValue("font-size", 22, 15,0,1001,768.01);
+		}
+		@media (max-width:$mobile){
+			 @include adaptiveValue("font-size", 35, 16,0,768,320); 
+		}
 		display: grid;
 		place-items: center;
 		text-transform: uppercase;
@@ -328,26 +373,62 @@
 
 .cost-otliv {
 	display: inline-block;
+	@media (max-width:$mobile){
+		 display: block;
+		 width: 100%;
+	}
 	&__grand {
 		font-size: 33px;
 		font-weight: 500;
 		line-height: normal;
+		@media (max-width:$tablet){
+			font-size: 35px;
+		}
+		@media (max-width:$mobile){
+			 @include adaptiveValue("font-size", 45, 20,0,768,320); 
+			 display: flex;
+			 justify-content: space-between;
+		}
 	}
 
+	&__costs {
+		@media (max-width:$mobile){
+			display: flex;
+			flex-direction: column;
+			row-gap: 20px;
+			padding: 20px;
+			border: 1px solid rgba(214, 187, 195, 0.50);
+			background: #FFF;
+			& > * {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+			}
+		}
+		@media (max-width:$mobileSmall){
+			 padding: 10px; 
+		}
+	}
 	&__number {
-		
+		@media (max-width:$mobile){
+			 margin-left: auto; 
+		}
 	}
 
 	&__legend {
+		// text-decoration-line: none;
 		@media (min-width:$mobile){
 			 display: none; 
+		}
+		@media (max-width:$mobile){
+			@include adaptiveValue("font-size", 28, 13,0,768,320); 
 		}
 	}
 	&__none {
 		position: absolute;
 		right: 0;
 		top: -40%;
-		text-decoration-line: line-through;
+		// text-decoration-line: line-through;
 		@media (max-width:$mobile){
 			 position: relative;
 			 right: initial;
@@ -362,14 +443,25 @@
 	}
 
 	&__discount-number {
-		
+			font-weight: 500;
+			@media (max-width:$mobile){
+				 @include adaptiveValue("font-size", 28, 13,0,768,320);
+				 margin-left: auto;
+			}
 	}
 
 	&__none-number {
 		font-size: 16px;
 		font-weight: 300;
 		line-height: normal;
-		
+		text-decoration-line: line-through;
+		@media (max-width:$tablet){
+			font-size: 18px;
+		}
+		@media (max-width:$mobile){
+			 @include adaptiveValue("font-size", 28, 13,0,768,320);
+			 margin-left: auto;
+		}
 	}
 
 	&__bonus {
@@ -380,10 +472,19 @@
 		font-family: Roboto;
 		font-weight: 500;
 		line-height: normal;
+		@media (max-width:$tablet){
+			font-size: 18px;
+		}
+		
 		@media (max-width:$mobile){
+			@include adaptiveValue("font-size", 28, 13,0,768,320);
 			 position: relative;
 			 top: 0;
-			 left: 0; 
+			 left: 0;
+			 .cost-otliv__legend {
+				color: initial;
+				font-weight: 400;
+			 }
 		}
 	}
 
@@ -392,10 +493,20 @@
 	}
 }
 .available-block {
-
+	
 	&__text {
 		font-size: 16px;
 		font-weight: 300;
+		@media (max-width:$pcSmall){
+			font-size: 14px;
+		}
+		@media (max-width:$tablet){
+			font-size: 18px;
+		}
+		@media (max-width:$mobile){
+			font-weight: 400;
+			 @include adaptiveValue("font-size", 28, 13,0,768,320); 
+		}
 		// line-height: normal;
 	}
 
@@ -403,15 +514,23 @@
 	}
 }
 .circle-available {
-
+	display: flex;
 	&__punkt {
 		display: inline-block;
 		width: 16px;
 		height: 16px;
+		
 		border-radius: 100%;
 		&:not(:last-child) {
 			margin-right: 7px;
 		}
+		@media (min-width:$mobileSmall) and (max-width:$mobile){
+			width: 22px;
+			height: 22px;
+			&:not(:last-child) {
+			  margin-right: 10px;
+		  }
+	  }
 		&_full {
 			background-color: #DB888D;
 		}
@@ -424,12 +543,17 @@
 
 .pos-otliv {
 
+	.feedback__spoller-arrow {
+		width: 27px;
+	}
 	&__title {
 	}
 
 	&__content {
 		padding: 20px;
 		display: grid;
+		border-radius: 20px;
+		background: #FFF;
 		grid-template-columns: 1fr 1fr;
 		column-gap: 30px;
 		row-gap: 20px;
@@ -443,6 +567,12 @@
 			@media (min-width:$mobile){
 				 display: none; 
 			}
+		}
+		.spollers__title {
+			margin-bottom: 20px;
+		}
+		.pos-otliv__title {
+			margin-bottom: 0;
 		}
 	}
 
@@ -460,9 +590,16 @@
 	}
 
 	&__img {
-		width: 80px;
+		// width: 80px;
+		flex: 0 0 80px;
+		@media (max-width:$pcSmall){
+			flex-basis: 55px;
+		}
+		@media (max-width:$tablet){
+			flex-basis: 80px;
+		}
 		@media (max-width:$mobile){
-			 @include adaptiveValue("width", 70, 45,0,768,320); 
+			 @include adaptiveValue("flex-basis", 70, 45,0,768,320); 
 		}
 		img {
 			width: 100%;
@@ -477,6 +614,12 @@
 		font-style: italic;
 		line-height: normal;
 		text-decoration-line: underline;
+		@media (max-width:$tablet){
+			font-size: 20px;
+		}
+		@media (max-width:$mobile){
+			 @include adaptiveValue("font-size", 28, 13,0,768,320); 
+		}
 	}
 
 	&__brand {

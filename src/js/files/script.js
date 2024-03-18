@@ -282,100 +282,102 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
 
-
 document.addEventListener("DOMContentLoaded", () => {
 /*===========================================================*/
 
-//Работа с табами на главной странице под банером
-if (window.innerWidth < 768) {
-	const tabs01 = document.querySelector('#tabs01');
-	const tabs02 = document.querySelector('#tabs02');
-	tabs01 ? tabs01.classList.remove('_tab-active') : null;
-	tabs02 ? tabs02.classList.add('_tab-active') : null;
-}
+	//Работа с табами на главной странице под банером
+	if (window.innerWidth < 768) {
+		const tabs01 = document.querySelector('#tabs01');
+		const tabs02 = document.querySelector('#tabs02');
+		tabs01 ? tabs01.classList.remove('_tab-active') : null;
+		tabs02 ? tabs02.classList.add('_tab-active') : null;
+	}
 
-//Преобразование фильтров-спойлеров в каталоге в таблетном разрешении
-const catalog = document.querySelector('.catalog');
-if (catalog) {
-	const details = catalog.querySelectorAll('details');
-	const spollersWrapper = catalog.querySelector('aside [data-spollers]')
-	const summury = catalog.querySelectorAll('.filter__title-wrapper')
+	//Преобразование фильтров-спойлеров в каталоге в таблетном разрешении
+	const catalog = document.querySelector('.catalog');
+	if (catalog) {
+		const details = catalog.querySelectorAll('details');
+		const spollersWrapper = catalog.querySelector('aside [data-spollers]')
+		const summury = catalog.querySelectorAll('.filter__title-wrapper')
+		
+		// console.log(spollersWrapper);
+		if (window.innerWidth < 1001) {
+			details.forEach(element => {
+				element.removeAttribute('data-open');
+			});
+			spollersWrapper.setAttribute('data-one-spoller', '')
+			summury.forEach(element => {
+				element.setAttribute('data-spoller-close', '')
+				element.classList.remove('_spoller-active')
+			});
+		}
+	}
+
+	//Преобразование фильтров-спойлеров в способах оплаты в мобильном разрешении
+	const payment = document.querySelector('.payment');
+	if(payment) {
+		const details = payment.querySelectorAll('details');
+		if (window.innerWidth < 768.02) {
+			details.forEach(element => {
+				element.removeAttribute('data-open');
+			});
+		}
+	}
+
+	//Преобразование спойлеров на странице "О магазине" в таблетном разрешении
+
+	const store = document.querySelector('.store')
+	if(store) {
+		const details = store.querySelectorAll('details');
+		if (window.innerWidth < 768.02) {
+			details.forEach(element => {
+				element.removeAttribute('data-open');
+			});
+			store.querySelector('.store-not-open').setAttribute('data-open', '')
+		}
+	}
+
+	//позиционирование хлебных крошек при уменьшении экрана
+	const breadcrumbs = document.querySelector('.breadcrumbs__list')
+	if (breadcrumbs) {
+		if (30 + breadcrumbs.clientWidth > window.innerWidth) {
+			// console.log(breadcrumbs.offsetLeft + breadcrumbs.clientWidth);
+			breadcrumbs.classList.add('_align-right')
+		} else {
+			breadcrumbs.classList.remove('_align-right')
+		}
+	}
+
+	// делаю доступной прокрутку, если высота окна меньше высоты попапа в меню фильтов в моб. версии
+	const popupFiltmodal = document.querySelector('.popup__body.filtmodal');
+	const popupContent = popupFiltmodal ? popupFiltmodal.closest('.popup__content') : null;
+	if (popupFiltmodal && (popupFiltmodal.clientHeight > window.innerHeight - 60)) {
+		popupContent.classList.add('_overflow-y')
+	}
+
+	const searchMob = document.querySelector('.search-mob')
+	const headerDropMobile = searchMob.querySelector('.dropmenu')
+	headerDropMobile.style.top = `${searchMob.clientHeight}`+ 'px';
+
+	// Появление ссылки "Читать полностью" в мобильной версии на странице "Отзывы о магазине"
+	window.addEventListener('load', function () {
 	
-	// console.log(spollersWrapper);
-	if (window.innerWidth < 1001) {
-		details.forEach(element => {
-			element.removeAttribute('data-open');
-		});
-		spollersWrapper.setAttribute('data-one-spoller', '')
-		summury.forEach(element => {
-			element.setAttribute('data-spoller-close', '')
-			element.classList.remove('_spoller-active')
-		});
-	}
-}
+		const feedBackWrapper = document.querySelectorAll('.feedback__text-wrapper');
 
-//Преобразование фильтров-спойлеров в способах оплаты в мобильном разрешении
-const payment = document.querySelector('.payment');
-if(payment) {
-	const details = payment.querySelectorAll('details');
-	if (window.innerWidth < 768.02) {
-		details.forEach(element => {
-			element.removeAttribute('data-open');
-		});
-	}
-}
-
-//Преобразование спойлеров на странице "О магазине" в таблетном разрешении
-
-const store = document.querySelector('.store')
-if(store) {
-	const details = store.querySelectorAll('details');
-	if (window.innerWidth < 768.02) {
-		details.forEach(element => {
-			element.removeAttribute('data-open');
-		});
-		store.querySelector('.store-not-open').setAttribute('data-open', '')
-	}
-}
-
-//позиционирование хлебных крошек при уменьшении экрана
-const breadcrumbs = document.querySelector('.breadcrumbs__list')
-if (breadcrumbs) {
-	if (30 + breadcrumbs.clientWidth > window.innerWidth) {
-		// console.log(breadcrumbs.offsetLeft + breadcrumbs.clientWidth);
-		breadcrumbs.classList.add('_align-right')
-	} else {
-		breadcrumbs.classList.remove('_align-right')
-	}
-}
-
-// делаю доступной прокрутку, если высота окна меньше высоты попапа в меню фильтов в моб. версии
-const popupFiltmodal = document.querySelector('.popup__body.filtmodal');
-const popupContent = popupFiltmodal ? popupFiltmodal.closest('.popup__content') : null;
-if (popupFiltmodal && (popupFiltmodal.clientHeight > window.innerHeight - 60)) {
-	popupContent.classList.add('_overflow-y')
-}
-
-const searchMob = document.querySelector('.search-mob')
-const headerDropMobile = searchMob.querySelector('.dropmenu')
-headerDropMobile.style.top = `${searchMob.clientHeight}`+ 'px';
-
-// Появление ссылки "Читать полностью" в мобильной версии на странице "Отзывы о магазине"
-const feedBackWrapper = document.querySelectorAll('.feedback__text-wrapper');
-
-feedBackWrapper.forEach(element => {
-	console.log(element.clientHeight);
-	const feedBackText = element.querySelector('.feedback__text')
-	console.log(feedBackText.clientTop);
-	console.log(feedBackText.getBoundingClientRect());
-	console.log(feedBackText.clientHeight);
-	if(document.querySelector('.reviews') && element.clientHeight < feedBackText.clientHeight) {
-		element.closest('.feedback__content').querySelector('.feedback__write').classList.add('_open-write')
-	}
-	// if(document.querySelector('.otlivant') && element.clientHeight <= feedBackText.clientHeight * 3) {
-	// 	element.closest('.feedback__content').querySelector('.feedback__write').classList.add('_open-write')
-	// }
-	
+		feedBackWrapper.forEach(element => {
+		// console.log(element.clientHeight);
+		const feedBackText = element.querySelector('.feedback__text')
+		// console.log(feedBackText.clientTop);
+		// console.log(feedBackText.getBoundingClientRect());
+		// console.log(feedBackText.clientHeight);
+		if(element.clientHeight < feedBackText.clientHeight) {
+			// console.log(1);
+			element.closest('.feedback__content').querySelector('.feedback__write').classList.add('_open-write')
+		}
+		// if(document.querySelector('.otlivant') && element.clientHeight <= feedBackText.clientHeight) {
+		// 	element.closest('.feedback__content').querySelector('.feedback__write').classList.add('_open-write')
+		// }
+	})
 });
 
 

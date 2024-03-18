@@ -31,8 +31,8 @@
 							<p class="product__subtext">код товара: <span class="otliv__number">123456</span></p>
 						</div>
 						<div class="otliv__wrapper">
-							<div class="otliv__left">1
-								<!-- <div class="otliv__wrap otliv__wrap_thumb">
+							<div class="otliv__left">
+								<div class="otliv__wrap otliv__wrap_thumb">
 									<div class="otliv__slider-thumbs-wrap">
 										<button type="button" class="swiper-prev otlivant-thumbs-prev">
 											<svg xmlns="http://www.w3.org/2000/svg" width="30" height="16" viewBox="0 0 30 16" fill="none">
@@ -64,7 +64,7 @@
 										</div>
 										<div class="otlivant-photo-pagination pagination"></div>
 									</div>
-								</div> -->
+								</div>
 							</div>
 							<div class="otliv__content">
 								<div class="otliv__actions actions-otliv" data-da=".otliv__da, 768.02">
@@ -72,25 +72,26 @@
 										<h3 class="actions-otliv__title" data-da=".cost-otliv__grand, 768.04,0">цена</h3>
 										<div class="actions-otliv__cost cost-otliv">
 											<div class="cost-otliv__grand">
-												<!-- <div class="cost-otliv__legend"></div> -->
-												<span class="cost-otliv__number">10&nbsp;000</span> руб.
+												<span class="cost-otliv__number">10&nbsp;000</span>&nbsp;руб.
 											</div>
-											<div class="cost-otliv__none">
-												<span class="cost-otliv__legend">старая цена</span>
-												<span class="cost-otliv__none-number">16&nbsp;000</span> руб.
-											</div>
-											<div class="cost-otliv__discount">
-												<span class="cost-otliv__legend">скидка</span>
-												<span class="cost-otliv__discount-number">-2&nbsp;000</span> руб.
-											</div>
-											<div class="cost-otliv__bonus">
-												<span class="cost-otliv__legend">будет начислено</span>
-												<p class="cost-otliv__bonus-block">
-													+<span class="cost-otliv__bonus-number">180</span> бонусов
-												</p>
+											<div class="cost-otliv__costs">
+												<div class="cost-otliv__none">
+													<span class="cost-otliv__legend">старая цена</span>
+													<span class="cost-otliv__none-number">16&nbsp;000</span>&nbsp; руб.
+												</div>
+												<div class="cost-otliv__discount">
+													<span class="cost-otliv__legend">скидка</span>
+													<span class="cost-otliv__discount-number">-2&nbsp;000</span>&nbsp; руб.
+												</div>
+												<div class="cost-otliv__bonus">
+													<span class="cost-otliv__legend">будет начислено</span>
+													<p class="cost-otliv__bonus-block">
+														+<span class="cost-otliv__bonus-number">180</span> бонусов
+													</p>
+												</div>
 											</div>
 										</div>
-										<div class="actions-otliv__available available-block" data-da=".actions-otliv__cost, 768.02,3">
+										<div class="actions-otliv__available available-block" data-da=".cost-otliv__costs, 768.02,3">
 											<span class="available-block__text">Наличие на складе:</span>
 											<div class="available-block__circle circle-available">
 												<div class="circle-available__punkt circle-available__punkt_full"></div>
@@ -107,7 +108,7 @@
 								</div>
 								<div class="otliv__pos pos-otliv" data-da=".otliv__da, 1001.99">
 									<div data-spollers="768.01" class="spollers">
-										<details class="pos-otliv__spollers">
+										<details data-open class="pos-otliv__spollers">
 											<summary class="spollers__title">
 												<h3 class="pos-otliv__title">в набор входит 10 пробников парфюмерии</h3>
 												<span class="feedback__spoller-arrow"><img src="img/search/arrow-search-spoiler.svg" alt=""></span>
@@ -294,10 +295,10 @@
 													<span class="feedback__star-item"><img src="@img/review/star-active.svg" alt="звезда"></span>
 												</div>
 												<div class="feedback__text-wrapper">
-													<p class="feedback__text">Фирменный пробник Amouage - Bracken. С ароматом была не знакома и пока не поняла чем он пахнет. Чувствую только стиральный порошок, ни ягод, ни трав… Конечно, это сразу после получения заказа такое восприятие, попробую через пару недель, очень надеюсь, что услышу в нем всю заявленную пирамиду и буду приятно удивлена)))
+													<p class="feedback__text">Фирменный пробник Amouage - Bracken.  он пахнет. Чувствую только стиральный  сразу после получения заказа такое восприятие, попробую через пару недель, очень надеюсь, что услышу в нем всю заявленную пирамиду и буду приятно удивлена)))
 													</p>
 												</div>
-												<!-- <a href="#" class="feedback__write">Читать полностью</a> -->
+												<a href="#" class="feedback__write">Читать полностью</a>
 												<div class="feedback__question-block question-block">
 													<span class="question-block__text">Был ли этот отзыв полезен?</span>
 													<span class="question-block__text-light">Этот отзыв как полезный отметили: 
@@ -371,7 +372,7 @@
 													<p class="feedback__text">Фирменный пробник Amouage - Bracken. С ароматом была не знакома и пока не поняла чем он пахнет. Чувствую только стиральный порошок, ни ягод, ни трав… Конечно, это сразу после получения заказа такое восприятие, попробую через пару недель, очень надеюсь, что услышу в нем всю заявленную пирамиду и буду приятно удивлена)))
 													</p>
 												</div>
-												<!-- <a href="#" class="feedback__write">Читать полностью</a> -->
+												<a href="#" class="feedback__write">Читать полностью</a>
 												<div class="feedback__question-block question-block">
 													<span class="question-block__text">Был ли этот отзыв полезен?</span>
 													<span class="question-block__text-light">Этот отзыв как полезный отметили: 
@@ -445,7 +446,7 @@
 													<p class="feedback__text">Фирменный пробник Amouage - Bracken. С ароматом была не знакома и пока не поняла чем он пахнет. Чувствую только стиральный порошок, ни ягод, ни трав… Конечно, это сразу после получения заказа такое восприятие, попробую через пару недель, очень надеюсь, что услышу в нем всю заявленную пирамиду и буду приятно удивлена)))
 													</p>
 												</div>
-												<!-- <a href="#" class="feedback__write">Читать полностью</a> -->
+												<a href="#" class="feedback__write">Читать полностью</a>
 												<div class="feedback__question-block question-block">
 													<span class="question-block__text">Был ли этот отзыв полезен?</span>
 													<span class="question-block__text-light">Этот отзыв как полезный отметили: 
