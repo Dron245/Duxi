@@ -6,10 +6,6 @@
 			background-color 0.3s,
 			opacity 0.3s;
 	}
-	
-	
-
-
 
 	&__drop {
 		background: #020001;
@@ -119,7 +115,7 @@
 		font-size: toRem(13);
 		line-height: 15px;
 		min-width: toRem(195);
-		z-index: 2;
+		z-index: 4;
 		// transition: all 0.3s;
 		@media (max-width: em(1630)) {
 			left: -0%;

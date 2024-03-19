@@ -223,35 +223,41 @@ function initSliders() {
 	}
 
 	// Отливант продукт
-	if(document.querySelector('.otliv__slider-main')){
+	if(document.querySelector('.otliv__slider-thumbs')){
 		const otlivThumbs = new Swiper(".otliv__slider-thumbs", {
-			modules: [Navigation, Thumbs],
+			modules: [Thumbs],
 			observer: true,
 			observeParents: true,
-			speed:800,
-			spaceBetween: 10,
+			// autoHeight: false,
+				speed: 400,
+				// watchOverflow: true,
+			spaceBetween: 20,
 			slidesPerView: 3,
 			direction: 'vertical',
-			navigation: {
-				prevEl: ".otlivant-thumbs-prev",
-				nextEl: ".otlivant-thumbs-next",
-			},
+			
 		});
 	
 		new Swiper(".otliv__slider-main", {
 			// spaceBetween: 10,
-			modules: [Pagination, Thumbs],
+			modules: [Pagination, Thumbs, Navigation],
+			thumbs: {
+				swiper: otlivThumbs,
+			},
 			observer: true,
 			observeParents: true,
 			slidesPerView: 1,
-			speed:800,
+			// autoHeight: false,
+				speed: 400,
+				// watchOverflow: true,
+				navigation: {
+					prevEl: ".otlivant-thumbs-prev",
+					nextEl: ".otlivant-thumbs-next",
+				},
 			pagination: {
 				el: '.otlivant-photo-pagination',
 				clickable: true,
 			},
-			thumbs: {
-				swiper: otlivThumbs,
-			},
+			
 		});
 	}
 	

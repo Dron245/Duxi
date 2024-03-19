@@ -1,0 +1,119 @@
+//ОТзывы
+.otlvant-review {
+	margin-bottom: 40px;
+
+	&__container {
+		@media (max-width:$mobile){
+			 padding-left: 0;
+			 padding-right: 0; 
+		}
+	}
+	&__top {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 20px;
+		& .button-light {
+			.guest.otlivant & {
+				display: none;
+			}
+			display: inline-block;
+			margin: 0;
+			width: 22%;
+			font-size: 14px;
+			@media (max-width:$mobile){
+				 display: none; 
+			}
+		}
+	}
+
+	&__title {
+		&[class] {
+			margin-bottom: 0;
+		}
+		@media (max-width:$mobile){
+			 display: none; 
+		}
+	}
+
+	&__spollers {
+		@media (min-width:$mobile){
+			 display: none; 
+		}
+	}
+
+	&__slide {
+		border-radius: 16px;
+		padding: 10px;
+		background: #FFF;
+	}
+
+	.swiper-slide {
+		// border: 2px solid red;
+	}
+
+	&__slider {
+		@media (max-width:$mobile){
+			display: contents; 
+	  }
+	}
+	&__wrapper.mobile-min {
+		// display: block;
+		position: static;
+		@media (max-width:$mobile){
+			display: contents; 
+	  }
+	}
+
+	&__button-wrap {
+		@media (max-width:$mobile){
+			padding-top: 20px;
+			background-color: rgb(255, 255, 255); 
+		}
+	}
+
+	&__spollers {
+		summary {
+			@media (min-width:$mobile){
+				 display: none; 
+			}
+		}
+	}
+
+	&__spoller-title {
+		// @include adaptiveValue("font-size", 30, 21,0,768,320);
+		@include adaptiveValue("font-size", 50, 21,0,768,320);
+		color: $zagolovok;
+		line-height: normal;
+		font-weight: 300;
+	}
+
+	&__spoller-body {
+		@media (max-width:$mobile){
+			 margin-top: 20px; 
+		}
+	}
+
+	&__button {
+		width: 71.818182%; /* 316/440 */
+		margin:auto;
+		margin-bottom: 20px;
+		@media (min-width:$mobile){
+			 display: none; 
+		}
+		@media (max-width:$mobile){
+			 @include adaptiveValue("font-size", 28, 14,0,768,320); 
+		}
+	}
+}
+
+.otlivant-review-show {
+
+	&__content {
+		 @media (max-width:$mobile){
+			  display: flex;
+		 flex-direction: column;
+		 row-gap: 20px;  
+		 }
+	}
+}

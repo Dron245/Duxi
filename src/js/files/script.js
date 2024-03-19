@@ -223,14 +223,19 @@ window.addEventListener('DOMContentLoaded', () => {
 		}
 
 		//Раскрашивание кнопок в зелёный или красный цвет при нажатии на ответ да или нет на странице "отзывы о магазине"
-		if(targetElement.closest('.question-block__button')) {
+		if(targetElement.closest('.question-block__button') || targetElement.closest('.questiion-block__span-quantity')) {
 			const questionAnswers= targetElement.closest('.question-block__answers').querySelectorAll('.question-block__button');
-			// console.log(questionAnswers);
+			console.log(questionAnswers);
 			questionAnswers.forEach(element => {
+				console.log(2);
 				element.classList.remove('_question-answer')
 			});
+			console.log(3);
 			targetElement.closest('.question-block__answers').classList.add('_question-active');
 			targetElement.classList.add('_question-answer');
+			if (targetElement.closest('.questiion-block__span-quantity')) {
+				targetElement.closest('.question-block__button').classList.add('_question-answer');
+			}
 		}
 
 		//Уход заголовка при наведении на поле "Написать отзыв"
@@ -361,24 +366,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	// Появление ссылки "Читать полностью" в мобильной версии на странице "Отзывы о магазине"
 	window.addEventListener('load', function () {
-	
 		const feedBackWrapper = document.querySelectorAll('.feedback__text-wrapper');
-
 		feedBackWrapper.forEach(element => {
+			const feedBackText = element.querySelector('.feedback__text')
 		// console.log(element.clientHeight);
-		const feedBackText = element.querySelector('.feedback__text')
+		// console.log(feedBackText.clientHeight);
 		// console.log(feedBackText.clientTop);
 		// console.log(feedBackText.getBoundingClientRect());
-		// console.log(feedBackText.clientHeight);
-		if(element.clientHeight < feedBackText.clientHeight) {
-			// console.log(1);
-			element.closest('.feedback__content').querySelector('.feedback__write').classList.add('_open-write')
-		}
-		// if(document.querySelector('.otlivant') && element.clientHeight <= feedBackText.clientHeight) {
-		// 	element.closest('.feedback__content').querySelector('.feedback__write').classList.add('_open-write')
-		// }
-	})
-});
+			if(element.clientHeight + 5 < feedBackText.clientHeight) {
+				// console.log(1);
+				element.closest('.feedback__content').querySelector('.feedback__write').classList.add('_open-write')
+			}
+		})
+	});
 
 
 

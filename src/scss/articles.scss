@@ -239,6 +239,10 @@
 		.catalog &, .search-products & {
 			padding-left: 30px;
 			padding-right: 30px;
+			@media (max-width:$mobile){
+				 padding-left: 15px;
+				 padding-right: 15px; 
+			}
 		}
 	}
 

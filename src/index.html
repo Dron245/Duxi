@@ -13,8 +13,13 @@
 			</div>
 			<h2>Готовые страницы:</h2>
 			<ol class="rootpage__list">
-				<li><a target="_blank" href="home-guest.html">Главная-гость</a></li>
-				<li><a target="_blank" href="home-user.html">Главная-пользователь</a></li>
+				<li>
+					<span>Главная</span>
+					<ol class="rootpage__list rootpage__list_sublist">
+						<li><a target="_blank" href="home-guest.html">Главная-гость</a></li>
+						<li><a target="_blank" href="home-user.html">Главная-пользователь</a></li>
+					</ol>
+				</li>
 				<li><a target="_blank" href="brands.html">Бренды</a></li>
 				<li>
 					<span>Каталог</span>
@@ -138,8 +143,13 @@
 
 		li span {
 			color: #000000;
-			font-size: 20px;
+			font-size: 22px;
 		}
+		/* ol ~ li:has(:not(ol)) a {
+			font-size: 26px;
+			font-weight: 500;
+		} */
+
 		img {
 			vertical-align: top;
 		}
@@ -188,13 +198,16 @@
 
 		.rootpage__list{
 			margin: 0px 0px 2.25rem 1.25rem;
-			columns: 2 400px;
-			
+			columns: 2 500px;
+			column-gap: 50px;
 			
 		}
 		.rootpage__list_sublist {
 			margin-top: 15px;
 			margin-bottom: 25px;
+		}
+		.rootpage__list.rootpage__list_sublist {
+			columns: initial;
 		}
 		.rootpage__list li:not(:last-child){
 			margin: 0px 0px 15px 0px;

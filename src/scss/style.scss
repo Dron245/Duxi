@@ -176,7 +176,10 @@ main {
 @import "catalog/popup-catalog.scss";
 @import "search/search.scss";
 @import "otlivants/otlivants-catalog.scss";
-@import "otlivants/otlivant.scss";
+@import "otlivants/otlivant//view-otlivant.scss";
+@import "otlivants//otlivant/otlivant-main.scss";
+@import "otlivants//otlivant/otlivant-review.scss";
+@import "otlivants//otlivant/otlivant-article.scss";
 @import "reviews.scss";
 @import "comments.scss";
 @import "where.scss";

@@ -524,6 +524,12 @@ h3[class*="__title"] {
 		font-style: italic;
 		font-weight: 300;
 		font-size: 12px;
+		@media (max-width:$tablet){
+			font-size: 18px;
+		}
+		@media (max-width:$mobile){
+			 @include adaptiveValue("font-size", 24, 14,0,768,320); 
+		}
 		color: $zagolovok;
 		text-align: right;
 		text-wrap: nowrap;
@@ -548,6 +554,12 @@ h3[class*="__title"] {
 		font-style: italic;
 		font-weight: 500;
 		font-size: 12px;
+		@media (max-width:$tablet){
+			font-size: 18px;
+		}
+		@media (max-width:$mobile){
+			 @include adaptiveValue("font-size", 24, 14,0,768,320); 
+		}
 		color: $zagolovok;
 	}
 }

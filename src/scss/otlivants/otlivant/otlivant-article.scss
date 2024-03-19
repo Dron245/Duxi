@@ -1,0 +1,9 @@
+.otlivant-article {
+
+	&__container {
+		@media (max-width:$mobile){
+			 padding-left: 0;
+			 padding-right: 0;
+		}
+	}
+}
