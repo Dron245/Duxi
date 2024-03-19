@@ -72,11 +72,17 @@
 		background: #FFF;
 		display: flex;
 		padding: 40px;
+		align-self: start;
 		@media (max-width:$pcSmall){
-			padding: 0px;
+			gap: 10px;
+			padding: 20px;
+		}
+		@media (max-width:$tablet){
+			// gap: 0;
 		}
 		@media (max-width:$mobile){
 			 margin-bottom: 40px;
+			 border-radius: 0;
 			 border: 1px solid rgba(214, 187, 195, 0.50);
 		}
 		@media (max-width:$mobileSmall){
@@ -98,12 +104,18 @@
 			// margin-right: 40px;
 			flex: 0 0 12.727273%; /* 70/550 */
 			// width: auto;
+			@media (max-width:$pcSmall){
+				
+			}
 			@media (max-width:$mobile){
 				 display: none; 
 			}
 		}
 		&_main {
-			width:78.727273%; /* 433/550 */
+			width: 78.72%;
+			@media (max-width:$tablet){
+				width:84.7%; 
+			}
 			@media (max-width:$mobile){
 				 width: 100%; 
 			}
@@ -124,11 +136,14 @@
 			.guest & {
 				display: none;
 			}
+			gap: 10px;
 			display: flex;
-			// right: 10px;
+			right: 0px;
 			top: 0px;
+			transform: translateY(-3px);
 			.product__action {
 				width: 40px;
+				height: initial;
 				// transform: translateY(-20px);
 				@media (max-width:$pcSmall){
 					width: 30px;
@@ -187,6 +202,12 @@
 		}
 	}
 
+	&__img-slide {
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
 	&__content {
 		@media (max-width:$mobile){
 			 display: none; 
@@ -206,6 +227,9 @@
 	align-items: flex-start;
 	gap: 25px;
 	&:not(:last-child) {margin-bottom: toRem(40);}
+	@media (max-width:$tablet){
+		flex-direction: column;
+	}
 	@media (max-width:$mobile){
 		 display: flex;
 		 flex-direction: column; 
@@ -251,9 +275,11 @@
 		}
 	}
 	&__button {
-		@include adaptiveValue("width", 240, 160,0,1920,768);
+		width: 240px;
 		@media (max-width:$tablet){
-			@include adaptiveValue("font-size", 22, 15,0,1001,768.01);
+			font-size: 22px;
+			@include adaptiveValue("width", 340, 250,0,1001,768);
+			// @include adaptiveValue("font-size", 22, 15,0,1001,768.01);
 		}
 		@media (max-width:$mobile){
 			 @include adaptiveValue("font-size", 35, 16,0,768,320); 
