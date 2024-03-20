@@ -17,7 +17,7 @@ window.addEventListener('DOMContentLoaded', () => {
 			targetElement.closest('.menu__item').querySelector('.menu__sublist') ? targetElement.closest('.menu__item').querySelector('.menu__sublist').classList.toggle('_sub-menu-open') : null
 		}
 		// закрытие меню бургер вне клика по меню
-		if (!targetElement.closest('.menu__icon') && !targetElement.closest('.menu__body')) {
+		if (!targetElement.closest('.menсu__icon') && !targetElement.closest('.menu__body')) {
 			document.querySelector('.menu-open') ? document.documentElement.classList.remove('lock') : null
 			document.querySelector('.menu-open') ? document.documentElement.classList.remove('menu-open') : null
 		}
@@ -32,11 +32,24 @@ window.addEventListener('DOMContentLoaded', () => {
 			const city = targetElement.closest('.top-header__city').querySelector('.city-choice')
 			city.hidden = false; return;
 		}
+
 		//переключаю значок пароля с видеть на не видеть
 		if (targetElement.closest('.popup__img-pasword')) {
 			targetElement.closest('.popup__img-pasword').classList.toggle('_pass-view')
 		}
 
+		//Показать - скрыть пароль
+		if (targetElement.closest('.popup__img-pasword') && flag == true) {
+			flag = false
+			targetElement.closest('.popup__input-wrapper').querySelector('input').type = "text"
+		} else if(targetElement.closest('.popup__img-pasword')) {
+			flag = true;
+			targetElement.closest('.popup__input-wrapper').querySelector('input').type = "password"
+		}
+
+		if (targetElement.closest('input') || targetElement.closest('textarea')) {
+			targetElement.closest('.popup__form-item') ? targetElement.closest('.popup__form-item').classList.add('_label-up') : null
+		}
 		//Открытие/скрытие строки поиска
 		if (targetElement.closest('.search-button')) {
 			document.documentElement.classList.toggle('_show')
@@ -151,11 +164,8 @@ window.addEventListener('DOMContentLoaded', () => {
 			checkboxCheck.forEach(element => {
 				element.checked = false
 			});
-			// if (valCheck.innerHTML == null) {
-				valCheck.innerHTML = ' '
-			// }
+			valCheck.innerHTML = ' '
 			
-			// console.log(valCheck);
 		}
 
 		//сбрасываю чекбоксы по нажатию кнопки "сбросить" в саб меню мобилки и очищаю пдсказку в основном меню фильтров в мобилке
@@ -227,10 +237,10 @@ window.addEventListener('DOMContentLoaded', () => {
 			const questionAnswers= targetElement.closest('.question-block__answers').querySelectorAll('.question-block__button');
 			console.log(questionAnswers);
 			questionAnswers.forEach(element => {
-				console.log(2);
+				// console.log(2);
 				element.classList.remove('_question-answer')
 			});
-			console.log(3);
+			// console.log(3);
 			targetElement.closest('.question-block__answers').classList.add('_question-active');
 			targetElement.classList.add('_question-answer');
 			if (targetElement.closest('.questiion-block__span-quantity')) {
@@ -239,12 +249,12 @@ window.addEventListener('DOMContentLoaded', () => {
 		}
 
 		//Уход заголовка при наведении на поле "Написать отзыв"
-		if(targetElement.closest('.comment__textarea')) {
-			targetElement.closest('#store-review').querySelector('.popup__reg-top').classList.add('_to-top')
-		}
-		if(targetElement.closest('.comment__textarea') && !targetElement.closest('.comment__textarea')) {
-			targetElement.closest('#store-review').querySelector('.popup__reg-top').classList.remove('_to-top')
-		}
+		// if(targetElement.closest('.comment__textarea')) {
+		// 	targetElement.closest('#store-review').querySelector('.popup__reg-top').classList.add('_to-top')
+		// }
+		// if(targetElement.closest('.comment__textarea') && !targetElement.closest('.comment__textarea')) {
+		// 	targetElement.closest('#store-review').querySelector('.popup__reg-top').classList.remove('_to-top')
+		// }
 
 		//Открытие фильтров на странице "отзывы о магазине"
 		//Изменение цвета заголовка в панели отзывов на странице "отзывы о магазине"
@@ -271,31 +281,25 @@ window.addEventListener('DOMContentLoaded', () => {
 				element.classList.remove('_filter-item-open')
 			}); 
 		}
+
+		// Счётчик символов в textarea на странице "отзыв о магазине"
+		if (targetElement.closest('textarea')) {
+			const taComments = targetElement.closest('.popup__form-item').querySelector('textarea') // textarea
+			const counter = targetElement.closest('.popup__form-item').querySelector('.comment__number-symbols') // счётчик
+			taComments ? taComments.addEventListener('input', onInput) : null
+			function onInput(evt) {
+			const length = evt.target.value.length
+			counter.textContent = length
+			}
+		}
 	}
-
 });
-
-
-
-
-
 
 
 
 
 document.addEventListener("DOMContentLoaded", () => {
 /*===========================================================*/
-
-	// const qwe = document.querySelectorAll('.product')
-	// qwe.forEach(element => {
-	// 	if(element.querySelector('.product__action')){
-	// 		console.log(element);
-	// 			element.addEventListener('click', (e) => {
-	// 				e.preventDefault()
-	// 			})
-	// 	}
-	// });
-
 
 	//Работа с табами на главной странице под банером
 	if (window.innerWidth < 768) {
@@ -376,10 +380,6 @@ document.addEventListener("DOMContentLoaded", () => {
 		const feedBackWrapper = document.querySelectorAll('.feedback__text-wrapper');
 		feedBackWrapper.forEach(element => {
 			const feedBackText = element.querySelector('.feedback__text')
-		// console.log(element.clientHeight);
-		// console.log(feedBackText.clientHeight);
-		// console.log(feedBackText.clientTop);
-		// console.log(feedBackText.getBoundingClientRect());
 			if(element.clientHeight + 5 < feedBackText.clientHeight) {
 				// console.log(1);
 				element.closest('.feedback__content').querySelector('.feedback__write').classList.add('_open-write')

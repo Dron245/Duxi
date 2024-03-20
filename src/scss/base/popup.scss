@@ -80,7 +80,7 @@ body::after {
 			height: auto;
 		}
 	}
-	#vhod-tel & {
+	#vhod-tel &, #vhod-tel-vvod & {
 		max-width: 353px;
 	}
 	#thanks & {
@@ -166,6 +166,12 @@ body::after {
 	}
 
 	&__form {
+		#vhod-tel & {
+			margin-bottom: toRem(20);
+		}
+		#vhod-tel-vvod & {
+			margin-bottom: 10px;
+		}
 	}
 
 	&__text-feedback {
@@ -183,6 +189,14 @@ body::after {
 			&:not(:last-child) {
 				margin-bottom: toRem(40);
 			}
+		}
+
+		#vhod-tel & {
+			&:not(:last-child) {margin-bottom: toRem(50);}
+		}
+
+		#store-review & {
+			&:not(:last-child) {margin-bottom: toRem(50);}
 		}
 	}
 
@@ -288,17 +302,16 @@ body::after {
 		transform: translateY(-50%);
 		color: rgba(0, 0, 0, 0.5);
 		transition: top 0.15s, left 0.15s;
-		textarea + & {
-			top: 16px;
-			transform: none;
-		}
-		.popup__input:focus + &,
-		.city-input:focus + & ,
-		textarea:focus + & {
+		._label-up & {
 			top: -20%;
 			left: 0;
 			color: $zagolovok;
 		}
+		textarea + & {
+			top: 16px;
+			transform: none;
+		}
+		
 	}
 
 	&__text {
@@ -539,10 +552,10 @@ body::after {
 
 .comment {
 	.popup__label {
-		position: relative;
+		// position: relative;
 		// margin-top: 10px;
-		display: block;
-		bottom: initial;
+		// display: block;
+		// bottom: initial;
 	}
 	
 	&__textarea {

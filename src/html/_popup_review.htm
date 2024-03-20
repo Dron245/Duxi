@@ -126,16 +126,15 @@
 				<form method="post" action="#" class="popup__form">
 					<div class="popup__form-item">
 						<div class="popup__input-wrapper">
-							<input required id="fio" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="ФИО" class="popup__input">
+							<input required id="fio" autocomplete="off" type="text" name="form[]" data-error="Ошибка" class="popup__input">
+							<label for="fio" class="popup__label">фио</label>
 						</div>
 					</div>
 					<div class="popup__form-item">
 						<div class="popup__input-wrapper comment">
-							<span class="popup__label">напишите ваш отзыв*</span>
 							<textarea class="comment__textarea" name="comment" maxlength="1200"></textarea>
-							<p class="comment__text">
-								<span class="comment__star">*</span>
-								Отзыв содержит: 
+							<span class="popup__label">напишите ваш отзыв*</span>
+							<p class="comment__text"><span class="comment__star">*</span>Отзыв содержит: 
 								<span class="comment__number-symbols">0</span>
 								символов 
 								<span class="comment__light-text">(максимальное количество 1200 символов)</span>

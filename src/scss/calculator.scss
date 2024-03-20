@@ -3,6 +3,7 @@
 .calculator {
 
 	&__container {
+		margin-bottom: 80px;
 	}
 
 	&__breadcrumbs {
@@ -251,7 +252,6 @@
 .bottom-calc {
 	width: 74.352332%; /* 1148/1544 */
 	margin-top: 54px;
-	margin-bottom: 80px;
 	// display: flex;
 	display: none;
 	align-items: flex-start;

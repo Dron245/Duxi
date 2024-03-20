@@ -280,6 +280,7 @@
 	&__button {
 		width: 240px;
 		transition: opacity 0.3s;
+		font-size: 14px;
 		@media (max-width:$mobile){
 			 width: 100%; 
 			 

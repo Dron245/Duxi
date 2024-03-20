@@ -46,7 +46,27 @@
 				<form method="post" action="#" class="popup__form">
 					<div class="popup__form-item">
 						<input id="vhod-tel-01" required autocomplete="off" type="tel" name="form[]" data-error="Ошибка" class="popup__input">
-						<label for="vhod-tel-01" class="popup__label">вход по номеру телефона</label>
+						<label for="vhod-tel-01" class="popup__label">ВВЕДИТЕ НОМЕР ТЕЛЕФОНА</label>
+					</div>
+				</form>
+				<div class="popup__form-item">
+					<button data-popup="#vhod-tel-vvod" id="btn-code" type="submit" class="popup__button">отправить код</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="vhod-tel-vvod" aria-hidden="true" class="popup">
+	<div class="popup__wrapper">
+		<div class="popup__content">
+			<button data-close type="button" class="popup__close"><img src="@img/popup/close.svg" alt=""></button>
+			<div class="popup__body">
+				<h4 class="popup__title">войти по номеру</h4>
+				<form method="post" action="#" class="popup__form">
+					<div class="popup__form-item">
+						<input disabled autocomplete="off" type="tel" name="form[]" data-error="Ошибка" class="popup__input">
+						<!-- <span class="popup__label">вход по номеру телефона</span> -->
 					</div>
 				</form>
 				<div class="popup__form-item">
@@ -68,7 +88,6 @@
 					</form>
 				</div>
 				<div class="popup__form-item">
-					<button id="btn-code" type="submit" class="popup__button">отправить код</button>
 					<button id="btn-vhod" type="submit" class="popup__button">войти</button>
 				</div>
 			</div>
@@ -218,7 +237,7 @@
 						<textarea class="input" maxlength="1200" name="" rows="4" id="comment"></textarea>
 						<span class="popup__label">текст обращения</span>
 						<p class="popup__length">
-							<span class="popup__star">*</span> Отзыв содержит: <span id="quantity" class="popup__quantity">9</span> символов <span class="popup__correction">(максимальное количество 1200 символов)</span>
+							<span class="popup__star">*</span> Отзыв содержит: <span id="quantity" class="comment__number-symbols">0</span> символов <span class="popup__correction">(максимальное количество 1200 символов)</span>
 						</p>
 					</div>
 					<div class="popup__form-item">
