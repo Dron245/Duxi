@@ -283,12 +283,19 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
 
-
-
-
-
 document.addEventListener("DOMContentLoaded", () => {
 /*===========================================================*/
+
+	// const qwe = document.querySelectorAll('.product')
+	// qwe.forEach(element => {
+	// 	if(element.querySelector('.product__action')){
+	// 		console.log(element);
+	// 			element.addEventListener('click', (e) => {
+	// 				e.preventDefault()
+	// 			})
+	// 	}
+	// });
+
 
 	//Работа с табами на главной странице под банером
 	if (window.innerWidth < 768) {

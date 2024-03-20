@@ -6,12 +6,18 @@
 				<h4 class="popup__title">вход</h4>
 				<form method="post" action="#" class="popup__form">
 					<div class="popup__form-item">
-						<input required autocomplete="off" type="email" name="form[]" data-error="Ошибка" placeholder="E-MAIL" class="popup__input">
+						<div class="popup__input-wrap">
+							<input id="01-vhod" required autocomplete="off" type="email" name="form[]" data-error="Ошибка"  class="popup__input">
+							<label for="01-vhod" class="popup__label">E-mail</label>
+						</div>
 						<button data-popup="#vhod-tel" type="button" class="popup__mini-button">Войти по номеру телефона</button>
 					</div>
 					<div class="popup__form-item">
 						<div class="popup__input-wrapper">
-							<input required autocomplete="off" type="password" name="form[]" data-error="Ошибка" placeholder="ПАРОЛЬ" class="popup__input">
+							<div class="popup__input-vhod">
+								<input id="02-vhod" required autocomplete="off" type="password" name="form[]" data-error="Ошибка" class="popup__input">
+								<label for="02-vhod" class="popup__label">пароль</label>
+							</div>
 							<button type="button" class="popup__img-pasword">
 								<img class="popup__img-v" src="@img/popup/pasword-v.svg" alt="">
 								<img class="popup__img-nv" src="@img/popup/pasword-nv.svg" alt="">
@@ -39,7 +45,8 @@
 				<h4 class="popup__title">войти по номеру</h4>
 				<form method="post" action="#" class="popup__form">
 					<div class="popup__form-item">
-						<input required autocomplete="off" type="tel" name="form[]" data-error="Ошибка" placeholder="ВВЕДИТЕ НОМЕР ТЕЛЕФОНА" class="popup__input">
+						<input id="vhod-tel-01" required autocomplete="off" type="tel" name="form[]" data-error="Ошибка" class="popup__input">
+						<label for="vhod-tel-01" class="popup__label">вход по номеру телефона</label>
 					</div>
 				</form>
 				<div class="popup__form-item">
@@ -78,7 +85,8 @@
 				<h4 class="popup__title">сброс пароля</h4>
 				<form method="post" action="#" class="popup__form">
 					<div class="popup__form-item">
-						<input required autocomplete="off" type="email" name="form[]" data-error="Ошибка" placeholder="E-MAIL" class="popup__input">
+						<input id="sbros-pasword-input" required autocomplete="off" type="email" name="form[]" data-error="Ошибка" class="popup__input">
+						<label for="sbros-pasword-input" class="popup__label">E-mail</label>
 					</div>
 					<div class="popup__form-item">
 						<button id="btn-vost-pasword" type="submit" class="popup__button">восстановить</button>
@@ -106,13 +114,13 @@
 				<form method="post" action="#" class="popup__form">
 					<div class="popup__form-item">
 						<!-- <span class="popup_reg-error">уже зарегистрирован</span> -->
+						<input required id="01" autocomplete="off" type="email" name="form[]" data-error="Ошибка" placeholder="" class="popup__input">
 						<label for="01" class="popup__label">E-mail</label>
-						<input required id="01" autocomplete="off" type="email" name="form[]" data-error="Ошибка" placeholder="E-MAIL" class="popup__input">
 					</div>
 					<div class="popup__form-item">
 						<div class="popup__input-wrapper">
+							<input required id="02" autocomplete="off" type="password" name="form[]" data-error="Ошибка" placeholder="" class="popup__input">
 							<label for="02" class="popup__label">пароль</label>
-							<input required id="02" autocomplete="off" type="password" name="form[]" data-error="Ошибка" placeholder="ПАРОЛЬ" class="popup__input">
 							<button type="button" class="popup__img-pasword">
 								<img class="popup__img-v" src="@img/popup/pasword-v.svg" alt="">
 								<img class="popup__img-nv" src="@img/popup/pasword-nv.svg" alt="">
@@ -121,7 +129,8 @@
 					</div>
 					<div class="popup__form-item">
 						<div class="popup__input-wrapper">
-							<input required id="03" autocomplete="off" type="password" name="form[]" data-error="Ошибка" placeholder="ПОВТОРИТЕ ПАРОЛЬ" class="popup__input">
+							<input required id="03" autocomplete="off" type="password" name="form[]" data-error="Ошибка" placeholder="" class="popup__input">
+							<label for="03" class="popup__label">повторите пароль</label>
 							<button type="button" class="popup__img-pasword">
 								<img class="popup__img-v" src="@img/popup/pasword-v.svg" alt="">
 								<img class="popup__img-nv" src="@img/popup/pasword-nv.svg" alt="">
@@ -197,15 +206,17 @@
 				<form method="post" action="#" class="popup__form popup__form_feedback">
 					<div class="popup__item-group">
 						<div class="popup__form-item">
-						<input required autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="ФИО" class="popup__input">
+						<input id="feedback-fio" required autocomplete="off" type="text" name="form[]" data-error="Ошибка" class="popup__input">
+						<label for="feedback-fio" class="popup__label">фио</label>
 						</div>
 						<div class="popup__form-item">
-							<input required autocomplete="off" type="email" name="form[]" data-error="Ошибка" placeholder="e-mail" class="popup__input">
+							<input id="feedback-email" required autocomplete="off" type="email" name="form[]" data-error="Ошибка" class="popup__input">
+							<label for="feedback-email" class="popup__label">e-mail</label>
 						</div>
 					</div>
 					<div class="popup__form-item">
-						<span class="popup__label">текст обращения</span>
 						<textarea class="input" maxlength="1200" name="" rows="4" id="comment"></textarea>
+						<span class="popup__label">текст обращения</span>
 						<p class="popup__length">
 							<span class="popup__star">*</span> Отзыв содержит: <span id="quantity" class="popup__quantity">9</span> символов <span class="popup__correction">(максимальное количество 1200 символов)</span>
 						</p>
@@ -228,7 +239,8 @@
 				<h4 class="popup__title">выбор города</h4>
 				<form action="#" method="get" class="header-center__form">
 					<button class="header-center__button"><img src="@img/header/search30x30.svg" alt="Поиск"></button>
-					<input autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="начните вводить название города" class="header-center__input ">
+					<input id="citi-name" autocomplete="off" type="text" name="form[]" data-error="Ошибка" class="header-center__input city-input">
+					<label for="citi-name" class="popup__label">начните вводить название города</label>
 				</form>
 				<div class="popup__location">
 					<span class="popup__text">Ваш город определен как:</span>

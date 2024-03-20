@@ -236,7 +236,7 @@
 	&__container {
 		// padding-left: 0;
 		// padding-right: 0;
-		.catalog &, .search-products & {
+		.catalog &, .search-products &, .position & {
 			padding-left: 30px;
 			padding-right: 30px;
 			@media (max-width:$mobile){

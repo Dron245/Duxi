@@ -654,6 +654,7 @@ h3[class*="__title"] {
 		display: flex;
 		flex-direction: column;
 		row-gap: 15px;
+		flex-wrap: wrap;
 		@media (max-width:$mobile){
 			flex-direction: row;
 			justify-content: space-between; 

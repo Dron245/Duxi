@@ -273,12 +273,32 @@ body::after {
 		}
 	}
 
+	&__input-wrap {
+		position: relative;
+	}
+
 	&__label {
 		position: absolute;
 		font-size: 16px;
 		text-transform: uppercase;
-		color: $zagolovok;
-		bottom: 105%;
+		// color: $zagolovok;
+		// bottom: 105%;
+		left: 10px;
+		top: 50%;
+		transform: translateY(-50%);
+		color: rgba(0, 0, 0, 0.5);
+		transition: top 0.15s, left 0.15s;
+		textarea + & {
+			top: 16px;
+			transform: none;
+		}
+		.popup__input:focus + &,
+		.city-input:focus + & ,
+		textarea:focus + & {
+			top: -20%;
+			left: 0;
+			color: $zagolovok;
+		}
 	}
 
 	&__text {
@@ -369,7 +389,7 @@ body::after {
 	}
 
 	&__item-group {
-		margin-bottom: toRem(60);
+		margin-bottom: toRem(40);
 	}
 
 	&__length {

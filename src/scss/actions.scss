@@ -1,18 +1,22 @@
 .actions {
 
-	&__content {
+	&__container {
 		margin-bottom: 80px;
-		@media (max-width:$tablet){
-			 margin-bottom: 600px; 
+	}
+
+	&__content {
+		// margin-bottom: 80px;
+		@media (max-width: $tablet) {
+			//  margin-bottom: 600px;
 		}
-		@media (max-width:$mobile){
-			 margin-bottom: 20px; 
+		@media (max-width: $mobile) {
+			margin-bottom: 20px;
 		}
 	}
 
 	&__title {
-		@media (max-width:$mobile){
-			 @include adaptiveValue("font-size", 50, 20,0,768,320); 
+		@media (max-width: $mobile) {
+			@include adaptiveValue("font-size", 50, 20, 0, 768, 320);
 		}
 	}
 
@@ -20,19 +24,19 @@
 		display: flex;
 		padding: 20px;
 		gap: 16px;
-		@media (max-width:$tablet){
+		@media (max-width: $tablet) {
 			padding: 10px;
 		}
-		@media (max-width:$mobile){
-			 padding: 20px; 
+		@media (max-width: $mobile) {
+			padding: 20px;
 		}
-		@media (max-width:$mobileSmall){
-			 padding: 10px; 
+		@media (max-width: $mobileSmall) {
+			padding: 10px;
 		}
 		border-radius: 16px;
 		background: #ffffff;
 		align-items: center;
-		@media (max-width:$tablet){
+		@media (max-width: $tablet) {
 			gap: 10px;
 		}
 		&:not(:last-child) {
@@ -44,19 +48,19 @@
 		display: flex;
 		flex-direction: column;
 		row-gap: 10px;
-		@media (max-width:$mobileSmall){
-			 row-gap: 0px; 
+		@media (max-width: $mobileSmall) {
+			row-gap: 0px;
 		}
 	}
 
 	&__img {
 		flex: 0 0 190px;
-		@media (max-width:$tablet){
+		@media (max-width: $tablet) {
 			// width: 93px;
 			flex: 0 0 93px;
 		}
-		@media (max-width:$mobile){
-			 @include adaptiveValue("flex-basis", 176, 77,0,768,320); 
+		@media (max-width: $mobile) {
+			@include adaptiveValue("flex-basis", 176, 77, 0, 768, 320);
 		}
 		img {
 			width: 100%;
@@ -67,11 +71,11 @@
 	&__subtitle {
 		font-size: 16px;
 		line-height: normal;
-		@media (max-width:$tablet){
+		@media (max-width: $tablet) {
 			font-size: toRem(22);
 		}
-		@media (max-width:$mobile){
-			 @include adaptiveValue("font-size", 35, 16,0,768,320); 
+		@media (max-width: $mobile) {
+			@include adaptiveValue("font-size", 35, 16, 0, 768, 320);
 		}
 	}
 
@@ -79,20 +83,20 @@
 		// font-size: 12px;
 		line-height: normal;
 		&_pc {
-			@media (max-width:$tablet){
+			@media (max-width: $tablet) {
 				display: none;
 			}
 		}
 		&_tablet {
-			@media (min-width:$tablet){
-				 display: none; 
+			@media (min-width: $tablet) {
+				display: none;
 			}
 		}
-		@media (max-width:$tablet){
+		@media (max-width: $tablet) {
 			font-size: toRem(20);
 		}
-		@media (max-width:$mobile){
-			 @include adaptiveValue("font-size", 28, 14,0,768,320); 
+		@media (max-width: $mobile) {
+			@include adaptiveValue("font-size", 28, 14, 0, 768, 320);
 		}
 	}
 
@@ -101,44 +105,42 @@
 		font-size: 13px;
 		line-height: normal;
 		text-decoration-line: underline;
-		@media (max-width:$tablet){
+		@media (max-width: $tablet) {
 			font-size: toRem(20);
 		}
-		@media (max-width:$mobile){
-			 @include adaptiveValue("font-size", 25, 13,0,768,320); 
+		@media (max-width: $mobile) {
+			@include adaptiveValue("font-size", 25, 13, 0, 768, 320);
 		}
 	}
 }
 
 .actions {
-
 	&__action {
 		display: flex;
 		align-items: flex-start;
 		// justify-content: space-between;
-		@media (max-width:$tablet){
+		@media (max-width: $tablet) {
 			flex-direction: column-reverse;
 			row-gap: 20px;
 			// justify-content: initial;
 		}
-		@media (max-width:$mobileSmall){
-			 row-gap: 10px; 
+		@media (max-width: $mobileSmall) {
+			row-gap: 10px;
 		}
 	}
 }
 .action {
-
 	&__body {
 		flex: 0 0 57.792208%; /* 890/1540 */
 	}
 
 	&__wrapper {
 		margin-bottom: 40px;
-		@media (max-width:$mobile){
-			 margin-bottom: 60px; 
+		@media (max-width: $mobile) {
+			margin-bottom: 60px;
 		}
-		@media (max-width:$mobileSmall){
-			 margin-bottom: 40px; 
+		@media (max-width: $mobileSmall) {
+			margin-bottom: 40px;
 		}
 	}
 
@@ -146,14 +148,14 @@
 		border-radius: 16px;
 		background: #ffffff;
 		padding: 20px;
-		@media (max-width:$mobileSmall){
-			 padding: 10px; 
+		@media (max-width: $mobileSmall) {
+			padding: 10px;
 		}
 	}
 
 	&__title {
-		@media (max-width:$mobile){
-			 @include adaptiveValue("font-size", 50, 20,0,768,320); 
+		@media (max-width: $mobile) {
+			@include adaptiveValue("font-size", 50, 20, 0, 768, 320);
 		}
 	}
 
@@ -162,11 +164,11 @@
 		&_italic {
 			font-style: italic;
 		}
-		@media (max-width:$tablet){
+		@media (max-width: $tablet) {
 			font-size: toRem(20);
 		}
-		@media (max-width:$mobile){
-			 @include adaptiveValue("font-size", 28, 14,0,768,320); 
+		@media (max-width: $mobile) {
+			@include adaptiveValue("font-size", 28, 14, 0, 768, 320);
 		}
 		span {
 			font-weight: 700;
@@ -180,16 +182,16 @@
 		gap: 10px;
 		padding: 10px;
 		border-radius: 16px;
-		background: #FFD3D3;
+		background: #ffd3d3;
 		text-transform: uppercase;
-		@media (max-width:$mobile){
+		@media (max-width: $mobile) {
 			gap: 5px;
 		}
 	}
 
 	&__img {
-		@media (max-width:$tablet){
-			margin:auto;
+		@media (max-width: $tablet) {
+			margin: auto;
 		}
 		img {
 			width: 100%;
@@ -198,19 +200,18 @@
 	}
 
 	&__warning-text {
-		@media (max-width:$tablet){
+		@media (max-width: $tablet) {
 			font-size: toRem(20);
 		}
-		@media (max-width:$mobile){
-			 @include adaptiveValue("font-size", 28, 12,0,768,320); 
+		@media (max-width: $mobile) {
+			@include adaptiveValue("font-size", 28, 12, 0, 768, 320);
 		}
 	}
 
 	&__list {
 		padding-left: 20px;
-		@media (max-width:$mobile){
-			 padding-left: 10px;
-			 
+		@media (max-width: $mobile) {
+			padding-left: 10px;
 		}
 	}
 
@@ -228,7 +229,6 @@
 	}
 }
 .delivery {
-
 	&__link {
 		.action & {
 			line-height: normal;
