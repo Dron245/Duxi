@@ -1,294 +1,373 @@
 <!DOCTYPE html>
 <html lang="ru">
-	@@include('html/_head.htm',{
-	"title":"День рождения"
-	})
-	<body>
-		<div class="wrapper">
-			@@include('html/_header-user.htm',{})
-			<main class="page actions">
-				<div class="actions__container">
-					<nav class="actions__breadcrumbs breadcrumbs">
-						<ul class="breadcrumbs__list">
-							<li class="breadcrumbs__item">
-								<a href="home-user.html" class="breadcrumbs__link">Интернет магазин парфюмерии</a>
-							</li>
-							<li class="breadcrumbs__item">
-								<a href="home-user.html" class="breadcrumbs__link">Скидки и акции</a>
-							</li>
-							<li class="breadcrumbs__item">
-								<span class="breadcrumbs__current">День рождения</span>
-							</li>
-						</ul>
-					</nav>
-					<div class="actions__content">
-						<section class="actions__action action">
-							<div class="action__body">
-								<div class="action__wrapper">
-									<h3 class="action__title">День рождения </h3>
-									<div class="action__item">
-										<p class="action__text">&nbsp;&nbsp;У каждого из нас есть любимые праздники. Однако, пожалуй, именно <span>День рождения</span> является самым важным и любимым! </p><br>
-										<p class="action__text">&nbsp;&nbsp;В этот день сбываются самые заветные желания, а родные и близкие люди дарят долгожданные подарки. Мы не хотим оставаться в стороне и приготовили <span>приятный сюрприз</span> для всех будущих именинников.</p>
-										<div class="action__warning">
-											<div class="action__img">
-												<img src="@img/actions/time.svg" alt="ограничение">
-											</div>
-											<p class="action__warning-text">Акция действует 10 дней до и 10 дней после Дня рождения покупателя</p>
-										</div>
-									</div>
-								</div>
-								<div class="action__wrapper">
-									<h3 class="action__title">Условия акции</h3>
-									<div class="action__item">
-										<p class="action__text">&nbsp;&nbsp;Если до Вашего дня рождения осталось менее 10 дней или после дня рождения прошло не более 10 дней, то мы с радостью <span>подарим Вам скидку 10%</span> на любой заказ в нашем интернет-магазине.</p>
-									</div>
-								</div>
-								<div class="action__wrapper">
-									<h3 class="action__title">Как воспользоваться акцией</h3>
-									<div class="action__item">
-										<p class="action__text">&nbsp;&nbsp;Для получения скидки достаточно <span>зарегистрироваться</span> на нашем сайте, <span>указать дату рождения</span> в личном кабинете и прикрепить электронную <span>копию любого документа</span>, в котором указана дата рождения. </p><br>
-										<p class="action__text">&nbsp;&nbsp;После проверки данных менеджером магазина <span>скидка 10%</span> будет доступна Вам в личном кабинете каждый год в <span>течение 10 дней до и после</span> Вашего дня рождения.</p>
-									</div>
-								</div>
-								<div class="action__wrapper">
-									<h3 class="action__title">Примечание</h3>
-									<div class="action__item">
-										<p class="action__text">
-											&nbsp;&nbsp;Действие скидки по данной акции не распространяется на товары, которые находятся в распродаже. 
-										</p><br>
-										<p class="action__text">
-											&nbsp;&nbsp;Скидки, предоставляемые по акции «День рождения», <span>не суммируются</span> с постоянными скидками покупателей, скидками по купонам и специальным предложениям. В случае если покупатель имеет право использовать при покупке несколько видов скидок, <span>применяется наибольшая скидка</span> из возможных.
-										</p><br>
-										<p class="action__text">
-											&nbsp;&nbsp;Правила проведения акции <span>«День рождения»</span> могут быть изменены без предварительного уведомления покупателей.
-										</p>
-									</div>
-								</div>
-							</div>
-							<div class="action__img">
-								<img src="@img/actions/birthday.svg" alt="день рождения">
-							</div>
-						</section>
+@@include('html/_head.htm',{
+"title":"День рождения"
+})
 
-						<section class="page__recently recently">
-							<div class="recently__container">
-								<h3 class="recently__title">недавно просмотренные</h3>
-								<div class="tabs__shell">
-									<div class="tabs__slider swiper">
-										<div class="tabs__wrapper swiper-wrapper">
-											<div class="tabs__slide swiper-slide">
-												<article class="tabs__product product">
-													<a href="product.html" target="_blank" class="product__img ">
-														<img class ="ibg" src="@img/home/products/01.jpg" alt="">
-													</a>
-													<div class="product__content">
-														<h4 class="product__title"><span>LACOSTE</span> POUR ELLE</h4>
-														<div class="product__category product__category_man">Мужская парфюмерия</div>
-														<div class="product__cost">1001 - 30 000 руб.</div>
-													</div>
-													<div class="product__labels labels">
-														<span class="labels__label labels__label_sale">РАСПОДАЖА</span>
-														<span class="labels__label labels__label_discont">-20%</span>
-														<span class="labels__label labels__label_top">ТОП-ПРОДАЖ</span>
-														<span class="labels__label labels__label_now">НОВИНКИ</span>
-														<span class="labels__label labels__label_action">АКЦИЯ</span>
-													</div>
-													<div class="product__actions">
-														<button class="product__action"><img src="@img/home/add-spisok.svg" alt="Добавить в список сравнения"></button>
-														<button class="product__action">
-															<svg class="product__favorite" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.906 11.046C18.217 7.778 18.873 6.144 20 6.144c1.127 0 1.783 1.634 3.094 4.902l.06.152c.741 1.847 1.112 2.77 1.866 3.331.755.561 1.746.65 3.727.827l.359.033c3.243.29 4.864.435 5.211 1.467.347 1.031-.857 2.127-3.265 4.318l-.804.731c-1.22 1.11-1.829 1.664-2.113 2.391a3.342 3.342 0 0 0-.132.416c-.187.758-.008 1.562.349 3.171l.11.501c.657 2.957.985 4.436.412 5.074-.214.238-.492.41-.8.494-.828.226-2.002-.731-4.35-2.644-1.542-1.257-2.313-1.885-3.198-2.026a3.333 3.333 0 0 0-1.052 0c-.885.14-1.656.77-3.198 2.026-2.348 1.913-3.522 2.87-4.35 2.644a1.666 1.666 0 0 1-.8-.494c-.573-.638-.245-2.116.411-5.074l.111-.5c.357-1.61.536-2.414.349-3.172a3.342 3.342 0 0 0-.132-.416c-.284-.727-.894-1.281-2.113-2.39l-.804-.732c-2.408-2.191-3.612-3.287-3.265-4.318.347-1.032 1.968-1.177 5.211-1.468l.358-.032c1.982-.177 2.973-.266 3.727-.827.755-.561 1.126-1.484 1.866-3.33l.061-.153z" stroke="#7F213C" stroke-width="2"></path></svg>
-														</button>
-													</div>
-													
-												</article>
-											</div>
-											<div class="tabs__slide swiper-slide">
-												<article class="tabs__product product">
-													<a href="product.html" target="_blank" class="product__img ">
-														<img class ="ibg" src="@img/home/products/02.jpg" alt="">
-													</a>
-													<div class="product__content">
-														<h4 class="product__title"><span>LACOSTE</span> POUR ELLE</h4>
-														<div class="product__category product__category_man">Мужская парфюмерия</div>
-														<div class="product__cost">1000 - 30 000 руб.</div>
-													</div>
-													<div class="product__labels labels">
-														<span class="labels__label labels__label_sale">РАСПОДАЖА</span>
-														<span class="labels__label labels__label_discont">-20%</span>
-														<span class="labels__label labels__label_top">ТОП-ПРОДАЖ</span>
-														<span class="labels__label labels__label_now">НОВИНКИ</span>
-														<span class="labels__label labels__label_action">АКЦИЯ</span>
-													</div>
-													<div class="product__actions">
-														<button class="product__action"><img src="@img/home/add-spisok.svg" alt="Добавить в список сравнения"></button>
-														<button class="product__action"><svg class="product__favorite" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.906 11.046C18.217 7.778 18.873 6.144 20 6.144c1.127 0 1.783 1.634 3.094 4.902l.06.152c.741 1.847 1.112 2.77 1.866 3.331.755.561 1.746.65 3.727.827l.359.033c3.243.29 4.864.435 5.211 1.467.347 1.031-.857 2.127-3.265 4.318l-.804.731c-1.22 1.11-1.829 1.664-2.113 2.391a3.342 3.342 0 0 0-.132.416c-.187.758-.008 1.562.349 3.171l.11.501c.657 2.957.985 4.436.412 5.074-.214.238-.492.41-.8.494-.828.226-2.002-.731-4.35-2.644-1.542-1.257-2.313-1.885-3.198-2.026a3.333 3.333 0 0 0-1.052 0c-.885.14-1.656.77-3.198 2.026-2.348 1.913-3.522 2.87-4.35 2.644a1.666 1.666 0 0 1-.8-.494c-.573-.638-.245-2.116.411-5.074l.111-.5c.357-1.61.536-2.414.349-3.172a3.342 3.342 0 0 0-.132-.416c-.284-.727-.894-1.281-2.113-2.39l-.804-.732c-2.408-2.191-3.612-3.287-3.265-4.318.347-1.032 1.968-1.177 5.211-1.468l.358-.032c1.982-.177 2.973-.266 3.727-.827.755-.561 1.126-1.484 1.866-3.33l.061-.153z" stroke="#7F213C" stroke-width="2"></path></svg></button>
-													</div>
-													
-												</article>
-											</div>
-											<div class="tabs__slide swiper-slide">
-												<article class="tabs__product product">
-													<a href="product.html" target="_blank" class="product__img ">
-														<img class ="ibg" src="@img/home/products/03.jpg" alt="">
-													</a>
-													<div class="product__content">
-														<h4 class="product__title"><span>LACOSTE</span> POUR ELLE</h4>
-														<div class="product__category product__category_man">Мужская парфюмерия</div>
-														<div class="product__cost">1000 - 30 000 руб.</div>
-													</div>
-													<div class="product__labels labels">
-														<span class="labels__label labels__label_sale">РАСПОДАЖА</span>
-														<span class="labels__label labels__label_discont">-20%</span>
-														<span class="labels__label labels__label_top">ТОП-ПРОДАЖ</span>
-														<span class="labels__label labels__label_now">НОВИНКИ</span>
-														<span class="labels__label labels__label_action">АКЦИЯ</span>
-													</div>
-													<div class="product__actions">
-														<button class="product__action"><img src="@img/home/add-spisok.svg" alt="Добавить в список сравнения"></button>
-														<button class="product__action"><svg class="product__favorite" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.906 11.046C18.217 7.778 18.873 6.144 20 6.144c1.127 0 1.783 1.634 3.094 4.902l.06.152c.741 1.847 1.112 2.77 1.866 3.331.755.561 1.746.65 3.727.827l.359.033c3.243.29 4.864.435 5.211 1.467.347 1.031-.857 2.127-3.265 4.318l-.804.731c-1.22 1.11-1.829 1.664-2.113 2.391a3.342 3.342 0 0 0-.132.416c-.187.758-.008 1.562.349 3.171l.11.501c.657 2.957.985 4.436.412 5.074-.214.238-.492.41-.8.494-.828.226-2.002-.731-4.35-2.644-1.542-1.257-2.313-1.885-3.198-2.026a3.333 3.333 0 0 0-1.052 0c-.885.14-1.656.77-3.198 2.026-2.348 1.913-3.522 2.87-4.35 2.644a1.666 1.666 0 0 1-.8-.494c-.573-.638-.245-2.116.411-5.074l.111-.5c.357-1.61.536-2.414.349-3.172a3.342 3.342 0 0 0-.132-.416c-.284-.727-.894-1.281-2.113-2.39l-.804-.732c-2.408-2.191-3.612-3.287-3.265-4.318.347-1.032 1.968-1.177 5.211-1.468l.358-.032c1.982-.177 2.973-.266 3.727-.827.755-.561 1.126-1.484 1.866-3.33l.061-.153z" stroke="#7F213C" stroke-width="2"></path></svg></button>
-													</div>
-													
-												</article>
-											</div>
-											<div class="tabs__slide swiper-slide">
-												<article class="tabs__product product">
-													<a href="product.html" target="_blank" class="product__img ">
-														<img class ="ibg" src="@img/home/products/04.jpg" alt="">
-													</a>
-													<div class="product__content">
-														<h4 class="product__title"><span>LACOSTE</span> POUR ELLE</h4>
-														<div class="product__category product__category_man">Мужская парфюмерия</div>
-														<div class="product__cost">1000 - 30 000 руб.</div>
-													</div>
-													<div class="product__labels labels">
-														<span class="labels__label labels__label_sale">РАСПОДАЖА</span>
-														<span class="labels__label labels__label_discont">-20%</span>
-														<span class="labels__label labels__label_top">ТОП-ПРОДАЖ</span>
-														<span class="labels__label labels__label_now">НОВИНКИ</span>
-														<span class="labels__label labels__label_action">АКЦИЯ</span>
-													</div>
-													<div class="product__actions">
-														<button class="product__action"><img src="@img/home/add-spisok.svg" alt="Добавить в список сравнения"></button>
-														<button class="product__action"><svg class="product__favorite" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.906 11.046C18.217 7.778 18.873 6.144 20 6.144c1.127 0 1.783 1.634 3.094 4.902l.06.152c.741 1.847 1.112 2.77 1.866 3.331.755.561 1.746.65 3.727.827l.359.033c3.243.29 4.864.435 5.211 1.467.347 1.031-.857 2.127-3.265 4.318l-.804.731c-1.22 1.11-1.829 1.664-2.113 2.391a3.342 3.342 0 0 0-.132.416c-.187.758-.008 1.562.349 3.171l.11.501c.657 2.957.985 4.436.412 5.074-.214.238-.492.41-.8.494-.828.226-2.002-.731-4.35-2.644-1.542-1.257-2.313-1.885-3.198-2.026a3.333 3.333 0 0 0-1.052 0c-.885.14-1.656.77-3.198 2.026-2.348 1.913-3.522 2.87-4.35 2.644a1.666 1.666 0 0 1-.8-.494c-.573-.638-.245-2.116.411-5.074l.111-.5c.357-1.61.536-2.414.349-3.172a3.342 3.342 0 0 0-.132-.416c-.284-.727-.894-1.281-2.113-2.39l-.804-.732c-2.408-2.191-3.612-3.287-3.265-4.318.347-1.032 1.968-1.177 5.211-1.468l.358-.032c1.982-.177 2.973-.266 3.727-.827.755-.561 1.126-1.484 1.866-3.33l.061-.153z" stroke="#7F213C" stroke-width="2"></path></svg></button>
-													</div>
-													
-												</article>
-											</div>
-											<div class="tabs__slide swiper-slide">
-												<article class="tabs__product product">
-													<a href="product.html" target="_blank" class="product__img ">
-														<img class ="ibg" src="@img/home/products/05.jpg" alt="">
-													</a>
-													<div class="product__content">
-														<h4 class="product__title"><span>LACOSTE</span> POUR ELLE</h4>
-														<div class="product__category product__category_man">Мужская парфюмерия</div>
-														<div class="product__cost">1000 - 30 000 руб.</div>
-													</div>
-													<div class="product__labels labels">
-														<span class="labels__label labels__label_sale">РАСПОДАЖА</span>
-														<span class="labels__label labels__label_discont">-20%</span>
-														<span class="labels__label labels__label_top">ТОП-ПРОДАЖ</span>
-														<span class="labels__label labels__label_now">НОВИНКИ</span>
-														<span class="labels__label labels__label_action">АКЦИЯ</span>
-													</div>
-													<div class="product__actions">
-														<button class="product__action"><img src="@img/home/add-spisok.svg" alt="Добавить в список сравнения"></button>
-														<button class="product__action"><svg class="product__favorite" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.906 11.046C18.217 7.778 18.873 6.144 20 6.144c1.127 0 1.783 1.634 3.094 4.902l.06.152c.741 1.847 1.112 2.77 1.866 3.331.755.561 1.746.65 3.727.827l.359.033c3.243.29 4.864.435 5.211 1.467.347 1.031-.857 2.127-3.265 4.318l-.804.731c-1.22 1.11-1.829 1.664-2.113 2.391a3.342 3.342 0 0 0-.132.416c-.187.758-.008 1.562.349 3.171l.11.501c.657 2.957.985 4.436.412 5.074-.214.238-.492.41-.8.494-.828.226-2.002-.731-4.35-2.644-1.542-1.257-2.313-1.885-3.198-2.026a3.333 3.333 0 0 0-1.052 0c-.885.14-1.656.77-3.198 2.026-2.348 1.913-3.522 2.87-4.35 2.644a1.666 1.666 0 0 1-.8-.494c-.573-.638-.245-2.116.411-5.074l.111-.5c.357-1.61.536-2.414.349-3.172a3.342 3.342 0 0 0-.132-.416c-.284-.727-.894-1.281-2.113-2.39l-.804-.732c-2.408-2.191-3.612-3.287-3.265-4.318.347-1.032 1.968-1.177 5.211-1.468l.358-.032c1.982-.177 2.973-.266 3.727-.827.755-.561 1.126-1.484 1.866-3.33l.061-.153z" stroke="#7F213C" stroke-width="2"></path></svg></button>
-													</div>
-													
-												</article>
-											</div>
-											<div class="tabs__slide swiper-slide">
-												<article class="tabs__product product">
-													<a href="product.html" target="_blank" class="product__img ">
-														<img class ="ibg" src="@img/home/products/06.jpg" alt="">
-													</a>
-													<div class="product__content">
-														<h4 class="product__title"><span>LACOSTE</span> POUR ELLE</h4>
-														<div class="product__category product__category_man">Мужская парфюмерия</div>
-														<div class="product__cost">1000 - 30 000 руб.</div>
-													</div>
-													<div class="product__labels labels">
-														<span class="labels__label labels__label_sale">РАСПОДАЖА</span>
-														<span class="labels__label labels__label_discont">-20%</span>
-														<span class="labels__label labels__label_top">ТОП-ПРОДАЖ</span>
-														<span class="labels__label labels__label_now">НОВИНКИ</span>
-														<span class="labels__label labels__label_action">АКЦИЯ</span>
-													</div>
-													<div class="product__actions">
-														<button class="product__action"><img src="@img/home/add-spisok.svg" alt="Добавить в список сравнения"></button>
-														<button class="product__action"><svg class="product__favorite" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.906 11.046C18.217 7.778 18.873 6.144 20 6.144c1.127 0 1.783 1.634 3.094 4.902l.06.152c.741 1.847 1.112 2.77 1.866 3.331.755.561 1.746.65 3.727.827l.359.033c3.243.29 4.864.435 5.211 1.467.347 1.031-.857 2.127-3.265 4.318l-.804.731c-1.22 1.11-1.829 1.664-2.113 2.391a3.342 3.342 0 0 0-.132.416c-.187.758-.008 1.562.349 3.171l.11.501c.657 2.957.985 4.436.412 5.074-.214.238-.492.41-.8.494-.828.226-2.002-.731-4.35-2.644-1.542-1.257-2.313-1.885-3.198-2.026a3.333 3.333 0 0 0-1.052 0c-.885.14-1.656.77-3.198 2.026-2.348 1.913-3.522 2.87-4.35 2.644a1.666 1.666 0 0 1-.8-.494c-.573-.638-.245-2.116.411-5.074l.111-.5c.357-1.61.536-2.414.349-3.172a3.342 3.342 0 0 0-.132-.416c-.284-.727-.894-1.281-2.113-2.39l-.804-.732c-2.408-2.191-3.612-3.287-3.265-4.318.347-1.032 1.968-1.177 5.211-1.468l.358-.032c1.982-.177 2.973-.266 3.727-.827.755-.561 1.126-1.484 1.866-3.33l.061-.153z" stroke="#7F213C" stroke-width="2"></path></svg></button>
-													</div>
-													
-												</article>
-											</div>
-											<div class="tabs__slide swiper-slide">
-												<article class="tabs__product product">
-													<a href="product.html" target="_blank" class="product__img ">
-														<img class ="ibg" src="@img/home/products/06.jpg" alt="">
-													</a>
-													<div class="product__content">
-														<h4 class="product__title"><span>LACOSTE</span> POUR ELLE</h4>
-														<div class="product__category product__category_man">Мужская парфюмерия</div>
-														<div class="product__cost">1000 - 30 000 руб.</div>
-													</div>
-													<div class="product__labels labels">
-														<span class="labels__label labels__label_sale">РАСПОДАЖА</span>
-														<span class="labels__label labels__label_discont">-20%</span>
-														<span class="labels__label labels__label_top">ТОП-ПРОДАЖ</span>
-														<span class="labels__label labels__label_now">НОВИНКИ</span>
-														<span class="labels__label labels__label_action">АКЦИЯ</span>
-													</div>
-													<div class="product__actions">
-														<button class="product__action"><img src="@img/home/add-spisok.svg" alt="Добавить в список сравнения"></button>
-														<button class="product__action"><svg class="product__favorite" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.906 11.046C18.217 7.778 18.873 6.144 20 6.144c1.127 0 1.783 1.634 3.094 4.902l.06.152c.741 1.847 1.112 2.77 1.866 3.331.755.561 1.746.65 3.727.827l.359.033c3.243.29 4.864.435 5.211 1.467.347 1.031-.857 2.127-3.265 4.318l-.804.731c-1.22 1.11-1.829 1.664-2.113 2.391a3.342 3.342 0 0 0-.132.416c-.187.758-.008 1.562.349 3.171l.11.501c.657 2.957.985 4.436.412 5.074-.214.238-.492.41-.8.494-.828.226-2.002-.731-4.35-2.644-1.542-1.257-2.313-1.885-3.198-2.026a3.333 3.333 0 0 0-1.052 0c-.885.14-1.656.77-3.198 2.026-2.348 1.913-3.522 2.87-4.35 2.644a1.666 1.666 0 0 1-.8-.494c-.573-.638-.245-2.116.411-5.074l.111-.5c.357-1.61.536-2.414.349-3.172a3.342 3.342 0 0 0-.132-.416c-.284-.727-.894-1.281-2.113-2.39l-.804-.732c-2.408-2.191-3.612-3.287-3.265-4.318.347-1.032 1.968-1.177 5.211-1.468l.358-.032c1.982-.177 2.973-.266 3.727-.827.755-.561 1.126-1.484 1.866-3.33l.061-.153z" stroke="#7F213C" stroke-width="2"></path></svg></button>
-													</div>
-													
-												</article>
-											</div>
-											<div class="tabs__slide swiper-slide">
-												<article class="tabs__product product">
-													<a href="product.html" target="_blank" class="product__img ">
-														<img class ="ibg" src="@img/home/products/02.jpg" alt="">
-													</a>
-													<div class="product__content">
-														<h4 class="product__title"><span>LACOSTE</span> POUR ELLE</h4>
-														<div class="product__category product__category_man">Мужская парфюмерия</div>
-														<div class="product__cost">1000 - 30 000 руб.</div>
-													</div>
-													<div class="product__labels labels">
-														<span class="labels__label labels__label_sale">РАСПОДАЖА</span>
-														<span class="labels__label labels__label_discont">-20%</span>
-														<span class="labels__label labels__label_top">ТОП-ПРОДАЖ</span>
-														<span class="labels__label labels__label_now">НОВИНКИ</span>
-														<span class="labels__label labels__label_action">АКЦИЯ</span>
-													</div>
-													<div class="product__actions">
-														<button class="product__action"><img src="@img/home/add-spisok.svg" alt="Добавить в список сравнения"></button>
-														<button class="product__action"><svg class="product__favorite" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.906 11.046C18.217 7.778 18.873 6.144 20 6.144c1.127 0 1.783 1.634 3.094 4.902l.06.152c.741 1.847 1.112 2.77 1.866 3.331.755.561 1.746.65 3.727.827l.359.033c3.243.29 4.864.435 5.211 1.467.347 1.031-.857 2.127-3.265 4.318l-.804.731c-1.22 1.11-1.829 1.664-2.113 2.391a3.342 3.342 0 0 0-.132.416c-.187.758-.008 1.562.349 3.171l.11.501c.657 2.957.985 4.436.412 5.074-.214.238-.492.41-.8.494-.828.226-2.002-.731-4.35-2.644-1.542-1.257-2.313-1.885-3.198-2.026a3.333 3.333 0 0 0-1.052 0c-.885.14-1.656.77-3.198 2.026-2.348 1.913-3.522 2.87-4.35 2.644a1.666 1.666 0 0 1-.8-.494c-.573-.638-.245-2.116.411-5.074l.111-.5c.357-1.61.536-2.414.349-3.172a3.342 3.342 0 0 0-.132-.416c-.284-.727-.894-1.281-2.113-2.39l-.804-.732c-2.408-2.191-3.612-3.287-3.265-4.318.347-1.032 1.968-1.177 5.211-1.468l.358-.032c1.982-.177 2.973-.266 3.727-.827.755-.561 1.126-1.484 1.866-3.33l.061-.153z" stroke="#7F213C" stroke-width="2"></path></svg></button>
-													</div>
-													
-												</article>
-											</div>
+<body>
+	<div class="wrapper">
+		@@include('html/_header-user.htm',{})
+		<main class="page actions">
+			<div class="actions__container">
+				<nav class="actions__breadcrumbs breadcrumbs">
+					<ul class="breadcrumbs__list">
+						<li class="breadcrumbs__item">
+							<a href="home-user.html" class="breadcrumbs__link">Интернет магазин парфюмерии</a>
+						</li>
+						<li class="breadcrumbs__item">
+							<a href="home-user.html" class="breadcrumbs__link">Скидки и акции</a>
+						</li>
+						<li class="breadcrumbs__item">
+							<span class="breadcrumbs__current">День рождения</span>
+						</li>
+					</ul>
+				</nav>
+				<div class="actions__content">
+					<section class="actions__action action">
+						<div class="action__body">
+							<div class="action__wrapper">
+								<h3 class="action__title">День рождения </h3>
+								<div class="action__item">
+									<p class="action__text">&nbsp;&nbsp;У каждого из нас есть любимые праздники. Однако, пожалуй,
+										именно <span>День рождения</span> является самым важным и любимым! </p><br>
+									<p class="action__text">&nbsp;&nbsp;В этот день сбываются самые заветные желания, а родные и
+										близкие люди дарят долгожданные подарки. Мы не хотим оставаться в стороне и приготовили
+										<span>приятный сюрприз</span> для всех будущих именинников.</p>
+									<div class="action__warning">
+										<div class="action__img">
+											<img src="@img/actions/time.svg" alt="ограничение">
 										</div>
-										<div class="swiper-products-pagination pagination"></div>
+										<p class="action__warning-text">Акция действует 10 дней до и 10 дней после Дня рождения
+											покупателя</p>
 									</div>
-									<button type="button" class="swiper-prev swiper-tabs-prev"><svg xmlns="http://www.w3.org/2000/svg" width="21" height="39" viewBox="0 0 21 39" fill="none">
-											<path fill-rule="evenodd" clip-rule="evenodd" d="M20.5687 38.5525C21.15 37.9623 21.1428 37.0126 20.5525 36.4313L3.62138 19.7567L20.5686 2.55266C21.15 1.96248 21.1428 1.01277 20.5527 0.431399C19.9625 -0.149965 19.0128 -0.142824 18.4314 0.447348L0.431393 18.7201C0.152191 19.0035 -0.0029727 19.3863 4.14249e-05 19.7841C0.00305567 20.1819 0.164001 20.5623 0.447466 20.8415L18.4475 38.5687C19.0377 39.15 19.9874 39.1428 20.5687 38.5525Z" fill="#6E6E6E"/>
-											</svg></button>
-									<button type="button" class="swiper-next swiper-tabs-next"><svg xmlns="http://www.w3.org/2000/svg" width="21" height="39" viewBox="0 0 21 39" fill="none">
-											<path fill-rule="evenodd" clip-rule="evenodd" d="M20.5687 38.5525C21.15 37.9623 21.1428 37.0126 20.5525 36.4313L3.62138 19.7567L20.5686 2.55266C21.15 1.96248 21.1428 1.01277 20.5527 0.431399C19.9625 -0.149965 19.0128 -0.142824 18.4314 0.447348L0.431393 18.7201C0.152191 19.0035 -0.0029727 19.3863 4.14249e-05 19.7841C0.00305567 20.1819 0.164001 20.5623 0.447466 20.8415L18.4475 38.5687C19.0377 39.15 19.9874 39.1428 20.5687 38.5525Z" fill="#6E6E6E"/>
-											</svg></button>
 								</div>
 							</div>
-							<a class="tabs__show-all center-button" href="#">ПОКАЗАТЬ ВСЕ</a>
-						</section>
-					</div>
+							<div class="action__wrapper">
+								<h3 class="action__title">Условия акции</h3>
+								<div class="action__item">
+									<p class="action__text">&nbsp;&nbsp;Если до Вашего дня рождения осталось менее 10 дней или
+										после дня рождения прошло не более 10 дней, то мы с радостью <span>подарим Вам скидку
+											10%</span> на любой заказ в нашем интернет-магазине.</p>
+								</div>
+							</div>
+							<div class="action__wrapper">
+								<h3 class="action__title">Как воспользоваться акцией</h3>
+								<div class="action__item">
+									<p class="action__text">&nbsp;&nbsp;Для получения скидки
+										достаточно <span>зарегистрироваться</span> на нашем сайте, <span>указать дату
+											рождения</span> в личном кабинете и прикрепить электронную <span>копию любого
+											документа</span>, в котором указана дата рождения. </p><br>
+									<p class="action__text">&nbsp;&nbsp;После проверки данных менеджером магазина <span>скидка
+											10%</span> будет доступна Вам в личном кабинете каждый год в <span>течение 10 дней до и
+											после</span> Вашего дня рождения.</p>
+								</div>
+							</div>
+							<div class="action__wrapper">
+								<h3 class="action__title">Примечание</h3>
+								<div class="action__item">
+									<p class="action__text">
+										&nbsp;&nbsp;Действие скидки по данной акции не распространяется на товары, которые
+										находятся в распродаже.
+									</p><br>
+									<p class="action__text">
+										&nbsp;&nbsp;Скидки, предоставляемые по акции «День рождения», <span>не
+											суммируются</span> с постоянными скидками покупателей, скидками по купонам и
+										специальным предложениям. В случае если покупатель имеет право использовать при покупке
+										несколько видов скидок, <span>применяется наибольшая скидка</span> из возможных.
+									</p><br>
+									<p class="action__text">
+										&nbsp;&nbsp;Правила проведения акции <span>«День рождения»</span> могут быть изменены без
+										предварительного уведомления покупателей.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="action__img">
+							<img src="@img/actions/birthday.svg" alt="день рождения">
+						</div>
+					</section>
+
+					<section class="page__recently recently">
+						<div class="recently__container">
+							<h3 class="recently__title">недавно просмотренные</h3>
+							<div class="tabs__shell">
+								<div class="tabs__slider swiper">
+									<div class="tabs__wrapper swiper-wrapper">
+										<div class="tabs__slide swiper-slide">
+											<article class="tabs__product product">
+												<a href="product.html" target="_blank" class="product__img">
+													<img class="ibg" src="@img/home/products/01.jpg" alt="">
+												</a>
+												<div class="product__content">
+													<h4 class="product__title"><span>LACOSTE</span> POUR ELLE</h4>
+													<div class="product__category product__category_man">Мужская парфюмерия</div>
+													<div class="product__cost">1001 - 30 000 руб.</div>
+												</div>
+												<div class="product__labels labels">
+													<span class="labels__label labels__label_sale">РАСПОДАЖА</span>
+													<span class="labels__label labels__label_discont">-20%</span>
+													<span class="labels__label labels__label_top">ТОП-ПРОДАЖ</span>
+													<span class="labels__label labels__label_now">НОВИНКИ</span>
+													<span class="labels__label labels__label_action">АКЦИЯ</span>
+												</div>
+												<div class="product__actions">
+													<button class="product__action"><img src="@img/home/add-spisok.svg"
+															alt="Добавить в список сравнения"></button>
+													<button class="product__action">
+														<svg class="product__favorite" width="40" height="40" viewBox="0 0 40 40"
+															fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path
+																d="M16.906 11.046C18.217 7.778 18.873 6.144 20 6.144c1.127 0 1.783 1.634 3.094 4.902l.06.152c.741 1.847 1.112 2.77 1.866 3.331.755.561 1.746.65 3.727.827l.359.033c3.243.29 4.864.435 5.211 1.467.347 1.031-.857 2.127-3.265 4.318l-.804.731c-1.22 1.11-1.829 1.664-2.113 2.391a3.342 3.342 0 0 0-.132.416c-.187.758-.008 1.562.349 3.171l.11.501c.657 2.957.985 4.436.412 5.074-.214.238-.492.41-.8.494-.828.226-2.002-.731-4.35-2.644-1.542-1.257-2.313-1.885-3.198-2.026a3.333 3.333 0 0 0-1.052 0c-.885.14-1.656.77-3.198 2.026-2.348 1.913-3.522 2.87-4.35 2.644a1.666 1.666 0 0 1-.8-.494c-.573-.638-.245-2.116.411-5.074l.111-.5c.357-1.61.536-2.414.349-3.172a3.342 3.342 0 0 0-.132-.416c-.284-.727-.894-1.281-2.113-2.39l-.804-.732c-2.408-2.191-3.612-3.287-3.265-4.318.347-1.032 1.968-1.177 5.211-1.468l.358-.032c1.982-.177 2.973-.266 3.727-.827.755-.561 1.126-1.484 1.866-3.33l.061-.153z"
+																stroke="#7F213C" stroke-width="2"></path>
+														</svg>
+													</button>
+												</div>
+
+											</article>
+										</div>
+										<div class="tabs__slide swiper-slide">
+											<article class="tabs__product product">
+												<a href="product.html" target="_blank" class="product__img">
+													<img class="ibg" src="@img/home/products/02.jpg" alt="">
+												</a>
+												<div class="product__content">
+													<h4 class="product__title"><span>LACOSTE</span> POUR ELLE</h4>
+													<div class="product__category product__category_man">Мужская парфюмерия</div>
+													<div class="product__cost">1000 - 30 000 руб.</div>
+												</div>
+												<div class="product__labels labels">
+													<span class="labels__label labels__label_sale">РАСПОДАЖА</span>
+													<span class="labels__label labels__label_discont">-20%</span>
+													<span class="labels__label labels__label_top">ТОП-ПРОДАЖ</span>
+													<span class="labels__label labels__label_now">НОВИНКИ</span>
+													<span class="labels__label labels__label_action">АКЦИЯ</span>
+												</div>
+												<div class="product__actions">
+													<button class="product__action"><img src="@img/home/add-spisok.svg"
+															alt="Добавить в список сравнения"></button>
+													<button class="product__action"><svg class="product__favorite" width="40"
+															height="40" viewBox="0 0 40 40" fill="none"
+															xmlns="http://www.w3.org/2000/svg">
+															<path
+																d="M16.906 11.046C18.217 7.778 18.873 6.144 20 6.144c1.127 0 1.783 1.634 3.094 4.902l.06.152c.741 1.847 1.112 2.77 1.866 3.331.755.561 1.746.65 3.727.827l.359.033c3.243.29 4.864.435 5.211 1.467.347 1.031-.857 2.127-3.265 4.318l-.804.731c-1.22 1.11-1.829 1.664-2.113 2.391a3.342 3.342 0 0 0-.132.416c-.187.758-.008 1.562.349 3.171l.11.501c.657 2.957.985 4.436.412 5.074-.214.238-.492.41-.8.494-.828.226-2.002-.731-4.35-2.644-1.542-1.257-2.313-1.885-3.198-2.026a3.333 3.333 0 0 0-1.052 0c-.885.14-1.656.77-3.198 2.026-2.348 1.913-3.522 2.87-4.35 2.644a1.666 1.666 0 0 1-.8-.494c-.573-.638-.245-2.116.411-5.074l.111-.5c.357-1.61.536-2.414.349-3.172a3.342 3.342 0 0 0-.132-.416c-.284-.727-.894-1.281-2.113-2.39l-.804-.732c-2.408-2.191-3.612-3.287-3.265-4.318.347-1.032 1.968-1.177 5.211-1.468l.358-.032c1.982-.177 2.973-.266 3.727-.827.755-.561 1.126-1.484 1.866-3.33l.061-.153z"
+																stroke="#7F213C" stroke-width="2"></path>
+														</svg></button>
+												</div>
+
+											</article>
+										</div>
+										<div class="tabs__slide swiper-slide">
+											<article class="tabs__product product">
+												<a href="product.html" target="_blank" class="product__img">
+													<img class="ibg" src="@img/home/products/03.jpg" alt="">
+												</a>
+												<div class="product__content">
+													<h4 class="product__title"><span>LACOSTE</span> POUR ELLE</h4>
+													<div class="product__category product__category_man">Мужская парфюмерия</div>
+													<div class="product__cost">1000 - 30 000 руб.</div>
+												</div>
+												<div class="product__labels labels">
+													<span class="labels__label labels__label_sale">РАСПОДАЖА</span>
+													<span class="labels__label labels__label_discont">-20%</span>
+													<span class="labels__label labels__label_top">ТОП-ПРОДАЖ</span>
+													<span class="labels__label labels__label_now">НОВИНКИ</span>
+													<span class="labels__label labels__label_action">АКЦИЯ</span>
+												</div>
+												<div class="product__actions">
+													<button class="product__action"><img src="@img/home/add-spisok.svg"
+															alt="Добавить в список сравнения"></button>
+													<button class="product__action"><svg class="product__favorite" width="40"
+															height="40" viewBox="0 0 40 40" fill="none"
+															xmlns="http://www.w3.org/2000/svg">
+															<path
+																d="M16.906 11.046C18.217 7.778 18.873 6.144 20 6.144c1.127 0 1.783 1.634 3.094 4.902l.06.152c.741 1.847 1.112 2.77 1.866 3.331.755.561 1.746.65 3.727.827l.359.033c3.243.29 4.864.435 5.211 1.467.347 1.031-.857 2.127-3.265 4.318l-.804.731c-1.22 1.11-1.829 1.664-2.113 2.391a3.342 3.342 0 0 0-.132.416c-.187.758-.008 1.562.349 3.171l.11.501c.657 2.957.985 4.436.412 5.074-.214.238-.492.41-.8.494-.828.226-2.002-.731-4.35-2.644-1.542-1.257-2.313-1.885-3.198-2.026a3.333 3.333 0 0 0-1.052 0c-.885.14-1.656.77-3.198 2.026-2.348 1.913-3.522 2.87-4.35 2.644a1.666 1.666 0 0 1-.8-.494c-.573-.638-.245-2.116.411-5.074l.111-.5c.357-1.61.536-2.414.349-3.172a3.342 3.342 0 0 0-.132-.416c-.284-.727-.894-1.281-2.113-2.39l-.804-.732c-2.408-2.191-3.612-3.287-3.265-4.318.347-1.032 1.968-1.177 5.211-1.468l.358-.032c1.982-.177 2.973-.266 3.727-.827.755-.561 1.126-1.484 1.866-3.33l.061-.153z"
+																stroke="#7F213C" stroke-width="2"></path>
+														</svg></button>
+												</div>
+
+											</article>
+										</div>
+										<div class="tabs__slide swiper-slide">
+											<article class="tabs__product product">
+												<a href="product.html" target="_blank" class="product__img">
+													<img class="ibg" src="@img/home/products/04.jpg" alt="">
+												</a>
+												<div class="product__content">
+													<h4 class="product__title"><span>LACOSTE</span> POUR ELLE</h4>
+													<div class="product__category product__category_man">Мужская парфюмерия</div>
+													<div class="product__cost">1000 - 30 000 руб.</div>
+												</div>
+												<div class="product__labels labels">
+													<span class="labels__label labels__label_sale">РАСПОДАЖА</span>
+													<span class="labels__label labels__label_discont">-20%</span>
+													<span class="labels__label labels__label_top">ТОП-ПРОДАЖ</span>
+													<span class="labels__label labels__label_now">НОВИНКИ</span>
+													<span class="labels__label labels__label_action">АКЦИЯ</span>
+												</div>
+												<div class="product__actions">
+													<button class="product__action"><img src="@img/home/add-spisok.svg"
+															alt="Добавить в список сравнения"></button>
+													<button class="product__action"><svg class="product__favorite" width="40"
+															height="40" viewBox="0 0 40 40" fill="none"
+															xmlns="http://www.w3.org/2000/svg">
+															<path
+																d="M16.906 11.046C18.217 7.778 18.873 6.144 20 6.144c1.127 0 1.783 1.634 3.094 4.902l.06.152c.741 1.847 1.112 2.77 1.866 3.331.755.561 1.746.65 3.727.827l.359.033c3.243.29 4.864.435 5.211 1.467.347 1.031-.857 2.127-3.265 4.318l-.804.731c-1.22 1.11-1.829 1.664-2.113 2.391a3.342 3.342 0 0 0-.132.416c-.187.758-.008 1.562.349 3.171l.11.501c.657 2.957.985 4.436.412 5.074-.214.238-.492.41-.8.494-.828.226-2.002-.731-4.35-2.644-1.542-1.257-2.313-1.885-3.198-2.026a3.333 3.333 0 0 0-1.052 0c-.885.14-1.656.77-3.198 2.026-2.348 1.913-3.522 2.87-4.35 2.644a1.666 1.666 0 0 1-.8-.494c-.573-.638-.245-2.116.411-5.074l.111-.5c.357-1.61.536-2.414.349-3.172a3.342 3.342 0 0 0-.132-.416c-.284-.727-.894-1.281-2.113-2.39l-.804-.732c-2.408-2.191-3.612-3.287-3.265-4.318.347-1.032 1.968-1.177 5.211-1.468l.358-.032c1.982-.177 2.973-.266 3.727-.827.755-.561 1.126-1.484 1.866-3.33l.061-.153z"
+																stroke="#7F213C" stroke-width="2"></path>
+														</svg></button>
+												</div>
+
+											</article>
+										</div>
+										<div class="tabs__slide swiper-slide">
+											<article class="tabs__product product">
+												<a href="product.html" target="_blank" class="product__img">
+													<img class="ibg" src="@img/home/products/05.jpg" alt="">
+												</a>
+												<div class="product__content">
+													<h4 class="product__title"><span>LACOSTE</span> POUR ELLE</h4>
+													<div class="product__category product__category_man">Мужская парфюмерия</div>
+													<div class="product__cost">1000 - 30 000 руб.</div>
+												</div>
+												<div class="product__labels labels">
+													<span class="labels__label labels__label_sale">РАСПОДАЖА</span>
+													<span class="labels__label labels__label_discont">-20%</span>
+													<span class="labels__label labels__label_top">ТОП-ПРОДАЖ</span>
+													<span class="labels__label labels__label_now">НОВИНКИ</span>
+													<span class="labels__label labels__label_action">АКЦИЯ</span>
+												</div>
+												<div class="product__actions">
+													<button class="product__action"><img src="@img/home/add-spisok.svg"
+															alt="Добавить в список сравнения"></button>
+													<button class="product__action"><svg class="product__favorite" width="40"
+															height="40" viewBox="0 0 40 40" fill="none"
+															xmlns="http://www.w3.org/2000/svg">
+															<path
+																d="M16.906 11.046C18.217 7.778 18.873 6.144 20 6.144c1.127 0 1.783 1.634 3.094 4.902l.06.152c.741 1.847 1.112 2.77 1.866 3.331.755.561 1.746.65 3.727.827l.359.033c3.243.29 4.864.435 5.211 1.467.347 1.031-.857 2.127-3.265 4.318l-.804.731c-1.22 1.11-1.829 1.664-2.113 2.391a3.342 3.342 0 0 0-.132.416c-.187.758-.008 1.562.349 3.171l.11.501c.657 2.957.985 4.436.412 5.074-.214.238-.492.41-.8.494-.828.226-2.002-.731-4.35-2.644-1.542-1.257-2.313-1.885-3.198-2.026a3.333 3.333 0 0 0-1.052 0c-.885.14-1.656.77-3.198 2.026-2.348 1.913-3.522 2.87-4.35 2.644a1.666 1.666 0 0 1-.8-.494c-.573-.638-.245-2.116.411-5.074l.111-.5c.357-1.61.536-2.414.349-3.172a3.342 3.342 0 0 0-.132-.416c-.284-.727-.894-1.281-2.113-2.39l-.804-.732c-2.408-2.191-3.612-3.287-3.265-4.318.347-1.032 1.968-1.177 5.211-1.468l.358-.032c1.982-.177 2.973-.266 3.727-.827.755-.561 1.126-1.484 1.866-3.33l.061-.153z"
+																stroke="#7F213C" stroke-width="2"></path>
+														</svg></button>
+												</div>
+
+											</article>
+										</div>
+										<div class="tabs__slide swiper-slide">
+											<article class="tabs__product product">
+												<a href="product.html" target="_blank" class="product__img">
+													<img class="ibg" src="@img/home/products/06.jpg" alt="">
+												</a>
+												<div class="product__content">
+													<h4 class="product__title"><span>LACOSTE</span> POUR ELLE</h4>
+													<div class="product__category product__category_man">Мужская парфюмерия</div>
+													<div class="product__cost">1000 - 30 000 руб.</div>
+												</div>
+												<div class="product__labels labels">
+													<span class="labels__label labels__label_sale">РАСПОДАЖА</span>
+													<span class="labels__label labels__label_discont">-20%</span>
+													<span class="labels__label labels__label_top">ТОП-ПРОДАЖ</span>
+													<span class="labels__label labels__label_now">НОВИНКИ</span>
+													<span class="labels__label labels__label_action">АКЦИЯ</span>
+												</div>
+												<div class="product__actions">
+													<button class="product__action"><img src="@img/home/add-spisok.svg"
+															alt="Добавить в список сравнения"></button>
+													<button class="product__action"><svg class="product__favorite" width="40"
+															height="40" viewBox="0 0 40 40" fill="none"
+															xmlns="http://www.w3.org/2000/svg">
+															<path
+																d="M16.906 11.046C18.217 7.778 18.873 6.144 20 6.144c1.127 0 1.783 1.634 3.094 4.902l.06.152c.741 1.847 1.112 2.77 1.866 3.331.755.561 1.746.65 3.727.827l.359.033c3.243.29 4.864.435 5.211 1.467.347 1.031-.857 2.127-3.265 4.318l-.804.731c-1.22 1.11-1.829 1.664-2.113 2.391a3.342 3.342 0 0 0-.132.416c-.187.758-.008 1.562.349 3.171l.11.501c.657 2.957.985 4.436.412 5.074-.214.238-.492.41-.8.494-.828.226-2.002-.731-4.35-2.644-1.542-1.257-2.313-1.885-3.198-2.026a3.333 3.333 0 0 0-1.052 0c-.885.14-1.656.77-3.198 2.026-2.348 1.913-3.522 2.87-4.35 2.644a1.666 1.666 0 0 1-.8-.494c-.573-.638-.245-2.116.411-5.074l.111-.5c.357-1.61.536-2.414.349-3.172a3.342 3.342 0 0 0-.132-.416c-.284-.727-.894-1.281-2.113-2.39l-.804-.732c-2.408-2.191-3.612-3.287-3.265-4.318.347-1.032 1.968-1.177 5.211-1.468l.358-.032c1.982-.177 2.973-.266 3.727-.827.755-.561 1.126-1.484 1.866-3.33l.061-.153z"
+																stroke="#7F213C" stroke-width="2"></path>
+														</svg></button>
+												</div>
+
+											</article>
+										</div>
+										<div class="tabs__slide swiper-slide">
+											<article class="tabs__product product">
+												<a href="product.html" target="_blank" class="product__img">
+													<img class="ibg" src="@img/home/products/06.jpg" alt="">
+												</a>
+												<div class="product__content">
+													<h4 class="product__title"><span>LACOSTE</span> POUR ELLE</h4>
+													<div class="product__category product__category_man">Мужская парфюмерия</div>
+													<div class="product__cost">1000 - 30 000 руб.</div>
+												</div>
+												<div class="product__labels labels">
+													<span class="labels__label labels__label_sale">РАСПОДАЖА</span>
+													<span class="labels__label labels__label_discont">-20%</span>
+													<span class="labels__label labels__label_top">ТОП-ПРОДАЖ</span>
+													<span class="labels__label labels__label_now">НОВИНКИ</span>
+													<span class="labels__label labels__label_action">АКЦИЯ</span>
+												</div>
+												<div class="product__actions">
+													<button class="product__action"><img src="@img/home/add-spisok.svg"
+															alt="Добавить в список сравнения"></button>
+													<button class="product__action"><svg class="product__favorite" width="40"
+															height="40" viewBox="0 0 40 40" fill="none"
+															xmlns="http://www.w3.org/2000/svg">
+															<path
+																d="M16.906 11.046C18.217 7.778 18.873 6.144 20 6.144c1.127 0 1.783 1.634 3.094 4.902l.06.152c.741 1.847 1.112 2.77 1.866 3.331.755.561 1.746.65 3.727.827l.359.033c3.243.29 4.864.435 5.211 1.467.347 1.031-.857 2.127-3.265 4.318l-.804.731c-1.22 1.11-1.829 1.664-2.113 2.391a3.342 3.342 0 0 0-.132.416c-.187.758-.008 1.562.349 3.171l.11.501c.657 2.957.985 4.436.412 5.074-.214.238-.492.41-.8.494-.828.226-2.002-.731-4.35-2.644-1.542-1.257-2.313-1.885-3.198-2.026a3.333 3.333 0 0 0-1.052 0c-.885.14-1.656.77-3.198 2.026-2.348 1.913-3.522 2.87-4.35 2.644a1.666 1.666 0 0 1-.8-.494c-.573-.638-.245-2.116.411-5.074l.111-.5c.357-1.61.536-2.414.349-3.172a3.342 3.342 0 0 0-.132-.416c-.284-.727-.894-1.281-2.113-2.39l-.804-.732c-2.408-2.191-3.612-3.287-3.265-4.318.347-1.032 1.968-1.177 5.211-1.468l.358-.032c1.982-.177 2.973-.266 3.727-.827.755-.561 1.126-1.484 1.866-3.33l.061-.153z"
+																stroke="#7F213C" stroke-width="2"></path>
+														</svg></button>
+												</div>
+
+											</article>
+										</div>
+										<div class="tabs__slide swiper-slide">
+											<article class="tabs__product product">
+												<a href="product.html" target="_blank" class="product__img">
+													<img class="ibg" src="@img/home/products/02.jpg" alt="">
+												</a>
+												<div class="product__content">
+													<h4 class="product__title"><span>LACOSTE</span> POUR ELLE</h4>
+													<div class="product__category product__category_man">Мужская парфюмерия</div>
+													<div class="product__cost">1000 - 30 000 руб.</div>
+												</div>
+												<div class="product__labels labels">
+													<span class="labels__label labels__label_sale">РАСПОДАЖА</span>
+													<span class="labels__label labels__label_discont">-20%</span>
+													<span class="labels__label labels__label_top">ТОП-ПРОДАЖ</span>
+													<span class="labels__label labels__label_now">НОВИНКИ</span>
+													<span class="labels__label labels__label_action">АКЦИЯ</span>
+												</div>
+												<div class="product__actions">
+													<button class="product__action"><img src="@img/home/add-spisok.svg"
+															alt="Добавить в список сравнения"></button>
+													<button class="product__action"><svg class="product__favorite" width="40"
+															height="40" viewBox="0 0 40 40" fill="none"
+															xmlns="http://www.w3.org/2000/svg">
+															<path
+																d="M16.906 11.046C18.217 7.778 18.873 6.144 20 6.144c1.127 0 1.783 1.634 3.094 4.902l.06.152c.741 1.847 1.112 2.77 1.866 3.331.755.561 1.746.65 3.727.827l.359.033c3.243.29 4.864.435 5.211 1.467.347 1.031-.857 2.127-3.265 4.318l-.804.731c-1.22 1.11-1.829 1.664-2.113 2.391a3.342 3.342 0 0 0-.132.416c-.187.758-.008 1.562.349 3.171l.11.501c.657 2.957.985 4.436.412 5.074-.214.238-.492.41-.8.494-.828.226-2.002-.731-4.35-2.644-1.542-1.257-2.313-1.885-3.198-2.026a3.333 3.333 0 0 0-1.052 0c-.885.14-1.656.77-3.198 2.026-2.348 1.913-3.522 2.87-4.35 2.644a1.666 1.666 0 0 1-.8-.494c-.573-.638-.245-2.116.411-5.074l.111-.5c.357-1.61.536-2.414.349-3.172a3.342 3.342 0 0 0-.132-.416c-.284-.727-.894-1.281-2.113-2.39l-.804-.732c-2.408-2.191-3.612-3.287-3.265-4.318.347-1.032 1.968-1.177 5.211-1.468l.358-.032c1.982-.177 2.973-.266 3.727-.827.755-.561 1.126-1.484 1.866-3.33l.061-.153z"
+																stroke="#7F213C" stroke-width="2"></path>
+														</svg></button>
+												</div>
+
+											</article>
+										</div>
+									</div>
+									<div class="swiper-products-pagination pagination"></div>
+								</div>
+								<button type="button" class="swiper-prev swiper-tabs-prev"><svg
+										xmlns="http://www.w3.org/2000/svg" width="21" height="39" viewBox="0 0 21 39" fill="none">
+										<path fill-rule="evenodd" clip-rule="evenodd"
+											d="M20.5687 38.5525C21.15 37.9623 21.1428 37.0126 20.5525 36.4313L3.62138 19.7567L20.5686 2.55266C21.15 1.96248 21.1428 1.01277 20.5527 0.431399C19.9625 -0.149965 19.0128 -0.142824 18.4314 0.447348L0.431393 18.7201C0.152191 19.0035 -0.0029727 19.3863 4.14249e-05 19.7841C0.00305567 20.1819 0.164001 20.5623 0.447466 20.8415L18.4475 38.5687C19.0377 39.15 19.9874 39.1428 20.5687 38.5525Z"
+											fill="#6E6E6E" />
+									</svg></button>
+								<button type="button" class="swiper-next swiper-tabs-next"><svg
+										xmlns="http://www.w3.org/2000/svg" width="21" height="39" viewBox="0 0 21 39" fill="none">
+										<path fill-rule="evenodd" clip-rule="evenodd"
+											d="M20.5687 38.5525C21.15 37.9623 21.1428 37.0126 20.5525 36.4313L3.62138 19.7567L20.5686 2.55266C21.15 1.96248 21.1428 1.01277 20.5527 0.431399C19.9625 -0.149965 19.0128 -0.142824 18.4314 0.447348L0.431393 18.7201C0.152191 19.0035 -0.0029727 19.3863 4.14249e-05 19.7841C0.00305567 20.1819 0.164001 20.5623 0.447466 20.8415L18.4475 38.5687C19.0377 39.15 19.9874 39.1428 20.5687 38.5525Z"
+											fill="#6E6E6E" />
+									</svg></button>
+							</div>
+						</div>
+						<a class="tabs__show-all center-button" href="#">ПОКАЗАТЬ ВСЕ</a>
+					</section>
 				</div>
-			</main>
-			@@include('html/_footer.htm',{})
-		</div>
-		@@include('html/_popup.htm',{})
-		@@include('html/_js.htm',{})
-	</body>
+			</div>
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_popup.htm',{})
+	@@include('html/_js.htm',{})
+</body>
+
 </html>

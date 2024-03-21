@@ -60,7 +60,8 @@ function initSliders() {
 	});
 	}
 
-	//Главная табы слайдер
+	//Главная табы слайдер,
+	//Он же недавно просмотренные
 	if (document.querySelector('.tabs__slider')) { //Указываем класс нужного слайдера
 		//Создаем слайдер
 		new Swiper('.tabs__slider', { //Указываем класс нужного слайдера
@@ -261,6 +262,52 @@ function initSliders() {
 		});
 	}
 	
+	// Отзыв о товаре фото
+	if (document.querySelector('.photos-response__slider')) { //Указываем класс нужного слайдера
+		//Создаем слайдер
+		new Swiper('.photos-response__slider', { //Указываем класс нужного слайдера
+				//Подключаем модули слайдера
+				//для конкретного случая
+			modules: [Navigation],
+			observer: true,
+			observeParents: true,
+			// slidesPerView: 6,
+			spaceBetween: 20,
+			// autoHeight: true,
+			speed: 400,
+			loop:true,
+			
+
+			// Кнопки "влево/вправо"
+			navigation: {
+				prevEl: '.photo-prod-prev',
+				nextEl: '.photo-prod-next',
+			},
+			
+			// Брейкпоинты
+			breakpoints: {
+				300: {
+					slidesPerView: 1.17,
+					spaceBetween: 20,
+					// autoHeight: true,
+				},
+				768: {
+					slidesPerView: 2,
+					spaceBetween: 20,
+					// autoHeight: true,
+				},
+				1001: {
+					slidesPerView: 6,
+					spaceBetween: 20,
+				},
+				1281: {
+					slidesPerView: 7,
+					spaceBetween: 17,
+				},
+			},
+		
+		});
+	}
 }
 
 
@@ -495,6 +542,72 @@ window.addEventListener("load", function (e) {
 	  );
 	}
 	
+	// Наиболее популярные товары. Страница : отзыв на товар
+	if(document.querySelector('.popular-products__content')){
+		const resizableSwiper = (breakpoint, swiperClass, swiperSettings, callback) => {
+		let swiper;
+	
+		breakpoint = window.matchMedia(breakpoint);
+	
+		const enableSwiper = function(className, settings) {
+		swiper = new Swiper(className, settings);
+	
+		  if (callback) {
+			 callback(swiper);
+		  }
+		}
+	
+		const checker = function() {
+		  if (breakpoint.matches) {
+			 return enableSwiper(swiperClass, swiperSettings);
+		  } else {
+			 if (swiper !== undefined) swiper.destroy(true, true);
+			 return;
+		  }
+		};
+	
+		breakpoint.addEventListener('change', checker);
+		checker();
+	 }
+	
+	 resizableSwiper(
+		'(max-width: 1001.97px)',
+		'.popular-products__content',
+		{
+			modules: [Pagination],
+			observer: true,
+			observeParents: true,
+			// slidesPerView: 1.7,
+			spaceBetween: 20,
+			// autoHeight: true,
+			speed: 800,
+			
+			// Пагинация
+			
+			pagination: {
+				el: '.popular-products__pagination',
+				clickable: true,
+			},
+			
+			// Брейкпоинты
+			breakpoints: {
+				360: {
+					slidesPerView: 2,
+					spaceBetween: 20,
+					// autoHeight: true,
+				},
+				768: {
+					slidesPerView: 3,
+					spaceBetween: 30,
+					// autoHeight: true,
+				},
+				
+			},
+		},
+		// someFunc
+	  );
+	}
+
 
 	//Запуск инициализации скролла на базе слайдера (по классу swiper_scroll)
 	//initSlidersScroll();

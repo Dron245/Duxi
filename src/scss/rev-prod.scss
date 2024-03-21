@@ -1,0 +1,530 @@
+.page {
+}
+.response {
+
+	&__container {
+		position: relative;
+		margin-bottom: 80px;
+	}
+
+	&__breadcrumbs {
+	}
+
+	&__title {
+	}
+
+	&__group {
+		display: flex;
+		gap: 20px;
+		@media (max-width:$tablet){
+			 display: block; 
+		}
+	}
+
+	&__main {
+		flex: 0 0 74.675325%; /* 1150/1540 */
+		section {
+			&:not(:last-child) {margin-bottom: toRem(40);}
+		}
+	}
+
+	&__product {
+		outline: 1px solid red;
+	}
+
+	&__photos {
+		
+	}
+
+	&__body {
+		
+	}
+
+	&__content {
+	}
+
+	&__popular {
+	}
+}
+//верхняя секция
+.product-response {
+	display: flex;
+	gap: 20px;
+	@media (max-width:$tablet){
+		display: block;
+	}
+	&__wrapper {
+		flex: 0 0 66.086957%; /* 760/1150 */
+	
+	}
+
+	&__content {
+		display: flex;
+		padding: 20px;
+		gap: 20px;
+		border-radius: 16px;
+		background: #FFF;
+	}
+
+	&__data {
+
+	}
+
+	&__img {
+		flex: 0 0 22.640789%; /* 172.07/760 */
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+
+	&__item {
+		&:not(:last-child) {margin-bottom: toRem(10);}
+		@media (max-width:$tablet){
+			font-size: 20px;
+		}
+		@media (max-width:$mobile){
+			 display: none; 
+		}
+
+		&_gender {
+			@media (min-width:$mobile){
+				 display: none; 
+			}
+			@media (max-width:$mobile){
+				&.product-response__item {
+					display: block;
+					@include adaptiveValue("font-size", 24, 13,0,768,320);
+				}
+			}
+		}
+
+		&_view {
+			&.product-response__item {
+				@media (max-width:$mobile){
+					display: block; 
+					@include adaptiveValue("font-size", 24, 13,0,768,320);
+				}
+			}
+		}
+	}
+
+	&__text {
+		line-height: normal;
+		a {
+			color: $zagolovok;
+			font-style: italic;
+			text-decoration-line: underline;
+		}
+		&_women {
+			color:#8D0022;
+		}
+
+		&_men {
+			color: #00227A;;
+		}
+	}
+
+	&__title {
+		font-weight: 700;
+		line-height: normal;
+	}
+
+	&__action {
+		width: 100%;
+		@media (max-width:$tablet){
+			margin-top: 40px;
+			width: 35%;
+		}
+	}
+
+	&__link {
+		// display: block;
+		width: 100%;
+		.product-response__action & {
+			background: linear-gradient(0deg, #0E9F51 0%, #0E9F51 100%), #BF5C7A;
+			color: white;
+			border: none;
+		}
+	}
+
+	&__tabs {
+		@media (min-width:$tablet){
+			 display: none; 
+		}
+	}
+
+	&__navigation {
+
+	}
+
+	&__title-tab {
+
+	}
+}
+.part-review1 {
+}
+.part-review2 {
+}
+.part-review3 {
+}
+.part-review4 {
+}
+
+// .tabs {
+
+// 	&__navigation {
+// 	}
+
+// 	&__title {
+// 	}
+
+// 	&__content {
+// 	}
+
+// 	&__body {
+// 	}
+
+// 	&__shell {
+// 	}
+
+// 	&__product {
+// 	}
+// }
+
+.part-review1-tab {
+}
+.part-review2-tab {
+}
+.part-review3-tab {
+}
+.part-review4-tab {
+}
+.button-light {
+}
+.photos-response {
+
+	&__top {
+	}
+
+	&__title {
+	}
+
+	&__button {
+	}
+
+	&__content {
+	}
+
+	&__subtitle {
+	}
+
+	&__slider {
+	}
+
+	&__wrapper {
+	}
+
+	&__slide {
+	}
+}
+.review-prod-count {
+}
+.swiper {
+}
+.swiper-wrapper {
+}
+.swiper-slide {
+}
+.swiper-prev {
+}
+.photo-prod-prev {
+}
+.swiper-next {
+}
+.photo-prod-next {
+}
+.reviews {
+
+	&__actions {
+	}
+
+	&__body {
+	}
+
+	&__panel {
+	}
+
+	&__feedbacks {
+	}
+}
+.actions-review {
+
+	&__button {
+
+		&_dark {
+		}
+	}
+}
+.panel-comment {
+
+	&_arrow {
+	}
+
+	&__item {
+
+		&_check {
+		}
+	}
+
+	&__text {
+	}
+
+	&__list {
+	}
+
+	&__item-list {
+	}
+
+	&__button {
+	}
+}
+.checkbox {
+
+	&__input {
+	}
+
+	&__label {
+	}
+
+	&__body {
+	}
+
+	&__text {
+	}
+}
+.options {
+
+	&__item {
+	}
+
+	&__input {
+	}
+
+	&__label {
+	}
+
+	&__text {
+	}
+}
+.button-actions {
+}
+.feedback {
+
+	&__body {
+	}
+
+	&__logo {
+
+		&_blue {
+		}
+
+		&_pink {
+		}
+
+		&_violet {
+		}
+
+		&_darkviolet {
+		}
+	}
+
+	&__content {
+	}
+
+	&__top {
+	}
+
+	&__name {
+	}
+
+	&__date {
+	}
+
+	&__star {
+	}
+
+	&__star-item {
+	}
+
+	&__text-wrapper {
+	}
+
+	&__text {
+	}
+
+	&__write {
+	}
+
+	&__photo {
+	}
+
+	&__photo-img {
+	}
+
+	&__question-block {
+	}
+
+	&__bottom {
+	}
+
+	&__spollers {
+	}
+
+	&__spoller-title {
+	}
+
+	&__spoller-arrow {
+	}
+
+	&__spoller-body {
+	}
+
+	&__story-answer {
+	}
+}
+.question-block {
+
+	&__text {
+	}
+
+	&__text-light {
+	}
+
+	&__quantity {
+	}
+
+	&__answers {
+	}
+
+	&__button {
+
+		&_yes {
+		}
+
+		&_no {
+		}
+	}
+}
+.questiion-block {
+
+&__yes-quantity {
+}
+}
+.spollers {
+
+		&__item {
+		}
+
+		&__title {
+		}
+}
+.answer {
+
+	&__content {
+	}
+
+	&__logo {
+	}
+
+	&__body {
+	}
+
+	&__form {
+	}
+
+	&__textarea {
+	}
+
+	&__form-item {
+	}
+
+	&__button {
+	}
+}
+.story-answer {
+
+	&__logo {
+	}
+
+	&__body {
+	}
+}
+.popular-products {
+
+	&__item {
+	}
+
+	&__title {
+	}
+
+	&__content {
+	}
+
+	&__wrapper {
+	}
+
+	&__pagination {
+	}
+}
+.product {
+
+	&__img {
+	}
+
+	&__content {
+	}
+
+	&__star {
+	}
+
+	&__title {
+	}
+
+	&__category {
+
+		&_woman {
+		}
+	}
+
+	&__cost {
+	}
+
+	&__reviev-numbers {
+	}
+
+	&__review-number {
+	}
+
+	&__actions {
+	}
+
+	&__action {
+	}
+
+	&__favorite {
+	}
+}
+
+.bottom-popular {
+
+	&__item {
+	}
+
+	&__img {
+	}
+
+	&__text {
+	}
+}
+
