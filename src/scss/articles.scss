@@ -69,7 +69,12 @@
 	}
 }
 .point {
-
+	& .recently__container {
+		@media (max-width:$mobile){
+			padding-left: 0;
+			padding-right: 0; 
+		}
+	}
 	&__body {
 		display: flex;
 		align-items: flex-start;
@@ -154,6 +159,19 @@
 		@media (max-width:$tablet){
 			width: 100%;
 		}
+		& button[class^=swiper] {
+			@media (min-width:$tablet){
+				 display: none; 
+			}
+			@media (max-width:$tablet){
+				 &.swiper-prev {
+					left: -1%;
+				 } 
+				 &.swiper-next {
+					right: -1%;
+				 } 
+			}
+		}
 	}
 
 	&__signatre {
@@ -202,7 +220,10 @@
 			padding: 16px;
 		}
 		@media (max-width:$mobile){
-			 padding: 0; 
+			 padding: 0;
+			 &.swiper {
+				overflow: initial;
+			 }
 		}
 	}
 }

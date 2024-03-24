@@ -17,7 +17,10 @@ window.addEventListener('DOMContentLoaded', () => {
 			targetElement.closest('.menu__item').querySelector('.menu__sublist') ? targetElement.closest('.menu__item').querySelector('.menu__sublist').classList.toggle('_sub-menu-open') : null
 		}
 		// закрытие меню бургер вне клика по меню
-		if (!targetElement.closest('.menсu__icon') && !targetElement.closest('.menu__body')) {
+		if (!targetElement.closest('.menсu__icon') && !targetElement.closest('.menu__body') && flag == true) {
+			flag = false;
+		} else if(!targetElement.closest('.menсu__icon') && !targetElement.closest('.menu__body') && flag == false) {
+			flag = true;
 			document.querySelector('.menu-open') ? document.documentElement.classList.remove('lock') : null
 			document.querySelector('.menu-open') ? document.documentElement.classList.remove('menu-open') : null
 		}
@@ -47,6 +50,7 @@ window.addEventListener('DOMContentLoaded', () => {
 			targetElement.closest('.popup__input-wrapper').querySelector('input').type = "password"
 		}
 
+		//Поднятие плейсхолдера в модальных окнах на место заголовка при фокусе на инпут
 		if (targetElement.closest('input') || targetElement.closest('textarea')) {
 			targetElement.closest('.popup__form-item') ? targetElement.closest('.popup__form-item').classList.add('_label-up') : null
 		}
@@ -271,9 +275,9 @@ window.addEventListener('DOMContentLoaded', () => {
 			targetElement.closest('.panel-comment__item').classList.remove('_filter-item-open');
 		}
 
-		if(targetElement.closest('.panel-comment__item') && targetElement.closest('.panel-comment__item').classList.contains('_filter-item-open')){
+		// if(targetElement.closest('.panel-comment__item') && targetElement.closest('.panel-comment__item').classList.contains('_filter-item-open')){
 			
-		}
+		// }
 
 		if(!targetElement.closest('.panel-comment__item') && !targetElement.closest('.panel-comment__list')){
 			const panelCommentItems = document.querySelectorAll('.panel-comment__item')
@@ -284,13 +288,48 @@ window.addEventListener('DOMContentLoaded', () => {
 
 		// Счётчик символов в textarea на странице "отзыв о магазине"
 		if (targetElement.closest('textarea')) {
-			const taComments = targetElement.closest('.popup__form-item').querySelector('textarea') // textarea
-			const counter = targetElement.closest('.popup__form-item').querySelector('.comment__number-symbols') // счётчик
-			taComments ? taComments.addEventListener('input', onInput) : null
-			function onInput(evt) {
-			const length = evt.target.value.length
-			counter.textContent = length
+			if (targetElement.closest('.popup__form-item')) {
+				const taComments = targetElement.closest('.popup__form-item').querySelector('textarea') // textarea
+				const counter = targetElement.closest('.popup__form-item').querySelector('.comment__number-symbols') // счётчик
+				taComments ? taComments.addEventListener('input', onInput) : null
+				function onInput(evt) {
+				const length = evt.target.value.length
+				counter.textContent = length
+				}
 			}
+		}
+
+		//ОТкрытие скрытие списка номеров заказа в модальном окне: "отзыв о товаре"
+		if (targetElement.closest('#number-order')) {
+			targetElement.closest('.popup__form-item').querySelector('.popup__submenu').classList.toggle('_popup-submenu-open')
+		}
+		//Присвоение значения пункта сабменю в значение инпута
+		const inputOrder = document.getElementById('number-order')
+		if (targetElement.closest('.popup__submenu-item')) {
+			inputOrder.value = targetElement.closest('.popup__submenu-item').innerText;
+		}
+
+		//Закрытие сабменю номеров заказа в попапе
+		if (!targetElement.closest('#number-order') && document.getElementById('number-order')) {
+			if(inputOrder.closest('.popup__form-item').querySelector('.popup__submenu').classList.contains('_popup-submenu-open')) {
+				console.log('12');
+				inputOrder.closest('.popup__form-item').querySelector('.popup__submenu').classList.remove('_popup-submenu-open')
+			}
+		}
+
+		//Скрытие/показ отзывов без фото / с фото
+		if (targetElement.closest('#with-photo')) {
+			const hidden = targetElement.closest('.reviews__body').querySelectorAll('.feedback')
+			// console.log(hidden);
+			hidden.forEach(element => {
+				if (!element.querySelector('.feedback__photo')) {
+					element.classList.toggle('_hidden-feedback')
+				}
+			});
+		}
+
+		if (targetElement.closest('.popup__img-close')) {
+			targetElement.closest('.popup__photo-img').remove()
 		}
 	}
 });
@@ -367,7 +406,11 @@ document.addEventListener("DOMContentLoaded", () => {
 	// делаю доступной прокрутку, если высота окна меньше высоты попапа в меню фильтов в моб. версии
 	const popupFiltmodal = document.querySelector('.popup__body.filtmodal');
 	const popupContent = popupFiltmodal ? popupFiltmodal.closest('.popup__content') : null;
-	if (popupFiltmodal && (popupFiltmodal.clientHeight > window.innerHeight - 60)) {
+	// console.log(popupFiltmodal.clientHeight);
+	// console.log(popupFiltmodal);
+	// console.log(window.innerHeight);
+
+	if (popupFiltmodal && (popupFiltmodal.clientHeight > window.innerHeight - 120)) {
 		popupContent.classList.add('_overflow-y')
 	}
 
@@ -387,20 +430,35 @@ document.addEventListener("DOMContentLoaded", () => {
 		})
 	});
 
+	// Счётчик символов в textarea на странице "отзыв о магазине"
+	const taComments = document.querySelector('.comment__textarea') // textarea
+	const counter = document.querySelector('.comment__number-symbols') // счётчик
+
+	taComments ? taComments.addEventListener('input', onInput) : null
+
+	function onInput(evt) {
+	const length = evt.target.value.length
+	counter.textContent = length
+	}
+
+	//Отзывы о товаре. Копирование текстового содержимогов табы из главной секции 
+	const partReview1 = document.querySelector('.part-review1')
+	const partReview1Tab = document.querySelector('.part-review1-tab')
+	const partReview2 = document.querySelector('.part-review2')
+	const partReview2Tab = document.querySelector('.part-review2-tab')
+	const partReview3 = document.querySelector('.part-review3')
+	const partReview3Tab = document.querySelector('.part-review3-tab')
+	const partReview4 = document.querySelector('.part-review4')
+	const partReview4Tab = document.querySelector('.part-review4-tab')
+
+	partReview1Tab ? partReview1Tab.innerHTML = partReview1.innerHTML : null
+	partReview2Tab ? partReview2Tab.innerHTML = partReview2.innerHTML : null
+	partReview3Tab ? partReview3Tab.innerHTML = partReview3.innerHTML : null
+	partReview4Tab ? partReview4Tab.innerHTML = partReview4.innerHTML : null
 
 
 
-// Счётчик символов в textarea на странице "отзыв о магазине"
-const taComments = document.querySelector('.comment__textarea') // textarea
-const counter = document.querySelector('.comment__number-symbols') // счётчик
-
-taComments ? taComments.addEventListener('input', onInput) : null
-
-function onInput(evt) {
-const length = evt.target.value.length
-counter.textContent = length
-}
-
+	
 // import CanvasJS from '@canvasjs/charts';
 // window.onload = function () {
 // 	if(document.querySelector('#chartContainer')){
@@ -425,7 +483,7 @@ counter.textContent = length
 // 		chart.render();
 // 	}
 // }
- });
+});
 
 
 

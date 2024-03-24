@@ -14,7 +14,8 @@
 	}
 
 	&__group {
-		display: flex;
+		display: grid;
+		grid-template-columns: 74.67% 1fr;
 		gap: 20px;
 		@media (max-width:$tablet){
 			 display: block; 
@@ -22,14 +23,14 @@
 	}
 
 	&__main {
-		flex: 0 0 74.675325%; /* 1150/1540 */
+		// flex: 0 0 74.675325%; /* 1150/1540 */
 		section {
 			&:not(:last-child) {margin-bottom: toRem(40);}
 		}
 	}
 
 	&__product {
-		outline: 1px solid red;
+		
 	}
 
 	&__photos {
@@ -37,7 +38,35 @@
 	}
 
 	&__body {
-		
+		// outline: 1px solid blue;
+		margin-bottom: 40px;
+		@media (max-width:$mobileSmall){
+			 margin-bottom: 20px; 
+		}
+		.panel-comment {
+			@include adaptiveValue("column-gap", 20, 15,0, 1001.98,768);
+			// justify-content: space-between;
+			flex-wrap: wrap;
+			row-gap: 20px;
+			& .panel-comment__button-wrapper {
+				flex: 0 0 100%;
+			}
+			& .panel-comment__button {
+				margin-left: initial;
+				// flex: 0 0 100%;
+			}
+			& .checkbox__text {
+				color: $zagolovok;
+				text-transform: uppercase;
+				line-height: normal;
+				@media (max-width:$tablet){
+					@include adaptiveValue("font-size", 18, 14,0,1001.99,768);
+				}
+			}
+		}
+		.feedback._hidden-feedback {
+			display: none;
+		}
 	}
 
 	&__content {
@@ -53,6 +82,7 @@
 	@media (max-width:$tablet){
 		display: block;
 	}
+
 	&__wrapper {
 		flex: 0 0 66.086957%; /* 760/1150 */
 	
@@ -72,6 +102,9 @@
 
 	&__img {
 		flex: 0 0 22.640789%; /* 172.07/760 */
+		@media (max-width:$tablet){
+			flex: 0 0 27.230047%; /* 232/852 */
+		}
 		img {
 			width: 100%;
 			height: auto;
@@ -134,7 +167,10 @@
 		width: 100%;
 		@media (max-width:$tablet){
 			margin-top: 40px;
-			width: 35%;
+			// width: 35%;
+		}
+		@media (max-width:$mobile){
+			 margin-top: 20px; 
 		}
 	}
 
@@ -145,31 +181,55 @@
 			background: linear-gradient(0deg, #0E9F51 0%, #0E9F51 100%), #BF5C7A;
 			color: white;
 			border: none;
+			@include adaptiveValue("font-size", 26, 15,0,768,320);
+			@media (max-width:$mobile){
+				 padding-top: 20px;
+				 padding-bottom: 20px;
+				 width: 354px; 
+			}
+			@media (max-width:$mobileSmall){
+				 margin:auto;
+				 width: 316px;
+				 padding-top: 16px;
+				 padding-bottom: 16px;
+			}
+			@media (max-width: em(360)){
+				  width: 260px;
+			}
 		}
 	}
 
 	&__tabs {
-		@media (min-width:$tablet){
+		@media (min-width:$mobile){
 			 display: none; 
 		}
+		margin-top: 20px;
+		padding: 20px;
+		border-radius: 16px;
+		background-color: white;
+		font-weight: 300;
+		
 	}
 
 	&__navigation {
+		display: flex;
 
 	}
 
 	&__title-tab {
+		@include adaptiveValue("font-size", 28, 12,0,768,320);
+		&._tab-active {
+			font-weight: 400;
+		}
+	}
 
+	&__body {
+		@include adaptiveValue("font-size", 26, 13,0,768,320);
+		font-weight: 400;
+		line-height: normal;
 	}
 }
-.part-review1 {
-}
-.part-review2 {
-}
-.part-review3 {
-}
-.part-review4 {
-}
+
 
 // .tabs {
 
@@ -192,31 +252,67 @@
 // 	}
 // }
 
-.part-review1-tab {
-}
-.part-review2-tab {
-}
-.part-review3-tab {
-}
-.part-review4-tab {
-}
 .button-light {
 }
 .photos-response {
+	.tabs__shell {
+		padding: 0 toRem(30);
+		@media (max-width:$mobileSmall){
+			padding: 0 toRem(22);
+		}
+	}
+
+	button[class*="swiper"] {
+		transform: translateY(-50%) rotate(180deg);
+		@media (max-width:$mobile){
+			 display: inline-block;
+			 position: absolute;
+			 top: 50%;
+		}
+	}
 
 	&__top {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		& .photos-response__title {
+			margin-bottom: 0;
+		}
+		margin-bottom: 20px;
 	}
 
 	&__title {
+		// margin-bottom: 0;
 	}
 
 	&__button {
+		width: 240px;
+		font-size: 14px;
+		font-weight: 400;
+		@media (max-width:$tablet){
+			@include adaptiveValue("width", 340, 300,0,1001.01,768);
+			@include adaptiveValue("font-size", 22, 16,0,1001.01,768);
+		}
+		@media (max-width:$mobile){
+			 display: none; 
+		}
 	}
 
 	&__content {
 	}
 
 	&__subtitle {
+		font-size: 16px;
+		font-weight: 400;
+		line-height: normal;
+		text-transform: uppercase;
+		margin-bottom: 10px;
+		@media (max-width:$tablet){
+			font-size: 20px;
+		}
+		@media (max-width:$mobile){
+			 @include adaptiveValue("font-size", 28, 18,0,768,320); 
+		}
 	}
 
 	&__slider {
@@ -226,6 +322,10 @@
 	}
 
 	&__slide {
+		img {
+			width: 100%;
+			height: auto;
+		}
 	}
 }
 .review-prod-count {
@@ -239,10 +339,13 @@
 .swiper-prev {
 }
 .photo-prod-prev {
+	left: 0;
+	
 }
 .swiper-next {
 }
 .photo-prod-next {
+	right: 0;
 }
 .reviews {
 
@@ -462,16 +565,61 @@
 }
 .popular-products {
 
+	.product {
+		@media (min-width:$tablet){
+			display: grid;
+			padding: 10px;
+			grid-template-columns: 27% 1fr;
+			@include adaptiveValue("column-gap", 25, 10,0,1920,1001.02); 
+		}
+		&:hover{
+			box-shadow: none;
+		}
+		@media (max-width:$tablet){
+			
+		}
+		& .product__actions {
+			@media (min-width:$tablet){
+				 display: none; 
+			}
+		}
+		&__cost {
+			margin-bottom: 5px;
+		}
+	}
+
+	.product__content > * {
+		@media (max-width:$tablet){
+			&:not(:last-child) {
+				margin-bottom: 10px;
+			}
+		}
+	}
+
+	.feedback__star-item {
+		@media (max-width:$tablet){
+			width: 39px;
+			margin-right: -5px;
+		}
+	}
 	&__item {
+		&:not(:last-child) {margin-bottom: toRem(40);}
+		@media (max-width:$mobileSmall){
+			 &:not(:last-child) {margin-bottom: toRem(20);} 
+		}
 	}
 
 	&__title {
 	}
 
-	&__content {
+	&__links {
 	}
 
 	&__wrapper {
+		@media (min-width:$tablet){
+			 flex-direction: column;
+			 row-gap: toRem(20);
+		}
 	}
 
 	&__pagination {
@@ -517,14 +665,53 @@
 }
 
 .bottom-popular {
-
+	border-radius: 16px;
+	background: #FFF;
+	padding: 15px 10px;
+	@media (max-width:$tablet){
+		padding: 20px;
+		width: 80%;
+	}
+	@media (max-width:$mobile){
+		padding: 10px;
+		 width: 100%; 
+	}
 	&__item {
+		display: flex;
+		align-items: flex-start;
+		gap: 8px;
+		&:not(:last-child) {margin-bottom: toRem(14);}
+		@media (max-width:$tablet){
+			// &:not(:last-child) {margin-bottom: toRem(10);}
+			 gap: 10px;
+		}
 	}
 
 	&__img {
+		transform: translateY(3px);
+		img {
+			width: 100%;
+			height: auto;
+		}
+		@media (max-width:$tablet){
+			width: 20px;
+		}
+		@media (max-width:$mobile){
+			 @include adaptiveValue("width", 25, 13,0,768,320);
+		}
 	}
 
 	&__text {
+		font-style: italic;
+		color: #3B92D6;
+		line-height: normal;
+		text-decoration: underline;
+		@media (max-width:$tablet){
+			font-size: 20px;
+		}
+		@media (max-width:$mobile){
+			 @include adaptiveValue("font-size", 28, 13,0,768,320); 
+		}
 	}
 }
 

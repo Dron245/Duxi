@@ -250,8 +250,8 @@
 		}
 		@media (max-width:$mobile){
 			min-height: 150px;
-			font-size: 28px;
-			 padding: 20px;
+			@include adaptiveValue("font-size", 28, 13,0,768,320);
+			//  padding: 20px;
 			 margin-left: 20px;
 			 &::placeholder {
 				text-transform: uppercase;

@@ -27,12 +27,7 @@ body::after {
 	transition: visibility 0.8s ease 0s;
 	visibility: hidden;
 	pointer-events: none;
-	// &#advanced-search {
-	// 	z-index: 150;
-	// 	visibility: visible;
-	// 	overflow: auto;
-	// 	pointer-events: auto;
-	// }
+	
 	@media (max-width: $mobile) {
 		padding: 30px;
 	}
@@ -99,6 +94,9 @@ body::after {
 		max-width: 680px;
 		overflow: hidden;
 	}
+	#product-review & {
+		max-width: 680px;
+	}
 	max-width: 340px;
 	border-radius: 10px;
 	position: relative;
@@ -111,13 +109,16 @@ body::after {
 
 .popup {
 	&__wrapper {
-		#filters-main &, #review-filters &, #filters-otlivant & {
+		#filters-main &, #review-filters &, #filters-otlivant &,
+		#filters-otlivant &, #review-product-filters & {
 			height: 100%;
 		}
 	}
 
 	&__content {
-		#filters-main &, #review-filters &, #filters-otlivant & {
+		#filters-main &, #review-filters &, #filters-otlivant &,
+		#review-product-filters &, #review-product-filters &,
+		#filters-otlivant & {
 			padding: 0;
 			// min-height: 1340px;
 			box-shadow: 4px 4px 30px 0px rgba(0, 0, 0, 0.25);
@@ -158,10 +159,16 @@ body::after {
 		font-weight: 300;
 		font-size: 24px;
 		text-transform: uppercase;
+		line-height: normal;
 		color: $zagolovok;
 		margin-bottom: 40px;
 		#popup-feedback & {
 			margin-bottom: 25px;
+		}
+		#product-review & {
+			@media (max-width:$mobile){
+				 @include adaptiveValue("font-size", 54, 24,0,768,320); 
+			}
 		}
 	}
 
@@ -177,6 +184,27 @@ body::after {
 	&__text-feedback {
 		margin-bottom: toRem(40);
 	}
+
+	&__form-item-group {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 40px;
+		@media (max-width:$mobile){
+			 flex-direction: column;
+			 @include adaptiveValue("gap", 84, 40,0,768,320);
+			 @include adaptiveValue("margin-bottom", 84, 40,0,768,320);
+		}
+		& div.popup__form-item {
+			margin-bottom: 0;
+		}
+		.popup__form-item_fio-order {
+			flex: 0 0 60%;
+			@media (max-width:$mobile){
+				 flex: 0 0 100%; 
+			}
+		}
+	}
+
 	&__form-item {
 		position: relative;
 		display: flex;
@@ -190,6 +218,9 @@ body::after {
 				margin-bottom: toRem(40);
 			}
 		}
+		#product-review & {
+			// &:not(:last-child) {margin-bottom: toRem(40);}
+		}
 
 		#vhod-tel & {
 			&:not(:last-child) {margin-bottom: toRem(50);}
@@ -197,6 +228,17 @@ body::after {
 
 		#store-review & {
 			&:not(:last-child) {margin-bottom: toRem(50);}
+		}
+		#product-review & {
+			// display: block;
+			@media (max-width:$mobileSmall){
+				 &:not(:last-child) {margin-bottom: toRem(20);}
+			}
+		}
+		#product-review  & {
+			@media (max-width:$mobile){
+				 @include adaptiveValue("font-size", 35, 22,0,768,320); 
+			}
 		}
 	}
 
@@ -306,12 +348,19 @@ body::after {
 			top: -20%;
 			left: 0;
 			color: $zagolovok;
+			#product-review  &.textarea-big {
+				top: -10%;
+			}
 		}
 		textarea + & {
 			top: 16px;
 			transform: none;
 		}
-		
+		#product-review & {
+			@media (max-width:$mobile){
+				 @include adaptiveValue("font-size", 37, 20,0,768,320); 
+			}
+		}
 	}
 
 	&__text {
@@ -371,6 +420,15 @@ body::after {
 				color: white;
 			}
 		}
+
+		#product-review & {
+			width: 60%;
+			margin:auto;
+			@media (max-width:$mobile){
+				 width: 100%; 
+				 @include adaptiveValue("font-size", 48, 22,0,768,320);
+			}
+		}
 	}
 
 	&__entry {
@@ -426,6 +484,116 @@ body::after {
 			color: #7f213c;
 		}
 	}
+
+	&__select-arrow {
+		display: flex;
+		align-items: center;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		right: 20px;
+	}
+
+	&__submenu {
+		position: absolute;
+		top: 100%;
+		border: 1px solid #c7c7c7;
+		background-color: #fafafa;
+		border-radius: 0 0 3px 3px;
+		width: 100%;
+		z-index: 2;
+		padding: 10px;
+		display: none;
+		opacity: 0;
+		visibility: hidden;
+		&._popup-submenu-open {
+			display: block;
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+
+	&__submenu-item {
+		cursor: pointer;
+		&:not(:last-child) {margin-bottom: toRem(15);}
+	}
+
+	&__upload {
+		margin-top: 10px;
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+		position: relative;
+		input {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			cursor: pointer;
+			z-index: 2;
+			opacity: 0;
+		}
+		@media (max-width:$mobileSmall){
+			 margin-top: 0; 
+		}
+	}
+
+	&__img-upload {
+		display: flex;
+	}
+
+	&__img-add {
+		width: 80px;
+		height: 80px;
+		@media (max-width:$mobile){
+			 @include adaptiveValue("width", 150, 70,0,768,320); 
+			 @include adaptiveValue("height", 150, 70,0,768,320); 
+		}
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+
+	&__button-add {
+		order: 1;
+	}
+
+	&__photo-container {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 20px;
+		@media (max-width:$mobile){
+			 gap: 10px; 
+		}
+	}
+
+	&__photo-img {
+		position: relative;
+		width: 80px;
+		height: 80px;
+		@media (max-width:$mobile){
+			 @include adaptiveValue("width", 150, 70,0,768,320); 
+			 @include adaptiveValue("height", 150, 70,0,768,320); 
+		}
+	}
+
+	&__img-review {
+		width: 100%;
+		height: auto;
+		aspect-ratio: 1 / 1;
+		border-radius: 16px;
+		// overflow: hidden;
+	}
+
+	&__img-close {
+		position: absolute;
+		cursor: pointer;
+		right: -9px;
+		top: -9px;
+		width: 18px;
+		height: 18px;
+	}
+
 }
 
 //Табы: выбор города
@@ -551,12 +719,6 @@ body::after {
 }
 
 .comment {
-	.popup__label {
-		// position: relative;
-		// margin-top: 10px;
-		// display: block;
-		// bottom: initial;
-	}
 	
 	&__textarea {
 		padding: 10px;
@@ -568,11 +730,26 @@ body::after {
 		background: #FAFAFA;
 		height: 110px;
 		&:not(:last-child) {margin-bottom: toRem(5);}
+		#product-review & {
+			height: 176px;
+		}
 	}
 
 	&__text {
 		font-style: italic;
 		line-height: normal;
+		&_photo {
+			div#product-review & {
+				@media (max-width:$mobile){
+					 @include adaptiveValue("font-size", 35, 20,0,768,320); 
+				}
+			}
+		}
+		#product-review & {
+			@media (max-width:$mobile){
+				 @include adaptiveValue("font-size", 25, 13,0,768,320); 
+			}
+		}
 	}
 
 	&__star {

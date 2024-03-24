@@ -275,7 +275,7 @@ function initSliders() {
 			spaceBetween: 20,
 			// autoHeight: true,
 			speed: 400,
-			loop:true,
+			// loop:true,
 			
 
 			// Кнопки "влево/вправо"
@@ -287,13 +287,13 @@ function initSliders() {
 			// Брейкпоинты
 			breakpoints: {
 				300: {
-					slidesPerView: 1.17,
-					spaceBetween: 20,
+					slidesPerView: 4,
+					spaceBetween: 8,
 					// autoHeight: true,
 				},
 				768: {
-					slidesPerView: 2,
-					spaceBetween: 20,
+					// slidesPerView: 2,
+					spaceBetween: 12,
 					// autoHeight: true,
 				},
 				1001: {

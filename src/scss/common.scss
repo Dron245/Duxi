@@ -287,6 +287,18 @@ h3[class*="__title"] {
 			color: white;
 		}
 	}
+
+	&__star {
+		display: block;
+		margin-bottom: 5px;
+		@media (max-width:$tablet){
+			margin-bottom: 10px;
+		}
+	}
+
+	&__reviev-numbers {
+		color: #333;
+	}
 }
 
 
