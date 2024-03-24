@@ -277,7 +277,9 @@ h3[class*="__title"] {
 		}
 
 		&_make {
-			border: 1px solid $zagolovok;
+			outline: 1px solid $zagolovok;
+			// padding-top: 9px;
+			// padding-bottom: 9px;
 			background-color: white;
 			color: $knopka-bordovaya;
 		}

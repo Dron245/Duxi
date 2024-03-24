@@ -308,7 +308,7 @@
 						<div class="otlvant-review__top">
 							<h3 class="otlvant-review__title">ОТЗЫВЫ О ТОВАРЕ (<span
 									class="otlvant-review__quantity">134</span>)</h3>
-							<button class="otlvant-review__button button-light">НАПИСАТЬ ОТЗЫВ О ТОВАРЕ</button>
+							<button data-popup="#product-review" class="otlvant-review__button button-light">НАПИСАТЬ ОТЗЫВ О ТОВАРЕ</button>
 						</div>
 						<div class="tabs__shell" data-da=".otlivant-review-show__content, 767.96">
 							<div class="otlvant-review__slider swiper">
@@ -543,7 +543,7 @@
 									<span class="feedback__spoller-arrow"><img src="img/review/arrow-spoller.svg" alt=""></span>
 								</summary>
 								<div class="otlvant-review__spoller-body spollers__body">
-									<button class="otlvant-review__button button-light">НАПИСАТЬ ОТЗЫВ О ТОВАРЕ</button>
+									<button data-popup="#product-review" class="otlvant-review__button button-light">НАПИСАТЬ ОТЗЫВ О ТОВАРЕ</button>
 									<div data-showmore="" data-showmore-media="767.95" class="otlivant-review-show">
 										<div data-showmore-content="1500" class="otlivant-review-show__content">
 
@@ -910,6 +910,7 @@
 		@@include('html/_footer.htm',{})
 	</div>
 	@@include('html/_popup.htm',{})
+	@@include('html/_popup-product.htm',{})
 	@@include('html/_js.htm',{})
 </body>
 

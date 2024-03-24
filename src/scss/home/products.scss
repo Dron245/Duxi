@@ -41,7 +41,10 @@
 		position: relative;
 		text-transform: uppercase;
 		font-weight: 300;
-		@include adaptiveValue("font-size", 24, 18, 0, 1920, 768);
+		@include adaptiveValue("font-size", 24, 22, 0, 1920, 1001.99);
+		@media (max-width:$tablet){
+			font-size: toRem(35);
+		}
 		line-height: 118%; /* 59/50 */
 		color: $tekst-zagolovok-ne-aktivnyy;
 		@media (max-width: $mobile) {

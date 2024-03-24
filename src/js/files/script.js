@@ -11,10 +11,10 @@ window.addEventListener('DOMContentLoaded', () => {
 
 		console.log(targetElement);
 		// Открытие сабменю в мобильной версии
-		if (targetElement.closest('.menu__link')) {
+		if (targetElement.closest('.menu__link') && targetElement.closest('header')) {
 			targetElement.classList.toggle('_open');
-			targetElement.closest('.menu__item') ? targetElement.closest('.menu__item').classList.toggle('_menu__item-active') : null;
-			targetElement.closest('.menu__item').querySelector('.menu__sublist') ? targetElement.closest('.menu__item').querySelector('.menu__sublist').classList.toggle('_sub-menu-open') : null
+			targetElement.closest('.menu__item').classList.toggle('_menu__item-active');
+			targetElement.closest('.menu__item').querySelector('.menu__sublist').classList.toggle('_sub-menu-open');
 		}
 		// закрытие меню бургер вне клика по меню
 		if (!targetElement.closest('.menсu__icon') && !targetElement.closest('.menu__body') && flag == true) {
@@ -420,14 +420,27 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	// Появление ссылки "Читать полностью" в мобильной версии на странице "Отзывы о магазине"
 	window.addEventListener('load', function () {
-		const feedBackWrapper = document.querySelectorAll('.feedback__text-wrapper');
-		feedBackWrapper.forEach(element => {
-			const feedBackText = element.querySelector('.feedback__text')
-			if(element.clientHeight + 5 < feedBackText.clientHeight) {
-				// console.log(1);
-				element.closest('.feedback__content').querySelector('.feedback__write').classList.add('_open-write')
+		if (window.innerWidth < 768 && document.querySelector('.otlvant-review__spoller-title')) {
+			const reviewsTitle = document.querySelector('.otlvant-review__spoller-title')
+			reviewsTitle.addEventListener('click', writeFull )
+			} else {
+				writeFullSet()
 			}
-		})
+			function writeFull () {
+				setTimeout(writeFullSet, 100);
+			}
+		function writeFullSet() {
+			const feedBackWrapper = document.querySelectorAll('.feedback__text-wrapper');
+			feedBackWrapper.forEach(element => {
+				const feedBackText = element.querySelector('.feedback__text')
+				// console.log(element.clientHeight);
+				// console.log(feedBackText.clientHeight);
+				if(element.clientHeight + 5 < feedBackText.clientHeight) {
+					// console.log(1);
+					element.closest('.feedback__content').querySelector('.feedback__write').classList.add('_open-write')
+				}
+			})
+		}
 	});
 
 	// Счётчик символов в textarea на странице "отзыв о магазине"

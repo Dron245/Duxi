@@ -311,38 +311,12 @@ function initSliders() {
 }
 
 
-//Скролл на базе слайдера (по классу swiper scroll для оболочки слайдера)
-function initSlidersScroll() {
-	let sliderScrollItems = document.querySelectorAll('.swiper_scroll');
-	if (sliderScrollItems.length > 0) {
-		for (let index = 0; index < sliderScrollItems.length; index++) {
-			const sliderScrollItem = sliderScrollItems[index];
-			const sliderScrollBar = sliderScrollItem.querySelector('.swiper-scrollbar');
-			const sliderScroll = new Swiper(sliderScrollItem, {
-				observer: true,
-				observeParents: true,
-				direction: 'vertical',
-				slidesPerView: 'auto',
-				freeMode: {
-					enabled: true,
-				},
-				scrollbar: {
-					el: sliderScrollBar,
-					draggable: true,
-					snapOnRelease: false
-				},
-				mousewheel: {
-					releaseOnEdges: true,
-				},
-			});
-			sliderScroll.scrollbar.updateSize();
-		}
-	}
-}
 
+//РЕСАЙЗ СЛАЙДЕРЫ
 window.addEventListener("load", function (e) {
 	// Запуск инициализации слайдеров
 	initSliders();
+	
 
 	//Слайдер "скидки и акции на главной"
 	if(document.querySelector('.page__products')){
@@ -608,8 +582,107 @@ window.addEventListener("load", function (e) {
 	  );
 	}
 
+	// Отзывы на странице Сертификаты
+	if(document.querySelector('.certificates')){
+		const resizableSwiper = (breakpoint, swiperClass, swiperSettings, callback) => {
+		let swiper;
+	
+		breakpoint = window.matchMedia(breakpoint);
+	
+		const enableSwiper = function(className, settings) {
+		swiper = new Swiper(className, settings);
+	
+		  if (callback) {
+			 callback(swiper);
+		  }
+		}
+	
+		const checker = function() {
+		  if (breakpoint.matches) {
+			 return enableSwiper(swiperClass, swiperSettings);
+		  } else {
+			 if (swiper !== undefined) swiper.destroy(true, true);
+			 return;
+		  }
+		};
+	
+		breakpoint.addEventListener('change', checker);
+		checker();
+	 }
+	
+	 resizableSwiper(
+		'(min-width: 767.98px)',
+		'.certificates__slider',
+		{
+			modules: [Pagination, Navigation],
+			observer: true,
+			observeParents: true,
+			// slidesPerView: 1.7,
+			spaceBetween: 20,
+			// autoHeight: true,
+			speed: 800,
+			
+			// Пагинация
+			
+			pagination: {
+				el: '.review-otlivant-pagination',
+				clickable: true,
+			},
+			navigation: {
+				prevEl: '.otlivant-review-prev',
+				nextEl: '.otlivant-review-next',
+			},
+			// Брейкпоинты
+			breakpoints: {
+				768: {
+					slidesPerView: 2,
+					spaceBetween: 20,
+					// autoHeight: true,
+				},
+				1001: {
+					slidesPerView: 3,
+					spaceBetween: 20,
+				},
+
+			},
+		},
+		// someFunc
+	  );
+	}
+
 
 	//Запуск инициализации скролла на базе слайдера (по классу swiper_scroll)
 	//initSlidersScroll();
 });
 
+
+
+
+//Скролл на базе слайдера (по классу swiper scroll для оболочки слайдера)
+function initSlidersScroll() {
+	let sliderScrollItems = document.querySelectorAll('.swiper_scroll');
+	if (sliderScrollItems.length > 0) {
+		for (let index = 0; index < sliderScrollItems.length; index++) {
+			const sliderScrollItem = sliderScrollItems[index];
+			const sliderScrollBar = sliderScrollItem.querySelector('.swiper-scrollbar');
+			const sliderScroll = new Swiper(sliderScrollItem, {
+				observer: true,
+				observeParents: true,
+				direction: 'vertical',
+				slidesPerView: 'auto',
+				freeMode: {
+					enabled: true,
+				},
+				scrollbar: {
+					el: sliderScrollBar,
+					draggable: true,
+					snapOnRelease: false
+				},
+				mousewheel: {
+					releaseOnEdges: true,
+				},
+			});
+			sliderScroll.scrollbar.updateSize();
+		}
+	}
+}

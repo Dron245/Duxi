@@ -257,9 +257,11 @@
 			<div class="popup__body">
 				<h4 class="popup__title">выбор города</h4>
 				<form action="#" method="get" class="header-center__form">
-					<button class="header-center__button"><img src="@img/header/search30x30.svg" alt="Поиск"></button>
-					<input id="citi-name" autocomplete="off" type="text" name="form[]" data-error="Ошибка" class="header-center__input city-input">
-					<label for="citi-name" class="popup__label">начните вводить название города</label>
+					<div class="popup__form-item">
+						<button class="header-center__button"><img src="@img/header/search30x30.svg" alt="Поиск"></button>
+						<input id="city-name" autocomplete="off" type="text" name="form[]" data-error="Ошибка" class="header-center__input city-input">
+						<label for="city-name" class="popup__label">начните вводить название города</label>
+					</div>
 				</form>
 				<div class="popup__location">
 					<span class="popup__text">Ваш город определен как:</span>
@@ -1168,6 +1170,26 @@
 					</div>
 					<a class="tabs__show-all center-button" href="#">ПОКАЗАТЬ</a>
 				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<!-- Выбор города -->
+
+<div id="cityChoice" aria-hidden="true" class="popup">
+	<div class="popup__wrapper">
+		<div class="popup__content">
+			<!-- <button data-close type="button" class="popup__close"><img src="@img/popup/close.svg" alt=""></button> -->
+			<div class="popup__body">
+				<div class="top-header__city-choice city-choice">
+					<div class="city-choice__text">Ваш город - <span class="city-choice__name">г. Москва?</span></div>
+					<div class="city-choice__buttons">
+						<button type="button" class="city-choice__button">да, все верно</button>
+						<button data-popup="#city" type="button" class="city-choice__button city-choice__button_none">Нет, изменить</button>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>

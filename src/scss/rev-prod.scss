@@ -230,30 +230,6 @@
 	}
 }
 
-
-// .tabs {
-
-// 	&__navigation {
-// 	}
-
-// 	&__title {
-// 	}
-
-// 	&__content {
-// 	}
-
-// 	&__body {
-// 	}
-
-// 	&__shell {
-// 	}
-
-// 	&__product {
-// 	}
-// }
-
-.button-light {
-}
 .photos-response {
 	.tabs__shell {
 		padding: 0 toRem(30);
@@ -328,241 +304,17 @@
 		}
 	}
 }
-.review-prod-count {
-}
-.swiper {
-}
-.swiper-wrapper {
-}
-.swiper-slide {
-}
-.swiper-prev {
-}
-.photo-prod-prev {
+
+button.photo-prod-prev {
 	left: 0;
 	
 }
 .swiper-next {
 }
-.photo-prod-next {
+button.photo-prod-next {
 	right: 0;
 }
-.reviews {
 
-	&__actions {
-	}
-
-	&__body {
-	}
-
-	&__panel {
-	}
-
-	&__feedbacks {
-	}
-}
-.actions-review {
-
-	&__button {
-
-		&_dark {
-		}
-	}
-}
-.panel-comment {
-
-	&_arrow {
-	}
-
-	&__item {
-
-		&_check {
-		}
-	}
-
-	&__text {
-	}
-
-	&__list {
-	}
-
-	&__item-list {
-	}
-
-	&__button {
-	}
-}
-.checkbox {
-
-	&__input {
-	}
-
-	&__label {
-	}
-
-	&__body {
-	}
-
-	&__text {
-	}
-}
-.options {
-
-	&__item {
-	}
-
-	&__input {
-	}
-
-	&__label {
-	}
-
-	&__text {
-	}
-}
-.button-actions {
-}
-.feedback {
-
-	&__body {
-	}
-
-	&__logo {
-
-		&_blue {
-		}
-
-		&_pink {
-		}
-
-		&_violet {
-		}
-
-		&_darkviolet {
-		}
-	}
-
-	&__content {
-	}
-
-	&__top {
-	}
-
-	&__name {
-	}
-
-	&__date {
-	}
-
-	&__star {
-	}
-
-	&__star-item {
-	}
-
-	&__text-wrapper {
-	}
-
-	&__text {
-	}
-
-	&__write {
-	}
-
-	&__photo {
-	}
-
-	&__photo-img {
-	}
-
-	&__question-block {
-	}
-
-	&__bottom {
-	}
-
-	&__spollers {
-	}
-
-	&__spoller-title {
-	}
-
-	&__spoller-arrow {
-	}
-
-	&__spoller-body {
-	}
-
-	&__story-answer {
-	}
-}
-.question-block {
-
-	&__text {
-	}
-
-	&__text-light {
-	}
-
-	&__quantity {
-	}
-
-	&__answers {
-	}
-
-	&__button {
-
-		&_yes {
-		}
-
-		&_no {
-		}
-	}
-}
-.questiion-block {
-
-&__yes-quantity {
-}
-}
-.spollers {
-
-		&__item {
-		}
-
-		&__title {
-		}
-}
-.answer {
-
-	&__content {
-	}
-
-	&__logo {
-	}
-
-	&__body {
-	}
-
-	&__form {
-	}
-
-	&__textarea {
-	}
-
-	&__form-item {
-	}
-
-	&__button {
-	}
-}
-.story-answer {
-
-	&__logo {
-	}
-
-	&__body {
-	}
-}
 .popular-products {
 
 	.product {
@@ -601,6 +353,9 @@
 			width: 39px;
 			margin-right: -5px;
 		}
+		@media (max-width:$mobile){
+			 @include adaptiveValue("width", 50, 20,0,768,320); 
+		}
 	}
 	&__item {
 		&:not(:last-child) {margin-bottom: toRem(40);}
@@ -622,47 +377,16 @@
 		}
 	}
 
-	&__pagination {
-	}
-}
-.product {
-
-	&__img {
-	}
-
-	&__content {
-	}
-
-	&__star {
-	}
-
-	&__title {
-	}
-
-	&__category {
-
-		&_woman {
+	&__content.swiper {
+		@media (max-width:$tablet){
+			 overflow: initial; 
 		}
 	}
 
-	&__cost {
-	}
-
-	&__reviev-numbers {
-	}
-
-	&__review-number {
-	}
-
-	&__actions {
-	}
-
-	&__action {
-	}
-
-	&__favorite {
+	&__pagination {
 	}
 }
+
 
 .bottom-popular {
 	border-radius: 16px;

@@ -1,0 +1,316 @@
+.wrapper {
+}
+.page {
+
+	&__otlvant-review {
+	}
+
+	&__recently {
+	}
+}
+.certificates {
+
+	&__container {
+		.recently__container {
+			@media (max-width:$mobile){
+				 padding-left: 0;
+				 padding-right: 0; 
+			}
+		}
+	}
+
+	&__breadcrumbs {
+	}
+
+	&__wrapper {
+	}
+
+	&__main {
+	}
+
+	&__use {
+		@media (max-width:$pcSmall){
+			margin-top: 40px;
+		}
+	}
+
+	&__tabs {
+	}
+}
+
+.main-certificates {
+
+	&__title {
+	}
+
+	&__content {
+		display: flex;
+		gap: 20px;
+		@media (max-width:$tablet){
+			flex-direction: column-reverse;
+		}
+	}
+
+	&__text {
+		@media (min-width:$tablet){
+				flex: 0 0 51.490515%; /* 760/1476 */
+		}
+		line-height: normal;
+		@media (max-width:$tablet){
+			font-size: 20px;
+		}
+		@media (max-width:$mobile){
+				@include adaptiveValue("font-size", 28, 13,0,768,320); 
+		}
+		a {
+			color: $zagolovok;
+			text-decoration: underline;
+		}
+	}
+
+	&__img {
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+}
+.use-certificates {
+
+	&__title {
+	}
+
+	&__body {
+		display: grid;
+		gap: 20px;
+		// grid-template-columns: repeat(auto-fit, minmax(520px, 1fr))
+		grid-template-columns: 1fr 1fr;
+		@media (max-width:$tablet){
+			grid-template-columns: 1fr;
+		}
+		@media (max-width:$mobile){
+			 row-gap: 50px; 
+		}
+		@media (max-width:$mobileSmall){
+			 row-gap: 20px; 
+		}
+	}
+
+	&__item {
+		display: flex;
+		align-items: center;
+		gap: 20px;
+	}
+
+	&__img {
+		flex: 0 0 31.538462%; /* 164/520 */
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+
+	&__content {
+	}
+}
+.how-use {
+	& > * {
+		&:not(:last-child) {margin-bottom: toRem(15);}
+		@media (max-width:$mobileSmall){
+			&:not(:last-child) {margin-bottom: toRem(10);}
+		}
+	}
+	&__title {
+		font-size: 18px;
+		font-weight: 700;
+		line-height: normal;
+		@media (max-width:$tablet){
+			font-size: toRem(30);
+		}
+		@media (max-width:$mobile){
+			 @include adaptiveValue("font-size", 35, 15,0,768,320); 
+		}
+	}
+
+	&__text {
+		font-size: 12px;
+		line-height: normal;
+		&_bold {
+			font-weight: 600;
+		}
+		@media (max-width:$tablet){
+			font-size: toRem(20);
+		}
+		@media (max-width:$mobile){
+			 @include adaptiveValue("font-size", 28, 13,0,768,320); 
+		}
+	}
+}
+.tabs-sertification {
+	margin-top: 40px;
+	margin-bottom: 40px;
+	&__wrapper {
+	}
+
+	&__navigation {
+		margin-bottom: 20px;
+		// @media (max-width:$tablet){
+			display: flex;
+			flex-wrap: wrap;
+			gap: 40px;
+		// }
+		@media (max-width:$mobileSmall){
+			gap: 20px; 
+		}
+	}
+
+	&__title {
+		&:not(:last-child) {
+			margin-right: 0;
+		}
+		@media (max-width:$mobile){
+			//  flex: 0 0 100%;
+			text-align: left;
+		}
+	}
+
+	&__content {
+	}
+
+	&__body {
+		
+	}
+
+	&__list {
+		display: grid;
+		// grid-template-columns: repeat(auto-fit, 240px);
+		grid-template-columns: repeat(6, 1fr);
+		row-gap: 20px;
+		column-gap: 20px;
+		@media (max-width:$pcSmall){
+			grid-template-columns: repeat(5, 1fr);
+		}
+		@media (max-width:$tablet){
+			grid-template-columns: repeat(3, 1fr);
+			column-gap: 30px;
+		}
+		@media (max-width:$mobile){
+			column-gap: toRem(20);
+			grid-template-columns: repeat(2, 1fr); 
+		}
+	}
+}
+
+.product {
+	.certificates & {
+		padding-top: 60px;
+		@media (max-width:$mobile){
+			//  display: grid; 
+		}
+	}
+
+	@media (any-hover: hover){
+		&:hover{
+			& .product__seil {
+				display: none;
+			}
+			& .product__make-certificate {
+				display: block;
+			}
+		}
+	}
+	&__img {
+		// outline: 1px solid red;
+		.certificates & img {
+			aspect-ratio: initial;
+		}
+	}
+
+	&__content {
+		.certificates & {
+			margin-top: 25px;
+			& > * {
+				// outline: 1px solid rebeccapurple;
+			}
+			// display: grid;
+			// grid-template-rows: subgrid;
+			// grid-row: span 5;
+		}
+	}
+
+	&__subtext {
+		.certificates & {
+			font-size: 14px;
+			line-height: normal;
+			margin-bottom: 0;
+		}
+	}
+
+	&__title {
+	}
+
+	&__delivery {
+		margin-top: 12px;
+		margin-bottom: 12px;
+		display: flex;
+		gap: 10px;
+		@media (max-width:$mobile){
+			 align-items: center; 
+			//  height: 19px;
+		}
+	}
+
+	&__img-delivery {
+		
+	}
+
+	&__description {
+		.certificates & {
+			font-size: 14px;
+			line-height: normal;
+			
+		}
+	}
+
+	&__cost {
+		.certificates & {
+			margin-bottom: 10px;
+		}
+	}
+
+	&__seil {
+		.certificates & {
+			margin-top: auto;
+		}
+		&_make {
+		}
+	}
+
+	&__make-certificate {
+		display: none;
+	}
+
+	&__actions {
+	}
+
+	&__action {
+	}
+
+	&__favorite {
+	}
+
+	&__category {
+
+		&_man {
+		}
+	}
+
+	&__labels {
+	}
+}
+
+.tabs__product {
+	.certificates & {
+		justify-content: flex-start;
+	}
+}

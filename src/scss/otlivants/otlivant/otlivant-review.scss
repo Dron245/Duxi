@@ -21,6 +21,10 @@
 			margin: 0;
 			width: 22%;
 			font-size: 14px;
+			@media (max-width:$tablet){
+				width: 43%;
+				font-size: 22px;
+			}
 			@media (max-width:$mobile){
 				 display: none; 
 			}
