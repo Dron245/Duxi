@@ -341,31 +341,7 @@ document.addEventListener("DOMContentLoaded", () => {
 /*===========================================================*/
 
 	//Работа с табами на главной странице под банером
-	// const testt = document.querySelector('.testt')
-	// const mediaQuery = window.matchMedia('(max-width: 768px)')
 
-	// function handleTabletChange(e) {
-	// const tabs01 = document.querySelector('#tabs01');
-	// const tabs02 = document.querySelector('#tabs02');
-	// if (e.matches) {
-	// 	tabs01 ? tabs01.classList.remove('_tab-active') : null;
-	// 	firstTabs ? firstTabs.hidden = false : null
-	// 	secondTabs ? secondTabs.hidden = false: null;
-	// 	tabs02 ? tabs02.classList.add('_tab-active') : null;
-	// 	// testt.style.background = "black"
-	// } else {
-	// 	// testt.style.background = "red"
-	// 	// tabs01 ? tabs01.classList.add('_tab-active') : null;
-	// 	secondTabs ? secondTabs.hidden = true: null;
-	// 	tabs02 ? tabs02.classList.remove('_tab-active') : null;
-	// }
-	// }
-
-	// Register event listener
-	// mediaQuery.addListener(handleTabletChange);
-
-	// Initial check
-	// handleTabletChange(mediaQuery);
 	if (window.innerWidth < 768) {
 		const tabs01 = document.querySelector('#tabs01');
 		const tabs02 = document.querySelector('#tabs02');
