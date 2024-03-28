@@ -1,0 +1,564 @@
+.page {
+
+	&__video {
+	}
+
+	&__otlvant-review {
+	}
+
+	&__otlivant-article {
+	}
+
+	&__recently {
+		.device & {
+			position: relative;
+			margin-top: 0;
+		}
+	}
+}
+.device {
+
+	& .feedback__spoller-arrow {
+		@media (min-width:$tablet){
+			 display: none; 
+		}
+	}
+	&__container {
+	}
+
+	&__breadcrumbs {
+	}
+
+	&__main {
+	}
+
+	&__advantage {
+	}
+
+	&__video {
+	}
+
+	&__other {
+	}
+
+	&__video-review {
+		margin-bottom: 40px;
+		@media (max-width:$mobile){
+			 margin-right: -15px; 
+		}
+		.video-review-product__slider {
+			@media (min-width:$mobile){
+				 padding: 16px; 
+			}
+		}
+		.video-review-product__slide img {
+			transition: transform 0.3s;
+			width: 100%;
+			height: auto;
+			@media (any-hover: hover){
+				&:hover{
+					transform: scale(1.05);
+				}
+			}
+		}
+		.otlvant-review__top {
+			.otlvant-review__title {
+				@media (max-width:$mobile){
+					 @include adaptiveValue("font-size", 50, 22,0,768,320); 
+				}
+			}
+			.otlvant-review__button {
+				@media (max-width:$mobile){
+					 width: 70%;
+					 @include adaptiveValue("font-size", 28, 16,0,768,320);
+				}
+			}
+			@media (max-width:$mobile){
+				 flex-direction: column;
+				 row-gap: 40px;
+			}
+			@media (max-width:$mobileSmall){
+				 row-gap: 20px; 
+			}
+			& > * {
+				display: block;
+			}
+		}
+	}
+
+	&__review {
+		margin-bottom: 40px;
+	}
+
+	&__article {
+	}
+
+	&__optionally {
+		margin-bottom: 40px;
+	}
+}
+
+.produce {
+
+}
+.advantage-device {
+
+	&__item {
+	}
+
+	&__img {
+	}
+
+	&__content {
+	}
+
+	&__title {
+	}
+
+	&__text {
+	}
+}
+.video {
+
+	&__container {
+	}
+
+	&__title {
+	}
+
+	&__slider {
+	}
+
+	&__wrapper {
+	}
+
+	&__slide {
+	}
+
+	&__link {
+	}
+
+	&__content {
+	}
+
+	&__text {
+	}
+
+	&__subtext {
+	}
+
+	&__exit-youtube {
+	}
+}
+.tabs {
+
+	&__shell {
+	}
+
+	&__product {
+	}
+
+	&__show-all {
+	}
+
+	&__slider {
+	}
+
+	&__wrapper {
+	}
+
+	&__slide {
+	}
+}
+// .swiper {
+// }
+// .swiper-wrapper {
+// }
+// .swiper-slide {
+// }
+// .ibg {
+// }
+// .swiper-video-pagination {
+// }
+// .pagination {
+// }
+// .swiper-prev {
+// }
+// .swiper-video-prev {
+// }
+// .swiper-next {
+// }
+// .swiper-video-next {
+// }
+// .center-button {
+// }
+.other-device {
+	margin-bottom: 40px;
+	.article-device__body {
+		@media (min-width:$mobile){
+			padding-left: 15px;
+			padding-right: 15px; 
+		}
+	}
+	&__slider {
+		margin-top: 20px;
+	}
+
+	&__swiper[class] {
+		@media (max-width:$mobile){
+			 display: grid;
+			 grid-template-columns: 1fr 1fr;
+			 column-gap: 20px;
+		}
+		.product {
+		
+		}
+	}
+}
+.article-device {
+	margin-bottom: 20px;
+	@media (max-width:$pcSmall){
+		margin-bottom: 40px;
+	}
+	@media (max-width:$tablet){
+		margin-bottom: 60px;
+	}
+	@media (max-width:$mobile){
+		 @include adaptiveValue("margin-bottom", 60, 40,0,768,320); 
+	}
+	&__spollers {
+	}
+
+	&__body {
+	}
+
+	&__title[class] {
+		margin-bottom: 0;
+		a {
+			text-decoration: underline;
+			font-weight: 400;
+		}
+	}
+
+	&__content {
+		padding: 20px;
+		border-radius: 16px;
+		background: #FFF;
+		@media (max-width:$tablet){
+			border-radius: 12px;
+		}
+	}
+
+	&__item {
+		&:not(:last-child) {margin-bottom: toRem(20);}
+	}
+
+	&__subtitle {
+		font-size: 16px;
+		line-height: normal;
+		text-transform: uppercase;
+		margin-bottom: 10px;
+		@media (max-width:$tablet){
+			font-size: toRem(20);
+			@media (max-width:$mobile){
+				 @include adaptiveValue("font-size", 28, 13,0,768,320); 
+			}
+		}
+	}
+
+	&__text {
+		line-height: normal;
+		@media (max-width:$tablet){
+			font-size: toRem(20);
+			@media (max-width:$mobile){
+				 @include adaptiveValue("font-size", 28, 13,0,768,320); 
+			}
+		}
+	}
+}
+.payment {
+
+	&__arrow {
+	}
+}
+.product {
+
+	&__img {
+	}
+
+	&__content {
+	}
+
+	&__title {
+	}
+
+	&__category {
+
+		&_man {
+		}
+	}
+
+	&__cost {
+	}
+
+	&__labels {
+	}
+
+	&__actions {
+	}
+
+	&__action {
+	}
+
+	&__favorite {
+	}
+}
+
+.otlvant-review {
+
+	&__container {
+	}
+
+	&__top {
+	}
+
+	&__title {
+	}
+
+	&__quantity {
+	}
+
+	&__button {
+	}
+
+	&__slider {
+	}
+
+	&__wrapper {
+	}
+
+	&__slide {
+	}
+
+	&__spollers {
+	}
+
+	&__spoller-title {
+	}
+
+	&__spoller-body {
+	}
+
+	&__button-wrap {
+	}
+}
+// .button-light {
+// }
+// .mobile-min {
+// }
+// .device-review-video-pagination {
+// }
+// .video-review-prev {
+// }
+// .video-review-next {
+// }
+.spollers {
+
+	&__item {
+	}
+
+	&__title {
+	}
+
+	&__body {
+	}
+}
+// .feedback {
+
+// 	&__spoller-arrow {
+// 	}
+
+// 	&__content {
+// 	}
+
+// 	&__top {
+// 	}
+
+// 	&__name {
+// 	}
+
+// 	&__date {
+// 	}
+
+// 	&__star {
+// 	}
+
+// 	&__star-item {
+// 	}
+
+// 	&__text-wrapper {
+// 	}
+
+// 	&__text {
+// 	}
+
+// 	&__write {
+// 	}
+
+// 	&__photo {
+// 	}
+
+// 	&__photo-img {
+// 	}
+
+// 	&__question-block {
+// 	}
+// }
+.otlivant-review-show {
+
+	&__content {
+	}
+
+	&__more {
+	}
+}
+.button-actions {
+}
+.device-review {
+
+	&__slider {
+	}
+}
+// .question-block {
+
+// 	&__text {
+// 	}
+
+// 	&__text-light {
+// 	}
+
+// 	&__quantity {
+// 	}
+
+// 	&__answers {
+// 	}
+
+// 	&__button {
+
+// 		&_yes {
+// 		}
+
+// 		&_no {
+// 		}
+// 	}
+// }
+// .questiion-block {
+
+// 	&__span-quantity {
+// 	}
+// }
+.review-device-pagination {
+}
+.device-review-prev {
+}
+.device-review-next {
+}
+.optionally {
+	display: flex;
+	display: grid;
+	grid-template-columns: 66.233% auto;
+	column-gap: toRem(20);
+	row-gap: toRem(60);
+	@media (max-width:$tablet){
+		// flex-direction: column;
+		grid-template-columns: 100%;
+	}
+	&__articles {
+		// flex: 0 0 66.233766%; /* 1020/1540 */
+	}
+
+	&__links {
+
+		@media (max-width:$mobile){
+			 display: none; 
+		}
+	}
+}
+.otlivant-article {
+
+	&__container {
+	}
+
+	&__title {
+	}
+}
+.device-article {
+
+	&__slider {
+	}
+}
+.articles {
+
+	&__item {
+	}
+}
+.article {
+
+	&__body {
+	}
+
+	&__img {
+	}
+
+	&__title {
+	}
+}
+.swiper-device-pagination {
+}
+.device-article-prev {
+}
+.device-article-next {
+}
+.swiper-otlivant-pagination {
+}
+.popular-products {
+
+	&__item {
+	}
+
+	&__title {
+	}
+
+	&__links {
+	}
+}
+.bottom-popular {
+
+	&__item {
+	}
+
+	&__img {
+	}
+
+	&__text {
+	}
+}
+.recently {
+
+	&__container {
+	}
+
+	&__title {
+	}
+}
+.about-store {
+
+	&__top {
+	}
+}
+.swiper-products-pagination {
+}
+.swiper-tabs-prev {
+}
+.swiper-tabs-next {
+}

@@ -366,7 +366,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	// Initial check
 	// handleTabletChange(mediaQuery);
-	if (window.innerWidth < 768) {
+	const secondTabs = document.querySelector('#secondTabs')
+	if (window.innerWidth < 768 && secondTabs) {
 		const tabs01 = document.querySelector('#tabs01');
 		const tabs02 = document.querySelector('#tabs02');
 		tabs01 ? tabs01.classList.remove('_tab-active') : null;

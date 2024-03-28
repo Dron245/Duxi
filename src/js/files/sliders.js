@@ -223,6 +223,60 @@ function initSliders() {
 		});
 	}
 
+	//Продукт полезные статьи
+	if (document.querySelector('.device-article__slider')) { //Указываем класс нужного слайдера
+		//Создаем слайдер
+		new Swiper('.device-article__slider', { //Указываем класс нужного слайдера
+				//Подключаем модули слайдера
+				//для конкретного случая
+			modules: [Navigation,Pagination],
+			observer: true,
+			observeParents: true,
+			// slidesPerView: 4,
+			spaceBetween: 20,
+			// autoHeight: true,
+			speed: 800,
+			loop:false,
+
+			// Пагинация
+			
+			pagination: {
+				el: '.swiper-device-pagination',
+				clickable: true,
+			},
+
+			// Кнопки "влево/вправо"
+			navigation: {
+				prevEl: '.device-article-prev',
+				nextEl: '.device-article-next',
+			},
+			
+			// Брейкпоинты
+			breakpoints: {
+				300: {
+					slidesPerView: 1.17,
+					spaceBetween: 20,
+					// autoHeight: true,
+				},
+				768: {
+					slidesPerView: 2,
+					spaceBetween: 20,
+					// autoHeight: true,
+				},
+				1001: {
+					slidesPerView: 2,
+					spaceBetween: 20,
+				},
+				1280: {
+					slidesPerView: 3,
+					spaceBetween: 20,
+				},
+				
+			},
+		
+		});
+	}
+
 	// Отливант продукт
 	if(document.querySelector('.otliv__slider-thumbs')){
 		const otlivThumbs = new Swiper(".otliv__slider-thumbs", {
@@ -303,6 +357,62 @@ function initSliders() {
 				1281: {
 					slidesPerView: 7,
 					spaceBetween: 17,
+				},
+			},
+		
+		});
+	}
+
+	// Отзыв о товаре видео страница : продукт
+	if (document.querySelector('.video-review-product__slider')) { //Указываем класс нужного слайдера
+		//Создаем слайдер
+		new Swiper('.video-review-product__slider', { //Указываем класс нужного слайдера
+				//Подключаем модули слайдера
+				//для конкретного случая
+			modules: [Navigation, Pagination],
+			observer: true,
+			observeParents: true,
+			// slidesPerView: 6,
+			// spaceBetween: 20,
+			// autoHeight: true,
+			speed: 400,
+			loop:true,
+			
+
+			pagination: {
+				el: '.device-review-video-pagination',
+				clickable: true,
+			},
+			// Кнопки "влево/вправо"
+			navigation: {
+				prevEl: '.video-review-prev',
+				nextEl: '.video-review-next',
+			},
+			
+			// Брейкпоинты
+			breakpoints: {
+				300: {
+					slidesPerView: 4,
+					spaceBetween: 15,
+					// autoHeight: true,
+				},
+				480: {
+					slidesPerView: 4,
+					spaceBetween: 20,
+					// autoHeight: true,
+				},
+				768: {
+					slidesPerView: 5,
+					spaceBetween: 20,
+					// autoHeight: true,
+				},
+				1001: {
+					slidesPerView: 8,
+					spaceBetween: 20,
+				},
+				1281: {
+					slidesPerView: 8,
+					spaceBetween: 46,
 				},
 			},
 		
@@ -650,7 +760,142 @@ window.addEventListener("load", function (e) {
 	  );
 	}
 
+	// Отзывы на странице Товара
+	if(document.querySelector('.device-review__slider')){
+		const resizableSwiper = (breakpoint, swiperClass, swiperSettings, callback) => {
+		let swiper;
+	
+		breakpoint = window.matchMedia(breakpoint);
+	
+		const enableSwiper = function(className, settings) {
+		swiper = new Swiper(className, settings);
+	
+		  if (callback) {
+			 callback(swiper);
+		  }
+		}
+	
+		const checker = function() {
+		  if (breakpoint.matches) {
+			 return enableSwiper(swiperClass, swiperSettings);
+		  } else {
+			 if (swiper !== undefined) swiper.destroy(true, true);
+			 return;
+		  }
+		};
+	
+		breakpoint.addEventListener('change', checker);
+		checker();
+	 }
+	
+	 resizableSwiper(
+		'(min-width: 767.98px)',
+		'.device-review__slider',
+		{
+			modules: [Pagination, Navigation],
+			observer: true,
+			observeParents: true,
+			// slidesPerView: 1.7,
+			spaceBetween: 20,
+			// autoHeight: true,
+			speed: 800,
+			
+			// Пагинация
+			
+			pagination: {
+				el: '.review-device-pagination',
+				clickable: true,
+			},
+			navigation: {
+				prevEl: '.device-review-prev',
+				nextEl: '.device-review-next',
+			},
+			// Брейкпоинты
+			breakpoints: {
+				768: {
+					slidesPerView: 2,
+					spaceBetween: 20,
+					// autoHeight: true,
+				},
+				1001: {
+					slidesPerView: 3,
+					spaceBetween: 20,
+				},
 
+			},
+		},
+		// someFunc
+	  );
+	}
+
+	// Другие товары на странице Товара
+	if(document.querySelector('.other-device__slider')){
+		const resizableSwiper = (breakpoint, swiperClass, swiperSettings, callback) => {
+		let swiper;
+	
+		breakpoint = window.matchMedia(breakpoint);
+	
+		const enableSwiper = function(className, settings) {
+		swiper = new Swiper(className, settings);
+	
+		  if (callback) {
+			 callback(swiper);
+		  }
+		}
+	
+		const checker = function() {
+		  if (breakpoint.matches) {
+			 return enableSwiper(swiperClass, swiperSettings);
+		  } else {
+			 if (swiper !== undefined) swiper.destroy(true, true);
+			 return;
+		  }
+		};
+	
+		breakpoint.addEventListener('change', checker);
+		checker();
+	 }
+	
+	 resizableSwiper(
+		'(min-width: 767.98px)',
+		'.other-device__slider',
+		{
+			modules: [Navigation],
+			observer: true,
+			observeParents: true,
+			// slidesPerView: 1.7,
+			spaceBetween: 20,
+			// autoHeight: true,
+			speed: 800,
+			
+			// Пагинация
+			
+			
+			navigation: {
+				prevEl: '.device-other-prev',
+				nextEl: '.device-other-next',
+			},
+			// Брейкпоинты
+			breakpoints: {
+				768: {
+					slidesPerView: 3,
+					spaceBetween: 20,
+					// autoHeight: true,
+				},
+				1001: {
+					slidesPerView: 5,
+					spaceBetween: 30,
+				},
+				1280: {
+					slidesPerView: 6,
+					spaceBetween: 20,
+				},
+				
+			},
+		},
+		// someFunc
+	  );
+	}
 	//Запуск инициализации скролла на базе слайдера (по классу swiper_scroll)
 	//initSlidersScroll();
 });
