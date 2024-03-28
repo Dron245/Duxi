@@ -331,6 +331,16 @@ window.addEventListener('DOMContentLoaded', () => {
 		if (targetElement.closest('.popup__img-close')) {
 			targetElement.closest('.popup__photo-img').remove()
 		}
+
+		// const testt = document.querySelectorAll('.article-device__body')
+		// if(window.innerWidth <= 768 && targetElement.closest('.article-device__title') && testt) {
+		// 	testt.forEach(element => {
+		// 		element.setAttribute('data-open','')
+		// 		element.setAttribute('open','')
+		// 		// element.closest('.article-device__spollers').classList.remove('_spoller-init')
+		// 		element.querySelector('summary').classList.add('_spoller-active')
+		// 	});
+		// }
 	}
 });
 
@@ -341,31 +351,7 @@ document.addEventListener("DOMContentLoaded", () => {
 /*===========================================================*/
 
 	//Работа с табами на главной странице под банером
-	// const testt = document.querySelector('.testt')
-	// const mediaQuery = window.matchMedia('(max-width: 768px)')
-
-	// function handleTabletChange(e) {
-	// const tabs01 = document.querySelector('#tabs01');
-	// const tabs02 = document.querySelector('#tabs02');
-	// if (e.matches) {
-	// 	tabs01 ? tabs01.classList.remove('_tab-active') : null;
-	// 	firstTabs ? firstTabs.hidden = false : null
-	// 	secondTabs ? secondTabs.hidden = false: null;
-	// 	tabs02 ? tabs02.classList.add('_tab-active') : null;
-	// 	// testt.style.background = "black"
-	// } else {
-	// 	// testt.style.background = "red"
-	// 	// tabs01 ? tabs01.classList.add('_tab-active') : null;
-	// 	secondTabs ? secondTabs.hidden = true: null;
-	// 	tabs02 ? tabs02.classList.remove('_tab-active') : null;
-	// }
-	// }
-
-	// Register event listener
-	// mediaQuery.addListener(handleTabletChange);
-
-	// Initial check
-	// handleTabletChange(mediaQuery);
+	
 	const secondTabs = document.querySelector('#secondTabs')
 	if (window.innerWidth < 768 && secondTabs) {
 		const tabs01 = document.querySelector('#tabs01');
@@ -495,6 +481,31 @@ document.addEventListener("DOMContentLoaded", () => {
 	partReview2Tab ? partReview2Tab.innerHTML = partReview2.innerHTML : null
 	partReview3Tab ? partReview3Tab.innerHTML = partReview3.innerHTML : null
 	partReview4Tab ? partReview4Tab.innerHTML = partReview4.innerHTML : null
+
+
+	//Сворачиваю спойлеры на мобилке на странице товара (другие товары и обзор аромтата)
+	// const testt = document.querySelectorAll('.article-device__body')
+	// const mediaQuery = window.matchMedia('(max-width: 768px)')
+
+	// function handleTabletChange(e) {
+	// if (e.matches) {
+	// 	testt.forEach(element => {
+	// 		element.removeAttribute('data-open');
+	// 		element.closest('.article-device__spollers').classList.remove('_spoller-init')
+	// 		element.querySelector('summary').classList.remove('_spoller-active')
+	// 	});
+	// } else {
+	// 	testt.forEach(element => {
+	// 		// element.setAttribute('data-open','')
+	// 	});
+	// }
+	// }
+
+	// // Register event listener
+	// mediaQuery.addListener(handleTabletChange);
+
+	// // Initial check
+	// handleTabletChange(mediaQuery);
 
 
 

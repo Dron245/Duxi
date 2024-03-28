@@ -418,6 +418,101 @@ function initSliders() {
 		
 		});
 	}
+
+	// Подробнее в Видео обзорах
+	//Главная видео слайдер
+	if (document.querySelector('.more-video__slider')) { //Указываем класс нужного слайдера
+		//Создаем слайдер
+		new Swiper('.more-video__slider', { //Указываем класс нужного слайдера
+				//Подключаем модули слайдера
+				//для конкретного случая
+			modules: [Navigation,Pagination],
+			observer: true,
+			observeParents: true,
+			slidesPerView: 3,
+			spaceBetween: 20,
+			// autoHeight: true,
+			speed: 800,
+			loop:false,
+
+			// Пагинация
+			
+			pagination: {
+				el: '.more-video-product',
+				clickable: true,
+			},
+
+			// Кнопки "влево/вправо"
+			navigation: {
+				prevEl: '.video-more-product-prev',
+				nextEl: '.video-more-product-next',
+			},
+			
+			// Брейкпоинты
+			breakpoints: {
+				300: {
+					slidesPerView: 1.3,
+					spaceBetween: 20,
+					// autoHeight: true,
+				},
+				// 360: {
+				// 	slidesPerView: 1.3,
+				// 	spaceBetween: 17,
+				// 	// autoHeight: true,
+				// },
+				768: {
+					slidesPerView: 2,
+					spaceBetween: 17,
+					// autoHeight: true,
+				},
+				1001: {
+					slidesPerView: 3,
+					spaceBetween: 20,
+				},
+				
+			},
+		
+		});
+	}
+
+	// Продукт. Страница продукт
+	if(document.querySelector('.photo-product__slider-thumbs')){
+		const productThumbs = new Swiper(".photo-product__slider-thumbs", {
+			modules: [Thumbs],
+			observer: true,
+			observeParents: true,
+			// autoHeight: false,
+				speed: 400,
+				// watchOverflow: true,
+			spaceBetween: 20,
+			slidesPerView: 3,
+			direction: 'vertical',
+			
+		});
+	
+		new Swiper(".photo-product__slider", {
+			// spaceBetween: 10,
+			modules: [Pagination, Thumbs, Navigation],
+			thumbs: {
+				swiper: productThumbs,
+			},
+			observer: true,
+			observeParents: true,
+			slidesPerView: 1,
+			// autoHeight: false,
+				speed: 400,
+				// watchOverflow: true,
+				navigation: {
+					prevEl: ".otlivant-thumbs-prev",
+					nextEl: ".otlivant-thumbs-next",
+				},
+			pagination: {
+				el: '.otlivant-photo-pagination',
+				clickable: true,
+			},
+			
+		});
+	}
 }
 
 

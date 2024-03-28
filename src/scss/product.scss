@@ -1,3 +1,10 @@
+.produce__card {
+	display: grid;
+	column-gap: toRem(20);
+	row-gap: 40px;
+	grid-template-columns: 40.909091% 1fr; /* 630/1540 */
+	& > * { outline: 1px solid red;}
+}
 .page {
 
 	&__video {
@@ -36,6 +43,7 @@
 	}
 
 	&__video {
+		margin-bottom: 40px;
 	}
 
 	&__other {
@@ -102,31 +110,88 @@
 
 }
 .advantage-device {
-
+	margin: 20px toRem(0);
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	@media (max-width:$tablet){
+		flex-direction: column;
+		row-gap: 20px;
+		margin: 60px toRem(0);
+	}
+	@media (max-width: em(360)){
+		margin: 40px toRem(0);
+	}
 	&__item {
+		flex: 0 0 26.038961%; /* 401/1540 */
+		display: flex;
+		align-items: flex-start;
+		gap: 20px;
+		@media (max-width:$tablet){
+			flex: 0 0 100%;
+		}
+		@media (max-width:$mobileSmall){
+			 gap: 10px; 
+		}
 	}
 
 	&__img {
+		flex: 0 0 27.680798%; /* 111/401 */
+		@media (max-width:$tablet){
+			width: 100px;
+			flex: 0 0 11.286682%; /* 100/886 */
+		}
+		@media (max-width:$mobile){
+			 flex: 0 0 15.909091%; /* 70/440 */
+		}
+		img {
+			width: 100%;
+			height: auto;
+			
+		}
 	}
 
 	&__content {
 	}
 
 	&__title {
+		margin-bottom: 10px;
+		text-transform: uppercase;
+		line-height: normal;
+		@media (max-width:$tablet){
+			font-size: toRem(22);
+		}
+		@media (max-width:$mobile){
+			 @include adaptiveValue("font-size", 28, 15,0,768,320); 
+		}
 	}
 
 	&__text {
+		line-height: normal;
+		@media (max-width:$tablet){
+			font-size: toRem(20);
+		}
+		@media (max-width:$mobile){
+			 @include adaptiveValue("font-size", 20, 13,0,768,320); 
+		}
 	}
 }
 .video {
 
 	&__container {
+		.device & {
+			padding-left: 0;
+			padding-right: 0;
+		}
 	}
 
 	&__title {
 	}
 
 	&__slider {
+		.device & {
+			
+		}
 	}
 
 	&__wrapper {
@@ -148,6 +213,28 @@
 	}
 
 	&__exit-youtube {
+	}
+}
+
+.more-video {
+
+	&__slider {
+		@media (min-width:$mobile){
+			padding-left: 0px;
+			padding-right: 0px;
+			margin-left: 15px;
+			margin-right: 15px; 
+	  }
+	}
+
+	button[class^="swiper"] {
+		top: 40%;
+	}
+	.tabs__shell {
+		@media (max-width:$mobile){
+			 margin-left: 0;
+			 margin-right: -15px; 
+		}
 	}
 }
 .tabs {
@@ -202,6 +289,10 @@
 	}
 	&__slider {
 		margin-top: 20px;
+		@media (min-width:$mobile){
+			padding-left: 15px;
+			padding-right: 15px; 
+	  }
 	}
 
 	&__swiper[class] {
@@ -332,6 +423,7 @@
 	}
 
 	&__slider {
+		
 	}
 
 	&__wrapper {
@@ -427,6 +519,10 @@
 .device-review {
 
 	&__slider {
+		@media (min-width:$mobile){
+			padding-left: 15px;
+			padding-right: 15px; 
+	  }
 	}
 }
 // .question-block {
