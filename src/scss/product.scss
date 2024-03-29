@@ -2,8 +2,20 @@
 	display: grid;
 	column-gap: toRem(20);
 	row-gap: 40px;
-	grid-template-columns: 40.909091% 1fr; /* 630/1540 */
+	grid-template-columns: 40.909091% 57%; /* 630/1540 */
 	& > * { outline: 1px solid red;}
+	@media (max-width:$mobile){
+		 grid-template-columns: 100%; 
+	}
+	.feedback__spoller-arrow {
+		@media (min-width:$mobile){
+			 display: none; 
+		}
+	}
+	@media (max-width:$pcSmall){
+		// grid-template-columns: 430/1060
+
+	}
 }
 .page {
 
