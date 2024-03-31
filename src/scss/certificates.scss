@@ -212,10 +212,10 @@
 	@media (any-hover: hover){
 		&:hover{
 			& .product__seil {
-				display: none;
+				// display: none;
 			}
 			& .product__make-certificate {
-				display: block;
+				// display: block;
 			}
 		}
 	}
@@ -312,5 +312,14 @@
 .tabs__product {
 	.certificates & {
 		justify-content: flex-start;
+	}
+}
+
+._arrange-sertificate {
+	.seil-to-make {
+		display: none;
+	}
+	.product__seil_make {
+		display: block;
 	}
 }

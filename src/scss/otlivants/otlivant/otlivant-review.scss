@@ -13,8 +13,10 @@
 		align-items: center;
 		justify-content: space-between;
 		margin-bottom: 20px;
+		flex-wrap: wrap;
+		row-gap: 10px;
 		& .button-light {
-			.guest.otlivant & {
+			.guest & {
 				display: none;
 			}
 			display: inline-block;
@@ -22,6 +24,7 @@
 			width: 22%;
 			font-size: 14px;
 			@media (max-width:$tablet){
+				margin:auto;
 				width: 43%;
 				font-size: 22px;
 			}
@@ -48,8 +51,11 @@
 
 	&__slide {
 		border-radius: 16px;
-		padding: 10px;
+		padding: 20px;
 		background: #FFF;
+		@media (max-width:$pcSmall){
+			padding: 10px;
+		}
 	}
 
 	.swiper-slide {

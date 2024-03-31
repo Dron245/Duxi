@@ -60,6 +60,10 @@ body::after {
 		padding-top: toRem(100);
 	}
 }
+
+.popup__body {
+	
+}
 .popup__content {
 	visibility: hidden;
 	transform: scale(0);
@@ -96,6 +100,9 @@ body::after {
 	}
 	#product-review & {
 		max-width: 680px;
+	}
+	#description-popup & {
+		max-width: toRem(820);
 	}
 	max-width: 340px;
 	border-radius: 10px;
@@ -377,6 +384,11 @@ body::after {
 		}
 		#add-tel & {
 			margin-bottom: 40px;
+		}
+		#description-popup & {
+			max-height: 600px;
+			overflow-y: auto;
+			@include scroll-view;
 		}
 	}
 

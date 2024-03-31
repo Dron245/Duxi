@@ -3,9 +3,27 @@
 	column-gap: toRem(20);
 	row-gap: 40px;
 	grid-template-columns: 40.909091% 57%; /* 630/1540 */
-	& > * { outline: 1px solid red;}
+	// & > * { outline: 1px solid red;}
+	.otliv__wrap_thumb {
+		flex: 0 0 11.865%;
+	}
+	.otliv__main-img {
+		@media (min-width:$mobile){
+			 padding-top: 35px; 
+		}
+	}
+	.product__actions {
+		@media (max-width:$mobile){
+			 right: 10px;
+			 top: 10px; 
+		}
+	}
+	@media (max-width:$tablet){
+		row-gap: 60px;
+	}
 	@media (max-width:$mobile){
-		 grid-template-columns: 100%; 
+		 grid-template-columns: 100%;
+		 @include adaptiveValue("row-gap", 60, 35,0,768,320);
 	}
 	.feedback__spoller-arrow {
 		@media (min-width:$mobile){
@@ -108,6 +126,11 @@
 
 	&__review {
 		margin-bottom: 40px;
+		.otlvant-review__top {
+			@media (max-width:$mobile){
+				 display: none; 
+			}
+		}
 	}
 
 	&__article {
@@ -115,6 +138,9 @@
 
 	&__optionally {
 		margin-bottom: 40px;
+		@media (max-width:$mobile){
+			 margin-right: -15px; 
+		}
 	}
 }
 
@@ -122,18 +148,16 @@
 
 }
 .advantage-device {
-	margin: 20px toRem(0);
+	margin-bottom: 40px;
 	display: flex;
 	justify-content: space-between;
 	align-items: flex-start;
 	@media (max-width:$tablet){
 		flex-direction: column;
 		row-gap: 20px;
-		margin: 60px toRem(0);
+		// margin: 60px toRem(0);
 	}
-	@media (max-width: em(360)){
-		margin: 40px toRem(0);
-	}
+	
 	&__item {
 		flex: 0 0 26.038961%; /* 401/1540 */
 		display: flex;
@@ -293,10 +317,25 @@
 // }
 .other-device {
 	margin-bottom: 40px;
+	@media (min-width:$mobile){
+		 padding-left: 15px;
+		 padding-right: 15px; 
+	}
 	.article-device__body {
 		@media (min-width:$mobile){
 			padding-left: 15px;
 			padding-right: 15px; 
+		}
+	}
+	.feedback__spoller-arrow {
+		@media (min-width:$mobile){
+			 display: none; 
+		}
+	}
+	.tabs__shell {
+		@media (min-width:$mobile){
+			//  padding-left: 15px;
+			//  padding-right: 15px; 
 		}
 	}
 	&__slider {

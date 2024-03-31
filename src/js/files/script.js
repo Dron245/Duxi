@@ -309,6 +309,11 @@ window.addEventListener('DOMContentLoaded', () => {
 			inputOrder.value = targetElement.closest('.popup__submenu-item').innerText;
 		}
 
+		//Страница сертификаты. Меню кнопку с "купить" на "перейти к оформлению"
+		if (targetElement.closest('.product__seil')) {
+			targetElement.closest('.tabs__product').classList.add('_arrange-sertificate')
+		}
+
 		//Закрытие сабменю номеров заказа в попапе
 		if (!targetElement.closest('#number-order') && document.getElementById('number-order')) {
 			if(inputOrder.closest('.popup__form-item').querySelector('.popup__submenu').classList.contains('_popup-submenu-open')) {
@@ -330,6 +335,11 @@ window.addEventListener('DOMContentLoaded', () => {
 
 		if (targetElement.closest('.popup__img-close')) {
 			targetElement.closest('.popup__photo-img').remove()
+		}
+
+		//Изменение строки позиции на странице товара.
+		if (targetElement.closest('.carts-product__add')) {
+			targetElement.closest('.string__item').classList.add('_string-active')
 		}
 
 		// const testt = document.querySelectorAll('.article-device__body')
@@ -482,7 +492,36 @@ document.addEventListener("DOMContentLoaded", () => {
 	partReview3Tab ? partReview3Tab.innerHTML = partReview3.innerHTML : null
 	partReview4Tab ? partReview4Tab.innerHTML = partReview4.innerHTML : null
 
+	//Скрытие записи "Развернуть описание" на странице товара. 
+	const productReview = document.querySelector('.description-product__content');
+	const writeFull = document.querySelector('.feedback__write');
+	if (productReview && productReview.clientHeight <= 300) {
+		writeFull.style.display = 'none'
+	}
+	//Опускаю подсказку про поиск позиции на странице товара
+	const pozSearch = document.querySelector('.string__item_search');
+	const hint = document.querySelector('.string__hint');
+	// console.log(pozSearch.offsetTop);
+	// console.log(hint.offsetTop);
+	if(pozSearch && hint) {
+		hint.style.top = pozSearch.offsetTop + pozSearch.clientHeight / 2 + 'px'
+	}
 
+	//Создаю отступ справа у блока позиций, если позиций много
+	const pozContainer = document.querySelector('.string');
+	if (pozContainer) {
+		const pozitions = pozContainer.querySelectorAll('.string__item')
+		console.log(pozContainer.clientHeight);
+		let pozitionsHeight = 0
+		pozitions.forEach(element => {
+			pozitionsHeight += element.clientHeight + 10
+		});
+		console.log(pozitionsHeight-10);
+		if (pozitionsHeight-10 > pozContainer.clientHeight) {
+			pozContainer.style.paddingRight = '5px'
+		}
+	}
+	
 	//Сворачиваю спойлеры на мобилке на странице товара (другие товары и обзор аромтата)
 	// const testt = document.querySelectorAll('.article-device__body')
 	// const mediaQuery = window.matchMedia('(max-width: 768px)')

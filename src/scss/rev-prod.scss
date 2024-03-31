@@ -49,7 +49,12 @@
 			flex-wrap: wrap;
 			row-gap: 20px;
 			& .panel-comment__button-wrapper {
-				flex: 0 0 100%;
+				@media (min-width:em(1270)){
+					margin-left: auto;
+				}
+				@media (max-width:em(1270)){
+					flex: 0 0 100%; 
+				}
 			}
 			& .panel-comment__button {
 				margin-left: initial;
@@ -70,6 +75,9 @@
 	}
 
 	&__content {
+		.panel-comment {
+			border-radius: 16px;
+		}
 	}
 
 	&__popular {

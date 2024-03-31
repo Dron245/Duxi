@@ -484,7 +484,7 @@ function initSliders() {
 			// autoHeight: false,
 				speed: 400,
 				// watchOverflow: true,
-			spaceBetween: 20,
+			spaceBetween: 15,
 			slidesPerView: 3,
 			direction: 'vertical',
 			
