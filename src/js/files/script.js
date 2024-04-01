@@ -42,13 +42,15 @@ window.addEventListener('DOMContentLoaded', () => {
 		}
 
 		//Показать - скрыть пароль
-		if (targetElement.closest('.popup__img-pasword') && flag == true) {
-			flag = false
-			targetElement.closest('.popup__input-wrapper').querySelector('input').type = "text"
-		} else if(targetElement.closest('.popup__img-pasword')) {
+		if (targetElement.closest('.popup-img-toggle') /*&& flag == true*/) {
+			const type = targetElement.closest('.popup__input-wrapper').querySelector('input').getAttribute("type") === "password" ? "text" : "password";
+         targetElement.closest('.popup__input-wrapper').querySelector('input').setAttribute("type", type);
+			/*flag = false
+			targetElement.closest('.popup__input-wrapper').querySelector('input').type = "text"*/
+		}/* else if(targetElement.closest('.popup-img-toggle')) {
 			flag = true;
 			targetElement.closest('.popup__input-wrapper').querySelector('input').type = "password"
-		}
+		}*/
 
 		//Поднятие плейсхолдера в модальных окнах на место заголовка при фокусе на инпут
 		if (targetElement.closest('input') || targetElement.closest('textarea')) {
@@ -342,15 +344,37 @@ window.addEventListener('DOMContentLoaded', () => {
 			targetElement.closest('.string__item').classList.add('_string-active')
 		}
 
-		// const testt = document.querySelectorAll('.article-device__body')
-		// if(window.innerWidth <= 768 && targetElement.closest('.article-device__title') && testt) {
-		// 	testt.forEach(element => {
-		// 		element.setAttribute('data-open','')
-		// 		element.setAttribute('open','')
-		// 		// element.closest('.article-device__spollers').classList.remove('_spoller-init')
-		// 		element.querySelector('summary').classList.add('_spoller-active')
-		// 	});
-		// }
+		//Добавить новый список. Появление формы добавления списка
+		if (targetElement.closest('.list-popup__button-top')) {
+			targetElement.closest('.list-popup__top').classList.add('_actions-open')
+		}
+
+		//Добавить новый список. Отмена появления
+		if (targetElement.closest('.cancellation')) {
+			targetElement.closest('.list-popup__top').classList.remove('_actions-open')
+		}
+
+		//Добавить новый список. Создание строки в списке снизу
+		if (targetElement.closest('.save-item')) {
+			let inputAdd = targetElement.closest('.list-popup').querySelector('#add-list-item')
+			// console.log(inputAdd.value);
+			let popupList = targetElement.closest('.list-popup').querySelector('.list-popup__body');
+			var liAdditemStar = document.createElement("li");
+			popupList.appendChild(liAdditemStar);
+			liAdditemStar.classList.add('list-popup__item');
+			liAdditemStar.innerHTML =
+				`
+				<div class="checkbox">
+					<input id="add_${targetElement.closest('.list-popup').querySelector('.list-popup__body').getElementsByTagName("li").length}" data-error="Ошибка" class="checkbox__input"
+						type="checkbox" value="Chanel" name="form[]">
+					<label for="add_${targetElement.closest('.list-popup').querySelector('.list-popup__body').getElementsByTagName("li").length}" class="checkbox__label">
+						<span class="checkbox__body "></span>
+						<span class="checkbox__text">${inputAdd.value}</span>
+					</label>
+				</div>
+				`
+				inputAdd.value =''
+		}
 	}
 });
 
@@ -429,10 +453,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	// делаю доступной прокрутку, если высота окна меньше высоты попапа в меню фильтов в моб. версии
 	const popupFiltmodal = document.querySelector('.popup__body.filtmodal');
 	const popupContent = popupFiltmodal ? popupFiltmodal.closest('.popup__content') : null;
-	// console.log(popupFiltmodal.clientHeight);
-	// console.log(popupFiltmodal);
-	// console.log(window.innerHeight);
-
+	
 	if (popupFiltmodal && (popupFiltmodal.clientHeight > window.innerHeight - 120)) {
 		popupContent.classList.add('_overflow-y')
 	}
@@ -456,8 +477,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			const feedBackWrapper = document.querySelectorAll('.feedback__text-wrapper');
 			feedBackWrapper.forEach(element => {
 				const feedBackText = element.querySelector('.feedback__text')
-				// console.log(element.clientHeight);
-				// console.log(feedBackText.clientHeight);
+				
 				if(element.clientHeight + 5 < feedBackText.clientHeight) {
 					// console.log(1);
 					element.closest('.feedback__content').querySelector('.feedback__write').classList.add('_open-write')
@@ -501,8 +521,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	//Опускаю подсказку про поиск позиции на странице товара
 	const pozSearch = document.querySelector('.string__item_search');
 	const hint = document.querySelector('.string__hint');
-	// console.log(pozSearch.offsetTop);
-	// console.log(hint.offsetTop);
+	
 	if(pozSearch && hint) {
 		hint.style.top = pozSearch.offsetTop + pozSearch.clientHeight / 2 + 'px'
 	}
@@ -511,41 +530,16 @@ document.addEventListener("DOMContentLoaded", () => {
 	const pozContainer = document.querySelector('.string');
 	if (pozContainer) {
 		const pozitions = pozContainer.querySelectorAll('.string__item')
-		console.log(pozContainer.clientHeight);
+		// console.log(pozContainer.clientHeight);
 		let pozitionsHeight = 0
 		pozitions.forEach(element => {
 			pozitionsHeight += element.clientHeight + 10
 		});
-		console.log(pozitionsHeight-10);
+		// console.log(pozitionsHeight-10);
 		if (pozitionsHeight-10 > pozContainer.clientHeight) {
 			pozContainer.style.paddingRight = '5px'
 		}
 	}
-	
-	//Сворачиваю спойлеры на мобилке на странице товара (другие товары и обзор аромтата)
-	// const testt = document.querySelectorAll('.article-device__body')
-	// const mediaQuery = window.matchMedia('(max-width: 768px)')
-
-	// function handleTabletChange(e) {
-	// if (e.matches) {
-	// 	testt.forEach(element => {
-	// 		element.removeAttribute('data-open');
-	// 		element.closest('.article-device__spollers').classList.remove('_spoller-init')
-	// 		element.querySelector('summary').classList.remove('_spoller-active')
-	// 	});
-	// } else {
-	// 	testt.forEach(element => {
-	// 		// element.setAttribute('data-open','')
-	// 	});
-	// }
-	// }
-
-	// // Register event listener
-	// mediaQuery.addListener(handleTabletChange);
-
-	// // Initial check
-	// handleTabletChange(mediaQuery);
-
 
 
 	

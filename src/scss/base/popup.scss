@@ -776,3 +776,348 @@ body::after {
 	}
 }
 
+//Добавить в список ожидания
+
+.popup {
+
+	&__wrapper {
+	}
+
+	&__content {
+		#notify-product & {
+			max-width: 575px;
+			// overflow: hidden;
+			padding-right: 44px;
+		}
+	}
+
+	&__close {
+	}
+
+	&__body {
+	}
+
+	&__title {
+		#notify-product & {
+			margin-bottom: 20px;
+		}
+	}
+
+	&__text {
+		&_notify {
+			font-weight: 300;
+			line-height: normal;
+			margin-bottom: 40px;
+		}
+	}
+
+	&__form {
+	}
+
+	&__form-item {
+		&_notify[class] {
+			margin-bottom: 10px;
+		}
+	}
+
+	&__checkbox-row {
+		#notify-product & {
+			margin-bottom: 10px;
+		}
+	}
+
+	&__product-name {
+		font-weight: 500;
+	}
+
+	&__table {
+	}
+
+	&__input-wrap {
+	}
+
+	&__input {
+	}
+
+	&__label {
+	}
+
+	&__button {
+		#notify-product &, #add-list & {
+			font-size: 22px;
+			width: 52.173913%; /* 300/575 */
+			margin: auto;
+			@media (max-width: em(600)){
+				width: 75%;
+				  @include adaptiveValue("font-size", 22, 16,0,600,320);
+			}
+		}
+	}
+}
+.checkbox {
+	#notify-product & {
+		margin-bottom: 0;
+	}
+
+	&__input {
+	}
+
+	&__label {
+		#notify-product & {
+			align-items: flex-start;
+		}
+	}
+
+	&__body {
+		#notify-product &, #add-list & {
+			border-radius: 4px;
+			align-self: flex-start;
+			flex: 0 0 15px;
+			width: 15px;
+			height: 15px;
+			&::after{
+				content:'';
+				width: 10px;
+				height: 8px;
+			}
+		}
+	}
+
+	&__text {
+		#notify-product & {
+			font-size: 14px;
+			font-style: italic;
+			line-height: normal;
+
+		}
+	}
+}
+.table-popup {
+
+	&__top {
+		position: relative;
+		
+		// padding-top: 14px;
+		// padding-bottom: 14px;
+		&::after{
+			content:'';
+			position: absolute;
+			top: 0;
+			left: -20px;
+			width: 112.5%;
+			height: 100%;
+			background: #FFEDF0;
+			z-index: -1;
+		}
+	}
+
+	&__row {
+		display: grid;
+		align-items: center;
+		column-gap: 5.89391%; /* 30/509 */
+		grid-template-columns:1fr 9.430255% 55.992141% 13.948919%;
+		height: 48px;
+		&:not(:last-child) {
+			border-bottom: 1px solid #EEDCE1;;
+		}
+	}
+
+	&__hidden {
+	}
+
+	&__title {
+		font-size: 14px;
+		color: $zagolovok;
+		line-height: normal;
+		text-transform: uppercase;
+		&_center {
+			justify-self: center;
+		}
+		&_no-wrap {
+			white-space: nowrap;
+			transform: translateX(-40%);
+		}
+	}
+
+	&__body {
+		max-height: 200px;
+		overflow-y: auto;
+		overflow-x: hidden;
+		padding-right: 5px;
+		@include scroll-view;
+	}
+
+	&__text {
+		line-height: normal;
+	}
+
+	&__text-bold {
+		font-weight: 500;
+	}
+}
+
+
+//Добавить в список сравнения
+
+.popup {
+
+	&__wrapper {
+	}
+
+	&__content {
+		#add-list & {
+			max-width: 575px;
+		}
+	}
+
+	&__close {
+	}
+
+	&__body {
+	}
+
+	&__title {
+	}
+
+	&__text {
+
+		&_notify {
+		}
+	}
+
+	&__list {
+		margin-bottom: 20px;
+	}
+
+	&__form-item {
+	}
+
+	&__input-wrap {
+	}
+
+	&__input {
+		#add-list & {
+			width: 63%;
+			@media (max-width:$mobileSmall){
+				 width: 100%; 
+			}
+		}
+	}
+
+	&__label {
+		
+	}
+
+	&__button {
+	}
+}
+.list-popup {
+
+	&__top {
+	}
+
+	&__button-top {
+		display: flex;
+		align-items: center;
+		gap: 15px;
+		margin-bottom: 20px;
+		
+		._actions-open & {
+			display: none;
+		}
+	}
+
+	&__button-text {
+		color: #1D76C9;
+		font-size: 16px;
+		line-height: normal;
+		text-transform: uppercase;
+	}
+
+	&__add {
+		margin-bottom: 20px;
+		display: none;
+		._actions-open & {
+			display: block;
+		}
+	}
+
+	&__actions {
+		display: flex;
+		gap: 10px;
+		margin-top: 6px;
+		@media (max-width:$mobile){
+			 flex-wrap: wrap; 
+			 row-gap: 10px;
+		}
+	}
+
+	&__action[class] {
+		padding-top: 8px;
+		padding-bottom: 8px;
+		font-size: 12px;
+		width: 30.46729%; /* 163/535 */
+		@media (max-width:$mobileSmall){
+			 width: 100%; 
+		}
+	}
+
+	&__body {
+		max-height: 250px;
+		overflow-y: auto;
+		@include scroll-view;
+	}
+
+	&__item {
+		&:not(:last-child) {margin-bottom: toRem(10);}
+	}
+
+	&__item-first {
+		border-bottom: 1px solid #EEDCE1;;
+	}
+}
+.button-actions {
+	#add-list & {
+		background-color: $zagolovok;
+	}
+}
+.button-light {
+	#add-list & {
+		color: $knopka-bordovaya;
+		border-color: $knopka-bordovaya;
+	}
+}
+.checkbox {
+
+	&__input {
+	}
+
+	&__label {
+		#add-list & {
+			gap: 20px;
+			@media (max-width:$mobileSmall){
+				 gap: 10px; 
+			}
+		}
+	}
+
+	&__body {
+		#add-list[class] & {
+			align-self: center;
+		}
+	}
+
+	&__text {
+		#add-list & {
+			font-size: 14px;
+			padding: 12px toRem(10);
+			line-height: normal;
+			@media (max-width:$mobileSmall){
+				 padding: 8px toRem(6); 
+			}
+		}
+		.list-popup__item-first & {
+			font-style: italic;
+		}
+	}
+}
