@@ -104,6 +104,9 @@ body::after {
 	#description-popup & {
 		max-width: toRem(820);
 	}
+	#cost-product & {
+		max-width: 840px;
+	}
 	max-width: 340px;
 	border-radius: 10px;
 	position: relative;
@@ -788,6 +791,9 @@ body::after {
 			max-width: 575px;
 			// overflow: hidden;
 			padding-right: 44px;
+			@media (max-width:$mobileSmall){
+				//  padding-right: 20px; 
+			}
 		}
 	}
 
@@ -817,6 +823,19 @@ body::after {
 	&__form-item {
 		&_notify[class] {
 			margin-bottom: 10px;
+		}
+
+		&_table {
+			.checkbox {
+				transform: translateX(20px);
+			}
+			margin-left: -20px;
+			margin-right: -44px;
+			// max-height: 300px;
+			// overflow-y: auto;
+			// overflow-x: hidden;
+			// padding-right: 5px;
+			@include scroll-view;
 		}
 	}
 
@@ -857,6 +876,7 @@ body::after {
 .checkbox {
 	#notify-product & {
 		margin-bottom: 0;
+		// padding-left: 20px;
 	}
 
 	&__input {
@@ -865,6 +885,7 @@ body::after {
 	&__label {
 		#notify-product & {
 			align-items: flex-start;
+			// padding-left: 20px;
 		}
 	}
 
@@ -903,8 +924,8 @@ body::after {
 			content:'';
 			position: absolute;
 			top: 0;
-			left: -20px;
-			width: 112.5%;
+			left: 0px;
+			width: 100%;
 			height: 100%;
 			background: #FFEDF0;
 			z-index: -1;
@@ -919,6 +940,12 @@ body::after {
 		height: 48px;
 		&:not(:last-child) {
 			border-bottom: 1px solid #EEDCE1;;
+		}
+		@media (max-width: em(630)){
+			  grid-template-columns: 1fr 12.705531% 65%;
+		}
+		@media (max-width: em(360)){
+			// grid-template-columns: 1fr 12.705531% 60%;
 		}
 	}
 
@@ -935,24 +962,34 @@ body::after {
 		}
 		&_no-wrap {
 			white-space: nowrap;
-			transform: translateX(-40%);
+			transform: translateX(-60%);
+			@media (max-width: em(630)){
+				display: none;
+			}
 		}
 	}
 
 	&__body {
-		max-height: 200px;
+		max-height: 315px;
 		overflow-y: auto;
 		overflow-x: hidden;
-		padding-right: 5px;
+		// padding-right: 5px;
 		@include scroll-view;
 	}
 
 	&__text {
 		line-height: normal;
+		
 	}
 
 	&__text-bold {
 		font-weight: 500;
+	}
+}
+
+time.table-popup__text {
+	@media (max-width: em(630)){
+		display: none;
 	}
 }
 

@@ -84,7 +84,7 @@
 		"webpack-stream": "latest"
 	},
 	"dependencies": {
-		"@canvasjs/charts": "^3.7.43",
+		"@canvasjs/charts": "^3.8.0",
 		"@fancyapps/ui": "^5.0.33",
 		"gulp-cheerio": "^1.0.0",
 		"isotope-layout": "^3.0.6",

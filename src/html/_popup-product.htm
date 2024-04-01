@@ -197,7 +197,7 @@
 							</label>
 						</div>
 					</div>
-					<div class="popup__form-item">
+					<div class="popup__form-item popup__form-item_table">
 						<div class="popup__table table-popup">
 							<div class="table-popup__top">
 								<div class="table-popup__row">
@@ -285,19 +285,76 @@
 									<div class="table-popup__text">парфюмированная вода (edt) 50 мл <span class="table-popup__text-bold">тестер</span></div>
 									<time class="table-popup__text" datetime="2018-04-24">24.04.2018</time>
 								</li>
+								<li class="table-popup__row">
+									<div class="popup__checkbox checkbox">
+										<input id="n-t_8" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+										<label for="n-t_8" class="checkbox__label">
+											<div class="checkbox__body"></div>
+										</label>
+									</div>
+									<div class="table-popup__text">135223</div>
+									<div class="table-popup__text">парфюмированная вода (edt) 50 мл <span class="table-popup__text-bold">тестер</span></div>
+									<time class="table-popup__text" datetime="2018-04-24">24.04.2018</time>
+								</li>
+								<li class="table-popup__row">
+									<div class="popup__checkbox checkbox">
+										<input id="n-t_9" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+										<label for="n-t_9" class="checkbox__label">
+											<div class="checkbox__body"></div>
+										</label>
+									</div>
+									<div class="table-popup__text">135223</div>
+									<div class="table-popup__text">парфюмированная вода (edt) 50 мл <span class="table-popup__text-bold">тестер</span></div>
+									<time class="table-popup__text" datetime="2018-04-24">24.04.2018</time>
+								</li>
 							</ul>
 						</div>
 					</div>
-					<div class="popup__form-item">
+					<!-- <div class="popup__form-item">
 						<div class="popup__input-wrap">
 							<input id="n-email" autocomplete="off" type="email" name="form[]" data-error="Ошибка" class="popup__input">
 							<label for="n-email" class="popup__label">Введите адрес электронной почты</label>
 						</div>
-					</div>
+					</div> -->
 					<div class="popup__form-item">
 						<button class="popup__button">добавить в список</button>
 					</div>
 				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<!-- График цен продукта -->
+
+<div id="cost-product" aria-hidden="true" class="popup">
+	<div class="popup__wrapper">
+		<div class="popup__content">
+			<button data-close type="button" class="popup__close"><img src="@img/popup/close.svg" alt=""></button>
+			<div class="popup__body">
+				<h4 class="popup__title">динамика цен</h4>
+				<h2 class="otliv__title">Туалетная вода <span>Chanel</span> Chance Eau Vive (Шанель Шанс Эо Вив) </h2>
+				<div class="popup__graph graph-popup">
+					<div data-tabs class="tabs">
+						<nav data-tabs-titles class="tabs__navigation">
+							<button type="button" class="tabs__title _tab-active">неделя</button>
+							<button type="button" class="tabs__title">месяц</button>
+							<button type="button" class="tabs__title">квартал</button>
+						</nav>
+						<div data-tabs-body class="tabs__content">
+							<div class="tabs__body">
+								<div style="height: 500px;" id="chartContainer01"></div>
+							</div>
+							<div class="tabs__body">
+								2
+							</div>
+							<div class="tabs__body">
+								3
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
