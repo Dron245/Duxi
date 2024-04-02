@@ -478,16 +478,14 @@ function initSliders() {
 	// Продукт. Страница продукт
 	if(document.querySelector('.photo-product__slider-thumbs')){
 		const productThumbs = new Swiper(".photo-product__slider-thumbs", {
-			modules: [Thumbs],
-			observer: true,
-			observeParents: true,
-			// autoHeight: false,
-				speed: 400,
-				// watchOverflow: true,
-			spaceBetween: 15,
-			slidesPerView: 3,
+			modules: [Thumbs, Navigation],
 			direction: 'vertical',
-			
+			// autoHeight: true,
+			// observer: true,
+			// observeParents: true,
+			speed: 400,
+			spaceBetween: 15,
+			slidesPerView: 5,
 		});
 	
 		new Swiper(".photo-product__slider", {
@@ -496,10 +494,10 @@ function initSliders() {
 			thumbs: {
 				swiper: productThumbs,
 			},
-			observer: true,
-			observeParents: true,
+			// observer: true,
+			// observeParents: true,
 			slidesPerView: 1,
-			// autoHeight: false,
+			autoHeight: true,
 				speed: 400,
 				// watchOverflow: true,
 				navigation: {
@@ -1026,3 +1024,7 @@ function initSlidersScroll() {
 		}
 	}
 }
+
+
+
+

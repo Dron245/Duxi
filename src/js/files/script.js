@@ -45,12 +45,7 @@ window.addEventListener('DOMContentLoaded', () => {
 		if (targetElement.closest('.popup-img-toggle') /*&& flag == true*/) {
 			const type = targetElement.closest('.popup__input-wrapper').querySelector('input').getAttribute("type") === "password" ? "text" : "password";
          targetElement.closest('.popup__input-wrapper').querySelector('input').setAttribute("type", type);
-			/*flag = false
-			targetElement.closest('.popup__input-wrapper').querySelector('input').type = "text"*/
-		}/* else if(targetElement.closest('.popup-img-toggle')) {
-			flag = true;
-			targetElement.closest('.popup__input-wrapper').querySelector('input').type = "password"
-		}*/
+		}
 
 		//Поднятие плейсхолдера в модальных окнах на место заголовка при фокусе на инпут
 		if (targetElement.closest('input') || targetElement.closest('textarea')) {
@@ -95,6 +90,7 @@ window.addEventListener('DOMContentLoaded', () => {
 		if (targetElement.closest('[data-parent]')) {
 			const subMenuId = targetElement.dataset.parent ? targetElement.dataset.parent : null;
 			const subMenu = document.querySelector(`[data-submenu="${subMenuId}"]`);
+			console.log(subMenu);
 			if (subMenu) {
 				document.documentElement.classList.add('sub-menu-open');
 				subMenu.classList.add('_sub-menu-open');
@@ -375,6 +371,22 @@ window.addEventListener('DOMContentLoaded', () => {
 				`
 				inputAdd.value =''
 		}
+
+		// Графики цен открываю, скрываю
+		if (targetElement.closest('.tabs-graph')) {
+			const subMenuId = targetElement.dataset.parent ? targetElement.dataset.parent : null;
+			const subMenu = document.querySelector(`[data-submenu="${subMenuId}"]`);
+			const qwe = targetElement.closest('.tabs__navigation').querySelectorAll('.tabs-graph')
+			qwe.forEach(element => {
+				element.classList.remove('_tab-active');
+			});
+			targetElement.classList.add('_tab-active');
+			const asd = targetElement.closest('.graph-popup__tabs').querySelectorAll('.tabs__body')
+			asd.forEach(element => {
+				element.classList.remove('_sub-menu-open');
+			});
+			subMenu.classList.add('_sub-menu-open');
+		}
 	}
 });
 
@@ -542,65 +554,5 @@ document.addEventListener("DOMContentLoaded", () => {
 	}
 
 });
-
-import CanvasJS from '@canvasjs/charts';
-window.onload = function () {
-	// if(document.querySelector('#chartContainer')){
-		var chart = new CanvasJS.Chart("chartContainer01", {
-			axisX: {
-				labelFontSize: 14,
-				labelFormatter: function (e) {
-					return CanvasJS.formatDate( e.value, "DD.MM.YYYY");
-				},
-				gridThickness: 2,
-				gridColor: "#c4c4c480",
-				lineColor: '#c4c4c480',
-				tickLength: 10,
-      		tickColor: "#c4c4c480",
-				tickThickness: 2
-			},
-			axisY: {
-				valueFormatString:'####',
-				labelFontSize: 14,
-				minimum: 2100,
-				maximum: 3000,
-				gridThickness: 2,
-				gridColor: "#c4c4c480",
-				lineColor: '#c4c4c480',
-				tickLength: 10,
-      		tickColor: "#c4c4c480",
-				tickThickness: 2
-			},
-			data: [
-				{
-					type: "spline",
-					lineColor:'#BF5C7A',
-					markerSize: 14,
-					markerColor: '#BF5C7A',
-					dataPoints: [
-						{ x: new Date(2010, 0, 3), y: 2500 },
-						{ x: new Date(2010, 0, 5), y: 2400 },
-						{ x: new Date(2010, 0, 7), y: 2400 },
-						{ x: new Date(2010, 0, 9), y: 2450 },
-						{ x: new Date(2010, 0, 11), y: 2550 },
-						{ x: new Date(2010, 0, 13), y: 2500 },
-						{ x: new Date(2010, 0, 15), y: 2600 },
-						{ x: new Date(2010, 0, 17), y: 2530 },
-					]
-				}
-			]
-		});
-		chart.render();
-	// }
-}
-
-
-
-
-
-
-
-
-
 
 

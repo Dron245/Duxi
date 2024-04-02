@@ -336,21 +336,21 @@
 				<h4 class="popup__title">динамика цен</h4>
 				<h2 class="otliv__title">Туалетная вода <span>Chanel</span> Chance Eau Vive (Шанель Шанс Эо Вив) </h2>
 				<div class="popup__graph graph-popup">
-					<div data-tabs class="tabs">
-						<nav data-tabs-titles class="tabs__navigation">
-							<button type="button" class="tabs__title _tab-active">неделя</button>
-							<button type="button" class="tabs__title">месяц</button>
-							<button type="button" class="tabs__title">квартал</button>
+					<div class="graph-popup__tabs">
+						<nav class="tabs__navigation">
+							<button data-parent="graph1" type="button" class="tabs__title tabs-graph _tab-active">неделя</button>
+							<button data-parent="graph2" type="button" class="tabs__title tabs-graph">месяц</button>
+							<button data-parent="graph3" type="button" class="tabs__title tabs-graph">квартал</button>
 						</nav>
-						<div data-tabs-body class="tabs__content">
-							<div class="tabs__body">
+						<div class="tabs__content graph-content">
+							<div data-submenu="graph1" class="tabs__body _sub-menu-open">
 								<div style="height: 500px;" id="chartContainer01"></div>
 							</div>
-							<div class="tabs__body">
-								2
+							<div data-submenu="graph2" class="tabs__body">
+								<div  style="height: 500px;" id="chartContainer02"></div>
 							</div>
-							<div class="tabs__body">
-								3
+							<div data-submenu="graph3" class="tabs__body">
+								<div  style="height: 500px;" id="chartContainer03"></div>
 							</div>
 						</div>
 					</div>

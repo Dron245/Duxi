@@ -88,6 +88,12 @@
 			@media (min-width:$tablet){
 				 margin-right: 20px; 
 			}
+			@media (max-width:$tablet){
+				margin-right: 20px;
+			}
+			@media (max-width:$mobile){
+				 margin-right: 0; 
+			}
 			outline: 1px solid #B4002B;
 			color: #B4002B;
 			&._button-active {
@@ -205,6 +211,7 @@
 	&__slider-thumbs {
 		margin-top: 15px;
 		margin-bottom: 15px;
+		height: 383px;
 	}
 
 	&__slider {

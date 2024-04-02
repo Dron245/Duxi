@@ -165,6 +165,8 @@
 
 	&__slider-thumbs-wrap {
 		position: relative;
+		// display: flex;
+		// flex-direction: column;
 		& button {
 			position: relative;
 			 transform: translate(-50%, 0%);
@@ -193,7 +195,9 @@
 	}
 
 	&__wrapper-thumbs {
-		
+		@media (min-width:$mobile){
+			//  height: 250px; 
+		}
 	}
 
 	&__slide-thumbs {

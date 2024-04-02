@@ -1158,3 +1158,79 @@ time.table-popup__text {
 		}
 	}
 }
+
+//Графики цен
+
+.popup {
+
+	&__wrapper {
+	}
+
+	&__content {
+	}
+
+	&__close {
+	}
+
+	&__body {
+	}
+
+	&__title {
+	}
+
+	&__graph {
+	}
+}
+.otliv {
+
+	&__title {
+		#cost-product & {
+			font-size: 22px;
+			margin-bottom: 40px;
+		}
+	}
+}
+.graph-popup {
+
+	&__tabs {
+	}
+}
+.tabs {
+
+	&__navigation {
+	}
+
+	&__title {
+	}
+
+	&__content {
+	}
+
+	&__body {
+	}
+}
+.tabs-graph {
+}
+
+.graph-content {
+}
+
+.canvasjs-chart-credit {
+	display: none;
+}
+.graph-popup__tabs {
+	.tabs__body {
+		// width: 95%;
+		// opacity: 0;
+		visibility: hidden;
+		// position: relative;
+		// top: 0;
+		height: 0;
+	}
+	.tabs__body._sub-menu-open {
+		// opacity: 1;
+		height: initial;
+		visibility: visible;
+		// position: static;
+	}
+}
