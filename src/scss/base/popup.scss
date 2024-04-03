@@ -1220,17 +1220,11 @@ time.table-popup__text {
 }
 .graph-popup__tabs {
 	.tabs__body {
-		// width: 95%;
-		// opacity: 0;
 		visibility: hidden;
-		// position: relative;
-		// top: 0;
 		height: 0;
 	}
 	.tabs__body._sub-menu-open {
-		// opacity: 1;
 		height: initial;
 		visibility: visible;
-		// position: static;
 	}
 }

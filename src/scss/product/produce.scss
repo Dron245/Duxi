@@ -211,7 +211,7 @@
 	&__slider-thumbs {
 		margin-top: 15px;
 		margin-bottom: 15px;
-		height: 383px;
+		@include adaptiveValue("height", 470, 245,0,1540,768);
 	}
 
 	&__slider {

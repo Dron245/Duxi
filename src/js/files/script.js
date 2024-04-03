@@ -387,13 +387,77 @@ window.addEventListener('DOMContentLoaded', () => {
 			});
 			subMenu.classList.add('_sub-menu-open');
 		}
+
+		//КОРЗИНА ФУНКЦИОНАЛ
+		if (targetElement.closest('.carts-product__add') || targetElement.closest('.quantity__button--plus')) {
+			const productId = targetElement.closest('.string__item').dataset.pid;
+			updateCart(targetElement, productId, true);
+			// e.preventDefault();
+		}
+		if (targetElement.closest('.basket__link') && document.querySelector('.actions-header__empty._hidden')) {
+			targetElement.closest('.actions-header__item_cart').querySelector('.cart').classList.toggle('_cart-active')
+		}
 	}
 });
+
+function updateCart(productButton, productId, productAdd = true) {
+	const cart = document.querySelector('.actions-header__item_cart');
+	const cartIcon = cart.querySelector('.basket__link');
+	const cartQuantity = cartIcon.querySelector('span._quantity');
+	const cartProduct = document.querySelector(`[data-cart-pid="${productId}"]`);
+	const cartList = document.querySelector('.cart-list');
+
+	//Добавляем
+	if (productAdd) {
+		if (cartQuantity) {
+			cartQuantity.innerHTML = ++cartQuantity.innerHTML;
+			
+		} else {
+			document.querySelector('.actions-header__empty').classList.add('_hidden')
+			cartIcon.insertAdjacentHTML('beforeend', `<span class="_quantity">1</span>`);
+		}
+		if (!cartProduct) {
+			const product = document.querySelector(`[data-pid="${productId}"]`);
+			const cartProductImage = product.querySelector('.string__photo').innerHTML;
+			const code = product.querySelector('.details-string__code').innerHTML;
+			const brand = document.querySelector('.otliv__title > span').innerHTML;
+			const gender = document.querySelector('._button-active').innerHTML;
+			const type = product.querySelector('.details-string__type > span').innerHTML;
+			const cartProductTitle = product.querySelector('.details-string__name').innerHTML;
+			const costProduct = product.querySelector('.price-block__actual > span').innerHTML;
+			// const deleteCart = document.querySelector('.actions-header__cart');
+			const cartProductContent = `
+		<a href="" class="cart-list__image ">${cartProductImage} <div class="cart-list__quantity"><span>1</span> <span>шт.</span></div></a>
+		<div class="cart-list__body">
+			<p class="cart-list__code details-string__code">${code}</p>
+			<p class="cart-list__brand">${brand}</p>
+			<p class="cart-list__gender">${gender}</p>
+			<p class="cart-list__type details-string__type">${type}</p>
+			<p class="cart-list__title">${cartProductTitle}</p>
+			<p class="cart-list__cost">${costProduct}</p>
+			<div class="cart-list__del">
+				<a href="" class="cart-list__delete">Delete</a>
+				<a href="" class="cart-list__deleteproduct">Delete All</a>
+			</div>
+		</div>`;
+			cartList.insertAdjacentHTML('beforeend', `<li data-cart-pid="${productId}" class="cart-list__item">${cartProductContent}</li>`);
+			// const delet = document.querySelector('.actions-header__deleteall');
+			
+			// if(!delet){
+			// 	deleteCart.insertAdjacentHTML('beforeend', `<a href="#" class=actions-header__deleteall>Delete All</a>`)
+			// }
+		} else {
+			const cartProductQuantity = cartProduct.querySelector('.cart-list__quantity span');
+			cartProductQuantity.innerHTML = ++cartProductQuantity.innerHTML;
+		}
+	}
+}
 
 
 
 
 document.addEventListener("DOMContentLoaded", () => {
+	
 /*===========================================================*/
 
 	//Работа с табами на главной странице под банером
@@ -553,6 +617,19 @@ document.addEventListener("DOMContentLoaded", () => {
 		}
 	}
 
+	//Всплывашка при наведении "Корзина пуста"
+	const basket = document.querySelector('.basket__link')
+	if (basket && basket.closest('.actions-header__item_cart').querySelector('.cart__list').innerHTML=='') {
+		basket.addEventListener("mousemove", EmptyMove);
+		function EmptyMove () {
+			basket.querySelector('.actions-header__empty').classList.add('_no-hidden')
+		}
+		basket.addEventListener("mouseleave", EmptyLeave);
+		function EmptyLeave () {
+			basket.querySelector('.actions-header__empty').classList.remove('_no-hidden')
+		}
+	}
+	
 });
 
 

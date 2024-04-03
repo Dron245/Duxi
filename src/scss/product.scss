@@ -60,6 +60,11 @@
 			 display: none; 
 		}
 	}
+	.otlvant-review__title {
+		@media (max-width:$tablet){
+			flex: 0 0 100%;
+		}
+	}
 	&__container {
 	}
 
@@ -101,11 +106,17 @@
 		}
 		.otlvant-review__top {
 			.otlvant-review__title {
+				display: block;
+				@media (max-width:$tablet){
+					// flex: 0 0 100%;
+				}
 				@media (max-width:$mobile){
 					 @include adaptiveValue("font-size", 50, 22,0,768,320); 
 				}
 			}
 			.otlvant-review__button {
+				
+				display: block;
 				@media (max-width:$mobile){
 					 width: 70%;
 					 @include adaptiveValue("font-size", 28, 16,0,768,320);
@@ -119,7 +130,7 @@
 				 row-gap: 20px; 
 			}
 			& > * {
-				display: block;
+				// display: block;
 			}
 		}
 	}

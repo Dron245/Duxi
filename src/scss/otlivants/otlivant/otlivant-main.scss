@@ -175,9 +175,15 @@
 			&.swiper-button-disabled path {
 				fill: #6f6f6f;
 			}
+			@media (max-width:$tablet){
+				transform: translate(-50%, 0%) scale(0.7);
+			}
 		}
 		.swiper-next {
 			transform: rotate(180deg) translateX(50%);
+			@media (max-width:$tablet){
+				transform: rotate(180deg) translateX(50%) scale(0.7);
+			}
 		}
 	}
 
