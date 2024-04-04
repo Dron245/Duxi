@@ -274,15 +274,24 @@ h3[class*="__title"] {
 			}
 		}
 		&_seil {
+			// &._no-visible {
+			._arrange-button & {
+				display: none;
 
+			}
+			// }
 		}
 
 		&_make {
 			outline: 1px solid $zagolovok;
-			// padding-top: 9px;
-			// padding-bottom: 9px;
 			background-color: white;
 			color: $knopka-bordovaya;
+			display: none;
+			._arrange-button & {
+				display: block;
+			}
+			// &._seil-visible {
+			// }
 		}
 
 		&_wait {
