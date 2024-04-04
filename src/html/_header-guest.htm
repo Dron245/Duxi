@@ -112,10 +112,37 @@
 					<img src="@img/header/izbrannoe.svg" alt="Избранное">
 					<span>Избранное</span>
 				</a>
-				<a href="#" class="actions-header__item actions-header__item_cart">
-					<img src="@img/header/cart.svg" alt="Корзина">
-					<span>Корзина</span>
-				</a>
+				<div class="actions-header__item actions-header__item_cart">
+					<a href="#" class="actions-header__basket basket__link">
+						<img src="@img/header/cart.svg" alt="Корзина">
+						<span>Корзина</span>
+						<div class="actions-header__empty">Корзина пуста</div>
+						<span class="actions-header__quantity">1</span>
+					</a>
+					<div class="actions-header__cart cart">
+						<div class="cart__wrapper">
+							<p class="cart__top">Товары в корзине</p>
+							<ul class="cart__list cart-list">
+								<a href="" class="cart-list__image">
+									<img src="@img/product/product.png" alt="">
+									<div class="cart-list__quantity"><span>1</span> <span>шт.</span></div>
+								</a>
+								<div class="cart-list__body">
+									<p class="cart-list__code details-string__code">Код товара: 123556</p>
+									<p class="cart-list__brand">BYREDO PARFUMS SUNDAZED</p>
+									<p class="cart-list__gender">Женская парфюмерия</p>
+									<p class="cart-list__type details-string__type">парфюмированная вода (edt) + лосьон для тела + гель для душа</p>
+									<p class="cart-list__title">50+10+100 мл</p>
+									<p class="cart-list__cost">30 000 руб.</p>
+								</div>
+							</ul>
+							<div class="cart__actions">
+								<button type="button" class="button-light">продолжить покупки</button>
+								<button type="button" class="button-actions">Оформить заказ</button>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 		<div class="header__menu">
