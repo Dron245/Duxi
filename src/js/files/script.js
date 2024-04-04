@@ -734,7 +734,12 @@ document.addEventListener("DOMContentLoaded", () => {
 	
 	if(pozSearch && hint) {
 		hint.style.top = pozSearch.offsetTop + pozSearch.clientHeight / 2 + 'px'
+		setTimeout(() => {
+		hint.remove()
+	}, 1500);
 	}
+
+	
 
 	//Создаю отступ справа у блока позиций, если позиций много
 	const pozContainer = document.querySelector('.string');
@@ -750,9 +755,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			pozContainer.style.paddingRight = '5px'
 		}
 	}
-	setTimeout(() => {
-		hint.remove()
-	}, 1500);
+	
 
 	//Всплывашка при наведении "Корзина пуста"
 	const basket = document.querySelector('.basket__link')
