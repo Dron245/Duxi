@@ -376,8 +376,8 @@ window.addEventListener('DOMContentLoaded', () => {
 		if (targetElement.closest('.tabs-graph')) {
 			const subMenuId = targetElement.dataset.parent ? targetElement.dataset.parent : null;
 			const subMenu = document.querySelector(`[data-submenu="${subMenuId}"]`);
-			const qwe = targetElement.closest('.tabs__navigation').querySelectorAll('.tabs-graph')
-			qwe.forEach(element => {
+			const graphs = targetElement.closest('.tabs__navigation').querySelectorAll('.tabs-graph')
+			graphs.forEach(element => {
 				element.classList.remove('_tab-active');
 			});
 			targetElement.classList.add('_tab-active');
@@ -388,19 +388,57 @@ window.addEventListener('DOMContentLoaded', () => {
 			subMenu.classList.add('_sub-menu-open');
 		}
 
-		//КОРЗИНА ФУНКЦИОНАЛ
+		//КОРЗИНА ФУНКЦИОНАЛ ДЛЯ СТРАНИЦЫ ТОВАРА
 		if (targetElement.closest('.carts-product__add') || targetElement.closest('.quantity__button--plus')) {
+			
 			const productId = targetElement.closest('.string__item').dataset.pid;
 			updateCart(targetElement, productId, true);
-			// e.preventDefault();
+			e.preventDefault();
 		}
+		if (targetElement.closest('.carts-product__add')){
+			document.querySelector('.cart').classList.add('_cart-active')
+			let inputProductValue = targetElement.closest('.string__item').querySelector('input')
+			inputProductValue.value = '1'
+		}
+
 		if (targetElement.closest('.basket__link') && document.querySelector('.actions-header__empty._hidden')) {
 			targetElement.closest('.actions-header__item_cart').querySelector('.cart').classList.toggle('_cart-active')
+		} else if (document.querySelector('._cart-active') && !targetElement.closest('.cart') && !targetElement.closest('.carts-product__add') && !targetElement.closest('.quantity')) {
+			document.querySelector('.cart').classList.remove('_cart-active')
+		}
+
+		if ((targetElement.classList.contains('cart-list__delete') /*|| targetElement.closest('.quantity__button--minus')*/) && document.querySelector('.cart-list__item')) {
+			// const productId = targetElement.closest('.wrapper').querySelector('.cart-list__item').dataset.cartPid;
+			const productId = targetElement.closest('.cart-list__item').dataset.cartPid;
+			console.log(productId);
+			updateCart(targetElement, productId, false);
+			e.preventDefault();
+		}
+
+		if (targetElement.closest('.quantity__button--minus')) {
+			const productId = targetElement.closest('.string__item').dataset.pid;
+			console.log(productId);
+			updateCart(targetElement, productId, false);
+			e.preventDefault();
+		}
+
+		if(targetElement.classList.contains('cart-list__deleteproduct')){
+			const productId = targetElement.closest('.cart-list__item').dataset.cartPid;
+			// let inputProductValue = targetElement.closest('.string__item').querySelector('input')
+			// inputProductValue.value = '1'
+			deleteproduct(targetElement, productId);
+			e.preventDefault();
+		}
+
+		if(targetElement.classList.contains('actions-header__deleteall')){
+			e.preventDefault();
+			deleteAll();
 		}
 	}
 });
 
 function updateCart(productButton, productId, productAdd = true) {
+	const cartWrapper =document.querySelector('.cart')
 	const cart = document.querySelector('.actions-header__item_cart');
 	const cartIcon = cart.querySelector('.basket__link');
 	const cartQuantity = cartIcon.querySelector('span._quantity');
@@ -422,12 +460,12 @@ function updateCart(productButton, productId, productAdd = true) {
 			const code = product.querySelector('.details-string__code').innerHTML;
 			const brand = document.querySelector('.otliv__title > span').innerHTML;
 			const gender = document.querySelector('._button-active').innerHTML;
-			const type = product.querySelector('.details-string__type > span').innerHTML;
+			const type = product.querySelector('.details-string__type').innerHTML;
 			const cartProductTitle = product.querySelector('.details-string__name').innerHTML;
 			const costProduct = product.querySelector('.price-block__actual > span').innerHTML;
-			// const deleteCart = document.querySelector('.actions-header__cart');
+			const deleteCart = document.querySelector('.cart__wrapper');
 			const cartProductContent = `
-		<a href="" class="cart-list__image ">${cartProductImage} <div class="cart-list__quantity"><span>1</span> <span>шт.</span></div></a>
+		<a href="" class="cart-list__image">${cartProductImage} <div class="cart-list__quantity"><span>1</span> <span>шт.</span></div></a>
 		<div class="cart-list__body">
 			<p class="cart-list__code details-string__code">${code}</p>
 			<p class="cart-list__brand">${brand}</p>
@@ -436,22 +474,101 @@ function updateCart(productButton, productId, productAdd = true) {
 			<p class="cart-list__title">${cartProductTitle}</p>
 			<p class="cart-list__cost">${costProduct}</p>
 			<div class="cart-list__del">
-				<a href="" class="cart-list__delete">Delete</a>
-				<a href="" class="cart-list__deleteproduct">Delete All</a>
+				<button class="cart-list__delete">Уменьшить</button>
+				<button class="cart-list__deleteproduct">Удалить всё</button>
 			</div>
 		</div>`;
 			cartList.insertAdjacentHTML('beforeend', `<li data-cart-pid="${productId}" class="cart-list__item">${cartProductContent}</li>`);
-			// const delet = document.querySelector('.actions-header__deleteall');
+			const delet = document.querySelector('.actions-header__deleteall');
 			
-			// if(!delet){
-			// 	deleteCart.insertAdjacentHTML('beforeend', `<a href="#" class=actions-header__deleteall>Delete All</a>`)
-			// }
+			if(!delet){
+				deleteCart.insertAdjacentHTML('beforeend', `<button class=actions-header__deleteall>Очистить корзину</button>`)
+			}
 		} else {
 			const cartProductQuantity = cartProduct.querySelector('.cart-list__quantity span');
 			cartProductQuantity.innerHTML = ++cartProductQuantity.innerHTML;
+			let inputProductValue = cartProduct.closest('.wrapper').querySelector(`[data-pid="${productId}"] input`);
+			inputProductValue.value = ++inputProductValue.value
+		}
+	} else {
+		const cartProductQuantity = cartProduct.querySelector('.cart-list__quantity span');
+			let inputProductValue = cartProduct.closest('.wrapper').querySelector(`[data-pid="${productId}"] input`);
+			inputProductValue.value = --inputProductValue.value
+			cartProductQuantity.innerHTML = --cartProductQuantity.innerHTML;
+			if (!parseInt(cartProductQuantity.innerHTML)) {
+				cartProduct.closest('.wrapper').querySelector(`[data-pid="${productId}"]`).classList.remove('_string-active')
+				cartProduct.remove();
+				if (document.querySelector('.cart-list').children.length == 0) {
+					cartWrapper.classList.remove('_cart-active');
+					document.querySelector('.actions-header__empty').classList.remove('_hidden')
+				}
+			}
+
+		const cartQuantityValue = --cartQuantity.innerHTML;
+
+		if (cartQuantityValue) {
+			cartQuantity.innerHTML = cartQuantityValue;
+		} else {
+			cartQuantity.remove();
+			cart.classList.remove('_active');
 		}
 	}
 }
+
+function deleteproduct(targetElement, productId){
+	const cartWrapper =document.querySelector('.cart')
+	const cartProduct = document.querySelector(`[data-cart-pid="${productId}"]`);
+	const cartProductQuantity = cartProduct.querySelector('.cart-list__quantity span');
+	const cartQuantity = document.querySelector('.basket__link ._quantity');
+	// const ulcart = document.querySelector('.actions-header__basket')
+
+
+	let inputProductValue = cartProduct.closest('.wrapper').querySelector(`[data-pid="${productId}"] input`);
+	inputProductValue.value = '1'
+
+
+	cartProductQuantity.remove();
+	cartQuantity.innerHTML = cartQuantity.innerHTML - cartProductQuantity.innerHTML;
+	if(!parseInt(cartQuantity.innerHTML)){
+		cartQuantity.remove();
+		// ulcart.classList.remove('_active')
+	}
+
+	cartProduct.closest('.wrapper').querySelector(`[data-pid="${productId}"]`).classList.remove('_string-active')
+	cartProduct.remove();
+	// console.log();
+	if (document.querySelector('.cart-list').children.length == 0) {
+		cartWrapper.classList.remove('_cart-active');
+		document.querySelector('.actions-header__empty').classList.remove('_hidden')
+	}
+}
+
+
+function deleteAll(){
+	const cartWrapper =document.querySelector('.cart')
+	const cartQuantity = document.querySelector('.basket__link ._quantity');
+	// const ulcart = document.querySelector('.actions-header__basket');
+	const cartProduct = document.querySelectorAll('.string__item');
+	const liItem = document.querySelectorAll('.cart-list__item')
+	
+	let inputProductValue = cartQuantity.closest('.wrapper').querySelectorAll('.string__item input');
+	inputProductValue.forEach(element => {
+		element.value = '1'
+	});
+
+	cartProduct.forEach(element => {
+		element.classList.remove('_string-active')
+	});
+
+	cartQuantity.remove();
+	for (var i = 0; i < liItem.length; i++) {
+		liItem[i].remove();
+	}
+	
+	// ulcart.classList.remove('_active');
+	cartWrapper.classList.remove('_cart-active')
+	document.querySelector('.actions-header__empty').classList.remove('_hidden')
+};
 
 
 

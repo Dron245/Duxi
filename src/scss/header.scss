@@ -488,6 +488,12 @@
 				height: 40px;
 			}
 		}
+		._quantity {
+			display: block;
+		}
+		.cart-list__quantity span {
+			display: block;
+		}
 	}
 
 	&__data-user {
@@ -503,17 +509,23 @@
 	&__basket {
 		position: relative;
 		width: min-content;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
 		span._quantity {
 			position: absolute;
 			font-size: 17px;
 			background-color: #FFF5F6;
 			top: 23px;
 			font-weight: 700;
-			right: 7px;
+			right: 2px;
 			border-radius: 50%;
 			color: $zagolovok;
 			width: 18px;
-			height: 18px
+			height: 18px;
+			@media (max-width:$tablet){
+				right: -2px;
+			}
 		}
 	}
 	&__empty {
@@ -568,17 +580,38 @@
 	&__cart {
 		position: absolute;
 		z-index: 4;
-		top: 100%;
+		top: 90%;
 		right: -15%;
 		opacity: 0;
 		visibility: hidden;
+		transform: translateY(10px);
+		transition: transform 0.3s;
 		&._cart-active {
 			opacity: 1;
 			visibility: visible;
+			transform: translateY(0);
 		}
 		@media (max-width:$tablet){
-			top: 135%;
+			top: 130%;
 		}
+	}
+
+	&__deleteall {
+		background-color: white;
+		color: $zagolovok;
+		display: block;
+		margin:auto;
+		margin-top: 20px;
+		font-size: 16px;
+		font-weight: 500;
+		padding: 15px toRem(10);
+		border: 1px solid $zagolovok;
+		text-transform: uppercase;
+		// width: 60%;
+		// font-size: 16px;
+			white-space: nowrap;
+			padding-left: 18px;
+			padding-right: 18px;
 	}
 }
 
@@ -587,6 +620,7 @@
 		display: none;
 	}
 	&__wrapper {
+		// text-align: center;
 		position: relative;
 		border-radius: 8px;
 		background: #FFF;
@@ -624,7 +658,7 @@
 	&__list {
 		display: flex;
 		flex-direction: column;
-		row-gap: 15px;
+		row-gap: 30px;
 		margin-bottom: 15px;
 	}
 
@@ -663,8 +697,49 @@
 		}
 	}
 
-	&__title {
+	&__code {
+		span {
+			color: #000;
+		}
+		&:not(:last-child) {margin-bottom: toRem(2);}
+	}
 
+	&__brand {
+		font-weight: 700;
+		&:not(:last-child) {margin-bottom: toRem(2);}
+		line-height: normal;
+	}
+
+	&__gender {
+		line-height: normal;
+		&:not(:last-child) {margin-bottom: toRem(1);}
+		.woman & {
+			color: #8D0022;
+		}
+		.man & {
+			color:#00227a
+		}
+	}
+
+	&__title {
+		line-height: normal;
+		&:not(:last-child) {margin-bottom: toRem(3);}
+	}
+
+	&__cost {
+		line-height: normal;
+		font-size: 18px;
+		&:not(:last-child) {margin-bottom: toRem(2);}
+	}
+
+	&__type {
+		img {
+			display: none;
+		}
+		line-height: normal;
+		span {
+			color: #000;
+		}
 	}
 
 	&__quantity {
@@ -685,7 +760,14 @@
 			font-size: 14px;
 		color: #000;
 		}
-		
+	}
+	&__del {
+		button {
+			color: $zagolovok;
+			font-weight: 500;
+			border: 1px solid $zagolovok;
+			padding: 5px toRem(10);
+		}
 	}
 }
 

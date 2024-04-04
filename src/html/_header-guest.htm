@@ -112,10 +112,23 @@
 					<img src="@img/header/izbrannoe.svg" alt="Избранное">
 					<span>Избранное</span>
 				</a>
-				<a href="#" class="actions-header__item actions-header__item_cart">
-					<img src="@img/header/cart.svg" alt="Корзина">
-					<span>Корзина</span>
-				</a>
+				<div class="actions-header__item actions-header__item_cart">
+					<a href="#" class="actions-header__basket basket__link">
+						<img src="@img/header/cart.svg" alt="Корзина">
+						<span>Корзина</span>
+						<div class="actions-header__empty">Корзина пуста</div>
+					</a>
+					<div class="actions-header__cart cart">
+						<div class="cart__wrapper">
+							<p class="cart__top">Товары в корзине</p>
+							<ul class="cart__list cart-list"></ul>
+							<div class="cart__actions">
+								<button type="button" class="button-light">продолжить покупки</button>
+								<button type="button" class="button-actions">Оформить заказ</button>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 		<div class="header__menu">
