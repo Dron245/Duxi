@@ -1,0 +1,142 @@
+//ВЫБРАТЬ ПОДАРОК
+.gifts {
+	padding-right: 5px;
+	max-height: 530px;
+	@include scroll-view;
+	overflow-y: auto;
+	overflow-x: hidden;
+	&__text {
+	}
+
+	&__body {
+		margin-top: 20px;
+		display: grid;
+		gap: 10px;
+		grid-template-columns: repeat(auto-fit, minmax(267px, 1fr));
+		@media (max-width:$mobileSmall){
+			grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+		}
+	}
+}
+.gift {
+
+	&__item {
+		// cursor: pointer;
+		display: grid;
+		row-gap: 5px;
+		grid-template-columns: 25% 1fr;
+		grid-template-rows: auto 35px;
+		border-radius: 16px;
+		border: 1px solid #F9EFF2;
+		padding: 10px;
+		&._shadow-gift {
+			box-shadow: 2px 2px 8px 0px rgba(187, 144, 144, 0.10), -2px -2px 8px 0px rgba(187, 144, 144, 0.10), -10px -10px 10px 0px rgba(187, 144, 144, 0.10), 10px 10px 10px 0px rgba(187, 144, 144, 0.10);
+		}
+
+background: #FFF;
+	}
+
+	&__image {
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		row-gap: 2px;
+		line-height: normal;
+	}
+
+	&__cost {
+		color: #207F24;
+		font-weight: 300;
+		text-transform: uppercase;
+		margin-left: auto;
+
+		&_rub {
+			font-size: 14px;
+			// text-transform: initial;
+			color: #000;
+		}
+	}
+
+	&__name {
+		font-size: 13px;
+	}
+
+	&__details {
+		font-weight: 300;
+	}
+
+	&__quantity {
+		margin-left: auto;
+	}
+
+	&__button {
+		font-size: 14px;
+		grid-column: 1 / -1;
+	}
+}
+
+
+// Модалки с ввводом кодов
+
+.popup__input-wrap {
+	.done-input {
+		display: none;
+		font-weight: 300;
+		line-height: normal;
+		position: absolute;
+		right: 0;
+		top: 100%;
+		color: #23A104;
+		._done-code & {
+			display: block;
+		}
+	}
+	.error-input {
+		display: none;
+		font-weight: 300;
+		line-height: normal;
+		position: absolute;
+		right: 0;
+		top: 100%;
+		color: #D00000;
+		._error-code & {
+			display: block;
+		}
+	}
+}
+
+#sertificatepresent {
+	.popup__form {
+		@media (min-width:$mobileSmall){
+			width: 70%;
+			margin:auto; 
+		}
+	}
+
+	.popup__label {
+		font-size: 14px;
+	}
+	.popup__form-item_pin[class] {
+		margin-bottom: 20px;
+	}
+}
+
+#discontcard {
+	.popup__label[class] {
+		font-size: 14px;
+	}
+}
+#cancelbonus {
+	.popup__title {
+		margin-bottom: 20px;
+	}
+	.popup__text {
+		margin-bottom: 40px;
+	}
+}

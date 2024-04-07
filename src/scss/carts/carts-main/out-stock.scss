@@ -1,0 +1,44 @@
+.basket {
+	line-height: normal;
+	&__none {
+		display: grid;
+		row-gap: 20px;
+		
+	}
+}
+.out {
+	.list-cart__item {
+		margin-bottom: 0;
+	}
+	.list-cart__quantity-actions {
+		margin-right: 0;
+	}
+	.list-cart__ceil:last-child {
+		@media (max-width:$mobile){
+			 display: none; 
+		}
+	}
+	.list-cart__button {
+		opacity: 1;
+		visibility: visible;
+	}
+	&__title[class] {
+		margin-bottom: 0;
+	}
+
+	&__button {
+		font-size: 14px;
+		justify-self: start;
+		padding: 9px toRem(13);
+	}
+
+	&__checkbox {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+	}
+
+	&__text {
+		font-style: italic;
+	}
+}

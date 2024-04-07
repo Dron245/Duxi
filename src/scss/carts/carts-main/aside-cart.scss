@@ -1,0 +1,275 @@
+.basket {
+
+	&__aside {
+	}
+}
+.aside-cart {
+	.main-cart__title {
+		margin-bottom: 0;
+		@media (max-width:$tablet) and (min-width:$mobile){
+			grid-column: 1 / -1;
+		}
+	}
+	display: flex;
+	flex-direction: column;
+	row-gap: 10px;
+	line-height: normal;
+	@media (max-width:$tablet) and (min-width:$mobile){
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		column-gap: toRem(20);
+	}
+	& > * {
+		// outline: 1px solid red;
+	}
+	&__main {
+		@media (max-width:$tablet) and (min-width:$mobile){
+			grid-column: 2 / 3;
+			
+		}
+	}
+
+	&__top {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		&:not(:last-child) {margin-bottom: toRem(10);}
+		padding: 11.5px toRem(0);
+		font-size: 18px;
+		font-weight: 500;
+		text-transform: uppercase;
+		@media (max-width:$pcSmall){
+			font-size: 16px;
+		}
+		@media (max-width:$tablet){
+			font-size: 22px;
+		}
+		@media (max-width:$mobile){
+			 @include adaptiveValue("font-size", 32, 18,0,768,320); 
+		}
+	}
+
+	&__title {
+		
+	}
+
+	&__cost {
+	}
+
+	&__group {
+		display: flex;
+		flex-direction: column;
+		row-gap: 10px;
+		// & >* {outline: 1px solid blue;}
+		@media (max-width:$tablet) and (min-width:$mobile){
+			grid-column: 1 / 2;
+			grid-row: 2 / 3;
+		}
+	}
+
+	&__sub-item {
+	}
+
+	&__text {
+		font-size: 10px;
+		@media (max-width:$tablet) and (min-width:$mobile){
+			grid-column: 1 / -1;
+		}
+		@media (max-width:$tablet){
+			font-size: 16px;
+		}
+		@media (max-width:$mobile){
+			 @include adaptiveValue("font-size", 20, 9,0,768,320); 
+		}
+	}
+
+	&__politica {
+		text-decoration: underline;
+	}
+
+	&__buttons {
+		@media (max-width:$tablet) and (min-width:$mobile){
+			grid-column: 1 / -1;
+			button {
+				margin:auto;
+				width: 48.871332%; /* 433/886 */
+			}
+		}
+	}
+
+	&__button {
+		._button-change & {
+			display: none;
+		}
+	}
+
+	&__button-wait {
+		width: 100%;
+		display: none;
+		._button-change & {
+			display: block;
+		}
+	}
+}
+.main-cart {
+
+	&__title {
+	}
+}
+.main-aside {
+	border-radius: 16px;
+	background: #FFF;
+	padding: 10px;
+	display: flex;
+	flex-direction: column;
+	row-gap: 10px;
+	&__item {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		@media (max-width:$tablet){
+			@include adaptiveValue("font-size", 20, 16,0,1001,768.01);
+		}
+		@media (max-width:$mobile){
+			 @include adaptiveValue("font-size", 28, 13,0,768,320); 
+		}
+	}
+
+	&__left {
+		flex: 0 0 46.571429%; /* 163/350 */
+		@media (max-width:$tablet){
+			flex: 0 0 65%;
+		}
+	}
+
+	&__name {
+		&_img {
+			display: flex;
+			align-items: center;
+			gap: 4px;
+		}
+	}
+
+	&__right {
+		&_img {
+
+		}
+	}
+
+	&__cost {
+		font-weight: 500;
+		display: flex;
+		align-items: center;
+		gap: 4px;
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+
+	&__list {
+	}
+}
+.list-aside {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	display: flex;
+	flex-direction: column;
+	row-gap: 10px;
+	&__item {
+
+	}
+
+	&__button {
+		color: $tekst-zagolovok-ne-aktivnyy;
+		text-decoration: underline;
+		@media (max-width:$tablet){
+			@include adaptiveValue("font-size", 20, 16,0,1001,768.01);
+		}
+		@media (max-width:$mobile){
+			 @include adaptiveValue("font-size", 28, 13,0,768,320); 
+		}
+	}
+
+	&__mesage {
+		display: flex;
+		display: none;
+		align-items: center;
+		gap: 4px;
+		span {
+			color: $zagolovok;
+		}
+	}
+}
+.punkt-aside {
+	display: flex;
+	flex-direction: column;
+	row-gap: 10px;
+	&__top {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		// margin-bottom: 20px;
+		text-transform: uppercase;
+		font-weight: 500;
+		padding: 14px toRem(10);
+		border-top: 1px solid #EEDCE1;
+		&_delivery {
+			@media (max-width:$tablet) and (min-width:$mobile){
+				border: none;
+			}
+		}
+		@media (max-width:$tablet){
+			@include adaptiveValue("font-size", 20, 16,0,1001,768.01);
+		}
+		@media (max-width:$mobile){
+			 @include adaptiveValue("font-size", 28, 13,0,768,320); 
+		}
+	}
+
+	&__left {
+	}
+
+	&__right {
+	}
+
+	&__body {
+		border-radius: 16px;
+		background: #FFF;
+		padding: 10px;
+		display: flex;
+		flex-direction: column;
+		row-gap: 10px;
+		@media (max-width:$tablet){
+			@include adaptiveValue("font-size", 20, 16,0,1001,768.01);
+		}
+		@media (max-width:$mobile){
+			 @include adaptiveValue("font-size", 28, 13,0,768,320); 
+		}
+	}
+
+	&__text {
+
+		&_italic {
+			font-style: italic;
+		}
+
+		&_bottom {
+			margin-top: 10px;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			time {
+				font-weight: 500;
+			}
+		}
+	}
+
+	&__subtext {
+		font-weight: 300;
+	}
+}
+.button-actions {
+}
+.button-light {
+}

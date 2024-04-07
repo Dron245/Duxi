@@ -248,8 +248,8 @@ export function formQuantity() {
 						value = valueElement.dataset.quantityMin;
 					}
 				} else if (value < 1) {
-					value = 1;
-				}
+					value = 0;
+				} 
 			}
 			targetElement.closest('[data-quantity]').querySelector('[data-quantity-value]').value = value;
 		}

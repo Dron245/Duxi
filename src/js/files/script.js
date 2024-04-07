@@ -6,6 +6,7 @@ import { flsModules } from "./modules.js";
 window.addEventListener('DOMContentLoaded', () => {
 	document.addEventListener("click", documentActions);
 	let flag = true;
+	let flagCart = true
 	function documentActions(e) {
 		const targetElement = e.target;
 
@@ -389,21 +390,82 @@ window.addEventListener('DOMContentLoaded', () => {
 			subMenu.classList.add('_sub-menu-open');
 		}
 
-		//КОРЗИНА ФУНКЦИОНАЛ 
+		// Всплывашка с добавленным товаром
 
 		if (targetElement.closest('.carts-product__add') || 
 			targetElement.closest('.product__seil_seil') || 
 			targetElement.closest('.actions-otliv__button_cart') ||
-			targetElement.closest('.quantity__button--plus') ||
-			targetElement.closest('.quantity__button--minus') ||
+			targetElement.closest('.produce .quantity__button--plus') ||
 			targetElement.closest('.seil-to-make')) {
-			const cart = document.querySelector('.cart')
+			const cartHeader = document.querySelector('.cart')
 			const cartQuantity = document.querySelector('.actions-header__quantity');
 			cartQuantity.classList.add('_quantity-visible')
-			cart.classList.add('_cart-active');
+			cartHeader.classList.add('_cart-active');
 			setTimeout(function(){
-				cart.classList.remove('_cart-active')
-			} , 2750)
+				cartHeader.classList.remove('_cart-active')
+			} , 2000)
+		}
+		// console.log(flagCart);
+		// Корзина главная страница чекбокс "выбрать всё"
+		if (targetElement.closest('.checkbox-cart-check-all') && flagCart == true) {
+			const cartCheck = targetElement.closest('.main-cart').querySelectorAll('.checkbox__input')
+			flagCart = false
+			cartCheck.forEach(element => {
+				element.checked = true;
+			});
+		} else if (targetElement.closest('.checkbox-cart-check-all') && flagCart == false) {
+			flagCart = true
+			console.log(2);
+			const cartCheck = targetElement.closest('.main-cart').querySelectorAll('.checkbox__input')
+			cartCheck.forEach(element => {
+				element.checked = false;
+			});
+		}
+
+		// Корзина главная страница удалить все товары
+		if (targetElement.closest('.actions-cart__button')) {
+			const cartItems = targetElement.closest('.main-cart').querySelectorAll('.list-cart__item')
+			cartItems.forEach(element => {
+				element.remove()
+			});
+		}
+
+		// Корзина главная страница удалить выбранный товар
+		if (targetElement.closest('.remove-cart-item') || targetElement.closest('.list-cart__item-close')) {
+			targetElement.closest('.list-cart__item').remove()
+		}
+
+		if (targetElement.closest('.gifts .quantity__button--plus')) {
+			const qwe = targetElement.closest('.gift__quantity').querySelector('.quantity__button--minus')
+			qwe.style.visibility = 'visible'
+		}
+
+		//Раскрашиваю тенью выбранный подарок в попапе "Выбрать подарок"
+		if (targetElement.closest('.gift__button')) {
+			targetElement.closest('.gift__item').classList.toggle('_shadow-gift')
+		}
+
+		// В корзине сменяю кнопку с "Оформить" на "Подождите"
+		if (targetElement.closest('.aside-cart__button')) {
+			targetElement.closest('.aside-cart__buttons').classList.add('_button-change')
+		}
+
+		//В корзине появление строки "с бонусного счёта будет списано"
+		if (targetElement.closest('.cancel-bonus')) {
+			targetElement.closest('.list-aside__item').nextElementSibling.style.display = 'block'
+		}
+
+		//Тест проверка правильности ввода промокода
+		if (targetElement.closest('.promo-ok')) {
+			const inputCode = targetElement.closest('form').querySelector('.origin-input').value;
+			const etalonInput = targetElement.closest('form').querySelector('.test-input').value;
+			if (inputCode == etalonInput) {
+				targetElement.closest('form').classList.remove('_error-code')
+				targetElement.closest('form').classList.add('_done-code')
+			} else {
+				targetElement.closest('form').classList.remove('_done-code')
+				targetElement.closest('form').classList.add('_error-code')
+			}
 		}
 	}
 });
@@ -416,7 +478,7 @@ window.addEventListener('DOMContentLoaded', () => {
 document.addEventListener("DOMContentLoaded", () => {
 	
 /*===========================================================*/
-
+	
 	//Работа с табами на главной странице под банером
 	
 	const secondTabs = document.querySelector('#secondTabs')
@@ -593,7 +655,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		}
 	}
 	
-
+	//Страница товара. Изменение текска на "мужская парфюмерия"
 	const man =document.querySelector('.man')
 	if (man) {
 		man.querySelector('.cart-list__gender').textContent = 'Мужская парфюмерия'
@@ -606,6 +668,15 @@ document.addEventListener("DOMContentLoaded", () => {
 			element.classList.add('_button-active')
 		});
 	}
+
+	// Убираю минус в попапе "Выбор подарка"
+	const inputGift = document.querySelectorAll('.gift__input')
+	inputGift.forEach(element => {
+		if (element.value == '0') {
+			let buttonMinus = element.closest('.quantity__input').previousElementSibling;
+			buttonMinus.style.visibility = 'hidden'
+		}
+	});
 });
 
 

@@ -107,6 +107,15 @@ body::after {
 	#cost-product & {
 		max-width: 840px;
 	}
+	#choosing-gift & {
+		max-width: toRem(890);
+	}
+	#promocode &, #discontcard &, #cancelbonus & {
+		max-width: 420px;
+	}
+	#sertificatepresent & {
+		max-width: 580px;
+	}
 	max-width: 340px;
 	border-radius: 10px;
 	position: relative;
@@ -180,6 +189,9 @@ body::after {
 				 @include adaptiveValue("font-size", 54, 24,0,768,320); 
 			}
 		}
+		#choosing-gift & {
+			text-align: center;
+		}
 	}
 
 	&__form {
@@ -222,7 +234,11 @@ body::after {
 		row-gap: toRem(4);
 		&:not(:last-child) {
 			margin-bottom: toRem(30);
+			#promocode &, #discontcard &, #sertificatepresent &, #cancelbonus & {
+				margin-bottom: 40px;
+			}
 		}
+		
 		#reg & {
 			&:not(:last-child) {
 				margin-bottom: toRem(40);
@@ -680,41 +696,7 @@ body::after {
 			margin-bottom: toRem(10);
 		}
 	}
-	&__content {
-	}
-
-	&__body {
-	}
-
-	&__regions {
-	}
-
-	&__iteration {
-		&_break {
-		}
-	}
 }
-
-.list-group {
-}
-
-.first {
-	&_level {
-	}
-}
-.list {
-	&_region {
-	}
-}
-.bt {
-	&_region {
-	}
-}
-.big {
-	&_length {
-	}
-}
-
 
 //Отзыв о магазине
 #store-review {
@@ -831,10 +813,7 @@ body::after {
 			}
 			margin-left: -20px;
 			margin-right: -44px;
-			// max-height: 300px;
-			// overflow-y: auto;
-			// overflow-x: hidden;
-			// padding-right: 5px;
+	
 			@include scroll-view;
 		}
 	}
@@ -843,22 +822,6 @@ body::after {
 		#notify-product & {
 			margin-bottom: 10px;
 		}
-	}
-
-	&__product-name {
-		font-weight: 500;
-	}
-
-	&__table {
-	}
-
-	&__input-wrap {
-	}
-
-	&__input {
-	}
-
-	&__label {
 	}
 
 	&__button {
@@ -1007,30 +970,13 @@ time.table-popup__text {
 		}
 	}
 
-	&__close {
-	}
-
-	&__body {
-	}
-
-	&__title {
-	}
-
-	&__text {
-
-		&_notify {
-		}
-	}
+	
 
 	&__list {
 		margin-bottom: 20px;
 	}
 
-	&__form-item {
-	}
 
-	&__input-wrap {
-	}
 
 	&__input {
 		#add-list & {
@@ -1040,18 +986,8 @@ time.table-popup__text {
 			}
 		}
 	}
-
-	&__label {
-		
-	}
-
-	&__button {
-	}
 }
 .list-popup {
-
-	&__top {
-	}
 
 	&__button-top {
 		display: flex;
@@ -1161,26 +1097,7 @@ time.table-popup__text {
 
 //Графики цен
 
-.popup {
 
-	&__wrapper {
-	}
-
-	&__content {
-	}
-
-	&__close {
-	}
-
-	&__body {
-	}
-
-	&__title {
-	}
-
-	&__graph {
-	}
-}
 .otliv {
 
 	&__title {
@@ -1190,30 +1107,7 @@ time.table-popup__text {
 		}
 	}
 }
-.graph-popup {
 
-	&__tabs {
-	}
-}
-.tabs {
-
-	&__navigation {
-	}
-
-	&__title {
-	}
-
-	&__content {
-	}
-
-	&__body {
-	}
-}
-.tabs-graph {
-}
-
-.graph-content {
-}
 
 .canvasjs-chart-credit {
 	display: none;
