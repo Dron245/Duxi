@@ -271,6 +271,9 @@
 	&__item {
 		position: relative;
 		flex: 0 0 48%;
+		.calculator &._method-active .bottom-calc__content {
+			box-shadow: none;
+		}
 		@media (max-width:$mobile){
 			 flex: 0 0 100%; 
 		}
@@ -322,6 +325,7 @@
 	&__subitem {
 		display: flex;
 		justify-content: space-between;
+		align-items: center;
 		// max-width: 59.747292%; /* 331/554 */
 		&:not(:last-child) {margin-bottom: toRem(10);}
 		@media (max-width:$mobile){
@@ -348,6 +352,7 @@
 	}
 
 	&__time {
+		font-weight: 500;
 	}
 
 	&__correction {

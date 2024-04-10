@@ -116,6 +116,21 @@ body::after {
 	#sertificatepresent & {
 		max-width: 580px;
 	}
+	#add-address & {
+		max-width: 680px;
+	}
+	#save-data & {
+		max-width: 448px;
+	}
+	#time-delivery & {
+		max-width: 576px;
+	}
+	#point-pick & {
+		max-width: 910px;
+	}
+	#pip-data & {
+		max-width: 1121px;
+	}
 	max-width: 340px;
 	border-radius: 10px;
 	position: relative;
@@ -371,11 +386,17 @@ body::after {
 		color: rgba(0, 0, 0, 0.5);
 		transition: top 0.15s, left 0.15s;
 		._label-up & {
-			top: -20%;
+			top: -22%;
 			left: 0;
 			color: $zagolovok;
 			#product-review  &.textarea-big {
 				top: -10%;
+			}
+			&[for^="address-cart"] {
+				top: -38%;
+				@media (min-width:$mobile){
+					 top: -30%; 
+				}
 			}
 		}
 		textarea + & {

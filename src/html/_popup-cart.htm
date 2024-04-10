@@ -348,3 +348,673 @@
 		</div>
 	</div>
 </div>
+
+<div id="add-address" aria-hidden="true" class="popup">
+	<div class="popup__wrapper">
+		<div class="popup__content">
+			<button data-close type="button" class="popup__close"><img src="@img/popup/close.svg" alt=""></button>
+			<div class="popup__body">
+				<h4 class="popup__title">добавить новый адрес доставки</h4>
+				<form method="post" action="#" class="popup__form">
+					<div class="popup__form-item">
+						<input id="country" required autocomplete="off" type="text" name="form[]" data-error="Ошибка" class="popup__input">
+						<label for="country" class="popup__label">страна</label>
+					</div>
+					<div class="popup__form-item">
+							<input id="city-data" required autocomplete="off" type="text" name="form[]" data-error="Ошибка" class="popup__input">
+							<label for="city-data" class="popup__label">город</label>
+					</div>
+					<div class="popup__form-item">
+							<input id="street" required autocomplete="off" type="text" name="form[]" data-error="Ошибка" class="popup__input">
+							<label for="street" class="popup__label">улица</label>
+					</div>
+					<div class="popup__form-item-group">
+						<div class="popup__form-item">
+							<input id="house" required autocomplete="off" type="text" name="form[]" data-error="Ошибка" class="popup__input">
+							<label for="house" class="popup__label">дом</label>
+						</div>
+						<div class="popup__form-item">
+							<input id="corpus" required autocomplete="off" type="text" name="form[]" data-error="Ошибка" class="popup__input">
+							<label for="corpus" class="popup__label">корпус</label>
+						</div>
+					</div>
+					<div class="popup__form-item-group">
+						<div class="popup__form-item">
+							<input id="entrance" required autocomplete="off" type="text" name="form[]" data-error="Ошибка" class="popup__input">
+							<label for="entrance" class="popup__label">подъезд</label>
+						</div>
+						<div class="popup__form-item">
+							<input id="floor" required autocomplete="off" type="text" name="form[]" data-error="Ошибка" class="popup__input">
+							<label for="floor" class="popup__label">этаж</label>
+						</div>
+					</div>
+					<div class="popup__form-item-group">
+						<div class="popup__form-item">
+							<input id="flat" required autocomplete="off" type="text" name="form[]" data-error="Ошибка" class="popup__input">
+							<label for="flat" class="popup__label">квартира</label>
+						</div>
+						<div class="popup__form-item">
+							<input id="intercom" required autocomplete="off" type="text" name="form[]" data-error="Ошибка" class="popup__input">
+							<label for="intercom" class="popup__label">домофон</label>
+						</div>
+					</div>
+					<div class="popup__form-item popup__form-item_add">
+						<button data-popup="#save-data" id="add-data" type="submit" class="popup__button">добавить</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="save-data" aria-hidden="true" class="popup">
+	<div class="popup__wrapper">
+		<div class="popup__content">
+			<div class="popup__body">
+				<form method="post" action="#" class="popup__form">
+					<div class="popup__form-item">
+						<p class="popup__text">Сохранить новые контактные данные для дальнейших заказов?</p>
+					</div>
+					<div class="popup__form-item">
+						<button id="save-data-button" type="submit" class="popup__button">сохранить</button>
+						<button type="button" class="popup__button popup__button_white">нет, не надо</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- СПОСОБЫ ДОСТАВКИ И ОПЛАТЫ. ПОДРОБНЕЕ -->
+
+<div id="courier" aria-hidden="true" class="popup popup-more">
+	<div class="popup__wrapper">
+		<div class="popup__content">
+			<button data-close type="button" class="popup__close"><img src="@img/popup/close.svg" alt=""></button>
+			<div class="popup__body">
+				<h4 class="popup__title">курьерская ДОСТАВКА</h4>
+				<div class="popup__cost"><span>0</span> руб.</div>
+				<p class="popup__text">Заказ будет доставлен Вам курьером на дом. После того, как курьер получит Ваш заказ на руки, Вам придет смс-сообщение с его мобильным номером телефона. За 30 минут до визита курьер свяжется с Вами. </p>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="express" aria-hidden="true" class="popup popup-more">
+	<div class="popup__wrapper">
+		<div class="popup__content">
+			<button data-close type="button" class="popup__close"><img src="@img/popup/close.svg" alt=""></button>
+			<div class="popup__body">
+				<h4 class="popup__title">ЭКСПРЕСС ДОСТАВКА</h4>
+				<div class="popup__cost"><span>750</span> руб.</div>
+				<p class="popup__text">Заказ будет доставлен Вам на дом (на работу) на такси. Данный тип доставки заказов предусматривает предоплату.
+					<br><br>
+					После оформления заказа, наш менеджер свяжется с Вами для подтверждения заказа. После этого, через какое-то время (обычно в течение двух-четырех часов, если заказ сделан в рабочее время), товары в Вашем заказе будут зарезервированы на нашем складе и мы сможем выслать Вам информацию по оплате заказа.
+					<br><br>
+					В связи с особенностью доставки заказов через службы такси, заказ доставляется до подъезда.
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="post" aria-hidden="true" class="popup popup-more">
+	<div class="popup__wrapper">
+		<div class="popup__content">
+			<button data-close type="button" class="popup__close"><img src="@img/popup/close.svg" alt=""></button>
+			<div class="popup__body">
+				<h4 class="popup__title">ПОЧТА РОССИИ</h4>
+				<div class="popup__cost"><span>0</span> руб.</div>
+				<p class="popup__text">Заказ будет доставлен на ваше почтовое отделение Почтой России.
+					<br><br>
+					Ниже Вы сможете выбрать удобный способ оплаты заказа, заказ будет отправлен Вам только после его оплаты. На Почтовом отделении ничего доплачивать не придется, сумма заказа уже будет включать стоимость доставки.
+				</p>
+				<form method="post" action="#" class="popup__form">
+					<div class="popup__form-item">
+						<input min="100000" max="999999" id="index" required autocomplete="off" type="number" name="form[]" data-error="Ошибка" class="popup__input">
+						<label for="index" class="popup__label">введите ваш почтовый индекс</label>
+					</div>
+					<div class="popup__form-item">
+						<button id="search-index" type="button" class="popup__button">найти</button>
+						<p class="popup__post-text">Отправка заказа будет выполнена только после оплаты.</p>
+					</div>
+				</form>
+				<div class="popup__post-result post-result">
+					<div class="post-result__item">
+						<p class="post-result__title">Почтовое отделение:</p>
+						<p class="post-result__text post-result__text_big">НОВОСИБИРСК 1</p>
+					</div>
+					<div class="post-result__item">
+						<p class="post-result__title">Адрес почтового отделения:</p>
+						<p class="post-result__text">Новосибирская Область г. Новосибирск Холодильная улица д.16</p>
+					</div>
+					<div class="post-result__item">
+						<p class="post-result__title">Телефон почтового отделения:</p>
+						<p class="post-result__text">(383) 225-55-09,(383) 225-82-92,(383) 226-47-28,(383) 228-57-74</p>
+					</div>
+					<div class="post-result__item">
+						<p class="post-result__title">Почтовый индекс:</p>
+						<p class="post-result__text">630004</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<!-- ВРЕМЯ ДОСТАВКИ -->
+<div id="time-delivery" aria-hidden="true" class="popup popup-more">
+	<div class="popup__wrapper">
+		<div class="popup__content">
+			<button data-close type="button" class="popup__close"><img src="@img/popup/close.svg" alt=""></button>
+			<div class="popup__body">
+				<h4 class="popup__title">изменить дату и время доставки</h4>
+				<div class="popup__delivery delivery-data">
+					<div class="delivery-data__current">
+						<p class="delivery-data__title">Текущая дата доставки:</p>
+						<div class="delivery-data__date">
+							<span class="delivery-data__day">11.03</span><span>.2024 </span><span class="delivery-data__time">11:00 - 14:00</span>
+						</div>
+					</div>
+					<div data-tabs class="date-select">
+						<nav data-tabs-titles class="date-select__navigation">
+							<button type="button" class="date-select__title _tab-active">
+								<span class="date-select__day">вт</span>
+								<span class="date-select__number">11.03</span>
+							</button>
+							<button type="button" class="date-select__title">
+								<span class="date-select__day">ср</span>
+								<span class="date-select__number">12.03</span>
+							</button>
+							<button type="button" class="date-select__title">
+								<span class="date-select__day">чт</span>
+								<span class="date-select__number">13.03</span>
+							</button>
+							<button type="button" class="date-select__title">
+								<span class="date-select__day">пт</span>
+								<span class="date-select__number">14.03</span>
+							</button>
+							<button type="button" class="date-select__title">
+								<span class="date-select__day">сб</span>
+								<span class="date-select__number">15.03</span>
+							</button>
+							<button type="button" class="date-select__title">
+								<span class="date-select__day">вс</span>
+								<span class="date-select__number">16.03</span>
+							</button>
+							<button type="button" class="date-select__title">
+								<span class="date-select__day">пн</span>
+								<span class="date-select__number">17.03</span>
+							</button>
+							<button type="button" class="date-select__title">
+								<span class="date-select__day">вт</span>
+								<span class="date-select__number">18.03</span>
+							</button>
+							<button type="button" class="date-select__title">
+								<span class="date-select__day">ср</span>
+								<span class="date-select__number">19.03</span>
+							</button>
+							<button type="button" class="date-select__title">
+								<span class="date-select__day">чт</span>
+								<span class="date-select__number">20.03</span>
+							</button>
+							<button type="button" class="date-select__title">
+								<span class="date-select__day">пт</span>
+								<span class="date-select__number">21.03</span>
+							</button>
+							<button type="button" class="date-select__title">
+								<span class="date-select__day">сб</span>
+								<span class="date-select__number">22.03</span>
+							</button>
+							<button type="button" class="date-select__title">
+								<span class="date-select__day">вс</span>
+								<span class="date-select__number">23.03</span>
+							</button>
+							<button type="button" class="date-select__title">
+								<span class="date-select__day">пн</span>
+								<span class="date-select__number">24.03</span>
+							</button>
+						</nav>
+						<div data-tabs-body class="date-select__content">
+							<div class="date-select__body">
+								<div class="time-dilivery">
+									<p class="delivery-data__title">Время доставки:</p>
+									<ul class="time-delivery__list">
+										<li class="time-delivery__item">09:00 — 12:00</li>
+										<li class="time-delivery__item">10:00 — 13:00</li>
+										<li class="time-delivery__item _tab-active">11:00 — 14:00</li>
+										<li class="time-delivery__item">13:00 — 16:00</li>
+										<li class="time-delivery__item">17:00 — 21:00</li>
+									</ul>
+								</div>
+							</div>
+							<div class="date-select__body">
+								<div class="time-dilivery">
+									<p class="delivery-data__title">Время доставки:</p>
+									<ul class="time-delivery__list">
+										<li class="time-delivery__item">09:00 — 12:00</li>
+										<li class="time-delivery__item">10:00 — 13:00</li>
+										<li class="time-delivery__item _tab-active">11:00 — 14:00</li>
+										<li class="time-delivery__item">13:00 — 16:00</li>
+										<li class="time-delivery__item">17:00 — 21:00</li>
+									</ul>
+								</div>
+							</div>
+							<div class="date-select__body">
+								<div class="time-dilivery">
+									<p class="delivery-data__title">Время доставки:</p>
+									<ul class="time-delivery__list">
+										<li class="time-delivery__item">09:00 — 12:00</li>
+										<li class="time-delivery__item">10:00 — 13:00</li>
+										<li class="time-delivery__item _tab-active">11:00 — 14:00</li>
+										<li class="time-delivery__item">13:00 — 16:00</li>
+										<li class="time-delivery__item">17:00 — 21:00</li>
+									</ul>
+								</div>
+							</div>
+							<div class="date-select__body">
+								<div class="time-dilivery">
+									<p class="delivery-data__title">Время доставки:</p>
+									<ul class="time-delivery__list">
+										<li class="time-delivery__item">09:00 — 12:00</li>
+										<li class="time-delivery__item">10:00 — 13:00</li>
+										<li class="time-delivery__item _tab-active">11:00 — 14:00</li>
+										<li class="time-delivery__item">13:00 — 16:00</li>
+										<li class="time-delivery__item">17:00 — 21:00</li>
+									</ul>
+								</div>
+							</div>
+							<div class="date-select__body">
+								<div class="time-dilivery">
+									<p class="delivery-data__title">Время доставки:</p>
+									<ul class="time-delivery__list">
+										<li class="time-delivery__item">09:00 — 12:00</li>
+										<li class="time-delivery__item">10:00 — 13:00</li>
+										<li class="time-delivery__item _tab-active">11:00 — 14:00</li>
+										<li class="time-delivery__item">13:00 — 16:00</li>
+										<li class="time-delivery__item">17:00 — 21:00</li>
+									</ul>
+								</div>
+							</div>
+							<div class="date-select__body">
+								<div class="time-dilivery">
+									<p class="delivery-data__title">Время доставки:</p>
+									<ul class="time-delivery__list">
+										<li class="time-delivery__item">09:00 — 12:00</li>
+										<li class="time-delivery__item">10:00 — 13:00</li>
+										<li class="time-delivery__item _tab-active">11:00 — 14:00</li>
+										<li class="time-delivery__item">13:00 — 16:00</li>
+										<li class="time-delivery__item">17:00 — 21:00</li>
+									</ul>
+								</div>
+							</div>
+							<div class="date-select__body">
+								<div class="time-dilivery">
+									<p class="delivery-data__title">Время доставки:</p>
+									<ul class="time-delivery__list">
+										<li class="time-delivery__item">09:00 — 12:00</li>
+										<li class="time-delivery__item">10:00 — 13:00</li>
+										<li class="time-delivery__item _tab-active">11:00 — 14:00</li>
+										<li class="time-delivery__item">13:00 — 16:00</li>
+										<li class="time-delivery__item">17:00 — 21:00</li>
+									</ul>
+								</div>
+							</div>
+							<div class="date-select__body">
+								<div class="time-dilivery">
+									<p class="delivery-data__title">Время доставки:</p>
+									<ul class="time-delivery__list">
+										<li class="time-delivery__item">09:00 — 12:00</li>
+										<li class="time-delivery__item">10:00 — 13:00</li>
+										<li class="time-delivery__item _tab-active">11:00 — 14:00</li>
+										<li class="time-delivery__item">13:00 — 16:00</li>
+										<li class="time-delivery__item">17:00 — 21:00</li>
+									</ul>
+								</div>
+							</div>
+							<div class="date-select__body">
+								<div class="time-dilivery">
+									<p class="delivery-data__title">Время доставки:</p>
+									<ul class="time-delivery__list">
+										<li class="time-delivery__item">09:00 — 12:00</li>
+										<li class="time-delivery__item">10:00 — 13:00</li>
+										<li class="time-delivery__item _tab-active">11:00 — 14:00</li>
+										<li class="time-delivery__item">13:00 — 16:00</li>
+										<li class="time-delivery__item">17:00 — 21:00</li>
+									</ul>
+								</div>
+							</div>
+							<div class="date-select__body">
+								<div class="time-dilivery">
+									<p class="delivery-data__title">Время доставки:</p>
+									<ul class="time-delivery__list">
+										<li class="time-delivery__item">09:00 — 12:00</li>
+										<li class="time-delivery__item">10:00 — 13:00</li>
+										<li class="time-delivery__item _tab-active">11:00 — 14:00</li>
+										<li class="time-delivery__item">13:00 — 16:00</li>
+										<li class="time-delivery__item">17:00 — 21:00</li>
+									</ul>
+								</div>
+							</div>
+							<div class="date-select__body">
+								<div class="time-dilivery">
+									<p class="delivery-data__title">Время доставки:</p>
+									<ul class="time-delivery__list">
+										<li class="time-delivery__item">09:00 — 12:00</li>
+										<li class="time-delivery__item">10:00 — 13:00</li>
+										<li class="time-delivery__item _tab-active">11:00 — 14:00</li>
+										<li class="time-delivery__item">13:00 — 16:00</li>
+										<li class="time-delivery__item">17:00 — 21:00</li>
+									</ul>
+								</div>
+							</div>
+							<div class="date-select__body">
+								<div class="time-dilivery">
+									<p class="delivery-data__title">Время доставки:</p>
+									<ul class="time-delivery__list">
+										<li class="time-delivery__item">09:00 — 12:00</li>
+										<li class="time-delivery__item">10:00 — 13:00</li>
+										<li class="time-delivery__item _tab-active">11:00 — 14:00</li>
+										<li class="time-delivery__item">13:00 — 16:00</li>
+										<li class="time-delivery__item">17:00 — 21:00</li>
+									</ul>
+								</div>
+							</div>
+							<div class="date-select__body">
+								<div class="time-dilivery">
+									<p class="delivery-data__title">Время доставки:</p>
+									<ul class="time-delivery__list">
+										<li class="time-delivery__item">09:00 — 12:00</li>
+										<li class="time-delivery__item">10:00 — 13:00</li>
+										<li class="time-delivery__item _tab-active">11:00 — 14:00</li>
+										<li class="time-delivery__item">13:00 — 16:00</li>
+										<li class="time-delivery__item">17:00 — 21:00</li>
+									</ul>
+								</div>
+							</div>
+							<div class="date-select__body">
+								<div class="time-dilivery">
+									<p class="delivery-data__title">Время доставки:</p>
+									<ul class="time-delivery__list">
+										<li class="time-delivery__item">09:00 — 12:00</li>
+										<li class="time-delivery__item">10:00 — 13:00</li>
+										<li class="time-delivery__item _tab-active">11:00 — 14:00</li>
+										<li class="time-delivery__item">13:00 — 16:00</li>
+										<li class="time-delivery__item">17:00 — 21:00</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- ПУНКТЫ ВЫДАЧИ -->
+<div id="point-pick" aria-hidden="true" class="popup popup-more">
+	<div class="popup__wrapper">
+		<div class="popup__content">
+			<button data-close type="button" class="popup__close"><img src="@img/popup/close.svg" alt=""></button>
+			<div class="popup__body">
+				<h4 class="popup__title">пункты выдачи заказа</h4>
+				<div class="popup__point pip">
+					<div class="pip__body">
+						<div data-tabs class="pip">
+							<nav data-tabs-titles class="pip__navigation">
+								<button type="button" class="tabs__title pip__title _tab-active">СПИСОК</button>
+								<button type="button" class="tabs__title pip__title ">КАРТА</button>
+							</nav>
+							<div data-tabs-body class="pip__content">
+								<div class="pip__body">
+									<ul class="pip__list">
+										<li class="pip__item">
+											<p class="pip__text">ул. Аменжинского, д.32, кор.1, тел:+7-495-120-29-26, доб. 25</p>
+											<div class="pip__cost"><span>195</span>руб.</div>
+											<div class="pip__button"><button data-popup="#pip-data" class="bottom-calc__button" type="button">Подробнее</button></div>
+										</li>
+										<li class="pip__item">
+											<p class="pip__text">ул. Аменжинского, д.32, кор.1, тел:+7-495-120-29-26, доб. 25</p>
+											<div class="pip__cost"><span>195</span>руб.</div>
+											<div class="pip__button"><button data-popup="#pip-data" class="bottom-calc__button" type="button">Подробнее</button></div>
+										</li>
+										<li class="pip__item">
+											<p class="pip__text">ул. Аменжинского, д.32, кор.1, тел:+7-495-120-29-26, доб. 25</p>
+											<div class="pip__cost"><span>195</span>руб.</div>
+											<div class="pip__button"><button data-popup="#pip-data" class="bottom-calc__button" type="button">Подробнее</button></div>
+										</li>
+										<li class="pip__item">
+											<p class="pip__text">ул. Аменжинского, д.32, кор.1, тел:+7-495-120-29-26, доб. 25</p>
+											<div class="pip__cost"><span>195</span>руб.</div>
+											<div class="pip__button"><button data-popup="#pip-data" class="bottom-calc__button" type="button">Подробнее</button></div>
+										</li>
+										<li class="pip__item">
+											<p class="pip__text">ул. Аменжинского, д.32, кор.1, тел:+7-495-120-29-26, доб. 25</p>
+											<div class="pip__cost"><span>195</span>руб.</div>
+											<div class="pip__button"><button data-popup="#pip-data" class="bottom-calc__button" type="button">Подробнее</button></div>
+										</li>
+										<li class="pip__item">
+											<p class="pip__text">ул. Аменжинского, д.32, кор.1, тел:+7-495-120-29-26, доб. 25</p>
+											<div class="pip__cost"><span>195</span>руб.</div>
+											<div class="pip__button"><button data-popup="#pip-data" class="bottom-calc__button" type="button">Подробнее</button></div>
+										</li>
+										<li class="pip__item">
+											<p class="pip__text">ул. Аменжинского, д.32, кор.1, тел:+7-495-120-29-26, доб. 25</p>
+											<div class="pip__cost"><span>195</span>руб.</div>
+											<div class="pip__button"><button data-popup="#pip-data" class="bottom-calc__button" type="button">Подробнее</button></div>
+										</li>
+										<li class="pip__item">
+											<p class="pip__text">ул. Аменжинского, д.32, кор.1, тел:+7-495-120-29-26, доб. 25</p>
+											<div class="pip__cost"><span>195</span>руб.</div>
+											<div class="pip__button"><button data-popup="#pip-data" class="bottom-calc__button" type="button">Подробнее</button></div>
+										</li>
+										<li class="pip__item">
+											<p class="pip__text">ул. Аменжинского, д.32, кор.1, тел:+7-495-120-29-26, доб. 25</p>
+											<div class="pip__cost"><span>195</span>руб.</div>
+											<div class="pip__button"><button data-popup="#pip-data" class="bottom-calc__button" type="button">Подробнее</button></div>
+										</li>
+										<li class="pip__item">
+											<p class="pip__text">ул. Аменжинского, д.32, кор.1, тел:+7-495-120-29-26, доб. 25</p>
+											<div class="pip__cost"><span>195</span>руб.</div>
+											<div class="pip__button"><button data-popup="#pip-data" class="bottom-calc__button" type="button">Подробнее</button></div>
+										</li>
+										<li class="pip__item">
+											<p class="pip__text">ул. Аменжинского, д.32, кор.1, тел:+7-495-120-29-26, доб. 25</p>
+											<div class="pip__cost"><span>195</span>руб.</div>
+											<div class="pip__button"><button data-popup="#pip-data" class="bottom-calc__button" type="button">Подробнее</button></div>
+										</li>
+										<li class="pip__item">
+											<p class="pip__text">ул. Аменжинского, д.32, кор.1, тел:+7-495-120-29-26, доб. 25</p>
+											<div class="pip__cost"><span>195</span>руб.</div>
+											<div class="pip__button"><button data-popup="#pip-data" class="bottom-calc__button" type="button">Подробнее</button></div>
+										</li>
+										<li class="pip__item">
+											<p class="pip__text">ул. Аменжинского, д.32, кор.1, тел:+7-495-120-29-26, доб. 25</p>
+											<div class="pip__cost"><span>195</span>руб.</div>
+											<div class="pip__button"><button data-popup="#pip-data" class="bottom-calc__button" type="button">Подробнее</button></div>
+										</li>
+										<li class="pip__item">
+											<p class="pip__text">ул. Аменжинского, д.32, кор.1, тел:+7-495-120-29-26, доб. 25</p>
+											<div class="pip__cost"><span>195</span>руб.</div>
+											<div class="pip__button"><button data-popup="#pip-data" class="bottom-calc__button" type="button">Подробнее</button></div>
+										</li>
+										<li class="pip__item">
+											<p class="pip__text">ул. Аменжинского, д.32, кор.1, тел:+7-495-120-29-26, доб. 25</p>
+											<div class="pip__cost"><span>195</span>руб.</div>
+											<div class="pip__button"><button data-popup="#pip-data" class="bottom-calc__button" type="button">Подробнее</button></div>
+										</li>
+										<li class="pip__item"> 
+											<p class="pip__text">ул. Аменжинского, д.32, кор.1, тел:+7-495-120-29-26, доб. 25</p>
+											<div class="pip__cost"><span>195</span>руб.</div>
+											<div class="pip__button"><button data-popup="#pip-data" class="bottom-calc__button" type="button">Подробнее</button></div>
+										</li>
+										<li class="pip__item">
+											<p class="pip__text">ул. Аменжинского, д.32, кор.1, тел:+7-495-120-29-26, доб. 25</p>
+											<div class="pip__cost"><span>195</span>руб.</div>
+											<div class="pip__button"><button data-popup="#pip-data" class="bottom-calc__button" type="button">Подробнее</button></div>
+										</li>
+										<li class="pip__item">
+											<p class="pip__text">ул. Аменжинского, д.32, кор.1, тел:+7-495-120-29-26, доб. 25</p>
+											<div class="pip__cost"><span>195</span>руб.</div>
+											<div class="pip__button"><button data-popup="#pip-data" class="bottom-calc__button" type="button">Подробнее</button></div>
+										</li>
+										<li class="pip__item"> 
+											<p class="pip__text">ул. Аменжинского, д.32, кор.1, тел:+7-495-120-29-26, доб. 25</p>
+											<div class="pip__cost"><span>195</span>руб.</div>
+											<div class="pip__button"><button data-popup="#pip-data" class="bottom-calc__button" type="button">Подробнее</button></div>
+										</li>
+										<li class="pip__item">
+											<p class="pip__text">ул. Аменжинского, д.32, кор.1, тел:+7-495-120-29-26, доб. 25</p>
+											<div class="pip__cost"><span>195</span>руб.</div>
+											<div class="pip__button"><button data-popup="#pip-data" class="bottom-calc__button" type="button">Подробнее</button></div>
+										</li>
+										<li class="pip__item">
+											<p class="pip__text">ул. Аменжинского, д.32, кор.1, тел:+7-495-120-29-26, доб. 25</p>
+											<div class="pip__cost"><span>195</span>руб.</div>
+											<div class="pip__button"><button data-popup="#pip-data" class="bottom-calc__button" type="button">Подробнее</button></div>
+										</li>
+										<li class="pip__item"> 
+											<p class="pip__text">ул. Аменжинского, д.32, кор.1, тел:+7-495-120-29-26, доб. 25</p>
+											<div class="pip__cost"><span>195</span>руб.</div>
+											<div class="pip__button"><button data-popup="#pip-data" class="bottom-calc__button" type="button">Подробнее</button></div>
+										</li>
+										<li class="pip__item">
+											<p class="pip__text">ул. Аменжинского, д.32, кор.1, тел:+7-495-120-29-26, доб. 25</p>
+											<div class="pip__cost"><span>195</span>руб.</div>
+											<div class="pip__button"><button data-popup="#pip-data" class="bottom-calc__button" type="button">Подробнее</button></div>
+										</li>
+										<li class="pip__item">
+											<p class="pip__text">ул. Аменжинского, д.32, кор.1, тел:+7-495-120-29-26, доб. 25</p>
+											<div class="pip__cost"><span>195</span>руб.</div>
+											<div class="pip__button"><button data-popup="#pip-data" class="bottom-calc__button" type="button">Подробнее</button></div>
+										</li>
+										<li class="pip__item"> 
+											<p class="pip__text">ул. Аменжинского, д.32, кор.1, тел:+7-495-120-29-26, доб. 25</p>
+											<div class="pip__cost"><span>195</span>руб.</div>
+											<div class="pip__button"><button data-popup="#pip-data" class="bottom-calc__button" type="button">Подробнее</button></div>
+										</li>
+										<li class="pip__item">
+											<p class="pip__text">ул. Аменжинского, д.32, кор.1, тел:+7-495-120-29-26, доб. 25</p>
+											<div class="pip__cost"><span>195</span>руб.</div>
+											<div class="pip__button"><button data-popup="#pip-data" class="bottom-calc__button" type="button">Подробнее</button></div>
+										</li>
+										<li class="pip__item">
+											<p class="pip__text">ул. Аменжинского, д.32, кор.1, тел:+7-495-120-29-26, доб. 25</p>
+											<div class="pip__cost"><span>195</span>руб.</div>
+											<div class="pip__button"><button data-popup="#pip-data" class="bottom-calc__button" type="button">Подробнее</button></div>
+										</li>
+									</ul>
+								</div>
+								<div class="pip__body">
+									<div class="pip__maps maps-pip">
+										<div class="maps-pip__control">
+											<div class="checkbox">
+												<input checked id="iml" data-error="Ошибка" class="checkbox__input" type="checkbox" value="Chanel" name="form[]">
+												<label for="iml" class="checkbox__label">
+													<span class="checkbox__body"></span>
+													<span class="checkbox__text">IML</span>
+												</label>
+											</div>
+											<div class="checkbox">
+												<input checked id="Boxberry" data-error="Ошибка" class="checkbox__input" type="checkbox" value="Chanel" name="form[]">
+												<label for="Boxberry" class="checkbox__label">
+													<span class="checkbox__body"></span>
+													<span class="checkbox__text">Boxberry</span>
+												</label>
+											</div>
+											<div class="checkbox">
+												<input checked id="PICKPOINT" data-error="Ошибка" class="checkbox__input" type="checkbox" value="Chanel" name="form[]">
+												<label for="PICKPOINT" class="checkbox__label">
+													<span class="checkbox__body"></span>
+													<span class="checkbox__text">PICKPOINT</span>
+												</label>
+											</div>
+										</div>
+										<div class="maps-pip__body">
+											<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A7dd6e2e9114485cb5a7ac17d929be9b81115de1b6fcae8db2ea400306d97e215&amp;source=constructor" width="689" height="472" frameborder="0"></iframe>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- ОПИСАНИЕ ПУНКТА -->
+<div id="pip-data" aria-hidden="true" class="popup popup-more">
+	<div class="popup__wrapper">
+		<div class="popup__content">
+			<button data-close type="button" class="popup__close"><img src="@img/popup/close.svg" alt=""></button>
+			<div class="popup__body">
+				<button type="button" data-popup="#point-pick" class="popup__title">
+					<span class="popup__img">
+						<img src="@img/search/arrow-search-spoiler.svg" alt="">
+					</span>
+					<span>назад</span>
+				</button>
+				<div class="popup__pip-data pip-item">
+					<p class="pip-item__text">ул. Менжинского, д.32, кор.1, тел:+7-495-120-29-26, доб. 25</p>
+					<div class="pip-item__content">
+						<div class="pip-item__img">
+							<img src="@img/cart/main-cart/punkt.jpg" alt="">
+						</div>
+						<div class="popup__post-result post-result">
+							<div class="post-result__item">
+								<p class="post-result__title">Адрес:</p>
+								<p class="post-result__text">г. Апрелевка (Наро-Фоминский городской округ) ул. Островского д. 38</p>
+							</div>
+							<div class="post-result__item">
+								<p class="post-result__title">Телефон:</p>
+								<p class="post-result__text">+7 (495) 120-29-26, доб. 22</p>
+							</div>
+							<div class="post-result__item">
+								<p class="post-result__title">Режим работы:</p>
+								<p class="post-result__text">Пн-Пт: с 10:30 до 19:00, Сб: с 10:30 до 16:00, Вс: Выходной</p>
+							</div>
+							<div class="post-result__item">
+								<p class="post-result__title">Тип оплаты:</p>
+								<p class="post-result__text">выдача заказов с оплатой по факту получения и предоплаченных</p>
+							</div>
+						</div>
+						<div class="pip-item__button"><button type="button" class="popup__button">выбрать</button></div>
+					</div>
+					<div class="pip-item__maps">
+						<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A7dd6e2e9114485cb5a7ac17d929be9b81115de1b6fcae8db2ea400306d97e215&amp;source=constructor" width="689" height="518" frameborder="0"></iframe>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Способы оплаты -->
+
+<div id="money" aria-hidden="true" class="popup popup-more">
+	<div class="popup__wrapper">
+		<div class="popup__content">
+			<button data-close type="button" class="popup__close"><img src="@img/popup/close.svg" alt=""></button>
+			<div class="popup__body">
+				<h4 class="popup__title">наличные курьеру</h4>
+				<p class="popup__text">Оплата заказа производится курьеру наличными деньгами при получении заказа.</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="bank-card" aria-hidden="true" class="popup popup-more">
+	<div class="popup__wrapper">
+		<div class="popup__content">
+			<button data-close type="button" class="popup__close"><img src="@img/popup/close.svg" alt=""></button>
+			<div class="popup__body">
+				<h4 class="popup__title">Банковская карта</h4>
+				<p class="popup__text">Оплата покупки производится на сайте процессингового центра платежной системы «RBK Money» после подтверждения заказа менеджером магазина. Сразу после подтверждения наличия товара на складе Вам будет направлено письмо со ссылкой на страницу оплаты. Оплата займет у Вас не более двух минут. Обратите внимание, что карты Visa Electron являются упрощенными и оплата ими может не проходить через процессинговый центр. Если Вы являетесь владельцем такой карты, рекомендуем Вам выбрать другой способ оплаты.</p>
+			</div>
+		</div>
+	</div>
+</div>

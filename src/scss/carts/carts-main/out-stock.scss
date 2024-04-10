@@ -39,6 +39,13 @@
 	}
 
 	&__text {
+		cursor: pointer;
 		font-style: italic;
+		@media (max-width:$tablet){
+			font-size: 20px;
+		}
+		@media (max-width:$mobile){
+			 @include adaptiveValue("font-size", 30, 13,0,768,320); 
+		}
 	}
 }

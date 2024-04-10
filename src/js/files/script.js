@@ -6,7 +6,9 @@ import { flsModules } from "./modules.js";
 window.addEventListener('DOMContentLoaded', () => {
 	document.addEventListener("click", documentActions);
 	let flag = true;
-	let flagCart = true
+	let flagCart = true;
+	let flagred = true;
+	let flagSwitch = true;
 	function documentActions(e) {
 		const targetElement = e.target;
 
@@ -49,7 +51,7 @@ window.addEventListener('DOMContentLoaded', () => {
 		}
 
 		//Поднятие плейсхолдера в модальных окнах на место заголовка при фокусе на инпут
-		if (targetElement.closest('input') || targetElement.closest('textarea')) {
+		if (targetElement.closest('input') || targetElement.closest('textarea') || targetElement.closest('span')) {
 			targetElement.closest('.popup__form-item') ? targetElement.closest('.popup__form-item').classList.add('_label-up') : null
 		}
 		//Открытие/скрытие строки поиска
@@ -287,7 +289,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
 		// Счётчик символов в textarea на странице "отзыв о магазине"
 		if (targetElement.closest('textarea')) {
-			if (targetElement.closest('.popup__form-item')) {
+			if (targetElement.closest('.popup__form-item') && !targetElement.closest('.address__group_textarea')) {
 				const taComments = targetElement.closest('.popup__form-item').querySelector('textarea') // textarea
 				const counter = targetElement.closest('.popup__form-item').querySelector('.comment__number-symbols') // счётчик
 				taComments ? taComments.addEventListener('input', onInput) : null
@@ -317,7 +319,6 @@ window.addEventListener('DOMContentLoaded', () => {
 		//Закрытие сабменю номеров заказа в попапе
 		if (!targetElement.closest('#number-order') && document.getElementById('number-order')) {
 			if(inputOrder.closest('.popup__form-item').querySelector('.popup__submenu').classList.contains('_popup-submenu-open')) {
-				console.log('12');
 				inputOrder.closest('.popup__form-item').querySelector('.popup__submenu').classList.remove('_popup-submenu-open')
 			}
 		}
@@ -405,7 +406,6 @@ window.addEventListener('DOMContentLoaded', () => {
 				cartHeader.classList.remove('_cart-active')
 			} , 2000)
 		}
-		// console.log(flagCart);
 		// Корзина главная страница чекбокс "выбрать всё"
 		if (targetElement.closest('.checkbox-cart-check-all') && flagCart == true) {
 			const cartCheck = targetElement.closest('.main-cart').querySelectorAll('.checkbox__input')
@@ -415,7 +415,6 @@ window.addEventListener('DOMContentLoaded', () => {
 			});
 		} else if (targetElement.closest('.checkbox-cart-check-all') && flagCart == false) {
 			flagCart = true
-			console.log(2);
 			const cartCheck = targetElement.closest('.main-cart').querySelectorAll('.checkbox__input')
 			cartCheck.forEach(element => {
 				element.checked = false;
@@ -466,6 +465,85 @@ window.addEventListener('DOMContentLoaded', () => {
 				targetElement.closest('form').classList.remove('_done-code')
 				targetElement.closest('form').classList.add('_error-code')
 			}
+		}
+		
+		//Переключаю свитч при нажатии на сам текст
+		if (targetElement.closest('.out__text') && flagSwitch == true) {
+			flagSwitch = false;
+			targetElement.closest('.out__checkbox').querySelector('input').checked = true
+		}	else if(targetElement.closest('.out__text') && flagSwitch == false) {
+				flagSwitch = true;
+				targetElement.closest('.out__checkbox').querySelector('input').checked = false;
+			}
+		
+
+		//Выбор метода доставки
+		if (targetElement.closest('.bottom-calc__item') && document.querySelector('.method')) {
+			const metods = targetElement.closest('.method').querySelectorAll('.bottom-calc__item')
+			metods.forEach(element => {
+				element.classList.remove('_method-active')
+			});
+			targetElement.closest('.bottom-calc__item').classList.add('_method-active')
+		}
+
+		//Редактировать адрес
+		if (targetElement.closest('.edit') && flagred == true) {
+			flagred = false
+			const inputAddress = targetElement.closest('form').querySelectorAll('input');
+			inputAddress.forEach(element => {
+				element.removeAttribute('disabled')
+			});
+			targetElement.closest('form').querySelector('.address__group_optional').style.display = 'flex'
+		} else if (targetElement.closest('.edit') && flagred == false) {
+			flagred = true;
+			const inputAddress = targetElement.closest('form').querySelectorAll('input');
+			inputAddress.forEach(element => {
+				element.setAttribute('disabled', '')
+			});
+			targetElement.closest('form').querySelector('.address__group_optional').style.display = 'none'
+		}
+
+		//ОТкрытие скрытие списка адресов заказсчика
+		if (targetElement.closest('#address-cart')) {
+			targetElement.closest('.popup__form-item').querySelector('.popup__submenu').classList.toggle('_popup-submenu-open')
+		}
+
+		//Вставляю новый адрес в свою строку
+		const addressCart = document.getElementById('address-cart')
+		if (targetElement.closest('.submenu-item__address')) {
+			addressCart.value = targetElement.closest('.submenu-item__address').innerText;
+		}
+
+		//Закрытие списка адресов при клике не на сабменю
+		if (!targetElement.closest('#address-cart') && document.getElementById('address-cart')) {
+			if(addressCart.closest('.popup__form-item').querySelector('.popup__submenu').classList.contains('_popup-submenu-open')) {
+				addressCart.closest('.popup__form-item').querySelector('.popup__submenu').classList.remove('_popup-submenu-open')
+			}
+		}
+
+		//Открытие результатов поиска почтового отделения.
+		if (targetElement.closest('#search-index')) {
+			const inputIndex = targetElement.closest('form').querySelector('input')
+			if (!inputIndex.value == '') {
+				targetElement.closest('.popup__body').querySelector('.post-result').style.display ='block'
+			}
+		}
+
+		//Изменение времени доставки в попапе и присвоение на страницах корзина и калькулятор 
+		if (targetElement.closest('.time-delivery__item')) {
+			const timeList = targetElement.closest('.time-delivery__list').querySelectorAll('.time-delivery__item')
+			timeList.forEach(element => {
+				element.classList.remove('_tab-active')
+				targetElement.classList.add('_tab-active')
+			});
+			let timeDelivery = targetElement.innerText;
+			document.querySelector('._method-active .delivery__time').innerText = timeDelivery;
+		}
+
+		//Присвоение выбранной даты доставки в поля на страницах корзина и калькулятор
+		if (targetElement.closest('.date-select__title')) {
+			let dateDelivery = targetElement.closest('.date-select__title').querySelector('.date-select__number').innerText;
+			document.querySelector('._method-active .delivery__day').innerText = dateDelivery;
 		}
 	}
 });
@@ -677,6 +755,19 @@ document.addEventListener("DOMContentLoaded", () => {
 			buttonMinus.style.visibility = 'hidden'
 		}
 	});
+
+	//Изменяю вид добавления адреса, если зашёл гость
+	if (document.querySelector('.guest')) {
+		const adressWrapper =document.querySelector('.address__wrapper');
+		if (adressWrapper) {
+			const inputAdress = adressWrapper.querySelectorAll('.popup__input');
+			inputAdress.forEach(element => {
+				element.removeAttribute('disabled');
+				element.value = '';
+				element.closest('.popup__form-item').classList.remove('_label-up')
+			});
+		}
+	}
 });
 
 

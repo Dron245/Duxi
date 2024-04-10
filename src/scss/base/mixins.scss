@@ -102,6 +102,7 @@
 @mixin scroll-view {
 	&::-webkit-scrollbar {
 		width: 5px; /* Ширина всего элемента навигации */
+		
 	}
 	
 	&::-webkit-scrollbar-track {

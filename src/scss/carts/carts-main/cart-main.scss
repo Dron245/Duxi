@@ -4,7 +4,9 @@
 	}
 }
 .basket {
-	
+	.recently {
+		margin-top: 60px;
+	}
 	.recently__container {
 		@media (min-width:$mobile){
 			 padding-left: 30px;
