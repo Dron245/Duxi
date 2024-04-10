@@ -169,6 +169,11 @@
 
 	&__list {
 	}
+	&__discount {
+		display: flex;
+		flex-direction: column;
+		row-gap: 10px;
+	}
 }
 .list-aside {
 	margin-top: 10px;
@@ -181,6 +186,7 @@
 	}
 
 	&__button {
+		text-align: left;
 		color: $tekst-zagolovok-ne-aktivnyy;
 		text-decoration: underline;
 		@media (max-width:$tablet){

@@ -10,7 +10,10 @@
 	.recently__container {
 		@media (min-width:$mobile){
 			 padding-left: 30px;
-			 padding-right: 30px; 
+			 padding-right: 30px;
+			 .recently__title {
+				margin-left: -15px;
+			 }
 		}
 	}
 	&__container {
@@ -216,6 +219,10 @@
 		position: absolute;
 		right: 15px;
 		top: 15px;
+		@media (max-width:$mobileSmall){
+			 right: 8px;
+			 top: 8px; 
+		}
 		@include adaptiveValue("width", 31, 15,0,768,320);
 		img {
 			width: 100%;
@@ -403,25 +410,25 @@
 	}
 }
 .info-cart {
-	display: flex;
+	// outline: 1px solid red;
+	display: grid;
+	grid-template-columns: 90px auto;
 	align-items: center;
 	gap: 40px;
 	@media (min-width:$mobile){
 		 padding-right: 7px; 
 	}
 	@media (max-width:$tablet){
+		grid-template-columns: 118px auto;
 		gap: 10px;
+	}
+	@media (max-width:$mobile){
+		grid-template-columns: 27% auto;
 	}
 	@media (max-width:$mobileSmall){
 		 gap: 5px; 
 	}
 	&__img {
-		// flex: 0 0 20%;
-		width: 90px;
-		@media (max-width:$mobile){
-			@include adaptiveValue("width", 174, 75,0,768,320);
-			//  flex: 0 0 27.2%; /* 174/700 */
-		}
 		img {
 			width: 100%;
 			height: auto;
@@ -435,6 +442,7 @@
 		.product__action {
 			height: auto;
 		}
+		flex: 0 0 73%;
 		display: flex;
 		flex-direction: column;
 		row-gap: 5px;
@@ -514,9 +522,7 @@
 		display: grid;
 		gap: 20px;
 		grid-template-columns: 43.037975% 1fr;
-		@media (max-width:$pcSmall){
-			  
-		}
+		
 		@media (max-width:$tablet){
 			grid-template-columns: 1fr 1fr;
 		}
@@ -609,17 +615,34 @@
 }
 
 .banner-present {
+	position: relative;
+	overflow: hidden;
 	align-self: start;
 	border-radius: 16px;
-	background: radial-gradient(441.52% 132.5% at 0% 6.2%, #FF6892 0%, #941236 100%);
 	padding: 20px;
 	line-height: normal;
 	display: flex;
 	flex-direction: column;
 	gap: 10px;
 	align-items: center;
+	// outline: 1px solid blue;
+	// z-index: 2;
+	&::after{
+		content:'';
+		position: absolute;
+		width: 500%;
+		height: 783%;
+		top: -87%;
+		transform: rotate(-90deg);
+		left: -200%;
+		z-index: 0;
+		background: radial-gradient(441.52% 132.5% at 0% 6.2%, #FF6892 0%, #941236 100%);
+		// background: red;
 
+	}
 	&__text {
+		position: relative;
+		z-index: 1;
 		display: flex;
 		align-items: center;
 		gap: toRem(10);
@@ -644,6 +667,8 @@
 	}
 
 	&__light {
+		position: relative;
+		z-index: 1;
 		display: flex;
 		align-items: center;
 		justify-content: center;

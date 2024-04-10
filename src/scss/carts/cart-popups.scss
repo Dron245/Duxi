@@ -487,30 +487,33 @@ background: #FFF;
 	&__content {
 		border: 1px solid #F3DADE;
 		padding: 20px toRem(12);
-		
+		padding-right: 0;
+		overflow-y: auto;
+		overflow-x: hidden;
+		@include scroll-view;
+		padding-right: 5px;
+		max-height: 575px;
 	}
 
 	&__list {
 		display: grid;
 		gap: 10px;
 		grid-template-columns: repeat(auto-fit, (minmax(270px, 1fr)));
-		// grid-template-columns: 1fr 1fr 1fr;
-		overflow-y: auto;
-		overflow-x: hidden;
-		@include scroll-view;
-		padding-right: 5px;
-		max-height: 550px;
+		
 	}
 
 	&__item {
+		cursor: pointer;
 		border-radius: 16px;
 		border: 1px solid #F9EFF2;
 		background: #FFF;
 		display: grid;
 		grid-template-columns: 77% 1fr;
 		row-gap: 5px;
-		// justify-content: space-between;
 		padding: 10px 5px 5px 10px;
+		&._choose-punkt {
+			box-shadow: 2px 2px 8px 0px rgba(187, 144, 144, 0.10), -2px -2px 8px 0px rgba(187, 144, 144, 0.10), -10px -10px 10px 0px rgba(187, 144, 144, 0.10), 10px 10px 10px 0px rgba(187, 144, 144, 0.10);
+		}
 	}
 
 	&__text {
@@ -657,7 +660,9 @@ background: #FFF;
 		#pip-data & {
 			margin-top: 20px;
 			width: 100%;
-			@include adaptiveValue("font-size", 48, 20,0,768,320);
+			@media (max-width:$mobile){
+				@include adaptiveValue("font-size", 48, 20,0,768,320);
+			}
 		}
 	}
 }
@@ -687,7 +692,14 @@ background: #FFF;
 	}
 
 	&__img {
-		
+		width: 162px;
+		img {
+			width: 100%;
+			height: auto;
+		}
+		@media (max-width:$mobile){
+			@include adaptiveValue("width", 340, 220,0,768,320);
+		}
 	}
 
 	&__button {
@@ -711,13 +723,17 @@ background: #FFF;
 
 	&__title {
 		#pip-data & {
-			@include adaptiveValue("font-size", 30, 16,0,768,320);
+			@media (max-width:$mobile){
+				@include adaptiveValue("font-size", 30, 16,0,768,320);
+			}
 		}
 	}
 
 	&__text {
 		#pip-data & {
-			@include adaptiveValue("font-size", 30, 16,0,768,320);
+			@media (max-width:$mobile){
+				@include adaptiveValue("font-size", 30, 16,0,768,320);
+			}
 		}
 	}
 }

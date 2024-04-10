@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Корзина главная"
+})
+
+	<body>
+		<div class="wrapper">
+			@@include('html/_header-guest.htm',{})
+			<main class="page basket guest">
+				<div class="basket__container">
+					<div class="basket__content">
+						<section class="basket__main main-cart">
+							<h1 class="main-cart__title">корзина</h1>
+							<div class="main-cart__top top-cart">
+								<span class="top-cart__text">Бесплатно</span>
+								<p class="top-cart__sub-text">Мы доставим заказ в любой город России абсолютно бесплатно при покупке на сумму от <span>5 000 руб.</span></p>
+								<span class="top-cart__text">Подарок</span>
+								<p class="top-cart__sub-text">При оформлении заказе от <span>3 000 руб.</span></p>
+							</div>
+							<div class="main-cart__actions actions-cart">
+								<div class="actions-cart__top">
+									<div class="actions-cart__check">
+										<div class="checkbox">
+											<input id="cart-all" data-error="Ошибка" class="checkbox__input checkbox-cart-check-all" type="checkbox" value="Chanel" name="form[]">
+											<label for="cart-all" class="checkbox__label">
+												<span class="checkbox__body"></span>
+												<span class="checkbox__text">Выбрать все</span>
+											</label>
+										</div>
+									</div>
+									<button type="button" class="actions-cart__button button-light">удалить все товары</button>
+								</div>
+							</div>
+							<div class="main-cart__list list-cart">
+								<article class="list-cart__item">
+									<button type="button" class="list-cart__item-close"><img src="@img/cart/main-cart/close-item.svg" alt=""></button>
+									<div class="list-cart__ceil">
+										<div class="list-cart__check">
+											<div class="checkbox">
+												<input id="cart-1" data-error="Ошибка" class="checkbox__input" type="checkbox" value="" name="form[]">
+												<label for="cart-1" class="checkbox__label">
+													<span class="checkbox__body"></span>
+												</label>
+											</div>
+										</div>
+										<div class="list-cart__info info-cart">
+											<div class="info-cart__img">
+												<img src="@img/cart/main-cart/list-item-photo.png" alt="">
+											</div>
+											<div class="info-cart__info">
+												<div class="info-cart__actions product__actions">
+													<button class="product__action"><img data-popup="#add-list"
+															src="@img/home/add-spisok.svg" data-popup="#add-list"  alt="Добавить в список сравнения">
+													</button>
+													<button class="product__action">
+														<svg class="product__favorite" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"> 
+															<path d="M16.906 11.046C18.217 7.778 18.873 6.144 20 6.144c1.127 0 1.783 1.634 3.094 4.902l.06.152c.741 1.847 1.112 2.77 1.866 3.331.755.561 1.746.65 3.727.827l.359.033c3.243.29 4.864.435 5.211 1.467.347 1.031-.857 2.127-3.265 4.318l-.804.731c-1.22 1.11-1.829 1.664-2.113 2.391a3.342 3.342 0 0 0-.132.416c-.187.758-.008 1.562.349 3.171l.11.501c.657 2.957.985 4.436.412 5.074-.214.238-.492.41-.8.494-.828.226-2.002-.731-4.35-2.644-1.542-1.257-2.313-1.885-3.198-2.026a3.333 3.333 0 0 0-1.052 0c-.885.14-1.656.77-3.198 2.026-2.348 1.913-3.522 2.87-4.35 2.644a1.666 1.666 0 0 1-.8-.494c-.573-.638-.245-2.116.411-5.074l.111-.5c.357-1.61.536-2.414.349-3.172a3.342 3.342 0 0 0-.132-.416c-.284-.727-.894-1.281-2.113-2.39l-.804-.732c-2.408-2.191-3.612-3.287-3.265-4.318.347-1.032 1.968-1.177 5.211-1.468l.358-.032c1.982-.177 2.973-.266 3.727-.827.755-.561 1.126-1.484 1.866-3.33l.061-.153z" stroke="#7F213C" stroke-width="2"></path>
+														</svg>
+													</button>
+												</div>
+												<p class="info-cart__code">Код товара: 123556</p>
+												<p class="info-cart__brand"><span>LACOSTE POUR ELLE</span> LACOSTE POUR ELLE</p>
+												<p class="info-cart__gender info-cart__gender_woman">Женская парфюмерия</p>
+												<p class="info-cart__name">100 мл, парфюмерная вода (edp), 
+													<span class="info-cart__type">тестер
+														<img data-tippy-content-testers class="filter__help filter__help_testers" src="@img/catalog/vopros.svg" alt="подсказка">
+													</span>
+												</p>
+											</div>
+										</div>
+									</div>
+									<div class="list-cart__ceil">
+										<div class="list-cart__quantity-actions">
+											<div data-quantity class="list-cart__quantity quantity">
+												<button data-quantity-minus type="button" class="quantity__button quantity__button--minus"></button>
+												<div class="quantity__input"><input data-quantity-value autocomplete="off" type="text" name="form[]" value="1"></div>
+												<button data-quantity-plus type="button" class="quantity__button quantity__button--plus"></button>
+											</div>
+											<div class="list-cart__button">
+												<button class="button-light remove-cart-item">удалить</button>
+											</div>
+										</div>
+										<div class="list-cart__costs cost-cart">
+											<p class="price-block__old"><span>16 000</span> руб</p>
+											<!-- <div class="price-block__bonus">+<span>180</span> бонусов</div> -->
+											<p class="price-block__actual"><span>10 000</span> руб</p>
+										</div>
+									</div>
+								</article>
+								<article class="list-cart__item">
+									<button type="button" class="list-cart__item-close"><img src="@img/cart/main-cart/close-item.svg" alt=""></button>
+									<div class="list-cart__ceil">
+										<div class="list-cart__check">
+											<div class="checkbox">
+												<input id="cart-2" data-error="Ошибка" class="checkbox__input" type="checkbox" value="" name="form[]">
+												<label for="cart-2" class="checkbox__label">
+													<span class="checkbox__body"></span>
+												</label>
+											</div>
+										</div>
+										<div class="list-cart__info info-cart">
+											<div class="info-cart__img">
+												<img src="@img/cart/main-cart/list-item-photo.png" alt="">
+											</div>
+											<div class="info-cart__info">
+												<div class="info-cart__actions product__actions">
+													<button class="product__action"><img data-popup="#add-list"
+															src="@img/home/add-spisok.svg" data-popup="#add-list"  alt="Добавить в список сравнения">
+													</button>
+													<button class="product__action">
+														<svg class="product__favorite" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"> 
+															<path d="M16.906 11.046C18.217 7.778 18.873 6.144 20 6.144c1.127 0 1.783 1.634 3.094 4.902l.06.152c.741 1.847 1.112 2.77 1.866 3.331.755.561 1.746.65 3.727.827l.359.033c3.243.29 4.864.435 5.211 1.467.347 1.031-.857 2.127-3.265 4.318l-.804.731c-1.22 1.11-1.829 1.664-2.113 2.391a3.342 3.342 0 0 0-.132.416c-.187.758-.008 1.562.349 3.171l.11.501c.657 2.957.985 4.436.412 5.074-.214.238-.492.41-.8.494-.828.226-2.002-.731-4.35-2.644-1.542-1.257-2.313-1.885-3.198-2.026a3.333 3.333 0 0 0-1.052 0c-.885.14-1.656.77-3.198 2.026-2.348 1.913-3.522 2.87-4.35 2.644a1.666 1.666 0 0 1-.8-.494c-.573-.638-.245-2.116.411-5.074l.111-.5c.357-1.61.536-2.414.349-3.172a3.342 3.342 0 0 0-.132-.416c-.284-.727-.894-1.281-2.113-2.39l-.804-.732c-2.408-2.191-3.612-3.287-3.265-4.318.347-1.032 1.968-1.177 5.211-1.468l.358-.032c1.982-.177 2.973-.266 3.727-.827.755-.561 1.126-1.484 1.866-3.33l.061-.153z" stroke="#7F213C" stroke-width="2"></path>
+														</svg>
+													</button>
+												</div>
+												<p class="info-cart__code">Код товара: 123556</p>
+												<p class="info-cart__brand"><span>LACOSTE POUR ELLE</span> LACOSTE POUR ELLE</p>
+												<p class="info-cart__gender info-cart__gender_woman">Женская парфюмерия</p>
+												<p class="info-cart__name">100 мл, парфюмерная вода (edp), 
+													<span class="info-cart__type">тестер
+														<img data-tippy-content-testers class="filter__help filter__help_testers" src="@img/catalog/vopros.svg" alt="подсказка">
+													</span>
+												</p>
+											</div>
+										</div>
+									</div>
+									<div class="list-cart__ceil">
+										<div class="list-cart__quantity-actions">
+											<div data-quantity class="list-cart__quantity quantity">
+												<button data-quantity-minus type="button" class="quantity__button quantity__button--minus"></button>
+												<div class="quantity__input"><input data-quantity-value autocomplete="off" type="text" name="form[]" value="1"></div>
+												<button data-quantity-plus type="button" class="quantity__button quantity__button--plus"></button>
+											</div>
+											<div class="list-cart__button">
+												<button class="button-light remove-cart-item">удалить</button>
+											</div>
+										</div>
+										<div class="list-cart__costs cost-cart">
+											<!-- <p class="price-block__old"><span>16 000</span> руб</p> -->
+											<div class="price-block__bonus">+<span>180</span> бонусов</div>
+											<p class="price-block__actual"><span>10 000</span> руб</p>
+										</div>
+									</div>
+								</article>
+								<article class="list-cart__item">
+									<button type="button" class="list-cart__item-close"><img src="@img/cart/main-cart/close-item.svg" alt=""></button>
+									<div class="list-cart__ceil">
+										<div class="list-cart__check">
+											<div class="checkbox">
+												<input id="cart-3" data-error="Ошибка" class="checkbox__input" type="checkbox" value="" name="form[]">
+												<label for="cart-3" class="checkbox__label">
+													<span class="checkbox__body"></span>
+												</label>
+											</div>
+										</div>
+										<div class="list-cart__info info-cart">
+											<div class="info-cart__img">
+												<img src="@img/cart/main-cart/list-item-photo.png" alt="">
+											</div>
+											<div class="info-cart__info">
+												<div class="info-cart__actions product__actions">
+													<button class="product__action"><img data-popup="#add-list"
+															src="@img/home/add-spisok.svg" data-popup="#add-list"  alt="Добавить в список сравнения">
+													</button>
+													<button class="product__action">
+														<svg class="product__favorite" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"> 
+															<path d="M16.906 11.046C18.217 7.778 18.873 6.144 20 6.144c1.127 0 1.783 1.634 3.094 4.902l.06.152c.741 1.847 1.112 2.77 1.866 3.331.755.561 1.746.65 3.727.827l.359.033c3.243.29 4.864.435 5.211 1.467.347 1.031-.857 2.127-3.265 4.318l-.804.731c-1.22 1.11-1.829 1.664-2.113 2.391a3.342 3.342 0 0 0-.132.416c-.187.758-.008 1.562.349 3.171l.11.501c.657 2.957.985 4.436.412 5.074-.214.238-.492.41-.8.494-.828.226-2.002-.731-4.35-2.644-1.542-1.257-2.313-1.885-3.198-2.026a3.333 3.333 0 0 0-1.052 0c-.885.14-1.656.77-3.198 2.026-2.348 1.913-3.522 2.87-4.35 2.644a1.666 1.666 0 0 1-.8-.494c-.573-.638-.245-2.116.411-5.074l.111-.5c.357-1.61.536-2.414.349-3.172a3.342 3.342 0 0 0-.132-.416c-.284-.727-.894-1.281-2.113-2.39l-.804-.732c-2.408-2.191-3.612-3.287-3.265-4.318.347-1.032 1.968-1.177 5.211-1.468l.358-.032c1.982-.177 2.973-.266 3.727-.827.755-.561 1.126-1.484 1.866-3.33l.061-.153z" stroke="#7F213C" stroke-width="2"></path>
+														</svg>
+													</button>
+												</div>
+												<p class="info-cart__code">Код товара: 123556</p>
+												<p class="info-cart__brand"><span>LACOSTE POUR ELLE</span> LACOSTE POUR ELLE</p>
+												<p class="info-cart__gender info-cart__gender_woman">Женская парфюмерия</p>
+												<p class="info-cart__name">100 мл, парфюмерная вода (edp), 
+													<span class="info-cart__type">тестер
+														<img data-tippy-content-testers class="filter__help filter__help_testers" src="@img/catalog/vopros.svg" alt="подсказка">
+													</span>
+												</p>
+											</div>
+										</div>
+									</div>
+									<div class="list-cart__ceil">
+										<div class="list-cart__quantity-actions">
+											<div data-quantity class="list-cart__quantity quantity">
+												<button data-quantity-minus type="button" class="quantity__button quantity__button--minus"></button>
+												<div class="quantity__input"><input data-quantity-value autocomplete="off" type="text" name="form[]" value="1"></div>
+												<button data-quantity-plus type="button" class="quantity__button quantity__button--plus"></button>
+											</div>
+											<div class="list-cart__button">
+												<button class="button-light remove-cart-item">удалить</button>
+											</div>
+										</div>
+										<div class="list-cart__costs cost-cart">
+											<!-- <p class="price-block__old"><span>16 000</span> руб</p> -->
+											<div class="price-block__bonus">+<span>150</span> бонусов</div>
+											<p class="price-block__actual"><span>10 000</span> руб</p>
+										</div>
+									</div>
+								</article>
+							</div>
+							<div class="main-cart__present present-basket">
+								<div class="present-basket__wrapper">
+									<div class="present-basket__img">
+										<img src="@img/cart/main-cart/present-cart.svg" alt="подарок">
+									</div>
+									<div class="present-basket__content content-present">
+										<button data-popup="#choosing-gift" type="button" class="button-light content-present__button">выбрать подарок</button>
+										<p class="content-present__text">Вы можете выбрать еще 1 подарок</p>
+										<button type="button" class="content-present__link">Подробнее о подарках</button>
+									</div>
+								</div>
+								<div class="present-basket__banner banner-present">
+									<div class="banner-present__text"><p>Скидка <span>15%</span></p> на первый заказ</div>
+									<div class="banner-present__light">по промокоду: <span>NEW</span></div>
+								</div>
+							</div>
+						</section>
+						<section class="basket__none out">
+							<h3 class="out__title">товары, которых нет в наличии</h3>
+							<button type="button" class="out__button button-light">УДАЛИТЬ ВСЕ ОТСУТСТВУЮЩИЕ ТОВАРЫ</button>
+							<div class="out__checkbox">
+								<label for="notify-email" class="switch">
+									<input class="checkbox" type="checkbox" id="notify-email">
+									<span class="slider round"></span>
+								</label>
+								<p class="out__text">Уведомить на e-mail о появлении товаров</p>
+							</div>
+							<article class="list-cart__item">
+								<button type="button" class="list-cart__item-close"><img src="@img/cart/main-cart/close-item.svg" alt=""></button>
+								<div class="list-cart__ceil">
+									<div class="list-cart__info info-cart">
+										<div class="info-cart__img">
+											<img src="@img/product/product.png" alt="">
+										</div>
+										<div class="info-cart__info">
+											<p class="info-cart__code">Код товара: 123556</p>
+											<p class="info-cart__brand"><span>LACOSTE POUR ELLE</span> LACOSTE POUR ELLE</p>
+											<p class="info-cart__gender info-cart__gender_woman">Женская парфюмерия</p>
+											<p class="info-cart__name">100 мл, парфюмерная вода (edp), 
+												<span class="info-cart__type">тестер
+													<img data-tippy-content-testers class="filter__help filter__help_testers" src="@img/catalog/vopros.svg" alt="подсказка">
+												</span>
+											</p>
+										</div>
+									</div>
+								</div>
+								<div class="list-cart__ceil">
+									<div class="list-cart__quantity-actions">
+										<div class="list-cart__button">
+											<button class="button-light remove-cart-item">удалить</button>
+										</div>
+									</div>
+								</div>
+							</article>
+							<article class="list-cart__item">
+								<button type="button" class="list-cart__item-close"><img src="@img/cart/main-cart/close-item.svg" alt=""></button>
+								<div class="list-cart__ceil">
+									<div class="list-cart__info info-cart">
+										<div class="info-cart__img">
+											<img src="@img/cart/main-cart/list-item-photo.png" alt="">
+										</div>
+										<div class="info-cart__info">
+											<p class="info-cart__code">Код товара: 123556</p>
+											<p class="info-cart__brand"><span>LACOSTE POUR ELLE</span> LACOSTE POUR ELLE</p>
+											<p class="info-cart__gender info-cart__gender_woman">Женская парфюмерия</p>
+											<p class="info-cart__name">100 мл, парфюмерная вода (edp), 
+												<span class="info-cart__type">тестер
+													<img data-tippy-content-testers class="filter__help filter__help_testers" src="@img/catalog/vopros.svg" alt="подсказка">
+												</span>
+											</p>
+										</div>
+									</div>
+								</div>
+								<div class="list-cart__ceil">
+									<div class="list-cart__quantity-actions">
+										<div class="list-cart__button">
+											<button class="button-light remove-cart-item">удалить</button>
+										</div>
+									</div>
+								</div>
+							</article>
+						</section>
+						<section class="basket__address address">
+							<div class="address__top">
+								<h3 class="address__title">ДАННЫЕ ДЛЯ ОТПРАВКИ ЗАКАЗА</h3>
+								<button data-popup="#popup-vhod" type="button" class="address__entrance button-light">у меня уже есть учетная запись</button>
+							</div>
+							<div class="address__wrapper">
+								<form action="#" method="post" class="address__form ">
+									<button class="address__button edit" type="button">
+										<img src="@img/cart/main-cart/pencel.svg" alt="">
+										<span class="list-popup__button-text">редактировать данные</span>
+									</button>
+									<div class="address__group address__group_inputs">
+										<div class="popup__form-item _label-up">
+											<input disabled id="fio-cart" required autocomplete="off" type="text" value="Сильвер Светлана Дмитриевна" name="form[]" data-error="Ошибка" class="popup__input">
+											<label for="fio-cart" class="popup__label">ФИО</label>
+										</div>
+										<div class="popup__form-item _label-up">
+											<input disabled id="email-cart" required autocomplete="off" type="text" value="lounasi.design@gmail.com" name="form[]" data-error="Ошибка" class="popup__input">
+											<label for="email-cart" class="popup__label">E-mail</label>
+										</div>
+										<div class="popup__form-item _label-up">
+											<input disabled id="phone-cart" required autocomplete="off" type="text" value="8-963-774-66-54" name="form[]" data-error="Ошибка" class="popup__input">
+											<label for="phone-cart" class="popup__label">ТЕЛЕФОН</label>
+										</div>
+									</div>
+									<div class="address__group address__group_address">
+										<div class="popup__form-item popup__form-item_address _label-up">
+											<div class="popup__input-wrapper">
+												<input required id="address-cart" autocomplete="off" value="В пределах МКАД, Москва, Дмитровское шоссе, 100с2" type="text" name="form[]" data-error="Ошибка" class="popup__input">
+												<label for="address-cart" class="popup__label">адрес <br><span class="address__wrap-mini">(введите полностью с указанием дома и квартиры)</span></label>
+												<span class="popup__select-arrow"><img src="img/rev-product/rev-number-sel.svg" alt=""></span>
+											</div>
+											<ul class="popup__submenu">
+												<li class="submenu-item__address">В пределах МКАД, Москва, Дмитровское шоссе, 100с2</li>
+												<li class="submenu-item__address">В пределах МКАД, Москва, Каширское шоссе, 100с2</li>
+												<li class="submenu-item__address">В пределах МКАД, Москва, Дмитровское шоссе, 100с2</li>
+												<li class="submenu-item__address">В пределах МКАД, Москва, Каширское шоссе, 100с2</li>
+											</ul>
+										</div>
+										<div class="address__group address__group_optional address__group_inputs">
+											<div class="popup__form-item _label-up">
+												<input  id="door-cart" required autocomplete="off" type="text" value="2" name="form[]" data-error="Ошибка" class="popup__input">
+												<label for="door-cart" class="popup__label">Подъезд</label>
+											</div>
+											<div class="popup__form-item _label-up">
+												<input  id="floor-cart" required autocomplete="off" type="text" value="1" name="form[]" data-error="Ошибка" class="popup__input">
+												<label for="floor-cart" class="popup__label">Этаж</label>
+											</div>
+											<div class="popup__form-item">
+												<input id="intercom-cart" required autocomplete="off" type="text"  name="form[]" data-error="Ошибка" class="popup__input">
+												<label for="intercom-cart" class="popup__label">ДОМОФОН</label>
+											</div>
+										</div>
+										<div class="address__button-item">
+											<button data-popup="#add-address" type="button" class="address__button-address">
+												<img src="@img/popup/plus-add-list.svg" alt="">
+												<span class="list-popup__button-text">Добавить новый адрес</span>
+											</button>
+										</div>
+									</div>
+									<div class="address__group address__group_textarea popup__form-item">
+										<textarea class="comment__textarea" name="comment-cart"></textarea>
+										<span class="popup__label popup__label_comment">комментарий</span>
+									</div>
+								</form>
+								<div class="address__switches">
+									<div class="out__checkbox">
+										<label for="notify-sms" class="switch">
+											<input class="checkbox" type="checkbox" id="notify-sms">
+											<span class="slider round"></span>
+										</label>
+										<p class="out__text">Оповещения через SMS</p>
+									</div>
+									<div class="out__checkbox">
+										<label for="notify-WhatsApp" class="switch">
+											<input class="checkbox" type="checkbox" id="notify-WhatsApp">
+											<span class="slider round"></span>
+										</label>
+										<p class="out__text">Подтвердить через WhatsApp</p>
+									</div>
+									<div class="out__checkbox">
+										<label for="notify-call" class="switch">
+											<input class="checkbox" type="checkbox" id="notify-call">
+											<span class="slider round"></span>
+										</label>
+										<p class="out__text">Требуется звонок менеджера</p>
+									</div>
+								</div>
+							</div>
+						</section>
+						<section class="basket__method method">
+							<h3 class="method__title">СПОСОБ ДОСТАВКИ</h3>
+							<div class="method__wrapper">
+								<div class="bottom-calc__item _method-active curier">
+									<div class="bottom-calc__top">
+										<p class="bottom-calc__text">Курьерская доставка</p>
+										<p class="bottom-calc__text"><span>0</span> руб.</p>
+									</div>
+									<div class="bottom-calc__content">
+										<div class="bottom-calc__wrapper">
+											<div class="bottom-calc__subitem">
+												<div class="bottom-calc__body">
+													<p class="bottom-calc__subtext">Заказ будет доставлен Вам курьером на дом. <br>После того, как....</p>
+													<button data-popup="#courier" class="bottom-calc__button">Подробнее</button>
+													<p class="bottom-calc__subtext">Дата доставки: <span class="bottom-calc__time"><span class="delivery__day">08.09</span>.2024 (<span class="delivery__time">10:00 — 18:00</span>)</span></p>
+													<button data-popup="#time-delivery" class="bottom-calc__button">изменить</button>
+												</div>
+												<div class="bottom-calc__img bottom-calc__img_deliv">
+													<img class="" src="@img/cart/main-cart/method/currier.png" alt="Доставка">
+												</div>
+											</div>
+											<p class="bottom-calc__correction">Оплата заказа будет произведена курьеру в день доставки заказа</p>
+										</div>
+									</div>
+								</div>
+								<div class="bottom-calc__item express">
+									<div class="bottom-calc__top">
+										<p class="bottom-calc__text">Экспресс доставка</p>
+										<p class="bottom-calc__text"><span>750</span> руб.</p>
+									</div>
+									<div class="bottom-calc__content">
+										<div class="bottom-calc__wrapper">
+											<div class="bottom-calc__subitem">
+												<div class="bottom-calc__body">
+													<p class="bottom-calc__subtext">Заказ будет доставлен Вам на дом (на работу) на такси. Данный тип доставки заказов...</p>
+													<button data-popup="#express" class="bottom-calc__button">Подробнее</button>
+													<p class="bottom-calc__subtext">Дата доставки: <span class="bottom-calc__time"><span class="delivery__day">08.09</span>.2024 (<span class="delivery__time">10:00 — 18:00</span>)</span></p>
+													<button data-popup="#time-delivery" class="bottom-calc__button">изменить</button>
+												</div>
+												<div class="bottom-calc__img bottom-calc__img_deliv">
+													<img class="" src="@img/cart/main-cart/method/express.png" alt="Доставка">
+												</div>
+											</div>
+											<p class="bottom-calc__correction">Срок доставки заказа - 3 часа после поступления денежных средств за заказ.</p>
+										</div>
+									</div>
+								</div>
+								<div data-popup="#point-pick" class="bottom-calc__item">
+									<div class="bottom-calc__top">
+										<p class="bottom-calc__text">Пункты выдачи заказов</p>
+										<p class="bottom-calc__text"><span>0</span> руб.</p>
+									</div>
+									<div class="bottom-calc__content">
+										<div class="bottom-calc__wrapper">
+											<div class="bottom-calc__subitem">
+												<div class="bottom-calc__body">
+													<p class="bottom-calc__subtext">Заказ будет выдан Вам в пункте выдачи заказов (ПВЗ). После того, как Ваш заказ поступит...</p>
+													<button class="bottom-calc__button">Подробнее</button>
+												</div>
+												<div class="bottom-calc__img bottom-calc__img_deliv">
+													<img class="" src="@img/cart/main-cart/method/punkt.png" alt="Доставка">
+												</div>
+											</div>
+											<p class="bottom-calc__correction">Срок доставки заказа - 3 часа после поступления денежных средств за заказ.</p>
+										</div>
+									</div>
+								</div>
+								<div class="bottom-calc__item">
+									<div class="bottom-calc__top">
+										<p class="bottom-calc__text">Почта России</p>
+										<p class="bottom-calc__text"><span>0</span> руб.</p>
+									</div>
+									<div class="bottom-calc__content">
+										<div class="bottom-calc__wrapper">
+											<div class="bottom-calc__subitem">
+												<div class="bottom-calc__body">
+													<p class="bottom-calc__subtext">У данной курьерской службы существуют нюансы в работе. Например, при поступлении заказа в...</p>
+													<button data-popup="#post" class="bottom-calc__button">Подробнее</button>
+												</div>
+												<div class="bottom-calc__img bottom-calc__img_deliv">
+													<img class="" src="@img/cart/main-cart/method/pochta.png" alt="Доставка">
+												</div>
+											</div>
+											<p class="bottom-calc__correction">Срок доставки заказа - 3 часа после поступления денежных средств за заказ.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</section>
+						<section class="basket__method method method__pay">
+							<h3 class="method__title">СПОСОБ ОПЛАТЫ</h3>
+							<div class="method__wrapper">
+								<div class="bottom-calc__item _method-active">
+									<div class="bottom-calc__top">
+										<p class="bottom-calc__text">наличиными курьеру</p>
+									</div>
+									<div class="bottom-calc__content">
+										<div class="bottom-calc__wrapper">
+											<div class="bottom-calc__subitem">
+												<div class="bottom-calc__body">
+													<p class="bottom-calc__subtext">При получении заказа</p>
+													<button data-popup="#money" class="bottom-calc__button">Подробнее</button>
+												</div>
+												<div class="bottom-calc__img bottom-calc__img_deliv">
+													<img src="@img/cart/main-cart/pay/valet.png" alt="наличнми">
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="bottom-calc__item express">
+									<div class="bottom-calc__top">
+										<p class="bottom-calc__text">Банковская карта</p>
+									</div>
+									<div class="bottom-calc__content">
+										<div class="bottom-calc__wrapper">
+											<div class="bottom-calc__subitem">
+												<div class="bottom-calc__body">
+													<p class="bottom-calc__subtext">Предоплата заказа банковской картой VISA / MasterCard / МИР на нашем сайте.</p>
+													<button data-popup="#bank-card" class="bottom-calc__button">Подробнее</button>
+												</div>
+												<div class="bottom-calc__img bottom-calc__img_deliv">
+													<img class="" src="@img/cart/main-cart/pay/card.png" alt="Доставка">
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</section>
+					</div>
+					<aside class="basket__aside aside-cart">
+						<h2 class="main-cart__title">итого</h2>
+						<div class="aside-cart__main">
+							<div class="aside-cart__top">
+								<h4 class="aside-cart__title">всего к оплате</h4>
+								<div class="aside-cart__cost"><span>29 000</span> руб.</div>
+							</div>
+							<div class="aside-cart__main main-aside">
+								<div class="main-aside__item">
+									<div class="main-aside__left">
+										<p class="main-aside__name">Товары, <span>3</span> шт.</p>
+									</div>
+									<div class="main-aside__right">
+										<p class="main-aside__cost"><span>35 000</span> руб.</p>
+									</div>
+								</div>
+								<div class="main-aside__item">
+									<div class="main-aside__left">
+										<p class="main-aside__name">Скидка, <span>5</span> %</p>
+									</div>
+									<div class="main-aside__right">
+										<p class="main-aside__cost"><span>-2 100</span> руб.</p>
+									</div>
+								</div>
+								<div class="main-aside__item">
+									<div class="main-aside__left">
+										<div class="main-aside__name main-aside__name_img">
+											<span>Подарок (акция)</span>
+											<img src="@img/cart/main-cart/present-aside.svg" alt="">
+										</div>
+									</div>
+									<div class="main-aside__right">
+										<div class="main-aside__cost"><span>Выбран</span>
+										<img src="@img/cart/main-cart/check-aside.svg" alt="">
+									</div>
+									</div>
+								</div>
+								<ul class="main-aside__list list-aside">
+									<li class="list-aside__item"><button data-popup="#promocode" class="list-aside__button" type="button">Ввести промокод</button></li>
+									<li class="list-aside__item"><button data-popup="#discontcard" class="list-aside__button" type="button">Указать дисконтную карту</button></li>
+									<li class="list-aside__item"><button data-popup="#sertificatepresent" class="list-aside__button" type="button">Активировать подарочный сертификат</button></li>
+									<li class="list-aside__item"><button data-popup="#cancelbonus" class="list-aside__button cancel-bonus" type="button">Списать с бонусного счета</button></li>
+									<li class="list-aside__mesage">
+										<img src="@img/cart/main-cart/check-aside.svg" alt="">
+										<p class="list-aside__button">Со счета будет списано <span>100</span> бонусов</p>
+									</li>
+								</ul>
+								<div class="main-aside__discount">
+									<div class="main-aside__item">
+										<div class="main-aside__left">
+											<p class="main-aside__name">С учётом скидки</p>
+										</div>
+										<div class="main-aside__right">
+											<p class="main-aside__cost"><span>8 000</span> руб.</p>
+										</div>
+									</div>
+									<div class="main-aside__item">
+										<div class="main-aside__left">
+											<p class="main-aside__name">С учетом подарочного сертификата</p>
+										</div>
+										<div class="main-aside__right">
+											<p class="main-aside__cost"><span>8 000</span> руб.</p>
+										</div>
+									</div>
+									<div class="main-aside__item">
+										<div class="main-aside__left">
+											<p class="main-aside__name">С учетом бонусного счета</p>
+										</div>
+										<div class="main-aside__right">
+											<p class="main-aside__cost"><span>8 000</span> руб.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="aside-cart__group">
+							<div class="aside-cart__sub-item punkt-aside">
+								<div class="punkt-aside__top punkt-aside__top_delivery">
+									<h4 class="punkt-aside__left">Доставка</h4>
+									<span class="punkt-aside__right">бесплатно</span>
+								</div>
+								<div class="punkt-aside__body">
+									<p class="punkt-aside__text">Адрес доставки</p>
+									<p class="punkt-aside__subtext">Россия, Москва, улица Молостовых, дом 11, корпус 1, подьезд 2, этаж 4, квартира 34, домофон 34В7580</p>
+									<div class="punkt-aside__text punkt-aside__text_bottom">
+										<span>Дата доставки</span>
+										<time datetime="2022-06-21">21.06.2022</time>
+									</div>
+								</div>
+							</div>
+							<div class="aside-cart__sub-item punkt-aside">
+								<div class="punkt-aside__top">
+									<h4 class="punkt-aside__left">оплата</h4>
+									<span class="punkt-aside__right">наличными</span>
+								</div>
+								<div class="punkt-aside__body">
+									<p class="punkt-aside__text">Оплата заказа будет произведена курьеру в день доставки заказа</p>
+								</div>
+							</div>
+							<div class="aside-cart__sub-item punkt-aside">
+								<div class="punkt-aside__top">
+									<h4 class="punkt-aside__left">КОММЕНТАРИЙ К ЗАКАЗУ</h4>
+								</div>
+								<div class="punkt-aside__body">
+									<p class="punkt-aside__text punkt-aside__text_italic">Россия, Москва, улица Молостовых, дом 11, корпус 1, подьезд 2, этаж 4, квартира 34, домофон 34В7580</p>
+								</div>
+							</div>
+						</div>
+						<p class="aside-cart__text">Нажимая кнопку "Оформить заказ", я даю согласие на обработку своих персональных данных в соответствии с <a href="#" class="aside-cart__politica">Политикой конфиденциальности</a></p>
+						<div class="aside-cart__buttons">
+							<button type="submit" href="#" class="aside-cart__button button-actions">ОФОРМИТЬ ЗАКАЗ</button>
+							<button type="submit" href="#" class="aside-cart__button-wait button-light">подождите...</button>
+						</div>
+					</aside>
+				</div>
+				<section class="page__recently recently">
+					<div class="recently__container">
+						<h3 class="recently__title">недавно просмотренные</h3>
+						<div class="tabs__shell">
+							<div class="tabs__slider swiper">
+								<div class="tabs__wrapper swiper-wrapper">
+									<div class="tabs__slide swiper-slide">
+										<article class="tabs__product product">
+											<a href="product.html" target="_blank" class="product__img">
+												<img class="ibg" src="@img/home/products/01.jpg" alt="">
+											</a>
+											<div class="product__content">
+												<h4 class="product__title"><span>LACOSTE</span> POUR ELLE</h4>
+												<div class="product__category product__category_man">Мужская парфюмерия</div>
+												<div class="product__cost">1001 - 30 000 руб.</div>
+											</div>
+											<div class="product__labels labels">
+												<span class="labels__label labels__label_sale">РАСПОДАЖА</span>
+												<span class="labels__label labels__label_discont">-20%</span>
+												<span class="labels__label labels__label_top">ТОП-ПРОДАЖ</span>
+												<span class="labels__label labels__label_now">НОВИНКИ</span>
+												<span class="labels__label labels__label_action">АКЦИЯ</span>
+											</div>
+											<div class="product__actions">
+												<button class="product__action"><img src="@img/home/add-spisok.svg" data-popup="#add-list" 
+														alt="Добавить в список сравнения"></button>
+												<button class="product__action">
+													<svg class="product__favorite" width="40" height="40" viewBox="0 0 40 40"
+														fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path
+															d="M16.906 11.046C18.217 7.778 18.873 6.144 20 6.144c1.127 0 1.783 1.634 3.094 4.902l.06.152c.741 1.847 1.112 2.77 1.866 3.331.755.561 1.746.65 3.727.827l.359.033c3.243.29 4.864.435 5.211 1.467.347 1.031-.857 2.127-3.265 4.318l-.804.731c-1.22 1.11-1.829 1.664-2.113 2.391a3.342 3.342 0 0 0-.132.416c-.187.758-.008 1.562.349 3.171l.11.501c.657 2.957.985 4.436.412 5.074-.214.238-.492.41-.8.494-.828.226-2.002-.731-4.35-2.644-1.542-1.257-2.313-1.885-3.198-2.026a3.333 3.333 0 0 0-1.052 0c-.885.14-1.656.77-3.198 2.026-2.348 1.913-3.522 2.87-4.35 2.644a1.666 1.666 0 0 1-.8-.494c-.573-.638-.245-2.116.411-5.074l.111-.5c.357-1.61.536-2.414.349-3.172a3.342 3.342 0 0 0-.132-.416c-.284-.727-.894-1.281-2.113-2.39l-.804-.732c-2.408-2.191-3.612-3.287-3.265-4.318.347-1.032 1.968-1.177 5.211-1.468l.358-.032c1.982-.177 2.973-.266 3.727-.827.755-.561 1.126-1.484 1.866-3.33l.061-.153z"
+															stroke="#7F213C" stroke-width="2"></path>
+													</svg>
+												</button>
+											</div>
+	
+										</article>
+									</div>
+									<div class="tabs__slide swiper-slide">
+										<article class="tabs__product product">
+											<a href="product.html" target="_blank" class="product__img">
+												<img class="ibg" src="@img/home/products/02.jpg" alt="">
+											</a>
+											<div class="product__content">
+												<h4 class="product__title"><span>LACOSTE</span> POUR ELLE</h4>
+												<div class="product__category product__category_man">Мужская парфюмерия</div>
+												<div class="product__cost">1000 - 30 000 руб.</div>
+											</div>
+											<div class="product__labels labels">
+												<span class="labels__label labels__label_sale">РАСПОДАЖА</span>
+												<span class="labels__label labels__label_discont">-20%</span>
+												<span class="labels__label labels__label_top">ТОП-ПРОДАЖ</span>
+												<span class="labels__label labels__label_now">НОВИНКИ</span>
+												<span class="labels__label labels__label_action">АКЦИЯ</span>
+											</div>
+											<div class="product__actions">
+												<button class="product__action"><img src="@img/home/add-spisok.svg" data-popup="#add-list" 
+														alt="Добавить в список сравнения"></button>
+												<button class="product__action"><svg class="product__favorite" width="40"
+														height="40" viewBox="0 0 40 40" fill="none"
+														xmlns="http://www.w3.org/2000/svg">
+														<path
+															d="M16.906 11.046C18.217 7.778 18.873 6.144 20 6.144c1.127 0 1.783 1.634 3.094 4.902l.06.152c.741 1.847 1.112 2.77 1.866 3.331.755.561 1.746.65 3.727.827l.359.033c3.243.29 4.864.435 5.211 1.467.347 1.031-.857 2.127-3.265 4.318l-.804.731c-1.22 1.11-1.829 1.664-2.113 2.391a3.342 3.342 0 0 0-.132.416c-.187.758-.008 1.562.349 3.171l.11.501c.657 2.957.985 4.436.412 5.074-.214.238-.492.41-.8.494-.828.226-2.002-.731-4.35-2.644-1.542-1.257-2.313-1.885-3.198-2.026a3.333 3.333 0 0 0-1.052 0c-.885.14-1.656.77-3.198 2.026-2.348 1.913-3.522 2.87-4.35 2.644a1.666 1.666 0 0 1-.8-.494c-.573-.638-.245-2.116.411-5.074l.111-.5c.357-1.61.536-2.414.349-3.172a3.342 3.342 0 0 0-.132-.416c-.284-.727-.894-1.281-2.113-2.39l-.804-.732c-2.408-2.191-3.612-3.287-3.265-4.318.347-1.032 1.968-1.177 5.211-1.468l.358-.032c1.982-.177 2.973-.266 3.727-.827.755-.561 1.126-1.484 1.866-3.33l.061-.153z"
+															stroke="#7F213C" stroke-width="2"></path>
+													</svg></button>
+											</div>
+	
+										</article>
+									</div>
+									<div class="tabs__slide swiper-slide">
+										<article class="tabs__product product">
+											<a href="product.html" target="_blank" class="product__img">
+												<img class="ibg" src="@img/home/products/03.jpg" alt="">
+											</a>
+											<div class="product__content">
+												<h4 class="product__title"><span>LACOSTE</span> POUR ELLE</h4>
+												<div class="product__category product__category_man">Мужская парфюмерия</div>
+												<div class="product__cost">1000 - 30 000 руб.</div>
+											</div>
+											<div class="product__labels labels">
+												<span class="labels__label labels__label_sale">РАСПОДАЖА</span>
+												<span class="labels__label labels__label_discont">-20%</span>
+												<span class="labels__label labels__label_top">ТОП-ПРОДАЖ</span>
+												<span class="labels__label labels__label_now">НОВИНКИ</span>
+												<span class="labels__label labels__label_action">АКЦИЯ</span>
+											</div>
+											<div class="product__actions">
+												<button class="product__action"><img src="@img/home/add-spisok.svg" data-popup="#add-list" 
+														alt="Добавить в список сравнения"></button>
+												<button class="product__action"><svg class="product__favorite" width="40"
+														height="40" viewBox="0 0 40 40" fill="none"
+														xmlns="http://www.w3.org/2000/svg">
+														<path
+															d="M16.906 11.046C18.217 7.778 18.873 6.144 20 6.144c1.127 0 1.783 1.634 3.094 4.902l.06.152c.741 1.847 1.112 2.77 1.866 3.331.755.561 1.746.65 3.727.827l.359.033c3.243.29 4.864.435 5.211 1.467.347 1.031-.857 2.127-3.265 4.318l-.804.731c-1.22 1.11-1.829 1.664-2.113 2.391a3.342 3.342 0 0 0-.132.416c-.187.758-.008 1.562.349 3.171l.11.501c.657 2.957.985 4.436.412 5.074-.214.238-.492.41-.8.494-.828.226-2.002-.731-4.35-2.644-1.542-1.257-2.313-1.885-3.198-2.026a3.333 3.333 0 0 0-1.052 0c-.885.14-1.656.77-3.198 2.026-2.348 1.913-3.522 2.87-4.35 2.644a1.666 1.666 0 0 1-.8-.494c-.573-.638-.245-2.116.411-5.074l.111-.5c.357-1.61.536-2.414.349-3.172a3.342 3.342 0 0 0-.132-.416c-.284-.727-.894-1.281-2.113-2.39l-.804-.732c-2.408-2.191-3.612-3.287-3.265-4.318.347-1.032 1.968-1.177 5.211-1.468l.358-.032c1.982-.177 2.973-.266 3.727-.827.755-.561 1.126-1.484 1.866-3.33l.061-.153z"
+															stroke="#7F213C" stroke-width="2"></path>
+													</svg></button>
+											</div>
+	
+										</article>
+									</div>
+									<div class="tabs__slide swiper-slide">
+										<article class="tabs__product product">
+											<a href="product.html" target="_blank" class="product__img">
+												<img class="ibg" src="@img/home/products/04.jpg" alt="">
+											</a>
+											<div class="product__content">
+												<h4 class="product__title"><span>LACOSTE</span> POUR ELLE</h4>
+												<div class="product__category product__category_man">Мужская парфюмерия</div>
+												<div class="product__cost">1000 - 30 000 руб.</div>
+											</div>
+											<div class="product__labels labels">
+												<span class="labels__label labels__label_sale">РАСПОДАЖА</span>
+												<span class="labels__label labels__label_discont">-20%</span>
+												<span class="labels__label labels__label_top">ТОП-ПРОДАЖ</span>
+												<span class="labels__label labels__label_now">НОВИНКИ</span>
+												<span class="labels__label labels__label_action">АКЦИЯ</span>
+											</div>
+											<div class="product__actions">
+												<button class="product__action"><img src="@img/home/add-spisok.svg" data-popup="#add-list" 
+														alt="Добавить в список сравнения"></button>
+												<button class="product__action"><svg class="product__favorite" width="40"
+														height="40" viewBox="0 0 40 40" fill="none"
+														xmlns="http://www.w3.org/2000/svg">
+														<path
+															d="M16.906 11.046C18.217 7.778 18.873 6.144 20 6.144c1.127 0 1.783 1.634 3.094 4.902l.06.152c.741 1.847 1.112 2.77 1.866 3.331.755.561 1.746.65 3.727.827l.359.033c3.243.29 4.864.435 5.211 1.467.347 1.031-.857 2.127-3.265 4.318l-.804.731c-1.22 1.11-1.829 1.664-2.113 2.391a3.342 3.342 0 0 0-.132.416c-.187.758-.008 1.562.349 3.171l.11.501c.657 2.957.985 4.436.412 5.074-.214.238-.492.41-.8.494-.828.226-2.002-.731-4.35-2.644-1.542-1.257-2.313-1.885-3.198-2.026a3.333 3.333 0 0 0-1.052 0c-.885.14-1.656.77-3.198 2.026-2.348 1.913-3.522 2.87-4.35 2.644a1.666 1.666 0 0 1-.8-.494c-.573-.638-.245-2.116.411-5.074l.111-.5c.357-1.61.536-2.414.349-3.172a3.342 3.342 0 0 0-.132-.416c-.284-.727-.894-1.281-2.113-2.39l-.804-.732c-2.408-2.191-3.612-3.287-3.265-4.318.347-1.032 1.968-1.177 5.211-1.468l.358-.032c1.982-.177 2.973-.266 3.727-.827.755-.561 1.126-1.484 1.866-3.33l.061-.153z"
+															stroke="#7F213C" stroke-width="2"></path>
+													</svg></button>
+											</div>
+	
+										</article>
+									</div>
+									<div class="tabs__slide swiper-slide">
+										<article class="tabs__product product">
+											<a href="product.html" target="_blank" class="product__img">
+												<img class="ibg" src="@img/home/products/05.jpg" alt="">
+											</a>
+											<div class="product__content">
+												<h4 class="product__title"><span>LACOSTE</span> POUR ELLE</h4>
+												<div class="product__category product__category_man">Мужская парфюмерия</div>
+												<div class="product__cost">1000 - 30 000 руб.</div>
+											</div>
+											<div class="product__labels labels">
+												<span class="labels__label labels__label_sale">РАСПОДАЖА</span>
+												<span class="labels__label labels__label_discont">-20%</span>
+												<span class="labels__label labels__label_top">ТОП-ПРОДАЖ</span>
+												<span class="labels__label labels__label_now">НОВИНКИ</span>
+												<span class="labels__label labels__label_action">АКЦИЯ</span>
+											</div>
+											<div class="product__actions">
+												<button class="product__action"><img src="@img/home/add-spisok.svg" data-popup="#add-list" 
+														alt="Добавить в список сравнения"></button>
+												<button class="product__action"><svg class="product__favorite" width="40"
+														height="40" viewBox="0 0 40 40" fill="none"
+														xmlns="http://www.w3.org/2000/svg">
+														<path
+															d="M16.906 11.046C18.217 7.778 18.873 6.144 20 6.144c1.127 0 1.783 1.634 3.094 4.902l.06.152c.741 1.847 1.112 2.77 1.866 3.331.755.561 1.746.65 3.727.827l.359.033c3.243.29 4.864.435 5.211 1.467.347 1.031-.857 2.127-3.265 4.318l-.804.731c-1.22 1.11-1.829 1.664-2.113 2.391a3.342 3.342 0 0 0-.132.416c-.187.758-.008 1.562.349 3.171l.11.501c.657 2.957.985 4.436.412 5.074-.214.238-.492.41-.8.494-.828.226-2.002-.731-4.35-2.644-1.542-1.257-2.313-1.885-3.198-2.026a3.333 3.333 0 0 0-1.052 0c-.885.14-1.656.77-3.198 2.026-2.348 1.913-3.522 2.87-4.35 2.644a1.666 1.666 0 0 1-.8-.494c-.573-.638-.245-2.116.411-5.074l.111-.5c.357-1.61.536-2.414.349-3.172a3.342 3.342 0 0 0-.132-.416c-.284-.727-.894-1.281-2.113-2.39l-.804-.732c-2.408-2.191-3.612-3.287-3.265-4.318.347-1.032 1.968-1.177 5.211-1.468l.358-.032c1.982-.177 2.973-.266 3.727-.827.755-.561 1.126-1.484 1.866-3.33l.061-.153z"
+															stroke="#7F213C" stroke-width="2"></path>
+													</svg></button>
+											</div>
+	
+										</article>
+									</div>
+									<div class="tabs__slide swiper-slide">
+										<article class="tabs__product product">
+											<a href="product.html" target="_blank" class="product__img">
+												<img class="ibg" src="@img/home/products/06.jpg" alt="">
+											</a>
+											<div class="product__content">
+												<h4 class="product__title"><span>LACOSTE</span> POUR ELLE</h4>
+												<div class="product__category product__category_man">Мужская парфюмерия</div>
+												<div class="product__cost">1000 - 30 000 руб.</div>
+											</div>
+											<div class="product__labels labels">
+												<span class="labels__label labels__label_sale">РАСПОДАЖА</span>
+												<span class="labels__label labels__label_discont">-20%</span>
+												<span class="labels__label labels__label_top">ТОП-ПРОДАЖ</span>
+												<span class="labels__label labels__label_now">НОВИНКИ</span>
+												<span class="labels__label labels__label_action">АКЦИЯ</span>
+											</div>
+											<div class="product__actions">
+												<button class="product__action"><img src="@img/home/add-spisok.svg" data-popup="#add-list" 
+														alt="Добавить в список сравнения"></button>
+												<button class="product__action"><svg class="product__favorite" width="40"
+														height="40" viewBox="0 0 40 40" fill="none"
+														xmlns="http://www.w3.org/2000/svg">
+														<path
+															d="M16.906 11.046C18.217 7.778 18.873 6.144 20 6.144c1.127 0 1.783 1.634 3.094 4.902l.06.152c.741 1.847 1.112 2.77 1.866 3.331.755.561 1.746.65 3.727.827l.359.033c3.243.29 4.864.435 5.211 1.467.347 1.031-.857 2.127-3.265 4.318l-.804.731c-1.22 1.11-1.829 1.664-2.113 2.391a3.342 3.342 0 0 0-.132.416c-.187.758-.008 1.562.349 3.171l.11.501c.657 2.957.985 4.436.412 5.074-.214.238-.492.41-.8.494-.828.226-2.002-.731-4.35-2.644-1.542-1.257-2.313-1.885-3.198-2.026a3.333 3.333 0 0 0-1.052 0c-.885.14-1.656.77-3.198 2.026-2.348 1.913-3.522 2.87-4.35 2.644a1.666 1.666 0 0 1-.8-.494c-.573-.638-.245-2.116.411-5.074l.111-.5c.357-1.61.536-2.414.349-3.172a3.342 3.342 0 0 0-.132-.416c-.284-.727-.894-1.281-2.113-2.39l-.804-.732c-2.408-2.191-3.612-3.287-3.265-4.318.347-1.032 1.968-1.177 5.211-1.468l.358-.032c1.982-.177 2.973-.266 3.727-.827.755-.561 1.126-1.484 1.866-3.33l.061-.153z"
+															stroke="#7F213C" stroke-width="2"></path>
+													</svg></button>
+											</div>
+	
+										</article>
+									</div>
+									<div class="tabs__slide swiper-slide">
+										<article class="tabs__product product">
+											<a href="product.html" target="_blank" class="product__img">
+												<img class="ibg" src="@img/home/products/06.jpg" alt="">
+											</a>
+											<div class="product__content">
+												<h4 class="product__title"><span>LACOSTE</span> POUR ELLE</h4>
+												<div class="product__category product__category_man">Мужская парфюмерия</div>
+												<div class="product__cost">1000 - 30 000 руб.</div>
+											</div>
+											<div class="product__labels labels">
+												<span class="labels__label labels__label_sale">РАСПОДАЖА</span>
+												<span class="labels__label labels__label_discont">-20%</span>
+												<span class="labels__label labels__label_top">ТОП-ПРОДАЖ</span>
+												<span class="labels__label labels__label_now">НОВИНКИ</span>
+												<span class="labels__label labels__label_action">АКЦИЯ</span>
+											</div>
+											<div class="product__actions">
+												<button class="product__action"><img src="@img/home/add-spisok.svg" data-popup="#add-list" 
+														alt="Добавить в список сравнения"></button>
+												<button class="product__action"><svg class="product__favorite" width="40"
+														height="40" viewBox="0 0 40 40" fill="none"
+														xmlns="http://www.w3.org/2000/svg">
+														<path
+															d="M16.906 11.046C18.217 7.778 18.873 6.144 20 6.144c1.127 0 1.783 1.634 3.094 4.902l.06.152c.741 1.847 1.112 2.77 1.866 3.331.755.561 1.746.65 3.727.827l.359.033c3.243.29 4.864.435 5.211 1.467.347 1.031-.857 2.127-3.265 4.318l-.804.731c-1.22 1.11-1.829 1.664-2.113 2.391a3.342 3.342 0 0 0-.132.416c-.187.758-.008 1.562.349 3.171l.11.501c.657 2.957.985 4.436.412 5.074-.214.238-.492.41-.8.494-.828.226-2.002-.731-4.35-2.644-1.542-1.257-2.313-1.885-3.198-2.026a3.333 3.333 0 0 0-1.052 0c-.885.14-1.656.77-3.198 2.026-2.348 1.913-3.522 2.87-4.35 2.644a1.666 1.666 0 0 1-.8-.494c-.573-.638-.245-2.116.411-5.074l.111-.5c.357-1.61.536-2.414.349-3.172a3.342 3.342 0 0 0-.132-.416c-.284-.727-.894-1.281-2.113-2.39l-.804-.732c-2.408-2.191-3.612-3.287-3.265-4.318.347-1.032 1.968-1.177 5.211-1.468l.358-.032c1.982-.177 2.973-.266 3.727-.827.755-.561 1.126-1.484 1.866-3.33l.061-.153z"
+															stroke="#7F213C" stroke-width="2"></path>
+													</svg></button>
+											</div>
+	
+										</article>
+									</div>
+									<div class="tabs__slide swiper-slide">
+										<article class="tabs__product product">
+											<a href="product.html" target="_blank" class="product__img">
+												<img class="ibg" src="@img/home/products/02.jpg" alt="">
+											</a>
+											<div class="product__content">
+												<h4 class="product__title"><span>LACOSTE</span> POUR ELLE</h4>
+												<div class="product__category product__category_man">Мужская парфюмерия</div>
+												<div class="product__cost">1000 - 30 000 руб.</div>
+											</div>
+											<div class="product__labels labels">
+												<span class="labels__label labels__label_sale">РАСПОДАЖА</span>
+												<span class="labels__label labels__label_discont">-20%</span>
+												<span class="labels__label labels__label_top">ТОП-ПРОДАЖ</span>
+												<span class="labels__label labels__label_now">НОВИНКИ</span>
+												<span class="labels__label labels__label_action">АКЦИЯ</span>
+											</div>
+											<div class="product__actions">
+												<button class="product__action"><img src="@img/home/add-spisok.svg" data-popup="#add-list" 
+														alt="Добавить в список сравнения"></button>
+												<button class="product__action"><svg class="product__favorite" width="40"
+														height="40" viewBox="0 0 40 40" fill="none"
+														xmlns="http://www.w3.org/2000/svg">
+														<path
+															d="M16.906 11.046C18.217 7.778 18.873 6.144 20 6.144c1.127 0 1.783 1.634 3.094 4.902l.06.152c.741 1.847 1.112 2.77 1.866 3.331.755.561 1.746.65 3.727.827l.359.033c3.243.29 4.864.435 5.211 1.467.347 1.031-.857 2.127-3.265 4.318l-.804.731c-1.22 1.11-1.829 1.664-2.113 2.391a3.342 3.342 0 0 0-.132.416c-.187.758-.008 1.562.349 3.171l.11.501c.657 2.957.985 4.436.412 5.074-.214.238-.492.41-.8.494-.828.226-2.002-.731-4.35-2.644-1.542-1.257-2.313-1.885-3.198-2.026a3.333 3.333 0 0 0-1.052 0c-.885.14-1.656.77-3.198 2.026-2.348 1.913-3.522 2.87-4.35 2.644a1.666 1.666 0 0 1-.8-.494c-.573-.638-.245-2.116.411-5.074l.111-.5c.357-1.61.536-2.414.349-3.172a3.342 3.342 0 0 0-.132-.416c-.284-.727-.894-1.281-2.113-2.39l-.804-.732c-2.408-2.191-3.612-3.287-3.265-4.318.347-1.032 1.968-1.177 5.211-1.468l.358-.032c1.982-.177 2.973-.266 3.727-.827.755-.561 1.126-1.484 1.866-3.33l.061-.153z"
+															stroke="#7F213C" stroke-width="2"></path>
+													</svg></button>
+											</div>
+	
+										</article>
+									</div>
+								</div>
+								<div class="swiper-products-pagination pagination"></div>
+							</div>
+							<button type="button" class="swiper-prev swiper-tabs-prev"><svg
+									xmlns="http://www.w3.org/2000/svg" width="21" height="39" viewBox="0 0 21 39" fill="none">
+									<path fill-rule="evenodd" clip-rule="evenodd"
+										d="M20.5687 38.5525C21.15 37.9623 21.1428 37.0126 20.5525 36.4313L3.62138 19.7567L20.5686 2.55266C21.15 1.96248 21.1428 1.01277 20.5527 0.431399C19.9625 -0.149965 19.0128 -0.142824 18.4314 0.447348L0.431393 18.7201C0.152191 19.0035 -0.0029727 19.3863 4.14249e-05 19.7841C0.00305567 20.1819 0.164001 20.5623 0.447466 20.8415L18.4475 38.5687C19.0377 39.15 19.9874 39.1428 20.5687 38.5525Z"
+										fill="#6E6E6E" />
+								</svg></button>
+							<button type="button" class="swiper-next swiper-tabs-next"><svg
+									xmlns="http://www.w3.org/2000/svg" width="21" height="39" viewBox="0 0 21 39" fill="none">
+									<path fill-rule="evenodd" clip-rule="evenodd"
+										d="M20.5687 38.5525C21.15 37.9623 21.1428 37.0126 20.5525 36.4313L3.62138 19.7567L20.5686 2.55266C21.15 1.96248 21.1428 1.01277 20.5527 0.431399C19.9625 -0.149965 19.0128 -0.142824 18.4314 0.447348L0.431393 18.7201C0.152191 19.0035 -0.0029727 19.3863 4.14249e-05 19.7841C0.00305567 20.1819 0.164001 20.5623 0.447466 20.8415L18.4475 38.5687C19.0377 39.15 19.9874 39.1428 20.5687 38.5525Z"
+										fill="#6E6E6E" />
+								</svg></button>
+						</div>
+					</div>
+					<a class="tabs__show-all center-button" href="#">ПОКАЗАТЬ ВСЕ</a>
+				</section>
+			</main>
+			@@include('html/_footer.htm',{})
+		</div>
+		@@include('html/_popup.htm',{})
+		@@include('html/_popup-cart.htm',{})
+		@@include('html/_js.htm',{})
+	</body>
+</html>

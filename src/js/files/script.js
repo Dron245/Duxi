@@ -8,7 +8,6 @@ window.addEventListener('DOMContentLoaded', () => {
 	let flag = true;
 	let flagCart = true;
 	let flagred = true;
-	let flagSwitch = true;
 	function documentActions(e) {
 		const targetElement = e.target;
 
@@ -398,6 +397,7 @@ window.addEventListener('DOMContentLoaded', () => {
 			targetElement.closest('.actions-otliv__button_cart') ||
 			targetElement.closest('.produce .quantity__button--plus') ||
 			targetElement.closest('.seil-to-make')) {
+			const empty = document.querySelector('.actions-header__empty')
 			const cartHeader = document.querySelector('.cart')
 			const cartQuantity = document.querySelector('.actions-header__quantity');
 			cartQuantity.classList.add('_quantity-visible')
@@ -405,6 +405,7 @@ window.addEventListener('DOMContentLoaded', () => {
 			setTimeout(function(){
 				cartHeader.classList.remove('_cart-active')
 			} , 2000)
+			empty.hidden = true
 		}
 		// Корзина главная страница чекбокс "выбрать всё"
 		if (targetElement.closest('.checkbox-cart-check-all') && flagCart == true) {
@@ -439,6 +440,14 @@ window.addEventListener('DOMContentLoaded', () => {
 			qwe.style.visibility = 'visible'
 		}
 
+		//Удаляю все отсутствующие товары в корзине
+		if (targetElement.closest('.out__button')) {
+			const outProducts = targetElement.closest('.out').querySelectorAll('.list-cart__item')
+			outProducts.forEach(element => {
+				element.remove()
+			});
+		}
+
 		//Раскрашиваю тенью выбранный подарок в попапе "Выбрать подарок"
 		if (targetElement.closest('.gift__button')) {
 			targetElement.closest('.gift__item').classList.toggle('_shadow-gift')
@@ -451,7 +460,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
 		//В корзине появление строки "с бонусного счёта будет списано"
 		if (targetElement.closest('.cancel-bonus')) {
-			targetElement.closest('.list-aside__item').nextElementSibling.style.display = 'block'
+			targetElement.closest('.list-aside__item').nextElementSibling.style.display = 'flex'
 		}
 
 		//Тест проверка правильности ввода промокода
@@ -468,12 +477,10 @@ window.addEventListener('DOMContentLoaded', () => {
 		}
 		
 		//Переключаю свитч при нажатии на сам текст
-		if (targetElement.closest('.out__text') && flagSwitch == true) {
-			flagSwitch = false;
-			targetElement.closest('.out__checkbox').querySelector('input').checked = true
-		}	else if(targetElement.closest('.out__text') && flagSwitch == false) {
-				flagSwitch = true;
-				targetElement.closest('.out__checkbox').querySelector('input').checked = false;
+		if (targetElement.closest('.out__text') && !targetElement.previousElementSibling.querySelector('input').checked == true) {
+			targetElement.previousElementSibling.querySelector('input').checked = true
+		}	else if(targetElement.closest('.out__text') && targetElement.previousElementSibling.querySelector('input').checked == true) {
+				targetElement.previousElementSibling.querySelector('input').checked = false
 			}
 		
 
@@ -544,6 +551,18 @@ window.addEventListener('DOMContentLoaded', () => {
 		if (targetElement.closest('.date-select__title')) {
 			let dateDelivery = targetElement.closest('.date-select__title').querySelector('.date-select__number').innerText;
 			document.querySelector('._method-active .delivery__day').innerText = dateDelivery;
+		}
+
+		//Обвожу и снимаю тенью выбранный пункт выдачи
+		if (targetElement.closest('.pip__item') && (!targetElement.closest('.pip__item').classList.contains('_choose-punkt'))) {
+			const pips = targetElement.closest('.pip__list').querySelectorAll('.pip__item')
+			// console.log(pips);
+			pips.forEach(element => {
+				element.classList.remove('_choose-punkt')
+			});
+			targetElement.closest('.pip__item').classList.add('_choose-punkt')
+		} else if (targetElement.closest('.pip__item') && targetElement.closest('.pip__item').classList.contains('_choose-punkt')) {
+			targetElement.closest('.pip__item').classList.remove('_choose-punkt')
 		}
 	}
 });
@@ -722,8 +741,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	//Всплывашка при наведении "Корзина пуста"
 	const basket = document.querySelector('.basket__link')
-	if (basket && basket.closest('.actions-header__item_cart').querySelector('.cart__list').innerHTML=='') {
+	if (basket) {
 		basket.addEventListener("mousemove", EmptyMove);
+		
 		function EmptyMove () {
 			basket.querySelector('.actions-header__empty').classList.add('_no-hidden')
 		}

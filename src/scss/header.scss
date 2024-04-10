@@ -547,10 +547,6 @@
 			@media (max-width: em(1540)) {
 				left: 75%;
 			}
-			// @media (max-width:$pcSmall){
-			// 	left: 75%;
-			// 	@include adaptiveValue("left", 132, 132,0,1281,1001);
-			// }
 			@media (max-width:$tablet){
 				left: 78%;
 			}
@@ -601,6 +597,7 @@
 		opacity: 0;
 		visibility: hidden;
 		&._quantity-visible {
+			display: block;
 			opacity: 1;
 			visibility: visible;
 		}

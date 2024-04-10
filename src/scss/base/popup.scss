@@ -182,7 +182,8 @@ body::after {
 		height: 20px;
 		z-index: 101;
 		@media (max-width:$mobile){
-			 @include adaptiveValue("width", 50, 18,0,768,320); 
+			width: 20px;
+			//  @include adaptiveValue("width", 50, 18,0,768,320); 
 		}
 		img {
 			width: 100%;
