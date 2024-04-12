@@ -131,6 +131,9 @@ body::after {
 	#pip-data & {
 		max-width: 1121px;
 	}
+	#no-sms & {
+		max-width: 400px;
+	}
 	max-width: 340px;
 	border-radius: 10px;
 	position: relative;
