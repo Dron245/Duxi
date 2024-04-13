@@ -49,7 +49,7 @@
 				<form method="post" action="#" class="popup__form">
 					<div class="popup__form-item">
 						<input id="vhod-tel-01" required autocomplete="off" type="tel" name="form[]" data-error="Ошибка"
-							class="popup__input">
+							class="popup__input phone-popup">
 						<label for="vhod-tel-01" class="popup__label">ВВЕДИТЕ НОМЕР ТЕЛЕФОНА</label>
 					</div>
 				</form>
@@ -70,7 +70,7 @@
 				<h4 class="popup__title">войти по номеру</h4>
 				<form method="post" action="#" class="popup__form">
 					<div class="popup__form-item">
-						<input disabled autocomplete="off" type="tel" name="form[]" data-error="Ошибка" class="popup__input">
+						<input disabled autocomplete="off" type="tel" name="form[]" data-error="Ошибка" class="popup__input phone-popup-code">
 						<!-- <span class="popup__label">вход по номеру телефона</span> -->
 					</div>
 				</form>
@@ -81,21 +81,21 @@
 					<form method="post" action="#" class="popup__entry">
 						<p class="popup__title-entry-tel">введите код из push-уведомления</p>
 						<div class="popup__input-wrapper-tel">
-							<input maxlength="1" inputmode="numeric" required id="pincode1" autocomplete="off" type="text"
+							<input maxlength="1" inputmode="numeric"  min="0" max="9"  required id="pincode1" autocomplete="off" type="text"
 								class="popup__entry-vhod">
-							<input maxlength="1" inputmode="numeric" required id="pincode2" autocomplete="off" type="text"
+							<input maxlength="1" inputmode="numeric"  min="0" max="9"  required id="pincode2" autocomplete="off" type="text"
 								class="popup__entry-vhod">
-							<input maxlength="1" inputmode="numeric" required id="pincode3" autocomplete="off" type="text"
+							<input maxlength="1" inputmode="numeric"  min="0" max="9"  required id="pincode3" autocomplete="off" type="text"
 								class="popup__entry-vhod">
-							<input maxlength="1" inputmode="numeric" required id="pincode4" autocomplete="off" type="text"
+							<input maxlength="1" inputmode="numeric"  min="0" max="9"  required id="pincode4" autocomplete="off" type="text"
 								class="popup__entry-vhod">
-							<input maxlength="1" inputmode="numeric" required id="pincode5" autocomplete="off" type="text"
+							<input maxlength="1" inputmode="numeric"  min="0" max="9"  required id="pincode5" autocomplete="off" type="text"
 								class="popup__entry-vhod">
-							<input maxlength="1" inputmode="numeric" required id="pincode6" autocomplete="off" type="text"
+							<input maxlength="1" inputmode="numeric"  min="0" max="9"  required id="pincode6" autocomplete="off" type="text"
 								class="popup__entry-vhod">
-							<input maxlength="1" inputmode="numeric" required id="pincode7" autocomplete="off" type="text"
+							<input maxlength="1" inputmode="numeric"  min="0" max="9"  required id="pincode7" autocomplete="off" type="text"
 								class="popup__entry-vhod">
-							<input maxlength="1" inputmode="numeric" required id="pincode8" autocomplete="off" type="text"
+							<input maxlength="1" inputmode="numeric"  min="0" max="9"  required id="pincode8" autocomplete="off" type="text"
 								class="popup__entry-vhod">
 						</div>
 					</form>
