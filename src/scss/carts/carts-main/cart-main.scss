@@ -3,9 +3,12 @@
 	&__recently {
 	}
 }
-.basket {
+.basket, .order {
 	.recently {
 		margin-top: 60px;
+		@media (max-width:$mobileSmall){
+			 margin-top: 40px; 
+		}
 	}
 	.recently__container {
 		@media (min-width:$mobile){
@@ -24,6 +27,9 @@
 		grid-template-columns: 74.675325% 1fr;
 		@media (max-width:$tablet){
 			grid-template-columns: 100%;
+		}
+		@media (max-width:$mobileSmall){
+			 margin-top: 20px; 
 		}
 	}
 

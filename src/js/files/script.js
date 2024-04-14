@@ -7,6 +7,7 @@ window.addEventListener('DOMContentLoaded', () => {
 	document.addEventListener("click", documentActions);
 	let flag = true;
 	let flagCart = true;
+	let flagAllPopup = true;
 	let flagred = true;
 	function documentActions(e) {
 		const targetElement = e.target;
@@ -556,13 +557,27 @@ window.addEventListener('DOMContentLoaded', () => {
 		//Обвожу и снимаю тенью выбранный пункт выдачи
 		if (targetElement.closest('.pip__item') && (!targetElement.closest('.pip__item').classList.contains('_choose-punkt'))) {
 			const pips = targetElement.closest('.pip__list').querySelectorAll('.pip__item')
-			// console.log(pips);
 			pips.forEach(element => {
 				element.classList.remove('_choose-punkt')
 			});
 			targetElement.closest('.pip__item').classList.add('_choose-punkt')
 		} else if (targetElement.closest('.pip__item') && targetElement.closest('.pip__item').classList.contains('_choose-punkt')) {
 			targetElement.closest('.pip__item').classList.remove('_choose-punkt')
+		}
+
+		// В попапе листе ожидания выставляю "выбрать всё"
+		if (targetElement.closest('#add_all') && flagAllPopup == true) {
+			flagAllPopup = false
+			const listPopup = targetElement.closest('.list-popup__body').querySelectorAll('input')
+			listPopup.forEach(element => {
+				element.checked = true
+			});
+		} else if(targetElement.closest('#add_all') && flagAllPopup == false) {
+			flagAllPopup = true
+			const listPopup = targetElement.closest('.list-popup__body').querySelectorAll('input')
+			listPopup.forEach(element => {
+				element.checked = false
+			});
 		}
 	}
 });

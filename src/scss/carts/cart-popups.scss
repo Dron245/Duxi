@@ -230,7 +230,11 @@ background: #FFF;
 }
 
 .popup-more {
-	
+	&#no-sms {
+		.popup__title {
+			margin-bottom: 40px;
+		}
+	}
 	line-height: normal;
 	text-align: center;
 	.popup__content {

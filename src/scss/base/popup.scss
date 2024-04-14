@@ -40,7 +40,7 @@ body::after {
 	visibility: visible;
 	overflow: auto;
 	pointer-events: auto;
-	text-align: center;
+	// text-align: center;
 	@media (min-width:$mobile){
 		display: flex;
 		align-items: flex-start;
@@ -64,7 +64,7 @@ body::after {
 	// align-items: center;
 	@media (min-width: $mobile) {
 		// padding-top: toRem(100);
-		flex: 0 0 80%;
+		flex: 0 0 85%;
 		margin-top: toRem(100);
 	}
 }

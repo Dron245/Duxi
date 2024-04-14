@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+	@@include('html/_head.htm',{
+	"title":"Мои отзывы"
+	})
+	<body>
+		<div class="wrapper">
+			@@include('html/_header-user.htm',{})
+			<main class="page lk">
+				<div class="lk__container">
+					<nav class="lk__breadcrumbs breadcrumbs">
+						<ul class="breadcrumbs__list">
+							<li class="breadcrumbs__item">
+								<a href="home-user.html" class="breadcrumbs__link">Интернет магазин парфюмерии</a>
+							</li>
+							<li class="breadcrumbs__item">
+								<a href="lk-data.html" class="breadcrumbs__link">Личный кабинет</a>
+							</li>
+							<li class="breadcrumbs__item">
+								<span class="breadcrumbs__current">Мои отзывы</span>
+							</li>
+						</ul>
+					</nav>
+					<section class="lk__item">
+						<h3 class="lk__title">Мои отзывы</h3>
+					</section>
+				</div>
+			</main>
+			@@include('html/_footer.htm',{})
+		</div>
+		@@include('html/_popup.htm',{})
+		@@include('html/_popup-cart.htm',{})
+		@@include('html/_js.htm',{})
+	</body>
+</html>
