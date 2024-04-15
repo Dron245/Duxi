@@ -16,6 +16,9 @@
 		@media (max-width:$pcSmall){
 			grid-template-columns: 70% 1fr;
 		}
+		@media (max-width:$tablet){
+			grid-template-columns: 1fr;
+		}
 	}
 
 	&__content {
@@ -31,6 +34,13 @@
 	}
 
 	&__list {
+		display: grid;
+		row-gap: 20px;
+		@include adaptiveValue("column-gap", 95, 30,0,1540,1280);
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+		@media (max-width:$tablet){
+			grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+		}
 	}
 
 	&__button {
@@ -41,26 +51,168 @@
 }
 
 .personal {
-
+	border-radius: 16px;
+	background: #FFF;
+	padding: 20px;
+	@include adaptiveValue("padding-left", 36, 20,0,1540,1001.01);
+	@include adaptiveValue("padding-right", 36, 20,0,1540,1001.01);
+	.popup__form-item {
+		margin-top: 26px;
+		margin-bottom: 0;
+		row-gap: 6px;
+	}
+	.form-calc__input {
+		width: 100%;
+	}
 	&__wrapper {
+		position: relative;
+		// outline: 1px solid red;
 
+		&_tel {
+			input[class] {
+				width: 89.236111%; /* 257/288 */
+				@media (max-width:$tablet){
+					width: 85%;
+				}
+				@media (max-width:$mobile){
+					 width: 85%; 
+				}
+			}
+		}
 		&_block {
+			input[class] {
+				// width: 73%;
+				@media (max-width:$mobile){
+					//  width: 72%; 
+				}
+			}
+		}
+		&_button {
+			margin-top: auto;
 		}
 	}
 
 	&__item {
+		.form-calc__input {
+			padding-top: 16px;
+			padding-bottom: 16px;
+			@media (max-width:$tablet){
+				font-size: 20px;
+			}
+			@media (max-width:$mobile){
+				padding-left: 20px;
+				@include adaptiveValue("height", 100, 46,0,768,320);
+				@include adaptiveValue("font-size", 28, 13,0,768,320); 
+			}
+			@media (max-width:$mobileSmall){
+				 padding-left: 10px; 
+			}
+		}
 	}
 
-	&__actions {
+	&__actions[class] {
+		margin-top: 6px;
+		@media (max-width:$tablet){
+			font-size: 20px;
+		}
+		@media (max-width:$mobile){
+			@include adaptiveValue("font-size", 28, 13,0,768,320); 
+		}
+	}
+
+	&__input-wrapper {
+		position: relative;
+		// z-index: 2;
+		.input[id^=lk-birthday] {
+			position: relative;
+			// background: url('@img/lk/calendar.svg') 85% no-repeat;
+			// z-index: 2;
+		}
+		.personal__galery {
+			// position: relative;
+			// z-index: 3;
+		}
+	}
+
+	&__img-input[class].qwe {
+		width: 27px;
+		height: 27px;
+		// background: url('@img/lk/calendar.svg') 0 0 / cover no-repeat;
+	}
+
+	&__input-border {
+		width: 88%;
+		border-radius: 3px;
+		border: 1px solid #C7C7C7;
+		background: #FAFAFA;
+		.personal__img {
+			position: absolute;
+			z-index: 0;
+			top: 50%;
+			right: 10px;
+			transform: translateY(-50%);
+		}
+		input[class] {
+			border-radius: 0;
+			background: initial;
+			border: initial;
+		}
+	}
+
+	&__galery {
+		position: absolute;
+		right: 0;
+		top: 50%;
+		transform: translateY(-50%);
 	}
 
 	&__img {
+	display: inline-block;
+	@media (max-width:$pcSmall){
+		width: 20px;
+	}
+	@media (max-width:$tablet){
+		width: 37px;
+	}
+	@media (max-width:$mobile){
+		 @include adaptiveValue("width", 65, 28,0,768,320); 
+	}
+	&_confirmed {
+			width: 23px;
+			@media (max-width:$mobile){
+				 @include adaptiveValue("width", 65, 33,0,768,320); 
+			}
+		}
+	img {
+		width: 100%;
+		height: auto;
+	}
 
 		&_picker {
+			cursor: pointer;
+			margin-right: 15px;
+			@media (max-width:$pcSmall){
+				margin-right: 5px;
+			}
+			@media (max-width:$mobile){
+				 @include adaptiveValue("margin-right", 25, 100,768,320); 
+			}
 		}
 	}
 
 	&__button {
+		width: 100%;
+		padding-top: 13px;
+		padding-bottom: 13.5px;
+		font-size: 18px;
+		@media (max-width:$tablet){
+			font-size: 20px;
+			padding-top: 15.5px;
+			padding-bottom: 15.5px;
+		}
+		@media (max-width:$mobile){
+			@include adaptiveValue("font-size", 28, 16,0,768,320); 
+		}
 	}
 }
 .form-calc {
@@ -152,13 +304,11 @@
 	}
 
 	&__link {
-		font-size: 24px;
+		@include adaptiveValue("font-size", 24, 18,0,1920,1001.01);
 		color: $tekst-zagolovok-ne-aktivnyy;
 		font-weight: 300;
 		text-transform: uppercase;
-		@media (max-width:$pcSmall){
-			font-size: 18px;
-		}
+		
 		&_active {
 			color: $zagolovok;
 			font-weight: 400;

@@ -45,25 +45,39 @@
 												<input id="midle-name" autocomplete="off" value="Викторовна" type="text" name="form[]" data-error="Ошибка" placeholder="" class="form-calc__input input">
 											</div>
 										</div>
-										<div class="personal__wrapper personal__wrapper_block">
+										<div class="personal__wrapper personal__wrapper_tel">
 											<div class="personal__item">
 												<label for="phone-lk" class="form-calc__label">Телефон</label>
-												<input id="phone-lk" autocomplete="off" value="+7 963 555 55 55" type="text" name="form[]" data-error="Ошибка" placeholder="" class="form-calc__input form-calc__input_phone input">
+												<div class="personal__input-wrapper">
+													<input id="phone-lk" autocomplete="off" value="+7 963 555 55 55" type="text" name="form[]" data-error="Ошибка" placeholder="" class="form-calc__input form-calc__input_phone input">
+													<div class="personal__galery">
+														<div class="personal__img personal__img_confirmed"><img src="@img/lk/confirmed.svg" alt="телефон подтверждён"></div>
+													</div>
+												</div>
 											</div>
 											<button data-popup="#" class="personal__actions bottom-calc__button">изменить телефон</button>
-											<div class="personal__img"><img src="@img/lk/confirmed.svg" alt="телефон подтверждён"></div>
 										</div>
 										<div class="personal__wrapper personal__wrapper_block">
 											<div class="personal__item">
 												<label for="lk-birthday" class="form-calc__label">дата рождения</label>
-												<input data-datepicker id="lk-birthday" autocomplete="off" value="19.05.1990" type="text" name="form[]" data-error="Ошибка" placeholder="" class="form-calc__input form-calc__input_city input">
+												<div class="personal__input-wrapper">
+													<div class="personal__input-border">
+														<input data-datepicker id="lk-birthday" autocomplete="off" value="19.05.1990" type="text" name="form[]" data-error="Ошибка" placeholder="" class="form-calc__input form-calc__input_city input">
+														<span class="personal__img">
+															<img src="@img/lk/calendar.svg" alt="календарь">
+														</span>
+													</div>
+													<div class="personal__galery">
+														<!-- <input data-datepickerr type="text"> -->
+														<!-- <span class="personal__img personal__img_picker">
+															<img src="@img/lk/calendar.svg" alt="календарь">
+														</span> -->
+														<span data-tippy-content-birthday class="personal__img">
+															<img src="@img/lk/tippy.svg" alt="подсказка">
+														</span>
+													</div>
+												</div>
 											</div>
-											<span data-datepicker class="personal__img personal__img_picker">
-												<img src="@img/lk/calendar.svg" alt="календарь">
-											</span>
-											<span data-tippy-content-birthday class="personal__img">
-												<img src="@img/lk/tippy.svg" alt="подсказка">
-											</span>
 											<button data-popup="#" class="personal__actions bottom-calc__button">
 												<img src="@img/lk/add-doc.svg" alt="">
 												<span>Прикрепить документ</span>
@@ -79,10 +93,10 @@
 										<div class="personal__wrapper">
 											<div class="personal__item">
 												<label for="email-lk" class="form-calc__label">E-MAIL</label>
-												<input id="email-lk" autocomplete="off" value="qwe@asd.ru" type="text" name="form[]" data-error="Ошибка" placeholder="" class="form-calc__input input">
+												<input id="email-lk" autocomplete="off" value="lounasilver@gmail.com" type="text" name="form[]" data-error="Ошибка" placeholder="" class="form-calc__input input">
 											</div>
 										</div>
-										<div class="personal__wrapper">
+										<div class="personal__wrapper personal__wrapper_button">
 											<button data-popup="#" type="button" class="personal__button button-light">СМЕНИТЬ ПАРОЛЬ</button>
 										</div>
 									</div>
