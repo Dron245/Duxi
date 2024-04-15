@@ -844,8 +844,12 @@
 	}
 
 	&__item-arrow {
+		// transform: translateY(10px);
 		transition: transform 0.3s;
 		._open + & {
+			transform: rotate(90deg);
+		}
+		._user-open & {
 			transform: rotate(90deg);
 		}
 		// transform: translateY(5px);

@@ -1,0 +1,167 @@
+.page {
+}
+.lk {
+
+	&__container {
+	}
+
+	&__breadcrumbs {
+	}
+
+	&__body {
+		line-height: normal;
+		display: grid;
+		gap: 20px;
+		grid-template-columns: 75.459318% 1fr; /* 1150/1524 */
+		@media (max-width:$pcSmall){
+			grid-template-columns: 70% 1fr;
+		}
+	}
+
+	&__content {
+	}
+
+	&__form {
+	}
+
+	&__item {
+	}
+
+	&__title {
+	}
+
+	&__list {
+	}
+
+	&__button {
+	}
+
+	&__navigation {
+	}
+}
+
+.personal {
+
+	&__wrapper {
+
+		&_block {
+		}
+	}
+
+	&__item {
+	}
+
+	&__actions {
+	}
+
+	&__img {
+
+		&_picker {
+		}
+	}
+
+	&__button {
+	}
+}
+.form-calc {
+
+	&__label {
+	}
+
+	&__input {
+
+		&_phone {
+		}
+
+		&_city {
+		}
+	}
+}
+.input {
+}
+.bottom-calc {
+
+	&__button {
+	}
+}
+.popup {
+
+	&__form-item {
+	}
+
+	&__input-wrap {
+	}
+
+	&__input {
+	}
+
+	&__label {
+	}
+}
+.button-light {
+}
+.lk-address {
+
+	&__item {
+	}
+
+	&__text {
+	}
+
+	&__actions {
+	}
+
+	&__button {
+	}
+}
+.lk-notify {
+
+	&__item {
+	}
+}
+.out {
+
+	&__checkbox {
+	}
+
+	&__text {
+	}
+}
+.switch {
+}
+.checkbox {
+}
+.slider {
+}
+.round {
+}
+.button {
+
+	&__actions {
+	}
+}
+.navigation-lk {
+	@media (max-width:$tablet){
+		display: none;
+	}
+	&__list {
+	}
+
+	&__item {
+		&:not(:last-child) {margin-bottom: toRem(20);}
+	}
+
+	&__link {
+		font-size: 24px;
+		color: $tekst-zagolovok-ne-aktivnyy;
+		font-weight: 300;
+		text-transform: uppercase;
+		@media (max-width:$pcSmall){
+			font-size: 18px;
+		}
+		&_active {
+			color: $zagolovok;
+			font-weight: 400;
+		}
+	}
+}

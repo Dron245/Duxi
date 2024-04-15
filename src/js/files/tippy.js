@@ -44,3 +44,10 @@ flsModules.tippy = tippy('[data-tippy-content-otliv]', {
 	allowHTML: true,
 	content: '<div class="tippy__wrapper"><div class="tippy__top"><div class="tippy__title">подсказка</div><div class="tippy__close"></div><div class="tippy__content">Отливантом называют аромат, часть которого перелили из флакона в емкость со спреем. Такой метод называют «распив парфюмерии». Емкость для отливанта называется атомайзер. Обычно он вмещает объем от 5 до 30 мл, но купить можно даже меньше: от 2 мл."</div></div></div>'
 });
+
+flsModules.tippy = tippy('[data-tippy-content-birthday]', {
+	arrow: true,
+	placement: 'right',
+	allowHTML: true,
+	content: '<div class="tippy__wrapper"><div class="tippy__top tippy__top_lk"><div class="tippy__title tippy__title_lk">Подтверждение даты рождения</div><div class="tippy__close"></div><div class="tippy__content">Загрузите скан копию документа, подтверждающего дату Вашего рождения</div></div></div>'
+});

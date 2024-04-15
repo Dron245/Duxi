@@ -114,6 +114,11 @@
 	align-items: center;
 	flex-wrap: wrap;
 	position: relative;
+	&_lk {
+		.tippy__title {
+			font-size: 11px;
+		}
+	}
 }
 
 .tippy__title {
@@ -126,6 +131,9 @@
 	margin-top: 80px;
 	@media (min-width:1001.98px){
 		display: none;
+	}
+	&.tippy__title_lk {
+		display: block;
 	}
 }
 

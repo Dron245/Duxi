@@ -16,6 +16,7 @@ window.addEventListener('DOMContentLoaded', () => {
 		// Открытие сабменю в мобильной версии
 		if (targetElement.closest('.menu__link') && targetElement.closest('header')) {
 			targetElement.classList.toggle('_open');
+			document.querySelector('.menu__user-data') ? targetElement.closest('.menu__user-data').classList.toggle('_user-open') : null
 			targetElement.closest('.menu__item').classList.toggle('_menu__item-active');
 			targetElement.closest('.menu__item').querySelector('.menu__sublist').classList.toggle('_sub-menu-open');
 		}
@@ -584,6 +585,51 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
 
+//Преобразование фильтров-спойлеров в каталоге в таблетном разрешении
+const catalog = document.querySelector('.catalog');
+if (catalog) {
+	const details = catalog.querySelectorAll('details');
+	const spollersWrapper = catalog.querySelector('aside [data-spollers]')
+	const summury = catalog.querySelectorAll('.filter__title-wrapper')
+	
+	// console.log(spollersWrapper);
+	if (window.innerWidth < 1001) {
+		details.forEach(element => {
+			console.log(1);
+			element.removeAttribute('data-open');
+		});
+		spollersWrapper.setAttribute('data-one-spoller', '')
+		summury.forEach(element => {
+			element.setAttribute('data-spoller-close', '')
+			element.classList.remove('_spoller-active')
+		});
+	}
+}
+
+//Преобразование фильтров-спойлеров в способах оплаты в мобильном разрешении
+const payment = document.querySelector('.payment');
+if(payment) {
+	const details = payment.querySelectorAll('details');
+	if (window.innerWidth < 768.02) {
+		details.forEach(element => {
+			element.removeAttribute('data-open');
+		});
+	}
+}
+
+//Преобразование спойлеров на странице "О магазине" в таблетном разрешении
+
+const store = document.querySelector('.store')
+if(store) {
+	const details = store.querySelectorAll('details');
+	if (window.innerWidth < 768.02) {
+		details.forEach(element => {
+			element.removeAttribute('data-open');
+		});
+		store.querySelector('.store-not-open').setAttribute('data-open', '')
+	}
+}
+
 
 
 
@@ -602,49 +648,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		tabs02 ? tabs02.classList.add('_tab-active') : null;
 	}
 
-	//Преобразование фильтров-спойлеров в каталоге в таблетном разрешении
-	const catalog = document.querySelector('.catalog');
-	if (catalog) {
-		const details = catalog.querySelectorAll('details');
-		const spollersWrapper = catalog.querySelector('aside [data-spollers]')
-		const summury = catalog.querySelectorAll('.filter__title-wrapper')
-		
-		// console.log(spollersWrapper);
-		if (window.innerWidth < 1001) {
-			details.forEach(element => {
-				element.removeAttribute('data-open');
-			});
-			spollersWrapper.setAttribute('data-one-spoller', '')
-			summury.forEach(element => {
-				element.setAttribute('data-spoller-close', '')
-				element.classList.remove('_spoller-active')
-			});
-		}
-	}
-
-	//Преобразование фильтров-спойлеров в способах оплаты в мобильном разрешении
-	const payment = document.querySelector('.payment');
-	if(payment) {
-		const details = payment.querySelectorAll('details');
-		if (window.innerWidth < 768.02) {
-			details.forEach(element => {
-				element.removeAttribute('data-open');
-			});
-		}
-	}
-
-	//Преобразование спойлеров на странице "О магазине" в таблетном разрешении
-
-	const store = document.querySelector('.store')
-	if(store) {
-		const details = store.querySelectorAll('details');
-		if (window.innerWidth < 768.02) {
-			details.forEach(element => {
-				element.removeAttribute('data-open');
-			});
-			store.querySelector('.store-not-open').setAttribute('data-open', '')
-		}
-	}
+	
 
 	//позиционирование хлебных крошек при уменьшении экрана
 	const breadcrumbs = document.querySelector('.breadcrumbs__list')
