@@ -581,9 +581,18 @@ window.addEventListener('DOMContentLoaded', () => {
 			});
 		}
 
+
+/*============ЛИЧНЫЙ КАБИНЕТ=================*/
+
+
 		//Удаление адреса доставки в ЛИЧНОМ КАБИНЕТЕ при нажатии на крестик
 		if (targetElement.closest('.lk-address__button-delete')) {
 			targetElement.closest('.lk-address__item').remove()
+		}
+
+		//Добавление фотографии в ЛИчном кабинете
+		if (targetElement.closest('.popup__img-close')) {
+			document.querySelector('.popup__img-add').style.display = 'block'
 		}
 	}
 });

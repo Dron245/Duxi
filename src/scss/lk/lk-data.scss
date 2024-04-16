@@ -115,6 +115,9 @@
 		@media (max-width:$tablet){
 			margin-top: 32px;
 		}
+		@media (max-width:$mobileSmall){
+			 margin-top: 20px; 
+		}
 	}
 	.form-calc__input {
 		width: 100%;
@@ -173,12 +176,20 @@
 		
 	}
 
-	&__actions[class] {
+	&__actions {
 		display: flex;
 		gap: toRem(5);
 		align-items: center;
 		margin-top: 6px;
 		span {
+			position: absolute;
+			left: 12px;
+			@media (max-width:$tablet){
+				left: 15px;
+			}
+			@media (max-width:$mobile){
+				 @include adaptiveValue("left", 30, 15,0,768,320); 
+			}
 			text-align: left;
 		}
 		@media (max-width:$tablet){
@@ -186,6 +197,18 @@
 		}
 		@media (max-width:$mobile){
 			@include adaptiveValue("font-size", 28, 13,0,768,320); 
+		}
+		img {
+			width: 100%;
+			height: auto;
+		}
+		&_add {
+			@media (max-width:$tablet){
+				width: 10px;
+			}
+			@media (max-width:$mobile){
+				 @include adaptiveValue("width", 15, 8,0,768,320); 
+			}
 		}
 	}
 
@@ -321,6 +344,10 @@
 		flex: 0 0 43.478261%; /* 500/1150 */
 	}
 	&__item {
+		&:not(:last-child) {
+			border-radius: 16px;
+			background: #FFF;
+		}
 		padding: 12px toRem(20);
 		display: flex;
 		align-items: center;
@@ -355,6 +382,7 @@
 	}
 
 	&__button {
+		width: 30px;
 		@media (max-width:$mobile){
 			 @include adaptiveValue("width", 60, 30,0,768,320); 
 		}

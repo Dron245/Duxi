@@ -23,7 +23,7 @@ if (document.querySelector('[data-datepicker]')) {
 			// Show the month of the selected date.
 			console.log(instance.currentMonthName)
 		 },
-		customDays: ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Нд"],
+		customDays: ["Вс", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб"],
 		customMonths: ["Янв", "Фев", "Март", "Апр", "Май", "Июнь", "Июль", "Авг", "Сент", "Окт", "Нояб", "Дек"],
 		overlayButton: 'Применить',
 		overlayPlaceholder: 'Год (4 цифры)',

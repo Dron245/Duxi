@@ -145,6 +145,9 @@ body::after {
 	#change-phone & {
 		max-width: 340px;
 	}
+	#add-document & {
+		max-width: 500px;
+	}
 	max-width: 340px;
 	border-radius: 10px;
 	position: relative;
@@ -645,6 +648,10 @@ body::after {
 			 @include adaptiveValue("width", 150, 70,0,768,320); 
 			 @include adaptiveValue("height", 150, 70,0,768,320); 
 		}
+		#add-document & {
+			width: 112px;
+			height: initial;
+		}
 	}
 
 	&__img-review {
@@ -652,7 +659,10 @@ body::after {
 		height: auto;
 		aspect-ratio: 1 / 1;
 		border-radius: 16px;
-		// overflow: hidden;
+		#add-document & {
+			border-radius: 0;
+			aspect-ratio: initial;
+		}
 	}
 
 	&__img-close {
