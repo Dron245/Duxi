@@ -345,6 +345,9 @@
 			position: absolute;
 			top: 3px;
 			left: 113%;
+			@media (max-width:$mobile) and (min-width:560px){
+				 top: 7px; 
+			}
 			@media (max-width:$mobileSmall){
 				 top: -3px; 
 			}

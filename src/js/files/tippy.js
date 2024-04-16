@@ -47,7 +47,7 @@ flsModules.tippy = tippy('[data-tippy-content-otliv]', {
 
 flsModules.tippy = tippy('[data-tippy-content-birthday]', {
 	arrow: true,
-	placement: 'right',
+	placement: 'bottom',
 	allowHTML: true,
 	content: '<div class="tippy__wrapper"><div class="tippy__top tippy__top_lk"><div class="tippy__title tippy__title_lk">Подтверждение даты рождения</div><div class="tippy__close"></div><div class="tippy__content">Загрузите скан копию документа, подтверждающего дату Вашего рождения</div></div></div>'
 });

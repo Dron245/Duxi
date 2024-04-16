@@ -838,6 +838,11 @@
 		@media (max-width: $mobile) {
 			@include adaptiveValue("font-size", 35, 16, 0, 768, 320);
 		}
+		&:has(.menu__user-data) {
+			@media (max-width:$mobile){
+				 padding-bottom: 0; 
+			}
+		}
 	}
 
 	&__item-title {

@@ -124,7 +124,7 @@ body::after {
 	#sertificatepresent & {
 		max-width: 580px;
 	}
-	#add-address & {
+	#add-address &, #change-delivery-address & {
 		max-width: 680px;
 	}
 	#save-data & {
@@ -141,6 +141,9 @@ body::after {
 	}
 	#no-sms & {
 		max-width: 400px;
+	}
+	#change-phone & {
+		max-width: 340px;
 	}
 	max-width: 340px;
 	border-radius: 10px;

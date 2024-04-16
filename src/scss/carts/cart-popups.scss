@@ -146,7 +146,7 @@ background: #FFF;
 
 .popup {
 	&__form {
-		#add-address & {
+		#add-address &, #change-delivery-address & {
 			display: grid;
 			grid-template-columns: 1fr 1fr;
 			column-gap: toRem(40);
@@ -171,7 +171,7 @@ background: #FFF;
 	}
 
 	&__form-item-group {
-		#add-address & {
+		#add-address &, #change-delivery-address & {
 			margin-bottom: 30px;
 			column-gap: toRem(20);
 			@media (max-width:$mobile){

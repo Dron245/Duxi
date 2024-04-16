@@ -3,7 +3,7 @@
 	@@include('html/_head.htm',{
 	"title":"Персональные данные"
 	})
-	<body>
+	<body class="lk-body">
 		<div class="wrapper">
 			@@include('html/_header-user.htm',{})
 			<main class="page lk">
@@ -24,7 +24,7 @@
 					<div class="lk__body">
 						<div class="lk__content">
 							<form action="#" method="post" class="lk__form">
-								<section class="lk__item">
+								<section class="lk__item lk__item_data">
 									<h3 class="lk__title">персональные данные</h3>
 									<div class="lk__list personal">
 										<div class="personal__wrapper">
@@ -55,7 +55,7 @@
 													</div>
 												</div>
 											</div>
-											<button data-popup="#" class="personal__actions bottom-calc__button">изменить телефон</button>
+											<button data-popup="#change-phone" class="personal__actions bottom-calc__button">изменить телефон</button>
 										</div>
 										<div class="personal__wrapper personal__wrapper_block">
 											<div class="personal__item">
@@ -79,13 +79,15 @@
 												</div>
 											</div>
 											<button data-popup="#" class="personal__actions bottom-calc__button">
-												<img src="@img/lk/add-doc.svg" alt="">
-												<span>Прикрепить документ</span>
+												<img class="personal__add-img" src="@img/lk/add-doc.svg" alt="">
+												<span class="personal__add-doc">Прикрепить документ</span>
+												<span class="personal__add-doc-confirmed">документ подтверждён</span>
+												<span class="personal__add-doc-wait">Документ загружен, ожидает модернизации </span>
 											</button>
 										</div>
 										<div class="popup__form-item">
 											<div class="popup__input-wrap">
-												<input id="vk-page" required autocomplete="off" type="email" name="form[]" data-error="Ошибка" class="popup__input">
+												<input id="vk-page" required autocomplete="off" type="text" name="form[]" data-error="Ошибка" class="popup__input">
 												<label for="vk-page" class="popup__label">страница вконтакте</label>
 											</div>
 											<span class="bottom-calc__button">Введите ссылку на ваш профиль ВК</span>
@@ -106,10 +108,10 @@
 									<div class="lk-address__item">
 										<p class="lk-address__text">Москва, Проспект Мира, дом Кефира, 16 111375, текст, адрес, корпус, строение, поселок, мусорка и прочее</p>
 										<div class="lk-address__actions">
-											<button data-popup="#" type="button" class="lk-address__button">
+											<button data-popup="#change-delivery-address" type="button" class="lk-address__button">
 												<img src="@img/lk/redactors.svg" alt="изменить">
 											</button>
-											<button type="button" class="lk-address__button">
+											<button type="button" class="lk-address__button lk-address__button-delete">
 												<img src="@img/lk/delete.svg" alt="удалить">
 											</button>
 										</div>
@@ -117,65 +119,73 @@
 									<div class="lk-address__item">
 										<p class="lk-address__text">Москва, Проспект Мира, дом Кефира, 26 111375, текст, адрес, корпус, строение, поселок, мусорка и прочее</p>
 										<div class="lk-address__actions">
-											<button data-popup="#" type="button" class="lk-address__button">
+											<button data-popup="#change-delivery-address" type="button" class="lk-address__button">
 												<img src="@img/lk/redactors.svg" alt="изменить">
 											</button>
-											<button type="button" class="lk-address__button">
+											<button type="button" class="lk-address__button lk-address__button-delete">
 												<img src="@img/lk/delete.svg" alt="удалить">
 											</button>
 										</div>
 									</div>
+									<div class="lk-address__item">
+										<button data-popup="#add-address" type="button" class="address__button-address">
+											<img src="@img/popup/plus-add-list.svg" alt="">
+											<span class="list-popup__button-text">Добавить новый адрес</span>
+										</button>
+									</div>
 								</section>
 								<section class="lk__item lk-notify">
 									<h3 class="lk__title">нАСТРОЙКА УВЕДОМЛЕНИЙ</h3>
-									<div class="lk-notify__item">
-										<div class="out__checkbox">
-											<label for="sms-current-status-order" class="switch">
-												<input checked class="checkbox" type="checkbox" id="sms-current-status-order">
-												<span class="slider round">Получать SMS-уведомления о текущем статусе исполнения моего заказа</span>
-											</label>
-											<p class="out__text"></p>
+									<div class="lk-notify__checkboxes">
+										<div class="lk-notify__item">
+											<div class="out__checkbox">
+												<label for="sms-current-status-order" class="switch">
+													<input checked class="checkbox" type="checkbox" id="sms-current-status-order">
+													<span class="slider round"></span>
+												</label>
+												<p class="out__text">Получать SMS-уведомления о текущем статусе исполнения моего заказа</p>
+											</div>
 										</div>
-									</div>
-									<div class="lk-notify__item">
-										<div class="out__checkbox">
-											<label for="sms-discount" class="switch">
-												<input class="checkbox" type="checkbox" id="sms-discount">
-												<span class="slider round">Получать SMS-уведомления о скидках (не чаще 3-х раз в год)</span>
-											</label>
-											<p class="out__text"></p>
+										<div class="lk-notify__item">
+											<div class="out__checkbox">
+												<label for="sms-discount" class="switch">
+													<input class="checkbox" type="checkbox" id="sms-discount">
+													<span class="slider round"></span>
+												</label>
+												<p class="out__text">Получать SMS-уведомления о скидках (не чаще 3-х раз в год)</p>
+											</div>
 										</div>
-									</div>
-									<div class="lk-notify__item">
-										<div class="out__checkbox">
-											<label for="email-current-status-order" class="switch">
-												<input checked class="checkbox" type="checkbox" id="email-current-status-order">
-												<span class="slider round">Получать уведомления по электронной почте о текущем статусе исполнения моего заказа</span>
-											</label>
-											<p class="out__text"></p>
+										<div class="lk-notify__item">
+											<div class="out__checkbox">
+												<label for="email-current-status-order" class="switch">
+													<input checked class="checkbox" type="checkbox" id="email-current-status-order">
+													<span class="slider round"></span>
+												</label>
+												<p class="out__text">Получать уведомления по электронной почте о текущем статусе исполнения моего заказа</p>
+											</div>
 										</div>
-									</div>
-									<div class="lk-notify__item">
-										<div class="out__checkbox">
-											<label for="email-bonus" class="switch">
-												<input class="checkbox" type="checkbox" id="email-bonus">
-												<span class="slider round">Получать уведомления по электронной почте о движении денежных средств на бонусном счёте</span>
-											</label>
-											<p class="out__text"></p>
+										<div class="lk-notify__item">
+											<div class="out__checkbox">
+												<label for="email-bonus" class="switch">
+													<input class="checkbox" type="checkbox" id="email-bonus">
+													<span class="slider round"></span>
+												</label>
+												<p class="out__text">Получать уведомления по электронной почте о движении денежных средств на бонусном счёте</p>
+											</div>
 										</div>
-									</div>
-									<div class="lk-notify__item">
-										<div class="out__checkbox">
-											<label for="email-discount" class="switch">
-												<input class="checkbox" type="checkbox" id="email-discount">
-												<span class="slider round">Получать уведомления по электронной почте о скидках и новых акциях (не чаще 3-х раз в год)</span>
-											</label>
-											<p class="out__text"></p>
+										<div class="lk-notify__item">
+											<div class="out__checkbox">
+												<label for="email-discount" class="switch">
+													<input class="checkbox" type="checkbox" id="email-discount">
+													<span class="slider round"></span>
+												</label>
+												<p class="out__text">Получать уведомления по электронной почте о скидках и новых акциях (не чаще 3-х раз в год)</p>
+											</div>
 										</div>
 									</div>
 								</section>
-								<div class="lk__item">
-									<button type="button" class="lk__button button__actions">СОХРАНИТЬ ИЗМЕНЕНИЯ</button>
+								<div class="lk__item lk__item_button-save">
+									<button type="button" class="lk__button button-actions">СОХРАНИТЬ ИЗМЕНЕНИЯ</button>
 								</div>
 							</form>
 						</div>

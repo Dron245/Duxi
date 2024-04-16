@@ -14,6 +14,9 @@
 [data-tippy-root] {
 	// max-width: calc(100vw - 10px);
 	max-width: 180px;
+	.lk-body & {
+		max-width: 250px;
+	}
 	@media (max-width:1001.98px){
 		// width: 96%; /* 960/1000 */
 		position: fixed !important;
@@ -101,6 +104,9 @@
 	z-index: 1;
 	border:1px solid #FFF5F6;
 	border-radius: 12px;
+	.lk-body & {
+		filter: drop-shadow(10px 10px 10px rgba(187, 144, 144, 0.10)) drop-shadow(-10px -10px 10px rgba(187, 144, 144, 0.10)) drop-shadow(-2px -2px 8px rgba(187, 144, 144, 0.10)) drop-shadow(2px 2px 8px rgba(187, 144, 144, 0.10));
+	}
 }
 
 // .tippy__wrapper {
@@ -114,6 +120,9 @@
 	align-items: center;
 	flex-wrap: wrap;
 	position: relative;
+	.lk-body & {
+		justify-content: center;
+	}
 	&_lk {
 		.tippy__title {
 			font-size: 11px;
@@ -129,11 +138,15 @@
 	color: #7f203b;
 	margin-bottom: 20px;
 	margin-top: 80px;
+	.lk-body & {
+		margin-bottom: 5px;
+	}
 	@media (min-width:1001.98px){
 		display: none;
 	}
 	&.tippy__title_lk {
 		display: block;
+		margin-top: 0;
 	}
 }
 
@@ -159,10 +172,16 @@
 
 .tippy__content {
 	flex: 1 0 100%;
-	
+	.lk-body & {
+		font-size: 11px;
+		text-align: center;
+	}
 	@media (max-width: 1001.98px){
 		font-size: 30px;
 		margin-bottom: 80px;
+		.lk-body & {
+			margin-bottom: 10px;
+		}
 	}
 }
 

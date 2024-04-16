@@ -580,6 +580,11 @@ window.addEventListener('DOMContentLoaded', () => {
 				element.checked = false
 			});
 		}
+
+		//Удаление адреса доставки в ЛИЧНОМ КАБИНЕТЕ при нажатии на крестик
+		if (targetElement.closest('.lk-address__button-delete')) {
+			targetElement.closest('.lk-address__item').remove()
+		}
 	}
 });
 

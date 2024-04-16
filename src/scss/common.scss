@@ -948,15 +948,18 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 	position: relative;
 	display: inline-block;
 	width: 48px;
+	flex: 0 0 48px;
 	height: 26px;
 	top: 2px;
 	@media (max-width:$tablet) and (min-width:$mobile){
 		width: 70px;
 		height: 40px;
+		flex: 0 0 70px;
 	}
 	@media (max-width:$mobile) and (min-width:$mobileSmall){
 		 width: 146px;
 		 height: 70px; 
+		 flex: 0 0 146px;
 	}
  }
  
