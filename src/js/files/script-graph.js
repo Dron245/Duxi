@@ -173,4 +173,33 @@ window.onload = function () {
 		});
 		chart03.render();
 	}
+
+	if (document.querySelector('.discount-info')) {
+		var chart04 = new CanvasJS.Chart("lk-discount-graph", {
+			animationEnabled: true,
+			animationDuration: 300,
+			
+			toolTip: {
+				cornerRadius: 8,
+				fontColor: "#000",
+				fontSize: 16,
+				borderColor: "#BF5C7A",
+				backgroundColor: "#fdfafb",
+			},
+			data: [
+				{
+					type: "doughnut",
+					dataPoints: [
+					{  y: 80, color:'#931236'},
+					{  y: 20, color:'#FF6892'},
+					
+					],
+					lineColor:'#BF5C7A',
+					markerSize: 14,
+					markerColor: '#BF5C7A',
+				}
+			]
+		});
+		chart04.render();
+	}
 }

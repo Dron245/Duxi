@@ -11,8 +11,17 @@ window.addEventListener('DOMContentLoaded', () => {
 	let flagred = true;
 	function documentActions(e) {
 		const targetElement = e.target;
-
+		function closePopup(id) {
+			document.documentElement.classList.remove('popup-show')
+			document.documentElement.classList.remove('lock')
+			document.body.removeAttribute('style');
+			targetElement.closest(`${id}`).classList.remove('popup_show')
+			targetElement.closest(`${id}`).setAttribute('aria-hidden', 'false')
+		}
 		console.log(targetElement);
+
+
+
 		// Открытие сабменю в мобильной версии
 		if (targetElement.closest('.menu__link') && targetElement.closest('header')) {
 			targetElement.classList.toggle('_open');
@@ -604,29 +613,25 @@ window.addEventListener('DOMContentLoaded', () => {
 				const inputs = formData.querySelectorAll('input');
 				const adresses = targetElement.closest('body').querySelector('.lk-address__group');
 				for (const input of inputs) {
-				  numbers.push(input.value);
+					numbers.push(input.value);
 				}
 				const str = numbers
 				.filter(element => {return element !== null && element !== undefined && element !=='';})
 				.join(', ');
 				adresses.insertAdjacentHTML('beforeEnd',
-				 `<div class="lk-address__item">
-				 <p class="lk-address__text">${str}</p>
-				 <div class="lk-address__actions">
-					 <button data-popup="#change-delivery-address" type="button" class="lk-address__button">
-						 <img src="img/lk/redactors.svg" alt="изменить">
-					 </button>
-					 <button type="button" class="lk-address__button lk-address__button-delete">
-						 <img src="img/lk/delete.svg" alt="удалить">
-					 </button>
-					 </div>
-			 		</div>`);
-					document.documentElement.classList.remove('popup-show')
-					document.documentElement.classList.remove('lock')
-					document.body.removeAttribute('style');
-					 targetElement.closest('#save-data').classList.remove('popup_show')
-					 targetElement.closest('#save-data').setAttribute('aria-hidden', 'false')
-					}
+					`<div class="lk-address__item">
+					<p class="lk-address__text">${str}</p>
+					<div class="lk-address__actions">
+						<button data-popup="#change-delivery-address" type="button" class="lk-address__button">
+							<img src="img/lk/redactors.svg" alt="изменить">
+						</button>
+						<button type="button" class="lk-address__button lk-address__button-delete">
+							<img src="img/lk/delete.svg" alt="удалить">
+						</button>
+						</div>
+					</div>`);
+						closePopup('#save-data');
+				}
 		}
 
 		//Отмена добавления адреса
@@ -641,11 +646,7 @@ window.addEventListener('DOMContentLoaded', () => {
 		//Появление надписи "документ загружен"
 		if (targetElement.closest('#day-birthday') && document.querySelector('.popup__photo-img')) {
 			document.documentElement.classList.add('_add-photo')
-			document.documentElement.classList.remove('popup-show')
-			document.documentElement.classList.remove('lock')
-			document.body.removeAttribute('style');
-			targetElement.closest('#add-document').classList.remove('popup_show')
-			targetElement.closest('#add-document').setAttribute('aria-hidden', 'false')
+			closePopup('#add-document');
 		}
 
 		//Появление всплывашки изменения сохранены
@@ -654,6 +655,16 @@ window.addEventListener('DOMContentLoaded', () => {
 			setTimeout(function(){
 				targetElement.closest('.lk').classList.remove('_save-data-complite')
 			} , 2000)
+		}
+
+		//Меняю телефон в личном кабинете
+		if (targetElement.closest('#change-number')) {
+			let phoneLk = targetElement.closest('body').querySelector('#phone-lk');
+			let newPhone = targetElement.closest('#change-phone').querySelector('#change-number-phone');
+			if (newPhone.value !== '') {
+				closePopup('#change-phone')
+				phoneLk.value = newPhone.value;
+			}
 		}
 	}
 });
