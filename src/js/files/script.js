@@ -594,9 +594,69 @@ window.addEventListener('DOMContentLoaded', () => {
 		if (targetElement.closest('.popup__img-close')) {
 			document.querySelector('.popup__img-add').style.display = 'block'
 		}
+
+		//ДОбавление нового адреса в личном кабинете
+		if (targetElement.closest('#save-data-button') && document.querySelector('.lk')) {
+			const formData = targetElement.closest('body').querySelector('#add-address');
+			getValues()
+			function getValues() {
+				const numbers = [];
+				const inputs = formData.querySelectorAll('input');
+				const adresses = targetElement.closest('body').querySelector('.lk-address__group');
+				for (const input of inputs) {
+				  numbers.push(input.value);
+				}
+				const str = numbers
+				.filter(element => {return element !== null && element !== undefined && element !=='';})
+				.join(', ');
+				adresses.insertAdjacentHTML('beforeEnd',
+				 `<div class="lk-address__item">
+				 <p class="lk-address__text">${str}</p>
+				 <div class="lk-address__actions">
+					 <button data-popup="#change-delivery-address" type="button" class="lk-address__button">
+						 <img src="img/lk/redactors.svg" alt="изменить">
+					 </button>
+					 <button type="button" class="lk-address__button lk-address__button-delete">
+						 <img src="img/lk/delete.svg" alt="удалить">
+					 </button>
+					 </div>
+			 		</div>`);
+					document.documentElement.classList.remove('popup-show')
+					document.documentElement.classList.remove('lock')
+					document.body.removeAttribute('style');
+					 targetElement.closest('#save-data').classList.remove('popup_show')
+					 targetElement.closest('#save-data').setAttribute('aria-hidden', 'false')
+					}
+		}
+
+		//Отмена добавления адреса
+		if (targetElement.closest('#no-save-data') && document.querySelector('.lk')) {
+			document.documentElement.classList.remove('popup-show')
+			document.documentElement.classList.remove('lock')
+			document.body.removeAttribute('style');
+			targetElement.closest('#save-data').classList.remove('popup_show')
+			targetElement.closest('#save-data').setAttribute('aria-hidden', 'false')
+		}
+
+		//Появление надписи "документ загружен"
+		if (targetElement.closest('#day-birthday') && document.querySelector('.popup__photo-img')) {
+			document.documentElement.classList.add('_add-photo')
+			document.documentElement.classList.remove('popup-show')
+			document.documentElement.classList.remove('lock')
+			document.body.removeAttribute('style');
+			targetElement.closest('#add-document').classList.remove('popup_show')
+			targetElement.closest('#add-document').setAttribute('aria-hidden', 'false')
+		}
+
+		//Появление всплывашки изменения сохранены
+		if (targetElement.closest('.lk__item_button-save')) {
+			targetElement.closest('.lk').classList.add('_save-data-complite')
+			setTimeout(function(){
+				targetElement.closest('.lk').classList.remove('_save-data-complite')
+			} , 2000)
+		}
 	}
 });
-
 
 
 //Преобразование фильтров-спойлеров в каталоге в таблетном разрешении

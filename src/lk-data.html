@@ -8,6 +8,16 @@
 			@@include('html/_header-user.htm',{})
 			<main class="page lk">
 				<div class="lk__container">
+					<div class="lk__notify">
+						<div class="lk__save-complite save-complite save-done">
+							<h5 class="save-complite__title">ОБНОВЛЕНИЕ ПРОФИЛЯ</h5>
+							<p class="save-complite__text">Пароль успешно изменен</p>
+						</div>
+						<div class="lk__save-complite save-complite save-error">
+							<h5 class="save-complite__title">ОБНОВЛЕНИЕ ПРОФИЛЯ</h5>
+							<p class="save-complite__text">Ошибка. Повторите позднее.</p>
+						</div>
+					</div>
 					<nav class="lk__breadcrumbs breadcrumbs">
 						<ul class="breadcrumbs__list">
 							<li class="breadcrumbs__item">
@@ -99,32 +109,34 @@
 											</div>
 										</div>
 										<div class="personal__wrapper personal__wrapper_button">
-											<button data-popup="#" type="button" class="personal__button button-light">СМЕНИТЬ ПАРОЛЬ</button>
+											<button data-popup="#change-password" type="button" class="personal__button button-light">СМЕНИТЬ ПАРОЛЬ</button>
 										</div>
 									</div>
 								</section>
 								<section class="lk__item lk-address">
 									<h3 class="lk__title">Адреса доставки заказов</h3>
-									<div class="lk-address__item">
-										<p class="lk-address__text">Москва, Проспект Мира, дом Кефира, 16 111375, текст, адрес, корпус, строение, поселок, мусорка и прочее</p>
-										<div class="lk-address__actions">
-											<button data-popup="#change-delivery-address" type="button" class="lk-address__button">
-												<img src="@img/lk/redactors.svg" alt="изменить">
-											</button>
-											<button type="button" class="lk-address__button lk-address__button-delete">
-												<img src="@img/lk/delete.svg" alt="удалить">
-											</button>
+									<div class="lk-address__group">
+										<div class="lk-address__item">
+											<p class="lk-address__text">Москва, Проспект Мира, дом Кефира, 16 111375, текст, адрес, корпус, строение, поселок, мусорка и прочее</p>
+											<div class="lk-address__actions">
+												<button data-popup="#change-delivery-address" type="button" class="lk-address__button">
+													<img src="@img/lk/redactors.svg" alt="изменить">
+												</button>
+												<button type="button" class="lk-address__button lk-address__button-delete">
+													<img src="@img/lk/delete.svg" alt="удалить">
+												</button>
+											</div>
 										</div>
-									</div>
-									<div class="lk-address__item">
-										<p class="lk-address__text">Москва, Проспект Мира, дом Кефира, 26 111375, текст, адрес, корпус, строение, поселок, мусорка и прочее</p>
-										<div class="lk-address__actions">
-											<button data-popup="#change-delivery-address" type="button" class="lk-address__button">
-												<img src="@img/lk/redactors.svg" alt="изменить">
-											</button>
-											<button type="button" class="lk-address__button lk-address__button-delete">
-												<img src="@img/lk/delete.svg" alt="удалить">
-											</button>
+										<div class="lk-address__item">
+											<p class="lk-address__text">Москва, Проспект Мира, дом Кефира, 26 111375, текст, адрес, корпус, строение, поселок, мусорка и прочее</p>
+											<div class="lk-address__actions">
+												<button data-popup="#change-delivery-address" type="button" class="lk-address__button">
+													<img src="@img/lk/redactors.svg" alt="изменить">
+												</button>
+												<button type="button" class="lk-address__button lk-address__button-delete">
+													<img src="@img/lk/delete.svg" alt="удалить">
+												</button>
+											</div>
 										</div>
 									</div>
 									<div class="lk-address__item">
@@ -209,7 +221,6 @@
 		</div>
 		@@include('html/_popup.htm',{})
 		@@include('html/_popup-lk.htm',{})
-		@@include('html/_popup-cart.htm',{})
 		@@include('html/_js.htm',{})
 	</body>
 </html>

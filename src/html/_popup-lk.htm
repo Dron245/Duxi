@@ -33,8 +33,8 @@
 						<input id="country-change" required autocomplete="off" type="text" name="form[]" data-error="Ошибка" class="popup__input">
 						<label for="country-change" class="popup__label">страна</label>
 					</div>
-					<div class="popup__form-item">
-							<input id="city-data-change" required autocomplete="off" type="text" name="form[]" data-error="Ошибка" class="popup__input">
+					<div class="popup__form-item _label-up">
+							<input id="city-data-change" value="Тверь" required autocomplete="off" type="text" name="form[]" data-error="Ошибка" class="popup__input">
 							<label for="city-data-change" class="popup__label">город</label>
 					</div>
 					<div class="popup__form-item">
@@ -44,7 +44,7 @@
 					<div class="popup__form-item-group">
 						<div class="popup__form-item">
 							<input id="house-change" required autocomplete="off" type="text" name="form[]" data-error="Ошибка" class="popup__input">
-							<label for="house" class="popup__label">дом</label>
+							<label for="house-change" class="popup__label">дом</label>
 						</div>
 						<div class="popup__form-item">
 							<input id="corpus-change" required autocomplete="off" type="text" name="form[]" data-error="Ошибка" class="popup__input">
@@ -101,9 +101,62 @@
 							</div>
 						</div>
 						<div class="popup__form-item">
-							<button id="btn-comment" type="submit" class="popup__button">отправить</button>
+							<button id="day-birthday" type="button" class="popup__button">отправить</button>
 						</div>
 					</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div id="change-password" aria-hidden="true" class="popup popup-more">
+	<div class="popup__wrapper">
+		<div class="popup__content">
+			<button data-close type="button" class="popup__close"><img src="@img/popup/close.svg" alt=""></button>
+			<div class="popup__body">
+				<div class="popup__reg-top">
+					<h4 class="popup__title">ИЗМЕНИТЬ ПАРОЛЬ</h4>
+				</div>
+				<form method="post" action="#" class="popup__form">
+					<div class="popup__form-item">
+						<div class="popup__input-wrapper">
+							<input required id="change-password-1" autocomplete="off" type="password" name="form[]" data-error="Ошибка"
+								placeholder="" class="popup__input">
+							<label for="change-password-1" class="popup__label">старый пароль</label>
+							<button type="button" class="popup__img-pasword">
+								<img class="popup-img-toggle popup__img-v" src="@img/popup/pasword-v.svg" alt="">
+								<img class="popup-img-toggle popup__img-nv" src="@img/popup/pasword-nv.svg" alt="">
+							</button>
+						</div>
+					</div>
+					<div class="popup__form-item">
+						<div class="popup__input-wrapper">
+							<input required id="change-password-2" autocomplete="off" type="password" name="form[]" data-error="Ошибка"
+								placeholder="" class="popup__input">
+							<label for="change-password-2" class="popup__label">НОВЫЙ ПАРОЛЬ</label>
+							<button type="button" class="popup__img-pasword">
+								<img class="popup-img-toggle popup__img-v" src="@img/popup/pasword-v.svg" alt="">
+								<img class="popup-img-toggle popup__img-nv" src="@img/popup/pasword-nv.svg" alt="">
+							</button>
+						</div>
+					</div>
+					<div class="popup__form-item">
+						<div class="popup__input-wrapper">
+							<input required id="change-password-3" autocomplete="off" type="password" name="form[]" data-error="Ошибка"
+								placeholder="" class="popup__input">
+							<label for="change-password-3" class="popup__label">ПОВТОРИТЕ НОВЫЙ ПАРОЛЬ</label>
+							<button type="button" class="popup__img-pasword">
+								<img class="popup-img-toggle popup__img-v" src="@img/popup/pasword-v.svg" alt="">
+								<img class="popup-img-toggle popup__img-nv" src="@img/popup/pasword-nv.svg" alt="">
+							</button>
+						</div>
+					</div>
+					<div class="popup__form-item">
+						<button data-popup="#change-password-complite" id="btn-change-complite" type="button"
+							class="popup__button popup__button_reg">изменить</button>
+					</div>
+				</form>
 			</div>
 		</div>
 	</div>
