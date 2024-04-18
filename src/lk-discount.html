@@ -17,15 +17,15 @@
 								<a href="lk-data.html" class="breadcrumbs__link">Личный кабинет</a>
 							</li>
 							<li class="breadcrumbs__item">
-								<span class="breadcrumbs__current">персональная скидка</span>
+								<span class="breadcrumbs__current">Персональная скидка</span>
 							</li>
 						</ul>
 					</nav>
-					<div class="lk__body">
+					<div class="lk__body personal-discount">
 						<div class="lk__content">
 							<section class="lk__item lk__item_personal">
 								<h3 class="lk__title">персональная скидка</h3>
-								<div class="lk__top personal-discount">
+								<div class="lk__top">
 									<div class="personal-discount__item">
 										<p class="personal-discount__text">скидка</p>
 										<div class="personal-discount__number"><span>2</span>%</div>
@@ -33,7 +33,7 @@
 									</div>
 									<div class="personal-discount__item">
 										<p class="personal-discount__text">Сумма заказов</p>
-										<div class="personal-discount__number"><span>85704</span>руб.</div>
+										<div class="personal-discount__number"><span>85704</span> руб.</div>
 										<p class="personal-discount__subtext">Скидка клиента автоматически обновляется в корзине</p>
 									</div>
 								</div>
@@ -41,8 +41,21 @@
 							<section class="lk__item lk__item_info discount-info">
 								<h3 class="lk__title">ИНФОРМАЦИЯ ПО СКИДКЕ</h3>
 								<div class="discount-info__content">
-									<p class="personal-discount__subtext">ДО ПОВЫШЕНИЯ СКИДКИ В <span>3 %</span>ОСТАЛОСЬ СОВЕРШИТЬ ЗАКАЗОВ НА СУММУ <span>4 000 РУБ.</span></p>
+									<p class="personal-discount__text">ДО ПОВЫШЕНИЯ СКИДКИ В <span>3%</span> ОСТАЛОСЬ СОВЕРШИТЬ ЗАКАЗОВ НА СУММУ <span>4 000 РУБ.</span></p>
 									<div class="discount-info__graph" id="lk-discount-graph"></div>
+								</div>
+							</section>
+							<section class="lk__item lk__item_andinfo andinfo">
+								<div data-spollers="768.01" class="spollers">
+									<details data-open class="spollers__item">
+										<summary class="spollers__title">
+											<h3 class="lk__title">дополнительная информация</h3>
+											<span class="feedback__spoller-arrow"><img src="@img/search/arrow-search-spoiler.svg" alt=""></span>
+										</summary>
+										<div class="spollers__body andinfo__item">
+											<p class="andinfo__text">Персональная скидка клиента зависит от общей суммы полученных заказов за последние 1000 дней.</p>
+										</div>
+									</details>
 								</div>
 							</section>
 						</div>
@@ -59,6 +72,61 @@
 								<li class="navigation-lk__item"><a class="navigation-lk__link" href="lk.reviews.html"><span>мои отзывы</span></a></li>
 							</ul>
 						</aside>
+						<section class="lk__item lk__item_calcul-discount calcul-discount">
+							<div data-spollers="768.01" class="spollers">
+								<details data-open class="spollers__item">
+									<summary class="spollers__title">
+										<h3 class="lk__title">РАСЧЕТ СКИДКИ</h3>
+										<span class="feedback__spoller-arrow"><img src="@img/search/arrow-search-spoiler.svg" alt=""></span>
+									</summary>
+									<div class="spollers__body calcul-discount__body">
+										<h5 class="calcul-discount__subtitle">сумма заказа</h5>
+										<div class="calcul-discount__group">
+											<div class="calcul-discount__item">
+												<p class="calcul-discount__text">от <br> 10 000 руб.</p>
+												<div class="calcul-discount__number"><span>1</span> %</div>
+											</div>
+											<div class="calcul-discount__item">
+												<p class="calcul-discount__text">от <br> 20 000 руб.</p>
+												<div class="calcul-discount__number"><span>2</span> %</div>
+											</div>
+											<div class="calcul-discount__item calcul-discount__item_active">
+												<p class="calcul-discount__text">от <br> 30 000 руб.</p>
+												<div class="calcul-discount__number"><span>3</span> %</div>
+											</div>
+											<div class="calcul-discount__item">
+												<p class="calcul-discount__text">от <br> 40 000 руб.</p>
+												<div class="calcul-discount__number"><span>4</span> %</div>
+											</div>
+											<div class="calcul-discount__item">
+												<p class="calcul-discount__text">от <br> 50 000 руб.</p>
+												<div class="calcul-discount__number"><span>5</span> %</div>
+											</div>
+											<div class="calcul-discount__item">
+												<p class="calcul-discount__text">от <br> 60 000 руб.</p>
+												<div class="calcul-discount__number"><span>6</span> %</div>
+											</div>
+											<div class="calcul-discount__item">
+												<p class="calcul-discount__text">от <br> 70 000 руб.</p>
+												<div class="calcul-discount__number"><span>7</span> %</div>
+											</div>
+											<div class="calcul-discount__item">
+												<p class="calcul-discount__text">от <br> 80 000 руб.</p>
+												<div class="calcul-discount__number"><span>8</span> %</div>
+											</div>
+											<div class="calcul-discount__item">
+												<p class="calcul-discount__text">от <br> 90 000 руб.</p>
+												<div class="calcul-discount__number"><span>9</span> %</div>
+											</div>
+											<div class="calcul-discount__item calcul-discount__item_threesign">
+												<p class="calcul-discount__text">от <br> 100 000 руб.</p>
+												<div class="calcul-discount__number"><span>10</span> %</div>
+											</div>
+										</div>
+									</div>
+								</details>
+							</div>
+						</section>
 					</div>
 				</div>
 			</main>

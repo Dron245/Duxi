@@ -24,8 +24,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
 		// Открытие сабменю в мобильной версии
 		if (targetElement.closest('.menu__link') && targetElement.closest('header')) {
-			targetElement.classList.toggle('_open');
-			document.querySelector('.menu__user-data') ? targetElement.closest('.menu__user-data').classList.toggle('_user-open') : null
+			// targetElement.classList.toggle('_open');
+			// document.querySelector('.menu__user-data') ? targetElement.closest('.menu__user-data').classList.toggle('_user-open') : null
 			targetElement.closest('.menu__item').classList.toggle('_menu__item-active');
 			targetElement.closest('.menu__item').querySelector('.menu__sublist').classList.toggle('_sub-menu-open');
 		}
@@ -218,13 +218,20 @@ window.addEventListener('DOMContentLoaded', () => {
 		}
 
 		//работа с подсказками
-		if(window.innerWidth < 1001.98 && targetElement.closest('.filter__help')) {
+		if(window.innerWidth < 1001.98 && (targetElement.closest('.filter__help'))) {
 			document.documentElement.classList.add('_tippy-open')
 		}
-		if(window.innerWidth < 1001.98 && !targetElement.closest('.filter__help')) {
+		if(window.innerWidth < 1001.98 && (!targetElement.closest('.filter__help'))) {
 			document.documentElement.classList.remove('_tippy-open')
 		}
 		
+		if(window.innerWidth < 1001.98 && (targetElement.closest('.calendar-help'))) {
+			document.documentElement.classList.add('_tippy-open')
+		}
+		if(window.innerWidth < 1001.98 && (!targetElement.closest('.calendar-help'))) {
+			document.documentElement.classList.remove('_tippy-open')
+		}
+
 		//Открытие / закрытие поиска в мобильной версии в шапке
 		if(window.innerWidth < 1001.98 && targetElement.closest('.header-center__input')) {
 			document.querySelector('.header').classList.add('_mobile-searh-top-open')

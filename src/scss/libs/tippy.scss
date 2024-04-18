@@ -183,6 +183,10 @@
 			margin-bottom: 10px;
 		}
 	}
+	@media (max-width: 600px){
+		padding-left: 20px;
+		padding-right: 20px;
+	}
 }
 
 ._tippy-open body::after {

@@ -840,7 +840,10 @@
 		}
 		&:has(.menu__user-data) {
 			@media (max-width:$mobile){
-				 padding-bottom: 0; 
+				 padding-bottom: 0;
+				 ._menu__item-active & {
+					padding-bottom: toRem(25);
+				 }
 			}
 		}
 	}

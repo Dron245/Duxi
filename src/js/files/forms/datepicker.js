@@ -11,17 +11,17 @@ if (document.querySelector('[data-datepicker]')) {
 	const picker = datepicker('[data-datepicker]', {
 		onSelect: instance => {
 			// Show which date was selected.
-			console.log(instance.dateSelected)
+			// console.log(instance.dateSelected)
 		 },
 		 onShow: instance => {
-			console.log('Calendar showing.')
+			// console.log('Calendar showing.')
 		 },
 		 onHide: instance => {
-			console.log('Calendar hidden.')
+			// console.log('Calendar hidden.')
 		 },
 		 onMonthChange: instance => {
 			// Show the month of the selected date.
-			console.log(instance.currentMonthName)
+			// console.log(instance.currentMonthName)
 		 },
 		customDays: ["Вс", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб"],
 		customMonths: ["Янв", "Фев", "Март", "Апр", "Май", "Июнь", "Июль", "Авг", "Сент", "Окт", "Нояб", "Дек"],

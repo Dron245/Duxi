@@ -367,3 +367,7 @@
 }
 .user-bonus {
 }
+
+._menu__item-active .menu__item-arrow {
+	transform: rotate(90deg);
+}
