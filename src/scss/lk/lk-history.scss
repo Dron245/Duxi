@@ -241,6 +241,7 @@
 .info-order {
 	margin-bottom: 20px;
 	.spollers__title {
+		cursor: pointer;
 		gap: 10px;
 		align-items: center;
 		@media (min-width:$mobileSmall) and (max-width:$mobile){

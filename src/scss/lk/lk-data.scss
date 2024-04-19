@@ -51,6 +51,7 @@
 	&__item {
 		&_data {
 			margin-bottom: 60px;
+			flex: 0 0 100%;
 			@media (max-width:$pcSmall){
 				margin-bottom: 0;
 			}
@@ -59,7 +60,7 @@
 			width: 370px;
 			margin:auto;
 			@media (min-width:$pcSmall){
-				 margin-top: 40px; 
+				margin-top: 40px; 
 			}
 		}
 	}
@@ -140,6 +141,10 @@
 			 @include adaptiveValue("font-size", 28, 13,0,768,320); 
 		}
 	}
+
+	.popup__form-item .bottom-calc__button {
+		text-decoration: none;
+	}
 	&__wrapper {
 		position: relative;
 		// outline: 1px solid red;
@@ -155,6 +160,7 @@
 		&_button {
 			margin-top: auto;
 		}
+		
 	}
 
 	&__item {
@@ -203,6 +209,9 @@
 			height: auto;
 		}
 		&_add {
+			span {
+				text-decoration: underline;
+			}
 			@media (max-width:$tablet){
 				width: 10px;
 			}
@@ -368,6 +377,9 @@
 				 @include adaptiveValue("font-size", 32, 17,0,768,320); 
 			}
 		}
+		&_add {
+			background: initial;
+		}
 	}
 
 	&__text {
@@ -406,6 +418,8 @@
 	}
 
 	&__checkboxes {
+		background: #fff;
+		border-radius: 16px;
 		padding: 20px;
 	}
 }

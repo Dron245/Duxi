@@ -344,7 +344,7 @@
 		color: rgba(127, 32, 59, 0.60);
 		font-size: 13px;
 		line-height: normal;
-		text-decoration-line: underline;
+		text-decoration: underline;
 		@media (max-width:$mobile){
 			@include adaptiveValue("font-size", 25, 13,0,768,320);
 			margin-top: 10px;
