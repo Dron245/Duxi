@@ -5,6 +5,50 @@
 	}
 }
 
-#add-document, #change-password {
+#add-document, #change-password, #where-order {
 	text-align: initial;
+}
+
+#where-order {
+	.where__progress-container {
+		@media (min-width:$mobile){
+			 flex: 0 0 100%; 
+		}
+	}
+
+	.where__data {
+		display: block;
+	}
+
+	.data-where__content {
+		@media (max-width:$mobile){
+			 padding: 0px;
+		}
+	}
+	.info-where__number, .info-where__sub-title {
+		@media (max-width:$mobile){
+			 @include adaptiveValue("font-size", 25, 13,0,768,320); 
+		}
+	}
+	.popup__wrapper {
+		margin-top: 20px;
+	}
+	.data-where__item {
+		gap: 10px;
+	}
+	.data-where__time {
+		@media (max-width: 57.5em){
+			flex: 0 0 30%;
+		}
+	}
+	.info-where__details {
+		@media (max-width:$mobile){
+			 gap: 0; 
+		}
+	}
+	.data-where__text {
+		@media (max-width:57.5em) and (min-width:$mobile){
+			min-width: 420px; 
+		}
+	}
 }
