@@ -42,6 +42,11 @@
 		}
 	}
 	.info-where__details {
+		grid-template-columns: 1fr 1fr;
+		@media (max-width:$tablet){
+			grid-template-columns: 1fr;
+		}
+		
 		@media (max-width:$mobile){
 			 gap: 0; 
 		}

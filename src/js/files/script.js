@@ -100,7 +100,7 @@ window.addEventListener('DOMContentLoaded', () => {
 			!targetElement.closest('textarea') /*&&
 			 targetElement.closest('.popup') */ && 
 			//  targetElement.closest('body').querySelectorAll('._label-up') && 
-			!targetElement.closest('body').querySelectorAll('._label-up').length == 0  
+			!document.querySelectorAll('._label-up').length == 0  
 			 )
 			
 			{
@@ -1092,3 +1092,15 @@ document.addEventListener("DOMContentLoaded", () => {
 	})
 	})
 });
+
+
+
+
+import AirDatepicker from 'air-datepicker';
+import 'air-datepicker/air-datepicker.css';
+
+new AirDatepicker('#lk-birthday', {
+	classes: 'castom',
+	autoClose: true,
+	// inline: true,
+})

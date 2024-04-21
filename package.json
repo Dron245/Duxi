@@ -86,6 +86,7 @@
 	"dependencies": {
 		"@canvasjs/charts": "^3.8.0",
 		"@fancyapps/ui": "^5.0.33",
+		"air-datepicker": "^3.5.0",
 		"gulp-cheerio": "^1.0.0",
 		"isotope-layout": "^3.0.6",
 		"react": "^18.2.0",
