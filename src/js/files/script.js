@@ -60,66 +60,66 @@ window.addEventListener('DOMContentLoaded', () => {
 		}
 
 		//Предварительная проверка поднятого лейбла у инпутов и текстареи на обычных страницах и в попапах
-		if (targetElement.closest('input') || targetElement.closest('textarea')) {
-			const qwe = targetElement.closest('form') ? targetElement.closest('form').querySelectorAll('.popup__form-item._label-up') : null
-			console.log(qwe);
-			if (qwe) {
-				qwe.forEach(element => {
-				if ((element.querySelector('input') && element.querySelector('input').value === '') || (element.querySelector('textarea') && element.querySelector('textarea').value === '')) {
-					console.log(123);
-					element.classList.remove('_label-up')
-				}
-			});
-			}
-		}
+		// if (targetElement.closest('input') || targetElement.closest('textarea')) {
+		// 	const qwe = targetElement.closest('form') ? targetElement.closest('form').querySelectorAll('.popup__form-item._label-up') : null
+		// 	console.log(qwe);
+		// 	if (qwe) {
+		// 		qwe.forEach(element => {
+		// 		if ((element.querySelector('input') && element.querySelector('input').value === '') || (element.querySelector('textarea') && element.querySelector('textarea').value === '')) {
+		// 			console.log(123);
+		// 			element.classList.remove('_label-up')
+		// 		}
+		// 	});
+		// 	}
+		// }
 
 		//Поднятие плейсхолдера в модальных окнах на место заголовка при фокусе на инпут
-		if (targetElement.closest('input') || targetElement.closest('textarea') /*|| targetElement.closest('span')*/) {
-			console.log(0);
-			targetElement.closest('.popup__form-item') ? targetElement.closest('.popup__form-item').classList.add('_label-up') : null
-			targetElement/*.closest('input')*/.addEventListener('input', function labelUpDown() {
-				if (targetElement/*.closest('input')*/.value == '') {
-					console.log(1);
-					if (targetElement.closest('.popup__form-item')) {
-						targetElement.closest('.popup__form-item').classList.remove('_label-up')
-					}
-				} else {
-					console.log(2);
-					if (targetElement.closest('.popup__form-item')) {
-						targetElement.closest('.popup__form-item').classList.add('_label-up')
-					}
-				}
-			})
-		}
+		// if (targetElement.closest('input') || targetElement.closest('textarea') /*|| targetElement.closest('span')*/) {
+		// 	console.log(0);
+		// 	targetElement.closest('.popup__form-item') ? targetElement.closest('.popup__form-item').classList.add('_label-up') : null
+		// 	targetElement/*.closest('input')*/.addEventListener('input', function labelUpDown() {
+		// 		if (targetElement/*.closest('input')*/.value == '') {
+		// 			console.log(1);
+		// 			if (targetElement.closest('.popup__form-item')) {
+		// 				targetElement.closest('.popup__form-item').classList.remove('_label-up')
+		// 			}
+		// 		} else {
+		// 			console.log(2);
+		// 			if (targetElement.closest('.popup__form-item')) {
+		// 				targetElement.closest('.popup__form-item').classList.add('_label-up')
+		// 			}
+		// 		}
+		// 	})
+		// }
 
 		// Опускание для попапов
 
-		if (!targetElement.closest('.submenu-item__address') && 
-			!targetElement.closest('.popup__submenu-item') && 
-			!targetElement.closest('input') && 
-			!targetElement.closest('textarea') /*&&
-			 targetElement.closest('.popup') */ && 
-			//  targetElement.closest('body').querySelectorAll('._label-up') && 
-			!document.querySelectorAll('._label-up').length == 0  
-			 )
+		// if (!targetElement.closest('.submenu-item__address') && 
+		// 	!targetElement.closest('.popup__submenu-item') && 
+		// 	!targetElement.closest('input') && 
+		// 	!targetElement.closest('textarea') /*&&
+		// 	 targetElement.closest('.popup') */ && 
+		// 	//  targetElement.closest('body').querySelectorAll('._label-up') && 
+		// 	!document.querySelectorAll('._label-up').length == 0  
+		// 	 )
 			
-			{
+			// {
 
 			// const labelInput = targetElement.closest('.popup') ? targetElement.closest('.popup').querySelectorAll('input') : null
-			const labelInput = /*targetElement.closest('.popup') ?*/ document.querySelectorAll('input')
+			// const labelInput = /*targetElement.closest('.popup') ?*/ document.querySelectorAll('input')
 			// const labelInput = /*targetElement.closest('.popup') ?*/ document.querySelectorAll('.popup__form-item > input')
 			// const area = targetElement.closest('.popup') ? targetElement.closest('.popup').querySelectorAll('textarea') : null
 			// const nopopuplabelInput = document.querySelectorAll('input')
-			const nopopuparea = document.querySelectorAll('textarea')
+			// const nopopuparea = document.querySelectorAll('textarea')
 
-			if (labelInput) {
-				labelInput.forEach(element => {
-					console.log(4);
-					if (element.value =='' && element.closest('.popup__form-item')) {
-						element.closest('.popup__form-item').classList.remove('_label-up')
-					}
-				});
-			}
+			// if (labelInput) {
+			// 	labelInput.forEach(element => {
+			// 		console.log(4);
+			// 		if (element.value =='' && element.closest('.popup__form-item')) {
+			// 			element.closest('.popup__form-item').classList.remove('_label-up')
+			// 		}
+			// 	});
+			// }
 
 
 			// if (labelInput) {
@@ -153,15 +153,15 @@ window.addEventListener('DOMContentLoaded', () => {
 			// }
 
 			// Опускание для страницы текстареи не в попапах
-			if (nopopuparea) {
-				console.log(7);
-				nopopuparea.forEach(element => {
-					if (element.value =='' && element.closest('.popup__form-item')) {
-						element.closest('.popup__form-item').classList.remove('_label-up')
-					}
-				});
-			}
-		}
+			// if (nopopuparea) {
+			// 	console.log(7);
+			// 	nopopuparea.forEach(element => {
+			// 		if (element.value =='' && element.closest('.popup__form-item')) {
+			// 			element.closest('.popup__form-item').classList.remove('_label-up')
+			// 		}
+			// 	});
+			// }
+		// }
 		
 		// Опускание для лейблов в инпутах на обычных страницах
 		// if (!targetElement.closest('.submenu-item__address') && !targetElement.closest('.popup__submenu-item') && !targetElement.closest('input') && !targetElement.closest('textarea') /*&& targetElement.closest('.popup')*/ && !targetElement.closest('body').querySelectorAll('._label-up').length == 0) {

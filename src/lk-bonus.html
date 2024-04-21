@@ -23,8 +23,135 @@
 					</nav>
 					<div class="lk__body">
 						<div class="lk__content">
-							<section class="lk__item">
+							<section class="lk__item bonus">
 								<h3 class="lk__title">Бонусный счёт № <span>204875</span></h3>
+								<div class="bonus__item bonus__item_small info-order__body">
+									<div class="bonus__row info-order__item">
+										<p class="info-order__title">Остаток:</p>
+										<p class="info-order__text">0</p>
+									</div>
+									<div class="bonus__row info-order__item">
+										<p class="info-order__title">Суммарный доход:</p>
+										<p class="info-order__text">27048</p>
+									</div>
+									<div class="bonus__row info-order__item">
+										<p class="info-order__title">Суммарный доход:</p>
+										<p class="info-order__text">-27048</p>
+									</div>
+								</div>
+								<div class="bonus__item">
+									<div class="bonus__top bonus__top_plus top-history__data">
+										<p class="top-history__data">ВОЗВРАТ НА БОНУСНЫЙ СЧЕТ ИЗ ЗАКАЗА 21486327, СУММА 1664</p>
+									</div>
+									<div class="bonus__body content-bonus">
+										<div class="content-bonus__item">
+											<h5 class="content-bonus__title">Доход</h5>
+											<div class="content-bonus__row">
+												<div class="content-bonus__column">
+													<div class="content-bonus__column-item">
+														<span class="info-order__title">Дата: </span>
+														<span class="info-order__text">27.12.2022</span>
+													</div>
+													<div class="content-bonus__column-item">
+														<span class="info-order__title">Сумма: </span>
+														<span class="info-order__text">1662</span>
+													</div>
+												</div>
+												<div class="content-bonus__column">
+													<div class="content-bonus__column-item">
+														<span class="info-order__title">Статус: </span>
+														<span class="info-order__text">зачислен</span>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="content-bonus__item">
+											<h5 class="content-bonus__title">Расход</h5>
+											<div class="content-bonus__row">
+												<div class="content-bonus__column">
+													<div class="content-bonus__column-item">
+														<span class="info-order__title">Дата: </span>
+														<span class="info-order__text">27.12.2022</span>
+													</div>
+													<div class="content-bonus__column-item">
+														<span class="info-order__title">Сумма: </span>
+														<span class="info-order__text">47</span>
+													</div>
+												</div>
+												<div class="content-bonus__column">
+													<div class="content-bonus__column-item">
+														<p class="info-order__text"><span>Примечание: </span>Частичная оплата заказа 21345738 на сумму 47</p>
+													</div>
+												</div>
+											</div>
+											<div class="content-bonus__row">
+												<div class="content-bonus__column">
+													<div class="content-bonus__column-item">
+														<span class="info-order__title">Дата: </span>
+														<span class="info-order__text">27.12.2022</span>
+													</div>
+													<div class="content-bonus__column-item">
+														<span class="info-order__title">Сумма: </span>
+														<span class="info-order__text">1102</span>
+													</div>
+												</div>
+												<div class="content-bonus__column">
+													<div class="content-bonus__column-item">
+														<p class="info-order__text"><span>Примечание: </span>Частичная оплата заказа 21345738 на сумму 1102</p>
+													</div>
+												</div>
+											</div>
+											<div class="content-bonus__row">
+												<div class="content-bonus__column">
+													<div class="content-bonus__column-item">
+														<span class="info-order__title">Дата: </span>
+														<span class="info-order__text">27.12.2022</span>
+													</div>
+													<div class="content-bonus__column-item">
+														<span class="info-order__title">Сумма: </span>
+														<span class="info-order__text">514</span>
+													</div>
+												</div>
+												<div class="content-bonus__column">
+													<div class="content-bonus__column-item">
+														<p class="info-order__text"><span>Примечание: </span>Частичная оплата заказа 21345738 на сумму 1142</p>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="content-bonus__item">
+											<div class="content-bonus__top-block">
+												<h5 class="content-bonus__title">срок действия</h5>
+												<p class="info-order__text">27.12.2022</p>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="bonus__item">
+									<div class="bonus__top bonus__top_minus top-history__data">
+										<p class="top-history__data">ВОЗВРАТ НА БОНУСНЫЙ СЧЕТ ИЗ ЗАКАЗА 21486327, СУММА 1664</p>
+									</div>
+									<div class="bonus__body content-bonus">
+										<div class="content-bonus__item">
+											<h5 class="content-bonus__title">Доход</h5>
+											<div class="content-bonus__row">
+												<div class="content-bonus__column">
+													<div class="content-bonus__column-item">
+														<span class="info-order__title">Дата: </span>
+														<span class="info-order__text">27.12.2022</span>
+													</div>
+												</div>
+												<div class="content-bonus__column">
+													<div class="content-bonus__column-item">
+														<span class="info-order__title">Статус: </span>
+														<span class="info-order__text">ожидание</span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
 							</section>
 						</div>
 						<aside class="lk__navigation navigation-lk">
@@ -46,7 +173,7 @@
 			@@include('html/_footer.htm',{})
 		</div>
 		@@include('html/_popup.htm',{})
-		@@include('html/_popup-cart.htm',{})
+		@@include('html/_popup-lk.htm',{})
 		@@include('html/_js.htm',{})
 	</body>
 </html>

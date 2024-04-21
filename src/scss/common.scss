@@ -1020,3 +1020,15 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
  .slider.round:before {
 	border-radius: 50%;
  }
+
+	input:focus-visible ~ label {
+		top: -10px;
+		left: 0px;
+		color: $zagolovok;
+	}
+
+	textarea:focus ~ label {
+	top: -20px;
+	left: 0px;
+	color: $zagolovok;
+}
