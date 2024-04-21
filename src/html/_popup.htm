@@ -260,8 +260,8 @@
 						</div>
 					</div>
 					<div class="popup__form-item">
-						<textarea class="input" maxlength="1200" name="" rows="4" id="comment"></textarea>
-						<span class="popup__label">текст обращения</span>
+						<textarea id="area-feedback" class="input" maxlength="1200" name="" rows="4" id="comment"></textarea>
+						<label for="area-feedback" class="popup__label">текст обращения</label>
 						<p class="popup__length">
 							<span class="popup__star">*</span> Отзыв содержит: <span id="quantity"
 								class="comment__number-symbols">0</span> символов <span class="popup__correction">(максимальное
@@ -907,7 +907,7 @@
 					<div class="advanced-search__stroke-input">
 						<button class="header-center__button"><img src="@img/header/search30x30.svg" alt="Поиск"></button>
 						<input autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Поиск товара"
-							class="header-center__input">
+							class="header-center__input input">
 					</div>
 					<div class="advanced-search__wrapper">
 						<div class="advanced-search__column">
@@ -1615,8 +1615,14 @@
 						<label for="country" class="popup__label">страна</label>
 					</div>
 					<div class="popup__form-item _label-up">
-							<input id="city-data" value="Тверь" required autocomplete="off" type="text" name="form[]" data-error="Ошибка" class="popup__input">
+							<input style="text-overflow: ellipsis;" id="city-data" value="Тверь" required autocomplete="off" type="text" name="form[]" data-error="Ошибка" class="popup__input">
 							<label for="city-data" class="popup__label">город</label>
+						<ul class="popup__submenu">
+							<li class="popup__submenu-item">В пределах МКАД, Москва, Дмитровское шоссе, 100с2</li>
+							<li class="popup__submenu-item">В пределах МКАД, Москва, Каширское шоссе, 100с2</li>
+							<li class="popup__submenu-item">В пределах МКАД, Москва, Дмитровское шоссе, 100с2</li>
+							<li class="popup__submenu-item">В пределах МКАД, Москва, Каширское шоссе, 100с2</li>
+						</ul>
 					</div>
 					<div class="popup__form-item">
 							<input id="street" required autocomplete="off" type="text" name="form[]" data-error="Ошибка" class="popup__input">

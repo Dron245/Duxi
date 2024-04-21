@@ -582,9 +582,15 @@ body::after {
 		width: 100%;
 		z-index: 2;
 		padding: 10px;
+		padding-left: 0;
+		padding-right: 0;
 		display: none;
 		opacity: 0;
 		visibility: hidden;
+		max-height: 220px;
+		overflow-y: auto;
+		overflow-x: hidden;
+		@include scroll-view;
 		&._popup-submenu-open {
 			display: block;
 			opacity: 1;
@@ -593,8 +599,34 @@ body::after {
 	}
 
 	&__submenu-item {
+		font-size: 13px;
+		position: relative;
+		padding-left: 10px;
+		padding-right: 10px;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		overflow: hidden;
 		cursor: pointer;
-		&:not(:last-child) {margin-bottom: toRem(15);}
+		padding-top: 12px;
+		padding-bottom: 12px;
+		// &:not(:last-child) {margin-bottom: toRem(15);}
+		&::after{
+			content:'';
+			position: absolute;
+			top: 0;
+			left: 0%;
+			height: 100%;
+			width: 100%;
+			
+			z-index: 1;
+		}
+		&:hover{
+			&::after{
+				content:'';
+				background-color: #bebebe;
+				opacity: 0.19;
+			}
+		}
 	}
 
 	&__upload {

@@ -18,9 +18,8 @@ window.addEventListener('DOMContentLoaded', () => {
 			targetElement.closest(`${id}`).classList.remove('popup_show')
 			targetElement.closest(`${id}`).setAttribute('aria-hidden', 'false')
 		}
+
 		console.log(targetElement);
-
-
 
 		// Открытие сабменю в мобильной версии
 		if (targetElement.closest('.menu__link') && targetElement.closest('header')) {
@@ -60,10 +59,134 @@ window.addEventListener('DOMContentLoaded', () => {
          targetElement.closest('.popup__input-wrapper').querySelector('input').setAttribute("type", type);
 		}
 
-		//Поднятие плейсхолдера в модальных окнах на место заголовка при фокусе на инпут
-		if (targetElement.closest('input') || targetElement.closest('textarea') || targetElement.closest('span')) {
-			targetElement.closest('.popup__form-item') ? targetElement.closest('.popup__form-item').classList.add('_label-up') : null
+		//Предварительная проверка поднятого лейбла у инпутов и текстареи на обычных страницах и в попапах
+		if (targetElement.closest('input') || targetElement.closest('textarea')) {
+			const qwe = targetElement.closest('form') ? targetElement.closest('form').querySelectorAll('.popup__form-item._label-up') : null
+			console.log(qwe);
+			if (qwe) {
+				qwe.forEach(element => {
+				if ((element.querySelector('input') && element.querySelector('input').value === '') || (element.querySelector('textarea') && element.querySelector('textarea').value === '')) {
+					console.log(123);
+					element.classList.remove('_label-up')
+				}
+			});
+			}
 		}
+
+		//Поднятие плейсхолдера в модальных окнах на место заголовка при фокусе на инпут
+		if (targetElement.closest('input') || targetElement.closest('textarea') /*|| targetElement.closest('span')*/) {
+			console.log(0);
+			targetElement.closest('.popup__form-item') ? targetElement.closest('.popup__form-item').classList.add('_label-up') : null
+			targetElement/*.closest('input')*/.addEventListener('input', function labelUpDown() {
+				if (targetElement/*.closest('input')*/.value == '') {
+					console.log(1);
+					if (targetElement.closest('.popup__form-item')) {
+						targetElement.closest('.popup__form-item').classList.remove('_label-up')
+					}
+				} else {
+					console.log(2);
+					if (targetElement.closest('.popup__form-item')) {
+						targetElement.closest('.popup__form-item').classList.add('_label-up')
+					}
+				}
+			})
+		}
+
+		// Опускание для попапов
+
+		if (!targetElement.closest('.submenu-item__address') && 
+			!targetElement.closest('.popup__submenu-item') && 
+			!targetElement.closest('input') && 
+			!targetElement.closest('textarea') /*&&
+			 targetElement.closest('.popup') */ && 
+			//  targetElement.closest('body').querySelectorAll('._label-up') && 
+			!targetElement.closest('body').querySelectorAll('._label-up').length == 0  
+			 )
+			
+			{
+
+			// const labelInput = targetElement.closest('.popup') ? targetElement.closest('.popup').querySelectorAll('input') : null
+			const labelInput = /*targetElement.closest('.popup') ?*/ document.querySelectorAll('input')
+			// const labelInput = /*targetElement.closest('.popup') ?*/ document.querySelectorAll('.popup__form-item > input')
+			// const area = targetElement.closest('.popup') ? targetElement.closest('.popup').querySelectorAll('textarea') : null
+			// const nopopuplabelInput = document.querySelectorAll('input')
+			const nopopuparea = document.querySelectorAll('textarea')
+
+			if (labelInput) {
+				labelInput.forEach(element => {
+					console.log(4);
+					if (element.value =='' && element.closest('.popup__form-item')) {
+						element.closest('.popup__form-item').classList.remove('_label-up')
+					}
+				});
+			}
+
+
+			// if (labelInput) {
+			// 	labelInput.forEach(element => {
+			// 		// console.log(element);
+			// 		// console.log(8);
+			// 		if (element.value =='') {
+			// 			console.log(9);
+			// 			// console.log(element.closest('.popup__form-item'));
+			// 			element.closest('.popup__form-item').classList.remove('_label-up')
+			// 		}
+			// 	});
+			// }
+			// if (area) {
+			// 	area.forEach(element => {
+			// 		if (element.value =='' && element.closest('.popup__form-item')) {
+			// 			console.log(5);
+			// 			element.closest('.popup__form-item').classList.remove('_label-up')
+			// 		}
+			// 	});
+			// }
+			
+			// Опускание для страницы инпутов не в попапах
+			// if (nopopuplabelInput) {
+			// 	console.log(6);
+			// 	nopopuplabelInput.forEach(element => {
+			// 		if (element.value =='' && element.closest('.popup__form-item')) {
+			// 			element.closest('.popup__form-item').classList.remove('_label-up')
+			// 		}
+			// 	});
+			// }
+
+			// Опускание для страницы текстареи не в попапах
+			if (nopopuparea) {
+				console.log(7);
+				nopopuparea.forEach(element => {
+					if (element.value =='' && element.closest('.popup__form-item')) {
+						element.closest('.popup__form-item').classList.remove('_label-up')
+					}
+				});
+			}
+		}
+		
+		// Опускание для лейблов в инпутах на обычных страницах
+		// if (!targetElement.closest('.submenu-item__address') && !targetElement.closest('.popup__submenu-item') && !targetElement.closest('input') && !targetElement.closest('textarea') /*&& targetElement.closest('.popup')*/ && !targetElement.closest('body').querySelectorAll('._label-up').length == 0) {
+		// 	const nopopuplabelInput = document.querySelectorAll('input')
+		// 	const nopopuparea = document.querySelectorAll('textarea')
+		// 	// Опускание для страницы инпутов не в попапах
+		// 	if (nopopuplabelInput) {
+		// 		nopopuplabelInput.forEach(element => {
+		// 			if (element.value =='' && element.closest('.popup__form-item')) {
+		// 				element.closest('.popup__form-item').classList.remove('_label-up')
+		// 			}
+		// 		});
+		// 	}
+
+		// 	// Опускание для страницы текстареи не в попапах
+		// 	if (nopopuparea) {
+		// 		nopopuparea.forEach(element => {
+		// 			if (element.value =='' && element.closest('.popup__form-item')) {
+		// 				element.closest('.popup__form-item').classList.remove('_label-up')
+		// 			}
+		// 		});
+		// 	}
+		// }
+
+
 		//Открытие/скрытие строки поиска
 		if (targetElement.closest('.search-button')) {
 			document.documentElement.classList.toggle('_show')
@@ -322,22 +445,59 @@ window.addEventListener('DOMContentLoaded', () => {
 			targetElement.closest('.popup__form-item').querySelector('.popup__submenu').classList.toggle('_popup-submenu-open')
 		}
 		//Присвоение значения пункта сабменю в значение инпута
-		const inputOrder = document.getElementById('number-order')
-		if (targetElement.closest('.popup__submenu-item')) {
+		if (targetElement.closest('.popup__submenu-item') && document.querySelector('#number-order')) {
+			const inputOrder = document.querySelector('#number-order')
 			inputOrder.value = targetElement.closest('.popup__submenu-item').innerText;
 		}
+
+		//Закрытие сабменю номеров заказа в попапе
+		if (!targetElement.closest('#number-order') && document.querySelector('#number-order')) {
+			const inputOrder = document.querySelector('#number-order')
+			if(inputOrder.closest('.popup__form-item').querySelector('.popup__submenu').classList.contains('_popup-submenu-open')) {
+				inputOrder.closest('.popup__form-item').querySelector('.popup__submenu').classList.remove('_popup-submenu-open')
+			}
+		}
+
+		//ОТкрытие скрытие списка номеров заказа в модальном окне: "добавить адрес"
+		if (targetElement.closest('#city-data')) {
+			targetElement.closest('.popup__form-item').querySelector('.popup__submenu').classList.toggle('_popup-submenu-open')
+		}
+
+		if (targetElement.closest('.popup__submenu-item') && document.querySelector('#city-data')) {
+			const inputOrder = document.querySelector('#city-data')
+			inputOrder.value = targetElement.closest('.popup__submenu-item').innerText;
+		}
+
+		if (!targetElement.closest('#city-data') && document.querySelector('#city-data')) {
+			const inputOrder = document.querySelector('#city-data')
+			if(inputOrder.closest('.popup__form-item').querySelector('.popup__submenu').classList.contains('_popup-submenu-open')) {
+				inputOrder.closest('.popup__form-item').querySelector('.popup__submenu').classList.remove('_popup-submenu-open')
+			}
+		}
+
+
+		//ОТкрытие скрытие списка номеров заказа в модальном окне: "изменить адрес"
+		if (targetElement.closest('#city-data-change')) {
+			targetElement.closest('.popup__form-item').querySelector('.popup__submenu').classList.toggle('_popup-submenu-open')
+		}
+
+		if (targetElement.closest('.popup__submenu-item') && document.querySelector('#city-data-change')) {
+			const inputOrder = document.querySelector('#city-data-change')
+			inputOrder.value = targetElement.closest('.popup__submenu-item').innerText;
+		}
+
+		if (!targetElement.closest('#city-data-change') && document.querySelector('#city-data-change')) {
+			const inputOrder = document.querySelector('#city-data-change')
+			if(inputOrder.closest('.popup__form-item').querySelector('.popup__submenu').classList.contains('_popup-submenu-open')) {
+				inputOrder.closest('.popup__form-item').querySelector('.popup__submenu').classList.remove('_popup-submenu-open')
+			}
+		}
+
 
 		//Страница сертификаты. Меню кнопку с "купить" на "перейти к оформлению"
 		if (targetElement.closest('.product__seil')) {
 			// targetElement.closest('.tabs__product').classList.add('_arrange-sertificate')
 			targetElement.closest('.tabs__product').classList.add('_arrange-button')
-		}
-
-		//Закрытие сабменю номеров заказа в попапе
-		if (!targetElement.closest('#number-order') && document.getElementById('number-order')) {
-			if(inputOrder.closest('.popup__form-item').querySelector('.popup__submenu').classList.contains('_popup-submenu-open')) {
-				inputOrder.closest('.popup__form-item').querySelector('.popup__submenu').classList.remove('_popup-submenu-open')
-			}
 		}
 
 		//Скрытие/показ отзывов без фото / с фото
@@ -832,7 +992,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	}, 1500);
 	}
 
-	
+	// console.log(document.querySelector('.popup__form-item > span'));
 
 	//Создаю отступ справа у блока позиций, если позиций много
 	const pozContainer = document.querySelector('.string');

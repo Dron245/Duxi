@@ -76,6 +76,9 @@
 		}
 	}
 	&__item {
+		&:first-child{
+			flex: 0 0 43.478261%;
+		}
 		border-radius: 16px;
 		background: #FFF;
 		padding: 16.5px toRem(40);

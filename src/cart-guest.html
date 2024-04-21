@@ -7,7 +7,7 @@
 	<body>
 		<div class="wrapper">
 			@@include('html/_header-guest.htm',{})
-			<main class="page basket guest">
+			<main class="page basket guest nopopuplabel">
 				<div class="basket__container">
 					<div class="basket__content">
 						<section class="basket__main main-cart">
@@ -342,8 +342,8 @@
 										</div>
 									</div>
 									<div class="address__group address__group_textarea popup__form-item">
-										<textarea class="comment__textarea" name="comment-cart"></textarea>
-										<span class="popup__label popup__label_comment">комментарий</span>
+										<textarea id="cart-comm" class="comment__textarea" name="comment-cart"></textarea>
+										<label for="cart-comm" class="popup__label popup__label_comment">комментарий</label>
 									</div>
 								</form>
 								<div class="address__switches">

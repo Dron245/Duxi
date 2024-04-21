@@ -83,12 +83,17 @@
 	}
 
 	&__button {
-		@media (max-width:$pcSmall){
+		@media (max-width:$pcSmall) and (min-width:$tablet){
 			width: 250px;
 			font-size: 14px;
 		}
+		@media (max-width:$tablet){
+			width: 45%;
+			margin:auto;
+			@include adaptiveValue("font-size", 24, 20,0,1001.99,768.01);
+		}
 		@media (max-width:$mobile){
-			 width: 100%;
+			width: 100%;
 			 @include adaptiveValue("font-size", 35, 16,0,768,320); 
 		}
 		@media (max-width:$mobileSmall){
