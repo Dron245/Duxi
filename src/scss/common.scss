@@ -1021,14 +1021,29 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 	border-radius: 50%;
  }
 
-	input:focus-visible ~ label {
+	input:focus ~ .popup__label,
+	input:not(:focus):valid ~ .popup__label {
 		top: -10px;
 		left: 0px;
 		color: $zagolovok;
 	}
 
-	textarea:focus ~ label {
+	._label label {
+		top: -10px;
+		left: 0px;
+		color: $zagolovok;
+	}
+
+	textarea:focus ~ label,
+	textarea:not(:focus):valid ~ .popup__label{
 	top: -20px;
 	left: 0px;
 	color: $zagolovok;
-}
+	}
+
+	textarea:not([required]):not(:focus) ~ .popup__label{
+		top: 16px;
+		left: 10px;
+		color: #000;
+		opacity: 0.5;
+	}

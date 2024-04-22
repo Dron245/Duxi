@@ -503,21 +503,23 @@
 	}
 }
 
-
+//Календарь
 div.castom[class] {
 	width: 308px;
 	border: 1px solid #F4E1E6;
 	background: #FFF;
 	box-shadow: 2px 2px 8px 0px rgba(187, 144, 144, 0.10), -2px -2px 8px 0px rgba(187, 144, 144, 0.10), -10px -10px 10px 0px rgba(187, 144, 144, 0.10), 10px 10px 10px 0px rgba(187, 144, 144, 0.10);
-	// position: relative;
-	// background-color: white;
-	// z-index: 10;
+	@media (max-width: em(360)){
+		width: 250px;
+		.air-datepicker--navigation {
+			width: inherit;
+		}
+	}
 	.air-datepicker-nav--title {
 		font-size: 23px;
 		color: $zagolovok;
 		font-weight: 300;
 		text-transform: uppercase;
-		// padding-bottom: 10px;
 		& i {
 			font-size: 23px;
 			color: $zagolovok;
@@ -530,10 +532,14 @@ div.castom[class] {
 		align-items: center;
 		padding-bottom: 10px;
 		padding-top: 24px;
+		
 	}
 	.air-datepicker--content {
 		padding: 24px;
 		padding-top: 16px;
+		@media (max-width: em(360)){
+			padding: 13px;
+		}
 	}
 
 	.air-datepicker-body--day-name {

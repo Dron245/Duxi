@@ -59,6 +59,27 @@ window.addEventListener('DOMContentLoaded', () => {
          targetElement.closest('.popup__input-wrapper').querySelector('input').setAttribute("type", type);
 		}
 
+		if ((!targetElement.closest('input[type^="email"]')) && !document.querySelectorAll('[type="email"]').length == 0) {
+			const inputType = document.querySelectorAll('[type="email"]')
+			inputType.forEach(element => {
+				if (element.value !== '' && !element.activeElement) {
+					element.closest('.popup__form-item').classList.add('_label')
+				} else if (element.closest('.popup__form-item').classList.contains('_label')) {
+					element.closest('.popup__form-item').classList.remove('_label')
+				}
+			});
+		}
+
+		if ((!targetElement.closest('input[type^="number"]')) && !document.querySelectorAll('[type="number"]').length == 0) {
+			const inputType = document.querySelectorAll('[type="number"]')
+			inputType.forEach(element => {
+				if (element.value !== '' && !element.activeElement) {
+					element.closest('.popup__form-item').classList.add('_label')
+				} else if (element.closest('.popup__form-item').classList.contains('_label')) {
+					element.closest('.popup__form-item').classList.remove('_label')
+				}
+			});
+		}
 		//Предварительная проверка поднятого лейбла у инпутов и текстареи на обычных страницах и в попапах
 		// if (targetElement.closest('input') || targetElement.closest('textarea')) {
 		// 	const qwe = targetElement.closest('form') ? targetElement.closest('form').querySelectorAll('.popup__form-item._label-up') : null
@@ -356,7 +377,7 @@ window.addEventListener('DOMContentLoaded', () => {
 		}
 
 		//Открытие / закрытие поиска в мобильной версии в шапке
-		if(window.innerWidth < 1001.98 && targetElement.closest('.header-center__input')) {
+		if(window.innerWidth < 1001.98 && targetElement.closest('.header-center__button.search-button')) {
 			document.querySelector('.header').classList.add('_mobile-searh-top-open')
 		}
 		if(window.innerWidth < 1001.98 && targetElement.closest('.search-mob__img-close')) {
@@ -1094,7 +1115,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-
+//ИМПОРТИРУЮ КАЛЕНДАРЬ
 
 import AirDatepicker from 'air-datepicker';
 import 'air-datepicker/air-datepicker.css';
