@@ -59,20 +59,21 @@ window.addEventListener('DOMContentLoaded', () => {
          targetElement.closest('.popup__input-wrapper').querySelector('input').setAttribute("type", type);
 		}
 
-		if ((!targetElement.closest('input[type^="email"]')) && !document.querySelectorAll('[type="email"]').length == 0) {
-			const inputType = document.querySelectorAll('[type="email"]')
-			inputType.forEach(element => {
-				if (element.value !== '' && !element.activeElement) {
+		// if ((!targetElement.closest('input[type^="email"]')) && !document.querySelectorAll('[type="email"]').length == 0) {
+			// const inputType = document.querySelectorAll('[type="email"]')
+			// inputType.forEach(element => {
+				/*if (element.value !== '' && !element.activeElement) {
 					element.closest('.popup__form-item').classList.add('_label')
 				} else if (element.closest('.popup__form-item').classList.contains('_label')) {
 					element.closest('.popup__form-item').classList.remove('_label')
-				}
-			});
-		}
+				}*/
+			// });
+		// }
 
 		if ((!targetElement.closest('input[type^="number"]')) && !document.querySelectorAll('[type="number"]').length == 0) {
 			const inputType = document.querySelectorAll('[type="number"]')
 			inputType.forEach(element => {
+				
 				if (element.value !== '' && !element.activeElement) {
 					element.closest('.popup__form-item').classList.add('_label')
 				} else if (element.closest('.popup__form-item').classList.contains('_label')) {
@@ -469,6 +470,7 @@ window.addEventListener('DOMContentLoaded', () => {
 		if (targetElement.closest('.popup__submenu-item') && document.querySelector('#number-order')) {
 			const inputOrder = document.querySelector('#number-order')
 			inputOrder.value = targetElement.closest('.popup__submenu-item').innerText;
+			inputOrder.closest('.popup__form-item').classList.add('_label')
 		}
 
 		//Закрытие сабменю номеров заказа в попапе
@@ -487,6 +489,7 @@ window.addEventListener('DOMContentLoaded', () => {
 		if (targetElement.closest('.popup__submenu-item') && document.querySelector('#city-data')) {
 			const inputOrder = document.querySelector('#city-data')
 			inputOrder.value = targetElement.closest('.popup__submenu-item').innerText;
+			
 		}
 
 		if (!targetElement.closest('#city-data') && document.querySelector('#city-data')) {
@@ -854,54 +857,22 @@ window.addEventListener('DOMContentLoaded', () => {
 				phoneLk.value = newPhone.value;
 			}
 		}
+
+		// Лейбл не дергается у инпутов с сабменю
+		/*if (targetElement.closest('.input-submenu')) {
+			targetElement.closest('.popup__form-item').classList.add('_label')
+		} else if(!targetElement.closest('.popup__submenu-item') ){
+			const dfg = document.querySelectorAll('.input-submenu')
+			dfg.forEach(element => {
+				if (element !=='' && !element.activeElement) {
+					element.closest('.popup__form-item').classList.remove('_label')
+				} 
+			});
+		}*/
 	}
 });
 
 
-//Преобразование фильтров-спойлеров в каталоге в таблетном разрешении
-const catalog = document.querySelector('.catalog');
-if (catalog) {
-	const details = catalog.querySelectorAll('details');
-	const spollersWrapper = catalog.querySelector('aside [data-spollers]')
-	const summury = catalog.querySelectorAll('.filter__title-wrapper')
-	
-	// console.log(spollersWrapper);
-	if (window.innerWidth < 1001) {
-		details.forEach(element => {
-			console.log(1);
-			element.removeAttribute('data-open');
-		});
-		spollersWrapper.setAttribute('data-one-spoller', '')
-		summury.forEach(element => {
-			element.setAttribute('data-spoller-close', '')
-			element.classList.remove('_spoller-active')
-		});
-	}
-}
-
-//Преобразование фильтров-спойлеров в способах оплаты в мобильном разрешении
-const payment = document.querySelector('.payment');
-if(payment) {
-	const details = payment.querySelectorAll('details');
-	if (window.innerWidth < 768.02) {
-		details.forEach(element => {
-			element.removeAttribute('data-open');
-		});
-	}
-}
-
-//Преобразование спойлеров на странице "О магазине" в таблетном разрешении
-
-const store = document.querySelector('.store')
-if(store) {
-	const details = store.querySelectorAll('details');
-	if (window.innerWidth < 768.02) {
-		details.forEach(element => {
-			element.removeAttribute('data-open');
-		});
-		store.querySelector('.store-not-open').setAttribute('data-open', '')
-	}
-}
 
 
 
@@ -1076,7 +1047,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			inputAdress.forEach(element => {
 				element.removeAttribute('disabled');
 				element.value = '';
-				element.closest('.popup__form-item').classList.remove('_label-up')
+				// element.closest('.popup__form-item').classList.remove('_label-up')
 			});
 		}
 	}
@@ -1112,7 +1083,75 @@ document.addEventListener("DOMContentLoaded", () => {
 			}
 	})
 	})
+
+	// Правильная установка лейблов для инпутов НЕ type=text и TEXTAREA
+
+	const inputTypeEmail = document.querySelectorAll('[type="email"]')
+	inputTypeEmail.forEach(element => {
+		element.addEventListener('input', function() {
+			if (element.value !== '' /*&& !element.activeElement*/) {
+				element.closest('.popup__form-item').classList.add('_label')
+			} else if (element.closest('.popup__form-item').classList.contains('_label')) {
+				element.closest('.popup__form-item').classList.remove('_label')
+			}
+		})
+	});
+
+	const inputTypeNumber = document.querySelectorAll('[type="number"]')
+	inputTypeNumber.forEach(element => {
+		element.addEventListener('input', function() {
+			if (element.value !== '' /*&& !element.activeElement*/) {
+				element.closest('.popup__form-item').classList.add('_label')
+			} else if (element.closest('.popup__form-item').classList.contains('_label')) {
+				element.closest('.popup__form-item').classList.remove('_label')
+			}
+		})
+	});
+
+	const TextareaNotRequired = document.querySelectorAll('textarea:not([required])')
+		TextareaNotRequired.forEach(element => {
+		element.addEventListener('input', function() {
+			if (element.value !== '' && !element.activeElement) {
+				element.closest('.popup__form-item') ? element.closest('.popup__form-item').classList.add('_label') : null;
+			} else if (element.closest('.popup__form-item') && element.closest('.popup__form-item').classList.contains('_label')) {
+				element.closest('.popup__form-item').classList.remove('_label')
+			}
+		})
+	});
+
+	const inputNotRequired = document.querySelectorAll('input:not([required])')
+	
+	inputNotRequired.forEach(element => {
+		element.addEventListener('input', function() {
+			if (element.value !== '' && !element.activeElement) {
+				element.closest('.popup__form-item') ? element.closest('.popup__form-item').classList.add('_label') : null;
+			} else if (element.closest('.popup__form-item') && element.closest('.popup__form-item').classList.contains('_label')) {
+				element.closest('.popup__form-item').classList.remove('_label')
+			}
+		})
+	});
+
+	// const inputSubMenu = document.querySelectorAll('.input-submenu')
+	// inputSubMenu.forEach(element => {
+	// 	element.addEventListener('input', function() {
+	// 		if (element.value !== '' && !element.activeElement) {
+	// 			element.closest('.popup__form-item') ? element.closest('.popup__form-item').classList.add('_label') : null;
+	// 		} else if (element.closest('.popup__form-item') && element.closest('.popup__form-item').classList.contains('_label')) {
+	// 			element.closest('.popup__form-item').classList.remove('_label')
+	// 		}
+	// 	})
+	// });
+
+	// const SubMenuInput = document.querySelectorAll('.popup__submenu')
+	// SubMenuInput.forEach(element => {
+	// 	const inputSubMenu = element.closest('.popup__form-item').querySelector('input')
+	// 	if (inputSubMenu.value !== '' && !inputSubMenu.activeElement) {
+			
+	// 	}
+	// });
 });
+
+
 
 
 //ИМПОРТИРУЮ КАЛЕНДАРЬ
@@ -1125,3 +1164,54 @@ new AirDatepicker('#lk-birthday', {
 	autoClose: true,
 	// inline: true,
 })
+
+
+
+
+
+
+
+//Преобразование фильтров-спойлеров в каталоге в таблетном разрешении
+const catalog = document.querySelector('.catalog');
+if (catalog) {
+	const details = catalog.querySelectorAll('details');
+	const spollersWrapper = catalog.querySelector('aside [data-spollers]')
+	const summury = catalog.querySelectorAll('.filter__title-wrapper')
+	
+	// console.log(spollersWrapper);
+	if (window.innerWidth < 1001) {
+		details.forEach(element => {
+			console.log(1);
+			element.removeAttribute('data-open');
+		});
+		spollersWrapper.setAttribute('data-one-spoller', '')
+		summury.forEach(element => {
+			element.setAttribute('data-spoller-close', '')
+			element.classList.remove('_spoller-active')
+		});
+	}
+}
+
+//Преобразование фильтров-спойлеров в способах оплаты в мобильном разрешении
+const payment = document.querySelector('.payment');
+if(payment) {
+	const details = payment.querySelectorAll('details');
+	if (window.innerWidth < 768.02) {
+		details.forEach(element => {
+			element.removeAttribute('data-open');
+		});
+	}
+}
+
+//Преобразование спойлеров на странице "О магазине" в таблетном разрешении
+
+const store = document.querySelector('.store')
+if(store) {
+	const details = store.querySelectorAll('details');
+	if (window.innerWidth < 768.02) {
+		details.forEach(element => {
+			element.removeAttribute('data-open');
+		});
+		store.querySelector('.store-not-open').setAttribute('data-open', '')
+	}
+}

@@ -409,7 +409,7 @@ body::after {
 		transform: translateY(-50%);
 		color: rgba(0, 0, 0, 0.5);
 		transition: top 0.15s, left 0.15s;
-		._label-up & {
+		.label-up-cart & {
 			top: -22%;
 			left: 0;
 			color: $zagolovok;

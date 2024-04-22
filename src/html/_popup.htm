@@ -284,11 +284,10 @@
 			<button data-close type="button" class="popup__close"><img src="@img/popup/close.svg" alt=""></button>
 			<div class="popup__body">
 				<h4 class="popup__title">выбор города</h4>
-				<form action="#" method="get" class="header-center__form">
+				<form action="#" method="post" class="header-center__form">
 					<div class="popup__form-item">
 						<button class="header-center__button"><img src="@img/header/search30x30.svg" alt="Поиск"></button>
-						<input id="city-name" autocomplete="off" type="text" name="form[]" data-error="Ошибка"
-							class="header-center__input city-input">
+						<input id="city-name" autocomplete="off" type="text" name="form[]" data-error="Ошибка"  class="header-center__input city-input">
 						<label for="city-name" class="popup__label">начните вводить название города</label>
 					</div>
 				</form>
@@ -1614,8 +1613,8 @@
 						<input id="country" required autocomplete="off" type="text" name="form[]" data-error="Ошибка" class="popup__input">
 						<label for="country" class="popup__label">страна</label>
 					</div>
-					<div class="popup__form-item _label-up">
-							<input style="text-overflow: ellipsis;" id="city-data" value="Тверь" required autocomplete="off" type="text" name="form[]" data-error="Ошибка" class="popup__input">
+					<div class="popup__form-item ">
+							<input style="text-overflow: ellipsis;" id="city-data" value="Тверь" required autocomplete="off" type="text" name="form[]" data-error="Ошибка" class="popup__input input-submenu">
 							<label for="city-data" class="popup__label">город</label>
 						<ul class="popup__submenu">
 							<li class="popup__submenu-item">В пределах МКАД, Москва, Дмитровское шоссе, 100с2</li>

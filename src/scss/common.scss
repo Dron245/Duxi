@@ -1021,11 +1021,19 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 	border-radius: 50%;
  }
 
+
+ /* Правильная установка лейблов  */
 	input:focus ~ .popup__label,
-	input:not(:focus):valid ~ .popup__label {
+	input[required]:not(:focus):valid ~ .popup__label {
 		top: -10px;
 		left: 0px;
 		color: $zagolovok;
+	}
+
+	textarea:focus ~ .popup__label, textarea[required]:not(:focus):valid ~ .popup__label{
+	top: -20px;
+	left: 0px;
+	color: $zagolovok;
 	}
 
 	._label label {
@@ -1034,16 +1042,8 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 		color: $zagolovok;
 	}
 
-	textarea:focus ~ label,
-	textarea:not(:focus):valid ~ .popup__label{
-	top: -20px;
-	left: 0px;
-	color: $zagolovok;
-	}
-
-	textarea:not([required]):not(:focus) ~ .popup__label{
-		top: 16px;
-		left: 10px;
-		color: #000;
-		opacity: 0.5;
+	._label textarea ~ label {
+		top: -20px;
+		left: 0px;
+		color: $zagolovok;
 	}
