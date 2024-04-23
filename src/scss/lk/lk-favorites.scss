@@ -1,8 +1,5 @@
 .product-del-favorites {
 	display: none;
-	// position: absolute;
-	// top: 10px;
-	// right: 10px;
 	width: 30px;
 	height: 30px;
 	img {
@@ -33,13 +30,32 @@
 	.brands-tabs {
 		row-gap: 20px;
 	}
-
+	.brands-tabs__button {
+		@media (max-width:$tablet){
+			width: 46px;
+		}
+		@media (max-width:$mobile){
+			 @include adaptiveValue("width", 46, 18,0,768,320); 
+		}
+		svg {
+			width: 100%;
+			height: auto;
+		}
+	}
 	.brands-tabs form {
-		@include adaptiveValue("width", 690, 210,0,1540,320);
+		@include adaptiveValue("width", 690, 300,0,1540,1001.98);
+		@media (max-width:$tablet){
+			flex: 1 0 ;
+		}
 	}
 
 	.brands-tabs__content {
 		margin-top: 0;
+	}
+
+	.product:hover {
+		cursor: initial;
+		box-shadow: none;
 	}
 
 	&__actions {
@@ -49,6 +65,18 @@
 		&._change-button-favorites {
 			.favorite__button_redaction {display: none;}
 			.favorite__button_save {display: flex;}
+		}
+		@media (max-width:$tablet){
+			flex: 0 0 100%;
+		}
+
+		& .favorite__button span {
+			@media (max-width:$tablet){
+				font-size: 22px;
+			}
+			@media (max-width:$mobile){
+				 @include adaptiveValue("font-size", 28, 16,0,768,320); 
+			}
 		}
 	}
 
@@ -105,9 +133,33 @@
 	}
 
 	&__input {
+		.favorites & {
+			@media (max-width:$tablet){
+				font-size: toRem(24);
+				padding: 20px;
+			}
+			@media (max-width:$mobile){
+				 @include adaptiveValue("font-size", 28, 16,0,768,320); 
+			}
+			@media (max-width:$mobileSmall){
+				 padding: 10px; 
+			}
+		}
 	}
 
 	&__button {
+		.favorites & {
+			@media (max-width:$tablet){
+				width: 50px;
+			}
+			@media (max-width:$mobile){
+				 @include adaptiveValue("width", 50, 28,0,768,320); 
+			}
+			img {
+				width: 100%;
+				height: auto;
+			}
+		}
 	}
 }
 .input {
@@ -121,11 +173,30 @@
 	&__button {
 		gap: 10px;
 		padding-inline: 10px;
-
+		
 		&_redaction {
 		}
 
 		&_save {
+			@media (max-width:$tablet){
+				width: initial;
+				align-items: center;
+			}
+		}
+	}
+
+	&__img {
+		display: flex;
+		align-items: center;
+		@media (max-width:$tablet){
+			width: 20px;
+		}
+		@media (max-width:$mobile){
+			 @include adaptiveValue("width", 24, 12,0,768,320); 
+		}
+		img {
+			width: 100%;
+			height: auto;
 		}
 	}
 }

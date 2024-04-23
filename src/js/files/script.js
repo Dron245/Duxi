@@ -872,7 +872,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
 		//Перемещение объектов на странице "Избранное"
 		if (targetElement.closest('.favorite__button_redaction')) {
-			// drag();
 			new Sortable(example1, {
 				animation: 150,
 				ghostClass: 'background-class'
