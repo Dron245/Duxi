@@ -267,7 +267,7 @@
 		}
 		@media (any-hover: hover) {
 			&:hover {
-				& .header-center__input {
+				.header & .header-center__input {
 					border-radius: 16px 16px 0 0;
 				}
 				& .dropmenu {

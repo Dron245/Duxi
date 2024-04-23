@@ -1,0 +1,180 @@
+.product-del-favorites {
+	display: none;
+	// position: absolute;
+	// top: 10px;
+	// right: 10px;
+	width: 30px;
+	height: 30px;
+	img {
+		width: 100%;
+		height: auto;
+	}
+}
+
+.favorite__button_save {
+	display: none;
+}
+.favor .lk__body {
+	@media (max-width:$tablet){
+		display: block;
+	}
+}
+
+.lk {
+
+	&__item {
+	}
+
+	&__title {
+	}
+}
+.favorites {
+
+	.brands-tabs {
+		row-gap: 20px;
+	}
+
+	.brands-tabs form {
+		@include adaptiveValue("width", 690, 210,0,1540,320);
+	}
+
+	.brands-tabs__content {
+		margin-top: 0;
+	}
+
+	&__actions {
+		span {
+			font-size: 14px;
+		}
+		&._change-button-favorites {
+			.favorite__button_redaction {display: none;}
+			.favorite__button_save {display: flex;}
+		}
+	}
+
+	.main-catalog__wrapper {
+		grid-template-columns: repeat(4,1fr);
+		gap: 20px;
+		@media (max-width:em(1100)){
+			grid-template-columns: repeat(3,1fr);
+		}
+		@media (max-width:$mobile){
+			 grid-template-columns: repeat(2,1fr); 
+		}
+		@media (max-width:$mobileSmall){
+			 gap: 10px; 
+		}
+	}
+	& .list .main-catalog__wrapper {
+			grid-template-columns: repeat(3,1fr);
+			gap: 20px;
+			@media (max-width:$pcSmall){
+				grid-template-columns: repeat(2,1fr);
+			}
+			@media (max-width:$mobile){
+				grid-template-columns: repeat(1,1fr); 
+		}
+	}
+	
+	.tabs__content {
+		margin-left: 0;
+		margin-right: 0;
+	}
+	.brands-tabs__navigation {
+		@media (max-width:$mobile){
+			 display: block; 
+		}
+	}
+}
+
+.brands-tabs {
+
+	&__navigation {
+		.favorites & {
+			margin-bottom: 0;
+		}
+	}
+
+	
+}
+
+
+.header-center {
+
+	&__form {
+	}
+
+	&__input {
+	}
+
+	&__button {
+	}
+}
+.input {
+}
+.search-button {
+}
+.img-search-small {
+}
+.favorite {
+
+	&__button {
+		gap: 10px;
+		padding-inline: 10px;
+
+		&_redaction {
+		}
+
+		&_save {
+		}
+	}
+}
+.button-light {
+}
+.tile {
+}
+.main-catalog {
+
+	&__wrapper {
+	}
+}
+.product {
+
+	&__actions {
+		.favorites &._button-del {
+			.product__action {display: none;}
+			.product-del-favorites {display: block;}
+		}
+	}
+
+	&__action {
+	}
+
+	&__favorite {
+	}
+}
+
+
+
+
+
+.box {
+	._redaction-yes & {
+		cursor: move;
+		animation: tilt-shaking 0.2s linear infinite;
+		a {cursor: move;}
+	}
+ }
+
+ @keyframes tilt-shaking {
+	0% { transform: rotate(0deg); }
+	25% { transform: rotate(0.5deg); }
+	50% { transform: rotate(0deg); }
+	75% { transform: rotate(-0.5deg); }
+	100% { transform: rotate(0deg); }
+ }
+
+ .background-class {
+	background: $knopka-rozovaya;
+	opacity: 0.5;
+ }

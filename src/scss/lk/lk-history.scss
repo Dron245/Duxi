@@ -12,7 +12,15 @@
 	}
 }
 .history {
+	border-bottom: 1px solid #EEDCE1;
 	&:not(:last-child) {margin-bottom: toRem(40);}
+	padding-bottom: 40px;
+	@media (max-width:$tablet){
+		padding-bottom: 30px;
+	}
+	@media (max-width:$mobile){
+		 @include adaptiveValue("padding-bottom", 60, 30,0,768,320); 
+	}
 	&__title {
 		font-weight: 300;
 		font-size: 22px;
