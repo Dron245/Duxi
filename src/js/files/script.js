@@ -545,7 +545,7 @@ window.addEventListener('DOMContentLoaded', () => {
 		}
 
 		//Добавить новый список. Появление формы добавления списка
-		if (targetElement.closest('.list-popup__button-top')) {
+		if (targetElement.closest('.list-popup__button-top') && targetElement.closest('#add-list')) {
 			targetElement.closest('.list-popup__top').classList.add('_actions-open')
 		}
 
@@ -827,11 +827,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
 		//Отмена добавления адреса
 		if (targetElement.closest('#no-save-data') && document.querySelector('.lk')) {
-			document.documentElement.classList.remove('popup-show')
-			document.documentElement.classList.remove('lock')
-			document.body.removeAttribute('style');
-			targetElement.closest('#save-data').classList.remove('popup_show')
-			targetElement.closest('#save-data').setAttribute('aria-hidden', 'false')
+			closePopup('#save-data')
+			
 		}
 
 		//Появление надписи "документ загружен"
@@ -952,6 +949,34 @@ window.addEventListener('DOMContentLoaded', () => {
 				const removeItemBlock = document.querySelector(`[data-listyes="${removeItem}"]`)
 				removeItemBlock.remove()
 			}
+		}
+
+		//Функционал на странице "Списки"
+		if (targetElement.closest('#add-lk-list .popup__button')) {
+			const listInput = targetElement.closest('form').querySelector('#create-list-lk')
+			if (listInput.value !=='') {
+				const lkList = document.querySelector('.lk-list__wrapper')
+				lkList.insertAdjacentHTML("afterbegin", `
+				<div class="lk-address__item">
+					<p class="lk-address__text">${listInput.value}</p>
+					<div class="lk-address__actions">
+						<a href="lk-list-item.html" type="button" class="lk-address__button">
+							<img src="img/lk/redactors.svg" alt="изменить">
+						</a>
+						<button type="button" class="lk-address__button lk-address__button-delete">
+							<img src="img/lk/delete.svg" alt="удалить">
+						</button>
+					</div>
+				</div>
+				`)
+				closePopup('#add-lk-list')
+			}
+		}
+
+		if (targetElement.closest('#question-lk-list-item-del .button-light')) {
+			closePopup('#question-lk-list-item-del')
+		} else if (targetElement.closest('#question-lk-list-item-del .popup__button')) {
+			console.log(this);
 		}
 	}
 });

@@ -6,7 +6,7 @@
 	<body>
 		<div class="wrapper">
 			@@include('html/_header-user.htm',{})
-			<main class="page lk">
+			<main class="page lk lk-list">
 				<div class="lk__container">
 					<nav class="lk__breadcrumbs breadcrumbs">
 						<ul class="breadcrumbs__list">
@@ -25,6 +25,34 @@
 						<div class="lk__content">
 							<section class="lk__item">
 								<h3 class="lk__title">Списки</h3>
+								<button data-popup="#add-lk-list" type="button" class="list-popup__button-top">
+									<img src="@img/popup/plus-add-list.svg" alt="">
+									<span class="list-popup__button-text">Добавить новый список</span>
+								</button>
+								<div class="lk-list__wrapper">
+									<div class="lk-address__item">
+										<p class="lk-address__text">Название 1</p>
+										<div class="lk-address__actions">
+											<a href="lk-list-item.html" type="button" class="lk-address__button">
+												<img src="@img/lk/redactors.svg" alt="изменить">
+											</a>
+											<button data-popup="#question-lk-list-item-del" type="button" class="lk-address__button lk-address__button-delete">
+												<img src="@img/lk/delete.svg" alt="удалить">
+											</button>
+										</div>
+									</div>
+									<div class="lk-address__item">
+										<p class="lk-address__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae ratione nemo excepturi voluptates dolorem, mollitia ipsam consequatur facilis dicta. Iste.</p>
+										<div class="lk-address__actions">
+											<a href="lk-list-item.html" type="button" class="lk-address__button">
+												<img src="@img/lk/redactors.svg" alt="изменить">
+											</a>
+											<button data-popup="#question-lk-list-item-del" type="button" class="lk-address__button lk-address__button-delete">
+												<img src="@img/lk/delete.svg" alt="удалить">
+											</button>
+										</div>
+									</div>
+								</div>
 							</section>
 						</div>
 						<aside class="lk__navigation navigation-lk">
@@ -46,7 +74,7 @@
 			@@include('html/_footer.htm',{})
 		</div>
 		@@include('html/_popup.htm',{})
-		@@include('html/_popup-cart.htm',{})
+		@@include('html/_popup-lk.htm',{})
 		@@include('html/_js.htm',{})
 	</body>
 </html>

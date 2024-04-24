@@ -249,3 +249,8 @@
 	background: $knopka-rozovaya;
 	opacity: 0.5;
  }
+
+	.lk ._redaction-yes .product,
+	.lk ._redaction-yes .product .product__seil {
+	cursor: move;
+ }

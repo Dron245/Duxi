@@ -5,7 +5,9 @@
 	}
 }
 
-#add-document, #change-password, #where-order {
+#add-document, #change-password, 
+#where-order, #add-lk-list, 
+#question-lk-list-item-del {
 	text-align: initial;
 }
 
@@ -55,5 +57,11 @@
 		@media (max-width:57.5em) and (min-width:$mobile){
 			min-width: 420px; 
 		}
+	}
+}
+
+#add-lk-list {
+	.popup__title {
+		margin-bottom: 40px;
 	}
 }
