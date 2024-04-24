@@ -25,7 +25,7 @@
 	&__title {
 	}
 }
-.favorites {
+.favorites, .wait {
 
 	.brands-tabs {
 		row-gap: 20px;
@@ -59,9 +59,7 @@
 	}
 
 	&__actions {
-		span {
-			font-size: 14px;
-		}
+		
 		&._change-button-favorites {
 			.favorite__button_redaction {display: none;}
 			.favorite__button_save {display: flex;}
@@ -71,6 +69,7 @@
 		}
 
 		& .favorite__button span {
+			font-size: 14px;
 			@media (max-width:$tablet){
 				font-size: 22px;
 			}
@@ -118,7 +117,7 @@
 .brands-tabs {
 
 	&__navigation {
-		.favorites & {
+		.favorites &, .wait & {
 			margin-bottom: 0;
 		}
 	}
@@ -133,7 +132,7 @@
 	}
 
 	&__input {
-		.favorites & {
+		.favorites &, .wait & {
 			@media (max-width:$tablet){
 				font-size: toRem(24);
 				padding: 20px;
@@ -148,7 +147,7 @@
 	}
 
 	&__button {
-		.favorites & {
+		.favorites &, .wait & {
 			@media (max-width:$tablet){
 				width: 50px;
 			}
@@ -212,10 +211,11 @@
 .product {
 
 	&__actions {
-		.favorites &._button-del {
+		.wait &._button-del, .favorites &._button-del {
 			.product__action {display: none;}
 			.product-del-favorites {display: block;}
 		}
+
 	}
 
 	&__action {

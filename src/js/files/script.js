@@ -871,7 +871,7 @@ window.addEventListener('DOMContentLoaded', () => {
 		}*/
 
 		//Перемещение объектов на странице "Избранное"
-		if (targetElement.closest('.favorite__button_redaction')) {
+		if (targetElement.closest('.favorite__button_redaction') /*&& document.querySelector('.favorites')*/) {
 			new Sortable(example1, {
 				animation: 150,
 				ghostClass: 'background-class'
@@ -880,6 +880,16 @@ window.addEventListener('DOMContentLoaded', () => {
 				animation: 150,
 				ghostClass: 'background-class'
 			});
+			if (document.getElementById('example3') && document.getElementById('example4')) {
+				new Sortable(example3, {
+					animation: 150,
+					ghostClass: 'background-class'
+				});
+				new Sortable(example4, {
+					animation: 150,
+					ghostClass: 'background-class'
+				});
+			}
 			targetElement.closest('.favorites__actions').classList.add('_change-button-favorites');
 			const buttonFavorite = document.querySelectorAll('.product__actions')
 			buttonFavorite.forEach(element => {
@@ -896,16 +906,52 @@ window.addEventListener('DOMContentLoaded', () => {
 		}
 		
 		//Удаляю продукты из избранного
-		if (targetElement.closest('.list .product-del-favorites')) {
-			targetElement.closest('.product').remove()
-			const removeItem = targetElement.closest('.product').dataset.list
-			const removeItemBlock = document.querySelector(`[data-block="${removeItem}"]`)
-			removeItemBlock.remove()
-		} else if(targetElement.closest('.tile .product-del-favorites')) {
-			targetElement.closest('.product').remove()
-			const removeItem = targetElement.closest('.product').dataset.block
-			const removeItemBlock = document.querySelector(`[data-list="${removeItem}"]`)
-			removeItemBlock.remove()
+		if (document.querySelector('.favorites')) {
+			if (targetElement.closest('.list .product-del-favorites')) {
+				targetElement.closest('.product').remove()
+				const removeItem = targetElement.closest('.product').dataset.list
+				const removeItemBlock = document.querySelector(`[data-block="${removeItem}"]`)
+				removeItemBlock.remove()
+			} else if(targetElement.closest('.tile .product-del-favorites')) {
+				targetElement.closest('.product').remove()
+				const removeItem = targetElement.closest('.product').dataset.block
+				const removeItemBlock = document.querySelector(`[data-list="${removeItem}"]`)
+				removeItemBlock.remove()
+			}
+		}
+		
+
+		//Удаляю продукты из листа ожидания
+		if (document.querySelector('.wait')) {
+			if (targetElement.closest('[data-listwait] .product-del-favorites')) {
+				targetElement.closest('.product').remove()
+				const removeItem = targetElement.closest('.product').dataset.listwait
+				const removeItemBlock = document.querySelector(`[data-blockwait="${removeItem}"]`)
+				removeItemBlock.remove()
+			}
+	
+			if (targetElement.closest('[data-listyes] .product-del-favorites')) {
+				targetElement.closest('.product').remove()
+				const removeItem = targetElement.closest('.product').dataset.listyes
+				const removeItemBlock = document.querySelector(`[data-blockyes="${removeItem}"]`)
+				removeItemBlock.remove()
+			}
+
+			if (targetElement.closest('[data-blockwait] .product-del-favorites')) {
+				targetElement.closest('.product').remove()
+				const removeItem = targetElement.closest('.product').dataset.blockwait
+				console.log(removeItem);
+				const removeItemBlock = document.querySelector(`[data-listwait="${removeItem}"]`)
+				console.log(removeItemBlock);
+				removeItemBlock.remove()
+			}
+
+			if (targetElement.closest('[data-blockyes] .product-del-favorites')) {
+				targetElement.closest('.product').remove()
+				const removeItem = targetElement.closest('.product').dataset.blockyes
+				const removeItemBlock = document.querySelector(`[data-listyes="${removeItem}"]`)
+				removeItemBlock.remove()
+			}
 		}
 	}
 });

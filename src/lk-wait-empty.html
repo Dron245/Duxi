@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+	@@include('html/_head.htm',{
+	"title":"Ожидание поступления товаров"
+	})
+	<body>
+		<div class="wrapper">
+			@@include('html/_header-user.htm',{})
+			<main class="page lk">
+				<div class="lk__container">
+					<nav class="lk__breadcrumbs breadcrumbs">
+						<ul class="breadcrumbs__list">
+							<li class="breadcrumbs__item">
+								<a href="home-user.html" class="breadcrumbs__link">Интернет магазин парфюмерии</a>
+							</li>
+							<li class="breadcrumbs__item">
+								<a href="lk-data.html" class="breadcrumbs__link">Личный кабинет</a>
+							</li>
+							<li class="breadcrumbs__item">
+								<span class="breadcrumbs__current">Ожидание поступления товаров</span>
+							</li>
+						</ul>
+					</nav>
+					<div class="lk__body">
+						<div class="lk__content">
+							<section class="lk__item">
+								<h3 class="lk__title">ожидание поступления товаров</h3>
+								<p class="lk__text-empty">В списке ожидания отсутствуют товары</p>
+							</section>
+						</div>
+						<aside class="lk__navigation navigation-lk">
+							<ul class="navigation-lk__list">
+								<li class="navigation-lk__item"><a class="navigation-lk__link" href="lk-data.html"><span>Персональные данные</span></a></li>
+								<li class="navigation-lk__item"><a class="navigation-lk__link" href="lk-discount.html"><span></span>Персональная скидка</a></li>
+								<li class="navigation-lk__item"><a class="navigation-lk__link" href="lk-history.html"><span>История заказов</span></a></li>
+								<li class="navigation-lk__item"><a class="navigation-lk__link" href="lk-bonus.html"><span>БОНУСНЫЙ СЧЕТ</span></a></li>
+								<li class="navigation-lk__item"><a class="navigation-lk__link" href="lk-favorites.html"><span>ИЗБРАННОЕ</span></a></li>
+								<li class="navigation-lk__item"><a class="navigation-lk__link navigation-lk__link_active" href="lk-wait.html"><span>Ожидание поступления</span></a></li>
+								<li class="navigation-lk__item"><a class="navigation-lk__link" href="lk-list.html"><span>МОИ СПИСКИ</span></a></li>
+								<li class="navigation-lk__item"><a class="navigation-lk__link" href="lk.sertificate.html"><span>электронные сертификаты</span></a></li>
+								<li class="navigation-lk__item"><a class="navigation-lk__link" href="lk.reviews.html"><span>мои отзывы</span></a></li>
+							</ul>
+						</aside>
+					</div>
+				</div>
+			</main>
+			@@include('html/_footer.htm',{})
+		</div>
+		@@include('html/_popup.htm',{})
+		@@include('html/_js.htm',{})
+	</body>
+</html>
