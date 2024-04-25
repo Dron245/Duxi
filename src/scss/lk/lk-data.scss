@@ -14,6 +14,9 @@
 		display: grid;
 		gap: 20px;
 		grid-template-columns: 75.459318% 1fr; /* 1150/1524 */
+		@media (max-width: em(1400)){
+			 grid-template-columns: 72% 1fr; 
+		}
 		@media (max-width:$pcSmall){
 			grid-template-columns: 70% 1fr;
 		}

@@ -1,0 +1,166 @@
+.lk {
+
+	&__item {
+		.lk-sertificate & {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 20px;
+			line-height: normal;
+			@media (max-width:$mobile){
+				grid-template-columns: 1fr; 
+			}
+			@media (max-width:$mobileSmall){
+				gap: 10px; 
+			}
+		}
+	}
+
+	&__title {
+	}
+}
+.lk-sertificate {
+	.lk__body {
+		@media (min-width:$tablet){
+			//  grid-template-columns: 75.3% 1fr; 
+		}
+	}
+	.personal-discount__text {
+		max-width: 90%;
+		@media (max-width:$pcSmall){
+			@include adaptiveValue("font-size", 24, 20,0,1281,1001.99);
+		}
+		@media (max-width:$tablet){
+			font-size: 24px;
+		}
+		@media (max-width:$mobile){
+			 @include adaptiveValue("font-size", 32, 21,0,768,320); 
+		}
+	}
+	
+	&__window {
+		position: fixed;
+		max-width: 280px;
+		top: 15px;
+		right: 15px;
+		padding: 10px;
+		background-color: white;
+		border-radius: 16px;
+		opacity: 0;
+		visibility: hidden;
+		z-index: 7;
+		transition: transform 0.3s, opacity 0.3s, visibility 0.3s;
+		transform: translateY(10px);
+		@media (max-width:$mobileSmall){
+			 padding: 10px; 
+		}
+		._lk-window-open & {
+			opacity: 1;
+			visibility: visible;
+			transform: translateY(0);
+		}
+	}
+
+	&__item {
+		border-radius: 1px;
+		padding: 20px;
+		background: #FFF;
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		row-gap: 10px;
+		@media (max-width:$mobileSmall){
+			 padding: 10px; 
+		}
+	}
+
+	&__copy {
+		cursor: pointer;
+		position: absolute;
+		top: 10px;
+		right: 10px;
+		width: 40px;
+		@media (max-width:$pcSmall){
+			width: 30px;
+		}
+		@media (max-width:$tablet){
+			width: 50px;
+		}
+		@media (max-width:$mobile){
+			 @include adaptiveValue("width", 50, 20,0,768,320); 
+		}
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+	&__number {
+		font-weight: 700;
+		font-size: 55px;
+		@media (max-width:$pcSmall){
+			  font-size: 45px;
+		}
+		@media (max-width:$tablet){
+			@include adaptiveValue("font-size", 40, 30,0,1001.99,768.01);
+		}
+		@media (max-width:$mobile){
+			 @include adaptiveValue("font-size", 70, 36,0,768,320); 
+		}
+		&_red {
+			color: $zagolovok;
+		}
+
+		&_big {
+			@media (max-width:$mobile){
+				@include adaptiveValue("font-size", 70, 28,0,768,320); 
+			}
+			span[class] {
+				@media (max-width:$mobile){
+					@include adaptiveValue("font-size", 85, 47,0,768,320); 
+			  }
+			}
+		}
+		span {
+			font-size: 64px;
+			@media (max-width:$pcSmall){
+				  font-size: 50px;
+			}
+			@media (max-width:$tablet){
+				@include adaptiveValue("font-size", 55, 42,0,1001.01,768.01);
+			}
+			@media (max-width:$mobile){
+				@include adaptiveValue("font-size", 85, 55,0,768,320); 
+			}
+		}
+	}
+
+	&__text {
+		font-size: 16px;
+		font-style: italic;
+		@media (max-width:$tablet){
+			font-size: 20px;
+		}
+		@media (max-width:$mobile){
+			 @include adaptiveValue("font-size", 28, 16,0,768,320); 
+		}
+	}
+
+	&__bottom {
+		margin-top: 20px;
+	}
+
+	&__text-bold {
+		font-weight: 700;
+	}
+
+	&__img {
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+}
+.personal-discount {
+
+	&__text {
+	}
+}

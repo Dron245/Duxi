@@ -4,6 +4,7 @@ import { isMobile } from "./functions.js";
 import { flsModules } from "./modules.js";
 import Sortable from 'sortablejs';
 window.addEventListener('DOMContentLoaded', () => {
+	var idItemListLk;
 	document.addEventListener("click", documentActions);
 	let flag = true;
 	let flagCart = true;
@@ -951,19 +952,19 @@ window.addEventListener('DOMContentLoaded', () => {
 			}
 		}
 
-		//Функционал на странице "Списки"
+		//Функционал на странице "Списки. Добавление списка"
 		if (targetElement.closest('#add-lk-list .popup__button')) {
 			const listInput = targetElement.closest('form').querySelector('#create-list-lk')
 			if (listInput.value !=='') {
 				const lkList = document.querySelector('.lk-list__wrapper')
 				lkList.insertAdjacentHTML("afterbegin", `
-				<div class="lk-address__item">
+				<div data-lk-list-item="${Date.now()}" class="lk-address__item">
 					<p class="lk-address__text">${listInput.value}</p>
 					<div class="lk-address__actions">
 						<a href="lk-list-item.html" type="button" class="lk-address__button">
 							<img src="img/lk/redactors.svg" alt="изменить">
 						</a>
-						<button type="button" class="lk-address__button lk-address__button-delete">
+						<button data-popup="#lk-list-item-del" type="button" class="lk-address__button lk-list__button-delete">
 							<img src="img/lk/delete.svg" alt="удалить">
 						</button>
 					</div>
@@ -973,10 +974,26 @@ window.addEventListener('DOMContentLoaded', () => {
 			}
 		}
 
-		if (targetElement.closest('#question-lk-list-item-del .button-light')) {
-			closePopup('#question-lk-list-item-del')
-		} else if (targetElement.closest('#question-lk-list-item-del .popup__button')) {
-			console.log(this);
+		//Функционал на странице "Списки. Удаление списка"
+		if (targetElement.closest('.lk-list__button-delete')) {
+			idItemListLk = targetElement.closest('[data-lk-list-item]') ? targetElement.closest('[data-lk-list-item]').dataset.lkListItem : null
+		}
+		
+		if (targetElement.closest('#lk-list-item-del .button-light') /*|| !targetElement.closest('.popup__content')*/) {
+			closePopup('#lk-list-item-del');
+			
+		} else if (targetElement.closest('#lk-list-item-del .popup__button')) {
+			// document.querySelector('._del-question').remove();
+			document.querySelector(`div[data-lk-list-item = "${idItemListLk}"]`).remove()
+			closePopup('#lk-list-item-del')
+		}
+
+		// Всплывашка на станице "Сертфикаты" копирую в буфер обмена
+		if (targetElement.closest('.lk-sertificate__copy')) {
+			targetElement.closest('.lk__item').classList.add('_lk-window-open')
+			setTimeout( function() {
+				targetElement.closest('.lk__item').classList.remove('_lk-window-open')
+			}, 2000)
 		}
 	}
 });

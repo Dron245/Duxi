@@ -235,6 +235,14 @@
 		.guest & {
 			display: none;
 		}
+		img {
+			@media (max-width:$tablet){
+				width: 22px;
+			}
+			@media (max-width:$mobile){
+				 @include adaptiveValue("width", 32, 16,0,768); 
+			}
+		}
 	}
 
 	&__switches {
