@@ -794,11 +794,21 @@ h3[class*="__title"] {
 		}
 		display: flex;
 		flex-wrap: wrap;
-		gap: 7px;
+		gap: 20px;
 		align-items: center;
+		@media (max-width:$mobileSmall){
+			 gap: 10px; 
+		}
 	}
 
 	&__photo-img {
+		width: 160px;
+		@media (max-width:$tablet){
+			width: 130px;
+		}
+		@media (max-width:$mobile){
+			 @include adaptiveValue("width",150	,60,0,768,320 ); 
+		}
 		img {
 			width: 100%;
 			height: auto;

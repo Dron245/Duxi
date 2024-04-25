@@ -1,5 +1,5 @@
 .wait {
-
+	min-height: 500px;
 	.lk__item {
 		&:not(:last-child) {margin-bottom: toRem(40);}
 		@media (max-width:$mobile){
@@ -38,6 +38,9 @@
 		}
 		@media (max-width: em(600)){
 			top: 12px;
+		}
+		@media (max-width: em(375)){
+			  top: 9px;
 		}
 	}
 

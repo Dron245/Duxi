@@ -1,10 +1,11 @@
 .lk-list {
 	.lk__body {
+		min-height: 800px;
 		@media (max-width:$tablet){
-			margin-bottom: 500px;
+			// margin-bottom: 500px;
 		}
 		@media (max-width:$mobileSmall){
-			 margin-bottom: 240px; 
+			//  margin-bottom: 240px; 
 		}
 	}
 	.lk-address__item {
@@ -14,7 +15,7 @@
 		display: grid;
 		grid-template-columns: 1fr;
 		gap: 20px;
-		@media (min-width:$tablet){
+		@media (min-width:$mobile){
 			grid-template-columns: 1fr 1fr;
 		}
 	}
@@ -24,7 +25,7 @@
 			font-size: 22px;
 		}
 		@media (max-width:$mobile){
-			 @include adaptiveValue("font-size", 32, 16,768,320); 
+			 @include adaptiveValue("font-size", 32, 16,0,768,320); 
 		}
 	}
 }

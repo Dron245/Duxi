@@ -1,0 +1,209 @@
+.page {
+}
+.lk {
+
+		&__container {
+		}
+
+		&__breadcrumbs {
+		}
+
+		&__body {
+		}
+
+		&__content {
+		}
+
+		&__item {
+		}
+
+		&__title {
+		}
+
+		&__navigation {
+		}
+}
+.lk-reviews {
+
+	&__item {
+		&:not(:last-child) {margin-bottom: toRem(20);}
+		@media (max-width:$tablet){
+			&:not(:last-child) {margin-bottom: toRem(60);}
+		}
+		@media (max-width:$mobile){
+			 &:not(:last-child) {
+				@include adaptiveValue("margin-bottom", 60, 40,0,768,320);
+			 } 
+		}
+		.lk-reviews__top span {
+			font-weight: 700;
+		}
+	}
+
+	&__top {
+	}
+
+	&__body {
+		border-radius: 16px;
+		background: #FFF;
+		padding: 10px;
+		display: grid;
+		row-gap: 10px;
+	}
+}
+
+.bonus {
+
+	&__top {
+
+		&_plus {
+		}
+	}
+}
+.top-history {
+
+	&__data {
+	}
+}
+.lk-rev {
+	.question-block__text-light {
+		margin-top: 10px;
+		display: block;
+	}
+	.question-block__button {
+		@media (max-width:$tablet){
+			font-size: 20px;
+		}
+		@media (max-width:$mobile){
+			 @include adaptiveValue("font-size", 28, 15,0,768,320); 
+		}
+	}
+	.feedback__photo-img {
+		@media (max-width:$mobile){
+			 @include adaptiveValue("width", 200, 80,0,768,320); 
+		}
+	}
+	&__item {
+		
+		&_top {
+			.info-order__text {
+				font-style: italic;
+				color: $zagolovok;
+				text-decoration: underline;
+				@media (max-width:$tablet){
+					font-size: 20px;
+				}
+				@media (max-width:$mobile){
+					 @include adaptiveValue("font-size", 28, 15,0,768,320); 
+				}
+			}
+		}
+
+		&_star {
+			display: flex;
+			align-items: center;
+			gap: 5px;
+		}
+
+		&_title-one {
+			.info-order__title {
+				display: block;
+				&:not(:last-child) {margin-bottom: toRem(7);}
+			}
+			.info-order__text {
+				@media (max-width:$tablet){
+					font-size: 20px;
+				}
+				@media (max-width:$mobile){
+					 @include adaptiveValue("font-size", 28, 13,0,768,320); 
+				}
+			}
+		}
+
+		&_photo {
+			
+		}
+	}
+
+	
+
+	&__photo {
+	}
+
+	&__button {
+		margin-top: 10px;
+		&:not(:last-child) {margin-bottom: toRem(10);}
+		padding-left: 20px;
+		padding-right: 20px;
+		font-size: 18px;
+		@media (max-width:$pcSmall){
+			font-size: 14px;
+		}
+		@media (max-width:$tablet){
+			font-size: 22px;
+		}
+		@media (min-width:$mobileSmall){
+			justify-self: start;
+		}
+		@media (max-width:$mobile){
+			 @include adaptiveValue("font-size", 28, 15,0,768,320); 
+		}
+		
+	}
+}
+.info-order {
+
+		&__title {
+		}
+
+		&__text {
+		}
+}
+.feedback {
+
+	&__star {
+	}
+
+	&__star-item {
+	}
+
+	&__photo {
+	}
+
+	&__photo-img {
+	}
+
+	&__question-block {
+	}
+}
+.button-light {
+}
+.question-block {
+
+	&__text {
+	}
+
+	&__answers {
+	}
+
+	&__button {
+
+		&_yes {
+		}
+
+		&_no {
+		}
+	}
+
+	&__text-light {
+	}
+
+	&__quantity {
+	}
+}
+.questiion-block {
+
+		&__yes-quantity {
+		}
+}
+
