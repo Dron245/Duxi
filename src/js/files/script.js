@@ -13,6 +13,7 @@ window.addEventListener('DOMContentLoaded', () => {
 	function documentActions(e) {
 		const targetElement = e.target;
 		function closePopup(id) {
+			history.pushState("", document.title, window.location.pathname);
 			document.documentElement.classList.remove('popup-show')
 			document.documentElement.classList.remove('lock')
 			document.body.removeAttribute('style');
@@ -249,7 +250,7 @@ window.addEventListener('DOMContentLoaded', () => {
 		if (targetElement.closest('[data-parent]')) {
 			const subMenuId = targetElement.dataset.parent ? targetElement.dataset.parent : null;
 			const subMenu = document.querySelector(`[data-submenu="${subMenuId}"]`);
-			console.log(subMenu);
+			// console.log(subMenu);
 			if (subMenu) {
 				document.documentElement.classList.add('sub-menu-open');
 				subMenu.classList.add('_sub-menu-open');
@@ -320,7 +321,7 @@ window.addEventListener('DOMContentLoaded', () => {
 		//сбрасываю чекбоксы по нажатию кнопки "сбросить" и очищаю поле выбранного фильтра
 		if (targetElement.closest('.filter__reset-check')) {
 			let valCheck = targetElement.closest('.filters__filter').querySelector('.filter__val')
-			console.log(valCheck);
+			// console.log(valCheck);
 			const checkboxCheck = targetElement.closest('.filters__filter').querySelectorAll('.checkbox__input')
 			checkboxCheck.forEach(element => {
 				element.checked = false
@@ -403,7 +404,7 @@ window.addEventListener('DOMContentLoaded', () => {
 		//Раскрашивание кнопок в зелёный или красный цвет при нажатии на ответ да или нет на странице "отзывы о магазине"
 		if(targetElement.closest('.question-block__button') || targetElement.closest('.questiion-block__span-quantity')) {
 			const questionAnswers= targetElement.closest('.question-block__answers').querySelectorAll('.question-block__button');
-			console.log(questionAnswers);
+			// console.log(questionAnswers);
 			questionAnswers.forEach(element => {
 				// console.log(2);
 				element.classList.remove('_question-answer')
@@ -872,20 +873,24 @@ window.addEventListener('DOMContentLoaded', () => {
 		if (targetElement.closest('.favorite__button_redaction') /*&& document.querySelector('.favorites')*/) {
 			new Sortable(example1, {
 				animation: 150,
-				ghostClass: 'background-class'
+				ghostClass: 'background-class',
+				filter: ".ignore-elements"
 			});
 			new Sortable(example2, {
 				animation: 150,
-				ghostClass: 'background-class'
+				ghostClass: 'background-class',
+				filter: ".ignore-elements"
 			});
 			if (document.getElementById('example3') && document.getElementById('example4')) {
 				new Sortable(example3, {
 					animation: 150,
-					ghostClass: 'background-class'
+					ghostClass: 'background-class',
+					filter: ".ignore-elements"
 				});
 				new Sortable(example4, {
 					animation: 150,
-					ghostClass: 'background-class'
+					ghostClass: 'background-class',
+					filter: ".ignore-elements"
 				});
 			}
 			targetElement.closest('.favorites__actions').classList.add('_change-button-favorites');
@@ -938,9 +943,9 @@ window.addEventListener('DOMContentLoaded', () => {
 			if (targetElement.closest('[data-blockwait] .product-del-favorites')) {
 				targetElement.closest('.product').remove()
 				const removeItem = targetElement.closest('.product').dataset.blockwait
-				console.log(removeItem);
+				// console.log(removeItem);
 				const removeItemBlock = document.querySelector(`[data-listwait="${removeItem}"]`)
-				console.log(removeItemBlock);
+				// console.log(removeItemBlock);
 				removeItemBlock.remove()
 			}
 

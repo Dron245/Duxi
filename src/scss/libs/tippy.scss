@@ -22,10 +22,10 @@
 		position: fixed !important;
 		inset: initial !important;
 		// inset: 50% 20px 0px 20px  !important;
-		top: 50% !important;
+		top: 40px !important;
 		left: 20px !important;
 		right: 20px !important;
-		transform: translateY(-50%) !important;
+		transform: translateY(-0%) !important;
 		max-width: 100% !important;
 		
 	}
@@ -39,6 +39,8 @@
 	font-size: 12px;
 	line-height: normal;
 	outline: 0;
+	// max-height: 200px;
+	// overflow-y: scroll;
 	transition-property: transform, visibility, opacity;
 	filter: drop-shadow(10px 10px 10px rgba(187, 144, 144, 0.10)) drop-shadow(-10px -10px 10px rgba(187, 144, 144, 0.10))
 }
@@ -131,13 +133,13 @@
 }
 
 .tippy__title {
-	font-size: 54px;
+	font-size: 44px;
 	font-weight: 300;
 	line-height: normal;
 	text-transform: uppercase;
 	color: #7f203b;
 	margin-bottom: 20px;
-	margin-top: 80px;
+	margin-top: 30px;
 	.lk-body & {
 		margin-bottom: 5px;
 	}
@@ -177,8 +179,8 @@
 		text-align: center;
 	}
 	@media (max-width: 1001.98px){
-		font-size: 30px;
-		margin-bottom: 80px;
+		font-size: 22px;
+		margin-bottom: 40px;
 		.lk-body & {
 			margin-bottom: 10px;
 		}
