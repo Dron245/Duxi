@@ -83,8 +83,7 @@
 		}
 	}
 
-	&__title-block {
-	}
+	
 
 	&__item-mobile {
 		summary {
@@ -155,8 +154,7 @@
 		}
 	}
 
-	&__count {
-	}
+	
 
 	&__img-arrow {
 		@media (min-width: $mobile) {
@@ -202,15 +200,14 @@
 		grid-template-rows: min-content;
 		gap: 20px;
 		@media (max-width: em(1010)) {
-			grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+			// grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 		}
-		@media (max-width: $mobile) {
+		@media (max-width: $mobileSmall) {
 			grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 		}
 	}
 
-	&__item {
-	}
+	
 }
 
 //Вёрстка статей
@@ -346,15 +343,11 @@
 			height: auto;
 		}
 	}
-
-	&__close {
-	}
+	
 }
 
 .popup {
-	&__wrapper {
-	}
-
+	
 	&__content {
 		#search-qr &,
 		#qr-scan & {
@@ -369,11 +362,7 @@
 		}
 	}
 
-	&__close {
-	}
-
-	&__body {
-	}
+	
 
 	&__title {
 		#search-qr &,
@@ -383,11 +372,7 @@
 		}
 	}
 
-	&__qr-content {
-	}
 
-	&__button {
-	}
 }
 .qr-content {
 	& + button {

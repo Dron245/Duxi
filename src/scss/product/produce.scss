@@ -18,6 +18,11 @@
 	&__main {
 		margin-bottom: 40px;
 	}
+	.otlvant-review__top {
+		@media (max-width:$mobile){
+			 margin-bottom: 20px; 
+		}
+	}
 	section {
 		@media (max-width:$tablet){
 			&:not(:last-child) {
@@ -32,7 +37,11 @@
 	}
 }
 .produce {
-	
+	.otliv__left {
+		@media (max-width:$tablet) and (min-width:$mobile){
+			grid-template-columns: 14% calc(100% - 10px - 14%);
+		}
+	}
 	&__top {
 		margin-bottom: 10px;
 		@media (max-width:$tablet){
@@ -211,7 +220,15 @@
 	&__slider-thumbs {
 		margin-top: 15px;
 		margin-bottom: 15px;
-		@include adaptiveValue("height", 470, 245,0,1540,768);
+		@media (min-width:em(1540)){
+			height: 490px;
+		}
+		@media (max-width: em(1540)){
+			@include adaptiveValue("height", 470, 245,0,1540,768);
+		}
+		@media (max-width:$tablet){
+			@include adaptiveValue("height", 420, 335,0,1001.99,768.01);
+		}
 	}
 
 	&__slider {
@@ -717,8 +734,8 @@
 	&__data {
 		@media (max-width:$mobile){
 			margin-top: 20px;
-			 padding: 20px;
-			 background-color: white; 
+			padding: 20px;
+			background-color: white; 
 		}
 	}
 }
@@ -740,6 +757,9 @@
 		border-radius: 16px;
 		background: #FFF;
 		padding: 20px;
+		@media (max-width:$mobile){
+			 margin-top: 20px; 
+		}
 	}
 
 	&__text {

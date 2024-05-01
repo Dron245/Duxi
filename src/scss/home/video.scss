@@ -60,6 +60,9 @@
 
 	&__content {
 		margin-top: toRem(10);
+		@media (max-width:$tablet){
+			font-size: 22px;
+		}
 		@media (max-width:$mobile){
 			 display: none; 
 		}
@@ -68,6 +71,7 @@
 	&__text {
 		transition: color 0.3s;
 		line-height: 123.076923%; /* 16/13 */
+		
 	}
 
 	&__subtext {

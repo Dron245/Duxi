@@ -1,8 +1,6 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
-	@@include('html/_head.htm',{
-	"title":"Электронные сертфикаты"
-	})
+	@@include('html/_head.htm',{ "title":"Электронные сертфикаты" })
 	<body>
 		<div class="wrapper">
 			@@include('html/_header-user.htm',{})
@@ -30,20 +28,21 @@
 								</div>
 								<div class="lk-sertificate__item">
 									<button type="button" class="lk-sertificate__copy">
-										<img src="@img/lk/certificates/copy.svg" alt="копировать">
+										<img src="@img/lk/certificates/copy.svg" alt="копировать" />
 									</button>
-									<p class="personal-discount__text">ПОДАРОЧНЫЙ СЕРТИФИКАТ <br>№ 123456</p>
+									<p class="personal-discount__text">ПОДАРОЧНЫЙ СЕРТИФИКАТ <br />№ 123456</p>
 									<div class="lk-sertificate__number lk-sertificate__number_red">на <span>1 000</span> руб.</div>
 									<p class="lk-sertificate__text">Электронный сертификат от 02.04.2022 (заказ № 5714734)</p>
 									<div class="lk-sertificate__bottom">
-										<p class="lk-sertificate__text">Действителен до 02.04.2023 <br>
+										<p class="lk-sertificate__text">
+											Действителен до 02.04.2023 <br />
 											<span class="lk-sertificate__text-bold">(До окончания срока действия 301 день)</span>
 										</p>
 									</div>
 								</div>
 								<div class="lk-sertificate__item">
 									<div class="lk-sertificate__img">
-										<img src="@img/certificates/gold.png" alt="Сертфикат на 1000 рублей">
+										<img src="@img/certificates/gold.png" alt="Сертфикат на 1000 рублей" />
 									</div>
 								</div>
 								<div class="lk-sertificate__item">
@@ -58,22 +57,40 @@
 								</div>
 								<div class="lk-sertificate__item">
 									<div class="lk-sertificate__img">
-										<img src="@img/certificates/red.png" alt="Сертфикат на 10 000 рублей">
+										<img src="@img/certificates/red.png" alt="Сертфикат на 10 000 рублей" />
 									</div>
 								</div>
 							</section>
 						</div>
 						<aside class="lk__navigation navigation-lk">
 							<ul class="navigation-lk__list">
-								<li class="navigation-lk__item"><a class="navigation-lk__link" href="lk-data.html"><span>Персональные данные</span></a></li>
-								<li class="navigation-lk__item"><a class="navigation-lk__link" href="lk-discount.html"><span></span>Персональная скидка</a></li>
-								<li class="navigation-lk__item"><a class="navigation-lk__link" href="lk-history.html"><span>История заказов</span></a></li>
-								<li class="navigation-lk__item"><a class="navigation-lk__link" href="lk-bonus.html"><span>БОНУСНЫЙ СЧЕТ</span></a></li>
-								<li class="navigation-lk__item"><a class="navigation-lk__link" href="lk-favorites.html"><span>ИЗБРАННОЕ</span></a></li>
-								<li class="navigation-lk__item"><a class="navigation-lk__link" href="lk-wait.html"><span>Ожидание поступления</span></a></li>
-								<li class="navigation-lk__item"><a class="navigation-lk__link" href="lk-list.html"><span>МОИ СПИСКИ</span></a></li>
-								<li class="navigation-lk__item"><a class="navigation-lk__link navigation-lk__link_active" href="lk.sertificate.html"><span>электронные сертификаты</span></a></li>
-								<li class="navigation-lk__item"><a class="navigation-lk__link" href="lk.reviews.html"><span>мои отзывы</span></a></li>
+								<li class="navigation-lk__item">
+									<a class="navigation-lk__link" href="lk-data.html"><span>Персональные данные</span></a>
+								</li>
+								<li class="navigation-lk__item">
+									<a class="navigation-lk__link" href="lk-discount.html"><span></span>Персональная скидка</a>
+								</li>
+								<li class="navigation-lk__item">
+									<a class="navigation-lk__link" href="lk-history.html"><span>История заказов</span></a>
+								</li>
+								<li class="navigation-lk__item">
+									<a class="navigation-lk__link" href="lk-bonus.html"><span>БОНУСНЫЙ СЧЕТ</span></a>
+								</li>
+								<li class="navigation-lk__item">
+									<a class="navigation-lk__link" href="lk-favorites.html"><span>ИЗБРАННОЕ</span></a>
+								</li>
+								<li class="navigation-lk__item">
+									<a class="navigation-lk__link" href="lk-wait.html"><span>Ожидание поступления</span></a>
+								</li>
+								<li class="navigation-lk__item">
+									<a class="navigation-lk__link" href="lk-list.html"><span>МОИ СПИСКИ</span></a>
+								</li>
+								<li class="navigation-lk__item">
+									<a class="navigation-lk__link navigation-lk__link_active" href="lk.sertificate.html"><span>электронные сертификаты</span></a>
+								</li>
+								<li class="navigation-lk__item">
+									<a class="navigation-lk__link" href="lk.reviews.html"><span>мои отзывы</span></a>
+								</li>
 							</ul>
 						</aside>
 					</div>
@@ -81,7 +98,6 @@
 			</main>
 			@@include('html/_footer.htm',{})
 		</div>
-		@@include('html/_popup.htm',{})
-		@@include('html/_js.htm',{})
+		@@include('html/_popup.htm',{}) @@include('html/_js.htm',{})
 	</body>
 </html>

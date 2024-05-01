@@ -1,24 +1,24 @@
 <div id="review-product-filters" aria-hidden="true" class="popup">
 	<div class="popup__wrapper">
 		<div class="popup__content">
-			<button data-close type="button" class="popup__close"><img src="@img/popup/close.svg" alt=""></button>
+			<button data-close type="button" class="popup__close"><img src="@img/popup/close.svg" alt="" /></button>
 			<div class="popup__body filtmodal">
-				<div class="filtmodal__wrapper ">
+				<div class="filtmodal__wrapper">
 					<h4 class="filtmodal__title">Фильтры</h4>
 					<div class="filtmodal__item">
 						<button data-parent="1" class="filtmodal__element">По дате</button>
 						<span class="filtmodal__checked">вначале новые</span>
-						<div class="filtmodal__reset"><img src="@img/catalog/reset-filtr.svg" alt="сбросить выбранное"></div>
+						<div class="filtmodal__reset"><img src="@img/catalog/reset-filtr.svg" alt="сбросить выбранное" /></div>
 					</div>
 					<div class="filtmodal__item">
 						<button data-parent="2" class="filtmodal__element">По популярности</button>
 						<span class="filtmodal__checked">выбрать</span>
-						<div class="filtmodal__reset"><img src="@img/catalog/reset-filtr.svg" alt="сбросить выбранное"></div>
+						<div class="filtmodal__reset"><img src="@img/catalog/reset-filtr.svg" alt="сбросить выбранное" /></div>
 					</div>
 					<div class="filtmodal__item">
 						<button data-parent="3" class="filtmodal__element">по рейтингу</button>
 						<span class="filtmodal__checked">выбрать</span>
-						<div class="filtmodal__reset"><img src="@img/catalog/reset-filtr.svg" alt="сбросить выбранное"></div>
+						<div class="filtmodal__reset"><img src="@img/catalog/reset-filtr.svg" alt="сбросить выбранное" /></div>
 					</div>
 					<div class="filtmodal__actions">
 						<button id="submit-filter" type="button" class="popup__button filtmodal__button-filter">сохранить</button>
@@ -26,26 +26,23 @@
 					</div>
 				</div>
 
-
-
-
 				<div data-submenu="1" class="filtmodal__submenu submenu-filter">
 					<div class="submenu-filter__top">
-						<button type="button" class="submenu-filter__back"><img src="@img/catalog/back-arrow.svg" alt="назад"></button>
+						<button type="button" class="submenu-filter__back"><img src="@img/catalog/back-arrow.svg" alt="назад" /></button>
 						<h4 class="filtmodal__title">По дате</h4>
 					</div>
 					<div class="submenu-filter__list">
 						<div class="submenu-filter__body options">
 							<div class="options__item">
-								<input id="o_m-product1" class="options__input" type="radio" value="по умолчанию" name="option1-review-product">
+								<input id="o_m-product1" class="options__input" type="radio" value="по умолчанию" name="option1-review-product" />
 								<label for="o_m-product1" class="options__label"><span class="options__text">по умолчанию</span></label>
 							</div>
 							<div class="options__item">
-								<input id="o_m-product2" class="options__input" type="radio" checked value="вначале новые" name="option1-review-product">
+								<input id="o_m-product2" class="options__input" type="radio" checked value="вначале новые" name="option1-review-product" />
 								<label for="o_m-product2" class="options__label"><span class="options__text">вначале новые</span></label>
 							</div>
 							<div class="options__item">
-								<input id="o_m-product3" class="options__input" type="radio" value="вначале старые" name="option1-review-product">
+								<input id="o_m-product3" class="options__input" type="radio" value="вначале старые" name="option1-review-product" />
 								<label for="o_m-product3" class="options__label"><span class="options__text">вначале старые</span></label>
 							</div>
 						</div>
@@ -55,24 +52,24 @@
 						<button id="reset-filter" type="button" class="popup__button filtmodal__button-filter_white filtmodal__button-filter">сбросить</button>
 					</div>
 				</div>
-				
+
 				<div data-submenu="2" class="filtmodal__submenu submenu-filter">
 					<div class="submenu-filter__top">
-						<button type="button" class="submenu-filter__back"><img src="@img/catalog/back-arrow.svg" alt="назад"></button>
+						<button type="button" class="submenu-filter__back"><img src="@img/catalog/back-arrow.svg" alt="назад" /></button>
 						<h4 class="filtmodal__title">По популярности</h4>
 					</div>
 					<div class="submenu-filter__list">
 						<div class="submenu-filter__body options">
 							<div class="options__item">
-								<input id="o_mf-defolt-product1" class="options__input" checked type="radio" value="по умолчанию" name="option2-review-product">
+								<input id="o_mf-defolt-product1" class="options__input" checked type="radio" value="по умолчанию" name="option2-review-product" />
 								<label for="o_mf-defolt-product1" class="options__label"><span class="options__text">по умолчанию</span></label>
 							</div>
 							<div class="options__item">
-								<input id="o_mf-defolt-product2" class="options__input" type="radio" value="самые хорошие" name="option2-review-product">
+								<input id="o_mf-defolt-product2" class="options__input" type="radio" value="самые хорошие" name="option2-review-product" />
 								<label for="o_mf-defolt-product2" class="options__label"><span class="options__text">самые хорошие</span></label>
 							</div>
 							<div class="options__item">
-								<input id="o_mf-defolt-product3" class="options__input" type="radio" value="самые плохие" name="option2-review-product">
+								<input id="o_mf-defolt-product3" class="options__input" type="radio" value="самые плохие" name="option2-review-product" />
 								<label for="o_mf-defolt-product3" class="options__label"><span class="options__text">самые плохие</span></label>
 							</div>
 						</div>
@@ -85,21 +82,21 @@
 
 				<div data-submenu="3" class="filtmodal__submenu submenu-filter">
 					<div class="submenu-filter__top">
-						<button type="button" class="submenu-filter__back"><img src="@img/catalog/back-arrow.svg" alt="назад"></button>
+						<button type="button" class="submenu-filter__back"><img src="@img/catalog/back-arrow.svg" alt="назад" /></button>
 						<h4 class="filtmodal__title">по рейтингу</h4>
 					</div>
 					<div class="submenu-filter__list">
 						<div class="submenu-filter__body options">
 							<div class="options__item">
-								<input id="om_product-raiting1" checked class="options__input" type="radio" value="по умолчанию" name="option3-review-product">
+								<input id="om_product-raiting1" checked class="options__input" type="radio" value="по умолчанию" name="option3-review-product" />
 								<label for="om_product-raiting1" class="options__label"><span class="options__text">по умолчанию</span></label>
 							</div>
 							<div class="options__item">
-								<input id="om_product-raiting2" class="options__input" type="radio" value="самые высокие" name="option3-review-product">
+								<input id="om_product-raiting2" class="options__input" type="radio" value="самые высокие" name="option3-review-product" />
 								<label for="om_product-raiting2" class="options__label"><span class="options__text">самые высокие</span></label>
 							</div>
 							<div class="options__item">
-								<input id="om_product-raiting3" class="options__input" type="radio" value="самые низкие" name="option3-review-product">
+								<input id="om_product-raiting3" class="options__input" type="radio" value="самые низкие" name="option3-review-product" />
 								<label for="om_product-raiting3" class="options__label"><span class="options__text">самые низкие</span></label>
 							</div>
 						</div>
@@ -114,11 +111,10 @@
 	</div>
 </div>
 
-
 <div id="product-review" aria-hidden="true" class="popup">
 	<div class="popup__wrapper">
 		<div class="popup__content">
-			<button data-close type="button" class="popup__close"><img src="@img/popup/close.svg" alt=""></button>
+			<button data-close type="button" class="popup__close"><img src="@img/popup/close.svg" alt="" /></button>
 			<div class="popup__body">
 				<div class="popup__reg-top">
 					<h4 class="popup__title">Написать отзыв о товаре</h4>
@@ -127,15 +123,15 @@
 					<div class="popup__form-item-group">
 						<div class="popup__form-item popup__form-item_fio-order">
 							<div class="popup__input-wrapper">
-								<input required id="fio" autocomplete="off" type="text" name="form[]" data-error="Ошибка" class="popup__input">
+								<input required id="fio" autocomplete="off" type="text" name="form[]" data-error="Ошибка" class="popup__input" />
 								<label for="fio" class="popup__label">фио</label>
 							</div>
 						</div>
 						<div class="popup__form-item">
 							<div class="popup__input-wrapper">
-								<input style="text-overflow: ellipsis;" id="number-order" autocomplete="off" type="text" name="form[]" data-error="Ошибка" class="popup__input input-submenu">
+								<input style="text-overflow: ellipsis" id="number-order" autocomplete="off" type="text" name="form[]" data-error="Ошибка" class="popup__input input-submenu" />
 								<label for="number-order" class="popup__label">Номер заказа</label>
-								<span class="popup__select-arrow"><img src="@img/rev-product/rev-number-sel.svg" alt=""></span>
+								<span class="popup__select-arrow"><img src="@img/rev-product/rev-number-sel.svg" alt="" /></span>
 							</div>
 							<ul class="popup__submenu">
 								<li class="popup__submenu-item">723456789</li>
@@ -149,9 +145,10 @@
 						<div class="popup__input-wrapper comment">
 							<textarea id="area-review" required class="comment__textarea" name="comment" maxlength="1200"></textarea>
 							<label for="area-review" class="popup__label textarea-big">напишите ваш отзыв*</label>
-							<p class="comment__text"><span class="comment__star">*</span>Отзыв содержит: 
+							<p class="comment__text">
+								<span class="comment__star">*</span>Отзыв содержит:
 								<span class="comment__number-symbols">0</span>
-								символов 
+								символов
 								<span class="comment__light-text">(максимальное количество 1200 символов)</span>
 							</p>
 						</div>
@@ -159,11 +156,10 @@
 					<div class="popup__form-item">
 						<p class="comment__text comment__text_photo">Прикрепить фотографию <span class="comment__light-text">(максимальное количество 20)</span></p>
 						<div class="popup__upload">
-							<div class="popup__img-upload" id="fileList">
-							</div>
+							<div class="popup__img-upload" id="fileList"></div>
 							<div class="popup__button-add">
-								<input type="file" id="fileElem" multiple accept="image/*" style="display:none" onchange="handleFiles(this.files)">
-								<button class="popup__img-add" id="fileSelect"><img src="@img/rev-product/rev-photo-add.svg" alt=""></button> 
+								<input type="file" id="fileElem" multiple accept="image/*" style="display: none" onchange="handleFiles(this.files)" />
+								<button class="popup__img-add" id="fileSelect"><img src="@img/rev-product/rev-photo-add.svg" alt="" /></button>
 							</div>
 						</div>
 					</div>
@@ -176,21 +172,18 @@
 	</div>
 </div>
 
-
 <!-- Оставить заявку на товар -->
 <div id="notify-product" aria-hidden="true" class="popup">
 	<div class="popup__wrapper">
 		<div class="popup__content">
-			<button data-close type="button" class="popup__close"><img src="@img/popup/close.svg" alt=""></button>
+			<button data-close type="button" class="popup__close"><img src="@img/popup/close.svg" alt="" /></button>
 			<div class="popup__body">
 				<h4 class="popup__title">сообщить о появлении</h4>
-				<p class="popup__text popup__text_notify">
-					Уважаемый покупатель! К сожалению, этого товара на данный момент нет в наличии. Для Вашего удобства мы можем сообщить о появлении данной позиции. Для этого достаточно указать адрес электронной почты, на который Вы желаете получить уведомление. Если Вы хотите получить уведомлении о появлении любой позиции в наличии для данного товара, просто поставьте галочку напротив опции «Сообщить о любой новой позиции».
-				</p>
+				<p class="popup__text popup__text_notify">Уважаемый покупатель! К сожалению, этого товара на данный момент нет в наличии. Для Вашего удобства мы можем сообщить о появлении данной позиции. Для этого достаточно указать адрес электронной почты, на который Вы желаете получить уведомление. Если Вы хотите получить уведомлении о появлении любой позиции в наличии для данного товара, просто поставьте галочку напротив опции «Сообщить о любой новой позиции».</p>
 				<form action="#" class="popup__form">
 					<div class="popup__form-item popup__form-item_notify">
 						<div class="popup__checkbox-row checkbox">
-							<input id="n-t_0" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+							<input id="n-t_0" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]" />
 							<label for="n-t_0" class="checkbox__label">
 								<div class="checkbox__body"></div>
 								<p class="checkbox__text">Сообщить о любой новой позиции по товару <span class="popup__product-name">Туалетная вода Chanel Chance Eau Vive</span></p>
@@ -210,7 +203,7 @@
 							<ul class="table-popup__body">
 								<li class="table-popup__row">
 									<div class="popup__checkbox checkbox">
-										<input id="n-t_1" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+										<input id="n-t_1" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]" />
 										<label for="n-t_1" class="checkbox__label">
 											<div class="checkbox__body"></div>
 										</label>
@@ -221,7 +214,7 @@
 								</li>
 								<li class="table-popup__row">
 									<div class="popup__checkbox checkbox">
-										<input id="n-t_2" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+										<input id="n-t_2" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]" />
 										<label for="n-t_2" class="checkbox__label">
 											<div class="checkbox__body"></div>
 										</label>
@@ -232,7 +225,7 @@
 								</li>
 								<li class="table-popup__row">
 									<div class="popup__checkbox checkbox">
-										<input id="n-t_3" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+										<input id="n-t_3" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]" />
 										<label for="n-t_3" class="checkbox__label">
 											<div class="checkbox__body"></div>
 										</label>
@@ -243,7 +236,7 @@
 								</li>
 								<li class="table-popup__row">
 									<div class="popup__checkbox checkbox">
-										<input id="n-t_4" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+										<input id="n-t_4" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]" />
 										<label for="n-t_4" class="checkbox__label">
 											<div class="checkbox__body"></div>
 										</label>
@@ -254,7 +247,7 @@
 								</li>
 								<li class="table-popup__row">
 									<div class="popup__checkbox checkbox">
-										<input id="n-t_5" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+										<input id="n-t_5" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]" />
 										<label for="n-t_5" class="checkbox__label">
 											<div class="checkbox__body"></div>
 										</label>
@@ -265,7 +258,7 @@
 								</li>
 								<li class="table-popup__row">
 									<div class="popup__checkbox checkbox">
-										<input id="n-t_6" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+										<input id="n-t_6" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]" />
 										<label for="n-t_6" class="checkbox__label">
 											<div class="checkbox__body"></div>
 										</label>
@@ -276,7 +269,7 @@
 								</li>
 								<li class="table-popup__row">
 									<div class="popup__checkbox checkbox">
-										<input id="n-t_7" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+										<input id="n-t_7" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]" />
 										<label for="n-t_7" class="checkbox__label">
 											<div class="checkbox__body"></div>
 										</label>
@@ -287,7 +280,7 @@
 								</li>
 								<li class="table-popup__row">
 									<div class="popup__checkbox checkbox">
-										<input id="n-t_8" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+										<input id="n-t_8" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]" />
 										<label for="n-t_8" class="checkbox__label">
 											<div class="checkbox__body"></div>
 										</label>
@@ -298,7 +291,7 @@
 								</li>
 								<li class="table-popup__row">
 									<div class="popup__checkbox checkbox">
-										<input id="n-t_9" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+										<input id="n-t_9" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]" />
 										<label for="n-t_9" class="checkbox__label">
 											<div class="checkbox__body"></div>
 										</label>
@@ -325,16 +318,15 @@
 	</div>
 </div>
 
-
 <!-- График цен продукта -->
 
 <div id="cost-product" aria-hidden="true" class="popup">
 	<div class="popup__wrapper">
 		<div class="popup__content">
-			<button data-close type="button" class="popup__close"><img src="@img/popup/close.svg" alt=""></button>
+			<button data-close type="button" class="popup__close"><img src="@img/popup/close.svg" alt="" /></button>
 			<div class="popup__body">
 				<h4 class="popup__title">динамика цен</h4>
-				<h2 class="otliv__title">Туалетная вода <span>Chanel</span> Chance Eau Vive (Шанель Шанс Эо Вив) </h2>
+				<h2 class="otliv__title">Туалетная вода <span>Chanel</span> Chance Eau Vive (Шанель Шанс Эо Вив)</h2>
 				<div class="popup__graph graph-popup">
 					<div class="graph-popup__tabs">
 						<nav class="tabs__navigation">
@@ -344,13 +336,13 @@
 						</nav>
 						<div class="tabs__content graph-content">
 							<div data-submenu="graph1" class="tabs__body _sub-menu-open">
-								<div style="height: 500px;" id="chartContainer01"></div>
+								<div style="height: 500px" id="chartContainer01"></div>
 							</div>
 							<div data-submenu="graph2" class="tabs__body">
-								<div  style="height: 500px;" id="chartContainer02"></div>
+								<div style="height: 500px" id="chartContainer02"></div>
 							</div>
 							<div data-submenu="graph3" class="tabs__body">
-								<div  style="height: 500px;" id="chartContainer03"></div>
+								<div style="height: 500px" id="chartContainer03"></div>
 							</div>
 						</div>
 					</div>

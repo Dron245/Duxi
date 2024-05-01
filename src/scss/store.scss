@@ -46,20 +46,18 @@
 		.store & {
 			position: initial;
 			display: initial;
-			width: 110px;
+			// width: 110px;
 			height: initial;
 			background-color: initial;
 			border-radius: initial;
 			flex: 0 0 110px;
 			@media (max-width:$tablet){
-				flex-basis: 100px;
+				flex: 0 0 100px;
 			}
-			@media (max-width:$mobileSmall){
-				 flex-basis: 70px; 
+			@media (max-width:$mobile){
+				@include adaptiveValue("flex-basis", 100, 50,0,768,320); 
 			}
-			@media (max-width: em(360)){
-				flex-basis: 50px;
-			}
+			
 			img {
 				width: 100%;
 				height: auto;

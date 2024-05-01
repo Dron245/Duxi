@@ -429,7 +429,12 @@ body::after {
 		}
 		#product-review & {
 			@media (max-width:$mobile){
-				 @include adaptiveValue("font-size", 37, 20,0,768,320); 
+				//  @include adaptiveValue("font-size", 37, 20,0,768,320); 
+			}
+		}
+		#product-review .comment textarea:focus + & {
+			@media (max-width:$mobileSmall){
+				 white-space: nowrap; 
 			}
 		}
 	}
@@ -813,6 +818,12 @@ body::after {
 		border: 1px solid #C7C7C7;
 		background: #FAFAFA;
 		height: 110px;
+		@media (max-width:$tablet){
+			font-size: 20px;
+		}
+		@media (max-width:$mobile){
+			 @include adaptiveValue("font-size", 28, 13,0,768,320); 
+		}
 		&:not(:last-child) {margin-bottom: toRem(5);}
 		#product-review & {
 			height: 176px;

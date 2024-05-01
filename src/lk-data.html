@@ -1,8 +1,6 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
-	@@include('html/_head.htm',{
-	"title":"Персональные данные"
-	})
+	@@include('html/_head.htm',{ "title":"Персональные данные" })
 	<body class="lk-body">
 		<div class="wrapper">
 			@@include('html/_header-user.htm',{})
@@ -40,28 +38,28 @@
 										<div class="personal__wrapper">
 											<div class="personal__item">
 												<label for="surname" class="form-calc__label">Фамилия</label>
-												<input id="surname" autocomplete="off" value="Драгончук" type="text" name="form[]" data-error="Ошибка" placeholder="" class="form-calc__input input">
+												<input id="surname" autocomplete="off" value="Драгончук" type="text" name="form[]" data-error="Ошибка" placeholder="" class="form-calc__input input" />
 											</div>
 										</div>
 										<div class="personal__wrapper">
 											<div class="personal__item">
 												<label for="name" class="form-calc__label">Имя</label>
-												<input id="name" autocomplete="off" value="Светлана" type="text" name="form[]" data-error="Ошибка" placeholder="" class="form-calc__input input">
+												<input id="name" autocomplete="off" value="Светлана" type="text" name="form[]" data-error="Ошибка" placeholder="" class="form-calc__input input" />
 											</div>
 										</div>
 										<div class="personal__wrapper">
 											<div class="personal__item">
 												<label for="midle-name" class="form-calc__label">Отчество</label>
-												<input id="midle-name" autocomplete="off" value="Викторовна" type="text" name="form[]" data-error="Ошибка" placeholder="" class="form-calc__input input">
+												<input id="midle-name" autocomplete="off" value="Викторовна" type="text" name="form[]" data-error="Ошибка" placeholder="" class="form-calc__input input" />
 											</div>
 										</div>
 										<div class="personal__wrapper personal__wrapper_tel">
 											<div class="personal__item">
 												<label for="phone-lk" class="form-calc__label">Телефон</label>
 												<div class="personal__input-wrapper">
-													<input id="phone-lk" autocomplete="off" value="+7 963 555 55 55" type="text" name="form[]" data-error="Ошибка" placeholder="" class="form-calc__input form-calc__input_phone input">
+													<input id="phone-lk" autocomplete="off" value="+7 963 555 55 55" type="text" name="form[]" data-error="Ошибка" placeholder="" class="form-calc__input form-calc__input_phone input" />
 													<div class="personal__galery">
-														<div class="personal__img personal__img_confirmed"><img src="@img/lk/confirmed.svg" alt="телефон подтверждён"></div>
+														<div class="personal__img personal__img_confirmed"><img src="@img/lk/confirmed.svg" alt="телефон подтверждён" /></div>
 													</div>
 												</div>
 											</div>
@@ -72,17 +70,17 @@
 												<label for="lk-birthday" class="form-calc__label">дата рождения</label>
 												<div class="personal__input-wrapper">
 													<div class="personal__input-border">
-														<input  id="lk-birthday" autocomplete="off" value="19.05.1990" type="text" name="form[]" data-error="Ошибка" placeholder="" class="form-calc__input form-calc__input_city input">
+														<input id="lk-birthday" autocomplete="off" value="19.05.1990" type="text" name="form[]" data-error="Ошибка" placeholder="" class="form-calc__input form-calc__input_city input" />
 													</div>
 													<div class="personal__galery">
 														<span data-tippy-content-birthday class="personal__img">
-															<img class="calendar-help" src="@img/lk/tippy.svg" alt="подсказка">
+															<img class="calendar-help" src="@img/lk/tippy.svg" alt="подсказка" />
 														</span>
 													</div>
 												</div>
 											</div>
 											<button data-popup="#add-document" class="personal__actions personal__actions_add bottom-calc__button">
-												<img class="personal__add-img" src="@img/lk/add-doc.svg" alt="">
+												<img class="personal__add-img" src="@img/lk/add-doc.svg" alt="" />
 												<span class="personal__add-doc">Прикрепить документ</span>
 												<span class="personal__add-doc-confirmed">документ подтверждён</span>
 												<span class="personal__add-doc-wait">Документ загружен, ожидает модернизации </span>
@@ -90,7 +88,7 @@
 										</div>
 										<div class="popup__form-item">
 											<div class="popup__input-wrap">
-												<input id="vk-page" required autocomplete="off" type="text" name="form[]" data-error="Ошибка" class="popup__input">
+												<input id="vk-page" required autocomplete="off" type="text" name="form[]" data-error="Ошибка" class="popup__input" />
 												<label for="vk-page" class="popup__label">страница вконтакте</label>
 											</div>
 											<span class="bottom-calc__button">Введите ссылку на ваш профиль ВК</span>
@@ -98,7 +96,7 @@
 										<div class="personal__wrapper">
 											<div class="personal__item">
 												<label for="email-lk" class="form-calc__label">E-MAIL</label>
-												<input id="email-lk" autocomplete="off" value="lounasilver@gmail.com" type="text" name="form[]" data-error="Ошибка" placeholder="" class="form-calc__input input">
+												<input id="email-lk" autocomplete="off" value="lounasilver@gmail.com" type="text" name="form[]" data-error="Ошибка" placeholder="" class="form-calc__input input" />
 											</div>
 										</div>
 										<div class="personal__wrapper personal__wrapper_button">
@@ -113,10 +111,10 @@
 											<p class="lk-address__text">Москва, Проспект Мира, дом Кефира, 16 111375, текст, адрес, корпус, строение, поселок, мусорка и прочее</p>
 											<div class="lk-address__actions">
 												<button data-popup="#change-delivery-address" type="button" class="lk-address__button">
-													<img src="@img/lk/redactors.svg" alt="изменить">
+													<img src="@img/lk/redactors.svg" alt="изменить" />
 												</button>
 												<button type="button" class="lk-address__button lk-address__button-delete">
-													<img src="@img/lk/delete.svg" alt="удалить">
+													<img src="@img/lk/delete.svg" alt="удалить" />
 												</button>
 											</div>
 										</div>
@@ -124,17 +122,17 @@
 											<p class="lk-address__text">Москва, Проспект Мира, дом Кефира, 26 111375, текст, адрес, корпус, строение, поселок, мусорка и прочее</p>
 											<div class="lk-address__actions">
 												<button data-popup="#change-delivery-address" type="button" class="lk-address__button">
-													<img src="@img/lk/redactors.svg" alt="изменить">
+													<img src="@img/lk/redactors.svg" alt="изменить" />
 												</button>
 												<button type="button" class="lk-address__button lk-address__button-delete">
-													<img src="@img/lk/delete.svg" alt="удалить">
+													<img src="@img/lk/delete.svg" alt="удалить" />
 												</button>
 											</div>
 										</div>
 									</div>
 									<div class="lk-address__item lk-address__item_add">
 										<button data-popup="#add-address" type="button" class="address__button-address">
-											<img src="@img/popup/plus-add-list.svg" alt="">
+											<img src="@img/popup/plus-add-list.svg" alt="" />
 											<span class="list-popup__button-text">Добавить новый адрес</span>
 										</button>
 									</div>
@@ -145,7 +143,7 @@
 										<div class="lk-notify__item">
 											<div class="out__checkbox">
 												<label for="sms-current-status-order" class="switch">
-													<input checked class="checkbox" type="checkbox" id="sms-current-status-order">
+													<input checked class="checkbox" type="checkbox" id="sms-current-status-order" />
 													<span class="slider round"></span>
 												</label>
 												<p class="out__text">Получать SMS-уведомления о текущем статусе исполнения моего заказа</p>
@@ -154,7 +152,7 @@
 										<div class="lk-notify__item">
 											<div class="out__checkbox">
 												<label for="sms-discount" class="switch">
-													<input class="checkbox" type="checkbox" id="sms-discount">
+													<input class="checkbox" type="checkbox" id="sms-discount" />
 													<span class="slider round"></span>
 												</label>
 												<p class="out__text">Получать SMS-уведомления о скидках (не чаще 3-х раз в год)</p>
@@ -163,7 +161,7 @@
 										<div class="lk-notify__item">
 											<div class="out__checkbox">
 												<label for="email-current-status-order" class="switch">
-													<input checked class="checkbox" type="checkbox" id="email-current-status-order">
+													<input checked class="checkbox" type="checkbox" id="email-current-status-order" />
 													<span class="slider round"></span>
 												</label>
 												<p class="out__text">Получать уведомления по электронной почте о текущем статусе исполнения моего заказа</p>
@@ -172,7 +170,7 @@
 										<div class="lk-notify__item">
 											<div class="out__checkbox">
 												<label for="email-bonus" class="switch">
-													<input class="checkbox" type="checkbox" id="email-bonus">
+													<input class="checkbox" type="checkbox" id="email-bonus" />
 													<span class="slider round"></span>
 												</label>
 												<p class="out__text">Получать уведомления по электронной почте о движении денежных средств на бонусном счёте</p>
@@ -181,7 +179,7 @@
 										<div class="lk-notify__item">
 											<div class="out__checkbox">
 												<label for="email-discount" class="switch">
-													<input class="checkbox" type="checkbox" id="email-discount">
+													<input class="checkbox" type="checkbox" id="email-discount" />
 													<span class="slider round"></span>
 												</label>
 												<p class="out__text">Получать уведомления по электронной почте о скидках и новых акциях (не чаще 3-х раз в год)</p>
@@ -196,15 +194,33 @@
 						</div>
 						<aside class="lk__navigation navigation-lk">
 							<ul class="navigation-lk__list">
-								<li class="navigation-lk__item"><a class="navigation-lk__link navigation-lk__link_active" href="lk-data.html"><span>Персональные данные</span></a></li>
-								<li class="navigation-lk__item"><a class="navigation-lk__link" href="lk-discount.html"><span></span>Персональная скидка</a></li>
-								<li class="navigation-lk__item"><a class="navigation-lk__link" href="lk-history.html"><span>История заказов</span></a></li>
-								<li class="navigation-lk__item"><a class="navigation-lk__link" href="lk-bonus.html"><span>БОНУСНЫЙ СЧЕТ</span></a></li>
-								<li class="navigation-lk__item"><a class="navigation-lk__link" href="lk-favorites.html"><span>ИЗБРАННОЕ</span></a></li>
-								<li class="navigation-lk__item"><a class="navigation-lk__link" href="lk-wait.html"><span>Ожидание поступления</span></a></li>
-								<li class="navigation-lk__item"><a class="navigation-lk__link" href="lk-list.html"><span>МОИ СПИСКИ</span></a></li>
-								<li class="navigation-lk__item"><a class="navigation-lk__link" href="lk.sertificate.html"><span>электронные сертификаты</span></a></li>
-								<li class="navigation-lk__item"><a class="navigation-lk__link" href="lk.reviews.html"><span>мои отзывы</span></a></li>
+								<li class="navigation-lk__item">
+									<a class="navigation-lk__link navigation-lk__link_active" href="lk-data.html"><span>Персональные данные</span></a>
+								</li>
+								<li class="navigation-lk__item">
+									<a class="navigation-lk__link" href="lk-discount.html"><span></span>Персональная скидка</a>
+								</li>
+								<li class="navigation-lk__item">
+									<a class="navigation-lk__link" href="lk-history.html"><span>История заказов</span></a>
+								</li>
+								<li class="navigation-lk__item">
+									<a class="navigation-lk__link" href="lk-bonus.html"><span>БОНУСНЫЙ СЧЕТ</span></a>
+								</li>
+								<li class="navigation-lk__item">
+									<a class="navigation-lk__link" href="lk-favorites.html"><span>ИЗБРАННОЕ</span></a>
+								</li>
+								<li class="navigation-lk__item">
+									<a class="navigation-lk__link" href="lk-wait.html"><span>Ожидание поступления</span></a>
+								</li>
+								<li class="navigation-lk__item">
+									<a class="navigation-lk__link" href="lk-list.html"><span>МОИ СПИСКИ</span></a>
+								</li>
+								<li class="navigation-lk__item">
+									<a class="navigation-lk__link" href="lk.sertificate.html"><span>электронные сертификаты</span></a>
+								</li>
+								<li class="navigation-lk__item">
+									<a class="navigation-lk__link" href="lk.reviews.html"><span>мои отзывы</span></a>
+								</li>
 							</ul>
 						</aside>
 					</div>
@@ -212,9 +228,6 @@
 			</main>
 			@@include('html/_footer.htm',{})
 		</div>
-		@@include('html/_popup.htm',{})
-		@@include('html/_popup-lk.htm',{})
-		@@include('html/_js.htm',{})
-		@@include('html/_add-photo.htm',{})
+		@@include('html/_popup.htm',{}) @@include('html/_popup-lk.htm',{}) @@include('html/_js.htm',{}) @@include('html/_add-photo.htm',{})
 	</body>
 </html>

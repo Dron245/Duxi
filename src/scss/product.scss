@@ -3,7 +3,9 @@
 	column-gap: toRem(20);
 	row-gap: 40px;
 	grid-template-columns: 40.909091% 57%; /* 630/1540 */
-	// & > * { outline: 1px solid red;}
+	@media (max-width:$tablet){
+		grid-template-columns: 48.87% 48.87%;
+	}
 	.otliv__wrap_thumb {
 		flex: 0 0 11.865%;
 	}
@@ -66,6 +68,9 @@
 
 	&__video-review {
 		margin-bottom: 40px;
+		.center-button {
+			display: none;
+		}
 		@media (max-width:$mobile){
 			 margin-right: -15px; 
 		}
@@ -87,15 +92,14 @@
 		.otlvant-review__top {
 			.otlvant-review__title {
 				display: block;
-				@media (max-width:$tablet){
-					// flex: 0 0 100%;
-				}
+				
 				@media (max-width:$mobile){
+					text-wrap: balance;
 					 @include adaptiveValue("font-size", 50, 22,0,768,320); 
 				}
 			}
 			.otlvant-review__button {
-				
+				.guest & {display: none;}
 				display: block;
 				@media (max-width:$mobile){
 					 width: 70%;
@@ -108,9 +112,6 @@
 			}
 			@media (max-width:$mobileSmall){
 				 row-gap: 20px; 
-			}
-			& > * {
-				// display: block;
 			}
 		}
 	}
@@ -186,7 +187,7 @@
 			font-size: toRem(22);
 		}
 		@media (max-width:$mobile){
-			 @include adaptiveValue("font-size", 28, 15,0,768,320); 
+			 @include adaptiveValue("font-size", 35, 15,0,768,320); 
 		}
 	}
 
@@ -196,7 +197,7 @@
 			font-size: toRem(20);
 		}
 		@media (max-width:$mobile){
-			 @include adaptiveValue("font-size", 20, 13,0,768,320); 
+			 @include adaptiveValue("font-size", 28, 13,0,768,320); 
 		}
 	}
 }

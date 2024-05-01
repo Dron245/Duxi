@@ -265,19 +265,13 @@
 		.menu-open & {
 			border-radius: 16px;
 		}
-		@media (any-hover: hover) {
-			&:hover {
-				.header & .header-center__input {
-					border-radius: 16px 16px 0 0;
-				}
-				& .dropmenu {
-					transition: opacity 0.3s;
-					opacity: 1;
-					visibility: visible;
-					z-index: 4;
-				}
+			& input:focus ~ .dropmenu {
+				transition: opacity 0.3s;
+				opacity: 1;
+				visibility: visible;
+				z-index: 4;
 			}
-		}
+			
 		@media (max-width: $tablet) {
 			width: 320px;
 			overflow: hidden;
@@ -299,6 +293,11 @@
 		font-style: italic;
 		color: $tekst-zagolovok-ne-aktivnyy;
 		background-color: #fffdfe;
+		.header & {
+			&:focus {
+				border-radius: 16px 16px 0 0;
+			}
+		}
 		.brands & {
 			background: #fef3f6;
 		}

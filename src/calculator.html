@@ -1,8 +1,6 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
-	@@include('html/_head.htm',{
-	"title":"Калькулятор доставки"
-	})
+	@@include('html/_head.htm',{ "title":"Калькулятор доставки" })
 	<body>
 		<div class="wrapper">
 			@@include('html/_header-user.htm',{})
@@ -32,12 +30,12 @@
 											<div class="form-calc__wrapper">
 												<div class="form-calc__item">
 													<label for="city-deliv-russia" class="form-calc__label">Город, населенный пункт</label>
-													<input id="city-deliv-russia" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="введите город" class="form-calc__input form-calc__input_city input">
+													<input id="city-deliv-russia" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="введите город" class="form-calc__input form-calc__input_city input" />
 												</div>
 												<div class="form-calc__item">
 													<label for="cost-deliv-russia" class="form-calc__label">предполагаемая сумма покупки</label>
 													<div class="form-calc__input-desc">
-														<input id="cost-deliv-russia" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Введите сумму в рублях" class="form-calc__input form-calc__input_cost input">
+														<input id="cost-deliv-russia" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Введите сумму в рублях" class="form-calc__input form-calc__input_cost input" />
 														<span class="form-calc__signature">руб.</span>
 													</div>
 												</div>
@@ -57,7 +55,7 @@
 										</div>
 									</div>
 									<div class="calculation__img">
-										<img src="@img/calculator/russia.png" alt="РОССИЯ">
+										<img src="@img/calculator/russia.png" alt="РОССИЯ" />
 									</div>
 								</div>
 								<div class="calculation__bottom bottom-calc">
@@ -70,13 +68,15 @@
 											<div class="bottom-calc__wrapper">
 												<div class="bottom-calc__subitem">
 													<div class="bottom-calc__body">
-														<p class="bottom-calc__subtext">Заказ будет доставлен Вам курьером на дом. <br>После того, как....</p>
+														<p class="bottom-calc__subtext">Заказ будет доставлен Вам курьером на дом. <br />После того, как....</p>
 														<button data-popup="#courier" class="bottom-calc__button">Подробнее</button>
-														<p class="bottom-calc__subtext">Дата доставки: <span class="bottom-calc__time"><span class="delivery__day">08.09</span>.2024 (<span class="delivery__time">10:00-18:00</span>)</span></p>
+														<p class="bottom-calc__subtext">
+															Дата доставки: <span class="bottom-calc__time"><span class="delivery__day">08.09</span>.2024 (<span class="delivery__time">10:00-18:00</span>)</span>
+														</p>
 														<button data-popup="#time-delivery" class="bottom-calc__button">изменить</button>
 													</div>
 													<div class="bottom-calc__img bottom-calc__img_deliv">
-														<img class="" src="@img/cart/main-cart/method/currier.png" alt="Доставка">
+														<img class="" src="@img/cart/main-cart/method/currier.png" alt="Доставка" />
 													</div>
 												</div>
 												<p class="bottom-calc__correction">Оплата заказа будет произведена курьеру в день доставки заказа</p>
@@ -95,7 +95,7 @@
 														<button type="button" data-popup="#money" class="bottom-calc__button">Подробнее</button>
 													</div>
 													<div class="bottom-calc__img bottom-calc__img_cost">
-														<img class="" src="@img/cart/main-cart/pay/valet.svg" alt="Кошелёк">
+														<img class="" src="@img/cart/main-cart/pay/valet.svg" alt="Кошелёк" />
 													</div>
 												</div>
 											</div>
@@ -109,13 +109,15 @@
 										<form action="#" method="get" class="calculation__form form-calc">
 											<div class="form-calc__wrapper">
 												<div class="form-calc__item">
-												<label for="city-deliv-belarus" class="form-calc__label">Город, населенный пункт</label>
-													<input id="city-deliv-belarus" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="введите город" class="form-calc__input form-calc__input_city input">
+													<label for="city-deliv-belarus" class="form-calc__label">Город, населенный пункт</label>
+													<input id="city-deliv-belarus" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="введите город" class="form-calc__input form-calc__input_city input" />
 												</div>
 												<div class="form-calc__item">
 													<label for="cost-deliv-belarus" class="form-calc__label">предполагаемая сумма покупки</label>
-													<input inputmode="numeric" id="cost-deliv-belarus" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Введите сумму в рублях" class="form-calc__input form-calc__input_cost input">
-													<span class="form-calc__signature">руб.</span>
+													<div class="form-calc__input-desc">
+														<input inputmode="numeric" id="cost-deliv-belarus" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Введите сумму в рублях" class="form-calc__input form-calc__input_cost input" />
+														<span class="form-calc__signature">руб.</span>
+													</div>
 												</div>
 											</div>
 											<button type="button" class="form-calc__link button-actions">РАССЧИТАТЬ</button>
@@ -133,7 +135,7 @@
 										</div>
 									</div>
 									<div class="calculation__img">
-										<img src="@img/calculator/belarus.png" alt="БЕЛАРУСЬ">
+										<img src="@img/calculator/belarus.png" alt="БЕЛАРУСЬ" />
 									</div>
 								</div>
 								<div class="calculation__bottom bottom-calc">
@@ -146,13 +148,15 @@
 											<div class="bottom-calc__wrapper">
 												<div class="bottom-calc__subitem">
 													<div class="bottom-calc__body">
-														<p class="bottom-calc__subtext">Заказ будет доставлен Вам курьером на дом. <br>После того, как....</p>
+														<p class="bottom-calc__subtext">Заказ будет доставлен Вам курьером на дом. <br />После того, как....</p>
 														<button data-popup="#courier" class="bottom-calc__button">Подробнее</button>
-														<p class="bottom-calc__subtext">Дата доставки: <span class="bottom-calc__time"><span class="delivery__day">08.09</span>.2024 (<span class="delivery__time">10:00-18:00</span>)</span></p>
+														<p class="bottom-calc__subtext">
+															Дата доставки: <span class="bottom-calc__time"><span class="delivery__day">08.09</span>.2024 (<span class="delivery__time">10:00-18:00</span>)</span>
+														</p>
 														<button data-popup="#time-delivery" class="bottom-calc__button">изменить</button>
 													</div>
 													<div class="bottom-calc__img bottom-calc__img_deliv">
-														<img class="" src="@img/cart/main-cart/method/currier.png" alt="Доставка">
+														<img class="" src="@img/cart/main-cart/method/currier.png" alt="Доставка" />
 													</div>
 												</div>
 												<p class="bottom-calc__correction">Оплата заказа будет произведена курьеру в день доставки заказа</p>
@@ -171,7 +175,7 @@
 														<button type="button" data-popup="#money" class="bottom-calc__button">Подробнее</button>
 													</div>
 													<div class="bottom-calc__img bottom-calc__img_cost">
-														<img class="" src="@img/cart/main-cart/pay/valet.svg" alt="Кошелёк">
+														<img class="" src="@img/cart/main-cart/pay/valet.svg" alt="Кошелёк" />
 													</div>
 												</div>
 											</div>
@@ -185,13 +189,15 @@
 										<form action="#" method="get" class="calculation__form form-calc">
 											<div class="form-calc__wrapper">
 												<div class="form-calc__item">
-												<label for="city-deliv-kazahstan" class="form-calc__label">Город, населенный пункт</label>
-													<input id="city-deliv-kazahstan" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="введите город" class="form-calc__input form-calc__input_city input">
+													<label for="city-deliv-kazahstan" class="form-calc__label">Город, населенный пункт</label>
+													<input id="city-deliv-kazahstan" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="введите город" class="form-calc__input form-calc__input_city input" />
 												</div>
 												<div class="form-calc__item">
 													<label for="cost-deliv-kazahstan" class="form-calc__label">предполагаемая сумма покупки</label>
-													<input id="cost-deliv-kazahstan" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Введите сумму в рублях" class="form-calc__input form-calc__input_cost input">
-													<span class="form-calc__signature">руб.</span>
+													<div class="form-calc__input-desc">
+														<input id="cost-deliv-kazahstan" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Введите сумму в рублях" class="form-calc__input form-calc__input_cost input" />
+														<span class="form-calc__signature">руб.</span>
+													</div>
 												</div>
 											</div>
 											<button type="button" class="form-calc__link button-actions">РАССЧИТАТЬ</button>
@@ -209,7 +215,7 @@
 										</div>
 									</div>
 									<div class="calculation__img">
-										<img src="@img/calculator/kazahstan.png" alt="Казахстан">
+										<img src="@img/calculator/kazahstan.png" alt="Казахстан" />
 									</div>
 								</div>
 								<div class="calculation__bottom bottom-calc">
@@ -222,13 +228,15 @@
 											<div class="bottom-calc__wrapper">
 												<div class="bottom-calc__subitem">
 													<div class="bottom-calc__body">
-														<p class="bottom-calc__subtext">Заказ будет доставлен Вам курьером на дом. <br>После того, как....</p>
+														<p class="bottom-calc__subtext">Заказ будет доставлен Вам курьером на дом. <br />После того, как....</p>
 														<button data-popup="#courier" class="bottom-calc__button">Подробнее</button>
-														<p class="bottom-calc__subtext">Дата доставки: <span class="bottom-calc__time"><span class="delivery__day">08.09</span>.2024 (<span class="delivery__time">10:00-18:00</span>)</span></p>
+														<p class="bottom-calc__subtext">
+															Дата доставки: <span class="bottom-calc__time"><span class="delivery__day">08.09</span>.2024 (<span class="delivery__time">10:00-18:00</span>)</span>
+														</p>
 														<button data-popup="#time-delivery" class="bottom-calc__button">изменить</button>
 													</div>
 													<div class="bottom-calc__img bottom-calc__img_deliv">
-														<img class="" src="@img/cart/main-cart/method/currier.png" alt="Доставка">
+														<img class="" src="@img/cart/main-cart/method/currier.png" alt="Доставка" />
 													</div>
 												</div>
 												<p class="bottom-calc__correction">Оплата заказа будет произведена курьеру в день доставки заказа</p>
@@ -247,7 +255,7 @@
 														<button type="button" data-popup="#money" class="bottom-calc__button">Подробнее</button>
 													</div>
 													<div class="bottom-calc__img bottom-calc__img_cost">
-														<img class="" src="@img/cart/main-cart/pay/valet.svg" alt="Кошелёк">
+														<img class="" src="@img/cart/main-cart/pay/valet.svg" alt="Кошелёк" />
 													</div>
 												</div>
 											</div>
@@ -261,8 +269,6 @@
 			</main>
 			@@include('html/_footer.htm',{})
 		</div>
-		@@include('html/_popup.htm',{})
-		@@include('html/_popup-cart.htm',{})
-		@@include('html/_js.htm',{})
+		@@include('html/_popup.htm',{}) @@include('html/_popup-cart.htm',{}) @@include('html/_js.htm',{})
 	</body>
 </html>

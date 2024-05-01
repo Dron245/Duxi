@@ -1,29 +1,26 @@
 <div id="popup-vhod" aria-hidden="true" class="popup">
 	<div class="popup__wrapper">
 		<div class="popup__content">
-			<button data-close type="button" class="popup__close"><img src="@img/popup/close.svg" alt=""></button>
+			<button data-close type="button" class="popup__close"><img src="@img/popup/close.svg" alt="" /></button>
 			<div class="popup__body">
 				<h4 class="popup__title">вход</h4>
 				<form method="post" action="#" class="popup__form">
 					<div class="popup__form-item">
 						<div class="popup__input-wrap">
-							<input id="01-vhod" required autocomplete="off" type="email" name="form[]" data-error="Ошибка"
-								class="popup__input">
+							<input id="01-vhod" required autocomplete="off" type="email" name="form[]" data-error="Ошибка" class="popup__input" />
 							<label for="01-vhod" class="popup__label">E-mail</label>
 						</div>
-						<button data-popup="#vhod-tel" type="button" class="popup__mini-button">Войти по номеру
-							телефона</button>
+						<button data-popup="#vhod-tel" type="button" class="popup__mini-button">Войти по номеру телефона</button>
 					</div>
 					<div class="popup__form-item">
 						<div class="popup__input-wrapper">
 							<div class="popup__input-vhod">
-								<input id="02-vhod" required autocomplete="off" type="password" name="form[]"
-									data-error="Ошибка" class="popup__input">
+								<input id="02-vhod" required autocomplete="off" type="password" name="form[]" data-error="Ошибка" class="popup__input" />
 								<label for="02-vhod" class="popup__label">пароль</label>
 							</div>
 							<button type="button" class="popup__img-pasword">
-								<img class="popup-img-toggle popup__img-v" src="@img/popup/pasword-v.svg" alt="">
-								<img class="popup-img-toggle popup__img-nv" src="@img/popup/pasword-nv.svg" alt="">
+								<img class="popup-img-toggle popup__img-v" src="@img/popup/pasword-v.svg" alt="" />
+								<img class="popup-img-toggle popup__img-nv" src="@img/popup/pasword-nv.svg" alt="" />
 							</button>
 						</div>
 						<button data-popup="#sbros-pasword" type="button" class="popup__mini-button">Забыли пароль?</button>
@@ -43,19 +40,17 @@
 <div id="vhod-tel" aria-hidden="true" class="popup">
 	<div class="popup__wrapper">
 		<div class="popup__content">
-			<button data-close type="button" class="popup__close"><img src="@img/popup/close.svg" alt=""></button>
+			<button data-close type="button" class="popup__close"><img src="@img/popup/close.svg" alt="" /></button>
 			<div class="popup__body">
 				<h4 class="popup__title">войти по номеру</h4>
 				<form method="post" action="#" class="popup__form">
 					<div class="popup__form-item">
-						<input id="vhod-tel-01" required autocomplete="off" type="tel" name="form[]" data-error="Ошибка"
-							class="popup__input phone-popup">
+						<input id="vhod-tel-01" required autocomplete="off" type="tel" name="form[]" data-error="Ошибка" class="popup__input phone-popup" />
 						<label for="vhod-tel-01" class="popup__label">ВВЕДИТЕ НОМЕР ТЕЛЕФОНА</label>
 					</div>
 				</form>
 				<div class="popup__form-item">
-					<button data-popup="#vhod-tel-vvod" id="btn-code" type="submit" class="popup__button">отправить
-						код</button>
+					<button data-popup="#vhod-tel-vvod" id="btn-code" type="submit" class="popup__button">отправить код</button>
 				</div>
 			</div>
 		</div>
@@ -65,38 +60,28 @@
 <div id="vhod-tel-vvod" aria-hidden="true" class="popup">
 	<div class="popup__wrapper">
 		<div class="popup__content">
-			<button data-close type="button" class="popup__close"><img src="@img/popup/close.svg" alt=""></button>
+			<button data-close type="button" class="popup__close"><img src="@img/popup/close.svg" alt="" /></button>
 			<div class="popup__body">
 				<h4 class="popup__title">войти по номеру</h4>
 				<form method="post" action="#" class="popup__form">
 					<div class="popup__form-item">
-						<input disabled autocomplete="off" type="tel" name="form[]" data-error="Ошибка" class="popup__input phone-popup-code">
+						<input disabled autocomplete="off" type="tel" name="form[]" data-error="Ошибка" class="popup__input phone-popup-code" />
 						<!-- <span class="popup__label">вход по номеру телефона</span> -->
 					</div>
 				</form>
 				<div class="popup__form-item">
-					<p class="popup__text">Push-уведомление сформировано и будет доставлено в течение 1мин.
-						Если сообщение не придет, посмотрите раздел уведомления в приложении.
-					</p>
+					<p class="popup__text">Push-уведомление сформировано и будет доставлено в течение 1мин. Если сообщение не придет, посмотрите раздел уведомления в приложении.</p>
 					<form method="post" action="#" class="popup__entry">
 						<p class="popup__title-entry-tel">введите код из push-уведомления</p>
 						<div class="popup__input-wrapper-tel">
-							<input maxlength="1" inputmode="numeric"  min="0" max="9"  required id="pincode1" autocomplete="off" type="text"
-								class="popup__entry-vhod">
-							<input maxlength="1" inputmode="numeric"  min="0" max="9"  required id="pincode2" autocomplete="off" type="text"
-								class="popup__entry-vhod">
-							<input maxlength="1" inputmode="numeric"  min="0" max="9"  required id="pincode3" autocomplete="off" type="text"
-								class="popup__entry-vhod">
-							<input maxlength="1" inputmode="numeric"  min="0" max="9"  required id="pincode4" autocomplete="off" type="text"
-								class="popup__entry-vhod">
-							<input maxlength="1" inputmode="numeric"  min="0" max="9"  required id="pincode5" autocomplete="off" type="text"
-								class="popup__entry-vhod">
-							<input maxlength="1" inputmode="numeric"  min="0" max="9"  required id="pincode6" autocomplete="off" type="text"
-								class="popup__entry-vhod">
-							<input maxlength="1" inputmode="numeric"  min="0" max="9"  required id="pincode7" autocomplete="off" type="text"
-								class="popup__entry-vhod">
-							<input maxlength="1" inputmode="numeric"  min="0" max="9"  required id="pincode8" autocomplete="off" type="text"
-								class="popup__entry-vhod">
+							<input maxlength="1" inputmode="numeric" min="0" max="9" required id="pincode1" autocomplete="off" type="text" class="popup__entry-vhod" />
+							<input maxlength="1" inputmode="numeric" min="0" max="9" required id="pincode2" autocomplete="off" type="text" class="popup__entry-vhod" />
+							<input maxlength="1" inputmode="numeric" min="0" max="9" required id="pincode3" autocomplete="off" type="text" class="popup__entry-vhod" />
+							<input maxlength="1" inputmode="numeric" min="0" max="9" required id="pincode4" autocomplete="off" type="text" class="popup__entry-vhod" />
+							<input maxlength="1" inputmode="numeric" min="0" max="9" required id="pincode5" autocomplete="off" type="text" class="popup__entry-vhod" />
+							<input maxlength="1" inputmode="numeric" min="0" max="9" required id="pincode6" autocomplete="off" type="text" class="popup__entry-vhod" />
+							<input maxlength="1" inputmode="numeric" min="0" max="9" required id="pincode7" autocomplete="off" type="text" class="popup__entry-vhod" />
+							<input maxlength="1" inputmode="numeric" min="0" max="9" required id="pincode8" autocomplete="off" type="text" class="popup__entry-vhod" />
 						</div>
 					</form>
 				</div>
@@ -108,17 +93,15 @@
 	</div>
 </div>
 
-
 <div id="sbros-pasword" aria-hidden="true" class="popup">
 	<div class="popup__wrapper">
 		<div class="popup__content">
-			<button data-close type="button" class="popup__close"><img src="@img/popup/close.svg" alt=""></button>
+			<button data-close type="button" class="popup__close"><img src="@img/popup/close.svg" alt="" /></button>
 			<div class="popup__body">
 				<h4 class="popup__title">сброс пароля</h4>
 				<form method="post" action="#" class="popup__form">
 					<div class="popup__form-item">
-						<input id="sbros-pasword-input" required autocomplete="off" type="email" name="form[]"
-							data-error="Ошибка" class="popup__input">
+						<input id="sbros-pasword-input" required autocomplete="off" type="email" name="form[]" data-error="Ошибка" class="popup__input" />
 						<label for="sbros-pasword-input" class="popup__label">E-mail</label>
 					</div>
 					<div class="popup__form-item">
@@ -135,55 +118,50 @@
 <div id="reg" aria-hidden="true" class="popup">
 	<div class="popup__wrapper">
 		<div class="popup__content">
-			<button data-close type="button" class="popup__close"><img src="@img/popup/close.svg" alt=""></button>
+			<button data-close type="button" class="popup__close"><img src="@img/popup/close.svg" alt="" /></button>
 			<div class="popup__body">
 				<div class="popup__reg-top">
 					<h4 class="popup__title">Регистрация</h4>
 					<div class="popup__actions">
-						<img src="@img/popup/Star.svg" alt="">
+						<img src="@img/popup/Star.svg" alt="" />
 						<span>Получи скидку 1% сразу!</span>
 					</div>
 				</div>
 				<form method="post" action="#" class="popup__form">
 					<div class="popup__form-item">
 						<!-- <span class="popup_reg-error">уже зарегистрирован</span> -->
-						<input required id="01" autocomplete="off" type="email" name="form[]" data-error="Ошибка"
-							placeholder="" class="popup__input">
+						<input required id="01" autocomplete="off" type="email" name="form[]" data-error="Ошибка" placeholder="" class="popup__input" />
 						<label for="01" class="popup__label">E-mail</label>
 					</div>
 					<div class="popup__form-item">
 						<div class="popup__input-wrapper">
-							<input required id="02" autocomplete="off" type="password" name="form[]" data-error="Ошибка"
-								placeholder="" class="popup__input">
+							<input required id="02" autocomplete="off" type="password" name="form[]" data-error="Ошибка" placeholder="" class="popup__input" />
 							<label for="02" class="popup__label">пароль</label>
 							<button type="button" class="popup__img-pasword">
-								<img class="popup-img-toggle popup__img-v" src="@img/popup/pasword-v.svg" alt="">
-								<img class="popup-img-toggle popup__img-nv" src="@img/popup/pasword-nv.svg" alt="">
+								<img class="popup-img-toggle popup__img-v" src="@img/popup/pasword-v.svg" alt="" />
+								<img class="popup-img-toggle popup__img-nv" src="@img/popup/pasword-nv.svg" alt="" />
 							</button>
 						</div>
 					</div>
 					<div class="popup__form-item">
 						<div class="popup__input-wrapper">
-							<input required id="03" autocomplete="off" type="password" name="form[]" data-error="Ошибка"
-								placeholder="" class="popup__input">
+							<input required id="03" autocomplete="off" type="password" name="form[]" data-error="Ошибка" placeholder="" class="popup__input" />
 							<label for="03" class="popup__label">повторите пароль</label>
 							<button type="button" class="popup__img-pasword">
-								<img class="popup-img-toggle popup__img-v" src="@img/popup/pasword-v.svg" alt="">
-								<img class="popup-img-toggle popup__img-nv" src="@img/popup/pasword-nv.svg" alt="">
+								<img class="popup-img-toggle popup__img-v" src="@img/popup/pasword-v.svg" alt="" />
+								<img class="popup-img-toggle popup__img-nv" src="@img/popup/pasword-nv.svg" alt="" />
 							</button>
 						</div>
 					</div>
 					<div class="popup__checkbox checkbox">
-						<input required id="c_1" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1"
-							name="form[]">
+						<input required id="c_1" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]" />
 						<label for="c_1" class="checkbox__label">
 							<div class="checkbox__body"></div>
 							<span class="checkbox__text">Даю согласие на <a href="#">обработку персональных данных</a></span>
 						</label>
 					</div>
 					<div class="popup__form-item">
-						<button data-popup="#thanks" id="btn-reg" type="submit"
-							class="popup__button popup__button_reg">зарегистрироваться</button>
+						<button data-popup="#thanks" id="btn-reg" type="submit" class="popup__button popup__button_reg">зарегистрироваться</button>
 					</div>
 				</form>
 			</div>
@@ -191,43 +169,33 @@
 	</div>
 </div>
 
-
-
 <div id="thanks" aria-hidden="true" class="popup">
 	<div class="popup__wrapper">
 		<div class="popup__content">
-			<button data-close type="button" class="popup__close"><img src="@img/popup/close.svg" alt=""></button>
+			<button data-close type="button" class="popup__close"><img src="@img/popup/close.svg" alt="" /></button>
 			<div class="popup__body">
 				<h4 class="popup__title">благодарим за регистрацию!</h4>
 				<p class="popup__text">
-					На указанный Вами адрес электронной почты направлено письмо-уведомление для <span>подтверждения учетной
-						записи</span>. <br><br>
-					Изменить персональные данные Вы можете воспользовавшись личным кабинетом. <br><br>
-					Обращаем Ваше внимание на то, что мы даем гарантию того, что все товары, представленные в нашем
-					интернет-магазине, имеют исключительно оригинальное происхождение. <br><br>
-					В разделе <a href="conditions.html">«Доставка»</a> Вы можете ознакомиться с условиями доставки заказов,
-					посчитать стоимость доставки с помощью калькулятора доставки, а также отследить местонахождение
-					направленной Вам посылки с помощью сервиса <a href="where.html">«Где моя посылка?»</a>.
+					На указанный Вами адрес электронной почты направлено письмо-уведомление для <span>подтверждения учетной записи</span>. <br /><br />
+					Изменить персональные данные Вы можете воспользовавшись личным кабинетом. <br /><br />
+					Обращаем Ваше внимание на то, что мы даем гарантию того, что все товары, представленные в нашем интернет-магазине, имеют исключительно оригинальное происхождение. <br /><br />
+					В разделе <a href="conditions.html">«Доставка»</a> Вы можете ознакомиться с условиями доставки заказов, посчитать стоимость доставки с помощью калькулятора доставки, а также отследить местонахождение направленной Вам посылки с помощью сервиса <a href="where.html">«Где моя посылка?»</a>.
 				</p>
 			</div>
 		</div>
 	</div>
 </div>
 
-
 <div id="add-tel" aria-hidden="true" class="popup">
 	<div class="popup__wrapper">
 		<div class="popup__content">
-			<button data-close type="button" class="popup__close"><img src="@img/popup/close.svg" alt=""></button>
+			<button data-close type="button" class="popup__close"><img src="@img/popup/close.svg" alt="" /></button>
 			<div class="popup__body">
 				<h4 class="popup__title">добавить телефон</h4>
-				<p class="popup__text">
-					Добавьте Ваш контактный номер телефона в личный кабинет:
-				</p>
+				<p class="popup__text">Добавьте Ваш контактный номер телефона в личный кабинет:</p>
 				<form method="post" action="#" class="popup__form">
 					<div class="popup__form-item">
-						<input required autocomplete="off" type="tel" name="form[]" data-error="Ошибка"
-							placeholder="НОМЕР ТЕЛЕФОНА" class="popup__input">
+						<input required autocomplete="off" type="tel" name="form[]" data-error="Ошибка" placeholder="НОМЕР ТЕЛЕФОНА" class="popup__input" />
 					</div>
 					<div class="popup__form-item">
 						<button id="btn-add-phone" type="submit" class="popup__button">добавить номер</button>
@@ -238,35 +206,28 @@
 	</div>
 </div>
 
-
 <div id="popup-feedback" aria-hidden="true" class="popup">
 	<div class="popup__wrapper">
 		<div class="popup__content">
-			<button data-close type="button" class="popup__close"><img src="@img/popup/close.svg" alt=""></button>
+			<button data-close type="button" class="popup__close"><img src="@img/popup/close.svg" alt="" /></button>
 			<div class="popup__body">
 				<h4 class="popup__title">обратная связь</h4>
 				<p class="popup__text-feedback">Вы можете написать нам сообщение через форму обратной связи.</p>
 				<form method="post" action="#" class="popup__form popup__form_feedback">
 					<div class="popup__item-group">
 						<div class="popup__form-item">
-							<input id="feedback-fio" required autocomplete="off" type="text" name="form[]" data-error="Ошибка"
-								class="popup__input">
+							<input id="feedback-fio" required autocomplete="off" type="text" name="form[]" data-error="Ошибка" class="popup__input" />
 							<label for="feedback-fio" class="popup__label">фио</label>
 						</div>
 						<div class="popup__form-item">
-							<input id="feedback-email" required autocomplete="off" type="email" name="form[]"
-								data-error="Ошибка" class="popup__input">
+							<input id="feedback-email" required autocomplete="off" type="email" name="form[]" data-error="Ошибка" class="popup__input" />
 							<label for="feedback-email" class="popup__label">e-mail</label>
 						</div>
 					</div>
 					<div class="popup__form-item">
 						<textarea id="area-feedback" class="input" maxlength="1200" name="" rows="4" id="comment"></textarea>
 						<label for="area-feedback" class="popup__label">текст обращения</label>
-						<p class="popup__length">
-							<span class="popup__star">*</span> Отзыв содержит: <span id="quantity"
-								class="comment__number-symbols">0</span> символов <span class="popup__correction">(максимальное
-								количество 1200 символов)</span>
-						</p>
+						<p class="popup__length"><span class="popup__star">*</span> Отзыв содержит: <span id="quantity" class="comment__number-symbols">0</span> символов <span class="popup__correction">(максимальное количество 1200 символов)</span></p>
 					</div>
 					<div class="popup__form-item">
 						<button id="btn-send" type="submit" class="popup__button">отправить</button>
@@ -277,17 +238,16 @@
 	</div>
 </div>
 
-
 <div id="city" aria-hidden="true" class="popup popup-choose-city">
 	<div class="popup__wrapper">
 		<div class="popup__content">
-			<button data-close type="button" class="popup__close"><img src="@img/popup/close.svg" alt=""></button>
+			<button data-close type="button" class="popup__close"><img src="@img/popup/close.svg" alt="" /></button>
 			<div class="popup__body">
 				<h4 class="popup__title">выбор города</h4>
 				<form action="#" method="post" class="header-center__form">
 					<div class="popup__form-item">
-						<button class="header-center__button"><img src="@img/header/search30x30.svg" alt="Поиск"></button>
-						<input id="city-name" autocomplete="off" type="text" name="form[]" data-error="Ошибка"  class="header-center__input city-input">
+						<button class="header-center__button"><img src="@img/header/search30x30.svg" alt="Поиск" /></button>
+						<input id="city-name" autocomplete="off" type="text" name="form[]" data-error="Ошибка" class="header-center__input city-input" />
 						<label for="city-name" class="popup__label">начните вводить название города</label>
 					</div>
 				</form>
@@ -308,370 +268,280 @@
 								<div class="first_level_region_item">
 									<div class="popup-tabs__iteration_break">
 										<span class="list_region_body" data-region="77" data-code="7700000000000">
-											<span class="bt_region_select " data-region="77" data-code="7700000000000">Москва
-												г</span>
+											<span class="bt_region_select" data-region="77" data-code="7700000000000">Москва г</span>
 										</span>
 										<span class="list_region_body" data-region="78" data-code="7800000000000">
-											<span class="bt_region_select " data-region="78"
-												data-code="7800000000000">Санкт-Петербург г</span>
+											<span class="bt_region_select" data-region="78" data-code="7800000000000">Санкт-Петербург г</span>
 										</span>
 										<span class="list_region_body" data-region="50" data-code="5000000000000">
-											<span class="bt_region_select " data-region="50" data-code="5000000000000">Московская
-												обл</span>
+											<span class="bt_region_select" data-region="50" data-code="5000000000000">Московская обл</span>
 										</span>
 										<span class="list_region_body" data-region="47" data-code="4700000000000">
-											<span class="bt_region_select " data-region="47"
-												data-code="4700000000000">Ленинградская обл</span>
+											<span class="bt_region_select" data-region="47" data-code="4700000000000">Ленинградская обл</span>
 										</span>
 										<span class="list_region_body" data-region="1" data-code="0100000000000">
-											<span class="bt_region_select " data-region="1" data-code="0100000000000">Адыгея
-												Респ</span>
+											<span class="bt_region_select" data-region="1" data-code="0100000000000">Адыгея Респ</span>
 										</span>
 										<span class="list_region_body" data-region="2" data-code="0200000000000">
-											<span class="bt_region_select " data-region="2" data-code="0200000000000">Башкортостан
-												Респ</span>
+											<span class="bt_region_select" data-region="2" data-code="0200000000000">Башкортостан Респ</span>
 										</span>
 										<span class="list_region_body" data-region="3" data-code="0300000000000">
-											<span class="bt_region_select " data-region="3" data-code="0300000000000">Бурятия
-												Респ</span>
+											<span class="bt_region_select" data-region="3" data-code="0300000000000">Бурятия Респ</span>
 										</span>
 										<span class="list_region_body" data-region="4" data-code="0400000000000">
-											<span class="bt_region_select " data-region="4" data-code="0400000000000">Алтай
-												Респ</span>
+											<span class="bt_region_select" data-region="4" data-code="0400000000000">Алтай Респ</span>
 										</span>
 										<span class="list_region_body" data-region="5" data-code="0500000000000">
-											<span class="bt_region_select " data-region="5" data-code="0500000000000">Дагестан
-												Респ</span>
+											<span class="bt_region_select" data-region="5" data-code="0500000000000">Дагестан Респ</span>
 										</span>
 										<span class="list_region_body" data-region="6" data-code="0600000000000">
-											<span class="bt_region_select " data-region="6" data-code="0600000000000">Ингушетия
-												Респ</span>
+											<span class="bt_region_select" data-region="6" data-code="0600000000000">Ингушетия Респ</span>
 										</span>
 										<span class="list_region_body" data-region="7" data-code="0700000000000">
-											<span class="bt_region_select big_length" data-region="7"
-												data-code="0700000000000">Кабардино-Балкарская Респ</span>
+											<span class="bt_region_select big_length" data-region="7" data-code="0700000000000">Кабардино-Балкарская Респ</span>
 										</span>
 										<span class="list_region_body" data-region="8" data-code="0800000000000">
-											<span class="bt_region_select " data-region="8" data-code="0800000000000">Калмыкия
-												Респ</span>
+											<span class="bt_region_select" data-region="8" data-code="0800000000000">Калмыкия Респ</span>
 										</span>
 										<span class="list_region_body" data-region="9" data-code="0900000000000">
-											<span class="bt_region_select big_length" data-region="9"
-												data-code="0900000000000">Карачаево-Черкесская Респ</span>
+											<span class="bt_region_select big_length" data-region="9" data-code="0900000000000">Карачаево-Черкесская Респ</span>
 										</span>
 										<span class="list_region_body" data-region="10" data-code="1000000000000">
-											<span class="bt_region_select " data-region="10" data-code="1000000000000">Карелия
-												Респ</span>
+											<span class="bt_region_select" data-region="10" data-code="1000000000000">Карелия Респ</span>
 										</span>
 										<span class="list_region_body" data-region="11" data-code="1100000000000">
-											<span class="bt_region_select " data-region="11" data-code="1100000000000">Коми
-												Респ</span>
+											<span class="bt_region_select" data-region="11" data-code="1100000000000">Коми Респ</span>
 										</span>
 										<span class="list_region_body" data-region="12" data-code="1200000000000">
-											<span class="bt_region_select " data-region="12" data-code="1200000000000">Марий Эл
-												Респ</span>
+											<span class="bt_region_select" data-region="12" data-code="1200000000000">Марий Эл Респ</span>
 										</span>
 										<span class="list_region_body" data-region="13" data-code="1300000000000">
-											<span class="bt_region_select " data-region="13" data-code="1300000000000">Мордовия
-												Респ</span>
+											<span class="bt_region_select" data-region="13" data-code="1300000000000">Мордовия Респ</span>
 										</span>
 										<span class="list_region_body" data-region="14" data-code="1400000000000">
-											<span class="bt_region_select " data-region="14" data-code="1400000000000">Саха
-												/Якутия/ Респ</span>
+											<span class="bt_region_select" data-region="14" data-code="1400000000000">Саха /Якутия/ Респ</span>
 										</span>
 										<span class="list_region_body" data-region="15" data-code="1500000000000">
-											<span class="bt_region_select big_length" data-region="15"
-												data-code="1500000000000">Северная Осетия - Алания Респ</span>
+											<span class="bt_region_select big_length" data-region="15" data-code="1500000000000">Северная Осетия - Алания Респ</span>
 										</span>
 										<span class="list_region_body" data-region="16" data-code="1600000000000">
-											<span class="bt_region_select " data-region="16" data-code="1600000000000">Татарстан
-												Респ</span>
+											<span class="bt_region_select" data-region="16" data-code="1600000000000">Татарстан Респ</span>
 										</span>
 										<span class="list_region_body" data-region="17" data-code="1700000000000">
-											<span class="bt_region_select " data-region="17" data-code="1700000000000">Тыва
-												Респ</span>
+											<span class="bt_region_select" data-region="17" data-code="1700000000000">Тыва Респ</span>
 										</span>
 										<span class="list_region_body" data-region="18" data-code="1800000000000">
-											<span class="bt_region_select " data-region="18" data-code="1800000000000">Удмуртская
-												Респ</span>
+											<span class="bt_region_select" data-region="18" data-code="1800000000000">Удмуртская Респ</span>
 										</span>
 									</div>
 									<div class="popup-tabs__iteration_break">
 										<span class="list_region_body" data-region="19" data-code="1900000000000">
-											<span class="bt_region_select " data-region="19" data-code="1900000000000">Хакасия
-												Респ</span>
+											<span class="bt_region_select" data-region="19" data-code="1900000000000">Хакасия Респ</span>
 										</span>
 										<span class="list_region_body" data-region="20" data-code="2000000000000">
-											<span class="bt_region_select " data-region="20" data-code="2000000000000">Чеченская
-												Респ</span>
+											<span class="bt_region_select" data-region="20" data-code="2000000000000">Чеченская Респ</span>
 										</span>
 										<span class="list_region_body" data-region="21" data-code="2100000000000">
-											<span class="bt_region_select big_length" data-region="21"
-												data-code="2100000000000">Чувашская Республика - Чувашия</span>
+											<span class="bt_region_select big_length" data-region="21" data-code="2100000000000">Чувашская Республика - Чувашия</span>
 										</span>
 										<span class="list_region_body" data-region="22" data-code="2200000000000">
-											<span class="bt_region_select " data-region="22" data-code="2200000000000">Алтайский
-												край</span>
+											<span class="bt_region_select" data-region="22" data-code="2200000000000">Алтайский край</span>
 										</span>
 										<span class="list_region_body" data-region="23" data-code="2300000000000">
-											<span class="bt_region_select " data-region="23"
-												data-code="2300000000000">Краснодарский край</span>
+											<span class="bt_region_select" data-region="23" data-code="2300000000000">Краснодарский край</span>
 										</span>
 										<span class="list_region_body" data-region="24" data-code="2400000000000">
-											<span class="bt_region_select " data-region="24" data-code="2400000000000">Красноярский
-												край</span>
+											<span class="bt_region_select" data-region="24" data-code="2400000000000">Красноярский край</span>
 										</span>
 										<span class="list_region_body" data-region="25" data-code="2500000000000">
-											<span class="bt_region_select " data-region="25" data-code="2500000000000">Приморский
-												край</span>
+											<span class="bt_region_select" data-region="25" data-code="2500000000000">Приморский край</span>
 										</span>
 										<span class="list_region_body" data-region="26" data-code="2600000000000">
-											<span class="bt_region_select " data-region="26"
-												data-code="2600000000000">Ставропольский край</span>
+											<span class="bt_region_select" data-region="26" data-code="2600000000000">Ставропольский край</span>
 										</span>
 										<span class="list_region_body" data-region="27" data-code="2700000000000">
-											<span class="bt_region_select " data-region="27" data-code="2700000000000">Хабаровский
-												край</span>
+											<span class="bt_region_select" data-region="27" data-code="2700000000000">Хабаровский край</span>
 										</span>
 										<span class="list_region_body" data-region="28" data-code="2800000000000">
-											<span class="bt_region_select " data-region="28" data-code="2800000000000">Амурская
-												обл</span>
+											<span class="bt_region_select" data-region="28" data-code="2800000000000">Амурская обл</span>
 										</span>
 										<span class="list_region_body" data-region="29" data-code="2900000000000">
-											<span class="bt_region_select " data-region="29"
-												data-code="2900000000000">Архангельская обл</span>
+											<span class="bt_region_select" data-region="29" data-code="2900000000000">Архангельская обл</span>
 										</span>
 										<span class="list_region_body" data-region="30" data-code="3000000000000">
-											<span class="bt_region_select " data-region="30" data-code="3000000000000">Астраханская
-												обл</span>
+											<span class="bt_region_select" data-region="30" data-code="3000000000000">Астраханская обл</span>
 										</span>
 										<span class="list_region_body" data-region="31" data-code="3100000000000">
-											<span class="bt_region_select " data-region="31" data-code="3100000000000">Белгородская
-												обл</span>
+											<span class="bt_region_select" data-region="31" data-code="3100000000000">Белгородская обл</span>
 										</span>
 										<span class="list_region_body" data-region="32" data-code="3200000000000">
-											<span class="bt_region_select " data-region="32" data-code="3200000000000">Брянская
-												обл</span>
+											<span class="bt_region_select" data-region="32" data-code="3200000000000">Брянская обл</span>
 										</span>
 										<span class="list_region_body" data-region="33" data-code="3300000000000">
-											<span class="bt_region_select " data-region="33" data-code="3300000000000">Владимирская
-												обл</span>
+											<span class="bt_region_select" data-region="33" data-code="3300000000000">Владимирская обл</span>
 										</span>
 										<span class="list_region_body" data-region="34" data-code="3400000000000">
-											<span class="bt_region_select " data-region="34"
-												data-code="3400000000000">Волгоградская обл</span>
+											<span class="bt_region_select" data-region="34" data-code="3400000000000">Волгоградская обл</span>
 										</span>
 										<span class="list_region_body" data-region="35" data-code="3500000000000">
-											<span class="bt_region_select " data-region="35" data-code="3500000000000">Вологодская
-												обл</span>
+											<span class="bt_region_select" data-region="35" data-code="3500000000000">Вологодская обл</span>
 										</span>
 										<span class="list_region_body" data-region="36" data-code="3600000000000">
-											<span class="bt_region_select " data-region="36" data-code="3600000000000">Воронежская
-												обл</span>
+											<span class="bt_region_select" data-region="36" data-code="3600000000000">Воронежская обл</span>
 										</span>
 										<span class="list_region_body" data-region="37" data-code="3700000000000">
-											<span class="bt_region_select " data-region="37" data-code="3700000000000">Ивановская
-												обл</span>
+											<span class="bt_region_select" data-region="37" data-code="3700000000000">Ивановская обл</span>
 										</span>
 										<span class="list_region_body" data-region="38" data-code="3800000000000">
-											<span class="bt_region_select " data-region="38" data-code="3800000000000">Иркутская
-												обл</span>
+											<span class="bt_region_select" data-region="38" data-code="3800000000000">Иркутская обл</span>
 										</span>
 										<span class="list_region_body" data-region="39" data-code="3900000000000">
-											<span class="bt_region_select " data-region="39"
-												data-code="3900000000000">Калининградская обл</span>
+											<span class="bt_region_select" data-region="39" data-code="3900000000000">Калининградская обл</span>
 										</span>
 										<span class="list_region_body" data-region="40" data-code="4000000000000">
-											<span class="bt_region_select " data-region="40" data-code="4000000000000">Калужская
-												обл</span>
+											<span class="bt_region_select" data-region="40" data-code="4000000000000">Калужская обл</span>
 										</span>
 										<span class="list_region_body" data-region="41" data-code="4100000000000">
-											<span class="bt_region_select " data-region="41" data-code="4100000000000">Камчатский
-												край</span>
+											<span class="bt_region_select" data-region="41" data-code="4100000000000">Камчатский край</span>
 										</span>
 										<span class="list_region_body" data-region="42" data-code="4200000000000">
-											<span class="bt_region_select big_length" data-region="42"
-												data-code="4200000000000">Кемеровская область - Кузбасс обл</span>
+											<span class="bt_region_select big_length" data-region="42" data-code="4200000000000">Кемеровская область - Кузбасс обл</span>
 										</span>
 									</div>
 									<div class="popup-tabs__iteration_break">
 										<span class="list_region_body" data-region="43" data-code="4300000000000">
-											<span class="bt_region_select " data-region="43" data-code="4300000000000">Кировская
-												обл</span>
+											<span class="bt_region_select" data-region="43" data-code="4300000000000">Кировская обл</span>
 										</span>
 										<span class="list_region_body" data-region="44" data-code="4400000000000">
-											<span class="bt_region_select " data-region="44" data-code="4400000000000">Костромская
-												обл</span>
+											<span class="bt_region_select" data-region="44" data-code="4400000000000">Костромская обл</span>
 										</span>
 										<span class="list_region_body" data-region="45" data-code="4500000000000">
-											<span class="bt_region_select " data-region="45" data-code="4500000000000">Курганская
-												обл</span>
+											<span class="bt_region_select" data-region="45" data-code="4500000000000">Курганская обл</span>
 										</span>
 										<span class="list_region_body" data-region="46" data-code="4600000000000">
-											<span class="bt_region_select " data-region="46" data-code="4600000000000">Курская
-												обл</span>
+											<span class="bt_region_select" data-region="46" data-code="4600000000000">Курская обл</span>
 										</span>
 										<span class="list_region_body" data-region="48" data-code="4800000000000">
-											<span class="bt_region_select " data-region="48" data-code="4800000000000">Липецкая
-												обл</span>
+											<span class="bt_region_select" data-region="48" data-code="4800000000000">Липецкая обл</span>
 										</span>
 										<span class="list_region_body" data-region="49" data-code="4900000000000">
-											<span class="bt_region_select " data-region="49" data-code="4900000000000">Магаданская
-												обл</span>
+											<span class="bt_region_select" data-region="49" data-code="4900000000000">Магаданская обл</span>
 										</span>
 										<span class="list_region_body" data-region="51" data-code="5100000000000">
-											<span class="bt_region_select " data-region="51" data-code="5100000000000">Мурманская
-												обл</span>
+											<span class="bt_region_select" data-region="51" data-code="5100000000000">Мурманская обл</span>
 										</span>
 										<span class="list_region_body" data-region="52" data-code="5200000000000">
-											<span class="bt_region_select " data-region="52"
-												data-code="5200000000000">Нижегородская обл</span>
+											<span class="bt_region_select" data-region="52" data-code="5200000000000">Нижегородская обл</span>
 										</span>
 										<span class="list_region_body" data-region="53" data-code="5300000000000">
-											<span class="bt_region_select " data-region="53" data-code="5300000000000">Новгородская
-												обл</span>
+											<span class="bt_region_select" data-region="53" data-code="5300000000000">Новгородская обл</span>
 										</span>
 										<span class="list_region_body" data-region="54" data-code="5400000000000">
-											<span class="bt_region_select " data-region="54"
-												data-code="5400000000000">Новосибирская обл</span>
+											<span class="bt_region_select" data-region="54" data-code="5400000000000">Новосибирская обл</span>
 										</span>
 										<span class="list_region_body" data-region="55" data-code="5500000000000">
-											<span class="bt_region_select " data-region="55" data-code="5500000000000">Омская
-												обл</span>
+											<span class="bt_region_select" data-region="55" data-code="5500000000000">Омская обл</span>
 										</span>
 										<span class="list_region_body" data-region="56" data-code="5600000000000">
-											<span class="bt_region_select " data-region="56" data-code="5600000000000">Оренбургская
-												обл</span>
+											<span class="bt_region_select" data-region="56" data-code="5600000000000">Оренбургская обл</span>
 										</span>
 										<span class="list_region_body" data-region="57" data-code="5700000000000">
-											<span class="bt_region_select " data-region="57" data-code="5700000000000">Орловская
-												обл</span>
+											<span class="bt_region_select" data-region="57" data-code="5700000000000">Орловская обл</span>
 										</span>
 										<span class="list_region_body" data-region="58" data-code="5800000000000">
-											<span class="bt_region_select " data-region="58" data-code="5800000000000">Пензенская
-												обл</span>
+											<span class="bt_region_select" data-region="58" data-code="5800000000000">Пензенская обл</span>
 										</span>
 										<span class="list_region_body" data-region="59" data-code="5900000000000">
-											<span class="bt_region_select " data-region="59" data-code="5900000000000">Пермский
-												край</span>
+											<span class="bt_region_select" data-region="59" data-code="5900000000000">Пермский край</span>
 										</span>
 										<span class="list_region_body" data-region="60" data-code="6000000000000">
-											<span class="bt_region_select " data-region="60" data-code="6000000000000">Псковская
-												обл</span>
+											<span class="bt_region_select" data-region="60" data-code="6000000000000">Псковская обл</span>
 										</span>
 										<span class="list_region_body" data-region="61" data-code="6100000000000">
-											<span class="bt_region_select " data-region="61" data-code="6100000000000">Ростовская
-												обл</span>
+											<span class="bt_region_select" data-region="61" data-code="6100000000000">Ростовская обл</span>
 										</span>
 										<span class="list_region_body" data-region="62" data-code="6200000000000">
-											<span class="bt_region_select " data-region="62" data-code="6200000000000">Рязанская
-												обл</span>
+											<span class="bt_region_select" data-region="62" data-code="6200000000000">Рязанская обл</span>
 										</span>
 										<span class="list_region_body" data-region="63" data-code="6300000000000">
-											<span class="bt_region_select " data-region="63" data-code="6300000000000">Самарская
-												обл</span>
+											<span class="bt_region_select" data-region="63" data-code="6300000000000">Самарская обл</span>
 										</span>
 										<span class="list_region_body" data-region="64" data-code="6400000000000">
-											<span class="bt_region_select " data-region="64" data-code="6400000000000">Саратовская
-												обл</span>
+											<span class="bt_region_select" data-region="64" data-code="6400000000000">Саратовская обл</span>
 										</span>
 										<span class="list_region_body" data-region="65" data-code="6500000000000">
-											<span class="bt_region_select " data-region="65" data-code="6500000000000">Сахалинская
-												обл</span>
+											<span class="bt_region_select" data-region="65" data-code="6500000000000">Сахалинская обл</span>
 										</span>
 										<span class="list_region_body" data-region="66" data-code="6600000000000">
-											<span class="bt_region_select " data-region="66" data-code="6600000000000">Свердловская
-												обл</span>
+											<span class="bt_region_select" data-region="66" data-code="6600000000000">Свердловская обл</span>
 										</span>
 										<span class="list_region_body" data-region="67" data-code="6700000000000">
-											<span class="bt_region_select " data-region="67" data-code="6700000000000">Смоленская
-												обл</span>
+											<span class="bt_region_select" data-region="67" data-code="6700000000000">Смоленская обл</span>
 										</span>
 										<span class="list_region_body" data-region="68" data-code="6800000000000">
-											<span class="bt_region_select " data-region="68" data-code="6800000000000">Тамбовская
-												обл</span>
+											<span class="bt_region_select" data-region="68" data-code="6800000000000">Тамбовская обл</span>
 										</span>
 									</div>
 									<div class="popup-tabs__iteration_break">
 										<span class="list_region_body" data-region="69" data-code="6900000000000">
-											<span class="bt_region_select " data-region="69" data-code="6900000000000">Тверская
-												обл</span>
+											<span class="bt_region_select" data-region="69" data-code="6900000000000">Тверская обл</span>
 										</span>
 										<span class="list_region_body" data-region="70" data-code="7000000000000">
-											<span class="bt_region_select " data-region="70" data-code="7000000000000">Томская
-												обл</span>
+											<span class="bt_region_select" data-region="70" data-code="7000000000000">Томская обл</span>
 										</span>
 										<span class="list_region_body" data-region="71" data-code="7100000000000">
-											<span class="bt_region_select " data-region="71" data-code="7100000000000">Тульская
-												обл</span>
+											<span class="bt_region_select" data-region="71" data-code="7100000000000">Тульская обл</span>
 										</span>
 										<span class="list_region_body" data-region="72" data-code="7200000000000">
-											<span class="bt_region_select " data-region="72" data-code="7200000000000">Тюменская
-												обл</span>
+											<span class="bt_region_select" data-region="72" data-code="7200000000000">Тюменская обл</span>
 										</span>
 										<span class="list_region_body" data-region="73" data-code="7300000000000">
-											<span class="bt_region_select " data-region="73" data-code="7300000000000">Ульяновская
-												обл</span>
+											<span class="bt_region_select" data-region="73" data-code="7300000000000">Ульяновская обл</span>
 										</span>
 										<span class="list_region_body" data-region="74" data-code="7400000000000">
-											<span class="bt_region_select " data-region="74" data-code="7400000000000">Челябинская
-												обл</span>
+											<span class="bt_region_select" data-region="74" data-code="7400000000000">Челябинская обл</span>
 										</span>
 										<span class="list_region_body" data-region="75" data-code="7500000000000">
-											<span class="bt_region_select " data-region="75"
-												data-code="7500000000000">Забайкальский край</span>
+											<span class="bt_region_select" data-region="75" data-code="7500000000000">Забайкальский край</span>
 										</span>
 										<span class="list_region_body" data-region="76" data-code="7600000000000">
-											<span class="bt_region_select " data-region="76" data-code="7600000000000">Ярославская
-												обл</span>
+											<span class="bt_region_select" data-region="76" data-code="7600000000000">Ярославская обл</span>
 										</span>
 										<span class="list_region_body" data-region="79" data-code="7900000000000">
-											<span class="bt_region_select " data-region="79" data-code="7900000000000">Еврейская
-												Аобл</span>
+											<span class="bt_region_select" data-region="79" data-code="7900000000000">Еврейская Аобл</span>
 										</span>
 										<span class="list_region_body" data-region="83" data-code="8300000000000">
-											<span class="bt_region_select " data-region="83" data-code="8300000000000">Ненецкий
-												АО</span>
+											<span class="bt_region_select" data-region="83" data-code="8300000000000">Ненецкий АО</span>
 										</span>
 										<span class="list_region_body" data-region="86" data-code="8600000000000">
-											<span class="bt_region_select big_length" data-region="86"
-												data-code="8600000000000">Ханты-Мансийский Автономный округ - Югра АО</span>
+											<span class="bt_region_select big_length" data-region="86" data-code="8600000000000">Ханты-Мансийский Автономный округ - Югра АО</span>
 										</span>
 										<span class="list_region_body" data-region="87" data-code="8700000000000">
-											<span class="bt_region_select " data-region="87" data-code="8700000000000">Чукотский
-												АО</span>
+											<span class="bt_region_select" data-region="87" data-code="8700000000000">Чукотский АО</span>
 										</span>
 										<span class="list_region_body" data-region="89" data-code="8900000000000">
-											<span class="bt_region_select " data-region="89"
-												data-code="8900000000000">Ямало-Ненецкий АО</span>
+											<span class="bt_region_select" data-region="89" data-code="8900000000000">Ямало-Ненецкий АО</span>
 										</span>
 										<span class="list_region_body" data-region="90" data-code="9000000000000">
-											<span class="bt_region_select " data-region="90" data-code="9000000000000">Запорожская
-												обл</span>
+											<span class="bt_region_select" data-region="90" data-code="9000000000000">Запорожская обл</span>
 										</span>
 										<span class="list_region_body" data-region="91" data-code="9100000000000">
-											<span class="bt_region_select " data-region="91" data-code="9100000000000">Крым
-												Респ</span>
+											<span class="bt_region_select" data-region="91" data-code="9100000000000">Крым Респ</span>
 										</span>
 										<span class="list_region_body" data-region="92" data-code="9200000000000">
-											<span class="bt_region_select " data-region="92" data-code="9200000000000">Севастополь
-												г</span>
+											<span class="bt_region_select" data-region="92" data-code="9200000000000">Севастополь г</span>
 										</span>
 										<span class="list_region_body" data-region="93" data-code="9300000000000">
-											<span class="bt_region_select " data-region="93" data-code="9300000000000">Донецкая
-												Народная Респ</span>
+											<span class="bt_region_select" data-region="93" data-code="9300000000000">Донецкая Народная Респ</span>
 										</span>
 										<span class="list_region_body" data-region="94" data-code="9400000000000">
-											<span class="bt_region_select big_length" data-region="94"
-												data-code="9400000000000">Луганская Народная Респ</span>
+											<span class="bt_region_select big_length" data-region="94" data-code="9400000000000">Луганская Народная Респ</span>
 										</span>
 										<span class="list_region_body" data-region="95" data-code="9500000000000">
-											<span class="bt_region_select " data-region="95" data-code="9500000000000">Херсонская
-												обл</span>
+											<span class="bt_region_select" data-region="95" data-code="9500000000000">Херсонская обл</span>
 										</span>
 										<span class="list_region_body" data-region="99" data-code="9900000000000">
-											<span class="bt_region_select " data-region="99" data-code="9900000000000">Байконур
-												г</span>
+											<span class="bt_region_select" data-region="99" data-code="9900000000000">Байконур г</span>
 										</span>
 									</div>
 								</div>
@@ -683,36 +553,29 @@
 								<div class="first_level_region_item">
 									<div class="popup-tabs__iteration_break">
 										<span class="list_region_body" data-region="5" data-code="0500000000000">
-											<span class="bt_region_select " data-region="5" data-code="0500000000000">Минск
-												г</span>
+											<span class="bt_region_select" data-region="5" data-code="0500000000000">Минск г</span>
 										</span>
 										<span class="list_region_body" data-region="6" data-code="0600000000000">
-											<span class="bt_region_select " data-region="6" data-code="0600000000000">МИНСКАЯ
-												ОБЛАСТЬ обл</span>
+											<span class="bt_region_select" data-region="6" data-code="0600000000000">МИНСКАЯ ОБЛАСТЬ обл</span>
 										</span>
 										<span class="list_region_body" data-region="1" data-code="0100000000000">
-											<span class="bt_region_select " data-region="1" data-code="0100000000000">БРЕСТСКАЯ
-												ОБЛАСТЬ обл</span>
+											<span class="bt_region_select" data-region="1" data-code="0100000000000">БРЕСТСКАЯ ОБЛАСТЬ обл</span>
 										</span>
 									</div>
 									<div class="popup-tabs__iteration_break">
 										<span class="list_region_body" data-region="2" data-code="0200000000000">
-											<span class="bt_region_select " data-region="2" data-code="0200000000000">ВИТЕБСКАЯ
-												ОБЛАСТЬ обл</span>
+											<span class="bt_region_select" data-region="2" data-code="0200000000000">ВИТЕБСКАЯ ОБЛАСТЬ обл</span>
 										</span>
 										<span class="list_region_body" data-region="3" data-code="0300000000000">
-											<span class="bt_region_select " data-region="3" data-code="0300000000000">ГОМЕЛЬСКАЯ
-												ОБЛАСТЬ обл</span>
+											<span class="bt_region_select" data-region="3" data-code="0300000000000">ГОМЕЛЬСКАЯ ОБЛАСТЬ обл</span>
 										</span>
 										<span class="list_region_body" data-region="4" data-code="0400000000000">
-											<span class="bt_region_select big_length" data-region="4"
-												data-code="0400000000000">ГРОДНЕНСКАЯ ОБЛАСТЬ обл</span>
+											<span class="bt_region_select big_length" data-region="4" data-code="0400000000000">ГРОДНЕНСКАЯ ОБЛАСТЬ обл</span>
 										</span>
 									</div>
 									<div class="popup-tabs__iteration_break">
 										<span class="list_region_body" data-region="7" data-code="0700000000000">
-											<span class="bt_region_select big_length" data-region="7"
-												data-code="0700000000000">МОГИЛЕВСКАЯ ОБЛАСТЬ обл</span>
+											<span class="bt_region_select big_length" data-region="7" data-code="0700000000000">МОГИЛЕВСКАЯ ОБЛАСТЬ обл</span>
 										</span>
 									</div>
 								</div>
@@ -724,78 +587,61 @@
 								<div class="first_level_region_item">
 									<div class="popup-tabs__iteration_break">
 										<span class="list_region_body" data-region="71" data-code="7100000000000">
-											<span class="bt_region_select " data-region="71" data-code="7100000000000">Астана
-												г</span>
+											<span class="bt_region_select" data-region="71" data-code="7100000000000">Астана г</span>
 										</span>
 										<span class="list_region_body" data-region="75" data-code="7500000000000">
-											<span class="bt_region_select " data-region="75" data-code="7500000000000">Алматы
-												г</span>
+											<span class="bt_region_select" data-region="75" data-code="7500000000000">Алматы г</span>
 										</span>
 										<span class="list_region_body" data-region="19" data-code="1900000000000">
-											<span class="bt_region_select " data-region="19" data-code="1900000000000">Алматинская
-												обл</span>
+											<span class="bt_region_select" data-region="19" data-code="1900000000000">Алматинская обл</span>
 										</span>
 										<span class="list_region_body" data-region="11" data-code="1100000000000">
-											<span class="bt_region_select " data-region="11" data-code="1100000000000">Акмолинская
-												обл</span>
+											<span class="bt_region_select" data-region="11" data-code="1100000000000">Акмолинская обл</span>
 										</span>
 									</div>
 									<div class="popup-tabs__iteration_break">
 										<span class="list_region_body" data-region="15" data-code="1500000000000">
-											<span class="bt_region_select " data-region="15" data-code="1500000000000">Актюбинская
-												обл</span>
+											<span class="bt_region_select" data-region="15" data-code="1500000000000">Актюбинская обл</span>
 										</span>
 										<span class="list_region_body" data-region="23" data-code="2300000000000">
-											<span class="bt_region_select " data-region="23" data-code="2300000000000">Атырауская
-												обл</span>
+											<span class="bt_region_select" data-region="23" data-code="2300000000000">Атырауская обл</span>
 										</span>
 										<span class="list_region_body" data-region="27" data-code="2700000000000">
-											<span class="bt_region_select big_length" data-region="27"
-												data-code="2700000000000">Западно-Казахстанская обл</span>
+											<span class="bt_region_select big_length" data-region="27" data-code="2700000000000">Западно-Казахстанская обл</span>
 										</span>
 										<span class="list_region_body" data-region="31" data-code="3100000000000">
-											<span class="bt_region_select " data-region="31" data-code="3100000000000">Жамбылская
-												обл</span>
+											<span class="bt_region_select" data-region="31" data-code="3100000000000">Жамбылская обл</span>
 										</span>
 									</div>
 									<div class="popup-tabs__iteration_break">
 										<span class="list_region_body" data-region="35" data-code="3500000000000">
-											<span class="bt_region_select " data-region="35"
-												data-code="3500000000000">Карагандинская обл</span>
+											<span class="bt_region_select" data-region="35" data-code="3500000000000">Карагандинская обл</span>
 										</span>
 										<span class="list_region_body" data-region="39" data-code="3900000000000">
-											<span class="bt_region_select " data-region="39" data-code="3900000000000">Костанайская
-												обл</span>
+											<span class="bt_region_select" data-region="39" data-code="3900000000000">Костанайская обл</span>
 										</span>
 										<span class="list_region_body" data-region="43" data-code="4300000000000">
-											<span class="bt_region_select " data-region="43"
-												data-code="4300000000000">Кызылординская обл</span>
+											<span class="bt_region_select" data-region="43" data-code="4300000000000">Кызылординская обл</span>
 										</span>
 										<span class="list_region_body" data-region="47" data-code="4700000000000">
-											<span class="bt_region_select " data-region="47"
-												data-code="4700000000000">Мангистауская обл</span>
+											<span class="bt_region_select" data-region="47" data-code="4700000000000">Мангистауская обл</span>
 										</span>
 									</div>
 									<div class="popup-tabs__iteration_break">
 										<span class="list_region_body" data-region="51" data-code="5100000000000">
-											<span class="bt_region_select big_length" data-region="51"
-												data-code="5100000000000">Южно-Казахстанская обл</span>
+											<span class="bt_region_select big_length" data-region="51" data-code="5100000000000">Южно-Казахстанская обл</span>
 										</span>
 										<span class="list_region_body" data-region="55" data-code="5500000000000">
-											<span class="bt_region_select " data-region="55" data-code="5500000000000">Павлодарская
-												обл</span>
+											<span class="bt_region_select" data-region="55" data-code="5500000000000">Павлодарская обл</span>
 										</span>
 										<span class="list_region_body" data-region="59" data-code="5900000000000">
-											<span class="bt_region_select big_length" data-region="59"
-												data-code="5900000000000">Северо-Казахстанская обл</span>
+											<span class="bt_region_select big_length" data-region="59" data-code="5900000000000">Северо-Казахстанская обл</span>
 										</span>
 										<span class="list_region_body" data-region="62" data-code="6200000000000">
-											<span class="bt_region_select " data-region="62" data-code="6200000000000">Улытауская
-												обл</span>
+											<span class="bt_region_select" data-region="62" data-code="6200000000000">Улытауская обл</span>
 										</span>
 										<span class="list_region_body" data-region="63" data-code="6300000000000">
-											<span class="bt_region_select big_length" data-region="63"
-												data-code="6300000000000">Восточно-Казахстанская обл</span>
+											<span class="bt_region_select big_length" data-region="63" data-code="6300000000000">Восточно-Казахстанская обл</span>
 										</span>
 									</div>
 								</div>
@@ -807,43 +653,35 @@
 								<div class="first_level_region_item">
 									<div class="popup-tabs__iteration_break">
 										<span class="list_region_body" data-region="2" data-code="0200000000000">
-											<span class="bt_region_select " data-region="2"
-												data-code="0200000000000">Иссык-кульская обл</span>
+											<span class="bt_region_select" data-region="2" data-code="0200000000000">Иссык-кульская обл</span>
 										</span>
 										<span class="list_region_body" data-region="3" data-code="0300000000000">
-											<span class="bt_region_select " data-region="3"
-												data-code="0300000000000">Джалал-абадская обл</span>
+											<span class="bt_region_select" data-region="3" data-code="0300000000000">Джалал-абадская обл</span>
 										</span>
 										<span class="list_region_body" data-region="4" data-code="0400000000000">
-											<span class="bt_region_select " data-region="4" data-code="0400000000000">Нарынская
-												обл</span>
+											<span class="bt_region_select" data-region="4" data-code="0400000000000">Нарынская обл</span>
 										</span>
 									</div>
 									<div class="popup-tabs__iteration_break">
 										<span class="list_region_body" data-region="5" data-code="0500000000000">
-											<span class="bt_region_select " data-region="5" data-code="0500000000000">Баткенская
-												обл</span>
+											<span class="bt_region_select" data-region="5" data-code="0500000000000">Баткенская обл</span>
 										</span>
 										<span class="list_region_body" data-region="6" data-code="0600000000000">
-											<span class="bt_region_select " data-region="6" data-code="0600000000000">Ошская
-												обл</span>
+											<span class="bt_region_select" data-region="6" data-code="0600000000000">Ошская обл</span>
 										</span>
 										<span class="list_region_body" data-region="7" data-code="0700000000000">
-											<span class="bt_region_select " data-region="7" data-code="0700000000000">Таласская
-												обл</span>
+											<span class="bt_region_select" data-region="7" data-code="0700000000000">Таласская обл</span>
 										</span>
 									</div>
 									<div class="popup-tabs__iteration_break">
 										<span class="list_region_body" data-region="8" data-code="0800000000000">
-											<span class="bt_region_select " data-region="8" data-code="0800000000000">Чуйская
-												обл</span>
+											<span class="bt_region_select" data-region="8" data-code="0800000000000">Чуйская обл</span>
 										</span>
 										<span class="list_region_body" data-region="11" data-code="1100000000000">
-											<span class="bt_region_select " data-region="11" data-code="1100000000000">Бишкек
-												г</span>
+											<span class="bt_region_select" data-region="11" data-code="1100000000000">Бишкек г</span>
 										</span>
 										<span class="list_region_body" data-region="21" data-code="2100000000000">
-											<span class="bt_region_select " data-region="21" data-code="2100000000000">Ош г</span>
+											<span class="bt_region_select" data-region="21" data-code="2100000000000">Ош г</span>
 										</span>
 									</div>
 								</div>
@@ -857,22 +695,19 @@
 	</div>
 </div>
 
-
 <div id="search-qr" aria-hidden="true" class="popup">
 	<div class="popup__wrapper">
 		<div class="popup__content">
-			<button data-close type="button" class="popup__close"><img src="@img/popup/close.svg" alt=""></button>
+			<button data-close type="button" class="popup__close"><img src="@img/popup/close.svg" alt="" /></button>
 			<div class="popup__body">
 				<h4 class="popup__title">Поиск товара по штрих-коду</h4>
 				<div class="popup__qr-content qr-content">
 					<div class="qr-content__img">
-						<img src="@img/search/qr-search-women.png" alt="">
+						<img src="@img/search/qr-search-women.png" alt="" />
 					</div>
-					<p class="qr-content__text">Для сканирования штрихкода товара разрешите сайту Духи.ру использовать камеру
-						устройства</p>
+					<p class="qr-content__text">Для сканирования штрихкода товара разрешите сайту Духи.ру использовать камеру устройства</p>
 				</div>
-				<button data-popup="#qr-scan" id="qr-search" type="submit"
-					class="popup__button popup__button_qr">разрешить</button>
+				<button data-popup="#qr-scan" id="qr-search" type="submit" class="popup__button popup__button_qr">разрешить</button>
 			</div>
 		</div>
 	</div>
@@ -881,12 +716,12 @@
 <div id="qr-scan" aria-hidden="true" class="popup">
 	<div class="popup__wrapper">
 		<div class="popup__content">
-			<button data-close type="button" class="popup__close"><img src="@img/popup/close.svg" alt=""></button>
+			<button data-close type="button" class="popup__close"><img src="@img/popup/close.svg" alt="" /></button>
 			<div class="popup__body">
 				<h4 class="popup__title">Поиск товара по штрих-коду</h4>
 				<div class="popup__qr-content qr-content">
 					<div class="qr-content__img">
-						<img src="@img/search/qr-camera.jpg" alt="">
+						<img src="@img/search/qr-camera.jpg" alt="" />
 					</div>
 					<p class="qr-content__text">Сфокусируйте камеру на штрих-коде</p>
 				</div>
@@ -899,21 +734,19 @@
 <div id="advanced-search" aria-hidden="true" class="popup">
 	<div class="popup__wrapper">
 		<div class="popup__content">
-			<button data-close type="button" class="popup__close"><img src="@img/popup/close.svg" alt=""></button>
+			<button data-close type="button" class="popup__close"><img src="@img/popup/close.svg" alt="" /></button>
 			<div class="popup__body">
 				<h4 class="popup__title">выбор города</h4>
 				<form action="#" method="get" class="header-center__form advanced-search">
 					<div class="advanced-search__stroke-input">
-						<button class="header-center__button"><img src="@img/header/search30x30.svg" alt="Поиск"></button>
-						<input autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Поиск товара"
-							class="header-center__input input">
+						<button class="header-center__button"><img src="@img/header/search30x30.svg" alt="Поиск" /></button>
+						<input autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Поиск товара" class="header-center__input input" />
 					</div>
 					<div class="advanced-search__wrapper">
 						<div class="advanced-search__column">
 							<div class="filters__filter">
-								<div class="filters__item filter ">
+								<div class="filters__item filter">
 									<div class="filter__title-wrapper">
-
 										<span class="filter__title">категория</span>
 										<div class="filter__actions">
 											<div class="filter__val">только товары в наличии</div>
@@ -921,34 +754,24 @@
 									</div>
 									<div class="filter__body options">
 										<div class="options__item">
-											<input id="o_adv-s-6" class="options__input" checked type="radio"
-												value="только товары в наличии" name="option2">
-											<label for="o_adv-s-6" class="options__label"><span class="options__text">только товары
-													в наличии</span></label>
+											<input id="o_adv-s-6" class="options__input" checked type="radio" value="только товары в наличии" name="option2" />
+											<label for="o_adv-s-6" class="options__label"><span class="options__text">только товары в наличии</span></label>
 										</div>
 										<div class="options__item">
-											<input id="o_adv-s-7" class="options__input" type="radio"
-												value="только отсутствующие товары" name="option2">
-											<label for="o_adv-s-7" class="options__label"><span class="options__text">только
-													отсутствующие товары</span></label>
+											<input id="o_adv-s-7" class="options__input" type="radio" value="только отсутствующие товары" name="option2" />
+											<label for="o_adv-s-7" class="options__label"><span class="options__text">только отсутствующие товары</span></label>
 										</div>
 										<div class="options__item">
-											<input id="o_adv-s-8" class="options__input" type="radio" value="любые товары"
-												name="option2">
-											<label for="o_adv-s-8" class="options__label"><span class="options__text">любые
-													товары</span></label>
+											<input id="o_adv-s-8" class="options__input" type="radio" value="любые товары" name="option2" />
+											<label for="o_adv-s-8" class="options__label"><span class="options__text">любые товары</span></label>
 										</div>
 										<div class="options__item">
-											<input id="o_adv-s-9" class="options__input" type="radio" value="вначале дороже"
-												name="option2">
-											<label for="o_adv-s-9" class="options__label"><span class="options__text">вначале
-													дороже</span></label>
+											<input id="o_adv-s-9" class="options__input" type="radio" value="вначале дороже" name="option2" />
+											<label for="o_adv-s-9" class="options__label"><span class="options__text">вначале дороже</span></label>
 										</div>
 										<div class="options__item">
-											<input id="o_adv-s-10" class="options__input" type="radio" value="по популярности"
-												name="option2">
-											<label for="o_adv-s-10" class="options__label"><span class="options__text">по
-													популярности</span></label>
+											<input id="o_adv-s-10" class="options__input" type="radio" value="по популярности" name="option2" />
+											<label for="o_adv-s-10" class="options__label"><span class="options__text">по популярности</span></label>
 										</div>
 									</div>
 								</div>
@@ -956,25 +779,23 @@
 
 							<div class="filters__filter">
 								<button type="button" class="filter__reset">сбросить</button>
-								<div class="filters__item filter ">
+								<div class="filters__item filter">
 									<div class="filter__title-wrapper">
-
 										<span class="filter__title">цена</span>
 										<div class="filter__actions">
-											<div class="filter__val">от <span class="filter__val-low">30000</span> до <span
-													class="filter__val-max">15000</span> руб.</div>
+											<div class="filter__val">от <span class="filter__val-low">30000</span> до <span class="filter__val-max">15000</span> руб.</div>
 										</div>
 									</div>
 
 									<div class="filter__body range">
 										<div class="range__value">
 											<span class="range__text">от</span>
-											<div class="range__field-val " id="lower-cost"></div>
+											<div class="range__field-val" id="lower-cost"></div>
 											<span class="range__text">руб.</span>
 										</div>
 										<div class="range__value">
 											<span class="range__text">до</span>
-											<div class="range__field-val " id="upper-cost"></div>
+											<div class="range__field-val" id="upper-cost"></div>
 											<span class="range__text">руб.</span>
 										</div>
 										<div class="range__slider" id="range01-adv"></div>
@@ -984,25 +805,23 @@
 
 							<div class="filters__filter">
 								<button type="button" class="filter__reset">сбросить</button>
-								<div class="filters__item  filter">
+								<div class="filters__item filter">
 									<div class="filter__title-wrapper">
-
 										<span class="filter__title">объём</span>
 										<div class="filter__actions">
-											<div class="filter__val">от <span class="filter__val-low">20</span> до <span
-													class="filter__val-max">60</span> руб.</div>
+											<div class="filter__val">от <span class="filter__val-low">20</span> до <span class="filter__val-max">60</span> руб.</div>
 										</div>
 									</div>
 
 									<div class="filter__body range">
 										<div class="range__value">
 											<span class="range__text">от</span>
-											<div class="range__field-val " id="lower-volume"></div>
+											<div class="range__field-val" id="lower-volume"></div>
 											<span class="range__text">мл.</span>
 										</div>
 										<div class="range__value">
 											<span class="range__text">до</span>
-											<div class="range__field-val " id="upper-volume"></div>
+											<div class="range__field-val" id="upper-volume"></div>
 											<span class="range__text">мл.</span>
 										</div>
 										<div class="range__slider" id="range02-adv"></div>
@@ -1011,12 +830,10 @@
 							</div>
 						</div>
 						<div class="advanced-search__column">
-
 							<div class="filters__filter">
 								<button type="button" class="filter__reset-check">сбросить</button>
-								<div class="filters__item  filter">
+								<div class="filters__item filter">
 									<div class="filter__title-wrapper _spoller-active">
-
 										<span class="filter__title">парфюмерия</span>
 										<div class="filter__actions">
 											<div class="filter__val">туалетная вода (edt)</div>
@@ -1028,83 +845,83 @@
 											<ul class="filter__list">
 												<li class="filter__list-item">
 													<div class="checkbox">
-														<input id="c-adv_11" data-error="Ошибка" class="checkbox__input"
-															type="checkbox" value="туалетная вода (edt)" name="form[]">
+														<input id="c-adv_11" data-error="Ошибка" class="checkbox__input" type="checkbox" value="туалетная вода (edt)" name="form[]" />
 														<label for="c-adv_11" class="checkbox__label">
-															<span class="checkbox__body "></span>
-															<span class="checkbox__text">туалетная вода (edt)</span></label>
+															<span class="checkbox__body"></span>
+															<span class="checkbox__text">туалетная вода (edt)</span></label
+														>
 													</div>
 												</li>
 												<li class="filter__list-item">
 													<div class="checkbox">
-														<input id="c-adv_12" data-error="Ошибка" class="checkbox__input"
-															type="checkbox" value="парфюмерная вода (edp)" name="form[]">
+														<input id="c-adv_12" data-error="Ошибка" class="checkbox__input" type="checkbox" value="парфюмерная вода (edp)" name="form[]" />
 														<label for="c-adv_12" class="checkbox__label">
-															<span class="checkbox__body "></span>
-															<span class="checkbox__text">парфюмерная вода (edp)</span></label>
+															<span class="checkbox__body"></span>
+															<span class="checkbox__text">парфюмерная вода (edp)</span></label
+														>
 													</div>
 												</li>
 												<li class="filter__list-item">
 													<div class="checkbox">
-														<input id="c-adv_13" data-error="Ошибка" class="checkbox__input"
-															type="checkbox" value="духи (parfum)" name="form[]">
+														<input id="c-adv_13" data-error="Ошибка" class="checkbox__input" type="checkbox" value="духи (parfum)" name="form[]" />
 														<label for="c-adv_13" class="checkbox__label">
-															<span class="checkbox__body "></span>
-															<span class="checkbox__text">духи (parfum)</span></label>
+															<span class="checkbox__body"></span>
+															<span class="checkbox__text">духи (parfum)</span></label
+														>
 													</div>
 												</li>
 												<li class="filter__list-item">
 													<div class="checkbox">
-														<input id="c-adv_14" data-error="Ошибка" class="checkbox__input"
-															type="checkbox" value="одеколон (colonge)" name="form[]">
+														<input id="c-adv_14" data-error="Ошибка" class="checkbox__input" type="checkbox" value="одеколон (colonge)" name="form[]" />
 														<label for="c-adv_14" class="checkbox__label">
-															<span class="checkbox__body "></span>
-															<span class="checkbox__text">одеколон (colonge)</span></label>
+															<span class="checkbox__body"></span>
+															<span class="checkbox__text">одеколон (colonge)</span></label
+														>
 													</div>
 												</li>
 												<li class="filter__list-item">
 													<div class="checkbox">
-														<input id="c-adv_15" data-error="Ошибка" class="checkbox__input"
-															type="checkbox" value="одеколон (colonge)" name="form[]">
+														<input id="c-adv_15" data-error="Ошибка" class="checkbox__input" type="checkbox" value="одеколон (colonge)" name="form[]" />
 														<label for="c-adv_15" class="checkbox__label">
-															<span class="checkbox__body "></span>
-															<span class="checkbox__text">одеколон (colonge)</span></label>
+															<span class="checkbox__body"></span>
+															<span class="checkbox__text">одеколон (colonge)</span></label
+														>
 													</div>
 												</li>
 												<li class="filter__list-item">
 													<div class="checkbox">
-														<input id="c-adv_16" data-error="Ошибка" class="checkbox__input"
-															type="checkbox" value="одеколон (colonge)" name="form[]">
+														<input id="c-adv_16" data-error="Ошибка" class="checkbox__input" type="checkbox" value="одеколон (colonge)" name="form[]" />
 														<label for="c-adv_16" class="checkbox__label">
-															<span class="checkbox__body "></span>
-															<span class="checkbox__text">одеколон (colonge)</span></label>
+															<span class="checkbox__body"></span>
+															<span class="checkbox__text">одеколон (colonge)</span></label
+														>
 													</div>
 												</li>
 												<li class="filter__list-item">
 													<div class="checkbox">
-														<input id="c-adv_17" data-error="Ошибка" class="checkbox__input"
-															type="checkbox" value="одеколон (colonge)" name="form[]">
+														<input id="c-adv_17" data-error="Ошибка" class="checkbox__input" type="checkbox" value="одеколон (colonge)" name="form[]" />
 														<label for="c-adv_17" class="checkbox__label">
-															<span class="checkbox__body "></span>
-															<span class="checkbox__text">одеколон (colonge)</span></label>
+															<span class="checkbox__body"></span>
+															<span class="checkbox__text">одеколон (colonge)</span></label
+														>
 													</div>
 												</li>
 												<li class="filter__list-item">
 													<div class="checkbox">
-														<input id="c-adv_18" data-error="Ошибка" class="checkbox__input"
-															type="checkbox" value="одеколон (colonge)" name="form[]">
+														<input id="c-adv_18" data-error="Ошибка" class="checkbox__input" type="checkbox" value="одеколон (colonge)" name="form[]" />
 														<label for="c-adv_18" class="checkbox__label">
-															<span class="checkbox__body "></span>
-															<span class="checkbox__text">одеколон (colonge)</span></label>
+															<span class="checkbox__body"></span>
+															<span class="checkbox__text">одеколон (colonge)</span></label
+														>
 													</div>
 												</li>
 												<li class="filter__list-item">
 													<div class="checkbox">
-														<input id="c-adv_19" data-error="Ошибка" class="checkbox__input"
-															type="checkbox" value="одеколон (colonge)" name="form[]">
+														<input id="c-adv_19" data-error="Ошибка" class="checkbox__input" type="checkbox" value="одеколон (colonge)" name="form[]" />
 														<label for="c-adv_19" class="checkbox__label">
-															<span class="checkbox__body "></span>
-															<span class="checkbox__text">одеколон (colonge)</span></label>
+															<span class="checkbox__body"></span>
+															<span class="checkbox__text">одеколон (colonge)</span></label
+														>
 													</div>
 												</li>
 											</ul>
@@ -1115,9 +932,8 @@
 
 							<div class="filters__filter">
 								<button type="button" class="filter__reset-check">сбросить</button>
-								<div class="filters__item  filters__item_manufacturer filter">
+								<div class="filters__item filters__item_manufacturer filter">
 									<div class="filter__title-wrapper _spoller-active">
-
 										<span class="filter__title">производители</span>
 										<div class="filter__actions">
 											<div class="filter__val">Chanel</div>
@@ -1126,120 +942,119 @@
 
 									<div class="filter__body showmore">
 										<div class="header-center__form">
-											<input id="search-brnds-adv" autocomplete="off" type="search" name="form[]"
-												data-error="Ошибка" placeholder="Поиск товара" class="header-center__input input">
+											<input id="search-brnds-adv" autocomplete="off" type="search" name="form[]" data-error="Ошибка" placeholder="Поиск товара" class="header-center__input input" />
 											<span class="header-center__button search-button">
-												<img class="img-search-small" src="@img/header/search30x30.svg" alt="Поиск">
+												<img class="img-search-small" src="@img/header/search30x30.svg" alt="Поиск" />
 											</span>
 										</div>
-										<div class="filter__showmore ">
+										<div class="filter__showmore">
 											<ul class="filter__list">
 												<li class="filter__list-item">
 													<div class="checkbox">
-														<input id="c_21" data-error="Ошибка" class="checkbox__input" type="checkbox"
-															value="Chanel" name="form[]">
+														<input id="c_21" data-error="Ошибка" class="checkbox__input" type="checkbox" value="Chanel" name="form[]" />
 														<label for="c_21" class="checkbox__label">
-															<span class="checkbox__body "></span>
-															<span class="checkbox__text">Chanel</span></label>
+															<span class="checkbox__body"></span>
+															<span class="checkbox__text">Chanel</span></label
+														>
 													</div>
 												</li>
 												<li class="filter__list-item">
 													<div class="checkbox">
-														<input id="c_22" data-error="Ошибка" class="checkbox__input" type="checkbox"
-															value="Versage" name="form[]">
+														<input id="c_22" data-error="Ошибка" class="checkbox__input" type="checkbox" value="Versage" name="form[]" />
 														<label for="c_22" class="checkbox__label">
-															<span class="checkbox__body "></span>
-															<span class="checkbox__text">Versage</span></label>
+															<span class="checkbox__body"></span>
+															<span class="checkbox__text">Versage</span></label
+														>
 													</div>
 												</li>
 												<li class="filter__list-item">
 													<div class="checkbox">
-														<input id="c_23" data-error="Ошибка" class="checkbox__input" type="checkbox"
-															value="Calvin Klein" name="form[]">
+														<input id="c_23" data-error="Ошибка" class="checkbox__input" type="checkbox" value="Calvin Klein" name="form[]" />
 														<label for="c_23" class="checkbox__label">
-															<span class="checkbox__body "></span>
-															<span class="checkbox__text">Calvin Klein</span></label>
+															<span class="checkbox__body"></span>
+															<span class="checkbox__text">Calvin Klein</span></label
+														>
 													</div>
 												</li>
 												<li class="filter__list-item">
 													<div class="checkbox">
-														<input id="c_24" data-error="Ошибка" class="checkbox__input" type="checkbox"
-															value="Lacoste Pour Elle" name="form[]">
+														<input id="c_24" data-error="Ошибка" class="checkbox__input" type="checkbox" value="Lacoste Pour Elle" name="form[]" />
 														<label for="c_24" class="checkbox__label">
-															<span class="checkbox__body "></span>
-															<span class="checkbox__text">Lacoste Pour Elle</span></label>
+															<span class="checkbox__body"></span>
+															<span class="checkbox__text">Lacoste Pour Elle</span></label
+														>
 													</div>
 												</li>
 												<li class="filter__list-item">
 													<div class="checkbox">
-														<input id="c_25" data-error="Ошибка" class="checkbox__input" type="checkbox"
-															value="Escentric Molecules" name="form[]">
+														<input id="c_25" data-error="Ошибка" class="checkbox__input" type="checkbox" value="Escentric Molecules" name="form[]" />
 														<label for="c_25" class="checkbox__label">
-															<span class="checkbox__body "></span>
-															<span class="checkbox__text">Escentric Molecules</span></label>
+															<span class="checkbox__body"></span>
+															<span class="checkbox__text">Escentric Molecules</span></label
+														>
 													</div>
 												</li>
 												<li class="filter__list-item">
 													<div class="checkbox">
-														<input id="c_26" data-error="Ошибка" class="checkbox__input" type="checkbox"
-															value="Christian Dior Sauvage" name="form[]">
+														<input id="c_26" data-error="Ошибка" class="checkbox__input" type="checkbox" value="Christian Dior Sauvage" name="form[]" />
 														<label for="c_26" class="checkbox__label">
-															<span class="checkbox__body "></span>
-															<span class="checkbox__text">Christian Dior Sauvage</span></label>
+															<span class="checkbox__body"></span>
+															<span class="checkbox__text">Christian Dior Sauvage</span></label
+														>
 													</div>
 												</li>
 												<li class="filter__list-item">
 													<div class="checkbox">
-														<input id="c_27" data-error="Ошибка" class="checkbox__input" type="checkbox"
-															value="Chanel" name="form[]">
+														<input id="c_27" data-error="Ошибка" class="checkbox__input" type="checkbox" value="Chanel" name="form[]" />
 														<label for="c_27" class="checkbox__label">
-															<span class="checkbox__body "></span>
-															<span class="checkbox__text">Chanel</span></label>
+															<span class="checkbox__body"></span>
+															<span class="checkbox__text">Chanel</span></label
+														>
 													</div>
 												</li>
 												<li class="filter__list-item">
 													<div class="checkbox">
-														<input id="c_28" data-error="Ошибка" class="checkbox__input" type="checkbox"
-															value="Versage" name="form[]">
+														<input id="c_28" data-error="Ошибка" class="checkbox__input" type="checkbox" value="Versage" name="form[]" />
 														<label for="c_28" class="checkbox__label">
-															<span class="checkbox__body "></span>
-															<span class="checkbox__text">Versage</span></label>
+															<span class="checkbox__body"></span>
+															<span class="checkbox__text">Versage</span></label
+														>
 													</div>
 												</li>
 												<li class="filter__list-item">
 													<div class="checkbox">
-														<input id="c_29" data-error="Ошибка" class="checkbox__input" type="checkbox"
-															value="Calvin Klein" name="form[]">
+														<input id="c_29" data-error="Ошибка" class="checkbox__input" type="checkbox" value="Calvin Klein" name="form[]" />
 														<label for="c_29" class="checkbox__label">
-															<span class="checkbox__body "></span>
-															<span class="checkbox__text">Calvin Klein</span></label>
+															<span class="checkbox__body"></span>
+															<span class="checkbox__text">Calvin Klein</span></label
+														>
 													</div>
 												</li>
 												<li class="filter__list-item">
 													<div class="checkbox">
-														<input id="c_210" data-error="Ошибка" class="checkbox__input" type="checkbox"
-															value="Lacoste Pour Elle" name="form[]">
+														<input id="c_210" data-error="Ошибка" class="checkbox__input" type="checkbox" value="Lacoste Pour Elle" name="form[]" />
 														<label for="c_210" class="checkbox__label">
-															<span class="checkbox__body "></span>
-															<span class="checkbox__text">Lacoste Pour Elle</span></label>
+															<span class="checkbox__body"></span>
+															<span class="checkbox__text">Lacoste Pour Elle</span></label
+														>
 													</div>
 												</li>
 												<li class="filter__list-item">
 													<div class="checkbox">
-														<input id="c_211" data-error="Ошибка" class="checkbox__input" type="checkbox"
-															value="Escentric Molecules" name="form[]">
+														<input id="c_211" data-error="Ошибка" class="checkbox__input" type="checkbox" value="Escentric Molecules" name="form[]" />
 														<label for="c_211" class="checkbox__label">
-															<span class="checkbox__body "></span>
-															<span class="checkbox__text">Escentric Molecules</span></label>
+															<span class="checkbox__body"></span>
+															<span class="checkbox__text">Escentric Molecules</span></label
+														>
 													</div>
 												</li>
 												<li class="filter__list-item">
 													<div class="checkbox">
-														<input id="c_212" data-error="Ошибка" class="checkbox__input" type="checkbox"
-															value="Christian Dior Sauvage" name="form[]">
+														<input id="c_212" data-error="Ошибка" class="checkbox__input" type="checkbox" value="Christian Dior Sauvage" name="form[]" />
 														<label for="c_212" class="checkbox__label">
-															<span class="checkbox__body "></span>
-															<span class="checkbox__text">Christian Dior Sauvage</span></label>
+															<span class="checkbox__body"></span>
+															<span class="checkbox__text">Christian Dior Sauvage</span></label
+														>
 													</div>
 												</li>
 											</ul>
@@ -1247,136 +1062,107 @@
 									</div>
 								</div>
 							</div>
-
 						</div>
 						<div class="advanced-search__column">
 							<div class="filters__filter">
-								<div class="filters__item  filter">
+								<div class="filters__item filter">
 									<div class="filter__title-wrapper">
 										<span class="filter__title filter__title-help">тестеры</span>
-										<img data-tippy-content-testers class="filter__help" src="@img/catalog/vopros.svg"
-											alt="подсказка">
+										<img data-tippy-content-testers class="filter__help" src="@img/catalog/vopros.svg" alt="подсказка" />
 										<div class="filter__actions">
 											<div class="filter__val">в том числе тестеры</div>
 										</div>
 									</div>
 									<div class="filter__body options">
 										<div class="options__item">
-											<input id="o_testers1-adv" class="options__input" type="radio" value="только тестеры"
-												name="option4">
-											<label for="o_testers1-adv" class="options__label"><span class="options__text">только
-													тестеры</span></label>
+											<input id="o_testers1-adv" class="options__input" type="radio" value="только тестеры" name="option4" />
+											<label for="o_testers1-adv" class="options__label"><span class="options__text">только тестеры</span></label>
 										</div>
 										<div class="options__item">
-											<input id="o_testers2-adv" class="options__input" checked type="radio"
-												value="в том числе тестеры" name="option4">
-											<label for="o_testers2-adv" class="options__label"><span class="options__text">в том
-													числе тестеры</span></label>
+											<input id="o_testers2-adv" class="options__input" checked type="radio" value="в том числе тестеры" name="option4" />
+											<label for="o_testers2-adv" class="options__label"><span class="options__text">в том числе тестеры</span></label>
 										</div>
 										<div class="options__item">
-											<input id="o_testers3-adv" class="options__input" type="radio"
-												value="исключить тестеры" name="option4">
-											<label for="o_testers3-adv" class="options__label"><span
-													class="options__text">исключить тестеры</span></label>
+											<input id="o_testers3-adv" class="options__input" type="radio" value="исключить тестеры" name="option4" />
+											<label for="o_testers3-adv" class="options__label"><span class="options__text">исключить тестеры</span></label>
 										</div>
 									</div>
 								</div>
 							</div>
 
 							<div class="filters__filter">
-								<div class="filters__item  filter">
+								<div class="filters__item filter">
 									<div class="filter__title-wrapper">
 										<span class="filter__title filter__title-help">наборы</span>
-										<img data-tippy-content-nab class="filter__help" src="@img/catalog/vopros.svg"
-											alt="подсказка">
+										<img data-tippy-content-nab class="filter__help" src="@img/catalog/vopros.svg" alt="подсказка" />
 										<div class="filter__actions">
 											<div class="filter__val">в том числе наборы</div>
 										</div>
 									</div>
 									<div class="filter__body options">
 										<div class="options__item">
-											<input id="o_nab1-adv" class="options__input" type="radio" value="только наборы"
-												name="option3">
-											<label for="o_nab1-adv" class="options__label"><span class="options__text">только
-													наборы</span></label>
+											<input id="o_nab1-adv" class="options__input" type="radio" value="только наборы" name="option3" />
+											<label for="o_nab1-adv" class="options__label"><span class="options__text">только наборы</span></label>
 										</div>
 										<div class="options__item">
-											<input id="o_nab2-adv" class="options__input" checked type="radio"
-												value="в том числе наборы" name="option3">
-											<label for="o_nab2-adv" class="options__label"><span class="options__text">в том числе
-													наборы</span></label>
+											<input id="o_nab2-adv" class="options__input" checked type="radio" value="в том числе наборы" name="option3" />
+											<label for="o_nab2-adv" class="options__label"><span class="options__text">в том числе наборы</span></label>
 										</div>
 										<div class="options__item">
-											<input id="o_nab3-adv" class="options__input" type="radio" value="исключить наборы"
-												name="option3">
-											<label for="o_nab3-adv" class="options__label"><span class="options__text">исключить
-													наборы</span></label>
+											<input id="o_nab3-adv" class="options__input" type="radio" value="исключить наборы" name="option3" />
+											<label for="o_nab3-adv" class="options__label"><span class="options__text">исключить наборы</span></label>
 										</div>
 									</div>
 								</div>
 							</div>
 
 							<div class="filters__filter">
-								<div class="filters__item  filter">
+								<div class="filters__item filter">
 									<div class="filter__title-wrapper">
 										<span class="filter__title filter__title-help">миниатюры и пробники</span>
-										<img data-tippy-content-miniature class="filter__help" src="@img/catalog/vopros.svg"
-											alt="подсказка">
+										<img data-tippy-content-miniature class="filter__help" src="@img/catalog/vopros.svg" alt="подсказка" />
 										<div class="filter__actions">
 											<div class="filter__val">в том числе миниатюры</div>
 										</div>
 									</div>
 									<div class="filter__body options">
 										<div class="options__item">
-											<input id="o_min1-adv" class="options__input" type="radio" value="только миниатюры"
-												name="option2">
-											<label for="o_min1-adv" class="options__label"><span class="options__text">только
-													миниатюры</span></label>
+											<input id="o_min1-adv" class="options__input" type="radio" value="только миниатюры" name="option2" />
+											<label for="o_min1-adv" class="options__label"><span class="options__text">только миниатюры</span></label>
 										</div>
 										<div class="options__item">
-											<input id="o_min2-adv" class="options__input" checked type="radio"
-												value="в том числе миниатюры" name="option2">
-											<label for="o_min2-adv" class="options__label"><span class="options__text">в том числе
-													миниатюры</span></label>
+											<input id="o_min2-adv" class="options__input" checked type="radio" value="в том числе миниатюры" name="option2" />
+											<label for="o_min2-adv" class="options__label"><span class="options__text">в том числе миниатюры</span></label>
 										</div>
 										<div class="options__item">
-											<input id="o_min3-adv" class="options__input" type="radio" value="исключить миниатюры"
-												name="option2">
-											<label for="o_min3-adv" class="options__label"><span class="options__text">исключить
-													миниатюры</span></label>
+											<input id="o_min3-adv" class="options__input" type="radio" value="исключить миниатюры" name="option2" />
+											<label for="o_min3-adv" class="options__label"><span class="options__text">исключить миниатюры</span></label>
 										</div>
 									</div>
 								</div>
 							</div>
 
 							<div class="filters__filter">
-								<div class="filters__item  filter">
+								<div class="filters__item filter">
 									<div class="filter__title-wrapper">
 										<span class="filter__title filter__title-help">отливанты</span>
-										<img data-tippy-content-otliv class="filter__help" src="@img/catalog/vopros.svg"
-											alt="подсказка">
+										<img data-tippy-content-otliv class="filter__help" src="@img/catalog/vopros.svg" alt="подсказка" />
 										<div class="filter__actions">
 											<div class="filter__val">в том числе отливанты</div>
 										</div>
 									</div>
 									<div class="filter__body options">
 										<div class="options__item">
-											<input id="o_otliv1-adv" class="options__input" type="radio" value="только отливанты"
-												name="option1">
-											<label for="o_otliv1-adv" class="options__label"><span class="options__text">только
-													отливанты</span></label>
+											<input id="o_otliv1-adv" class="options__input" type="radio" value="только отливанты" name="option1" />
+											<label for="o_otliv1-adv" class="options__label"><span class="options__text">только отливанты</span></label>
 										</div>
 										<div class="options__item">
-											<input id="o_otliv2-adv" class="options__input" checked type="radio"
-												value="в том числе отливанты" name="option1">
-											<label for="o_otliv2-adv" class="options__label"><span class="options__text">в том
-													числе отливанты</span></label>
+											<input id="o_otliv2-adv" class="options__input" checked type="radio" value="в том числе отливанты" name="option1" />
+											<label for="o_otliv2-adv" class="options__label"><span class="options__text">в том числе отливанты</span></label>
 										</div>
 										<div class="options__item">
-											<input id="o_otliv3-adv" class="options__input" type="radio"
-												value="исключить отливанты" name="option1">
-											<label for="o_otliv3-adv" class="options__label"><span class="options__text">исключить
-													отливанты</span></label>
+											<input id="o_otliv3-adv" class="options__input" type="radio" value="исключить отливанты" name="option1" />
+											<label for="o_otliv3-adv" class="options__label"><span class="options__text">исключить отливанты</span></label>
 										</div>
 									</div>
 								</div>
@@ -1390,7 +1176,6 @@
 	</div>
 </div>
 
-
 <!-- Выбор города -->
 
 <div id="cityChoice" aria-hidden="true" class="popup">
@@ -1402,8 +1187,7 @@
 					<div class="city-choice__text">Ваш город - <span class="city-choice__name">г. Москва?</span></div>
 					<div class="city-choice__buttons">
 						<button type="button" class="city-choice__button">да, все верно</button>
-						<button data-popup="#city" type="button" class="city-choice__button city-choice__button_none">Нет,
-							изменить</button>
+						<button data-popup="#city" type="button" class="city-choice__button city-choice__button_none">Нет, изменить</button>
 					</div>
 				</div>
 			</div>
@@ -1411,74 +1195,33 @@
 	</div>
 </div>
 
-
 <!-- Полное описание товара -->
 <div id="description-popup" aria-hidden="true" class="popup">
 	<div class="popup__wrapper">
 		<div class="popup__content">
-			<button data-close type="button" class="popup__close"><img src="@img/popup/close.svg" alt=""></button>
+			<button data-close type="button" class="popup__close"><img src="@img/popup/close.svg" alt="" /></button>
 			<div class="popup__body">
 				<h4 class="popup__title">Описание аромата</h4>
 				<div class="popup__text popup__text_product">
-					<p>Неизменной классикой женской парфюмерии является аромат Chanel Chance и многочисленные фланкеры этого
-						коктейля. <br><br>
-						В 2015 году парфюмер Оливье Пешо представил новую версию классической истории. Цветочные
-						древесно-мускусные коктейль Chanel
-						Chance Eau Vive призван радовать давних поклонников этого прилагательного и женственного букета.
-						Парфюмерная линейка «Шанс»
-						пополнилась ароматом с более звонким и свежим характером. Полупрозрачный шлейф аромата уместен в
-						жаркий день, когда женщине
-						остро необходима легкость и деликатность. Пикантная аура стартует сочной интригой сицилийского
-						апельсина и горечью грейпфрута.
-						Жизнерадостный коктейль переходит в утонченность
+					<p>
+						Неизменной классикой женской парфюмерии является аромат Chanel Chance и многочисленные фланкеры этого коктейля. <br /><br />
+						В 2015 году парфюмер Оливье Пешо представил новую версию классической истории. Цветочные древесно-мускусные коктейль Chanel Chance Eau Vive призван радовать давних поклонников этого прилагательного и женственного букета. Парфюмерная линейка «Шанс» пополнилась ароматом с более звонким и свежим характером. Полупрозрачный шлейф аромата уместен в жаркий день, когда женщине остро необходима легкость и деликатность. Пикантная аура стартует сочной интригой сицилийского апельсина и горечью грейпфрута. Жизнерадостный коктейль переходит в утонченность
 					</p>
-					<p>Неизменной классикой женской парфюмерии является аромат Chanel Chance и многочисленные фланкеры этого
-						коктейля. <br><br>
-						В 2015 году парфюмер Оливье Пешо представил новую версию классической истории. Цветочные
-						древесно-мускусные коктейль Chanel
-						Chance Eau Vive призван радовать давних поклонников этого прилагательного и женственного букета.
-						Парфюмерная линейка «Шанс»
-						пополнилась ароматом с более звонким и свежим характером. Полупрозрачный шлейф аромата уместен в
-						жаркий день, когда женщине
-						остро необходима легкость и деликатность. Пикантная аура стартует сочной интригой сицилийского
-						апельсина и горечью грейпфрута.
-						Жизнерадостный коктейль переходит в утонченность
+					<p>
+						Неизменной классикой женской парфюмерии является аромат Chanel Chance и многочисленные фланкеры этого коктейля. <br /><br />
+						В 2015 году парфюмер Оливье Пешо представил новую версию классической истории. Цветочные древесно-мускусные коктейль Chanel Chance Eau Vive призван радовать давних поклонников этого прилагательного и женственного букета. Парфюмерная линейка «Шанс» пополнилась ароматом с более звонким и свежим характером. Полупрозрачный шлейф аромата уместен в жаркий день, когда женщине остро необходима легкость и деликатность. Пикантная аура стартует сочной интригой сицилийского апельсина и горечью грейпфрута. Жизнерадостный коктейль переходит в утонченность
 					</p>
-					<p>Неизменной классикой женской парфюмерии является аромат Chanel Chance и многочисленные фланкеры этого
-						коктейля. <br><br>
-						В 2015 году парфюмер Оливье Пешо представил новую версию классической истории. Цветочные
-						древесно-мускусные коктейль Chanel
-						Chance Eau Vive призван радовать давних поклонников этого прилагательного и женственного букета.
-						Парфюмерная линейка «Шанс»
-						пополнилась ароматом с более звонким и свежим характером. Полупрозрачный шлейф аромата уместен в
-						жаркий день, когда женщине
-						остро необходима легкость и деликатность. Пикантная аура стартует сочной интригой сицилийского
-						апельсина и горечью грейпфрута.
-						Жизнерадостный коктейль переходит в утонченность
+					<p>
+						Неизменной классикой женской парфюмерии является аромат Chanel Chance и многочисленные фланкеры этого коктейля. <br /><br />
+						В 2015 году парфюмер Оливье Пешо представил новую версию классической истории. Цветочные древесно-мускусные коктейль Chanel Chance Eau Vive призван радовать давних поклонников этого прилагательного и женственного букета. Парфюмерная линейка «Шанс» пополнилась ароматом с более звонким и свежим характером. Полупрозрачный шлейф аромата уместен в жаркий день, когда женщине остро необходима легкость и деликатность. Пикантная аура стартует сочной интригой сицилийского апельсина и горечью грейпфрута. Жизнерадостный коктейль переходит в утонченность
 					</p>
-					<p>Неизменной классикой женской парфюмерии является аромат Chanel Chance и многочисленные фланкеры этого
-						коктейля. <br><br>
-						В 2015 году парфюмер Оливье Пешо представил новую версию классической истории. Цветочные
-						древесно-мускусные коктейль Chanel
-						Chance Eau Vive призван радовать давних поклонников этого прилагательного и женственного букета.
-						Парфюмерная линейка «Шанс»
-						пополнилась ароматом с более звонким и свежим характером. Полупрозрачный шлейф аромата уместен в
-						жаркий день, когда женщине
-						остро необходима легкость и деликатность. Пикантная аура стартует сочной интригой сицилийского
-						апельсина и горечью грейпфрута.
-						Жизнерадостный коктейль переходит в утонченность
+					<p>
+						Неизменной классикой женской парфюмерии является аромат Chanel Chance и многочисленные фланкеры этого коктейля. <br /><br />
+						В 2015 году парфюмер Оливье Пешо представил новую версию классической истории. Цветочные древесно-мускусные коктейль Chanel Chance Eau Vive призван радовать давних поклонников этого прилагательного и женственного букета. Парфюмерная линейка «Шанс» пополнилась ароматом с более звонким и свежим характером. Полупрозрачный шлейф аромата уместен в жаркий день, когда женщине остро необходима легкость и деликатность. Пикантная аура стартует сочной интригой сицилийского апельсина и горечью грейпфрута. Жизнерадостный коктейль переходит в утонченность
 					</p>
-					<p>Неизменной классикой женской парфюмерии является аромат Chanel Chance и многочисленные фланкеры этого
-						коктейля. <br><br>
-						В 2015 году парфюмер Оливье Пешо представил новую версию классической истории. Цветочные
-						древесно-мускусные коктейль Chanel
-						Chance Eau Vive призван радовать давних поклонников этого прилагательного и женственного букета.
-						Парфюмерная линейка «Шанс»
-						пополнилась ароматом с более звонким и свежим характером. Полупрозрачный шлейф аромата уместен в
-						жаркий день, когда женщине
-						остро необходима легкость и деликатность. Пикантная аура стартует сочной интригой сицилийского
-						апельсина и горечью грейпфрута.
-						Жизнерадостный коктейль переходит в утонченность
+					<p>
+						Неизменной классикой женской парфюмерии является аромат Chanel Chance и многочисленные фланкеры этого коктейля. <br /><br />
+						В 2015 году парфюмер Оливье Пешо представил новую версию классической истории. Цветочные древесно-мускусные коктейль Chanel Chance Eau Vive призван радовать давних поклонников этого прилагательного и женственного букета. Парфюмерная линейка «Шанс» пополнилась ароматом с более звонким и свежим характером. Полупрозрачный шлейф аромата уместен в жаркий день, когда женщине остро необходима легкость и деликатность. Пикантная аура стартует сочной интригой сицилийского апельсина и горечью грейпфрута. Жизнерадостный коктейль переходит в утонченность
 					</p>
 				</div>
 			</div>
@@ -1486,27 +1229,24 @@
 	</div>
 </div>
 
-
 <!-- Добавить в список -->
 <div id="add-list" aria-hidden="true" class="popup">
 	<div class="popup__wrapper">
 		<div class="popup__content">
-			<button data-close type="button" class="popup__close"><img src="@img/popup/close.svg" alt=""></button>
+			<button data-close type="button" class="popup__close"><img src="@img/popup/close.svg" alt="" /></button>
 			<div class="popup__body">
 				<h3 class="popup__title">Списки</h3>
-				<p class="popup__text popup__text_notify">
-					Укажите списки, в которые следует добавить товар, или создайте для этого новый список.
-				</p>
+				<p class="popup__text popup__text_notify">Укажите списки, в которые следует добавить товар, или создайте для этого новый список.</p>
 				<div class="popup__list list-popup">
 					<div class="list-popup__top">
 						<button type="button" class="list-popup__button-top">
-							<img src="@img/popup/plus-add-list.svg" alt="">
+							<img src="@img/popup/plus-add-list.svg" alt="" />
 							<span class="list-popup__button-text">Добавить новый список</span>
 						</button>
 						<div class="list-popup__add">
 							<div class="popup__form-item">
 								<div class="popup__input-wrap">
-									<input id="add-list-item" autocomplete="off" type="text" name="form[]" data-error="Ошибка" class="popup__input">
+									<input id="add-list-item" autocomplete="off" type="text" name="form[]" data-error="Ошибка" class="popup__input" />
 									<label for="add-list-item" class="popup__label">добавить новый список</label>
 								</div>
 								<div class="list-popup__actions">
@@ -1519,50 +1259,45 @@
 					<ul class="list-popup__body">
 						<li class="list-popup__item list-popup__item-first">
 							<div class="checkbox">
-								<input id="add_all" data-error="Ошибка" class="checkbox__input"
-									type="checkbox" value="Chanel" name="form[]">
+								<input id="add_all" data-error="Ошибка" class="checkbox__input" type="checkbox" value="Chanel" name="form[]" />
 								<label for="add_all" class="checkbox__label">
-									<span class="checkbox__body "></span>
+									<span class="checkbox__body"></span>
 									<span class="checkbox__text">Выбрать все</span>
 								</label>
 							</div>
 						</li>
 						<li class="list-popup__item">
 							<div class="checkbox">
-								<input id="add_1" data-error="Ошибка" class="checkbox__input"
-									type="checkbox" value="Chanel" name="form[]">
+								<input id="add_1" data-error="Ошибка" class="checkbox__input" type="checkbox" value="Chanel" name="form[]" />
 								<label for="add_1" class="checkbox__label">
-									<span class="checkbox__body "></span>
+									<span class="checkbox__body"></span>
 									<span class="checkbox__text">Название 1</span>
 								</label>
 							</div>
 						</li>
 						<li class="list-popup__item">
 							<div class="checkbox">
-								<input id="add_2" data-error="Ошибка" class="checkbox__input"
-									type="checkbox" value="Chanel" name="form[]">
+								<input id="add_2" data-error="Ошибка" class="checkbox__input" type="checkbox" value="Chanel" name="form[]" />
 								<label for="add_2" class="checkbox__label">
-									<span class="checkbox__body "></span>
+									<span class="checkbox__body"></span>
 									<span class="checkbox__text">Список предположим с каким то невообразимым длинным названием. Значит нам наверное нужно ограничение по символам?</span>
 								</label>
 							</div>
 						</li>
 						<li class="list-popup__item">
 							<div class="checkbox">
-								<input id="add_3" data-error="Ошибка" class="checkbox__input"
-									type="checkbox" value="Chanel" name="form[]">
+								<input id="add_3" data-error="Ошибка" class="checkbox__input" type="checkbox" value="Chanel" name="form[]" />
 								<label for="add_3" class="checkbox__label">
-									<span class="checkbox__body "></span>
+									<span class="checkbox__body"></span>
 									<span class="checkbox__text">Название 1</span>
 								</label>
 							</div>
 						</li>
 						<li class="list-popup__item">
 							<div class="checkbox">
-								<input id="add_4" data-error="Ошибка" class="checkbox__input"
-									type="checkbox" value="Chanel" name="form[]">
+								<input id="add_4" data-error="Ошибка" class="checkbox__input" type="checkbox" value="Chanel" name="form[]" />
 								<label for="add_4" class="checkbox__label">
-									<span class="checkbox__body "></span>
+									<span class="checkbox__body"></span>
 									<span class="checkbox__text">jnf sdjfnk jsdfnksjdfn ks</span>
 								</label>
 							</div>
@@ -1581,13 +1316,13 @@
 <div id="no-sms" aria-hidden="true" class="popup popup-more">
 	<div class="popup__wrapper">
 		<div class="popup__content">
-			<button data-close type="button" class="popup__close"><img src="@img/popup/close.svg" alt=""></button>
+			<button data-close type="button" class="popup__close"><img src="@img/popup/close.svg" alt="" /></button>
 			<div class="popup__body">
 				<h4 class="popup__title">повторное СМС</h4>
 				<form method="post" action="#" class="popup__form">
 					<div class="popup__form-item">
 						<div class="popup__input-wrap">
-							<input id="secondsms" required autocomplete="off" type="text" name="form[]" data-error="Ошибка" class="popup__input origin-input">
+							<input id="secondsms" required autocomplete="off" type="text" name="form[]" data-error="Ошибка" class="popup__input origin-input" />
 							<label for="secondsms" class="popup__label">укажите номер телефона</label>
 						</div>
 					</div>
@@ -1600,22 +1335,20 @@
 	</div>
 </div>
 
-
-
 <div id="add-address" aria-hidden="true" class="popup">
 	<div class="popup__wrapper">
 		<div class="popup__content">
-			<button data-close type="button" class="popup__close"><img src="@img/popup/close.svg" alt=""></button>
+			<button data-close type="button" class="popup__close"><img src="@img/popup/close.svg" alt="" /></button>
 			<div class="popup__body">
 				<h4 class="popup__title">добавить новый адрес доставки</h4>
 				<form method="post" action="#" class="popup__form">
 					<div class="popup__form-item">
-						<input id="country" required autocomplete="off" type="text" name="form[]" data-error="Ошибка" class="popup__input">
+						<input id="country" required autocomplete="off" type="text" name="form[]" data-error="Ошибка" class="popup__input" />
 						<label for="country" class="popup__label">страна</label>
 					</div>
-					<div class="popup__form-item ">
-							<input style="text-overflow: ellipsis;" id="city-data" value="Тверь" required autocomplete="off" type="text" name="form[]" data-error="Ошибка" class="popup__input input-submenu">
-							<label for="city-data" class="popup__label">город</label>
+					<div class="popup__form-item">
+						<input style="text-overflow: ellipsis" id="city-data" value="Тверь" required autocomplete="off" type="text" name="form[]" data-error="Ошибка" class="popup__input input-submenu" />
+						<label for="city-data" class="popup__label">город</label>
 						<ul class="popup__submenu">
 							<li class="popup__submenu-item">В пределах МКАД, Москва, Дмитровское шоссе, 100с2</li>
 							<li class="popup__submenu-item">В пределах МКАД, Москва, Каширское шоссе, 100с2</li>
@@ -1624,36 +1357,36 @@
 						</ul>
 					</div>
 					<div class="popup__form-item">
-							<input id="street" required autocomplete="off" type="text" name="form[]" data-error="Ошибка" class="popup__input">
-							<label for="street" class="popup__label">улица</label>
+						<input id="street" required autocomplete="off" type="text" name="form[]" data-error="Ошибка" class="popup__input" />
+						<label for="street" class="popup__label">улица</label>
 					</div>
 					<div class="popup__form-item-group">
 						<div class="popup__form-item">
-							<input id="house" required autocomplete="off" type="text" name="form[]" data-error="Ошибка" class="popup__input">
+							<input id="house" required autocomplete="off" type="text" name="form[]" data-error="Ошибка" class="popup__input" />
 							<label for="house" class="popup__label">дом</label>
 						</div>
 						<div class="popup__form-item">
-							<input id="corpus" required autocomplete="off" type="text" name="form[]" data-error="Ошибка" class="popup__input">
+							<input id="corpus" required autocomplete="off" type="text" name="form[]" data-error="Ошибка" class="popup__input" />
 							<label for="corpus" class="popup__label">корпус</label>
 						</div>
 					</div>
 					<div class="popup__form-item-group">
 						<div class="popup__form-item">
-							<input id="entrance" required autocomplete="off" type="text" name="form[]" data-error="Ошибка" class="popup__input">
+							<input id="entrance" required autocomplete="off" type="text" name="form[]" data-error="Ошибка" class="popup__input" />
 							<label for="entrance" class="popup__label">подъезд</label>
 						</div>
 						<div class="popup__form-item">
-							<input id="floor" required autocomplete="off" type="text" name="form[]" data-error="Ошибка" class="popup__input">
+							<input id="floor" required autocomplete="off" type="text" name="form[]" data-error="Ошибка" class="popup__input" />
 							<label for="floor" class="popup__label">этаж</label>
 						</div>
 					</div>
 					<div class="popup__form-item-group">
 						<div class="popup__form-item">
-							<input id="flat" required autocomplete="off" type="text" name="form[]" data-error="Ошибка" class="popup__input">
+							<input id="flat" required autocomplete="off" type="text" name="form[]" data-error="Ошибка" class="popup__input" />
 							<label for="flat" class="popup__label">квартира</label>
 						</div>
 						<div class="popup__form-item">
-							<input id="intercom" required autocomplete="off" type="text" name="form[]" data-error="Ошибка" class="popup__input">
+							<input id="intercom" required autocomplete="off" type="text" name="form[]" data-error="Ошибка" class="popup__input" />
 							<label for="intercom" class="popup__label">домофон</label>
 						</div>
 					</div>

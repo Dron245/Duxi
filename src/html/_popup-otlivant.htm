@@ -1,30 +1,29 @@
 <div id="filters-otlivant" aria-hidden="true" class="popup">
 	<div class="popup__wrapper">
 		<div class="popup__content">
-			<button data-close type="button" class="popup__close"><img src="@img/popup/close.svg" alt=""></button>
+			<button data-close type="button" class="popup__close"><img src="@img/popup/close.svg" alt="" /></button>
 			<div class="popup__body filtmodal">
-				<div class="filtmodal__wrapper ">
+				<div class="filtmodal__wrapper">
 					<h4 class="filtmodal__title">Фильтры</h4>
 					<div class="filtmodal__item">
 						<button data-parent="1" class="filtmodal__element">сортировка</button>
 						<span class="filtmodal__checked">в начале новинки</span>
-						<div class="filtmodal__reset"><img src="@img/catalog/reset-filtr.svg" alt="сбросить выбранное"></div>
+						<div class="filtmodal__reset"><img src="@img/catalog/reset-filtr.svg" alt="сбросить выбранное" /></div>
 					</div>
-					
+
 					<div class="filtmodal__item filtmodal__item_cost">
 						<button data-parent="2" class="filtmodal__element">цена</button>
 						<div class="filtmodal__checked filtmodal__checked_interval">
 							<span class="filtmodal-min"></span> -
 							<span class="filtmodal-max"></span>
 						</div>
-						<div class="filtmodal__reset"><img src="@img/catalog/reset-filtr.svg" alt="сбросить выбранное"></div>
+						<div class="filtmodal__reset"><img src="@img/catalog/reset-filtr.svg" alt="сбросить выбранное" /></div>
 					</div>
 
-					
 					<div class="filtmodal__item filtmodal__item_last">
 						<button data-parent="3" class="filtmodal__element">тестеры</button>
 						<span class="filtmodal__checked">с тестерами</span>
-						<div class="filtmodal__reset"><img src="@img/catalog/reset-filtr.svg" alt="сбросить выбранное"></div>
+						<div class="filtmodal__reset"><img src="@img/catalog/reset-filtr.svg" alt="сбросить выбранное" /></div>
 					</div>
 
 					<div class="filtmodal__actions">
@@ -33,34 +32,31 @@
 					</div>
 				</div>
 
-
-
-
 				<div data-submenu="1" class="filtmodal__submenu submenu-filter">
 					<div class="submenu-filter__top">
-						<button type="button" class="submenu-filter__back"><img src="@img/catalog/back-arrow.svg" alt="назад"></button>
+						<button type="button" class="submenu-filter__back"><img src="@img/catalog/back-arrow.svg" alt="назад" /></button>
 						<h4 class="filtmodal__title">Сортировка</h4>
 					</div>
 					<div class="submenu-filter__list">
 						<div class="submenu-filter__body options">
 							<div class="options__item">
-								<input id="o_m1" class="options__input" type="radio" value="по умолчанию" name="option1">
+								<input id="o_m1" class="options__input" type="radio" value="по умолчанию" name="option1" />
 								<label for="o_m1" class="options__label"><span class="options__text">по умолчанию</span></label>
 							</div>
 							<div class="options__item">
-								<input id="o_m2" class="options__input" type="radio" checked value="вначале новинки" name="option1">
+								<input id="o_m2" class="options__input" type="radio" checked value="вначале новинки" name="option1" />
 								<label for="o_m2" class="options__label"><span class="options__text">вначале новинки</span></label>
 							</div>
 							<div class="options__item">
-								<input id="o_m3" class="options__input" type="radio" value="вначале дешевле" name="option1">
+								<input id="o_m3" class="options__input" type="radio" value="вначале дешевле" name="option1" />
 								<label for="o_m3" class="options__label"><span class="options__text">вначале дешевле</span></label>
 							</div>
 							<div class="options__item">
-								<input id="o_m4" class="options__input" type="radio" value="вначале дороже" name="option1">
+								<input id="o_m4" class="options__input" type="radio" value="вначале дороже" name="option1" />
 								<label for="o_m4" class="options__label"><span class="options__text">вначале дороже</span></label>
 							</div>
 							<div class="options__item">
-								<input id="o_m5" class="options__input" type="radio" value="по популярности" name="option1">
+								<input id="o_m5" class="options__input" type="radio" value="по популярности" name="option1" />
 								<label for="o_m5" class="options__label"><span class="options__text">по популярности</span></label>
 							</div>
 						</div>
@@ -70,52 +66,50 @@
 						<button id="reset-filter" type="button" class="popup__button filtmodal__button-filter_white filtmodal__button-filter">сбросить</button>
 					</div>
 				</div>
-				
-				
 
 				<div data-submenu="2" class="filtmodal__submenu submenu-filter">
 					<div class="submenu-filter__top">
-						<button type="button" class="submenu-filter__back"><img src="@img/catalog/back-arrow.svg" alt="назад"></button>
+						<button type="button" class="submenu-filter__back"><img src="@img/catalog/back-arrow.svg" alt="назад" /></button>
 						<h4 class="filtmodal__title">цена</h4>
 					</div>
 					<div class="submenu-filter__list">
 						<div class="filter__body range">
 							<div class="range__value">
 								<span class="range__text">от</span>
-								<div class="range__field-val " id="lower-cost"></div>
+								<div class="range__field-val" id="lower-cost"></div>
 								<span class="range__text">руб.</span>
 							</div>
 							<div class="range__value">
 								<span class="range__text">до</span>
-								<div class="range__field-val " id="upper-cost"></div>
+								<div class="range__field-val" id="upper-cost"></div>
 								<span class="range__text">руб.</span>
 							</div>
 							<div class="range__slider" id="range-otliv-filter-mobile"></div>
 						</div>
 					</div>
 					<div class="filtmodal__actions">
-					<button id="submit-filter" type="button" class="popup__button filtmodal__button-filter">применить</button>
-					<button id="reset-filternoUi" type="button" class="popup__button filtmodal__button-filter_white filtmodal__button-filter">сбросить</button>
+						<button id="submit-filter" type="button" class="popup__button filtmodal__button-filter">применить</button>
+						<button id="reset-filternoUi" type="button" class="popup__button filtmodal__button-filter_white filtmodal__button-filter">сбросить</button>
 					</div>
 				</div>
 
 				<div data-submenu="3" class="filtmodal__submenu submenu-filter">
 					<div class="submenu-filter__top">
-						<button type="button" class="submenu-filter__back"><img src="@img/catalog/back-arrow.svg" alt="назад"></button>
+						<button type="button" class="submenu-filter__back"><img src="@img/catalog/back-arrow.svg" alt="назад" /></button>
 						<h4 class="filtmodal__title">отливанты</h4>
 					</div>
 					<div class="submenu-filter__list">
 						<div class="submenu-filter__body options">
 							<div class="options__item">
-								<input id="om_testers1" class="options__input" type="radio" value="только тестеры" name="option4">
+								<input id="om_testers1" class="options__input" type="radio" value="только тестеры" name="option4" />
 								<label for="om_testers1" class="options__label"><span class="options__text">только тестеры</span></label>
 							</div>
 							<div class="options__item">
-								<input id="om_testers2" class="options__input" checked type="radio" value="в том числе тестеры" name="option4">
+								<input id="om_testers2" class="options__input" checked type="radio" value="в том числе тестеры" name="option4" />
 								<label for="om_testers2" class="options__label"><span class="options__text">в том числе тестеры</span></label>
 							</div>
 							<div class="options__item">
-								<input id="om_testers3" class="options__input" type="radio" value="исключить тестеры" name="option4">
+								<input id="om_testers3" class="options__input" type="radio" value="исключить тестеры" name="option4" />
 								<label for="om_testers3" class="options__label"><span class="options__text">исключить тестеры</span></label>
 							</div>
 						</div>

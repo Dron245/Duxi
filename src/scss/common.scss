@@ -379,7 +379,13 @@ h3[class*="__title"] {
 	}
 }
 
-
+.recently {
+	.center-button {
+		@media (max-width:$mobile){
+			 display: none; 
+		}
+	}
+}
 
 //кнопка "показать всё"
 
@@ -393,8 +399,12 @@ h3[class*="__title"] {
 	color: white;
 	background-color: $knopka-rozovaya;
 	padding: toRem(10) toRem(69);
+	@media (max-width:$tablet){
+		font-size: 22px;
+	}
 	@media (max-width: $mobile) {
 		padding: toRem(10) toRem(55);
+		@include adaptiveValue("font-size", 28, 15,0,768,320);
 	}
 	@media (max-width: $mobileSmall) {
 		padding: toRem(10) toRem(45);
@@ -643,6 +653,25 @@ h3[class*="__title"] {
 
 // ОТЗЫВ
 
+
+.otlvant-review, .device-review__slider, .certificates {
+	.feedback__photo {
+		gap: 10px;
+		@media (max-width:$tablet) and (min-width:$mobile){
+			gap: 13px;
+		}
+	}
+	.feedback__photo-img {
+		width: 70px;
+		@media (max-width:$tablet){
+			@include adaptiveValue("width", 130, 90,0,1001.99,768.01);
+		}
+		@media (max-width:$mobile){
+			 @include adaptiveValue("width", 200, 85,0,768,320); 
+		}
+	}
+}
+
 .feedback {
 
 	&__logo {
@@ -844,10 +873,10 @@ h3[class*="__title"] {
 		display: flex;
 		align-items: center;
 		@media (max-width:$mobile){
-			 width: 15px; 
+			@include adaptiveValue("width", 23, 11,0,768,320);
 		}
 		@media (max-width:$mobileSmall){
-			 width: 10px; 
+			//  width: 10px; 
 		}
 		img {
 			width: 100%;
@@ -936,7 +965,7 @@ h3[class*="__title"] {
 			}
 		}
 		@media (max-width:$tablet){
-			font-size: 30px;
+			font-size: 20px;
 		}
 		@media (max-width:$mobile){
 			@include adaptiveValue("font-size", 28, 14,0,768,320); 
@@ -1062,12 +1091,18 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 		top: -10px;
 		left: 0px;
 		color: $zagolovok;
+		@media (max-width:$mobile){
+			// @include adaptiveValue("top", -20, -10,0,768,320); 
+		  }
 	}
 
 	textarea:focus ~ .popup__label, textarea[required]:not(:focus):valid ~ .popup__label{
 	top: -20px;
 	left: 0px;
 	color: $zagolovok;
+	@media (max-width:$mobile){
+		//  @include adaptiveValue("top", -40, -20,0,768,320); 
+		}
 	}
 
 	._label label {

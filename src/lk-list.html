@@ -1,8 +1,6 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
-	@@include('html/_head.htm',{
-	"title":"Списки"
-	})
+	@@include('html/_head.htm',{ "title":"Списки" })
 	<body>
 		<div class="wrapper">
 			@@include('html/_header-user.htm',{})
@@ -26,7 +24,7 @@
 							<section class="lk__item">
 								<h3 class="lk__title">Списки</h3>
 								<button data-popup="#add-lk-list" type="button" class="list-popup__button-top">
-									<img src="@img/popup/plus-add-list.svg" alt="">
+									<img src="@img/popup/plus-add-list.svg" alt="" />
 									<span class="list-popup__button-text">Добавить новый список</span>
 								</button>
 								<div class="lk-list__wrapper">
@@ -34,10 +32,10 @@
 										<p class="lk-address__text">Название 1</p>
 										<div class="lk-address__actions">
 											<a href="lk-list-item.html" type="button" class="lk-address__button">
-												<img src="@img/lk/redactors.svg" alt="изменить">
+												<img src="@img/lk/redactors.svg" alt="изменить" />
 											</a>
 											<button data-popup="#lk-list-item-del" type="button" class="lk-address__button lk-list__button-delete">
-												<img src="@img/lk/delete.svg" alt="удалить">
+												<img src="@img/lk/delete.svg" alt="удалить" />
 											</button>
 										</div>
 									</div>
@@ -45,10 +43,10 @@
 										<p class="lk-address__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat, necessitatibus?</p>
 										<div class="lk-address__actions">
 											<a href="lk-list-item.html" type="button" class="lk-address__button">
-												<img src="@img/lk/redactors.svg" alt="изменить">
+												<img src="@img/lk/redactors.svg" alt="изменить" />
 											</a>
 											<button data-popup="#lk-list-item-del" type="button" class="lk-address__button lk-list__button-delete">
-												<img src="@img/lk/delete.svg" alt="удалить">
+												<img src="@img/lk/delete.svg" alt="удалить" />
 											</button>
 										</div>
 									</div>
@@ -57,15 +55,33 @@
 						</div>
 						<aside class="lk__navigation navigation-lk">
 							<ul class="navigation-lk__list">
-								<li class="navigation-lk__item"><a class="navigation-lk__link" href="lk-data.html"><span>Персональные данные</span></a></li>
-								<li class="navigation-lk__item"><a class="navigation-lk__link" href="lk-discount.html"><span></span>Персональная скидка</a></li>
-								<li class="navigation-lk__item"><a class="navigation-lk__link" href="lk-history.html"><span>История заказов</span></a></li>
-								<li class="navigation-lk__item"><a class="navigation-lk__link" href="lk-bonus.html"><span>БОНУСНЫЙ СЧЕТ</span></a></li>
-								<li class="navigation-lk__item"><a class="navigation-lk__link" href="lk-favorites.html"><span>ИЗБРАННОЕ</span></a></li>
-								<li class="navigation-lk__item"><a class="navigation-lk__link" href="lk-wait.html"><span>Ожидание поступления</span></a></li>
-								<li class="navigation-lk__item"><a class="navigation-lk__link navigation-lk__link_active" href="lk-list.html"><span>МОИ СПИСКИ</span></a></li>
-								<li class="navigation-lk__item"><a class="navigation-lk__link" href="lk.sertificate.html"><span>электронные сертификаты</span></a></li>
-								<li class="navigation-lk__item"><a class="navigation-lk__link" href="lk.reviews.html"><span>мои отзывы</span></a></li>
+								<li class="navigation-lk__item">
+									<a class="navigation-lk__link" href="lk-data.html"><span>Персональные данные</span></a>
+								</li>
+								<li class="navigation-lk__item">
+									<a class="navigation-lk__link" href="lk-discount.html"><span></span>Персональная скидка</a>
+								</li>
+								<li class="navigation-lk__item">
+									<a class="navigation-lk__link" href="lk-history.html"><span>История заказов</span></a>
+								</li>
+								<li class="navigation-lk__item">
+									<a class="navigation-lk__link" href="lk-bonus.html"><span>БОНУСНЫЙ СЧЕТ</span></a>
+								</li>
+								<li class="navigation-lk__item">
+									<a class="navigation-lk__link" href="lk-favorites.html"><span>ИЗБРАННОЕ</span></a>
+								</li>
+								<li class="navigation-lk__item">
+									<a class="navigation-lk__link" href="lk-wait.html"><span>Ожидание поступления</span></a>
+								</li>
+								<li class="navigation-lk__item">
+									<a class="navigation-lk__link navigation-lk__link_active" href="lk-list.html"><span>МОИ СПИСКИ</span></a>
+								</li>
+								<li class="navigation-lk__item">
+									<a class="navigation-lk__link" href="lk.sertificate.html"><span>электронные сертификаты</span></a>
+								</li>
+								<li class="navigation-lk__item">
+									<a class="navigation-lk__link" href="lk.reviews.html"><span>мои отзывы</span></a>
+								</li>
 							</ul>
 						</aside>
 					</div>
@@ -73,8 +89,6 @@
 			</main>
 			@@include('html/_footer.htm',{})
 		</div>
-		@@include('html/_popup.htm',{})
-		@@include('html/_popup-lk.htm',{})
-		@@include('html/_js.htm',{})
+		@@include('html/_popup.htm',{}) @@include('html/_popup-lk.htm',{}) @@include('html/_js.htm',{})
 	</body>
 </html>

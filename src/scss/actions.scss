@@ -1,5 +1,7 @@
 .actions {
-
+	.recently {
+		margin-top: 0;
+	}
 	&__container {
 		margin-bottom: 80px;
 	}
@@ -118,11 +120,10 @@
 	&__action {
 		display: flex;
 		align-items: flex-start;
-		// justify-content: space-between;
 		@media (max-width: $tablet) {
 			flex-direction: column-reverse;
+			align-items: center;
 			row-gap: 20px;
-			// justify-content: initial;
 		}
 		@media (max-width: $mobileSmall) {
 			row-gap: 10px;
@@ -148,6 +149,8 @@
 		border-radius: 16px;
 		background: #ffffff;
 		padding: 20px;
+		@media (max-width:$mobile){
+		}
 		@media (max-width: $mobileSmall) {
 			padding: 10px;
 		}
@@ -184,14 +187,17 @@
 		border-radius: 16px;
 		background: #ffd3d3;
 		text-transform: uppercase;
+		@media (min-width:$mobile){
+			 padding-right: 40px; 
+		}
 		@media (max-width: $mobile) {
 			gap: 5px;
+			width: 100%;
 		}
 	}
 
 	&__img {
 		@media (max-width: $tablet) {
-			margin: auto;
 		}
 		img {
 			width: 100%;
@@ -221,7 +227,16 @@
 		ol & {
 			list-style: decimal;
 		}
-		// padding-left: 20px;
+		@media (max-width: $tablet) {
+			font-size: toRem(20);
+		}
+		@media (max-width: $mobile) {
+			margin-left: 20px;
+			@include adaptiveValue("font-size", 28, 14, 0, 768, 320);
+		}
+		@media (max-width:$mobileSmall){
+			 margin-left: 10px; 
+		}
 	}
 
 	&__black-link {

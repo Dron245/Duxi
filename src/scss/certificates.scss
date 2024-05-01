@@ -1,15 +1,17 @@
-.wrapper {
-}
-.page {
 
-	&__otlvant-review {
-	}
-
-	&__recently {
-	}
-}
 .certificates {
-
+	.recently {
+		margin-top: 0;
+	}
+	.otlivant {
+		margin-bottom: 40px;
+		@media (max-width:$tablet){
+			margin-bottom: 60px;
+		}
+		@media (max-width:$mobile){
+			 @include adaptiveValue("margin-bottom", 60, 40,0,768,320); 
+		}
+	}
 	&__container {
 		.recently__container {
 			@media (max-width:$mobile){
@@ -17,9 +19,6 @@
 				 padding-right: 0; 
 			}
 		}
-	}
-
-	&__breadcrumbs {
 	}
 
 	&__wrapper {
@@ -33,15 +32,9 @@
 			margin-top: 40px;
 		}
 	}
-
-	&__tabs {
-	}
 }
 
 .main-certificates {
-
-	&__title {
-	}
 
 	&__content {
 		display: flex;
@@ -147,8 +140,14 @@
 	}
 }
 .tabs-sertification {
-	margin-top: 40px;
-	margin-bottom: 40px;
+	margin-block: 40px;
+	@media (max-width:$tablet){
+		margin-block: 60px;
+	}
+	@media (max-width:$mobile){
+		 @include adaptiveValue("margin-top", 60, 40,0,768,320); 
+		 @include adaptiveValue("margin-bottom", 60, 40,0,768,320); 
+	}
 	&__wrapper {
 	}
 
@@ -204,23 +203,9 @@
 .product {
 	.certificates & {
 		padding-top: 60px;
-		@media (max-width:$mobile){
-			//  display: grid; 
-		}
 	}
-
-	@media (any-hover: hover){
-		&:hover{
-			& .product__seil {
-				// display: none;
-			}
-			& .product__make-certificate {
-				// display: block;
-			}
-		}
-	}
+	
 	&__img {
-		// outline: 1px solid red;
 		.certificates & img {
 			aspect-ratio: initial;
 		}
@@ -229,12 +214,6 @@
 	&__content {
 		.certificates & {
 			margin-top: 25px;
-			& > * {
-				// outline: 1px solid rebeccapurple;
-			}
-			// display: grid;
-			// grid-template-rows: subgrid;
-			// grid-row: span 5;
 		}
 	}
 
@@ -289,24 +268,7 @@
 	&__make-certificate {
 		display: none;
 	}
-
-	&__actions {
-	}
-
-	&__action {
-	}
-
-	&__favorite {
-	}
-
-	&__category {
-
-		&_man {
-		}
-	}
-
-	&__labels {
-	}
+	
 }
 
 .tabs__product {

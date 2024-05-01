@@ -11,6 +11,10 @@
 
 	&__navigation {
 		margin-bottom: 30px;
+		@media (max-width:$tablet){
+			display: flex;
+			justify-content: space-evenly;
+		}
 	}
 
 	&__title {
@@ -39,6 +43,7 @@
 		
 		@media (max-width:$tablet){
 			flex-direction: column-reverse;
+			row-gap: 20px;
 		}
 	}
 
@@ -85,10 +90,16 @@
 			flex-wrap: wrap;
 			row-gap: 20px;
 		}
+		@media (max-width:$tablet) and (min-width:$mobile){
+			flex-wrap: nowrap;
+		}
 		@media (max-width:$tablet){
 			// justify-content: flex-start;
 			// column-gap: 20px;
 			border-radius: 1px;
+		}
+		@media (max-width:$mobileSmall){
+			 padding: 10px; 
 		}
 	}
 
@@ -124,12 +135,12 @@
 		margin-bottom: 5px;
 		line-height: normal;
 		@media (max-width:$tablet){
-			font-size: 22px;
+			@include adaptiveValue("font-size", 22, 19,0,1001.99,768.01);
 		}
 		@media (max-width:$mobile){
 			 flex: 1 0 100%;
 			 text-wrap: wrap;
-			 @include adaptiveValue("font-size", 32, 16,0,768,320);
+			 @include adaptiveValue("font-size", 32, 14,0,768,320);
 		}
 	}
 

@@ -1,8 +1,6 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
-	@@include('html/_head.htm',{
-	"title":"Где мой заказ? "
-	})
+	@@include('html/_head.htm',{ "title":"Где мой заказ? " })
 	<body>
 		<div class="wrapper">
 			@@include('html/_header-user.htm',{})
@@ -29,7 +27,7 @@
 										<div class="form-calc__wrapper">
 											<div class="form-calc__item">
 												<label for="number-order-page" class="form-calc__label">Введите идентификатор или номер заказа</label>
-												<input id="number-order-page" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="номер заказа" class="form-calc__input input">
+												<input id="number-order-page" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="номер заказа" class="form-calc__input input" />
 											</div>
 										</div>
 										<button type="button" class="form-calc__link search-order button-actions">найти</button>
@@ -37,7 +35,7 @@
 								</div>
 							</div>
 							<div class="input-where__img">
-								<img src="@img/delivery/order.png" alt="">
+								<img src="@img/delivery/order.png" alt="" />
 							</div>
 						</section>
 						<section class="where__info info-where">
@@ -146,7 +144,6 @@
 			</main>
 			@@include('html/_footer.htm',{})
 		</div>
-		@@include('html/_popup.htm',{})
-		@@include('html/_js.htm',{})
+		@@include('html/_popup.htm',{}) @@include('html/_js.htm',{})
 	</body>
 </html>

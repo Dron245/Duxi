@@ -81,6 +81,10 @@
 		justify-content: space-between;
 		@media (max-width:$tablet){
 			flex-direction: column;
+			margin-bottom: 40px;
+		}
+		@media (max-width:$mobile){
+			 @include adaptiveValue("margin-bottom", 60, 40,0,768,320); 
 		}
 	}
 
@@ -144,6 +148,9 @@
 	&__text {
 		line-height: normal;
 		margin-bottom: 20px;
+		@media (max-width:$pcSmall){
+			// font-size: 22px;
+		}
 		@media (max-width:$tablet){
 			font-size: toRem(20);
 			@media (max-width:$mobile){
@@ -158,6 +165,7 @@
 		}
 		@media (max-width:$tablet){
 			width: 100%;
+			
 		}
 		& button[class^=swiper] {
 			@media (min-width:$tablet){
@@ -180,7 +188,7 @@
 		line-height: normal;
 		@media (max-width:$tablet){
 			font-size: 20px;
-			margin-bottom: 40px;
+			// margin-bottom: 40px;
 		}
 		
 		@media (max-width: em(360)){
@@ -206,13 +214,19 @@
 
 
 	&__top {
+		@media (max-width:$tablet){
+			margin-block: 40px;
+		}
+		@media (max-width:$mobile){
+			 @include adaptiveValue("margin-block", 60, 40,0,768,320); 
+		}
 	}
 
 	&__title {
 	}
 
 	&__body {
-		margin-top: 60px;
+		// margin-top: 60px;
 	}
 
 	&__content {

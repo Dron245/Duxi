@@ -1,8 +1,6 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
-	@@include('html/_head.htm',{
-	"title":"Персональная скидка"
-	})
+	@@include('html/_head.htm',{ "title":"Персональная скидка" })
 	<body>
 		<div class="wrapper">
 			@@include('html/_header-user.htm',{})
@@ -50,7 +48,7 @@
 									<details data-open class="spollers__item">
 										<summary class="spollers__title">
 											<h3 class="lk__title">дополнительная информация</h3>
-											<span class="feedback__spoller-arrow"><img src="@img/search/arrow-search-spoiler.svg" alt=""></span>
+											<span class="feedback__spoller-arrow"><img src="@img/search/arrow-search-spoiler.svg" alt="" /></span>
 										</summary>
 										<div class="spollers__body andinfo__item">
 											<p class="andinfo__text">Персональная скидка клиента зависит от общей суммы полученных заказов за последние 1000 дней.</p>
@@ -61,15 +59,33 @@
 						</div>
 						<aside class="lk__navigation navigation-lk">
 							<ul class="navigation-lk__list">
-								<li class="navigation-lk__item"><a class="navigation-lk__link" href="lk-data.html"><span>Персональные данные</span></a></li>
-								<li class="navigation-lk__item"><a class="navigation-lk__link navigation-lk__link_active" href="lk-discount.html"><span></span>Персональная скидка</a></li>
-								<li class="navigation-lk__item"><a class="navigation-lk__link" href="lk-history.html"><span>История заказов</span></a></li>
-								<li class="navigation-lk__item"><a class="navigation-lk__link" href="lk-bonus.html"><span>БОНУСНЫЙ СЧЕТ</span></a></li>
-								<li class="navigation-lk__item"><a class="navigation-lk__link" href="lk-favorites.html"><span>ИЗБРАННОЕ</span></a></li>
-								<li class="navigation-lk__item"><a class="navigation-lk__link" href="lk-wait.html"><span>Ожидание поступления</span></a></li>
-								<li class="navigation-lk__item"><a class="navigation-lk__link" href="lk-list.html"><span>МОИ СПИСКИ</span></a></li>
-								<li class="navigation-lk__item"><a class="navigation-lk__link" href="lk.sertificate.html"><span>электронные сертификаты</span></a></li>
-								<li class="navigation-lk__item"><a class="navigation-lk__link" href="lk.reviews.html"><span>мои отзывы</span></a></li>
+								<li class="navigation-lk__item">
+									<a class="navigation-lk__link" href="lk-data.html"><span>Персональные данные</span></a>
+								</li>
+								<li class="navigation-lk__item">
+									<a class="navigation-lk__link navigation-lk__link_active" href="lk-discount.html"><span></span>Персональная скидка</a>
+								</li>
+								<li class="navigation-lk__item">
+									<a class="navigation-lk__link" href="lk-history.html"><span>История заказов</span></a>
+								</li>
+								<li class="navigation-lk__item">
+									<a class="navigation-lk__link" href="lk-bonus.html"><span>БОНУСНЫЙ СЧЕТ</span></a>
+								</li>
+								<li class="navigation-lk__item">
+									<a class="navigation-lk__link" href="lk-favorites.html"><span>ИЗБРАННОЕ</span></a>
+								</li>
+								<li class="navigation-lk__item">
+									<a class="navigation-lk__link" href="lk-wait.html"><span>Ожидание поступления</span></a>
+								</li>
+								<li class="navigation-lk__item">
+									<a class="navigation-lk__link" href="lk-list.html"><span>МОИ СПИСКИ</span></a>
+								</li>
+								<li class="navigation-lk__item">
+									<a class="navigation-lk__link" href="lk.sertificate.html"><span>электронные сертификаты</span></a>
+								</li>
+								<li class="navigation-lk__item">
+									<a class="navigation-lk__link" href="lk.reviews.html"><span>мои отзывы</span></a>
+								</li>
 							</ul>
 						</aside>
 						<section class="lk__item lk__item_calcul-discount calcul-discount">
@@ -77,49 +93,79 @@
 								<details data-open class="spollers__item">
 									<summary class="spollers__title">
 										<h3 class="lk__title">РАСЧЕТ СКИДКИ</h3>
-										<span class="feedback__spoller-arrow"><img src="@img/search/arrow-search-spoiler.svg" alt=""></span>
+										<span class="feedback__spoller-arrow"><img src="@img/search/arrow-search-spoiler.svg" alt="" /></span>
 									</summary>
 									<div class="spollers__body calcul-discount__body">
 										<h5 class="calcul-discount__subtitle">сумма заказа</h5>
 										<div class="calcul-discount__group">
 											<div class="calcul-discount__item">
-												<p class="calcul-discount__text">от <br> 10 000 руб.</p>
+												<p class="calcul-discount__text">
+													от <br />
+													10 000 руб.
+												</p>
 												<div class="calcul-discount__number"><span>1</span> %</div>
 											</div>
 											<div class="calcul-discount__item">
-												<p class="calcul-discount__text">от <br> 20 000 руб.</p>
+												<p class="calcul-discount__text">
+													от <br />
+													20 000 руб.
+												</p>
 												<div class="calcul-discount__number"><span>2</span> %</div>
 											</div>
 											<div class="calcul-discount__item calcul-discount__item_active">
-												<p class="calcul-discount__text">от <br> 30 000 руб.</p>
+												<p class="calcul-discount__text">
+													от <br />
+													30 000 руб.
+												</p>
 												<div class="calcul-discount__number"><span>3</span> %</div>
 											</div>
 											<div class="calcul-discount__item">
-												<p class="calcul-discount__text">от <br> 40 000 руб.</p>
+												<p class="calcul-discount__text">
+													от <br />
+													40 000 руб.
+												</p>
 												<div class="calcul-discount__number"><span>4</span> %</div>
 											</div>
 											<div class="calcul-discount__item">
-												<p class="calcul-discount__text">от <br> 50 000 руб.</p>
+												<p class="calcul-discount__text">
+													от <br />
+													50 000 руб.
+												</p>
 												<div class="calcul-discount__number"><span>5</span> %</div>
 											</div>
 											<div class="calcul-discount__item">
-												<p class="calcul-discount__text">от <br> 60 000 руб.</p>
+												<p class="calcul-discount__text">
+													от <br />
+													60 000 руб.
+												</p>
 												<div class="calcul-discount__number"><span>6</span> %</div>
 											</div>
 											<div class="calcul-discount__item">
-												<p class="calcul-discount__text">от <br> 70 000 руб.</p>
+												<p class="calcul-discount__text">
+													от <br />
+													70 000 руб.
+												</p>
 												<div class="calcul-discount__number"><span>7</span> %</div>
 											</div>
 											<div class="calcul-discount__item">
-												<p class="calcul-discount__text">от <br> 80 000 руб.</p>
+												<p class="calcul-discount__text">
+													от <br />
+													80 000 руб.
+												</p>
 												<div class="calcul-discount__number"><span>8</span> %</div>
 											</div>
 											<div class="calcul-discount__item">
-												<p class="calcul-discount__text">от <br> 90 000 руб.</p>
+												<p class="calcul-discount__text">
+													от <br />
+													90 000 руб.
+												</p>
 												<div class="calcul-discount__number"><span>9</span> %</div>
 											</div>
 											<div class="calcul-discount__item calcul-discount__item_threesign">
-												<p class="calcul-discount__text">от <br> 100 000 руб.</p>
+												<p class="calcul-discount__text">
+													от <br />
+													100 000 руб.
+												</p>
 												<div class="calcul-discount__number"><span>10</span> %</div>
 											</div>
 										</div>
@@ -132,7 +178,6 @@
 			</main>
 			@@include('html/_footer.htm',{})
 		</div>
-		@@include('html/_popup.htm',{})
-		@@include('html/_js.htm',{})
+		@@include('html/_popup.htm',{}) @@include('html/_js.htm',{})
 	</body>
 </html>

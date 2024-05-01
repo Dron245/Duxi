@@ -1,6 +1,21 @@
 //ОТзывы
 .otlvant-review {
 	margin-bottom: 40px;
+	// .feedback__photo {
+	// 	gap: 10px;
+	// 	@media (max-width:$tablet) and (min-width:$mobile){
+	// 		gap: 13px;
+	// 	}
+	// }
+	// .feedback__photo-img {
+	// 	width: 70px;
+	// 	@media (max-width:$tablet){
+	// 		@include adaptiveValue("width", 130, 90,0,1001.99,768.01);
+	// 	}
+	// 	@media (max-width:$mobile){
+	// 		 @include adaptiveValue("width", 200, 85,0,768,320); 
+	// 	}
+	// }
 
 	&__container {
 		@media (max-width:$mobile){
@@ -15,6 +30,9 @@
 		margin-bottom: 20px;
 		flex-wrap: wrap;
 		row-gap: 10px;
+		@media (max-width:$mobile){
+			 margin-bottom: 0; 
+		}
 		& .button-light {
 			.guest & {
 				display: none;
@@ -26,7 +44,7 @@
 			@media (max-width:$tablet){
 				margin:auto;
 				width: 43%;
-				font-size: 22px;
+				@include adaptiveValue("font-size", 22, 18,0,1001.99,768.01);
 			}
 			@media (max-width:$mobile){
 				 display: none; 
@@ -80,6 +98,12 @@
 	}
 
 	&__button-wrap {
+		.otlivant-review-show__more {
+			@media (max-width:$mobile){
+				width: 60%;
+				margin:auto;
+			}
+		}
 		@media (max-width:$mobile){
 			padding-top: 20px;
 			background-color: rgb(255, 255, 255); 
@@ -117,6 +141,9 @@
 		}
 		@media (max-width:$mobile){
 			 @include adaptiveValue("font-size", 28, 14,0,768,320); 
+		}
+		.guest & {
+			display: none;
 		}
 	}
 }
