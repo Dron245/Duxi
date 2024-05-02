@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ru">
+	@@include('html/_head.htm',{ "title":"Время работы" })
+	<body>
+		<div class="wrapper">
+			@@include('html/_header-user.htm',{})
+			<main class="page other">
+				<div class="other__container">
+					<nav class="other__breadcrumbs breadcrumbs">
+						<ul class="breadcrumbs__list">
+							<li class="breadcrumbs__item">
+								<a href="home-user.html" class="breadcrumbs__link">Интернет магазин парфюмерии</a>
+							</li>
+							<li class="breadcrumbs__item">
+								<span class="breadcrumbs__current">График работы магазина</span>
+							</li>
+						</ul>
+					</nav>
+					<section class="other__body">
+						<h3 class="other__title">ГРАФИК РАБОТЫ</h3>
+						<div class="other__content">
+							<div class="other__text-block">
+								<p class="other__text">Уважаемые покупатели! <br><br>
+									Для удобства наших клиентов контакт-центр магазина Духи.рф работает для Вас <span>каждый день с 9:00 до 21:00 (МСК)</span>.
+									Вы можете оформить заказ на сайте в любое удобное для Вас время. Также мы с удовольствием ответим на все Ваши вопросы в рабочее время магазина. <br><br> Мы ждем Вашего звонка!
+								</p>
+							</div>
+							<div class="other__img">
+								<img src="@img/other-page/time-work.svg" alt="Время работы">
+							</div>
+						</div>
+					</section>
+				</div>
+			</main>
+			@@include('html/_footer.htm',{})
+		</div>
+		@@include('html/_popup.htm',{}) @@include('html/_js.htm',{})
+	</body>
+</html>

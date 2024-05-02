@@ -1,0 +1,145 @@
+.other {
+	line-height: normal;
+	@include adaptiveValue("min-height", 970, 782,0,1540,768.01);
+	@media (max-width:$mobile){
+		 @include adaptiveValue("min-height", 970, 570,0,768,320); 
+	}
+
+	.table-deliv {
+		display: grid;
+		grid-template-columns: 1fr;
+		margin-block: 0;
+	}
+	.table-deliv__item {
+		display: grid;
+		grid-template-columns: 50% 50%;
+	}
+	.bonus__top_wait {
+		margin-bottom: 10px;
+	}
+	.table-deliv__td_days,.table-deliv__td_city {
+		width: initial;
+	}
+	.table-deliv__td_days{
+		span {
+			word-wrap: break-word;
+		}
+	}
+	&__body {
+		&_quality {
+			margin-bottom: 80px;
+		}
+		@media (max-width:$mobileSmall){
+			 margin-bottom: 60px; 
+		}
+	}
+
+	&__title {
+	}
+
+	&__content {
+		display: flex;
+		align-items: flex-start;
+		gap: 20px;
+		@media (max-width:$tablet){
+			 flex-direction: column-reverse;
+			 align-items: center;
+		}
+		&_info[class] {
+			align-items: initial;
+			flex-direction: column;
+			row-gap: 40px;
+			@media (max-width:$mobile){
+				 row-gap: 20px; 
+			}
+		}
+	}
+
+	&__img {
+		width: 500px;
+		@media (max-width:$pcSmall){
+			width: 430px;
+		}
+		@media (max-width:$mobile){
+			 @include adaptiveValue("width", 450, 230,0,768,320); 
+		}
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+
+	&__tables {
+	}
+
+	&__table {
+		margin-bottom: 40px;
+	}
+
+	&__text-block {
+		flex: 0 0 63.120567%; /* 890/1410 */
+	}
+
+	&__text {
+		padding: 20px;
+		border-radius: 16px;
+		background: white;
+		@media (max-width:$tablet){
+			font-size: 20px;
+		}
+		@media (max-width:$mobile){
+			 @include adaptiveValue("font-size", 28, 13,0,768,320); 
+		}
+		@media (max-width:$mobileSmall){
+			 padding: 10px; 
+		}
+		&_data {
+			background: none;
+			padding: 10px;
+			padding-left: 20px;
+		}
+	}
+}
+
+.table-other {
+
+	&__top {
+	}
+}
+.lk-reviews {
+
+	&__top {
+	}
+}
+.bonus {
+
+	&__top {
+
+		&_wait {
+		}
+	}
+}
+.top-history {
+
+	&__data {
+	}
+}
+.conent-delivery {
+
+	&__table {
+	}
+}
+.table-deliv {
+
+	&__item {
+	}
+
+	&__td {
+
+		&_city {
+		}
+
+		&_days {
+		}
+	}
+}
