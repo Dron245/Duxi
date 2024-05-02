@@ -410,18 +410,24 @@ body::after {
 		color: rgba(0, 0, 0, 0.5);
 		transition: top 0.15s, left 0.15s;
 		.label-up-cart & {
-			top: -22%;
+			top: -23%;
+			// top: -10px;
 			left: 0;
 			color: $zagolovok;
 			#product-review  &.textarea-big {
 				top: -10%;
 			}
-			&[for^="address-cart"] {
-				top: -38%;
-				@media (min-width:$mobile){
-					 top: -30%; 
+			&[for^="address-cart"][for][class].popup__label_adress {
+				// top: -38%;
+				@media (max-width:$mobile){
+					@include adaptiveValue("top", -40, -20,0,768,320); 
 				}
 			}
+		}
+		._label-down & {
+			top: 50%;
+			left: 10px;
+			color: rgba(0, 0, 0, 0.5);
 		}
 		textarea + & {
 			top: 16px;

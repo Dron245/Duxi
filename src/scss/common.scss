@@ -1091,9 +1091,14 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 		top: -10px;
 		left: 0px;
 		color: $zagolovok;
-		@media (max-width:$mobile){
-			// @include adaptiveValue("top", -20, -10,0,768,320); 
-		  }
+		.label-up-cart & {
+			@media (max-width:$tablet){
+				 top: -15px; 
+			}
+			@media (max-width:$mobile){
+				 @include adaptiveValue("top", -18, -10,0,768,320); 
+			}
+		}
 	}
 
 	textarea:focus ~ .popup__label, textarea[required]:not(:focus):valid ~ .popup__label{

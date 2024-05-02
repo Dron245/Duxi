@@ -1239,6 +1239,18 @@ document.addEventListener("DOMContentLoaded", () => {
 		});
 	});
 
+
+	const inputLabelUp = document.querySelectorAll('.label-up-cart > input')
+	inputLabelUp.forEach(element => {
+			element.addEventListener('input', function() {
+				if (element.value == '') {
+					console.log(123);
+					element.closest('.label-up-cart').classList.add('_label-down')
+				} else if (element.value !=='') {
+					element.closest('.label-up-cart').classList.remove('_label-down')
+				}
+			})
+	});
 	// const inputSubMenu = document.querySelectorAll('.input-submenu')
 	// inputSubMenu.forEach(element => {
 	// 	element.addEventListener('input', function() {
