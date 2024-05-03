@@ -18,7 +18,7 @@
 							<form action="#" method="post" class="done__form">
 								<div class="popup__form-item">
 									<div class="popup__input-wrap">
-										<input required id="code-sms" autocomplete="off" type="email" name="form[]" data-error="Ошибка" placeholder="" class="popup__input" />
+										<input min="1" max="999999" onKeyPress="if(this.value.length === 6) return false" required id="code-sms" autocomplete="off" type="number" name="form[]" data-error="Ошибка" placeholder="" class="popup__input" />
 										<label for="code-sms" class="popup__label">код из sms</label>
 										<button data-popup="#no-sms" type="button" class="popup__mini-button">Не приходит SMS?</button>
 									</div>

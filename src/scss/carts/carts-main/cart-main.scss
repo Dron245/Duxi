@@ -176,9 +176,18 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+		.checkbox__body {
+			align-self: center;
+		}
 		.checkbox__text {
 			font-style: italic;
 			line-height: normal;
+			@media (max-width:$tablet){
+				font-size: 20px;
+			}
+			@media (max-width:$mobile){
+				 @include adaptiveValue("font-size", 24, 13,0,768,320); 
+			}
 		}
 		@media (max-width:$mobileSmall){
 			 flex-direction: column;
@@ -193,6 +202,12 @@
 	&__button {
 		font-size: 14px;
 		padding: 9.5px toRem(40);
+		@media (max-width:$tablet){
+			font-size: 22px;
+		}
+		@media (max-width:$mobile){
+			 @include adaptiveValue("font-size", 28, 15,0,768,320); 
+		}
 		@media (max-width:$mobileSmall){
 			padding: 9.5px toRem(20);
 		}

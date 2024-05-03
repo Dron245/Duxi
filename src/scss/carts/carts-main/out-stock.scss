@@ -30,6 +30,12 @@
 		font-size: 14px;
 		justify-self: start;
 		padding: 9px toRem(13);
+		@media (max-width:$tablet){
+			font-size: 20px;
+		}
+		@media (max-width:$mobile){
+			 @include adaptiveValue("font-size", 28, 13,0,768,320); 
+		}
 	}
 
 	&__checkbox {

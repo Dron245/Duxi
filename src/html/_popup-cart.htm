@@ -395,7 +395,7 @@
 				</p>
 				<form method="post" action="#" class="popup__form">
 					<div class="popup__form-item">
-						<input min="100000" max="999999" id="index" required autocomplete="off" type="number" name="form[]" data-error="Ошибка" class="popup__input" />
+						<input onKeyPress="if(this.value.length === 6) return false" min="100000" max="999999" id="index" required autocomplete="off" type="number" name="form[]" data-error="Ошибка" class="popup__input" />
 						<label for="index" class="popup__label">введите ваш почтовый индекс</label>
 					</div>
 					<div class="popup__form-item">

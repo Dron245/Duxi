@@ -779,6 +779,30 @@ window.addEventListener("DOMContentLoaded", () => {
 			document.querySelector(".popup__img-add").style.display = "block";
 		}
 
+		//ДОбавление нового адреса в корзине
+		if (targetElement.closest("#save-data-button") && document.querySelector(".basket")) {
+			const formData = targetElement.closest("body").querySelector("#add-address");
+			getValuesCart();
+			function getValuesCart() {
+				const numbers = [];
+				const inputs = formData.querySelectorAll("input");
+				const adresses = targetElement.closest("body").querySelector(".popup__form-item_address > ul");
+				for (const input of inputs) {
+					numbers.push(input.value);
+				}
+				const str = numbers
+					.filter((element) => {
+						return element !== null && element !== undefined && element !== "";
+					})
+					.join(", ");
+				adresses.insertAdjacentHTML(
+					"beforeEnd",
+					`<li class="submenu-item__address">${str}</li>`
+				);
+				closePopup("#save-data");
+			}
+		}
+
 		//ДОбавление нового адреса в личном кабинете
 		if (targetElement.closest("#save-data-button") && document.querySelector(".lk")) {
 			const formData = targetElement.closest("body").querySelector("#add-address");
@@ -1160,6 +1184,14 @@ document.addEventListener("DOMContentLoaded", () => {
 		}
 	}
 
+
+	const labelInPopup = document.querySelectorAll('.popup__label')
+	labelInPopup.forEach(element => {
+		if (element.closest('.popup')) {
+			element.classList.add('_label-in-popup')
+		}
+	});
+
 	// Ввожу проверочный код. Изменение фокуса
 
 	const phoneNumber = document.querySelector(".phone-popup");
@@ -1239,36 +1271,18 @@ document.addEventListener("DOMContentLoaded", () => {
 		});
 	});
 
-
+	// Опускаю лейблы при пустых полях инпута НЕ в Попапах.
+	// (Нужно родителю инпута поставить класс .label-up-cart)
 	const inputLabelUp = document.querySelectorAll('.label-up-cart > input')
 	inputLabelUp.forEach(element => {
-			element.addEventListener('input', function() {
-				if (element.value == '') {
-					console.log(123);
-					element.closest('.label-up-cart').classList.add('_label-down')
-				} else if (element.value !=='') {
-					element.closest('.label-up-cart').classList.remove('_label-down')
-				}
-			})
+		element.addEventListener('input', function() {
+			if (element.value == '') {
+				element.closest('.label-up-cart').classList.add('_label-down')
+			} else if (element.value !=='') {
+				element.closest('.label-up-cart').classList.remove('_label-down')
+			}
+		})
 	});
-	// const inputSubMenu = document.querySelectorAll('.input-submenu')
-	// inputSubMenu.forEach(element => {
-	// 	element.addEventListener('input', function() {
-	// 		if (element.value !== '' && !element.activeElement) {
-	// 			element.closest('.popup__form-item') ? element.closest('.popup__form-item').classList.add('_label') : null;
-	// 		} else if (element.closest('.popup__form-item') && element.closest('.popup__form-item').classList.contains('_label')) {
-	// 			element.closest('.popup__form-item').classList.remove('_label')
-	// 		}
-	// 	})
-	// });
-
-	// const SubMenuInput = document.querySelectorAll('.popup__submenu')
-	// SubMenuInput.forEach(element => {
-	// 	const inputSubMenu = element.closest('.popup__form-item').querySelector('input')
-	// 	if (inputSubMenu.value !== '' && !inputSubMenu.activeElement) {
-
-	// 	}
-	// });
 });
 
 //ИМПОРТИРУЮ КАЛЕНДАРЬ
@@ -1326,140 +1340,3 @@ if (store) {
 		store.querySelector(".store-not-open").setAttribute("data-open", "");
 	}
 }
-
-/*function drag() {
-	var dragSrcEl = null;
-	
-	function handleDragStart(e) {
-	
-	//   this.style.opacity = '0.4';
-	  
-	  dragSrcEl = this;
- 
-	  e.dataTransfer.effectAllowed = 'move';
-	  e.dataTransfer.setData('text/html', this.innerHTML);
-	}
- 
-	function handleDragOver(e) {
-	  if (e.preventDefault) {
-		 e.preventDefault();
-	  }
- 
-	  e.dataTransfer.dropEffect = 'move';
-	  
-	  return false;
-	}
- 
-	function handleDragEnter(e) {
-	  this.classList.add('over');
-	}
- 
-	function handleDragLeave(e) {
-	  this.classList.remove('over');
-	}
- 
-	function handleDrop(e) {
-	  if (e.stopPropagation) {
-		 e.stopPropagation(); // stops the browser from redirecting.
-	  }
-	  
-	  if (dragSrcEl != this) {
-		 dragSrcEl.innerHTML = this.innerHTML;
-		 this.innerHTML = e.dataTransfer.getData('text/html');
-	  }
-	  
-	  return false;
-	}
- 
-	function handleDragEnd(e) {
-	  this.style.opacity = '1';
-	  
-	  items.forEach(function (item) {
-		 item.classList.remove('over');
-	  });
-	}
-	
-	
-	let items = document.querySelectorAll('.favorite__wrapper .box');
-	items.forEach(function(item) {
-	  item.addEventListener('dragstart', handleDragStart, false);
-	  item.addEventListener('dragenter', handleDragEnter, false);
-	  item.addEventListener('dragover', handleDragOver, false);
-	  item.addEventListener('dragleave', handleDragLeave, false);
-	  item.addEventListener('drop', handleDrop, false);
-	  item.addEventListener('dragend', handleDragEnd, false);
-	});
-}*/
-
-/*document.addEventListener('DOMContentLoaded', (event) => {
-	// const favorites = document.querySelector('.favorites')
-	// const imgFavorite = favorites.querySelectorAll('.product__img > img')
-	// console.log(imgFavorite);
-	// imgFavorite.forEach(element => {
-	// 	element.addEventListener('dragover', function(e) {
-	// 		console.log('123');
-	// 		e.preventDefault()
-	// 	})
-	// });
-	var dragSrcEl = null;
-	
-	function handleDragStart(e) {
-	
-	//   this.style.opacity = '0.4';
-	  
-	  dragSrcEl = this;
- 
-	  e.dataTransfer.effectAllowed = 'move';
-	  e.dataTransfer.setData('text/html', this.innerHTML);
-	}
- 
-	function handleDragOver(e) {
-	  if (e.preventDefault) {
-		 e.preventDefault();
-	  }
- 
-	  e.dataTransfer.dropEffect = 'move';
-	  
-	  return false;
-	}
- 
-	function handleDragEnter(e) {
-	  this.classList.add('over');
-	}
- 
-	function handleDragLeave(e) {
-	  this.classList.remove('over');
-	}
- 
-	function handleDrop(e) {
-	  if (e.stopPropagation) {
-		 e.stopPropagation(); // stops the browser from redirecting.
-	  }
-	  
-	  if (dragSrcEl != this) {
-		 dragSrcEl.innerHTML = this.innerHTML;
-		 this.innerHTML = e.dataTransfer.getData('text/html');
-	  }
-	  
-	  return false;
-	}
- 
-	function handleDragEnd(e) {
-	  this.style.opacity = '1';
-	  
-	  items.forEach(function (item) {
-		 item.classList.remove('over');
-	  });
-	}
-	
-	
-	let items = document.querySelectorAll('.favorite__wrapper .box');
-	items.forEach(function(item) {
-	  item.addEventListener('dragstart', handleDragStart, false);
-	  item.addEventListener('dragenter', handleDragEnter, false);
-	  item.addEventListener('dragover', handleDragOver, false);
-	  item.addEventListener('dragleave', handleDragLeave, false);
-	  item.addEventListener('drop', handleDrop, false);
-	  item.addEventListener('dragend', handleDragEnd, false);
-	});
- });*/
