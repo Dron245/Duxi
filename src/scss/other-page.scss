@@ -60,6 +60,10 @@
 				 row-gap: 20px; 
 			}
 		}
+		&.politica {
+			flex-direction: column;
+			margin-bottom: 80px;
+		}
 	}
 
 	&__img {
@@ -153,7 +157,13 @@
 	&__link {
 		color: $tekst-zagolovok-ne-aktivnyy;
 		&_inner {
-			
+			align-self: flex-end;
+			@media (max-width:$tablet){
+				font-size: 20px;
+				@media (max-width:$mobile){
+					 @include adaptiveValue("font-size", 28, 13,0,768,320); 
+				}
+			}
 		}
 	}
 }

@@ -172,7 +172,16 @@
 	&__button {
 		gap: 10px;
 		padding-inline: 10px;
-		
+		min-width: 250px;
+		@media (max-width:$tablet){
+			min-width: 370px;
+		}
+		@media (max-width:$mobile){
+			 min-width: 76%; 
+		}
+		@media (max-width:$mobileSmall){
+			 min-width: 100%; 
+		}
 		&_redaction {
 		}
 

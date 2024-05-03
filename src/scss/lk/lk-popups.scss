@@ -27,11 +27,21 @@
 			 padding: 0px;
 		}
 	}
-	.info-where__number, .info-where__sub-title {
+
+	.info-where__number,
+	.info-where__sub-title,
+	.data-where__sub-title,
+	.data-where__text,
+	.progress__description{
 		@media (max-width:$mobile){
 			 @include adaptiveValue("font-size", 25, 13,0,768,320); 
 		}
 	}
+	.progress__description {
+		transform: translate(0);
+		top: -2px;
+	}
+
 	.popup__wrapper {
 		margin-top: 20px;
 	}
