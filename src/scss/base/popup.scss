@@ -166,6 +166,9 @@ body::after {
 
 .popup {
 	&__wrapper {
+		// height: 100%;
+		// overflow-y: auto;
+		// @include scroll-view;
 		#filters-main &, #review-filters &, #filters-otlivant &,
 		#filters-otlivant &, #review-product-filters & {
 			height: 100%;
@@ -188,11 +191,13 @@ body::after {
 			height: 100%;
 			// height: 100%;
 			&._overflow-y {
-				border-radius: 20px 0 0 20px;
+				// border-radius: 20px 0 0 20px;
 				// overflow: initial;
 				overflow-y: auto;
-				// border-radius: 20px 0 0 20px;
-				@include scroll-view;
+				// @include scroll-view;
+				&::-webkit-scrollbar {
+					width: 0;
+				 }
 			}
 		}
 	}
@@ -205,7 +210,7 @@ body::after {
 		height: 20px;
 		z-index: 101;
 		@media (max-width:$mobile){
-			width: 20px;
+			width: 25px;
 			//  @include adaptiveValue("width", 50, 18,0,768,320); 
 		}
 		img {
@@ -409,6 +414,9 @@ body::after {
 		transform: translateY(-50%);
 		color: rgba(0, 0, 0, 0.5);
 		transition: top 0.15s, left 0.15s;
+		#city & {
+			color:$zagolovok
+		}
 		.label-up-cart & {
 			top: -23%;
 			// top: -10px;
@@ -770,29 +778,52 @@ body::after {
 	.first_level_region_item {
 		display: flex;
 		flex-wrap: wrap;
+		@media (max-width:$mobile){
+			 max-height: 650px;
+			 overflow: hidden;
+			 overflow-y: auto;
+			 @include scroll-view;
+			 margin-right: -20px;
+		}
+
 	}
 
 	.popup-tabs__iteration_break {
 		flex: 0 0 25%;
 		// outline: 1px solid red;
-		@media (max-width: $mobile) {
+		@media (max-width: $tablet) {
 			flex: 0 0 50%;
 			&:not(:last-child) {
 				margin-bottom: toRem(10);
 			}
 		}
-		@media (max-width: $mobileSmall) {
-			flex: 0 0 100%;
+		@media (max-width:$mobile){
+			 flex: 0 0 100%; 
+		}
+		
+	}
+	.popup-tabs__regions {
+		margin-top: 40px;
+		@media (max-width:$mobileSmall){
+			 margin-top: 20px; 
 		}
 	}
-
 	.list_region_body {
 		display: block;
 		cursor: pointer;
 		// text-transform: lowercase;
 		&:not(:last-child) {
 			margin-bottom: toRem(10);
+			@media (max-width:$mobile){
+				 @include adaptiveValue("margin-bottom", 30, 15,0,768,320); 
+			}
 		}
+		
+	}
+	.bt_region_select {
+		@media (max-width:$mobile){
+			@include adaptiveValue("font-size", 28, 13,0,768,320); 
+	  }
 	}
 }
 

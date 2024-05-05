@@ -28,6 +28,12 @@
 		input {
 			border-radius: 12px;
 		}
+		.header-center__input {
+			
+			@media (max-width:$tablet){
+				padding-left: 3%;
+			}
+		}
 	}
 }
 
@@ -53,18 +59,33 @@
 			 width: 100%; 
 		}
 	}
-	&__navigation {
+	&__navigation, .main-search &__navigation[class] {
 		@media (max-width:$mobile){
 			 display: none; 
 		}
 	}
 
 	&__button {
+		// .brands-tabs__button {
+		@media (max-width:$tablet){
+			width: 30px;
+		}
+		@media (max-width:$mobile){
+				@include adaptiveValue("width", 46, 22,0,768,320); 
+				// @include adaptiveValue("flex-basis", 46, 29,0,768,320); 
+		}
+		svg {
+			width: 100%;
+			height: auto;
+		}
+		// }
 		&._tab-active svg {
 			fill: $knopka-bordovaya;
 		}
 		&:not(:last-child) {
-			margin-right: 10px;
+			@media (min-width:$mobile){
+				margin-right: 10px;
+			}
 		}
 	}
 	&__title {
@@ -78,19 +99,23 @@
 
 	&__content {
 		flex: 1 0 100%;
-		margin-top: toRem(20);
+		// margin-top: toRem(20);
 	}
 
 	&__body {
 		margin-top: toRem(20);
 		margin-bottom: toRem(40);
+		.main-search & {
+			@media (max-width:$mobile){
+				 margin-top: 0;
+				 margin-bottom: 0; 
+			}
+		}
 	}
 
 	&__cols-wrapper {
-		// outline: 1px solid blue;
 		display:flex;
 		justify-content: flex-start;
-		// justify-content: space-between;
 		align-items: flex-start;
 		column-gap: 30px;
 		flex-wrap: wrap;
@@ -110,7 +135,6 @@
 	}
 
 	&__col {
-		// outline: 5px solid red;
 		flex: 0 0 10.79%; /* 160/1490 */
 		margin-bottom: toRem(40);
 		@media (max-width:$pcSmall){
@@ -165,9 +189,11 @@
 	&__list {
 		
 		&_tile {
-			// outline: 1px solid blue;
 			display: grid;
 			grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+			@media (max-width:$tablet){
+				grid-template-columns: 1fr 1fr 1fr;
+			}
 			// flex-wrap: wrap;
 			gap: 30px 20px;
 			@media (max-width:em(530)){
@@ -229,30 +255,4 @@
 			 @include adaptiveValue("font-size", 28, 14,0,768,320); 
 		}
 	}
-}
-.tile-brands {
-}
-
-.list-brands {
-}
-.header-center {
-
-	&__form {
-	}
-
-	&__input {
-	}
-
-	&__button {
-	}
-}
-.input {
-}
-.search-button {
-}
-.img-search-small {
-}
-.asd {
-}
-.qwe {
 }

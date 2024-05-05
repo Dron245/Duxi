@@ -974,11 +974,11 @@ window.addEventListener("DOMContentLoaded", () => {
 					"afterbegin",
 					`
 				<div data-lk-list-item="${Date.now()}" class="lk-address__item">
-					<p class="lk-address__text">${listInput.value}</p>
+					<a href="lk-list-item.html" class="lk-address__text">${listInput.value}</a>
 					<div class="lk-address__actions">
-						<a href="lk-list-item.html" type="button" class="lk-address__button">
+						<button data-popup="#lk-list-name" type="button" class="lk-address__button lk-list__button-change">
 							<img src="img/lk/redactors.svg" alt="изменить">
-						</a>
+						</button>
 						<button data-popup="#lk-list-item-del" type="button" class="lk-address__button lk-list__button-delete">
 							<img src="img/lk/delete.svg" alt="удалить">
 						</button>
@@ -987,6 +987,27 @@ window.addEventListener("DOMContentLoaded", () => {
 				`
 				);
 				closePopup("#add-lk-list");
+			}
+		}
+
+		// Редактирование имени списко
+		if (targetElement.closest('[data-popup="#lk-list-name"]')) {
+			const listNameItem = targetElement.closest('.lk-address__item').querySelector('.lk-address__text');
+			const listNameItemPopup = document.querySelector('#lk-list-name').querySelector('input')
+			listNameItemPopup.value = listNameItem.innerText
+		}
+
+		if (targetElement.closest('.lk-list__button-change')) {
+			idItemListLk = targetElement.closest("[data-lk-list-item]") ? targetElement.closest("[data-lk-list-item]").dataset.lkListItem : null;
+		}
+
+		if (targetElement.closest('#change-name-item')) {
+			const inputName = document.querySelector(`div[data-lk-list-item = "${idItemListLk}"]`).querySelector('.lk-address__text');
+			console.log(inputName);
+			const listNameItemPopup = targetElement.closest('form').querySelector('input')
+			if (listNameItemPopup.value !=='') {
+				inputName.textContent = listNameItemPopup.value
+				closePopup("#lk-list-name");
 			}
 		}
 

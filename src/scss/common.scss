@@ -140,14 +140,20 @@ h3[class*="__title"] {
 	}
 
 	&__cost {
-		@include adaptiveValue("font-size", 18, 16, 0, 1920, 1001);
-		line-height: math.div(21, 18);
+		@include adaptiveValue("font-size", 18, 16, 0, 1540, 1001);
+		line-height: normal;
+		// &:not(:last-child) {
+			margin-bottom: toRem(7);
+		// }
+		@media (max-width:$tablet){
+			@include adaptiveValue("font-size", 23, 18,0,1001.99,768.01);
+		}
 		@media (max-width: $mobile) {
 			// margin-top: 20px;
 			@include adaptiveValue("font-size", 26, 16, 0, 768, 360);
 		}
-		&:not(:last-child) {
-			margin-bottom: toRem(10);
+		@media (max-width:$mobileSmall){
+			 margin-bottom: 4px; 
 		}
 		.product-wait & {
 			display: none;
@@ -156,7 +162,7 @@ h3[class*="__title"] {
 
 	&__text-none {
 		margin-bottom: 10px;
-		text-align: center;
+		// text-align: center;
 		font-style: italic;
 		font-weight: 300;
 		@media (max-width:$tablet){
@@ -445,7 +451,8 @@ h3[class*="__title"] {
 					margin-bottom: 0;
 				}
 				@media (max-width:$mobile){
-					 margin-top: 5px; 
+					 margin-top: 5px;
+					 margin-bottom: 100px;
 				}
 			 }
 		}

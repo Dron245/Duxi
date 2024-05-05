@@ -89,6 +89,13 @@
 		summary {
 			list-style: none;
 			//  outline: 1px solid blue;
+			 @media (max-width:$mobile){
+				display: flex;
+				align-items: center;
+				.main-search__img-arrow {
+					margin-left: auto;
+				}
+			 }
 		}
 	}
 
@@ -182,8 +189,8 @@
 
 		&_miniature {
 			@media (max-width: em(356)) {
-				display: inline-block;
-				transform: translateX(-106px);
+				// display: inline-block;
+				// transform: translateX(-106px);
 			}
 		}
 	}

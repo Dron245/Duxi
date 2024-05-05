@@ -1,7 +1,7 @@
 <div id="change-phone" aria-hidden="true" class="popup popup-more">
 	<div class="popup__wrapper">
 		<div class="popup__content">
-			<button data-close type="button" class="popup__close"><img src="@img/popup/close.svg" alt="" /></button>
+			<button data-close type="button" class="popup__close"><img src="@img/popup/close.svg" alt="закрыть окно" /></button>
 			<div class="popup__body">
 				<h4 class="popup__title">изменить телефон</h4>
 				<p class="popup__text">&nbsp;Внимание! Запрос на смену телефона можно отправить три раза в сутки.</p>
@@ -24,7 +24,7 @@
 <div id="change-delivery-address" aria-hidden="true" class="popup">
 	<div class="popup__wrapper">
 		<div class="popup__content">
-			<button data-close type="button" class="popup__close"><img src="@img/popup/close.svg" alt="" /></button>
+			<button data-close type="button" class="popup__close"><img src="@img/popup/close.svg" alt="закрыть окно" /></button>
 			<div class="popup__body">
 				<h4 class="popup__title">изменить адрес доставки</h4>
 				<form method="post" action="#" class="popup__form">
@@ -88,7 +88,7 @@
 <div id="add-document" aria-hidden="true" class="popup popup-more">
 	<div class="popup__wrapper">
 		<div class="popup__content">
-			<button data-close type="button" class="popup__close"><img src="@img/popup/close.svg" alt="" /></button>
+			<button data-close type="button" class="popup__close"><img src="@img/popup/close.svg" alt="закрыть окно" /></button>
 			<div class="popup__body">
 				<h4 class="popup__title">подтвердить дату рождения</h4>
 				<p class="popup__text">Загрузите скан-копию докумета, подтверждающего дату рождения.</p>
@@ -114,7 +114,7 @@
 <div id="change-password" aria-hidden="true" class="popup popup-more">
 	<div class="popup__wrapper">
 		<div class="popup__content">
-			<button data-close type="button" class="popup__close"><img src="@img/popup/close.svg" alt="" /></button>
+			<button data-close type="button" class="popup__close"><img src="@img/popup/close.svg" alt="закрыть окно" /></button>
 			<div class="popup__body">
 				<div class="popup__reg-top">
 					<h4 class="popup__title">ИЗМЕНИТЬ ПАРОЛЬ</h4>
@@ -162,7 +162,7 @@
 <div id="where-order" aria-hidden="true" class="popup popup-more">
 	<div class="popup__wrapper">
 		<div class="popup__content">
-			<button data-close type="button" class="popup__close"><img src="@img/popup/close.svg" alt="" /></button>
+			<button data-close type="button" class="popup__close"><img src="@img/popup/close.svg" alt="закрыть окно" /></button>
 			<div class="popup__body">
 				<h4 class="popup__title">информация по заказу № 123456789</h4>
 				<div class="info-where__details">
@@ -270,7 +270,7 @@
 <div id="add-lk-list" aria-hidden="true" class="popup popup-more">
 	<div class="popup__wrapper">
 		<div class="popup__content">
-			<button data-close type="button" class="popup__close"><img src="@img/popup/close.svg" alt="" /></button>
+			<button data-close type="button" class="popup__close"><img src="@img/popup/close.svg" alt="закрыть окно" /></button>
 			<div class="popup__body">
 				<h4 class="popup__title">СОЗДАТЬ НОВЫЙ СПИСОК</h4>
 				<form method="" action="#" class="popup__form">
@@ -292,13 +292,33 @@
 <div id="lk-list-item-del" aria-hidden="true" class="popup popup-more">
 	<div class="popup__wrapper">
 		<div class="popup__content">
-			<button data-close type="button" class="popup__close"><img src="@img/popup/close.svg" alt="" /></button>
+			<button data-close type="button" class="popup__close"><img src="@img/popup/close.svg" alt="закрыть окно" /></button>
 			<div class="popup__body">
 				<h4 class="popup__title">Удалить данный список?</h4>
 				<form method="" action="#" class="popup__form">
 					<div class="popup__form-item">
 						<button type="button" class="popup__button">Да</button>
 						<button type="button" class="button-light">Нет</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="lk-list-name" aria-hidden="true" class="popup popup-more">
+	<div class="popup__wrapper">
+		<div class="popup__content">
+			<button data-close type="button" class="popup__close"><img src="@img/popup/close.svg" alt="закрыть окно" /></button>
+			<div class="popup__body">
+				<h4 class="popup__title">Редактировать список</h4>
+				<form method="" action="#" class="popup__form">
+					<div class="popup__form-item">
+							<input id="list-lk-name-item" required autocomplete="off" type="text" name="form[]" data-error="Ошибка" class="popup__input" />
+							<label for="list-lk-name-item" class="popup__label">Имя списка</label>
+					</div>
+					<div class="popup__form-item">
+						<button id="change-name-item" type="button" class="popup__button">Изменить</button>
 					</div>
 				</form>
 			</div>
