@@ -1,11 +1,18 @@
 .filtmodal {
 	// box-shadow: 4px 4px 30px 0px rgba(0, 0, 0, 0.25);
+	height: 100%;
 	&__wrapper {
 		// outline: 1px solid red;
+		// background: rgba(255, 0, 0, 0.226);
 		transition: left 0.3s;
 		// position: relative;
 		// overflow: hidden;
 		transition: transform 0.3s;
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+		overflow-y: auto;
+		@include scroll-view;
 		@media (min-width:$mobile){
 			&:not(:last-child) {margin-bottom: toRem(50);} 
 		}
@@ -106,19 +113,34 @@
 	}
 
 	&__actions {
-		margin-top: toRem(27);
-		margin-bottom: toRem(20);
+		// margin-top: toRem(27);
+		margin-top: auto;
+		// margin-bottom: toRem(20);
 		@media (max-width:$mobile){
 			padding-left: 20px;
-			padding-right: 20px; 
-			
+			padding-right: 20px;
+			padding-bottom: 20px; 
+			position: sticky;
+			bottom: 0px;
+			&::after{
+				content:'';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				// height: calc(100% + 20px);
+				height: 100%;
+				background-color: #fff;
+				z-index: -1;
+			}
 		}
 		@media (max-width:$mobileSmall){
 			 padding-left: 15px;
 			 padding-right: 15px; 
 		}
 		&_check {
-			._overflow-y & {
+			// margin-top: 20px;
+			/*._overflow-y & {
 				position: relative;
 				// bottom: 97px;
 				z-index: 200;
@@ -133,7 +155,7 @@
 					background-color: #fff;
 					z-index: -1;
 				}
-			}
+			}*/
 		}
 	}
 
@@ -165,6 +187,8 @@
 		// width: 100%;
 		z-index: 100;
 		transition: left 0.3s;
+		display: flex;
+		flex-direction: column;
 		&._sub-menu-open {
 			left: 0;
 			// height: 100%;
@@ -232,9 +256,9 @@
 				overflow-y: auto;
 				// margin-left: -20px;
 				// margin-right: -20px;
-				// @include scroll-view;
+				@include scroll-view;
 				&::-webkit-scrollbar {
-					display: none;
+					// display: none;
 				}
 			}
 		}

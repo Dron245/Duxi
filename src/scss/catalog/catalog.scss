@@ -432,7 +432,7 @@
 			padding: 20px;
 			text-transform: uppercase;
 			border: 1px solid #931e3f;
-			width: 100%;
+			// width: 100%;
 			@include adaptiveValue("font-size", 30, 15, 0, 768, 320);
 			@media (max-width: $mobileSmall) {
 				padding: 12px;

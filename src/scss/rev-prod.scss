@@ -157,7 +157,8 @@
 			font-size: 20px;
 		}
 		@media (max-width:$mobile){
-			 display: none; 
+			 display: none;
+			@include adaptiveValue("font-size", 28, 13,0,768,320);
 		}
 
 		&_gender {
@@ -176,7 +177,7 @@
 			&.product-response__item {
 				@media (max-width:$mobile){
 					display: block; 
-					@include adaptiveValue("font-size", 24, 13,0,768,320);
+					// @include adaptiveValue("font-size", 24, 13,0,768,320);
 				}
 			}
 		}

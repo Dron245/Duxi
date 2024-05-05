@@ -251,11 +251,13 @@
 
 .actions-otliv {
 	display: inline-flex;
-	align-items: flex-start;
+	align-items: center;
 	gap: 25px;
 	&:not(:last-child) {margin-bottom: toRem(40);}
 	@media (max-width:$tablet){
+		align-items: flex-start;
 		flex-direction: column;
+		row-gap: 40px;
 	}
 	@media (max-width:$mobile){
 		 display: flex;
@@ -277,13 +279,14 @@
 	&__cost {
 		position: relative;
 		width: max-content;
-		&:not(:last-child) {margin-bottom: toRem(37);}
+		// &:not(:last-child) {margin-bottom: toRem(37);}
 	}
 
 	&__available {
 		display: inline-flex;
 		align-items: center;
 		column-gap: toRem(10);
+		margin-bottom: 10px;
 	}
 
 	&__buttons {
@@ -301,6 +304,13 @@
 			 width: 100%; 
 		}
 	}
+
+	&__right {
+		@media (max-width:$mobile){
+			 width: 100%; 
+		}
+	}
+
 	&__button {
 		width: 240px;
 		@media (max-width:$tablet){
@@ -321,6 +331,7 @@
 		&_cart {
 			color: white;
 			background-color: $knopka-bordovaya;
+			width: 100%;
 			@media (any-hover: hover){
 				&:hover{
 					// color: $knopka-bordovaya;
@@ -368,8 +379,9 @@
 			flex-direction: column;
 			row-gap: 20px;
 			padding: 20px;
-			border: 1px solid rgba(214, 187, 195, 0.50);
+			// border: 1px solid rgba(214, 187, 195, 0.50);
 			background: #FFF;
+			border-radius: 16px;
 			& > * {
 				display: flex;
 				align-items: center;
@@ -397,13 +409,13 @@
 	}
 	&__none {
 		position: absolute;
-		right: 0;
+		left: 0;
 		top: -40%;
 		// text-decoration-line: line-through;
 		@media (max-width:$mobile){
 			 position: relative;
-			 right: initial;
-			 left: 0; 
+			//  right: initial;
+			//  left: 0; 
 		}
 	}
 

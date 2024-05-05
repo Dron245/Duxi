@@ -1060,12 +1060,13 @@ document.addEventListener("DOMContentLoaded", () => {
 	}
 
 	// делаю доступной прокрутку, если высота окна меньше высоты попапа в меню фильтов в моб. версии
-	const popupFiltmodal = document.querySelector(".popup__body.filtmodal");
+	/*const popupFiltmodal = document.querySelector(".popup__body.filtmodal");
 	const popupContent = popupFiltmodal ? popupFiltmodal.closest(".popup__content") : null;
-
+	console.log(popupFiltmodal.clientHeight);
+	console.log(window.innerHeight);
 	if (popupFiltmodal && popupFiltmodal.clientHeight > window.innerHeight - 120) {
 		popupContent.classList.add("_overflow-y");
-	}
+	}*/
 
 	const searchMob = document.querySelector(".search-mob");
 	const headerDropMobile = searchMob.querySelector(".dropmenu");
@@ -1135,7 +1136,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		hint.style.top = pozSearch.offsetTop + pozSearch.clientHeight / 2 + "px";
 		setTimeout(() => {
 			hint.remove();
-		}, 1500);
+		}, 3000);
 	}
 
 	// console.log(document.querySelector('.popup__form-item > span'));

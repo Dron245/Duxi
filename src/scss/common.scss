@@ -83,18 +83,18 @@ h3[class*="__title"] {
 		font-size: 14px;
 		color: #000;
 		font-weight: 400;
-		line-height: 16px;
+		line-height: normal;
 		@media (max-width: $tablet) {
 			font-size: toRem(20);
 		}
 		@media (max-width: $mobile) {
 			margin-top: toRem(1);
 			@include adaptiveValue("font-size", 30, 13, 0, 768, 360);
-			line-height: 34px;
+			// line-height: 34px;
 		}
 		@media (max-width: $mobileSmall) {
 			//   @include adaptiveValue("font-size", 16, 13,0,480,360);
-			line-height: 112.5%; /* 18/16 */
+			// line-height: 112.5%; /* 18/16 */
 		}
 		span {
 			font-weight: 700;
@@ -286,6 +286,9 @@ h3[class*="__title"] {
 		text-transform: uppercase;
 		@media (max-width:$tablet){
 			font-size: 22px;
+			.menu-open & {
+				z-index: 2;
+			}
 		}
 		@media (max-width:$mobile){
 			 @include adaptiveValue("font-size", 28, 15,0,768,320);

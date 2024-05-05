@@ -87,6 +87,9 @@
 				margin-right: 10px;
 			}
 		}
+		.lk &:not(:last-child) {
+			margin-right: 10px;
+		}
 	}
 	&__title {
 		.brands & {
