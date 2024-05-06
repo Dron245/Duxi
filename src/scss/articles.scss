@@ -214,6 +214,9 @@
 
 
 	&__top {
+		@media (min-width:$tablet){
+			 @include adaptiveValue("margin-bottom", 60, 40,0,1540,1280); 
+		}
 		@media (max-width:$tablet){
 			margin-block: 40px;
 		}

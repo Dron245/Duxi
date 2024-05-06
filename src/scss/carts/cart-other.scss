@@ -178,6 +178,13 @@
 	}
 
 	&__img {
+		@media (min-width:$mobile){
+			@include adaptiveValue("width", 650, 260,0,1540,768);
+		}
+		@media (max-width:$mobile){
+			margin:auto;
+			 @include adaptiveValue("width", 537, 245,0,768,320); 
+		}
 		img {
 			width: 100%;
 			height: auto;

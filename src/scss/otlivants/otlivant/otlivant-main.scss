@@ -35,7 +35,10 @@
 			font-weight: 400;
 		}
 		@media (max-width:$mobileSmall){
-			 font-size: toRem(28); 
+			 font-size: 28px;
+			 .response & {
+				font-size: 20px;
+			 }
 		}
 		@media (max-width: em(360)){
 			font-size: 22px;

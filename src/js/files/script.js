@@ -638,8 +638,18 @@ window.addEventListener("DOMContentLoaded", () => {
 		}
 
 		//Раскрашиваю тенью выбранный подарок в попапе "Выбрать подарок"
-		if (targetElement.closest(".gift__button")) {
-			targetElement.closest(".gift__item").classList.toggle("_shadow-gift");
+		const gift = targetElement.closest('.gift__button') ? targetElement.closest('.gift__button') : null
+		if (gift && !gift.classList.contains('button-actions')) {
+			targetElement.closest(".gift__item").classList.add("_shadow-gift");
+			gift.textContent = 'ВЫБРАНО'
+			gift.classList.add('button-actions')
+			gift.classList.remove('button-light')
+		} else if (gift && gift.classList.contains('button-actions')) {
+			targetElement.closest(".gift__item").classList.remove("_shadow-gift");
+			gift.classList.remove('button-actions')
+			gift.classList.add('button-light')
+			gift.textContent = 'ВЫБРАТЬ'
+			gift.closest('.gift__item').querySelector('.gift__input').value = 0
 		}
 
 		// В корзине сменяю кнопку с "Оформить" на "Подождите"
@@ -684,6 +694,9 @@ window.addEventListener("DOMContentLoaded", () => {
 		//Редактировать адрес
 		if (targetElement.closest(".edit") && flagred == true) {
 			flagred = false;
+			targetElement.closest(".edit").classList.add('_change-pancel')
+			targetElement.closest('.list-popup__button-text') ? targetElement.closest('.list-popup__button-text').textContent = 'сохранить изменения' : null
+			targetElement.closest('.list-popup__button-text') ? targetElement.closest('.list-popup__button-text').style.color = '#23A104' : null
 			const inputAddress = targetElement.closest("form").querySelectorAll("input");
 			inputAddress.forEach((element) => {
 				element.removeAttribute("disabled");
@@ -691,11 +704,18 @@ window.addEventListener("DOMContentLoaded", () => {
 			targetElement.closest("form").querySelector(".address__group_optional").style.display = "flex";
 		} else if (targetElement.closest(".edit") && flagred == false) {
 			flagred = true;
+			targetElement.closest(".edit").classList.remove('_change-pancel')
+			targetElement.closest('.list-popup__button-text') ? targetElement.closest('.list-popup__button-text').textContent = 'Редактировать данные' : null
+			targetElement.closest('.list-popup__button-text') ? targetElement.closest('.list-popup__button-text').style.color = '#1D76C9' : null
 			const inputAddress = targetElement.closest("form").querySelectorAll("input");
 			inputAddress.forEach((element) => {
 				element.setAttribute("disabled", "");
 			});
 			targetElement.closest("form").querySelector(".address__group_optional").style.display = "none";
+			const labelEmptyInput = targetElement.closest('.list-popup__button-text') ? targetElement.closest('.list-popup__button-text').closest('.address__form').querySelectorAll('.label-up-cart') : null
+			labelEmptyInput.forEach(element => {
+				element.classList.remove('_label-down')
+			});
 		}
 
 		//ОТкрытие скрытие списка адресов заказсчика

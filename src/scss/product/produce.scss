@@ -80,8 +80,8 @@
 			font-size: 13px;
 		}
 		@media (max-width:$tablet){
-			@include adaptiveValue("width", 206, 198,0,1001,768);
-			font-size: 15px;
+			@include adaptiveValue("width", 206, 165,0,1001,768);
+			@include adaptiveValue("font-size", 15, 13,0,1001.98,768.01);
 			padding: 11px toRem(0);
 		}
 		@media (max-width:$mobile){
@@ -166,6 +166,9 @@
 			.tabs__navigation {
 				// margin-top: 10px;
 				button {
+					@media (max-width:$tablet) and (min-width:$mobile){
+						@include adaptiveValue("font-size", 35, 28,0,1001.98,767.98);
+					}
 					&:not(:last-child) {
 						margin-right: 100px;
 					}
@@ -529,6 +532,7 @@
 			font-size: 20px;
 		}
 		@media (max-width:$mobile){
+			margin-bottom: 3px;
 			order: 2;
 			 @include adaptiveValue("font-size", 24, 12,0,768,320); 
 		}
@@ -549,6 +553,7 @@
 		}
 		@media (max-width:$mobile){
 			 @include adaptiveValue("font-size", 22, 11,0,768,320); 
+			 @include adaptiveValue("min-height", 26, 16,0,768,320); 
 			 order: 1;
 			 @include adaptiveValue("margin-bottom", 8, 3,0,768,320);
 		}
@@ -574,8 +579,9 @@
 		//  display: flex;
 		margin-bottom: 20px;
 		flex-direction: row;
-		 justify-content: space-between;
-		 flex-wrap: wrap;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		align-self: flex-start;
 	}
 
 	&__old {
@@ -675,6 +681,9 @@
 
 .carts-product {
 	text-align: right;
+	.button-actions {
+		background-color: $knopka-bordovaya;
+	}
 	&__add {
 		@media (max-width:$mobile){
 			 display: none; 

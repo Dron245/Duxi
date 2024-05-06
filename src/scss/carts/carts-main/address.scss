@@ -198,6 +198,11 @@
 		.guest & {
 			display: none;
 		}
+		.pencel-green {display: none;}
+		&._change-pancel {
+			.pencel-blue {display: none;}
+			.pencel-green {display: block;}
+		}
 	}
 
 	&__wrap-mini {

@@ -67,9 +67,17 @@
 	}
 
 	&__img {
+		@media (max-width:$mobile){
+			//  width: 100%; 
+		}
 		img {
-			width: 100%;
-			height: auto;
+			@media (max-width:$tablet){
+				aspect-ratio: 654 / 350;
+			}
+			@media (min-width:$tablet){
+				width: 100%;
+				height: auto;
+			}
 		}
 	}
 
@@ -104,8 +112,10 @@
 	}
 
 	&__link {
+		@media (min-width:$mobile){
+			width: 370px;
+		}
 		margin-top: 20px;
-		width: 370px;
 		// display: inline-flex;
 		margin-left: auto;
 		margin-right: auto;

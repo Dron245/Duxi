@@ -161,18 +161,24 @@
 
 	&__link {
 		.where & {
-			margin-left: 0;
-			margin-top: 30px;
-			@media (max-width:$mobile){
-				 width: 100%; 
-				 padding-top: 20px;
-				 padding-bottom: 20px;
-			}
-			@media (max-width:$mobileSmall){
-				 padding-top: 15px;
-				 padding-bottom: 15px; 
+			@media (min-width:$mobile){
+				 margin-left: initial; 
+				 margin-right: initial; 
 			}
 		}
+		// margin-left: 0;
+		// margin-top: 30px;
+		
+		@media (max-width:$mobile){
+				width: 100%; 
+				padding-top: 20px;
+				padding-bottom: 20px;
+		}
+		@media (max-width:$mobileSmall){
+				padding-top: 15px;
+				padding-bottom: 15px; 
+		}
+		// }
 	}
 }
 
