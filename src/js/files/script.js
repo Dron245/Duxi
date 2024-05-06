@@ -28,7 +28,7 @@ window.addEventListener("DOMContentLoaded", () => {
 			// targetElement.classList.toggle('_open');
 			// document.querySelector('.menu__user-data') ? targetElement.closest('.menu__user-data').classList.toggle('_user-open') : null
 			targetElement.closest(".menu__item").classList.toggle("_menu__item-active");
-			targetElement.closest(".menu__item").querySelector(".menu__sublist").classList.toggle("_sub-menu-open");
+			targetElement.closest(".menu__item").querySelector(".menu__sublist") ? targetElement.closest(".menu__item").querySelector(".menu__sublist").classList.toggle("_sub-menu-open") : null;
 		}
 		// закрытие меню бургер вне клика по меню
 		if (!targetElement.closest(".menсu__icon") && !targetElement.closest(".menu__body") && flag == true) {

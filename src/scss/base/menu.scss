@@ -44,14 +44,22 @@
 	// .menu__list
 	&__list {
 		@media (min-width:$tablet){
-			 flex-wrap: wrap; 
+			//  flex-wrap: wrap; 
 		}
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		
+		// align-items: center;
+		// justify-content: center;
+		display: grid;
+		grid-auto-flow: column;
+		// grid-template-rows: 1fr 1fr;
+		// grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
 		// column-gap: toRem(20);
+		@media (max-width: em(1300)) and (min-width:$tablet){
+			  grid-template-rows: 1fr 1fr;
+			  justify-items: center;
+			  
+		}
 		@media (max-width: $tablet) {
+			display: flex;
 			flex-direction: column;
 			align-items: flex-start;
 		}

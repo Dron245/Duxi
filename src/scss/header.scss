@@ -824,7 +824,7 @@
 		text-transform: uppercase;
 		color: #fff;
 		@media (max-width: em(1300)) {
-			font-size: toRem(14);
+			// font-size: toRem(14);
 		}
 		@media (max-width: em(1150)) {
 			.footer & {

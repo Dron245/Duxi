@@ -95,6 +95,8 @@
 	}
 
 	&_arrow {
+		display: grid;
+		// place-items: center;
 		img {
 			transition: transform 0.3s;
 		}
@@ -111,6 +113,11 @@
 		gap: 10px;
 		position: relative;
 		cursor: pointer;
+		.produce & {
+			@media (max-width: em(1110)) and (min-width:$tablet){
+				 gap: 5px; 
+			}
+		}
 	}
 
 	&__text {

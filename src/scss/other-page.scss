@@ -134,7 +134,7 @@
 			counter-increment: li;
 			content: counters(li, ".") ". ";
 		}
-		ol.o {
+		ol.cirkle-list {
 			list-style: circle;
 			padding-left: 40px;
 			margin-block: 16px;
@@ -166,4 +166,18 @@
 			}
 		}
 	}
+	&__top {
+		margin-bottom: 10px;
+	}
+	&__top-item {
+		&:not(:last-child) {margin-bottom: toRem(10);}
+		@media (max-width:$tablet){
+			font-size: 20px;
+			
+		}
+		@media (max-width:$mobileSmall){
+			 @include adaptiveValue("font-size", 28, 13,0,768,320); 
+		}
+	}
+
 }
