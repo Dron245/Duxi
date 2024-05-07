@@ -14,7 +14,7 @@
 			overflow: auto;
 			background-color: $knopka-rozovaya;
 			padding: toRem(70) toRem(15) toRem(15) toRem(30);
-			transition: left 0.3s;
+			transition: left 0.2s;
 			z-index: 2;
 			@media (max-width:$mobile){
 				width: 92.447917%; /* 710/768 */
@@ -26,7 +26,7 @@
 				height: toRem(70);
 				left: -100%;
 				top: 0;
-				transition: left 0.3s;
+				transition: left 0.2s;
 				z-index: 2;
 				background-color: $knopka-rozovaya;
 				@media (max-width:$mobile){

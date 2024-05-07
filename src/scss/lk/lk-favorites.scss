@@ -43,9 +43,9 @@
 		}
 	}
 	.brands-tabs form {
-		@include adaptiveValue("width", 690, 300,0,1540,1001.98);
+		// @include adaptiveValue("width", 690, 300,0,1540,1001.98);
+		flex: 1 0 ;
 		@media (max-width:$tablet){
-			flex: 1 0 ;
 		}
 	}
 

@@ -116,7 +116,7 @@
 .product-response {
 	display: flex;
 	gap: 20px;
-	@media (max-width:$tablet){
+	@media (max-width:$pcSmall){
 		display: block;
 	}
 
@@ -206,7 +206,7 @@
 
 	&__action {
 		width: 100%;
-		@media (max-width:$tablet){
+		@media (max-width:$pcSmall){
 			margin-top: 40px;
 			// width: 35%;
 		}
@@ -218,7 +218,7 @@
 	&__link {
 		// display: block;
 		width: 100%;
-		@media (max-width:$tablet){
+		@media (max-width:$pcSmall){
 			width: 45%;
 		}
 		.product-response__action & {

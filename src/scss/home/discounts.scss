@@ -58,9 +58,13 @@
 	&__slide {
 		border-radius: 12px;
 		background-color: white;
-		padding: toRem(20) toRem(20) toRem(35) toRem(20);
 		@media (min-width:$tablet){
+			padding: toRem(20) toRem(20) toRem(35) toRem(20);
+			
 			 flex-basis: 24.025974%; /* 370/1540 */
+		}
+		@media (max-width:$tablet){
+			padding: 10px;
 		}
 		@media (min-width:$mobile) and (max-width:$tablet) {
 			 flex-basis: 46.78%; /* 433/886 */
