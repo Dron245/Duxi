@@ -244,23 +244,25 @@
 		display: block;
 		position: relative;
 		width: toRem(70);
-		height: toRem(45);
+		// height: toRem(45);
+		aspect-ratio: 70 / 45;
 		z-index: 6;
 		@media (max-width:$tablet){
 			width: toRem(50);
-			height: toRem(27);
+			// height: toRem(27);
 		}
 		@media (max-width:$mobile){
-			 width: toRem(70);
-			 height: toRem(45); 
+			//  width: toRem(70);
+			@include adaptiveValue("width", 70, 30,0,768,320);
+			//  height: toRem(45); 
 		}
 		@media (max-width:$mobileSmall){
-			 width: toRem(40);
-			 height: toRem(30); 
+			//  width: toRem(40);
+			//  height: toRem(30); 
 		}
 		@media (max-width: em(360)){
-			  width: 30px;
-			  height: 20px;
+			//   width: 30px;
+			//   height: 20px;
 		}
 		.menu-open & {
 			position: absolute;

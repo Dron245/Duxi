@@ -124,6 +124,9 @@
 		@media (max-width:$tablet){
 			margin-top: 32px;
 		}
+		@media (max-width:$mobile){
+			 row-gap: 0; 
+		}
 		@media (max-width:$mobileSmall){
 			 margin-top: 20px; 
 		}
@@ -160,6 +163,9 @@
 		&_tel {
 			input[class] {
 				width: 85%;
+				@media (max-width: em(799)) and (min-width:$mobile){
+					  width: 90%;
+				}
 			}
 		}
 		&_block {
@@ -168,7 +174,6 @@
 		&_button {
 			margin-top: auto;
 		}
-		
 	}
 
 	&__item {
@@ -187,7 +192,6 @@
 				padding-left: 10px; 
 			}
 		}
-		
 	}
 
 	&__actions {
@@ -243,18 +247,20 @@
 		}
 	}
 
-	&__img-input[class].qwe {
-		width: 27px;
-		height: 27px;
+	// &__img-input[class].qwe {
+		// width: 27px;
+		// height: 27px;
 		// background: url('@img/lk/calendar.svg') 0 0 / cover no-repeat;
-	}
+	// }
 
 	&__input-border {
 		width: 85%;
 		border-radius: 3px;
 		border: 1px solid #C7C7C7;
 		background: #FAFAFA;
-		
+		@media (max-width:em(799)) and (min-width:$mobile){
+			 width: 90%; 
+		}
 		.personal__img {
 			position: absolute;
 			z-index: 0;
@@ -268,6 +274,15 @@
 			border: initial;
 			background: url('@img/lk/calendar.svg') 97% no-repeat;
 			padding-right: 10px;
+			@media (max-width:$pcSmall){
+				background-size: 20px;
+			}
+			@media (max-width:$tablet){
+				background-size: 37px;
+			}
+			@media (max-width:$mobile){
+				 @include adaptiveValue("background-size", 65, 28,0,768,320); 
+			}
 		}
 	}
 
@@ -429,6 +444,9 @@
 		background: #fff;
 		border-radius: 16px;
 		padding: 20px;
+		@media (max-width:$mobileSmall){
+			 padding: 10px; 
+		}
 	}
 }
 

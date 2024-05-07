@@ -38,6 +38,9 @@
 		align-items: center;
 		@include adaptiveValue("padding-top", 29, 20, 0, 1920, 1280);
 		padding-bottom: toRem(37);
+		@media (min-width:$tablet){
+			 column-gap: 20px; 
+		}
 		@media (max-width: $tablet) {
 			justify-content: space-between;
 			& .menu__icon {
@@ -48,6 +51,9 @@
 					margin-right: 0;
 				}
 			}
+		}
+		@media (max-width:$mobileSmall){
+			 padding-bottom: 20px; 
 		}
 	}
 
@@ -227,20 +233,37 @@
 }
 .header-center {
 	&__logo {
-		margin-right: 2rem;
+		// margin-right: 2rem;
+		@media (min-width:$pcSmall){
+			 margin-right: 12px;
+			 flex: 0 0 360px; 
+		}
+		@media (min-width:$tablet) and (max-width:$pcSmall){
+			// @include adaptiveValue("flex-basis", 360, 250,0,1280.98,1001.98);
+			// @include adaptiveValue("width", 360,250,0,1280.98,1001.98 );
+			flex: 0 0 250px
+		}
+		@media (max-width:$tablet){
+			@include adaptiveValue("flex-basis", 340, 300,0,1001.98,768);
+		}
+		@media (max-width:$mobile){
+			@include adaptiveValue("flex-basis", 436, 190,0,767.98,320);
+		}
 		img {
 			width: 100%;
+			height: auto;
 		}
 
 		@media (max-width: $pcSmall) {
-			margin-right: 1.25rem;
-			width: 15.625rem;
+			// margin-right: 1.25rem;
+			// width: 250px;
+			// flex: 0 0 250px;
 		}
 		@media (max-width: $tablet) {
 			margin-right: 0px;
 		}
 		@media (max-width: $mobileSmall) {
-			width: toRem(195);
+			width: 195px;
 		}
 		@media (max-width: em(360)){
 			 width: 160px; 
@@ -250,8 +273,8 @@
 	&__form-wrapper {
 		position: relative;
 		// @include adaptiveValue("width", 750, 520, 0, 1920, 1280);
-		@include adaptiveValue("width", 750, 520, 0, 1540, 1280);
-
+		// @include adaptiveValue("width", 750, 520, 0, 1540, 1280);
+		flex: 0 1 758px;
 		@media (max-width: $tablet) {
 			display: none;
 		}
@@ -275,9 +298,11 @@
 				visibility: visible;
 				z-index: 4;
 			}
-			
+		@media (min-width:$tablet){
+			//  width: 320px; 
+		}
 		@media (max-width: $tablet) {
-			width: 320px;
+			// width: 320px;
 			overflow: hidden;
 			z-index: 5;
 			.menu-open & {
@@ -287,6 +312,14 @@
 			right: 0;
 			._show & {
 				right: 0;
+			}
+		}
+		@media (max-width:$mobile){
+			.header & {
+				overflow: initial;
+				position: initial;
+				right: initial;
+				z-index: initial;
 			}
 		}
 	}
@@ -334,6 +367,9 @@
 			height: 100%;
 			.header-center__actions & {
 				width: 0px;
+				@media (max-width:$tablet){
+					display: none;
+				}
 			}
 			#city & {
 				width: 100%;
@@ -377,7 +413,20 @@
 	}
 
 	&__button {
+		// @media (min-width:$tablet){
+		.header & {
+			@media (max-width:$tablet){
+				position: relative;
+				transform: translateY(0);
+			}
+			@media (max-width:$mobile){
+				top: initial;
+				right: initial;
+				 @include adaptiveValue("width", 70, 30,0,768,320); 
+			}
+		}
 		position: absolute;
+		// }
 		right: 3%;
 		top: 50%;
 		transform: translateY(-50%);
@@ -437,15 +486,15 @@
 	}
 
 	&__actions {
-		margin-left: 2.5rem;
+		// margin-left: 2.5rem;
 		display: flex;
 		// align-items: flex-start;
-		column-gap: toRem(40);
+		// column-gap: toRem(40);
 		// @include adaptiveValue("column-gap", 40, 30, 0, 1920, 1001);
-		@include adaptiveValue("column-gap", 40, 30, 0, 1540, 1001);
+		@include adaptiveValue("column-gap", 40, 10, 0, 1540, 1280.98);
 		@media (max-width: $tablet) {
 			margin-left: auto;
-			// column-gap: toRem(0);
+			@include adaptiveValue("column-gap", 30, 15,0,1001.98,768);
 			margin-left: 0;
 		}
 		@media (max-width: em(360)){
@@ -466,6 +515,7 @@
 			top: 20px;
 		}
 		@media (max-width: $mobile) {
+			width: initial;
 			& > *:not(:first-child) {
 				display: none;
 			}
@@ -477,10 +527,20 @@
 		flex-direction: column;
 		align-items: center;
 		column-gap: toRem(2);
+		@media (max-width:$tablet){
+			width: 45px;
+		}
 		img {
-			aspect-ratio: 1 / 1;
+			@media (min-width:$tablet){
+				aspect-ratio: 1 / 1;
+			}
+			@media (max-width:$tablet){
+				width: 100%;
+				height: auto;
+			}
 		}
 		span {
+			width: min-content;
 			font-weight: 300;
 			font-size: toRem(13);
 			color: $tekst-zagolovok-ne-aktivnyy;
@@ -519,6 +579,10 @@
 				width: 45px;
 				height: 40px;
 			}
+			@media (max-width:$mobile){
+				 width: initial;
+				 height: initial; 
+			}
 		}
 		._quantity {
 			display: block;
@@ -540,10 +604,13 @@
 
 	&__basket {
 		position: relative;
-		width: min-content;
+		// width: min-content;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+		@media (max-width:$tablet){
+			width: 45px;
+		}
 		span._quantity {
 			
 		}

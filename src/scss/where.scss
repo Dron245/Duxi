@@ -36,6 +36,7 @@
 		@media (max-width:$mobile){
 			flex-direction: column; 
 			align-items: flex-start;
+			@include adaptiveValue("margin-bottom", 60, 40,0,768,320);
 		}
 	}
 
@@ -55,9 +56,11 @@
 			width: auto;
 			padding-left: 90px;
 			padding-right: 90px;
+			font-size: 22px;
 		}
 		@media (max-width:$mobile){
 			width: 100%;
+			@include adaptiveValue("font-size", 35, 15,0,768,320);
 		}
 	}
 
@@ -222,7 +225,8 @@
 			grid-template-columns: 1fr 1fr;
 		}
 		@media (max-width:$mobile){
-			 grid-template-columns: 1fr; 
+			 grid-template-columns: 1fr;
+			 @include adaptiveValue("margin-bottom", 40, 20,0,768,320);
 		}
 	}
 
@@ -354,7 +358,7 @@
 	@media (max-width:$mobile){
 		flex-direction: column; 
 		width: max-content;
-		height: 380px;
+		@include adaptiveValue("height", 380, 170,0,768,320);
 	}
 	&::before{
 		content:'';
@@ -463,13 +467,13 @@
 		// text-wrap: nowrap;
 		@media (max-width:$mobile){
 			padding-left: 20px;
-			font-size: 28px;
+			@include adaptiveValue("font-size", 28, 13,0,768,320);
 			font-weight: 600;
 			// bottom: 10px;
 			transform: translateY(-3px);
 		}
 		@media (max-width:$mobileSmall){
-			 transform: translateY(-8px); 
+			//  transform: translateY(-8px); 
 		}
 		&_top {
 			top: -50%;

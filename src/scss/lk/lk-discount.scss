@@ -1,7 +1,15 @@
-.page {
-}
 .lk {
-
+	.personal-discount {
+		@media (max-width:$mobile){
+			.spollers__title {
+			margin-bottom: 20px;
+		}
+			.spollers__title .lk__title {
+				margin-bottom: 0;
+			}
+		}
+		
+	}
 	&__content {
 		.personal-discount & {
 			display: grid;
@@ -30,7 +38,7 @@
 		&_calcul-discount {
 			.lk__title {
 				@media (max-width:$mobile){
-					 margin-bottom: 0; 
+					//  margin-bottom: 0; 
 				}
 			}
 		}
@@ -101,6 +109,7 @@
 		text-transform: uppercase;
 		span {
 			font-weight: 700;
+			white-space: nowrap;
 		}
 		@media (max-width:$tablet){
 			font-size: 22px;
@@ -125,6 +134,7 @@
 	&__subtext {
 		font-size: 14px;
 		font-style: italic;
+		opacity: 0.7;
 		@media (max-width:$tablet){
 			font-size: 20px;
 		}

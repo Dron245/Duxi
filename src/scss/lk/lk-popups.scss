@@ -38,8 +38,10 @@
 		}
 	}
 	.progress__description {
-		transform: translate(0);
-		top: -2px;
+		@media (min-width:$mobile){
+			transform: translate(0);
+		}
+		// top: -2px;
 	}
 
 	.popup__wrapper {

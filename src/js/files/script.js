@@ -625,8 +625,8 @@ window.addEventListener("DOMContentLoaded", () => {
 		}
 
 		if (targetElement.closest(".gifts .quantity__button--plus")) {
-			const qwe = targetElement.closest(".gift__quantity").querySelector(".quantity__button--minus");
-			qwe.style.visibility = "visible";
+			const buttonMinus = targetElement.closest(".gift__quantity").querySelector(".quantity__button--minus");
+			buttonMinus.style.visibility = "visible";
 		}
 
 		//Удаляю все отсутствующие товары в корзине
