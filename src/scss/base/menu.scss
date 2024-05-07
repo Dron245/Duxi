@@ -64,6 +64,8 @@
 			align-items: flex-start;
 		}
 		.footer & {
+			grid-auto-flow: initial;
+			display: flex;
 			align-items: flex-start;
 			@media (min-width:$tablet){
 				@include adaptiveValue("column-gap", 55, 15,0,1920,1001);
@@ -74,10 +76,13 @@
 				grid-template-rows: 1fr 1fr;
 				row-gap: 20px;
 			}
+			@media (max-width:$tablet){
+				row-gap: 0;
+			}
 			@media (max-width:$mobile){
 				 grid-template-columns: 1fr 1fr;
 				 grid-template-rows: auto;
-				 row-gap: 0;
+				//  row-gap: 0;
 				 column-gap: 10px;
 				 li {
 					align-self: center;

@@ -192,17 +192,19 @@ h3[class*="__title"] {
 	}
 
 	&__action {
-		@include adaptiveValue("width", 30, 22,0,1920,1001);
-		@include adaptiveValue("height", 30, 22,0,1920,1001);
+		@media (min-width:$tablet){
+			@include adaptiveValue("width", 30, 22,0,1920,1001);
+		}
 		@media (max-width:$tablet){
 			width: 40px;
-			height: 40px;
+			// height: 40px;
 		}
 		@media (max-width:$mobile){
 			 @include adaptiveValue("width", 50, 18,0,768,320); 
 		}
 		img {
 			width: 100%;
+			height: auto;
 		}
 		& svg {
 			width: 100%;
