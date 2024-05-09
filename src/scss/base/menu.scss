@@ -44,7 +44,8 @@
 	// .menu__list
 	&__list {
 		@media (min-width:$tablet){
-			//  flex-wrap: wrap; 
+			//  flex-wrap: wrap;
+			justify-items: center;
 		}
 		// align-items: center;
 		// justify-content: center;
@@ -103,8 +104,14 @@
 		// transition: top 0.3s, height 0.5s, transform 0.3s;
 		// transition: all 0.2s;
 		transition: top 0.3s, transform 0.3s;
-		@media (max-width:$tablet){
-			  
+		&_right {
+			@media (min-width:$tablet){
+				left: initial;
+				right: 0;
+				.sublist-menu__item {
+					text-align: right;
+				} 
+			}
 		}
 		.footer & {
 			position: relative;
@@ -178,7 +185,7 @@
 	// .menu__item
 	&__item {
 		position: relative;
-		
+		// outline: 1px solid black;
 		transition: background-color 0.3s;
 		@media (max-width:$tablet){
 			width: 100%;
@@ -210,6 +217,9 @@
 					top: 100%;
 					opacity: 1;
 					visibility: visible;
+					@media (min-width:$tablet){
+						 z-index: 1; 
+					}
 				} 
 			}
 		}
