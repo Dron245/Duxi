@@ -3,6 +3,15 @@ import { isMobile } from "./functions.js";
 // Подключение списка активных модулей
 import { flsModules } from "./modules.js";
 import Sortable from "sortablejs";
+import { Fancybox } from "@fancyapps/ui";
+import "@fancyapps/ui/dist/fancybox/fancybox.css";
+
+
+// Подключение галереи Fancybox
+Fancybox.bind('[data-fancybox]', {
+	//
+ });
+
 window.addEventListener("DOMContentLoaded", () => {
 	var idItemListLk;
 	document.addEventListener("click", documentActions);
