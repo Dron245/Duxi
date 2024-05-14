@@ -1069,7 +1069,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	//Работа с табами на главной странице под банером
 
 	const secondTabs = document.querySelector("#secondTabs");
-	if (window.innerWidth < 768 && secondTabs) {
+	if (window.innerWidth < 767.5 && secondTabs) {
 		const tabs01 = document.querySelector("#tabs01");
 		const tabs02 = document.querySelector("#tabs02");
 		tabs01 ? tabs01.classList.remove("_tab-active") : null;
