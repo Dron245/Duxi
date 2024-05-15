@@ -1355,7 +1355,7 @@ if (catalog) {
 	const summury = catalog.querySelectorAll(".filter__title-wrapper");
 
 	// console.log(spollersWrapper);
-	if (window.innerWidth < 1001) {
+	if (window.innerWidth < 1001.5) {
 		details.forEach((element) => {
 			// console.log(1);
 			element.removeAttribute("data-open");

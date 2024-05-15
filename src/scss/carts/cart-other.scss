@@ -424,3 +424,10 @@
 	}
 }
 
+.cart-empty .button-actions {
+	@media (max-width:$mobile){
+		@include adaptiveValue("padding-block", 29, 14,0,768,320);
+		@include adaptiveValue("font-size", 35, 15,0,768,320);
+	}
+}
+

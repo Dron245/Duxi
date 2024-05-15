@@ -5,7 +5,7 @@
 	// .menu__body
 	&__body {
 		position: relative;
-		@media (max-width: em(1001)) {
+		@media (max-width: $tablet) {
 			position: fixed;
 			width: 59%; /* 590/1000 */
 			height: 100%;
@@ -38,6 +38,9 @@
 				&::before {
 					left: 0;
 				}
+			}
+			@media (max-width:$tablet) and (min-width:$mobileSmall){
+				.header:not(.guest) &{padding-top: 100px;}
 			}
 		}
 	}

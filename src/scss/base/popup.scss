@@ -1265,3 +1265,9 @@ time.table-popup__text {
 		visibility: visible;
 	}
 }
+
+#cost-product .tabs__title {
+	@media (max-width:$mobileSmall){
+		 font-size: 18px; 
+	}
+}
