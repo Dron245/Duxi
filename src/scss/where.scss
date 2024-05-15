@@ -147,7 +147,7 @@
 					 @include adaptiveValue("font-size", 32, 16,0,768,320); 
 				}
 			}
-			input {
+			input.input {
 				width: 100%;
 				@media (max-width:$mobile){
 					@include adaptiveValue("font-size", 28, 14,0,768,320);

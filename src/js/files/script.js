@@ -31,14 +31,25 @@ window.addEventListener("DOMContentLoaded", () => {
 		}
 
 		console.log(targetElement);
-
-		// Открытие сабменю в мобильной версии
-		if (targetElement.closest(".menu__link") && targetElement.closest("header")) {
+		
+		if (targetElement.closest(".menu__item") && targetElement.closest("header") && !targetElement.closest(".menu__item").classList.contains("_menu__item-active")) {
 			// targetElement.classList.toggle('_open');
 			// document.querySelector('.menu__user-data') ? targetElement.closest('.menu__user-data').classList.toggle('_user-open') : null
-			targetElement.closest(".menu__item").classList.toggle("_menu__item-active");
-			targetElement.closest(".menu__item").querySelector(".menu__sublist") ? targetElement.closest(".menu__item").querySelector(".menu__sublist").classList.toggle("_sub-menu-open") : null;
+			const menuItemMobile = targetElement.closest('.menu__list').querySelectorAll('.menu__item')
+			menuItemMobile.forEach(element => {
+				element.classList.remove('_menu__item-active')
+			});
+			const sublistMobile = targetElement.closest('.menu__list').querySelectorAll('.menu__sublist')
+			sublistMobile.forEach(element => {
+				element.classList.remove("_sub-menu-open")
+			});
+			targetElement.closest(".menu__item").classList.add("_menu__item-active");
+			targetElement.closest(".menu__item").querySelector(".menu__sublist") ? targetElement.closest(".menu__item").querySelector(".menu__sublist").classList.add("_sub-menu-open") : null;
+		} else if (targetElement.closest(".menu__item") && targetElement.closest("header") && targetElement.closest(".menu__item").classList.contains("_menu__item-active")) {
+			targetElement.closest(".menu__item").classList.remove("_menu__item-active");
+			targetElement.closest(".menu__item").querySelector(".menu__sublist").classList.remove("_sub-menu-open")
 		}
+		
 		// закрытие меню бургер вне клика по меню
 		if (!targetElement.closest(".menсu__icon") && !targetElement.closest(".menu__body") && flag == true) {
 			flag = false;

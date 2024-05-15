@@ -39,6 +39,9 @@
 			@media (min-width:$mobile) and (max-width:$tablet){
 				&:not(:last-child) {margin-bottom: toRem(60);}
 			}
+			@media (max-width:$mobile){
+				 @include adaptiveValue("margin-bottom", 60, 40,0,768,320); 
+			}
 		}
 	}
 	
