@@ -30,7 +30,7 @@ window.addEventListener("DOMContentLoaded", () => {
 			targetElement.closest(`${id}`).setAttribute("aria-hidden", "false");
 		}
 
-		// console.log(targetElement);
+		console.log(targetElement);
 
 		// Открытие сабменю в мобильной версии
 		if (targetElement.closest(".menu__link") && targetElement.closest("header")) {

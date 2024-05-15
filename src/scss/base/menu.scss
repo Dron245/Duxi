@@ -106,7 +106,7 @@
 		visibility: hidden;
 		// transition: top 0.3s, height 0.5s, transform 0.3s;
 		// transition: all 0.2s;
-		transition: top 0.3s, transform 0.3s;
+		// transition: top 0.3s, transform 0.3s;
 		&_right {
 			@media (min-width:$tablet){
 				left: initial;
@@ -154,16 +154,19 @@
 			padding-left: 20px;
 			padding-bottom: toRem(0);
 			// transform: scale(0);
-			// height: 0;
-			transform: translateY(-50%);
-			// transition: height 1.3s;
+			height: 0;
+			// transform: translateY(-50%);
+			// transition: height 0.3s;
+			background-color: $knopka-rozovaya;
+			// transition: all 0.3s;
+			// z-index: 2;
 			&._sub-menu-open {
 				position: relative;
 				visibility: visible;
 				opacity: 1;
 				margin-bottom: 40px;
-				// height: 100%;
-				transform: translateY(0%);
+				height: 100%;
+				// transform: translateY(0%);
 			}
 		}
 		&::after{
