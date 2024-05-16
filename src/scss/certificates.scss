@@ -163,7 +163,7 @@
 		}
 	}
 
-	&__title {
+	&__title[class] {
 		&:not(:last-child) {
 			margin-right: 0;
 		}
