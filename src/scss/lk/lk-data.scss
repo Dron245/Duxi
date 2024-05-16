@@ -467,7 +467,8 @@
 	}
 
 	&__link {
-		@include adaptiveValue("font-size", 24, 18,0,1920,1001.01);
+		@include adaptiveValue("font-size", 24, 15,0,$containerWidth,1001.01);
+		// @include adaptiveValue("font-size", 24, 18,0,1920,1001.01);
 		color: $tekst-zagolovok-ne-aktivnyy;
 		font-weight: 300;
 		text-transform: uppercase;

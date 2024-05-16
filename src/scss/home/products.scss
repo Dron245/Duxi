@@ -50,7 +50,7 @@
 		@media (max-width: $mobile) {
 			@include adaptiveValue("font-size", 50, 19, 0, 768, 320);
 			.produce & {
-				@include adaptiveValue("font-size", 50, 22, 0, 768, 320);
+				// @include adaptiveValue("font-size", 50, 19, 0, 768, 320);
 			}
 		}
 		&:not(:last-child) {

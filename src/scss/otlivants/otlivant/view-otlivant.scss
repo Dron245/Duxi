@@ -55,6 +55,7 @@
 	}
 
 	.feedback__text-wrapper {
+		
 		@media (min-width:$tablet){
 			height: 84px;
 			overflow-y: hidden;
@@ -66,7 +67,7 @@
 	}
 
 	.feedback__text {
-		line-height: normal;
+		// line-height: normal;
 		// display:none;
 		@media (min-width:$mobile){
 			// min-height: 83px;
@@ -109,4 +110,7 @@
 			}
 		}
 	}
+}
+.feedback__text {
+	line-height: normal;
 }

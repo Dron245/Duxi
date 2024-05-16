@@ -503,25 +503,41 @@ h3[class*="__title"] {
 .breadcrumbs {
 	margin-top:10px;
 	margin-bottom:20px;
-	height: 14px;
+	// height: 14px;
 	position: relative;
-	
+	&._breadcrumbs-swipe {
+		// overflow: hidden;
+		// overflow-x: auto;
+		display: flex;
+		// display: grid;
+		// justify-content: flex-end;
+	}
 	&__list {
+		// outline: 1px solid red;
 		width: fit-content;
 		display: flex;
 		flex-wrap: nowrap;
+		// justify-content: flex-end;
 		// position: absolute;
 		// left: 0;
 		
 		&._align-right {
-			position: absolute;
-			right: 0;
+			position: relative;
+			// right: 0;
+			overflow: hidden;
+			overflow-x: auto;
+			// justify-self: end;
+			&::-webkit-scrollbar {
+				width: 0;
+				height: 0;
+			 }
+			 scrollbar-width: none;
 		}
 		
 	}
 
 	&__item {
-		
+		// outline: 1px solid blueviolet;
 	}
 
 	&__link {
@@ -610,7 +626,7 @@ h3[class*="__title"] {
 	.feedback__photo-img {
 		width: 70px;
 		@media (max-width:$tablet){
-			@include adaptiveValue("width", 130, 90,0,1001.99,768.01);
+			@include adaptiveValue("width", 130, 90,0,1001.02,768.01);
 		}
 		@media (max-width:$mobile){
 			 @include adaptiveValue("width", 200, 85,0,768,320); 

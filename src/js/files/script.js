@@ -45,7 +45,11 @@ window.addEventListener("DOMContentLoaded", () => {
 			});
 			targetElement.closest(".menu__item").classList.add("_menu__item-active");
 			targetElement.closest(".menu__item").querySelector(".menu__sublist") ? targetElement.closest(".menu__item").querySelector(".menu__sublist").classList.add("_sub-menu-open") : null;
-		} else if (targetElement.closest(".menu__item") && targetElement.closest("header") && targetElement.closest(".menu__item").classList.contains("_menu__item-active")) {
+		} else if (targetElement.closest(".menu__item") &&
+			targetElement.closest("header") &&
+			targetElement.closest(".menu__item").classList.contains("_menu__item-active") && 
+			!targetElement.closest('.sublist-menu__link')) {
+			console.log(3);
 			targetElement.closest(".menu__item").classList.remove("_menu__item-active");
 			targetElement.closest(".menu__item").querySelector(".menu__sublist").classList.remove("_sub-menu-open")
 		}
@@ -1091,12 +1095,15 @@ document.addEventListener("DOMContentLoaded", () => {
 	//позиционирование хлебных крошек при уменьшении экрана
 	const breadcrumbs = document.querySelector(".breadcrumbs__list");
 	if (breadcrumbs) {
+		console.log(breadcrumbs.clientWidth);
+		console.log(window.innerWidth);
 		if (30 + breadcrumbs.clientWidth > window.innerWidth) {
 			// console.log(breadcrumbs.offsetLeft + breadcrumbs.clientWidth);
 			breadcrumbs.classList.add("_align-right");
-		} else {
+			breadcrumbs.parentElement.classList.add('_breadcrumbs-swipe')
+		} /*else {
 			breadcrumbs.classList.remove("_align-right");
-		}
+		}*/
 	}
 
 	// делаю доступной прокрутку, если высота окна меньше высоты попапа в меню фильтов в моб. версии

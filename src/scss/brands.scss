@@ -16,9 +16,9 @@
 	}
 
 	&__title.brands__title_br {
-		font-size: toRem(36);
+		// font-size: toRem(36);
 		@media (max-width:$mobile){
-			@include adaptiveValue("font-size", 50, 22,0,768,320);
+			// @include adaptiveValue("font-size", 50, 22,0,768,320);
 		}
 		&_br {
 		}
@@ -93,9 +93,9 @@
 	}
 	&__title {
 		.brands & {
-			font-size: toRem(36);
+			// font-size: toRem(36);
 			@media (max-width:$mobile){
-			@include adaptiveValue("font-size", 50, 22,0,768,320);
+			// @include adaptiveValue("font-size", 50, 22,0,768,320);
 		}
 		}
 	}

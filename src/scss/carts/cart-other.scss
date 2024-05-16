@@ -50,10 +50,10 @@
 			}
 		}
 		@media (max-width:$tablet){
-			font-size: 35px;
+			// font-size: 35px;
 		}
 		@media (max-width:$mobile){
-			 @include adaptiveValue("font-size", 50, 21,0,768,320); 
+			//  @include adaptiveValue("font-size", 50, 19,0,768,320); 
 		}
 	}
 

@@ -705,7 +705,7 @@ window.addEventListener("load", function (e) {
 					spaceBetween: 20,
 					// autoHeight: true,
 				},
-				1001: {
+				1001.98: {
 					slidesPerView: 3,
 					spaceBetween: 20,
 				},
@@ -839,7 +839,7 @@ window.addEventListener("load", function (e) {
 					spaceBetween: 20,
 					// autoHeight: true,
 				},
-				1001: {
+				1001.98: {
 					slidesPerView: 3,
 					spaceBetween: 20,
 				},
@@ -907,7 +907,7 @@ window.addEventListener("load", function (e) {
 					spaceBetween: 20,
 					// autoHeight: true,
 				},
-				1001: {
+				1001.98: {
 					slidesPerView: 3,
 					spaceBetween: 20,
 				},

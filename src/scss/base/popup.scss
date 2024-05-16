@@ -193,11 +193,11 @@ body::after {
 			&._overflow-y {
 				// border-radius: 20px 0 0 20px;
 				// overflow: initial;
-				overflow-y: auto;
+				// overflow-y: auto;
 				// @include scroll-view;
-				&::-webkit-scrollbar {
-					width: 0;
-				 }
+				// &::-webkit-scrollbar {
+				// 	width: 0;
+				//  }
 			}
 		}
 	}

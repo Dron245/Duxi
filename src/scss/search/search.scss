@@ -375,7 +375,7 @@
 		#search-qr &,
 		#qr-scan & {
 			max-width: 420px;
-			@include adaptiveValue("font-size", 50, 30, 0, 1001, 320);
+			// @include adaptiveValue("font-size", 50, 30, 0, 1001, 320);
 		}
 	}
 

@@ -18,7 +18,7 @@
 
 	&__title {
 		@media (max-width: $mobile) {
-			@include adaptiveValue("font-size", 50, 20, 0, 768, 320);
+			// @include adaptiveValue("font-size", 50, 19, 0, 768, 320);
 		}
 	}
 
@@ -158,7 +158,7 @@
 
 	&__title {
 		@media (max-width: $mobile) {
-			@include adaptiveValue("font-size", 50, 20, 0, 768, 320);
+			// @include adaptiveValue("font-size", 50, 19, 0, 768, 320);
 		}
 	}
 

@@ -634,7 +634,7 @@ background: #FFF;
 			gap: 20px;
 			font-size: 22px;
 			@media (max-width:$mobile){
-				 @include adaptiveValue("font-size", 50, 24,0,768,320); 
+				 @include adaptiveValue("font-size", 50, 19,0,768,320); 
 			}
 			@media (max-width:$mobileSmall){
 				 gap: 10px; 

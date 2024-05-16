@@ -98,7 +98,7 @@
 				
 				@media (max-width:$mobile){
 					text-wrap: balance;
-					 @include adaptiveValue("font-size", 50, 22,0,768,320); 
+					 @include adaptiveValue("font-size", 50, 19,0,768,320); 
 				}
 			}
 			.otlvant-review__button {
