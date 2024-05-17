@@ -56,20 +56,20 @@
 			 padding-bottom: 20px; 
 		}
 	}
-
+	
 	&__menu {
 		// display: none;
 		position: relative;
 		z-index: 3;
-		&::after {
+		@media (min-width:$tablet){
+			margin-inline: -15px;
+			&::after {
 			content: "";
 			position: absolute;
-			top: 0;
-			width: 10000vw;
-			height: 100%;
-			left: -1000%;
+			inset: 0;
 			background: $knopka-rozovaya;
 			z-index: -1;
+			}
 		}
 	}
 }

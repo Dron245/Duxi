@@ -1095,12 +1095,12 @@ document.addEventListener("DOMContentLoaded", () => {
 	//позиционирование хлебных крошек при уменьшении экрана
 	const breadcrumbs = document.querySelector(".breadcrumbs__list");
 	if (breadcrumbs) {
-		console.log(breadcrumbs.clientWidth);
-		console.log(window.innerWidth);
+		// console.log(breadcrumbs.clientWidth);
+		// console.log(window.innerWidth);
 		if (30 + breadcrumbs.clientWidth > window.innerWidth) {
 			// console.log(breadcrumbs.offsetLeft + breadcrumbs.clientWidth);
-			breadcrumbs.classList.add("_align-right");
-			breadcrumbs.parentElement.classList.add('_breadcrumbs-swipe')
+			// breadcrumbs.classList.add("_align-right");
+			// breadcrumbs.parentElement.classList.add('_breadcrumbs-swipe')
 		} /*else {
 			breadcrumbs.classList.remove("_align-right");
 		}*/

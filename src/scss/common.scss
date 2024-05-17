@@ -505,35 +505,45 @@ h3[class*="__title"] {
 	margin-bottom:20px;
 	// height: 14px;
 	position: relative;
+	display: flex;
 	&._breadcrumbs-swipe {
 		// overflow: hidden;
 		// overflow-x: auto;
-		display: flex;
 		// display: grid;
 		// justify-content: flex-end;
+		// display: flex;
+		& .breadcrumbs__list {
+			// position: relative;
+			// // right: 0;
+			// overflow: hidden;
+			// overflow-x: auto;
+			// &::-webkit-scrollbar {
+			// 	width: 0;
+			// 	height: 0;
+			//  }
+			//  scrollbar-width: none;
+		}
 	}
 	&__list {
 		// outline: 1px solid red;
-		width: fit-content;
+		// width: fit-content;
 		display: flex;
 		flex-wrap: nowrap;
 		// justify-content: flex-end;
 		// position: absolute;
 		// left: 0;
-		
-		&._align-right {
-			position: relative;
-			// right: 0;
-			overflow: hidden;
-			overflow-x: auto;
-			// justify-self: end;
-			&::-webkit-scrollbar {
-				width: 0;
-				height: 0;
-			 }
-			 scrollbar-width: none;
-		}
-		
+		// &._align-right {
+			
+		// }
+		// position: relative;
+		// right: 0;
+		// overflow: hidden;
+		overflow-x: auto;
+		&::-webkit-scrollbar {
+			width: 0;
+			height: 0;
+			}
+		scrollbar-width: none;
 	}
 
 	&__item {
